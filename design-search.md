@@ -40,7 +40,7 @@ The `Extension` trait has eight methods. A stateless extension implements four o
 | `holds_section_state` | `false`. A search is a request and a response, so nothing survives the tool call for a nested section to interleave with. | `true`, which serializes `fanout` for every run in the deployment. |
 | `validate` | Offline. Credential present, endpoint parses, policy compiles. Never touches the network. | Connects, checks the schema, checks migrations. |
 | `on_section` | `Ok(())`. Nothing here has a section-shaped lifetime. | Begin, commit, rollback, savepoint. The whole point of the hook. |
-| `row_count` | Zero. This crate writes no rows anywhere, so no declared `rows` output can resolve to it and there is nothing to report. | A real per-run count for the table named, read from the writes it made. |
+| `summarize` | `None`. A search leaves nothing behind worth reporting at run end, and an empty clause in the run summary is worse than no clause. | The row counts it committed, rendered as one line of prose. |
 | `shutdown` | Drops two connection pools. | Closes a pool after rolling back anything open. |
 
 `on_section` is the load-bearing difference and it is worth being precise about why it is empty rather than merely convenient. The section lifecycle exists so an extension holding a resource whose lifetime is a section can open it on `Enter`, commit it on `Complete`, discard it on `Retry`, and nest it on `NestedEnter`. A search is a request and a response. It completes before the tool call returns, it holds nothing afterwards, and it wrote nothing that a rollback could remove. The HTTP connection pool is the only long-lived resource in the crate and its lifetime is the process, not the section: pooling a socket across sections is the point of pooling it. So there is nothing to begin, nothing to commit, and nothing to roll back, and the override is `Ok(())`.
@@ -240,7 +240,8 @@ The Lua side is equally real and is not a convenience. A section that needs a ca
 
 ```lua
 model("fast")
-tools.add("web_search", "web_fetch", "add_statement", "done")
+tools.add("web_search", "web_fetch", "add_statement")
+break_section()
 
 -- Assemble the candidate set before the model turn, so the model starts with
 -- the list instead of spending three turns discovering it.
@@ -785,7 +786,7 @@ progress:
 ---
 ```
 
-`tools:` holds canonical names only, so it holds exactly two. `add_statement` is not a canonical name and never becomes one: it is a state-filing tool this prompt declares for itself, generated as `Surfaces::ToolOnly` so the model files statements and Lua reads them back through `store.count("statements")`. `done` is absent for the opposite reason, that it is a core tool present in every prompt and naming it in `tools:` would be naming something the runtime already supplied. All three sources still scope by name, which is why the Lua block above writes `tools.add("web_search", "web_fetch", "add_statement", "done")` in one call without caring which source each name came from.
+`tools:` holds canonical names only, so it holds exactly two. `add_statement` is not a canonical name and never becomes one: it is a state-filing tool this prompt declares for itself, generated as `Surfaces::ToolOnly` so the model files statements and Lua reads them back through `store.count("statements")`. `return_result` is absent for the opposite reason, that it is a core tool present in every prompt and naming it in `tools:` would be naming something the runtime already supplied. All three sources still scope by name, which is why the Lua block above writes `tools.add("web_search", "web_fetch", "add_statement")` in one call without caring which source each name came from.
 
 One reconciliation note for a reader comparing crate documents. One extension is one linked crate, `design-mcp.md` owns `prompts.toml` and keys extension tables by `Extension::name`, and a single Brave-backed instance provides both canonical words. So both bindings name it: `web_search = "brave"` and `web_fetch = "brave"`. Tension: the binding for the fetcher is named after the search provider even though Brave has nothing to do with fetching, and swapping to a different search engine therefore edits two `[tools]` lines rather than one.
 

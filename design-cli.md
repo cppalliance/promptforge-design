@@ -93,6 +93,11 @@ pub struct RunArgs {
     #[arg(long)]
     pub json: bool,
 
+    /// Print only the returned value, suppressing output paths. Empty output
+    /// when the run returned nothing.
+    #[arg(long, conflicts_with = "json")]
+    pub raw: bool,
+
     /// One line per progress notification instead of an updating status line.
     #[arg(long, short, conflicts_with = "quiet")]
     pub verbose: bool,
@@ -345,12 +350,11 @@ Elicitation is declared as a client capability and answered by writing the quest
 
 ## Progress rendering
 
-The core emits `Event` through `Observer` in the service's process. MCP carries three fields of it - `progress`, `total`, `message` - and `design.md` records Cursor rendering exactly those as `{progress} / {total} - {message}`, measured 2026-07-25. The CLI renders the same three fields and composes nothing, so the terminal shows the identical text Cursor shows.
+The core emits `Event` through `Observer` in the service's process. MCP carries two useful fields of it - `progress` and `message` - and `design.md` records Cursor rendering the message in place, measured 2026-07-25. The CLI renders the same fields and composes nothing, so the terminal shows what Cursor shows.
 
 ```rust
 pub struct Tick {
     pub index: u32,
-    pub total: Option<u32>,
     pub message: Option<String>,
 }
 
@@ -362,23 +366,25 @@ pub trait ProgressSink: Send + Sync {
 }
 ```
 
-`ProgressSink` is the wire-side counterpart of the core's `Observer`, and the projection between them is lossy on purpose. `ToolCalled`, `ModelTurn`, and `Jumped` do not fit three fields, so the terminal does not see them unless the service publishes the serialized `Event` alongside the standard fields; the verbose path consumes that when present and falls back to one line per notification when it is not.
+`ProgressSink` is the wire-side counterpart of the core's `Observer`, and the projection between them is lossy on purpose. `ToolCalled`, `ModelTurn`, and `Jumped` do not fit two fields, so the terminal does not see them unless the service publishes the serialized `Event` alongside the standard fields; the verbose path consumes that when present and falls back to one line per notification when it is not.
 
-MCP requires `progress` to increase, so a retry cannot be expressed as a falling fraction and arrives as text in `message` instead. The renderer clamps a decreasing index to the previous value, since a conforming server never sends one. Tension: a retried section is visible as words and not as motion, so a long retry loop looks like a stalled section.
+`Tick` carries no `total` because the service never sends one: a run's section count is not known in advance, for the reasons `design-mcp.md` gives. There is therefore no fraction and no filling bar anywhere in this renderer, and `index` is used only to detect that something advanced.
+
+MCP requires `progress` to increase, so a retry arrives as text in `message` rather than as a falling number. The renderer clamps a decreasing index to the previous value, since a conforming server never sends one. Tension: a retried section is visible as words and not as motion, so a long retry loop looks like a stalled section.
 
 `indicatif` draws the line. It handles terminal detection, width measurement through `console::Term`, redraw throttling, cursor save and restore, and display width of non-ASCII text through `unicode-width`, which matters because a `progress` template is prose an author wrote and may contain CJK. A hand-rolled `\r` writer was rejected: it gets width wrong, breaks when the line wraps, and leaves the terminal mid-line on an interrupt, which is precisely the bug that makes interrupt handling look broken. `crossterm` alone has the right primitives but leaves the throttling and width arithmetic to be written here. `ratatui` is a full-screen TUI and would take the alternate screen from a command whose whole point is to print one path.
 
 Progress goes to stderr, always. The stream tested for a terminal is stderr, not stdout, so a run whose stdout is a pipe still gets a live line on the terminal.
 
-TTY mode is one line rewritten in place at most twenty times a second, `ProgressDrawTarget::stderr_with_hz(20)`, template `{spinner} [{pos}/{len}] {wide_msg} {elapsed}`. `{wide_msg}` pads or truncates to the remaining width, so width is `indicatif`'s arithmetic rather than ours. Below thirty columns the template drops to `{spinner} [{pos}/{len}]`, because a truncated label is worse than no label. An absent `total` renders `[3/?]`, an absent `message` renders the fraction alone.
+TTY mode is one line rewritten in place at most twenty times a second, `ProgressDrawTarget::stderr_with_hz(20)`, template `{spinner} {wide_msg} {elapsed}`. It is `ProgressBar::new_spinner` rather than a bar, because there is no length to give one. `{wide_msg}` pads or truncates to the remaining width, so width is `indicatif`'s arithmetic rather than ours. Below thirty columns the template drops to `{spinner} {elapsed}`, because a truncated label is worse than no label. An absent `message` renders the spinner and the clock alone, which still distinguishes a working run from a hung one.
 
 ```bash
 $ promptforge run staker entity="Bloomberg"
 # stderr: one line, rewritten in place. Four successive frames:
-⠋ [1/3] Gathering source material                                    0:02
-⠙ [1/3] Gathering source material                                    0:18
-⠹ [2/3] Evaluating positions against the record                      0:31
-⠸ [3/3] Writing the report                                           1:04
+⠋ Gathering source material                                          0:02
+⠙ Gathering source material                                          0:18
+⠹ Evaluating positions against the record                            0:31
+⠸ Writing the report                                                 1:04
 # the line is cleared on completion; stderr then carries one summary line:
 staker done - 3 sections, 11 turns, 1m12s - 14 positions across 9 sources
 # stdout carries the path and nothing else:
@@ -391,9 +397,9 @@ Non-TTY mode appends one plain line per notification with a monotonic offset, no
 $ promptforge run staker entity="Bloomberg" 2>run.log
 C:\forge\out\staker\bloomberg-2026-07-25.md
 $ cat run.log
-+0.0s [1/3] Gathering source material
-+18.4s [2/3] Evaluating positions against the record
-+43.1s [3/3] Writing the report
++0.0s Gathering source material
++18.4s Evaluating positions against the record
++43.1s Writing the report
 +72.5s done - 3 sections, 11 turns, 1m12s
 ```
 
@@ -467,7 +473,7 @@ $ echo $?
 
 ## Output discipline
 
-- stdout carries the result and nothing else: one absolute path per file output, in declaration order, or exactly one JSON document under `--json`.
+- stdout carries the result and nothing else: one absolute path per file output, in declaration order, then the returned value if the run produced one, or exactly one JSON document under `--json`.
 - stderr carries progress, the summary, warnings, and errors.
 - No ANSI byte ever reaches stdout, whether or not stdout is a terminal.
 
@@ -479,23 +485,27 @@ $ cat "$report"
 $ promptforge run staker entity="Bloomberg" | xargs -I{} cp {} ~/review/
 ```
 
-Row outputs do not appear on stdout. A table name and a row count are not a pipeable artifact, so they go in the stderr summary and in the `--json` document. Tension: a prompt whose only output is rows prints nothing on stdout, so a script has to check the exit code rather than test for output.
+The returned value goes to stdout because it is the prompt's product and a caller asked for it, and it goes last so that the common case above - a prompt with one file output and no return value - still yields exactly one line. A prompt that returns a value and writes no file therefore prints just that value, which is what makes `promptforge run classify doc=p1234.md` usable in a shell substitution. `--raw` suppresses the paths and prints the value alone, for the case where a prompt has both and a script wants only the second.
 
-The document body is never printed, and the CLI never opens the file. `design.md` settles this on the service side - the result carries a path plus a short summary so a calling model spends no output tokens re-emitting a report it did not write - and the CLI does not undo it for the terminal. A caller who wants the text pipes the path to `cat`.
+Tension: a prompt with both a file output and a return value prints two different kinds of thing on one stream, and a script reading it needs to know which prompt it called. The alternative, putting the value on stderr with the summary, was rejected because a value a caller has to scrape out of a log is not a return value.
+
+The document body is never printed, and the CLI never opens the file. `design.md` settles this on the service side - the result carries a path plus a short summary so a calling model spends no output tokens re-emitting a report it did not write - and the CLI does not undo it for the terminal. A caller who wants the text pipes the path to `cat`. A returned value is different in kind and is printed: the prompt chose to hand it back, it is bounded by what a model wrote into one tool call, and it is the only way a value reaches a shell.
 
 ```json
 {
   "run": "3f2a9c1e-6b40-4d1e-9c7a-2b8f5e11d004",
   "prompt": "staker",
+  "value": "consistent on ABI stability, one shift on reflection in 2024",
   "summary": "14 positions across 9 sources",
   "turns": 11,
   "elapsed_ms": 72500,
   "outputs": [
-    { "name": "report", "kind": "file", "path": "C:\\forge\\out\\staker\\bloomberg-2026-07-25.md" },
-    { "name": "positions", "kind": "rows", "table": "stakeholder_position", "count": 14 }
+    { "name": "report", "path": "C:\\forge\\out\\staker\\bloomberg-2026-07-25.md" }
   ]
 }
 ```
+
+`value` is `null` when the run returned nothing, and is a JSON string in every other case - never a parsed object, even when the prompt wrote JSON into it. The CLI does not know whether the string was meant to be JSON and does not guess: `jq -r .value | jq .` is the two-step a caller writes when it was, and it fails loudly rather than silently reshaping when it was not.
 
 ## Interrupts
 

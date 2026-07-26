@@ -12,7 +12,7 @@ The feature is `paperstore` and the type is `PaperstoreExt`, which is the worksp
 
 This crate is also the second half of the assumption `design.md` recorded as its riskiest: that one `Extension` trait carries both a stateless extension and a transactional database one without acquiring a special case for either. [design-search.md](design-search.md) is the stateless half and the reference case for it, with [design-classify.md](design-classify.md) a second stateless example; in both, `on_section` is a no-op because neither holds anything whose lifetime is a section. This crate is the half that holds a write transaction for exactly the length of a section, so `## The Extension impl` below is the heart of the document and its verdict on the trait is the most valuable thing in it.
 
-The verdict was that the trait was close and not sufficient, and `## Verdict on the trait` names the four changes it needed. All four have since landed in [design-core.md](design-core.md): `on_section`, `validate`, and `shutdown` are async, `SectionEvent` gained `RunEnded` and a `TaskId` on the nested variants plus `NestedFailed`, `RunError` gained an `Extension` variant, and the trait gained `row_count` and `holds_section_state`. The signatures quoted below are the current ones. The assumption is retired as substantially correct: one trait carries both shapes, and no special case for either extension was required.
+The verdict was that the trait was close and not sufficient, and `## Verdict on the trait` names the four changes it needed. All four have since landed in [design-core.md](design-core.md): `on_section`, `validate`, and `shutdown` are async, `SectionEvent` gained `RunEnded` and a `TaskId` on the nested variants plus `NestedFailed`, `RunError` gained an `Extension` variant, and the trait gained `summarize` and `holds_section_state`. The signatures quoted below are the current ones. The assumption is retired as substantially correct: one trait carries both shapes, and no special case for either extension was required.
 
 What this crate does not do, and cannot be made to do without a change to this document:
 
@@ -230,7 +230,7 @@ tracing = { workspace = true }
 
 The replacement is stronger than what was given up: `query_as::<_, Row>` with a `FromRow` derive, and the shared backend test suite in `## Tests` running every statement against a real SQLite file and a real Postgres server. A compile-time check proves a statement parses against one schema; the suite proves both backends produce the same rows, which is the property this crate actually needs. Tension: a typo in a column name is a test failure rather than a compile error, so it is found in seconds rather than instantly, and only if a test covers that statement.
 
-One more consequence of 0.9.0 to design around. The `query*` functions now take `SqlSafeStr`, which accepts `&'static str` and requires `AssertSqlSafe` for anything built at runtime. Every statement in this crate is a static literal except the ones that interpolate a table name for a declared `Rows` output, and those are gated behind an allowlist lookup before `AssertSqlSafe` is reached. The new bound makes that gate visible in the type system instead of a convention, which is a genuine improvement and is why `## Declared row outputs` names the allowlist as the mechanism rather than the habit.
+One more consequence of 0.9.0 to design around. The `query*` functions now take `SqlSafeStr`, which accepts `&'static str` and requires `AssertSqlSafe` for anything built at runtime. Every statement in this crate is a static literal except the ones that interpolate a table name for a `paper_rows` write, and those are gated behind an allowlist lookup before `AssertSqlSafe` is reached. The new bound makes that gate visible in the type system instead of a convention, which is a genuine improvement and is why `## Row writes are this crate's business alone` names the allowlist as the mechanism rather than the habit.
 
 ## The storage trait
 
@@ -505,7 +505,7 @@ struct Inner {
     /// each with its ordered column specification.
     tables: BTreeMap<String, TableSpec>,
     /// One open write transaction per run, plus its live savepoints and the
-    /// row counts a declared `Rows` output will report.
+    /// row counts `summarize` will report.
     runs: Mutex<BTreeMap<RunId, RunState>>,
     /// Committed row counts, surviving the transaction that produced them.
     counts: Mutex<BTreeMap<RunId, BTreeMap<String, u64>>>,
@@ -650,11 +650,18 @@ impl Extension for PaperstoreExt {
         Ok(())
     }
 
-    /// Reads the committed counts, so the number outlives the transaction that
-    /// produced it. Zero for a table this run never wrote.
-    async fn row_count(&self, run: RunId, table: &str) -> Result<u64, ExtError> {
+    /// Reads the committed counts, so the numbers outlive the transaction that
+    /// produced them. `None` for a run that wrote no rows, which is what keeps
+    /// a read-only run's summary free of an empty clause.
+    async fn summarize(&self, run: RunId) -> Result<Option<String>, ExtError> {
         let counts = self.inner.counts.lock().await;
-        Ok(counts.get(&run).and_then(|t| t.get(table)).copied().unwrap_or(0))
+        let Some(t) = counts.get(&run).filter(|t| !t.is_empty()) else { return Ok(None) };
+        // BTreeMap, so the clause order is the table order and the string is
+        // stable across runs that wrote the same tables.
+        Ok(Some(t.iter()
+            .map(|(table, n)| format!("{n} {table} rows"))
+            .collect::<Vec<_>>()
+            .join(", ")))
     }
 
     async fn shutdown(&self) -> Result<(), ExtError> {
@@ -697,7 +704,7 @@ The core binds five of the six operations under one table named `paper`, matchin
 
 The trait then declared `fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError>`. A transaction boundary is network or disk I/O: `BEGIN IMMEDIATE`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`. A synchronous hook cannot await any of them. The three ways out were all bad. `block_in_place` plus `Handle::block_on` panics on a current-thread runtime and is forbidden inside an existing `block_on`. Spawning the commit and returning `Ok(())` discards the result, so a failed commit becomes a successful run. A dedicated writer task with a channel and a blocking receive on the reply reintroduces the same block on the reply.
 
-What was required, and what landed: `async fn on_section(&self, ev: &SectionEvent) -> Result<(), ExtError>`, with `#[async_trait]` on the trait, which the trait already needed for `ToolFn`. `validate`, `row_count`, and `shutdown` are async for the same reason. It was a small, mechanical change to `design-core.md` and it was not optional.
+What was required, and what landed: `async fn on_section(&self, ev: &SectionEvent) -> Result<(), ExtError>`, with `#[async_trait]` on the trait, which the trait already needed for `ToolFn`. `validate`, `summarize`, and `shutdown` are async for the same reason. It was a small, mechanical change to `design-core.md` and it was not optional.
 
 ### Two: there was no run-terminal event, and the leak was a pooled connection
 
@@ -739,7 +746,7 @@ Required, in preference order: a task identity on both nested variants, `task: T
 ### Four: two smaller gaps in the plumbing
 
 - **`RunError` had no variant for an extension lifecycle failure.** A failed `COMMIT` on `Complete` has to fail the run, and `RunError` offered `Tool(ToolError)`, which is a lie, or nothing. `ValidateError::Extension(ExtError)` existed for boot. `RunError::Extension(ExtError)` was added.
-- **There was no way to report a row count for a declared `Rows` output.** See `## Declared row outputs`. One method with a default satisfied it, and `row_count` is that method.
+- **There was no way for an extension to report what it did.** The gap was found as a missing row count for what was then a declared `Rows` output, and the answer at the time was a `row_count(run, table)` method. Both the output kind and that method are since gone, for the reason in `## Row writes are this crate's business alone`, and the general form of the gap remains and is filled by `summarize(run)`. The narrower method is the better illustration of the mistake: it required the core to know a table name in order to ask a question, which is the domain knowledge the core exists to not have.
 
 ### What is sufficient
 
@@ -791,37 +798,43 @@ Three reads are `Both` and one is `ToolOnly`, so the model surface is four names
 
 A `Both` read is safe during an open transaction only because it routes through it. `Inner::runs` is consulted on every read, keyed by `CallCtx::run`, so a read inside a section that has written sees its own uncommitted rows. Without that routing the two surfaces would disagree with each other depending on whether a write had happened yet in the same section.
 
-## Declared row outputs
+## Row writes are this crate's business alone
 
-A prompt declares an output and never a destination:
+Rows are not a declared output. An earlier draft made them one, with a frontmatter `kind: rows` carrying a `table:`, a `Root::Extension` resolving the output name to this crate, and a `Destination::Rows { table, count }` coming back out. All of it is removed from the core, and this section records why and what replaced it.
+
+The core has no domain, and a table name is a domain concept. `OutputKind::Rows { table }` put a database schema into the vocabulary of a type whose other variant is a file, `Root::Extension` made the core arbitrate which extension owned which table, and `Destination::Rows` made the core report a number it could not compute. Three types in a domain-free crate existed to describe one extension's writes.
+
+What a prompt declares now is the tool, not the output:
 
 ```yaml
-outputs:
-  - name: findings
-    kind: rows
-    table: assay_finding
-    required: true
+tools: [paper_rows]
 ```
 
-Resolution, end to end:
+The write happens where it always happened, in Lua at a section boundary:
 
-1. `prompts.toml` maps the output name to this extension with `[outputs] findings = { extension = "paperstore" }`. The core turns that into `Root::Extension("paperstore")` and the frontmatter's `kind: rows` into `OutputKind::Rows { table: "assay_finding" }`.
-2. At boot, `promptforge-mcp` resolves `OutputRoots` and checks that an extension named `paperstore` is linked. That check exists today. **The check that the extension accepts `assay_finding` does not**, and `design.md` requires it: startup rejects a prompt whose declared output names a missing output root or target table. Only the extension knows its own tables.
-3. During the run, `paper_rows` writes the rows inside the section's transaction and records the count in `RunState::rows` keyed by table. The count is the row count of the most recent replace-all write for that table, not a running sum, because a second write to one table supersedes the first.
-4. On `Complete` the counts move from `RunState` into `Inner::counts`, which outlives the transaction, so the count is available after the commit that made it true.
-5. At run end the core asks this extension for the count and builds `Destination::Rows { table, count }`. `promptforge-mcp` maps that to `OutputRef { kind: rows, table, rows }` and the text block reads `findings: 7 rows in assay_finding`.
+```lua
+paper.rows{ table = "assay_finding", id = params.paper_id, rows = store.get("findings") }
+```
 
-Step 5 calls `Extension::row_count`, which `design-core.md` carries on the trait with a default of zero so no other extension notices it:
+Resolution, end to end, and it is shorter than what it replaced:
+
+1. `prompts.toml` binds the canonical name with `[tools] paper_rows = "paperstore"`. Nothing about tables reaches the core.
+2. At boot, this crate's own `validate` hook checks that every table in `[extensions.paperstore.tables]` exists in the connected database with the declared columns. That check is entirely local, needs no cooperation from the core, and is stronger than the one it replaces because it verifies the schema rather than the name.
+3. During the run, `paper_rows` writes inside the section's transaction and records the count in `RunState::rows` keyed by table. The count is the row count of the most recent replace-all write for that table, not a running sum, because a second write to one table supersedes the first.
+4. On `Complete` the counts move from `RunState` into `Inner::counts`, which outlives the transaction, so the count survives the commit that made it true.
+5. At run end the core calls `Extension::summarize`, and this crate renders its counts as one line of prose: `wrote 7 assay_finding rows`. The core folds that into `Outcome::summary` without parsing it.
+
+Step 5 is the whole of what the core now knows about rows, and it knows it as text:
 
 ```rust
-async fn row_count(&self, _run: RunId, _table: &str) -> Result<u64, ExtError> { Ok(0) }
+async fn summarize(&self, run: RunId) -> Result<Option<String>, ExtError>;
 ```
 
-The count is per run and per table because that is what a `Destination::Rows` needs, and it is read from `Inner::counts` rather than from `RunState`, which is why `Complete` moves the counts out of the transaction's state before dropping it: the core asks after the commit, and the map that answers has to outlive the thing that produced the number. The method is async, which costs nothing here and is what lets an extension that keeps its counts in the database answer from a query instead of a map.
+This is a strictly better trade than `row_count` was. `row_count(run, table)` required the core to already know the table name in order to ask, which is exactly the knowledge it should not have; `summarize(run)` asks a question the core can pose without knowing any domain at all, and the answer is opaque prose it forwards rather than a number it interprets.
 
-Nothing else could produce the number. The core owns `Destination`, and the alternative considered and rejected was for the core to sum a `rows` field out of tool results whose extension matches the output root: it needs no trait change and it requires the core to know that a JSON result field named `rows` means something, which is a domain convention in a crate that declares no domain.
+What is genuinely lost is a typed row count on the wire. `OutputRef` no longer carries `table` and `rows`, so a program that wants the number parses prose or queries the database. That is the correct place for the cost to land: a caller who cares about row counts is a caller with database access, and a caller without database access could do nothing with the number anyway.
 
-Step 2 is the half with no landed mechanism. The trait offers no predicate the core can ask about a table, so the core cannot itself reject a prompt whose declared rows output names a table this deployment does not accept, even though `design-mcp.md` already carries the error for that rejection as `ValidateError::UnknownTargetTable`. What the trait does offer is `validate`, and this crate's allowlist is exactly the answer that check needs; what is missing is the declared table names reaching this crate, since only the core resolved `Root::Extension`. Which side closes the gap is in `## Open`. Until it does, a table absent from `[extensions.paperstore.tables]` is caught at the first `paper_rows` call with `UnknownTable` naming it, which is a failed run rather than a refused boot.
+Also lost, and worth naming because a previous draft treated it as a defect to be fixed: there is no longer a boot check that a prompt's declared table is one this deployment accepts, because a prompt no longer declares a table. The failure it guarded against - a prompt naming `assay_finding` against a deployment whose allowlist omits it - now surfaces at the first `paper_rows` call as `UnknownTable` naming the table. Tension: that is a failed run rather than a refused boot, and a prompt whose only fault is a misspelled table name gets discovered late. The counter is that the table name is now written in the prompt's Lua, next to the call, rather than in frontmatter far from it.
 
 The table allowlist is configuration and the specification is data:
 
@@ -991,18 +1004,18 @@ Every test below runs without a database server except the Postgres half of the 
 - **The case-fold boundary**: `PaperId::parse` on `p4003r2`, ` P4003R2 `, `P4003r2`, and `p4003R2` all producing the same value; `as_str` uppercase and `stem` lowercase; `parse` rejecting the empty string, `4003`, `P`, `PR2`, `P4003R`, and a string with an interior space. Then the cross-method test the Python side would fail: write rows with a lowercase id, read them back with an uppercase id, and assert they are found, on both backends. Then a deserialization test asserting a lowercase id in a tool argument payload arrives as an uppercase `PaperId`.
 - **Surface separation**: build a `ToolMap` with `PaperstoreExt` registered and assert the model's schema list contains exactly `paper_meta`, `paper_latest`, `paper_md`, and `paper_cites`, and neither `paper_upsert` nor `paper_rows`. Then the converse: the Lua environment has a `paper` table with exactly `meta`, `latest`, `cites`, `upsert`, and `rows`, and no `md`. This is the test that fails if someone later changes a `Surfaces` value.
 - **Table allowlist**: `paper_rows` against a table not in the allowlist fails with `UnknownTable` and issues no statement; a row missing a required column fails with `MissingColumn` naming it; an unknown column fails with `UnknownColumn`; a string where an int is declared fails with `ColumnType` naming both types. Plus a test that a table name containing a quote or a semicolon cannot be constructed, since the allowlist is what stands between an interpolated identifier and an injection.
-- **Declared rows resolution**: a prompt declaring `kind: rows` with `table: assay_finding` and a root resolving to this extension passes boot validation; the same prompt with `table: not_a_table` fails boot with the table named; after a run that wrote seven rows, `row_count` returns seven, and after a second write of three it returns three rather than ten. Plus `row_count` for a table the run never wrote returning zero rather than an error, and a count still readable after the transaction that produced it committed.
+- **Row reporting through `summarize`**: after a run that wrote seven rows to one table, `summarize` returns `Some("7 assay_finding rows")`, and after a second write of three to the same table it returns three rather than ten; two tables render as one comma-joined clause in table-name order; a run that wrote nothing returns `None` rather than an empty string, so the core folds no empty clause into `Outcome::summary`; and the string is still readable after the transaction that produced it committed. Plus a boot test that a table declared in `[extensions.paperstore.tables]` but absent from the database fails `validate` naming it, which is the check that replaced the removed boot-time output-table resolution.
 - **Feature off**: a compile test that the host binary builds with the `paperstore` feature disabled, that no `sqlx` symbol is in the dependency graph, and a runtime test that a prompt naming `paper_meta` fails startup validation with an unbound canonical name.
 
 ## Open
 
 - The exact sqlx 0.9.0 API for opening a transaction with `BEGIN IMMEDIATE` rather than the default deferred begin. `## The SQLite backend` requires it and the requirement does not depend on the API: if no suitable entry point exists in the pinned version, `Store::begin` checks out a pooled connection, executes the statement directly, and drives `COMMIT` and `ROLLBACK` by hand, which is more code and the same semantics. This is the one place in this document where an implementation detail is unverified rather than undecided.
-- Which side closes the boot-time check that a declared rows output names a table this deployment accepts. `accepts_table` was proposed here as a defaulted `Extension` predicate and did not land, so the trait gives the core no way to ask, and `design.md`'s rule that startup rejects a prompt whose declared output names an unknown target table is unenforced for the table half. Two ways to close it. Have the host pass the declared table names from `[outputs]` into `PaperstoreExt::new` and let `validate` check them against the allowlist, which needs no core change and puts the same wiring in every host binary, with the error raised by the extension rather than where the core resolved `Root::Extension`. Or add the predicate to the core trait, which puts the error where the resolution happened and costs every extension a method answering a question only a storage extension has. Unresolved because the first is cheaper and the second is where the error belongs.
+- Whether a prompt naming a table absent from this deployment's allowlist should be catchable before the run. It is not, now that a table name lives in a prompt's Lua rather than in its frontmatter: nothing outside a running Lua block knows which tables a prompt will name, and the failure surfaces at the first `paper_rows` call as `UnknownTable`. Boot-time detection would need the core to hand this crate the text of every prompt's Lua for scanning, which is worse than the problem. A partial answer available cheaply is a lint in `promptforge-cli validate` that greps prompt sources for `paper.rows{ table = "..." }` string literals and warns on an unknown one, which catches the typo case and cannot catch a computed name.
 - Whether the write-buffering escape hatch replaces the section-long transaction on SQLite. Buffering a run's writes in memory and applying them in one short transaction at `Complete` would dissolve the single-writer constraint, the pooled-connection leak, and the fan-out savepoint problem at once, and it would cost read-your-writes routing through the buffer and unbounded memory on a large section. It is not proposed here because `design.md` specifies the transaction mapping and a change to it is a change to that document rather than to this one. It is the strongest argument available if concurrent writing runs on SQLite turn out to be needed.
 - Whether the eleven zero-or-one integer flag columns should become real booleans in Postgres. Keeping them integers preserves what the Django mirror reads and imports SQLite's type poverty into a database that has a boolean type. The answer depends on the mirror code, which is in `wg21-website` and unreadable from here.
 - Whether `paper_md` should also be reachable from Lua through a guarded accessor that returns a handle rather than text. It would let a prompt author window a paper deterministically without putting untrusted text where `{{ state.x }}` substitution can reach it, and it would add a fourth thing to the language for one use case.
 - Whether the twenty-eight tables should be reduced before the Postgres migration is written. Seven of them, `claims`, `evidence`, `external_citations`, `questions`, `rhetoric`, `caput_causae`, and `citation_audit`, are documented in `CLAUDE.md` as no longer written by any production pipeline, and two more, `candidates` and `signals`, have no primary key and no caller. Migrating nine dead tables to Postgres to keep parity with a SQLite schema nobody writes is work with no reader, and deleting them is a decision about the Python side that this crate does not own.
 - Whether the indexes the Python schema lacks should be added here. Nine `paper_id` prefixes with no index mean every replace-all `DELETE` is a full table scan, which is invisible at ten thousand papers and is not free. Adding them changes the SQLite schema for the Python side too, which is the same kind of cross-boundary change as the WAL conversion and wants the same deliberateness.
-- Whether `RunEnded` should also evict the run's entry from `Inner::counts`. Nothing evicts it today, so a long-lived process accumulates one small map per run forever, and the arm that ends a run is the obvious place to drop it. What makes it a question rather than an edit is ordering: `row_count` is what reads that map, `RunEnded` fires from a drop guard on the way out of `run`, and this document does not know whether the core asks for its declared row counts before that guard runs. If it asks after, evicting there returns zero for every rows output and the count is silently lost. The alternatives are a retention window keyed on run end, matching what `design-mcp.md`'s run registry already does for its own records, or an explicit statement in `design-core.md` that `row_count` is called before the guard. Unresolved because the cheap fix is the one that can silently zero a reported number.
+- Whether `RunEnded` should also evict the run's entry from `Inner::counts`. Nothing evicts it today, so a long-lived process accumulates one small map per run forever, and the arm that ends a run is the obvious place to drop it. What makes it a question rather than an edit is ordering: `summarize` is what reads that map, `RunEnded` fires from a drop guard on the way out of `run`, and this document does not know whether the core asks for its summary before that guard runs. If it asks after, evicting there returns `None` for every run and the counts are silently lost. The alternatives are a retention window keyed on run end, matching what `design-mcp.md`'s run registry already does for its own records, or an explicit statement in `design-core.md` that `summarize` is called before the guard. Unresolved because the cheap fix is the one that can silently drop a reported number.
 
 *2026-07-25 - design-paperstore*

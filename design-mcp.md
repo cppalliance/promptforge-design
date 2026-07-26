@@ -111,7 +111,7 @@ fn tool_def(p: &Prompt) -> Result<Tool, StartupError> {
     })
 }
 
-/// "report as a markdown file", "positions as rows in stakeholder_position"
+/// "report as a markdown file"
 fn describe_output(o: &OutputDecl) -> String;
 ```
 
@@ -122,7 +122,7 @@ For the frontmatter in the core doc's worked example, `staker`, the generated de
 ```json
 {
   "name": "staker",
-  "description": "Build a stakeholder position report for one entity\n\nProduces: report as a markdown file, positions as rows in stakeholder_position\nKeywords: governance, stakeholder",
+  "description": "Build a stakeholder position report for one entity\n\nProduces: report as a markdown file\nKeywords: governance, stakeholder",
   "inputSchema": { "type": "object", "properties": { "entity": { "type": "string" } }, "required": ["entity"] },
   "outputSchema": { "$ref": "#/definitions/RunResult" },
   "annotations": { "readOnlyHint": false, "destructiveHint": false, "idempotentHint": true, "openWorldHint": true }
@@ -201,20 +201,20 @@ sequenceDiagram
     Server->>Obs: construct with frame sender and registry
     Server->>Exec: build executor then run
     Exec->>Obs: emits RunStarted
-    Obs->>Pump: try_send frame 0 of 3
-    Pump->>Client: progress notification 0 of 3 Starting staker
-    Exec->>Obs: emits SectionStarted done 1
-    Obs->>Pump: try_send frame 1 of 3
-    Pump->>Client: progress notification 1 of 3 Gathering source material
+    Obs->>Pump: try_send frame 0
+    Pump->>Client: progress notification Starting staker
+    Exec->>Obs: emits SectionStarted completed 1
+    Obs->>Pump: try_send frame 1
+    Pump->>Client: progress notification Gathering source material
     Exec->>Obs: emits ToolCalled web_search
     Note over Obs: logged only and no frame
-    Exec->>Obs: emits SectionStarted done 2
-    Obs->>Pump: try_send frame 2 of 3
-    Pump->>Client: progress notification 2 of 3 Evaluating positions
+    Exec->>Obs: emits SectionStarted completed 2
+    Obs->>Pump: try_send frame 2
+    Pump->>Client: progress notification Evaluating positions
     Exec-->>Server: Outcome
     Server->>Obs: emits RunFinished
-    Obs->>Pump: try_send frame 3 of 3
-    Pump->>Client: progress notification 3 of 3 Complete
+    Obs->>Pump: try_send frame 3
+    Pump->>Client: progress notification Complete
     Server-->>Client: CallToolResult with structuredContent
 ```
 
@@ -227,7 +227,6 @@ sequenceDiagram
 #[derive(Clone, Debug)]
 pub struct Frame {
     pub progress: u32,
-    pub total: Option<u32>,
     pub message: String,
     pub section: Option<String>,
 }
@@ -239,34 +238,30 @@ pub struct McpObserver {
     /// Always present. Status polling reads what this writes.
     registry: Arc<RunRegistry>,
     /// Latched, because `SectionRetrying`, `SectionSkipped`, and `Narration` carry
-    /// neither number. Losing either changes how the client renders the line, and
-    /// the core guarantees `done` never decreases, so a latched copy is always current.
-    done: AtomicU32,
-    nominal_total: AtomicU32,
+    /// no count. Losing it would make the line's number jump backwards, and the
+    /// core guarantees `completed` never decreases, so a latched copy is current.
+    completed: AtomicU32,
     dropped: AtomicU64,
 }
 
 impl Observer for McpObserver {
     fn on_event(&self, ev: &Event) {
         let frame = match ev {
-            Event::RunStarted { prompt, nominal_total, .. } => {
-                self.nominal_total.store(*nominal_total, Ordering::Relaxed);
-                Some(self.frame(0, format!("Starting {prompt}"), None))
-            }
-            Event::SectionStarted { done, nominal_total, name, label } => {
-                self.done.store(*done, Ordering::Relaxed);
-                self.nominal_total.store(*nominal_total, Ordering::Relaxed);
+            Event::RunStarted { prompt, .. } =>
+                Some(self.frame(0, format!("Starting {prompt}"), None)),
+            Event::SectionStarted { completed, name, label } => {
+                self.completed.store(*completed, Ordering::Relaxed);
                 let text = label.clone().unwrap_or_else(|| name.clone());
-                Some(self.frame(*done, text, Some(name.clone())))
+                Some(self.frame(*completed, text, Some(name.clone())))
             }
             Event::SectionRetrying { name, attempt, .. } =>
-                Some(self.frame(self.done.load(Ordering::Relaxed), format!("Retrying {name}, attempt {attempt}"), Some(name.clone()))),
+                Some(self.frame(self.completed.load(Ordering::Relaxed), format!("Retrying {name}, attempt {attempt}"), Some(name.clone()))),
             Event::SectionSkipped { name, .. } =>
-                Some(self.frame(self.done.load(Ordering::Relaxed), format!("Skipped {name}"), Some(name.clone()))),
+                Some(self.frame(self.completed.load(Ordering::Relaxed), format!("Skipped {name}"), Some(name.clone()))),
             Event::Narration { section, text } =>
-                Some(self.frame(self.done.load(Ordering::Relaxed), text.clone(), Some(section.clone()))),
+                Some(self.frame(self.completed.load(Ordering::Relaxed), text.clone(), Some(section.clone()))),
             Event::RunFinished { outcome, .. } =>
-                Some(self.frame(self.nominal_total.load(Ordering::Relaxed), finish_text(outcome), None)),
+                Some(self.frame(self.completed.load(Ordering::Relaxed), finish_text(outcome), None)),
             other => { tracing::debug!(run = %self.run, ?other, "event"); None }
         };
         let Some(frame) = frame else { return };
@@ -287,16 +282,18 @@ async fn pump(peer: Peer<RoleServer>, token: ProgressToken, mut rx: mpsc::Receiv
         let _ = peer.notify_progress(ProgressNotificationParam {
             progress_token: token.clone(),
             progress: f.progress,
-            total: f.total,
+            total: None,
             message: Some(f.message),
         }).await;
     }
 }
 ```
 
-`Event::SectionStarted`'s `done`, `nominal_total`, and `label` pass through untouched into `progress`, `total`, and `message`. No fraction is computed anywhere, which is the reason those three fields exist on that event.
+`Event::SectionStarted`'s `completed` and `label` pass through untouched into `progress` and `message`. Nothing is computed anywhere, which is the reason those fields exist on that event.
 
-The denominator is nominal, and the client is shown it anyway. Because `## Main` dispatches by `goto` rather than the runtime walking sections in order, a run's visited-section count is not known in advance, so `nominal_total` counts the H2 sections excluding Main and `done` counts distinct sections completed. Tension: a run that skips sections or revisits one shows a bar that never fills, so the fraction is honest about ordering and misleading about remaining work; the alternative, omitting `total` entirely, costs the client its bar and was judged worse.
+`total` is always `None`. The field is in the protocol and this server declines to fill it, because the count of sections a run will visit is not known when it starts: `goto` may skip, revisit, or jump backwards, and `return_result` may end a run from any section. An earlier draft sent a `nominal_total` counting the prompt's H2 sections so the client could draw a bar, and it is dropped - a denominator that a branching run never reaches is not an approximation of remaining work, it is a different quantity wearing its clothes. Tension: no client can draw a filling bar from these notifications, and the caller's only sense of progression is the section name changing.
+
+`progress` still increments and is still required to be monotonic by the protocol, which the core's `completed` guarantee satisfies directly. On a retry or a skip the latched value repeats rather than falling, which is legal and is why the latch exists.
 
 The channel is bounded at 64 with `try_send`. Progress is lossy by nature and a dropped frame is always preferable to a blocked executor: the client renders in place, so a skipped number is invisible, while a blocked `on_event` would stall a section boundary. Drops are counted and logged at run end.
 
@@ -340,6 +337,9 @@ pub struct RunResult {
     pub version: String,
     pub status: RunStatus,          // completed | failed, a terminal status only
     pub outputs: Vec<OutputRef>,
+    /// `Outcome::value`: whatever the prompt passed to `return_result`, verbatim
+    /// and unparsed. Absent when the run fell off its last section.
+    pub value: Option<String>,
     /// `Outcome::summary` verbatim, truncated at 600 characters so a summary bug
     /// cannot become a body dump.
     pub summary: String,
@@ -351,10 +351,7 @@ pub struct RunResult {
 #[derive(Serialize, JsonSchema)]
 pub struct OutputRef {
     pub name: String,
-    pub kind: OutputRefKind,        // file | rows
-    pub path: Option<String>,       // absolute, for file
-    pub table: Option<String>,      // for rows
-    pub rows: Option<u64>,          // for rows
+    pub path: String,               // absolute
 }
 
 /// Four states. `RunResult` carries only a terminal one; the status endpoint
@@ -362,20 +359,18 @@ pub struct OutputRef {
 #[derive(Serialize, Deserialize, JsonSchema)]
 #[serde(rename_all = "snake_case")]
 pub enum RunStatus { Queued, Running, Completed, Failed }
-
-#[derive(Serialize, JsonSchema)]
-#[serde(rename_all = "snake_case")]
-pub enum OutputRefKind { File, Rows }
 ```
 
-`OutputRef` is built from `Outcome::outputs`, mapping `Destination::Path` to `path` and `Destination::Rows { table, count }` to `table` and `rows`. Nothing else in the outcome reaches the client.
+`OutputRef` is built from `Outcome::outputs`, mapping `Destination::Path` to `path`. It lost a `kind` discriminant and its `table` and `rows` fields along with `OutputKind::Rows` in the core: an output is a file, and an extension that wrote rows reports them through `Outcome::summary` rather than through a typed field this server would have to understand. Nothing else in the outcome reaches the client.
+
+`value` and `summary` are both strings and are not the same string. `value` is the prompt's own product, passed to `return_result` by the model or a Lua block, and this server forwards it untouched: it is not truncated, not parsed, and not merged into the text block, because a caller that asked for JSON must get exactly what the prompt produced. `summary` is the runtime's account of the run and is truncated, because nothing downstream depends on its exact bytes. A calling model reads the text block; a program reads `value`.
 
 Every enum on both surfaces is lowercase on the wire, enforced by `#[serde(rename_all = "snake_case")]` on the type rather than by a hand-written `Serialize`. The wire value is `completed` and never `Completed`, because a status is a JSON token read by `queued` and `running` at the status endpoint and one casing rule across both surfaces is one fewer string comparison to get wrong. Every variant is a single word today, so `snake_case` and `lowercase` emit the same strings; `snake_case` is the one that stays readable if a later state needs two words.
 
 ```json
 {
   "content": [
-    { "type": "text", "text": "staker completed in 214s over 11 turns. report: D:\\wg21\\reports\\staker-herb-sutter.md. positions: 7 rows in stakeholder_position. Read the file if you need its contents." }
+    { "type": "text", "text": "staker completed in 214s over 11 turns. report: D:\\wg21\\reports\\staker-herb-sutter.md. Returned: consistent on ABI stability, one shift on reflection in 2024. Read the file if you need its contents." }
   ],
   "structuredContent": {
     "run_id": "018f5c2a-9d31-7b4e-a0c1-6f2e77b3d9aa",
@@ -383,10 +378,10 @@ Every enum on both surfaces is lowercase on the wire, enforced by `#[serde(renam
     "version": "1",
     "status": "completed",
     "outputs": [
-      { "name": "report", "kind": "file", "path": "D:\\wg21\\reports\\staker-herb-sutter.md" },
-      { "name": "positions", "kind": "rows", "table": "stakeholder_position", "rows": 7 }
+      { "name": "report", "path": "D:\\wg21\\reports\\staker-herb-sutter.md" }
     ],
-    "summary": "Twelve public statements located across four venues. Position is consistent on ABI stability and shifted once on reflection in 2024.",
+    "value": "consistent on ABI stability, one shift on reflection in 2024",
+    "summary": "Twelve public statements located across four venues. Wrote 7 stakeholder_position rows.",
     "turns": 11,
     "elapsed_ms": 214390
   },
@@ -394,7 +389,9 @@ Every enum on both surfaces is lowercase on the wire, enforced by `#[serde(renam
 }
 ```
 
-The `content` text block exists for clients that ignore `structuredContent`, and it says the same things in one line plus an instruction not to re-emit. A failed run returns the same shape with `status: "failed"`, a populated `error`, whatever outputs did land, and `isError: true`.
+The `content` text block exists for clients that ignore `structuredContent`, and it says the same things in one line plus an instruction not to re-emit. `value` appears in it after `Returned:` when the run produced one and is under 200 characters, and is omitted from the text block otherwise, since a prompt returning a large JSON document should not have it pasted into a calling model's context when the same bytes are already in `structuredContent`. A failed run returns the same shape with `status: "failed"`, a populated `error`, whatever outputs did land, no `value`, and `isError: true`.
+
+Row counts now reach the client only as prose inside `summary`, contributed by the paperstore extension through `Extension::summarize`. A client that needs the number parses no field for it, which is the intended consequence of a table being a domain concept: this server has no schema and should not be reporting one.
 
 ## The HTTP surface for Django
 
@@ -435,8 +432,9 @@ The run id is returned immediately. Everything that can fail cheaply - authentic
   "run_id": "018f5c2a-9d31-7b4e-a0c1-6f2e77b3d9aa",
   "prompt": "staker",
   "status": "running",
-  "progress": { "done": 2, "nominal_total": 4, "section": "## Evaluate", "message": "Evaluating positions against the record" },
+  "progress": { "completed": 2, "section": "## Evaluate", "message": "Evaluating positions against the record" },
   "outputs": [],
+  "value": null,
   "summary": null,
   "turns": 6,
   "started_at": "2026-07-25T18:02:11Z",
@@ -446,7 +444,9 @@ The run id is returned immediately. Everything that can fail cheaply - authentic
 }
 ```
 
-`status` is one of `queued`, `running`, `completed`, `failed`. On completion the body carries the same `outputs`, `summary`, and `turns` the MCP result carries, from the same `RunResult` value, so the site and Cursor never disagree about what a run produced. `progress` is the last `Frame` the observer wrote, which is what drives the browser progress display: `done` and `nominal_total` render the bar and `message` renders the caption, with no parsing.
+`status` is one of `queued`, `running`, `completed`, `failed`. On completion the body carries the same `outputs`, `value`, `summary`, and `turns` the MCP result carries, from the same `RunResult` value, so the site and Cursor never disagree about what a run produced. `progress` is the last `Frame` the observer wrote, which is what drives the browser progress display: `message` renders the caption and `section` names the step, with no parsing.
+
+There is no denominator here either, for the reason given under the observer, so the site renders an indeterminate progress indicator with a changing caption rather than a filling bar. Tension: a browser user watching a six-minute run has no estimate of how much is left, and the honest alternatives are all a guess dressed as a measurement.
 
 An unknown id returns `404` with `{ "status": "unknown" }`. Celery treats that as a failure and refires, which is safe because a rerun is a replace-all write from deterministic content.
 
@@ -461,15 +461,14 @@ An unknown id returns `404` with `{ "status": "unknown" }`. Celery treats that a
       "keywords": ["governance", "stakeholder"],
       "params": { "type": "object", "properties": { "entity": { "type": "string" } }, "required": ["entity"] },
       "outputs": [
-        { "name": "report", "kind": "file", "format": "markdown", "required": true },
-        { "name": "positions", "kind": "rows", "table": "stakeholder_position", "required": false }
+        { "name": "report", "kind": "file", "format": "markdown", "required": true }
       ]
     }
   ]
 }
 ```
 
-The body is an object holding one `prompts` array rather than a bare array, because every other body on this surface is an object and a caller's JSON handling stays uniform. `description` is the author's text alone, without the generated `Produces:` and `Keywords:` tails the MCP tool definition appends: those tails exist to steer a model's tool selection, and a form-building client reads the structured `outputs` and `keywords` fields instead. `params` is the schema verbatim and is the same value the tool definition carries in `inputSchema`, so a generated form and a calling model validate against one schema rather than two renderings of one. `outputs` is one entry per `OutputDecl` with `OutputKind` flattened, `kind` reading `file` or `rows` and the kind's own field beside it, `format` for a file and `table` for rows, which is the same flattening `OutputRef` uses in the tool result. Entries are in `Catalog` order, which is a `BTreeMap`, so the array is sorted by name and identical across restarts. Output entries are in declaration order, because that is the order the prompt author wrote and the order a form should present.
+The body is an object holding one `prompts` array rather than a bare array, because every other body on this surface is an object and a caller's JSON handling stays uniform. `description` is the author's text alone, without the generated `Produces:` and `Keywords:` tails the MCP tool definition appends: those tails exist to steer a model's tool selection, and a form-building client reads the structured `outputs` and `keywords` fields instead. `params` is the schema verbatim and is the same value the tool definition carries in `inputSchema`, so a generated form and a calling model validate against one schema rather than two renderings of one. `outputs` is one entry per `OutputDecl` with `OutputKind` flattened, `kind` reading `file` and `format` beside it. Entries are in `Catalog` order, which is a `BTreeMap`, so the array is sorted by name and identical across restarts. Output entries are in declaration order, because that is the order the prompt author wrote and the order a form should present.
 
 ### Validation
 
@@ -509,9 +508,9 @@ The status is `200` whether `ok` is `true` or `false`. A configuration full of p
 | `unresolved_slot` | `PromptNotValid`, `ValidateError::UnresolvedSlot` | A section names a slot that neither the per-prompt nor the global `[slots]` table resolves. |
 | `unbound_tool` | `PromptNotValid`, `ValidateError::UnboundTool` | A name in `Frontmatter::tools` has no binding in the merged `[tools]` table. |
 | `missing_output_root` | `PromptNotValid`, `ValidateError::MissingOutputRoot` | A declared output name has no root in the merged `[outputs]` table. |
-| `unknown_target_table` | `PromptNotValid`, `ValidateError::UnknownTargetTable` | A rows output names a table the extension holding that root refuses. |
+| `state_name_collision` | `PromptNotValid`, `ValidateError::StateNameCollision` | A declared state-filing tool collides with a canonical name, a core name, or another declared name. |
 
-`PromptNotValid` is the one variant that is not itself a `kind`. It wraps `promptforge::ValidateError`, and a caller handed `prompt_not_valid` would have to parse `detail` to learn which of the core's four checks failed, so the four appear directly and the wrapper does not. `Multiple` is absent for the same reason inverted: it is the accumulator, and the `problems` array is what it serializes to. `BindFailed` is the only boot rejection with no `kind` at all, because the pass called here runs steps 1 through 8 and never reaches the listener, which the live service is already holding.
+`PromptNotValid` is the one variant that is not itself a `kind`. It wraps `promptforge::ValidateError`, and a caller handed `prompt_not_valid` would have to parse `detail` to learn which of the core's checks failed, so they appear directly and the wrapper does not. `Multiple` is absent for the same reason inverted: it is the accumulator, and the `problems` array is what it serializes to. `BindFailed` is the only boot rejection with no `kind` at all, because the pass called here runs steps 1 through 8 and never reaches the listener, which the live service is already holding.
 
 `prompt` is present on every kind attributable to one catalog entry and absent on the two that are not: `config` and `token_missing` describe the file itself. Those two also stop the pass where boot stops it, so a response carrying either holds exactly one problem and reports `checked` as zeros, which is honest about the fact that nothing else was examined. `detail` is the variant's `Display` text, so the message a caller reads over HTTP is the message boot would have printed for the same fault, from the same `thiserror` attribute.
 

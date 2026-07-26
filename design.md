@@ -22,6 +22,7 @@ Then one document per crate, at implementable depth, each authoritative for its 
 - [design-search.md](design-search.md) - `promptforge-ext-search`: `web_search` and `web_fetch`, the stateless reference extension, URL policy and SSRF defence
 - [design-paperstore.md](design-paperstore.md) - `promptforge-ext-paperstore`: the storage trait, both backends, the real schema, the transactional reference extension
 - [design-classify.md](design-classify.md) - `promptforge-ext-classify`: ONNX sessions, the four Lua operations, the export gate
+- [design-label.md](design-label.md) - `promptforge-ext-label`: computed progress labels, the reduction pipeline, the label cache
 
 ## Executive Summary
 PromptForge executes markdown prompt files as an always-on service in either of two first-class environments - the whole stack on one developer machine, or the Django host and its firewalled intranet: an inference gateway that routes LLM traffic by model name, holds the LLM endpoint credentials, and owns the GPU concurrency budget, and `promptforge-mcp`, the one MCP server in the system, which exposes prompt execution to connecting clients. The CLI is a client of that server rather than a second execution engine. The runtime is domain-neutral: it parses, walks sections, and dispatches to named functions, and every capability with a subject matter - storage, search, classification - arrives as an `Extension` the host binary linked, which is also the whole extensibility story since there is no plugin loading. Recommendation: build it in Rust as one Cargo workspace, gateway first (high confidence - the gateway improves the existing Python stack with a configuration change alone). Who it serves and what success looks like: pending.
@@ -96,7 +97,7 @@ The `promptforge` library is the box labelled `Executor` and nothing else on thi
 9. Configuration pair - `gateway.toml` and `prompts.toml`, watched on the filesystem and hot-reloaded
 10. Endpoint pinning - a run's turns for one model bound to one endpoint for the life of the run, keyed on the run and model pair, so the section prefix stays in that pod's prefix cache
 11. Idempotent replace-all write - a write that fully replaces file and row from deterministic content, so a rerun needs no cleanup
-12. Declared output - a named output with a kind, a format or target table, and a required flag; a prompt emits to the name and the runtime resolves the destination
+12. Declared output - a named output with a kind, a format, and a required flag; a prompt emits to the name and the runtime resolves the destination
 13. Progress observer - an interface the executor emits a structured event to at every section boundary and tool call
 14. Prompt frontmatter - inert YAML at the head of a prompt file, parseable without running code: name, description, keywords, parameter schema, canonical tool names required, state-filing tool declarations, output declarations, progress templates, version
 15. Run handle - a run identifier returned by the fire endpoint and readable at the status endpoint for the life of the run
@@ -105,6 +106,8 @@ The `promptforge` library is the box labelled `Executor` and nothing else on thi
 18. Shared bearer token - one secret held in configuration and presented by every client, checked before a run starts
 19. ONNX Runtime session - an in-process FP32 classifier or embedder session on CUDA, built from an opset-15-or-higher export, with build failures surfaced rather than silently falling back to CPU
 20. Static GPU memory budget - a fixed per-process allocation on one card under MPS, assigned in a defined startup order
+21. Declared exit - a section's Lua block records where it goes with `break_section` or `goto`, the runtime acts on that record when the section ends, and a section declaring nothing ends the run
+22. `return_result` - the one run-termination signal, reaching the model as a tool and Lua as a function under one name, carrying one optional string to the caller
 
 ## Design Decisions
 
@@ -282,7 +285,10 @@ Every turn of a run that asks for a given model goes to the same endpoint, so th
 The executor emits a structured event at each section boundary and each tool call through an observer interface, and consumers translate. The MCP server turns those events into progress notifications on section transitions, with long-running-task support when the client advertises it and elicitation for mid-run user questions; the CLI prints them. Frontmatter progress templates, static text keyed by section name, are the fallback when the narrator model is unavailable or not worth invoking. A narrator that converts the stream into human-readable text, potentially a fine-tuned small model, is out of scope here and the seam it attaches to is specified now. Tension: a client without those capabilities sees one silent long call.
 
 ### Cursor renders progress notifications live, measured rather than assumed
-A throwaway MCP server emitting `notifications/progress` every five seconds over a thirty-second call was connected to Cursor on 2026-07-25. Cursor renders each notification in place as `{progress} / {total} - {message}`, replacing the previous one, for the duration of the call. This was the design's largest open risk, because a spinner-only client would have moved the entire progress story to the tool result and changed what the narrator model is for. It did not. The observer's section-boundary events map directly onto the three arguments, so a section named in the prompt appears on the caller's screen with no additional surface. Redundant numbering in the message text is unnecessary, since the client renders the fraction itself. Tension: this is one client measured on one date, and no part of the protocol obliges another client to render anything.
+A throwaway MCP server emitting `notifications/progress` every five seconds over a thirty-second call was connected to Cursor on 2026-07-25. Cursor renders each notification in place, replacing the previous one, for the duration of the call. This was the design's largest open risk, because a spinner-only client would have moved the entire progress story to the tool result and changed what the narrator model is for. It did not. What Cursor draws is text rather than a bar, so the message carries the meaning and a section named in the prompt appears on the caller's screen with no additional surface. Tension: this is one client measured on one date, and no part of the protocol obliges another client to render anything.
+
+### Progress carries no denominator
+A notification says which section is running and does not say how many remain. An earlier draft sent a `nominal_total` counting the prompt's H2 sections so a client could render `2 / 5`, and it is dropped. The number is unknowable rather than merely approximate: `goto` may skip sections, revisit them, or jump backwards, and `return_result` may end a run from any section, so the count a run will actually visit is not determined when it starts. Fall-through makes a straight-line prompt predictable but does not make every prompt so, and a denominator that is right for the simple case and wrong for the branching one is worse than none, because a reader cannot tell which they are looking at. Tension: no client can draw a filling bar, and a long run therefore looks the same at its start as near its end apart from the section name.
 
 ### Both services install through daemon-kit
 Windows Service Control Manager, launchd, and systemd. A Windows service has no console, so logging goes to a rolling file, and the Tokio runtime is created inside the service handler rather than by an attribute macro. Tension: three platform service paths to test.
@@ -303,15 +309,17 @@ The artifact is a prompt file plus its `prompts.toml` entry. The path exercises 
 
 - Cursor calls `tools/call` on `staker` with `{ "entity": "Bloomberg" }` and a `progressToken` in `_meta`.
 - `promptforge-mcp` checks the bearer token, looks `staker` up in the catalog snapshot, validates the arguments against the frontmatter schema, takes a run permit, builds an `McpObserver` around the progress token, and constructs `Executor::new` from maps resolved at boot.
-- `Executor::run` enters `## Main`, emits `RunStarted` and `SectionEvent::Enter`, runs Main's Lua, and reaches `goto("## Gather")`.
+- `Executor::run` enters `## Main`, emits `RunStarted` and `SectionEvent::Enter`, and runs Main's Lua, which declares `break_section`. Main's model turn ends without tool calls, so the executor takes that exit to `## Gather` and destroys the context on the way.
 - `## Gather` calls `model("fast")`, which `SlotMap` resolves to `claude-sonnet-4`, and the gateway resolves that to a backend and a key. The section's `tools.add("web_search", ...)` scopes the model's schema list to four entries out of the eleven bound.
 - Each `web_search` call goes to `promptforge-ext-search`, holding a four-permit semaphore. Each model turn goes to `promptforge-gateway`, which admits it against the per-endpoint and global semaphores and pins the run and model pair to one endpoint.
-- The model calls `done()`, `check()` passes, `SectionEvent::Complete` fires, and `goto("## Evaluate")` destroys the context.
-- Progress: each `SectionStarted` becomes a notification Cursor renders in place as `1 / 3 - Gathering source material`.
-- The report is written by the Rust side to the configured root for the `report` output. The tool result carries the path, a row count, and a summary, never the body.
+- The model stops calling tools, `check()` passes, `SectionEvent::Complete` fires, and the executor takes Gather's declared exit to `## Evaluate`, destroying the context again.
+- Progress: each `SectionStarted` becomes a notification Cursor renders in place as `Gathering source material`.
+- The report is written by the Rust side to the configured root for the `report` output. `## Write` declares no exit, so the run ends when it does, and it calls `return_result` with a one-sentence verdict on the way out. The tool result carries the path, that value, and a summary, never the body.
 - `SectionEvent::RunEnded { ok: true }` fires from the guard, and the paperstore extension commits.
 
-Trace assertion: the observer transcript is a golden file. Tests: the MCP integration test drives this against the core's fake gateway and recording extension, asserting the exact event sequence, that `done` never decreases, and that the result contains a path and no document body.
+The prompt is four sections, the first three declaring `break_section` and the last declaring nothing, with no `goto` anywhere. That is the shape most prompts have: the exits say only "continue," and they are written down anyway so that the graph can be checked at boot and so that reading one section tells you what follows it.
+
+Trace assertion: the observer transcript is a golden file. Tests: the MCP integration test drives this against the core's fake gateway and recording extension, asserting the exact event sequence, that `completed` never decreases, and that the result contains a path and no document body.
 
 ### Two: the same prompt moves to production unedited
 
@@ -327,7 +335,7 @@ Test: one prompt, two configurations, one fake backend for each, asserting ident
 
 The artifact is a prompt whose `check()` asserts a verdict was set, against a model that does not set one.
 
-- `## Evaluate` runs, the model calls `done()`, `check()` raises, and the executor emits `SectionRetrying`.
+- `## Evaluate` runs, the model stops calling tools, `check()` raises, and the executor emits `SectionRetrying`.
 - `SectionEvent::Retry` fires. The paperstore extension rolls back and begins again; no second `Enter` is emitted.
 - After `max_retries_per_section` the run fails with `PostconditionExhausted`. No partial result is returned.
 - `SectionEvent::RunEnded { ok: false }` fires from the guard, and the paperstore extension rolls back and returns its connection.
@@ -362,7 +370,13 @@ Tests: the four Lua operations against a real session behind the Cargo feature; 
 - No MCP surface on the gateway - MCP exists to cross a process boundary, and the gateway's tools cross none
 - No tools on our MCP surface - a connecting client sees prompts; Cursor has its own web search and is not offered a second
 - No prompt-constructed filesystem paths - a prompt emits to a declared output name and the runtime resolves the destination
-- No document body in a tool result - the result carries a path, a row count, and a summary
+- No document body in a tool result - the result carries a path, the returned value, and a summary
+- No row-shaped output in the core - `OutputKind` knows files and nothing else; an extension writing rows tracks and reports them itself, because a table name is a domain concept
+- No completion ceremony - a section ends when the model stops calling tools, and the removed `done()` tool is not replaced by another signal
+- No implicit advance between sections - every edge is declared in Lua with `break_section` or `goto`, so file order alone moves nothing and a section reached by nobody is a boot error
+- No routing on the model surface - `break_section` and `goto` are Lua-only; the model decides what, and the prompt author decides where that leads
+- No declared return schema - `return_result` carries one string the runtime never parses, because the run's real product was validated on the way in, one flat tool call at a time
+- No progress denominator - a notification names the running section and claims nothing about how many remain
 - No narrator here - the observer seam is specified with static frontmatter templates as the fallback; converting events to human-readable text is built elsewhere
 - No audio in a prompt - speech models belong to Talktron, which keeps its Python CUDA stack and reaches the gateway for LLM turns
 - No large model inside the runtime process - open-weight models are reached through the gateway, and only embedders and text classifiers execute locally
@@ -385,7 +399,7 @@ Both of this design's largest risks are now retired by having been checked rathe
 
 The progress-rendering risk was retired by measurement on 2026-07-25: Cursor renders `notifications/progress` live.
 
-The `Extension` trait risk - that one trait carries both a stateless HTTP-backed extension and a transactional database-backed one without a special case for either - was retired by specifying both extensions against the trait, in [design-search.md](design-search.md) and [design-paperstore.md](design-paperstore.md). The verdict is substantially correct rather than confirmed: one trait does carry both shapes, and it needed four additive changes to do it, all now in [design-core.md](design-core.md). Three were plumbing; one was a genuine availability defect. `on_section` had to become async, because a transaction boundary is I/O and a synchronous hook cannot await a `COMMIT`. Nested events needed a task identity, because savepoints on one connection are last in, first out and concurrent fan-out at one depth interleaves them silently. `RunError` needed an extension variant, and the trait needed a row-count method. The defect was the absence of any run-terminal event: with `shutdown` scoped to the process rather than the run, every failure path left an open transaction, and on SQLite's single write connection the first failed run would have wedged every subsequent write until restart, turning recovery from rerun-it into restart-the-service. `SectionEvent::RunEnded` closes it, emitted from a drop guard so it fires on every path out of `run`.
+The `Extension` trait risk - that one trait carries both a stateless HTTP-backed extension and a transactional database-backed one without a special case for either - was retired by specifying both extensions against the trait, in [design-search.md](design-search.md) and [design-paperstore.md](design-paperstore.md). The verdict is substantially correct rather than confirmed: one trait does carry both shapes, and it needed four additive changes to do it, all now in [design-core.md](design-core.md). Three were plumbing; one was a genuine availability defect. `on_section` had to become async, because a transaction boundary is I/O and a synchronous hook cannot await a `COMMIT`. Nested events needed a task identity, because savepoints on one connection are last in, first out and concurrent fan-out at one depth interleaves them silently. `RunError` needed an extension variant, and the trait needed a way for an extension to report what it did. The defect was the absence of any run-terminal event: with `shutdown` scoped to the process rather than the run, every failure path left an open transaction, and on SQLite's single write connection the first failed run would have wedged every subsequent write until restart, turning recovery from rerun-it into restart-the-service. `SectionEvent::RunEnded` closes it, emitted from a drop guard so it fires on every path out of `run` - which matters more now that `return_result` can end a run from inside a Lua block with sections unvisited.
 
 The riskiest remaining assumption is the reverse of the one retired: that the canonical tool vocabulary stays manageable as a central list. Two extensions have added eleven words. The fastest way to test it is to write a third extension of a genuinely different shape and see whether its names fit the one-name-one-function rule without contortion.
 
@@ -404,6 +418,8 @@ The riskiest remaining assumption is the reverse of the one retired: that the ca
 | Failure and recovery | high | Discard-and-rerun follows from a system-wide idempotence principle already in force |
 | Client-facing prompt surface | high | Prompts only and never tools, one MCP server, the CLI as its client, and one tool per prompt on the tools primitive |
 | Outputs and delivery | high | Declared outputs with configured roots, precedence override then configuration then error, and a typed result carrying a path |
+| Control flow | high | Declared exits, `break_section` and `goto` in Lua with `return_result` as the one terminator; every edge written down, so the graph is checkable at boot |
+| Prompt return values | medium | One optional string the runtime never parses, which is right while the product is files and committed rows; a caller wanting structured data has no machine-checked guarantee and finds out at parse time |
 | Progress and narration | high | Cursor's live rendering of `notifications/progress` measured 2026-07-25; the observer seam is specified and the narrator that consumes it is out of scope |
 | Deployment and network posture | high | Two first-class environments - one developer machine, or the Django host and its firewalled intranet; both bind a network interface either way |
 | Local inference surface | medium | Four Lua operations over exactly pinned in-process runtimes with measured latencies; no crate is built yet and `ort` is a release candidate whose upgrades are externally gated |

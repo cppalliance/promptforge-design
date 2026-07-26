@@ -10,7 +10,7 @@ This is the **prompt language design document**. It specifies what a prompt is a
 
 ## Executive Summary
 
-PromptForge is a general-purpose runtime that executes analysis pipelines defined entirely in a single markdown document. The markdown is the program, the model is the CPU, embedded Lua is the microcode, and a ~300-800 line Python harness is the instruction decoder. A pipeline is a set of named sections; the model transitions between them with a context-clearing `goto`, builds all state through flat tool calls into a persistent store, and spawns subagents by section reference so the prompt author's exact words execute without drift. Each section declares its model tier and its scoped tool set in a Lua block that also runs preconditions and postconditions. The same generic runtime runs any pipeline that is "assay-shaped" - Assay, PaperGate, Briefer, Diligence - so a new pipeline is a new markdown file, not hundreds of lines of new Python.
+PromptForge is a general-purpose runtime that executes analysis pipelines defined entirely in a single markdown document. The markdown is the program, the model is the CPU, embedded Lua is the microcode, and a ~300-800 line Python harness is the instruction decoder. A pipeline is a set of named sections; control moves between them through context-clearing transitions each section declares in its Lua block, the model builds all state through flat tool calls into a persistent store, and subagents are spawned by section reference so the prompt author's exact words execute without drift. Each section declares its model tier, its scoped tool set, and where it exits, in a Lua block that also runs preconditions and postconditions. The same generic runtime runs any pipeline that is "assay-shaped" - Assay, PaperGate, Briefer, Diligence - so a new pipeline is a new markdown file, not hundreds of lines of new Python.
 
 The payoff is threefold. First, iteration speed: a new analysis tool goes from idea to running in an hour, edited in one file, with no orchestration code to write or debug. Second, model sovereignty: every design decision (context clearing, flat tool calls, per-section scoping, fan-out to small models) is chosen to make mid-size open-weight models reliable, so the whole stack runs on your own hardware at roughly 1/100th of frontier API cost. Third, integrity: because subagent prompts are shipped verbatim from named sections rather than paraphrased by the model, what you test is what runs.
 
@@ -62,24 +62,279 @@ flowchart TD
     P4 --> Store[(state store + virtual files)]
 ```
 
-The model reads a section's prose as its instructions, calls tools to read and write the store, and calls `goto`/`Task` to move between sections. The runtime never contains orchestration logic, prompt assembly, or step ordering; those live in the markdown. The tool library never contains pipeline-specific logic; each tool is a thin, flat-signature function. This separation is what lets one runtime run every pipeline.
+The model reads a section's prose as its instructions and calls tools to read and write the store. It does not move between sections: routing is declared in the section's Lua block with `break_section` or `goto`, and the runtime acts on that declaration when the section ends. The runtime never contains orchestration logic, prompt assembly, or step ordering; those live in the markdown. The tool library never contains pipeline-specific logic; each tool is a thin, flat-signature function. This separation is what lets one runtime run every pipeline.
 
 ## The four primitives
 
 Everything in PromptForge reduces to four mechanisms. Every feature named later in this document - `goto`, `Task`, `fanout`, virtual files, `ask_user`, model tiering, postconditions, self-extending pipelines - is a composition of these four. A reader should finish the document thinking "that is all it is," which is the point.
 
-1. **Parse.** Read a markdown file into a section map. H2 headings (`## Name`) are the primary addressable sections; H3 headings (`### Name`) are children of their H2, individually addressable for fan-out. `## Main` is the entry point.
-2. **Configure.** Run a section's optional Lua block, exposing five host objects: `state` (read-only view of accumulated state), `store` (query/count interface to the state store), `tools` (the tool-set builder: add/remove), `params` (arguments passed into the section), and `context` (a handle to inject assembled text into the model's initial prompt). Preconditions run before the model launches; postconditions run after the model calls `done()`.
-3. **Execute.** Run a section as a tool-call loop: build the fresh context (section prose + Lua-injected context + scoped tool schemas), call the model, dispatch each tool call, append the result, repeat until the model calls `done()` or a budget is hit.
-4. **Dispatch.** Resolve a tool name to a Python function from a registry, validate its flat arguments, run it, return a short result string.
+1. **Parse.** Read a markdown file into an ordered section list. H2 headings (`## Name`) are the primary addressable sections; H3 headings (`### Name`) are children of their H2, individually addressable for fan-out. `## Main` is the entry point.
+2. **Configure.** Run a section's optional Lua block, which sees the host surface enumerated under `## Syntax reference`: `state`, `store`, `tools`, `params`, `context`, `sections`, and `progress`, plus the control-flow functions `break_section`, `goto`, `Task`, `fanout`, and `return_result`. Preconditions run before the model launches; postconditions run when the section ends; and the block declares where the section exits.
+3. **Execute.** Run a section as a tool-call loop: build the fresh context (section prose + Lua-injected context + scoped tool schemas), call the model, dispatch each tool call, append the result, repeat until the model returns a turn carrying no tool calls, calls `return_result`, or hits a budget. On a clean end the runtime takes the declared exit, clearing context on the way, and ends the run if none was declared.
+4. **Dispatch.** Resolve a tool name to a function from a registry, validate its flat arguments, run it, return a short result string.
 
 The runtime is these four things plus an inference client and a state store. Estimated core: 300-800 lines depending on how much retry, streaming, and concurrency polish is included (a naked agent loop is 15-130 lines; production harnesses like smolagents and Claude Code's `query()` land at 1,000-2,000 lines including full context management). Source: [minimal agent runtime research](cabinet/_research/2026-07-23-conduct-research-minimal-agent-runtime.md).
+
+## Syntax reference
+
+Everything the language has, in one place. The sections after this one explain why each piece is the way it is; this one only says what it is.
+
+### File anatomy
+
+A prompt is one markdown file: a YAML frontmatter block, then H2 sections. Each section is prose for the model, optionally preceded by one Lua fence for the runtime.
+
+````markdown
+---
+name: staker
+...
+---
+
+## Main
+
+```lua
+model("thinking")
+break_section()
+```
+
+Prose the model reads as its instructions.
+
+## Next
+
+```lua
+model("fast")
+tools.add("web_search")
+```
+
+More prose.
+````
+
+`## Main` is the entry point. `###` headings are children of their `##` parent, individually addressable for fan-out. Heading text is the section's address and is used verbatim, `## Main` included.
+
+### Frontmatter
+
+Every field is inert data, parseable without running any code.
+
+| Field | Required | What it is |
+|---|---|---|
+| `name` | yes | The prompt's identifier. Becomes the MCP tool name. |
+| `description` | yes | One line. Steers a calling model's tool selection. |
+| `version` | yes | Bumped when the contract changes. |
+| `keywords` | no | A list, for search and catalog filtering. |
+| `params` | yes | JSON Schema for the arguments the prompt takes. |
+| `tools` | no | Canonical tool names this prompt needs bound. Canonical names only. |
+| `state` | no | The state-filing tools this prompt declares for itself. |
+| `outputs` | no | Named outputs, each a `kind: file` with a `format` and a `required` flag. |
+| `progress` | no | Static per-section text for progress notifications, keyed by lowercased section name without the `##`. |
+
+```yaml
+---
+name: staker
+description: Build a stakeholder position report for one entity
+version: 1
+keywords: [governance, stakeholder]
+params:
+  type: object
+  properties:
+    entity: { type: string }
+  required: [entity]
+tools: [web_search, web_fetch]
+state:
+  - name: add_statement
+    description: File one public statement by the entity, with its source.
+    collection: statements          # appends; store.count("statements") counts it
+    params:
+      type: object
+      properties:
+        quote: { type: string }
+        source_url: { type: string }
+        stance: { type: string, enum: [supports, opposes, mixed, unclear] }
+      required: [quote, source_url, stance]
+  - name: set_verdict
+    description: Record the position reached from the gathered statements.
+    key: verdict                    # sets; store.get("verdict") reads it
+    params:
+      type: object
+      properties:
+        position: { type: string, enum: [supports, opposes, mixed, unclear] }
+        confidence: { type: string, enum: [high, medium, low] }
+      required: [position, confidence]
+outputs:
+  - name: report
+    kind: file
+    format: markdown                # markdown | json | text
+    required: true
+progress:
+  gather: Gathering source material
+  evaluate: Evaluating positions against the record
+---
+```
+
+A `state:` entry carries exactly one of `collection:` or `key:`. Declaring both, or neither, is a startup error.
+
+### Body substitution
+
+`{{ params.x }}` and `{{ state.x }}` are substituted into section prose before it reaches the model. Those two are the only substitutions.
+
+### The Lua block
+
+One fence per section, at the top. It runs before the model turn. A section that needs no configuration has no block.
+
+**Host objects.**
+
+| Call | Does |
+|---|---|
+| `model("fast")` | Pick the model slot for this section. Required unless inherited. |
+| `tools.add("a", "b")` | Scope the model's tool set. Names from any of the three sources below. |
+| `tools.remove("b")` | Narrow an inherited set. |
+| `store.count("statements")` | Number of items in a collection. |
+| `store.exists("verdict")` | Whether a key was set. |
+| `store.get("verdict")` | Read a key. |
+| `state.foo` | Read-only view of accumulated state. |
+| `params.entity` | Arguments passed into this section, read-only. |
+| `context.inject(text)` | Prepend assembled text to the model's initial prompt. |
+| `sections.children("## Battery")` | The H3 children of an H2, as addressable sections. |
+| `progress.say(text)` | Emit a mid-section observer event. |
+
+**Control flow.**
+
+| Call | Does | When it acts |
+|---|---|---|
+| `break_section()` | Exit to the next H2 in file order. | At section end |
+| `goto("## Name")` | Exit to a named H2. | At section end |
+| `return_result("text")` | End the run, carrying one string. | Immediately |
+| `return_result()` | End the run with no value. | Immediately |
+| `Task("## Name", { k = v })` | Run one section as a subagent; returns its serialized store. | Immediately |
+| `Task("other.md", { k = v })` | Same, against another prompt file. | Immediately |
+| `fanout(tasks, params, { ordered = true })` | Run many subagents concurrently; merges their stores. | Immediately |
+
+`break_section` and `goto` **declare** an exit rather than taking one, because the block runs before the model turn and a jump there would skip it. The runtime records the target and acts on it when the section ends. Last call wins, so a `goto` in `check` overrides a `break_section` at top level. Declaring no exit ends the run.
+
+**Preconditions and postconditions.**
+
+```lua
+assert(store.count("statements") > 0, "nothing gathered")   -- precondition
+                                                            -- fails -> skip section
+
+function check()                                            -- postcondition
+  assert(store.exists("verdict"), "no verdict was set")     -- fails -> retry section
+end
+```
+
+A top-level `assert` runs before the model. A failing one skips the section, and the section's declared exit is still taken. `check` runs after the section ends. A failing assertion inside it retries the section up to the retry limit.
+
+### Where a tool name comes from
+
+Three sources feed one list, and `tools.add` scopes across all three by string without caring which is which.
+
+| Source | Example | Declared where |
+|---|---|---|
+| Canonical | `web_search`, `paper_meta`, `classify_label` | Frontmatter `tools:`, bound by configuration to an extension |
+| Prompt-declared state | `add_statement`, `set_verdict` | Frontmatter `state:` |
+| Core | `create_file`, `read_file`, `return_result` | Nowhere; the runtime supplies them |
+
+Scoping applies to all of them with exactly one exception: `return_result` is in every section's schema list whether named or not, and `tools.remove` cannot take it out. Every other name, core ones included, is present only because `tools.add` asked for it. A section that never names `create_file` cannot write a virtual file.
+
+### Surfaces
+
+A name reaches the model, or Lua, or both, and which one is fixed per name rather than chosen per prompt. A canonical name that admits Lua appears there as a family table, so `web_search` is `web.search(..)` and `classify_label` is `classify.label(..)`.
+
+| Name | Model | Lua |
+|---|---|---|
+| `web_search`, `web_fetch` | yes | `web.search`, `web.fetch` |
+| `paper_meta`, `paper_latest`, `paper_cites` | yes | `paper.meta`, `paper.latest`, `paper.cites` |
+| `paper_md` | yes | no |
+| `paper_upsert`, `paper_rows` | no | `paper.upsert`, `paper.rows` |
+| `classify_label`, `classify_entail`, `classify_embed`, `classify_rank` | no | `classify.label` and three more |
+| `return_result` | yes | `return_result(..)` |
+| `create_file`, `append_file`, `read_file`, `delete_file` | yes | no |
+| `ask_user` | yes, and unimplemented | no |
+| a prompt's own `state:` tools | yes | no; Lua reads them back through `store` |
+
+The classifiers are Lua-only on purpose: a classification is deterministic logic the author already decided on, so running it at a section boundary costs the model nothing. The writes `paper_upsert` and `paper_rows` are Lua-only so a model cannot invent a database row.
+
+### What ends a section, and what ends a run
+
+A section ends when the model returns a turn carrying no tool calls. There is no completion tool to call. A run ends when something calls `return_result`, or when a section that declared no exit finishes.
+
+### A complete file
+
+````markdown
+---
+name: classify
+description: Classify one WG21 paper as library, language, or both
+version: 1
+params:
+  type: object
+  properties:
+    paper: { type: string }
+  required: [paper]
+tools: [paper_md]
+state:
+  - name: set_classification
+    description: File the paper's classification and your confidence in it.
+    key: classification
+    params:
+      type: object
+      properties:
+        type: { type: string, enum: [library, language, both, other] }
+        confidence: { type: string, enum: [high, medium, low] }
+      required: [type, confidence]
+progress:
+  main: Reading the paper
+  decide: Classifying
+---
+
+## Main
+
+```lua
+model("fast")
+tools.add("paper_md", "create_file")
+break_section()
+```
+
+Read {{ params.paper }} with paper_md and write everything that bears on what
+kind of proposal it is to `evidence.md`. Do not classify it yet.
+
+## Decide
+
+```lua
+model("thinking")
+tools.add("read_file", "set_classification")
+
+function check()
+  assert(store.exists("classification"), "no classification was filed")
+end
+```
+
+Read `evidence.md`. Decide whether this paper is a library proposal, a language
+proposal, both, or neither. File it with set_classification, then call
+return_result with the classification and one sentence of justification.
+````
+
+Two sections. `## Main` declares `break_section` and continues to `## Decide`. `## Decide` declares no exit, so it is the last thing the run does. Context is destroyed between them, which is why `## Decide` reads `evidence.md` rather than remembering what `## Main` saw.
+
+`## Decide` has a postcondition and no precondition, which is the common shape. A precondition needs something in the store to assert on, and `## Main` files nothing into the store here - it writes a virtual file, and virtual files have no `store` read. A prompt that wanted `## Decide` to refuse to run on an empty gather would declare a `key:` state tool for `## Main` to set, which is the cost of the store and the virtual filesystem being separate things.
 
 ## The section model
 
 A pipeline document is parsed into a section map keyed by heading text. Each section is a procedure with two parts: prose (the instructions the model reads) and an optional Lua block (the configuration the runtime reads). The prose is authored with the model as its reader; it says what to do, in plain imperative language. The Lua block is authored with the runtime as its reader; it selects the model, scopes the tools, checks preconditions, and validates postconditions.
 
-`## Main` is the entry point. The runtime starts there, and Main acts as a dispatcher: it reads the current state through query tools, decides the next step from its own prose, and calls `goto` or `Task` to get there. Because every entry into a section is a fresh context (see the goto primitive), Main never accumulates history; each visit is a clean read of state plus a control-flow decision.
+`## Main` is the entry point. Every other section is reached because some section's Lua block said to reach it, either positionally with `break_section` or by name with `goto`. There is no implicit advance: a section that declares no exit is where the run ends.
+
+Every transition clears context, so no section inherits another's conversation. Two sections linked by `break_section` communicate through the state store and nothing else, exactly as two sections linked by `goto` do.
+
+Routing lives in Lua and never on the model surface. The model decides what - which claim to file, which verdict to reach, whether a paper is a library proposal - and Lua decides where that leads. A `check` block reading what the model just filed and choosing a target on it is the pattern that covers the branching case:
+
+```lua
+function check()
+  local kind = store.get("classification").type
+  if kind == "library" then goto("## Library") else goto("## Language") end
+end
+```
+
+Two earlier versions of this are worth recording, because the current design is the third and each fixed something real. The first made Main a dispatcher that every section returned to, re-reading state and issuing a fresh `goto` at each step; it spent a model turn and a full context rebuild per transition to decide what the document already stated. The second made the advance implicit, so a section that ended simply continued to the next H2; it made file order load-bearing while leaving it unwritten, so deleting a `goto` silently became a fall-through, reading a section told you nothing about what followed it, and a section meant only as a `Task` target was reachable by accident from whatever preceded it.
+
+Explicit exits cost one line per section and buy a control-flow graph that can be read and checked. The cost is real: a linear pipeline writes `break_section` in every section but its last, saying nothing a reader could not infer from the order, and forgetting one ends the run early rather than raising an error, because declaring no exit is a legal way to finish. What catches that in practice is a boot-time walk of the graph, since a section nobody exits to is exactly what a forgotten `break_section` leaves behind.
 
 H3 headings are children of their parent H2. `sections.children("## Diagnostic Battery")` returns every `### Test N` under that heading as an individually addressable section. This is what makes a large test battery expressible as ordinary readable markdown while still being fannable-out (see Fan-out).
 
@@ -91,11 +346,12 @@ One mechanism replaces a metadata DSL. Rather than inventing bespoke frontmatter
 -- Section: Extract
 model("gemma-27b")                     -- pick the model tier for this section
 tools.add("read_chunk", "add_claim",   -- scope the tool set (5-10 tools)
-          "add_evidence", "done")
+          "add_evidence")
+break_section()                        -- exit to the next H2 when this ends
 assert(state.chunks_total > 0,         -- precondition: runs before the model
        "no chunks to extract from")
 
--- postcondition: runs after the model calls done()
+-- postcondition: runs when the section ends
 function check()
   for _, cid in ipairs(params.chunk_ids) do
     assert(store.count("items", {chunk = cid}) > 0,
@@ -104,7 +360,9 @@ function check()
 end
 ```
 
-The runtime exposes five host objects: `state` (read-only), `store` (count/exists/get), `tools` (add/remove), `params` (section arguments), and `context` (inject assembled text). Child sections inherit the parent's Lua configuration unless they define their own, which extends or overrides it - CSS-like specificity, where the more specific block wins.
+`break_section` and `goto` declare an exit rather than taking one. The block runs before the model turn, so a call that transferred control immediately would skip the turn the section exists to run; instead the runtime records the target and acts on it when the section ends. That is also what lets `check` override the declaration after seeing what the model filed.
+
+The runtime exposes seven host objects - `state` (read-only), `store` (count/exists/get), `tools` (add/remove), `params` (section arguments), `context` (inject assembled text), `sections` (address H3 children), and `progress` (emit a mid-section observer event) - plus five bare control-flow functions, `break_section`, `goto`, `Task`, `fanout`, and `return_result`. All twelve are enumerated with their signatures under `## Syntax reference`. Child sections inherit the parent's Lua configuration unless they define their own, which extends or overrides it - CSS-like specificity, where the more specific block wins.
 
 **Embedding library: lupa v2.7+** (LuaJIT binding for Python). Lua is the right choice on four grounds. It is purpose-built for embedding (Redis, Nginx/OpenResty, Neovim, and game engines all embed it). It allows natural `obj.method()` calls on host objects, which Starlark cannot. It is tiny (~200KB) and fast (LuaJIT is near-native). And it is already the de-facto scripting choice in the few AI-pipeline tools that embed one - The Edge Agent uses lupa+LuaJIT, and AIPack and onetool embed Lua as well. Source: [embedded config languages research](cabinet/_research/2026-07-23-conduct-research-embedded-config-languages-ai-pipelines.md), [Lua/Python embedding survey](cabinet/_research/2026-07-23-embed-lua-python-scripting-survey.md).
 
@@ -114,7 +372,9 @@ Because deterministic logic lives in the Lua block rather than in the prompt, it
 
 ## The goto primitive
 
-`goto(section)` is a context-clearing state transition: destroy the current context window entirely, then start fresh from the target section's prose plus its Lua-injected context and its scoped tools. The accumulated state survives in the store; the conversation history does not. The program counter is the section; the registers (context window) are wiped; memory (the store) persists; and the fresh window is rebuilt by pulling from the store through tool calls.
+A context-clearing state transition destroys the current context window entirely, then starts fresh from the target section's prose plus its Lua-injected context and its scoped tools. The accumulated state survives in the store; the conversation history does not. The program counter is the section; the registers (context window) are wiped; memory (the store) persists; and the fresh window is rebuilt by pulling from the store through tool calls.
+
+Every transition is one of these. `goto(section)` names its target and `break_section()` takes the next H2 in file order, and the two differ only in how the target is identified. The clearing is a property of crossing a section boundary, so a linear pipeline written entirely with `break_section` gets the full benefit described below.
 
 This is the design's central move, and the evidence that fresh context beats accumulated context is strong and consistent:
 
@@ -145,13 +405,26 @@ The four costs that structured output imposes, and how tool calls avoid them, wi
 
 ## Failure detection
 
-Structured output gives one thing tool-call state does not get for free: a binary validity signal. If the JSON fails to parse, you know. PromptForge recovers an equivalent, and richer, signal in three layers declared in the Lua block:
+Structured output gives one thing tool-call state does not get for free: a binary validity signal. If the JSON fails to parse, you know. PromptForge recovers an equivalent, and richer, signal in two layers declared in the Lua block:
 
-1. **The `done()` tool.** Always in the tool set, never removable. The model must call it to signal intentional completion. Stopping without `done()` - hitting the output limit, stalling, or getting confused - is a detectable failure, distinct from finishing.
-2. **Postconditions.** Lua assertions that run after `done()` and inspect the store for completeness and correctness: "at least one claim per chunk," "thesis is set," "every finding has a severity." These are the equivalent of Pydantic validators, but they check semantic validity (did the model do the work?) rather than structural validity (is the shape right?).
-3. **Tool-call tracking.** The runtime counts calls per tool and can flag a required tool that was never called.
+1. **Budget ceilings.** A section ends when the model returns a turn carrying no tool calls, which is the ordinary termination of any tool-call loop. Reaching a turn or tool-call ceiling while the model is still calling tools means it is looping, stalling, or has lost the thread, and that is a detectable failure distinct from finishing.
+2. **Postconditions.** Lua assertions that run when the section ends and inspect the store for completeness and correctness: "at least one claim per chunk," "thesis is set," "every finding has a severity." These are the equivalent of Pydantic validators, but they check semantic validity (did the model do the work?) rather than structural validity (is the shape right?).
 
-When any layer fails, the runtime returns an error result instead of the state, and the caller retries, falls back, or escalates - exactly as a structured-output validation failure triggers a retry today. This is strictly more expressive than a schema check: "the model processed all 15 chunks, filed at least one claim, and signaled completion" is a stronger guarantee than "the JSON parsed."
+When either layer fails, the runtime returns an error result instead of the state, and the caller retries, falls back, or escalates - exactly as a structured-output validation failure triggers a retry today. This is strictly more expressive than a schema check: "the model processed all 15 chunks and filed at least one claim from each" is a stronger guarantee than "the JSON parsed."
+
+An earlier version of this design had a third layer above these, a `done()` tool the model was required to call to signal intentional completion, with its absence scored as a failure. It is removed. An empty turn already signals completion, and requiring a ceremonial call on top of it created a failure mode rather than detecting one: a model that did its work correctly and stopped, without the extra call, was scored as having failed. The budget ceiling detects the pathology `done()` was aimed at - a model that will not stop - and detects it directly. The tool slot and its schema tokens are returned to the prompt author in every section of every prompt.
+
+The runtime still counts calls per tool, and a frontmatter declaration of which tools a section requires would turn those counts into a third layer. Nothing declares that yet, so the layer is described here and unimplemented.
+
+## Returning a result
+
+`return_result` ends the run. It takes one optional string, available to the model as a tool and to a Lua block as a bare function of the same name, and it can be called from a top-level block, from a `check` function, or by the model mid-section. Everything the run had not reached is skipped, and the string reaches the caller as the run's return value.
+
+The value is one string and the runtime never parses it. What goes in it is the prompt's business, stated in the prose of whichever section calls it: a prompt exposed over MCP to a caller wanting structured data says "call `return_result` with a JSON object holding stance and confidence," and one reporting to a human says "call `return_result` with a one-sentence summary."
+
+That the value is usually short is a consequence of the rest of the design rather than a restriction. By the time a prompt returns, its actual product is already committed - claims filed through validated tool calls, rows written by an extension, a report written to a declared output - so `return_result` is a status line on top of finished work, not the work itself. This is why no schema governs it. A declared return schema was considered and rejected: validating a status line adds a failure mode without protecting anything, and the guarantee it appears to offer is one the tool-call state model already provides further upstream, at each individual filing call, where the arguments are flat and typed and constrained decoding can act on them.
+
+A run that reaches the end of its last section without calling `return_result` ends normally with no value. Falling off the end is completion, not an error.
 
 ## Per-section tool scoping
 
@@ -161,7 +434,7 @@ This is not a nicety; it is load-bearing for reliability on mid-size models, and
 
 Two guardrails from the research. First, 5-10 is the safe ceiling only at 14B+; use 6-8 tools for sub-8B sections. Second, scoping fixes tool-selection but not multi-turn state tracking (7-8B models get ~90% single-turn but ~10-30% multi-turn) - which is precisely why the design decomposes work into short, scoped, context-cleared steps and lets the runtime own the state, rather than asking one model to track everything across a long conversation.
 
-Scoping is also a capability sandbox. A section that reads untrusted input (a fetched web page, a submitted paper) can be given only the tools it needs and nothing else. If it has only `set_metadata`, `write_scratch`, and `done`, then a prompt injection in the input has no tool available to exfiltrate data or touch the real filesystem. This composes with virtual files (below) to remove two legs of the "lethal trifecta" (private data + untrusted content + exfiltration channel) at once.
+Scoping is also a capability sandbox. A section that reads untrusted input (a fetched web page, a submitted paper) can be given only the tools it needs and nothing else. If it has only `set_metadata` and `write_scratch`, then a prompt injection in the input has no tool available to exfiltrate data or touch the real filesystem. This composes with virtual files (below) to remove two legs of the "lethal trifecta" (private data + untrusted content + exfiltration channel) at once.
 
 ## Verbatim section dispatch (Task)
 
@@ -246,7 +519,7 @@ What the runtime contains, with line-of-code estimates drawn from the minimal-ag
 - **Section parser** (markdown to section map with H3 children): 60-120
 - **Lua interpreter integration** (lupa, host-object bridge, sandbox config): 80-150
 - **Context lifecycle** (build fresh context, tear down on goto): 40-90
-- **Tool-call loop** (call model, dispatch, append, until done or budget): 60-150 (reliability-critical; include JSON repair)
+- **Tool-call loop** (call model, dispatch, append, until an empty turn or a budget): 60-150 (reliability-critical; include JSON repair)
 - **Tool registry + dispatch** (name to function, arg validation): 40-100
 - **goto / Task / fanout** (transition, recursive subagent with depth cap, parallel dispatch): 80-150
 - **Virtual filesystem** (path-keyed dict, glob/merge helpers, route-to-disk): 40-90
@@ -286,7 +559,7 @@ Sections are prompts, so the prompt rulebook ([how-to-write-prompts.md](tools-pu
 
 - **Six-constraint ceiling per section** (rulebook 6.1). Keep each section focused; past six simultaneous hard constraints, joint compliance collapses. This is another argument for decomposition.
 - **Decision rules over vague qualifiers** (2.3). Write "if X, do Y; if unsure, do Z," not "as appropriate." The model should never have to guess where the section could have told it.
-- **Escape hatches for hard rules** (2.6). "If the file is missing, name it and call `done()`." A hard rule with no escape hatch produces fabrication when reality refuses to cooperate.
+- **Escape hatches for hard rules** (2.6). "If the file is missing, name it and call `return_result`." A hard rule with no escape hatch produces fabrication when reality refuses to cooperate.
 - **Tool descriptions in four parts** (8.1): what it does, when to use it, when not to (and which sibling covers that case), and each parameter's exact format. Apply the intern test.
 - **Observable-violation test** (6.7). If you cannot name what a violation looks like, cut the rule; it is decoration.
 - **Goal, success criteria, stop condition - not step-by-step** (7.1) where the sequence is not itself the requirement. State what, let the model choose how, and set an effort budget.
@@ -299,33 +572,35 @@ Six examples in increasing complexity. Each is a composition of the four primiti
 
 ### Example 1: Minimal two-section classifier
 
-Demonstrates the section model, `goto`, tool-call state, and `done()`. The smallest useful pipeline: read a document, classify it, file the result.
+Demonstrates the section model, declared exits, tool-call state, and `return_result`. The smallest useful pipeline: read a document, classify it, file the result.
 
 ````markdown
 ## Main
 
-You classify a document. Read it, then hand off to the classifier.
+You classify a document. Load it so the next step can read it.
 
 ```lua
-tools.add("read_input", "goto", "done")
+tools.add("read_input")
+break_section()
 ```
 
-1. Call read_input to load the document.
-2. Call goto("## Classify").
+Call read_input to load the document. That is all this step does.
 
 ## Classify
 
 Decide the document's type. It is exactly one of: library, language, both, other.
 Call set_classification with the type and your confidence (high, medium, low),
-then call done.
+then call return_result with the type you chose.
 
 ```lua
-tools.add("get_input", "set_classification", "done")
+tools.add("get_input", "set_classification")
 function check()
   assert(store.exists("classification"), "no classification was filed")
 end
 ```
 ````
+
+`## Main` declares `break_section`, so it exits to `## Classify` with a cleared context, which is why `## Classify` has to call `get_input` rather than reading what `## Main` already saw. `## Classify` declares no exit, which is what makes it the last section: the run would end there even if the model never called `return_result`, and the call supplies the value rather than the stop.
 
 Tool signatures:
 
@@ -345,10 +620,10 @@ Expected tool-call trace:
 
 ```text
 Main:     read_input(path="p1234.md") -> "loaded 4210 words"
-Main:     goto("## Classify")            # context wiped, fresh start
+Main:     (turn with no tool calls)      # section ends, declared exit taken, context wiped
 Classify: get_input() -> "<document text>"
 Classify: set_classification(type="library", confidence="high")
-Classify: done()                          # postcondition check() passes
+Classify: return_result("library")        # check() passes, run ends with "library"
 ```
 
 Test:
@@ -371,13 +646,14 @@ Demonstrates Lua for tool scoping, conditional tool injection, and preconditions
 
 Analyze the paper against the criteria for its classification. For each criterion
 the paper addresses, call file_section. For each it does not, call file_missing.
-Call done when every criterion has been considered.
+Stop when every criterion has been considered.
 
 ```lua
 assert(store.exists("classification"), "run Classify before Analyze")
 local kind = state.classification.type
 
-tools.add("read_paper", "file_section", "file_missing", "done")
+tools.add("read_paper", "file_section", "file_missing")
+break_section()
 
 if kind == "library" or kind == "both" then
   tools.add("github_test", "coordination_probe")   -- library-only instruments
@@ -403,11 +679,11 @@ Demonstrates parallel `Task` dispatch, isolated state stores, and sub-section ad
 Extract structured items from every chunk of the paper.
 
 ```lua
-tools.add("chunk_paper", "goto", "done")
+tools.add("chunk_paper")
+break_section()
 ```
 
-1. Call chunk_paper to split the paper into chunks.
-2. Call goto("## ExtractAll").
+Call chunk_paper to split the paper into chunks. That is all this step does.
 
 ## ExtractAll
 
@@ -424,11 +700,11 @@ fanout(tasks, {}, { ordered = true })   -- runtime merges each store back
 ## Extract
 
 Extract every claim, piece of evidence, and concession from this one chunk.
-File each with its exact quote and line number. Call done when the chunk is exhausted.
+File each with its exact quote and line number. Stop when the chunk is exhausted.
 
 ```lua
 model("qwen-14b")
-tools.add("read_chunk", "add_claim", "add_evidence", "add_concession", "done")
+tools.add("read_chunk", "add_claim", "add_evidence", "add_concession")
 context.inject(store.get_chunk(params.chunk_id))
 function check()
   assert(store.count("items", { chunk = params.chunk_id }) > 0,
@@ -450,13 +726,15 @@ Expected trace (abbreviated, 15 chunks fanned out concurrently):
 
 ```text
 Main:      chunk_paper() -> "15 chunks"
-Main:      goto("## ExtractAll")
+Main:      (turn with no tool calls)            # declared exit: ExtractAll
 ExtractAll: fanout(15 x Task("## Extract"))     # parallel, fresh context each
-  Extract[0]: read_chunk(0); add_claim(...); add_evidence(...); done()
-  Extract[1]: read_chunk(1); add_claim(...); done()
+  Extract[0]: read_chunk(0); add_claim(...); add_evidence(...); (ends)
+  Extract[1]: read_chunk(1); add_claim(...); (ends)
   ... 13 more in parallel ...
 ExtractAll: merges 15 stores into state.items (ordered by chunk_id)
 ```
+
+`## Extract` is reached only by the `fanout` above it and declares no exit of its own. Nothing can arrive at it by accident, because no section declares an exit to it and there is no positional advance to stumble into it - which is the fault in the previous design that explicit exits removed. `## ExtractAll` likewise declares nothing, so the run ends when its fan-out completes.
 
 Test (fan-out is deterministic in aggregate even though completion order varies):
 
@@ -472,7 +750,7 @@ def test_fanout_covers_every_chunk():
 
 ### Example 4: Failure detection and postconditions
 
-Demonstrates the three-layer failure signal and retry. A challenge section must produce a verdict for every finding; if it stops early, the postcondition fails and the runtime retries the section once before escalating.
+Demonstrates the two-layer failure signal and retry. A challenge section must produce a verdict for every finding; if it stops early, the postcondition fails and the runtime retries the section once before escalating.
 
 ````markdown
 ## Challenge
@@ -480,10 +758,11 @@ Demonstrates the three-layer failure signal and retry. A challenge section must 
 Cross-examine each finding against the five appeal grounds, in order. A finding
 struck at any ground does not proceed. For each finding either call kill_finding
 (with the ground and a one-sentence reason) or sustain_finding. Consider every
-finding, then call done.
+finding before you stop.
 
 ```lua
-tools.add("get_findings", "read_chunk", "kill_finding", "sustain_finding", "done")
+tools.add("get_findings", "read_chunk", "kill_finding", "sustain_finding")
+break_section()
 
 -- postcondition: every finding must have a verdict
 function check()
@@ -495,7 +774,9 @@ end
 ```
 ````
 
-The runtime's retry contract: if `done()` is never called (the model stalled or hit the output limit), that is a layer-1 failure. If `done()` is called but `check()` raises, that is a layer-2 failure. Either way the runtime re-runs the section once with the same parameters; a second failure returns an error result to the caller.
+The runtime's retry contract: if the model exhausts its turn or tool-call budget while still calling tools, that is a layer-1 failure. If the section ends cleanly but `check()` raises, that is a layer-2 failure. Either way the runtime re-runs the section once with the same parameters; a second failure returns an error result to the caller.
+
+This example is the case that most clearly justifies removing `done()`. A model that judged all five findings and then stopped has done exactly what the section asked, and under the old design it failed the run unless it also produced a ceremonial call. The postcondition above is what actually establishes completeness, and it does so by counting the work rather than by trusting a signal.
 
 ```python
 def test_challenge_retries_on_incomplete():
@@ -519,25 +800,49 @@ Demonstrates per-section model slots and `Task("otherfile.md")`. Main runs on a 
 
 ```lua
 model("glm-driver")            -- large open-weight MoE drives orchestration
-tools.add("goto", "task", "get_thesis", "done")
+tools.add("set_thesis")
+break_section()
 ```
 
-1. goto("## Extract") to pull structured items (runs on the fast tier).
-2. After extraction, for each open lens call
-   task("research.md", { topic = lens, thesis = get_thesis() }).
-3. goto("## Report") to assemble the final document.
+State the paper's central thesis in one sentence and file it with set_thesis.
 
 ## Extract
 
 ```lua
 model("gemma-27b")             -- mechanical extraction on a cheap tier
-tools.add("read_chunk", "add_claim", "add_evidence", "done")
+tools.add("read_chunk", "add_claim", "add_evidence")
+break_section()
 ```
 
-Extract claims and evidence from each chunk. Call done when exhausted.
+Extract claims and evidence from each chunk. Stop when exhausted.
+
+## Research
+
+```lua
+model("glm-driver")            -- back to the driver to choose the lenses
+tools.add("task", "get_thesis")
+break_section()
+```
+
+For each open lens, call task("research.md", { topic = lens, thesis =
+get_thesis() }).
+
+## Report
+
+```lua
+model("glm-driver")
+tools.add("get_findings", "write_report")
+```
+
+Assemble the final document from the claims, evidence, and research findings.
+Call return_result with the report path when it is written.
 ````
 
-`research.md` is a separate, independently tested pipeline. Main does not know its internals; it passes a topic and a thesis and receives a findings store. The model slot for each section is resolved by the runtime against the services config:
+Four sections, three tiers, one straight line. Model tiering is orthogonal to control flow: each section picks its own slot, and the transition between them is the same context-clearing exit regardless of whether the tier changed. `## Report` declares nothing and is therefore the end.
+
+`research.md` is dispatched by `task` from `## Research` rather than reached by an exit, which is the distinction worth seeing in one example: an exit moves the run, and a task runs something else and comes back.
+
+It is a separate, independently tested pipeline. The calling section does not know its internals; it passes a topic and a thesis and receives a findings store. The model slot for each section is resolved by the runtime against the services config:
 
 ```python
 SERVICES = {
@@ -571,18 +876,22 @@ context; the subagents read it and return metadata and paths.
 
 ```lua
 model("glm-driver")
-tools.add("task", "read_file", "present", "done")
+tools.add("task", "read_file", "present")
 assert(params.paper ~= nil, "no paper supplied")   -- else: ask and stop
+-- no exit declared: this section is the whole run, and the two below
+-- are reached only by task()
 ```
 
 1. Call task("## Digest", { paper = params.paper }). It returns metadata
    (document, title, authors, classification, tier) and writes the stripped
    rationale to a virtual file.
-2. If the digest returned an acquisition failure, present the failure and done.
+2. If the digest returned an acquisition failure, present the failure and call
+   return_result naming the paper that could not be acquired.
 3. Call task("## Evaluate", { rationale_path = <path>, meta = <metadata>,
    out_path = params.output_path }).
 4. Call read_file on the report, present its executive summary and the
-   "Missing From The Paper" paragraph, and done.
+   "Missing From The Paper" paragraph, then call return_result with the report
+   path and the verdict in one sentence.
 
 ## Digest
 
@@ -591,7 +900,7 @@ classify it, and size it. Follow the digest reference block verbatim.
 
 ```lua
 model("glm-driver")   -- evidence judgment degrades first; do not use a light tier
-tools.add("fetch_paper", "create_file", "set_metadata", "done")
+tools.add("fetch_paper", "create_file", "set_metadata")
 context.inject(sections.block("digest-task"))   -- ship the block verbatim
 function check()
   assert(store.exists("metadata"), "digest filed no metadata")
@@ -607,7 +916,7 @@ Follow the evaluate reference block verbatim.
 
 ```lua
 model("glm-driver")
-tools.add("read_file", "file_section", "file_missing", "write_report", "done")
+tools.add("read_file", "file_section", "file_missing", "write_report")
 context.inject(sections.block("tier-and-class"))
 context.inject(sections.block("evaluation-rules"))
 function check()
@@ -620,7 +929,7 @@ Objective: read one WG21 paper, extract its identity, strip it to its rationale,
 classify it (library / language / both), and size it (trivial ... massive).
 Acquire the paper from params.paper (path, URL, or document number). If
 acquisition fails, call set_metadata with status="ACQUISITION FAILED" and the
-reason, then done - do not substitute a revision or reconstruct from memory.
+reason, then stop - do not substitute a revision or reconstruct from memory.
 Strip to rationale: remove wording, formalism, long implementation listings,
 revision history, acknowledgements, references. Keep every sentence that argues,
 reports evidence, cites deployment, compares alternatives, or prices cost.
@@ -678,7 +987,7 @@ Main:     task("## Digest", paper="P0870R8")
   Digest:   fetch_paper("P0870R8") -> "<paper text>"
   Digest:   create_file("p0870r8-rationale.md", "<stripped rationale>")
   Digest:   set_metadata("P0870R8","...", classification="library", tier="large", ...)
-  Digest:   done()                       # check() passes: metadata present
+  Digest:   (ends)                       # check() passes: metadata present
 Main:     read metadata; classification=library, tier=large
 Main:     task("## Evaluate", rationale_path="p0870r8-rationale.md", meta=..., out_path=...)
   Evaluate: read_file("p0870r8-rationale.md")
@@ -687,9 +996,14 @@ Main:     task("## Evaluate", rationale_path="p0870r8-rationale.md", meta=..., o
   Evaluate: file_missing("Standardization Penalty", "never priced; fatal at large")
   Evaluate: ... more sections and missing ...
   Evaluate: write_report("p0870r8-papergate.md")
-  Evaluate: done()                       # check() passes: report_path present
-Main:     read_file("p0870r8-papergate.md"); present(summary, missing, path); done()
+  Evaluate: (ends)                       # check() passes: report_path present
+Main:     read_file("p0870r8-papergate.md"); present(summary, missing, path)
+Main:     return_result("P0870R8: library, large tier, standardization penalty unpriced")
 ```
+
+Both subagent sections end by stopping rather than by signalling, and `## Main` is the only section that calls `return_result` - which is typical, since a task target's product is its store and only the outermost section knows what the caller asked for.
+
+This example is the clearest case for declared exits. `## Digest` and `## Evaluate` sit after `## Main` in the file and exist only as `task` targets. Under the previous design, where a section that ended simply continued to the next H2, `## Main` had to call `return_result` specifically to avoid falling into `## Digest` a second time outside any task - a hazard created entirely by where the sections happened to sit. Now `## Main` declares no exit, the two below it are unreachable except by name, and `return_result` is back to doing one job: supplying a value.
 
 Unit tests (each section in isolation) and an integration test:
 
@@ -735,62 +1049,6 @@ Confidence: high on the architecture; medium on the exact latency and per-GPU se
 
 ---
 
-## Appendix A: Transcript compaction
-
-Unrelated to the orchestrator. The runtime uses `goto` to clear context rather than compacting it; this appendix concerns long-running conversational tools (Appendix B) that cannot clear context because the conversation itself is the product.
-
-The algorithm: given a transcript at a line limit N, compress the first N/2 lines to N/4, replace them in place, and prepend the original system prompt. When the transcript grows back to N, compress again, producing layers - a segment can be double- or triple-compacted. The full uncompacted transcript is always saved to a database. Pre-compaction triggers at ~90% capacity so the compressed summary is ready before it is needed and the user never waits.
-
-This produces a logarithmic fidelity gradient: recent turns at full resolution, older turns progressively more compressed, forming a geometric series (roughly 500 lines full, 125 at 1x, 62 at 2x, and so on). That gradient is the genuinely novel property. The prior-art survey found most production systems use all-or-nothing compression - Claude Code's Full Compact, OpenAI Codex's opaque blob, and LangChain's summary buffer all replace history with a single summary; only MemGPT's tiered storage and C-DIC's per-thread states offer comparable gradient behavior. The closest academic match is recursive summarization (Wang et al., [arXiv:2308.15022](https://arxiv.org/html/2308.15022v3)), which compresses holistically and so loses the spatial gradient. Source: [transcript compaction research](cabinet/_research/2025-07-23-conduct-research-transcript-compaction-prior-art.md).
-
-What the research says to add:
-
-- **Structured summary template, not free-form.** Factory.ai's evaluation on 36,000+ production messages showed that dedicating summary sections to specific information types (intent, artifacts, decisions, next steps) forces preservation and beats free-form summarization by 0.35 quality points. Each compression pass should fill a template, not write prose.
-- **Do not trust the length target.** The Parallel Compaction paper ([arXiv:2605.23296](https://arxiv.org/abs/2605.23296)) shows LLMs largely ignore "compress to N/4" instructions across four backbones. Either use a fine-tuned compaction model (Appendix B) that learns length control, or use fixed-size blocks for predictable output volume.
-- **The 90% pre-trigger is right.** It matches where Claude Code, Codex, and multiple open-source projects have converged.
-- **Keep the database backup, skip re-derivation.** Full-transcript persistence enables source-anchored recovery, the gold standard against telephone-game degradation (measured across compression rounds in [ACL 2025, arXiv:2502.20258](https://arxiv.org/html/2502.20258v1)). But for the Mentograph specifically, progressive fading of the oldest content is correct behavior, not a bug: by the time a segment is triple-compacted, its intelligence has already been extracted into structured state (assertions, coverage, threads). The raw text served its purpose. No periodic re-derivation during the session is needed; the database backup is for post-session reconstruction by other tools.
-
-For a conversational tool with structured working state, the structured preamble (system prompt plus the live state) is exempt from compaction and always re-injected in full; only the narrative history is compressed.
-
----
-
-## Appendix B: Mentograph at scale
-
-Also unrelated to the orchestrator. This appendix records the economics and architecture of running the Mentograph interviewer ([mentograph.md](tools-public/tools/mentograph.md)) as a distilled, self-hosted, voice-based system - a standalone application, not a PromptForge pipeline, because it needs audio, streaming, and per-turn latency optimization that the batch runtime does not address.
-
-### The distillation case
-
-Mentograph is a narrow, well-defined, self-data-generating task, which is the ideal profile for distillation. Every session run on a frontier or 800B-class model produces a training example: the system prompt, the subject's answers, and the model's questions, reflections, and state reasoning. After a few hundred sessions there is a dataset that captures the interviewing rhythm, and a 14B-30B specialist can be fine-tuned to internalize the persona, the technique library, the priority ordering, the NEVER constraints, and the reflection-before-question cadence as native behavior rather than instructions it re-reads each turn.
-
-The research supports every step. Narrow-task distillation retains 85-95% of frontier quality at 13-14B (Orca: 85% of GPT-4 at 13B; Phi-3-mini rivals Mixtral 45B), with data quality the dominant lever rather than model size. A specific interviewing micro-skill (motivational-interviewing reflection) distilled to GPT-2-XL at 90% success, so the skill class is known to distill. Crucially for a 50-turn interview, persona consistency is a function of training method, not size: PersonaGym found a fine-tuned 8B matches GPT-4.1 on persona adherence, and PPO fine-tuning cut persona drift 55%+ while holding consistency across 60+ turns. And fine-tuning is not optional for multi-turn: untuned 8B models drop to ~27% instruction-following in multi-turn versus ~96% single-turn. Base model recommendation: Qwen 2.5 14B (Apache 2.0, best-in-tier, fewest examples to converge) or Llama 3.x (strongest persona adoption, largest ecosystem). Source: [specialist distillation research](cabinet/_research/2026-07-23-conduct-research-specialist-model-distillation.md).
-
-The training pipeline: generate synthetic interviews with a frontier model playing both interviewer and subject following the protocol as the plan (validated by SDSD and APIGen-MT); filter with automated constraint verifiers and bilevel reweighting (not all synthetic conversations are equally useful - BOOST); then SFT, then curriculum DPO for constraint internalization (one constraint at a time), then PPO for persona and long-conversation stability. Evaluation is automatable: zone coverage, high-weight-assertion resolution, NEVER-violation counts, subject-answer-length trend as an engagement signal, and cross-validation catches.
-
-### The dedicated compaction model
-
-The compaction algorithm of Appendix A wants a length-controlled structured summarizer, and that is a second distillation target. A 3B model matches 70B on summarization quality (NAACL 2025, 19 models); LDPE (length-difference positional encoding, [arXiv:2412.11937](https://arxiv.org/html/2412.11937)) solves the length-target problem that defeats prompted models, hitting mean error under 3 tokens; 5K-20K synthetic examples from a frontier teacher suffice; two-stage SFT+DPO with multi-metric factual filtering is the recipe. Recommended base: Llama-3.2-3B-Instruct with QLoRA. At INT4 on a single GPU it runs at 500+ tokens/sec, compressing 500 lines in 1-2 seconds - fast enough to run synchronously, so pre-compaction becomes an optimization rather than a requirement. The sidecar deployment pattern is production-proven (Azure documents it; enterprise surveys report 5-150x cost savings). Source: [small-model summarization research](cabinet/_research/2026-07-23-conduct-research-small-model-summarization.md).
-
-### Speed: speculative decoding
-
-Pair the 14B interviewer with a 1-2B draft model distilled on the same interview data. The structured interview response (reflection + bridge + question) is highly predictable, which is exactly what raises draft acceptance: domain-distilled drafts outperform generic by 11-25%, and 0.80-0.90 acceptance is realistic for this output shape, yielding 2.5-3.5x decode speedup at batch 1 - the interactive-interview regime where speculative decoding is strongest (2.4x at batch 1, degrading above batch 16, so single-session use is ideal). vLLM and SGLang both support it with one flag; INT4-quantize the draft for a further 30-50% latency cut at 2-4 points of acceptance. EAGLE-3 (2.89x, 81% acceptance) is the fallback if a separate draft is too much operational overhead. Source: [speculative decoding research](cabinet/_research/2026-07-23-speculative-decoding-interview-system.md).
-
-### The voice pipeline
-
-Cascaded STT to LLM to TTS, streaming at both ends. The research corrects two of my earlier assumptions:
-
-- **Do not use Whisper for real-time.** It is batch-only; every "streaming Whisper" wrapper adds 1-3+ seconds. Use Deepgram Nova-3 or Flux (sub-300ms, with built-in end-of-turn detection that saves 200-600ms over a separate VAD), or Parakeet on-device (~22ms on Apple Neural Engine).
-- **Chatterbox Turbo is the TTS pick** (350M, MIT license, voice cloning from a 5-second reference, ~75ms time-to-first-byte, paralinguistic tags), beating the Orpheus/Kokoro options I first suggested for this use case. Kokoro (82M, 28ms) if cloning is not needed.
-
-VAD/endpointing is the hidden latency killer (default silence detection adds 600-1500ms); semantic endpointing or Deepgram Flux avoids it. Achievable end-to-end voice-to-first-audio is 500-800ms on an optimized stack (Pipecat or LiveKit Agents for the pipeline), comfortably under a 2-second target, and P95 matters more than P50 because an occasional 3-second pause breaks conversational trust. For a reflective interviewer, a ~1 second thoughtful pause is on-persona rather than a defect. Source: [voice pipeline research](cabinet/_research/2026-07-23-voice-ai-pipeline-survey.md).
-
-### Hardware and economics
-
-The whole stack fits one consumer GPU. On a 24GB RTX 4090: 14B interviewer at INT4 (~7GB) + 1-2B draft (~1GB) + Chatterbox (~0.7GB) + on-device STT (~0.7GB) leaves ample room for KV cache. At scale, KV cache is the binding constraint (160 KiB/token for a 14B; ~29 sessions per 80GB H100 at 8K context), and compaction keeping context at ~4K instead of 16K+ multiplies concurrent sessions 3-4x. Prefix caching shares the ~2K-token system prompt across all sessions. The economics: at ~40 concurrent sessions per H100 at ~$2/hr spot, roughly $0.05-0.09 per complete 60-90 minute interview, versus $5-15 on a frontier API for the same - about 100x cheaper.
-
-At 800B+ the open-weight interviewer reaches frontier-competitive quality for this task, at which point the argument for self-hosting is no longer capability but control: no rate limits, no policy filters, full system-prompt control, data sovereignty (cognitive profiles never leave your infrastructure), fine-tuning rights, and deterministic availability. For a tool that collects deeply personal profiles, routing that data through a third-party API is a liability question, not a capability one.
-
----
-
 ## References
 
 Research files (in `cabinet/_research/`), each surveying prior art, related work, subcomponents, performance, metrics, and model tier for one idea:
@@ -814,9 +1072,4 @@ Research files (in `cabinet/_research/`), each surveying prior art, related work
 Codebase references: [pipeline.py](wg21-paperflow/packages/assay/src/assay/pipeline.py) (the orchestration this replaces), [assay.md](wg21-paperflow/packages/assay/src/assay/assay.md) (the prompt document that becomes the program), [papergate.md](tools-public/tools-wg21/papergate.md), [briefer.md](tools-public/tools/briefer.md), [diligence.md](tools-public/tools/diligence.md), [mentograph.md](tools-public/tools/mentograph.md), [how-to-write-prompts.md](tools-public/how-to/how-to-write-prompts.md).
 
 *2026-07-23 20:40 - Claude Opus 4.8 (Cursor agent)*
-
-
-
-
-
 

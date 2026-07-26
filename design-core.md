@@ -155,9 +155,10 @@ pub trait Extension: Send + Sync + 'static {
     /// rollback, and savepoint. Default is to ignore them.
     async fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError> { Ok(()) }
 
-    /// Rows this extension wrote for a declared `Rows` output during this run.
-    /// Reported in the tool result. Zero for an extension that writes no rows.
-    async fn row_count(&self, _run: RunId, _table: &str) -> Result<u64, ExtError> { Ok(0) }
+    /// One line about what this extension did during the run, or `None`. Folded
+    /// into `Outcome::summary` in registration order. Deliberately opaque prose:
+    /// the core neither parses it nor knows what it counts.
+    async fn summarize(&self, _run: RunId) -> Result<Option<String>, ExtError> { Ok(None) }
 
     /// Release connections and sessions. Called on service shutdown.
     async fn shutdown(&self) -> Result<(), ExtError> { Ok(()) }
@@ -194,11 +195,14 @@ pub enum SectionEvent {
     NestedComplete { run: RunId, section: usize, depth: u32, task: TaskId },
     NestedFailed { run: RunId, section: usize, depth: u32, task: TaskId },
     /// Emitted exactly once per run, on every path out of `Executor::run`,
-    /// including every error path and the deadline. `ok` is false when the run
-    /// did not complete. Emitted from a guard, not from the success path.
+    /// including every error path, the deadline, and a `return_result` that left
+    /// sections unvisited. `ok` is false when the run did not complete. Emitted
+    /// from a guard, not from the success path.
     RunEnded { run: RunId, ok: bool },
 }
 ```
+
+`return_result` is why `RunEnded` is emitted from a guard rather than from the end of the happy path. A run can now terminate from inside a Lua block or a `check` function with several sections unreached, so the number of syntactic paths out of `Executor::run` is larger than the number a reader would enumerate. A guard makes the count irrelevant: an extension holding an open transaction gets its commit or rollback whichever way the run left.
 
 `RunEnded` is load-bearing and was added after the paperstore extension was specified against an earlier version of this trait. Without it, every failure path leaves an open transaction: `shutdown` is process scope rather than run scope, so nothing tells a storage extension that a failed run is over. On SQLite, where the write pool holds one connection, the first failed run then wedges every subsequent write until the process restarts. That is the difference between recovery being to run it again, which is this system's stated model, and recovery being to restart the service. The guarantee that it fires on every path out of `run` is what makes it worth having, which is why the core emits it from a drop guard rather than from the happy path.
 
@@ -330,13 +334,19 @@ Six further names are `ToolName`s this crate backs itself. They take no binding,
 
 | Core name | Surfaces | Purpose |
 |---|---|---|
-| `done` | `ToolOnly` | Signals intentional completion. Always in the tool set and cannot be removed. |
+| `return_result` | `Both` | Ends the run, optionally carrying one string to the caller. Always in the tool set and cannot be removed. |
 | `create_file`, `append_file`, `read_file`, `delete_file` | `ToolOnly` | The virtual filesystem over in-memory blobs. |
 | `ask_user` | `ToolOnly` | Bound and unimplemented; returns `RunError::Unimplemented`. |
 
-The core names look like they should split into families and do not: `create_file` would give `create.file`, which is nonsense. No special case is needed, because the family rule above only groups names whose surface admits Lua and every core name is `ToolOnly`. A Lua block never writes files and never signals completion, so the rule and the vocabulary agree without an exception.
+Five of the six look like they should split into families and do not: `create_file` would give `create.file`, which is nonsense. They need no special case, because the family rule above only groups names whose surface admits Lua and all five are `ToolOnly`. A Lua block never writes files.
 
-Three kinds of name reach a section's schema list and only the first is in this table. Canonical names arrive through `ToolMap`, resolved from configuration. Core names are always present. A prompt's declared state-filing tools are generated from its own frontmatter and are not `ToolName`s at all. `tools.add` scopes across all three by string, which is why a section can name `web_search`, `add_statement` and `done` in one call.
+`return_result` is the exception and is the only core name reaching Lua. The family rule would give it `return.result`, which is not merely ugly but unwritable: `return` is a Lua keyword, so `return.result(..)` is a syntax error. It is therefore installed as a bare Lua global under its own name, `return_result(..)`, bypassing the family rule entirely. One name, one function, identical spelling on both surfaces. Tension: the family rule now has one documented exception, and a second core name wanting Lua would need the same carve-out rather than inheriting a general mechanism.
+
+Three kinds of name reach a section's schema list and only the first is in this table. Canonical names arrive through `ToolMap`, resolved from configuration. Core names come from this crate. A prompt's declared state-filing tools are generated from its own frontmatter and are not `ToolName`s at all. `tools.add` scopes across all three by string, which is why a section can name `web_search`, `create_file` and `add_statement` in one call.
+
+`return_result` is the single exception to scoping. It is in every section's schema list whether or not `tools.add` named it, `tools.remove` cannot take it out, and naming it is harmless but pointless. Every other core name is scoped exactly like a canonical one: a section gets `create_file` because it asked for it, and a section that did not ask cannot write a virtual file.
+
+That distinction is deliberate and the tool-count discipline is the reason. [design-promptforge.md](design-promptforge.md) puts the reliable ceiling at five to ten tools, and six to eight below 8B. Four virtual-file operations forced into every section would spend half that budget in sections that never touch a file, which is a measurable reliability cost paid for nothing. `return_result` earns its unconditional slot because a section that cannot end the run is a section that can strand one.
 
 ### Constructing a `ToolName`
 
@@ -382,17 +392,15 @@ pub trait Observer: Send + Sync {
 }
 
 pub enum Event {
-    RunStarted { run: RunId, prompt: String, nominal_total: u32 },
+    RunStarted { run: RunId, prompt: String },
     SectionStarted {
         /// Distinct sections completed so far. Monotonic, never decreasing.
-        done: u32,
-        /// Count of H2 sections excluding Main. A nominal denominator.
-        nominal_total: u32,
+        completed: u32,
         name: String,
         /// Frontmatter progress text for this section, if declared.
         label: Option<String>,
     },
-    SectionFinished { done: u32, nominal_total: u32, name: String },
+    SectionFinished { completed: u32, name: String },
     SectionSkipped { name: String, reason: String },
     SectionRetrying { name: String, attempt: u32, reason: String },
     Jumped { from: String, to: String, cleared_turns: u32 },
@@ -404,13 +412,15 @@ pub enum Event {
     ModelTurn { section: String, model: ModelName, prompt_tokens: u32, completion_tokens: u32 },
     Narration { section: String, text: String },
     OutputWritten { name: String, dest: Destination },
-    RunFinished { run: RunId, outcome: OutcomeKind },
+    RunFinished { run: RunId, outcome: OutcomeKind, value: Option<String> },
 }
 ```
 
-`SectionStarted` carries `done`, `nominal_total`, and `label` because those are exactly the three arguments an MCP progress notification takes, and Cursor was measured on 2026-07-25 rendering them as `{done} / {nominal_total} - {label}`. Nothing downstream has to compute a fraction.
+`SectionStarted` carries `completed` and `label` because those are the two arguments an MCP progress notification needs, and Cursor was measured on 2026-07-25 rendering the message text in place. Nothing downstream has to compute anything.
 
-The denominator is nominal, and this is a genuine imprecision rather than a rounding detail. Because `## Main` dispatches with `goto` rather than the runtime walking sections in file order, the number of sections a run will visit is not known when it starts: a run may skip sections, and it returns to Main between steps. The denominator is therefore the count of H2 sections excluding Main, and the numerator counts distinct sections completed, so a revisit does not advance it and the fraction never goes backwards. Tension: a run that legitimately visits a section twice, or skips three, shows a fraction that never reaches its denominator, so the bar is honest about ordering but not about remaining work.
+There is deliberately no denominator. An earlier draft carried a `nominal_total` counting H2 sections excluding Main, so a client could render `2 / 5`, and it was removed because the number is unknowable rather than merely imprecise. `goto` can skip sections, revisit them, or jump backwards, and `return_result` can end a run from any section, so the count of sections a run will visit is not determined when it starts. A fraction whose denominator is a guess is worse than no fraction: it invites a reader to compute remaining work from a number that does not mean that. `completed` is still emitted, because "which step is this" is honest and useful, and it is monotonic so a revisit does not advance it.
+
+`RunFinished` carries `value`, which is whatever `return_result` was given, or `None` when the run fell off the last section or called `return_result` with no argument. It is the only place a return value reaches an observer.
 
 `on_event` is synchronous and must not block: a consumer that needs to do work queues it.
 
@@ -425,7 +435,6 @@ pub struct OutputDecl {
 
 pub enum OutputKind {
     File { format: Format },
-    Rows { table: String },
 }
 
 pub enum Format { Markdown, Json, Text }
@@ -435,19 +444,20 @@ pub struct OutputRoots(BTreeMap<String, Root>);
 
 pub enum Root {
     Dir(PathBuf),
-    /// Rows go to an extension that accepted the table name at validation.
-    Extension(String),
 }
 
 pub enum Destination {
     Path(PathBuf),
-    Rows { table: String, count: u64 },
 }
 ```
 
 `Event`, `Outcome`, `Destination`, `OutputKind`, `Format`, `ToolName`, `ModelName`, and `RunId` all derive `Serialize` and `Deserialize`. They cross a process boundary: the MCP server serializes them into tool results and progress notifications, and the CLI deserializes them at the other end. Deriving in the core rather than mirroring the types in each binary is what keeps the two ends from drifting. `serde` is therefore a non-optional dependency of this crate rather than a feature. Tension: the wire shape becomes part of this crate's public API, so renaming a field is a breaking change for both binaries at once.
 
 A prompt emits to a name. The executor resolves the name against `OutputRoots` and constructs the destination itself, so a section handling untrusted text has no filesystem path in reach. A `required` output the run did not produce is a failed run, which is why no postcondition has to be written for it.
+
+An earlier draft carried a second output kind, `Rows { table }`, resolving through `Root::Extension` to `Destination::Rows { table, count }`, and all three are removed. A table name is a domain concept and this crate declares no domain: `OutputKind::Rows` put a database schema in the vocabulary of a type that is supposed to know only files, and `Root::Extension` made the core arbitrate which extension owned which table. An extension writing rows now tracks and reports them itself under its own canonical names, which is what [design-paperstore.md](design-paperstore.md) specifies. `OutputKind` and `Root` are each one variant today and remain enums rather than collapsing to structs, because a second file-shaped destination is plausible where a second domain-shaped one is not.
+
+`Format` and `OutputKind` are separate because `format` is a property of a file and `kind` is what sort of thing an output is. The single-variant `OutputKind` therefore reads redundantly today. Tension: a reader may reasonably ask why the wrapper survives; the answer is only that flattening it is a breaking wire change for the two binaries and the wrapper costs nothing.
 
 ### Executor
 
@@ -493,7 +503,11 @@ impl Executor {
 pub struct Outcome {
     pub run: RunId,
     pub outputs: Vec<(String, Destination)>,
-    /// Short prose for a caller to display. Never a document body.
+    /// Whatever `return_result` was given. `None` when the run fell off the last
+    /// section, or called `return_result` with no argument.
+    pub value: Option<String>,
+    /// Short prose for a caller to display. Never a document body. Assembled by
+    /// the executor from run statistics and each extension's `summarize`.
     pub summary: String,
     pub turns: u32,
     pub elapsed: Duration,
@@ -501,6 +515,8 @@ pub struct Outcome {
 ```
 
 A single `RunConfig` struct rather than eight positional arguments, because the argument list is long, heterogeneous, and will grow.
+
+`value` and `summary` are separate fields carrying different things and it is worth saying which. `value` is the prompt's own product, written by the model or by a Lua block, and the core treats it as opaque. `summary` is the runtime's account of the run - sections, turns, elapsed, plus whatever each extension reported through `summarize` - and the prompt cannot influence it. A caller displaying one line to a human wants `summary`; a caller consuming a result programmatically wants `value`. Collapsing them would force one of those two readers to parse around the other's text.
 
 The three task limits exist because a runaway fan-out is a documented failure mode rather than a hypothetical one: spawning fifty subagents for a simple query is the case explicit scaling rules were added upstream to prevent.
 
@@ -544,10 +560,6 @@ outputs:
     kind: file
     format: markdown
     required: true
-  - name: positions
-    kind: rows
-    table: stakeholder_position
-    required: false
 progress:
   gather: Gathering source material
   evaluate: Evaluating positions against the record
@@ -558,18 +570,18 @@ progress:
 
 ```lua
 model("thinking")
-tools.add("done")
+break_section()
 ```
 
-Decide the next step. If no statements have been gathered, `goto("## Gather")`.
-If statements exist but no verdict is set, `goto("## Evaluate")`. If both are
-done, `goto("## Write")`.
+Confirm {{ params.entity }} is an entity whose public statements you can
+research. If it is not, call `return_result` naming the problem and stop.
 
 ## Gather
 
 ```lua
 model("fast")
-tools.add("web_search", "web_fetch", "add_statement", "append_file", "done")
+tools.add("web_search", "web_fetch", "add_statement", "append_file")
+break_section()
 ```
 
 Find every public statement by {{ params.entity }} on the topic. File each one
@@ -580,7 +592,8 @@ with `add_statement`, including its source URL, and append its full text to
 
 ```lua
 model("thinking")
-tools.add("read_file", "set_verdict", "done")
+tools.add("read_file", "set_verdict")
+break_section()
 
 assert(store.count("statements") > 0, "nothing gathered to evaluate")
 
@@ -590,7 +603,22 @@ end
 ```
 
 Read `statements.md`, weigh what it contains, reach a verdict and set it.
+
+## Write
+
+```lua
+model("thinking")
+tools.add("read_file", "create_file")
 ```
+
+Write the report to the `report` output, drawing on the verdict and the
+statements in `statements.md`. When it is written, call `return_result` with a
+one-sentence summary of the verdict.
+```
+
+Three sections declare `break_section` and the fourth declares nothing, which is what makes it the last. `## Write` ends the run whether or not the model remembers to call `return_result`; the call is what supplies a value, not what stops the run.
+
+`## Main` shows both exits in one section. Its Lua declares `break_section`, so an entity it can research continues to `## Gather`, and its prose tells the model to call `return_result` for one it cannot, which ends the run before any search is issued. The declaration is the default and the model's terminal call overrides it, because `return_result` is immediate and the declared exit is only consulted if the section reaches its end.
 
 Frontmatter is YAML because it is frontmatter, a settled convention with tooling; the configuration files are TOML for the separate reason that they are Rust configuration. The two choices are unrelated and neither argues for changing the other.
 
@@ -600,7 +628,7 @@ Section headings are `##`, with `###` beneath them as addressable children. The 
 
 One Lua fence per section replaces a metadata DSL entirely. The block runs before the section's model turn, configuring it by calling host functions rather than by assigning to magic globals. A section needing nothing special has no block and inherits defaults.
 
-The seven host objects are `state`, `store`, `tools`, `params`, `context`, `sections`, and `progress`. All seven are core, and every other name in scope arrives from an extension.
+The core host names are `state`, `store`, `tools`, `params`, `context`, `sections`, `progress`, `return_result`, `break_section`, `goto`, `Task`, and `fanout`. All are core, and every other name in scope arrives from an extension.
 
 | Name | Provided by | Purpose |
 |---|---|---|
@@ -611,7 +639,15 @@ The seven host objects are `state`, `store`, `tools`, `params`, `context`, `sect
 | `context` | core | `context.inject(text)` prepends assembled text to the model's initial prompt. |
 | `sections` | core | `sections.children("## Battery")` returns the H3 children as addressable sections. |
 | `progress` | core | `progress.say(text)` emits an observer event mid-section. |
+| `return_result` | core | `return_result(text)` or `return_result()` ends the run, immediately. |
+| `break_section` | core | Declares that this section exits to the next H2 in file order. |
+| `goto` | core | Declares that this section exits to a named H2. |
+| `Task`, `fanout` | core | Dispatch a section as a subagent, one or many. |
 | everything else | extensions | `classify`, a paperstore name, whatever was linked. |
+
+`return_result` is a bare function rather than a member of an object because it is the same name the model calls, spelled identically. It is the only core name on both surfaces, for the reason given under the canonical vocabulary: the family rule would give `return.result`, which is a Lua syntax error.
+
+`break_section` and `goto` are Lua-only and reach no model schema. Routing is the prompt author's decision, expressed in the document, and a model that could route would be deciding something the author already decided.
 
 `store` is the run state store and is core, which is worth stating plainly because it is easy to confuse with a persistent database. The run state store holds what the model filed during this run through flat tool calls. A durable database is an extension and arrives under its own name. The two are unrelated and the core knows only the first.
 
@@ -625,15 +661,52 @@ tools.remove("web_fetch")                  -- narrow an inherited set
 assert(state.chunks_total > 0,             -- precondition: runs before the model
        "no chunks to extract from")
 
-function check()                           -- postcondition: runs after done()
+function check()                           -- postcondition: runs at section end
   assert(store.count("claims") > 0, "no claims filed")
 end
 
-goto("## Evaluate")                        -- clear context, continue there
+break_section()                            -- exit to the next H2 in file order
+goto("## Evaluate")                        -- exit to a named H2 instead
+return_result("nothing to analyse")        -- end the run now, carrying one string
+return_result()                            -- end the run now with no value
 Task("## Extract", { chunk_id = 3 })       -- subagent on that section, verbatim
 Task("research.md", { topic = "..." })     -- or another pipeline file
 fanout(tests, { evidence = state.evidence }, { ordered = true })
 ```
+
+### Exits are declared, not taken
+
+`break_section` and `goto` do not transfer control when called. They record where this section exits, and the executor acts on that record when the section ends. The reason is ordering: the top-level Lua block runs before the model turn, so a call that jumped immediately would skip the turn the section exists to run.
+
+Three consequences follow, and all three are useful rather than merely tolerable.
+
+A section can decide its exit from state before the model runs:
+
+```lua
+if store.count("statements") > 10 then
+  goto("## Deep")
+else
+  break_section()
+end
+```
+
+A section can decide its exit from what the model just filed, in `check`, which is the pattern that replaces a model-driven branch:
+
+```lua
+function check()
+  assert(store.exists("classification"), "nothing was classified")
+  local kind = store.get("classification").type
+  if kind == "library" then goto("## Library")
+  elseif kind == "language" then goto("## Language")
+  else break_section() end
+end
+```
+
+The model decides what, and Lua decides where. That division is the whole reason routing is off the model surface: the classification above is a judgement only the model can make, and the mapping from classification to section is a decision the author already made and should not pay a model turn to rediscover.
+
+Last call wins. A top-level `break_section` followed by a `goto` in `check` exits to the `goto`, which is what makes the second example above an override of a default rather than a conflict. Calling neither is also a decision, and it means the run ends when the section does.
+
+`return_result` is the exception and is immediate. It ends the run rather than routing within it, and a run that is over is over: the call unwinds the Lua block, no statement after it runs, and the model turn never happens if the call was at top level. Terminating now and routing later are different enough operations that giving them the same timing would be the confusing choice.
 
 ### `ask_user` is a stub
 
@@ -641,9 +714,19 @@ The prompt language specifies `ask_user(question)` as a blocking mid-run questio
 
 Stubbing rather than removing costs one function and keeps the language document honest, since a prompt author reading it will look for the call. Implementing it needs a request-response path that the observer interface does not have: `Observer` is one-way by design, so carrying a question back to a caller means a second channel, and the shape of that channel depends on whether the caller is Cursor with MCP elicitation, the Django site with a browser, or a terminal. Tension: a pipeline needing a mid-run question cannot be written yet, and the language document describes a capability the runtime does not have.
 
-A precondition is a plain `assert` at block top level, and a failing one skips the section rather than aborting the run. A postcondition is a function named `check`, run after the model calls `done()`, and a failing assertion inside it retries the section. Using Lua's own `assert` rather than a boolean return means the failure carries the author's message into the observer event and the error, with no separate reporting convention to learn.
+A precondition is a plain `assert` at block top level, and a failing one skips the section rather than aborting the run. A postcondition is a function named `check`, run when the section ends, and a failing assertion inside it retries the section. Using Lua's own `assert` rather than a boolean return means the failure carries the author's message into the observer event and the error, with no separate reporting convention to learn.
 
 `goto` is the context-clearing jump: the model's conversation is destroyed and the target section starts fresh from its prose, its injected context, and its scoped tools. The run state store survives; the conversation does not. That destruction is the entire point, and it is why `store` exists.
+
+### `return_result` ends the run
+
+`return_result` takes one optional string and ends the run immediately, from wherever it is called. It reaches Lua as a bare global and the model as a tool, under the same name. Three call sites: a top-level Lua block, a `check` function, and a model tool call. A run ending this way skips every section it had not reached, runs no further `check`, and the string becomes `Outcome::value`.
+
+From Lua it is not a normal return. The call unwinds the block, so no statement after it in the same block runs, and the executor treats the section as terminal rather than resuming it. Implemented by raising a distinguished `mlua` error the executor recognises and converts, which is why it cannot be caught by a `pcall` in prompt-authored Lua: the sandbox strips `pcall` for unrelated reasons and the error type is private to the core.
+
+Called with no argument the value is `None`, which is the same value a run gets by falling off its last section. The distinction between them is deliberately not recorded, because nothing downstream would act on it: a caller reads `Outcome::value` and either has a string or does not.
+
+The value is one string and is never parsed, validated, or reshaped by the core. A prompt whose caller wants JSON says so in its prose and the model writes JSON into the string; a prompt whose caller wants a sentence gets a sentence. The core declines to know which, and it declines to check: a `returns` schema in frontmatter was considered and rejected, because the run's real product is what the model filed through validated tool calls and wrote to declared outputs, and `return_result` is a status line on top of work already committed. Validating the status line adds a failure mode without protecting anything. Tension: a caller that does want structured data has no machine-checked guarantee it will parse, and finds out at `serde_json::from_str` rather than at run end.
 
 `Task` dispatches a section verbatim, resolving the section reference on the Rust side so the calling model never writes the subagent's instructions and cannot paraphrase them. Its return value is the subagent's serialized state store, not a JSON object the subagent had to compose, so every field crossed a validation boundary one tool call at a time and the aggregate is well-formed by construction. Each nested task gets its own isolated state store; parameters in and serialized store out are the only things crossing the boundary.
 
@@ -694,9 +777,9 @@ state:
 
 Generated tools are `Surfaces::ToolOnly`. The model files and Lua reads, so a Lua block never writes state. That keeps one direction of travel across a section boundary: the block reads what earlier sections filed and decides how to configure this one, the model files what it found, and `check()` reads back what it filed. A Lua write would let a prompt manufacture the evidence its own postcondition then verifies.
 
-Declared names are not `ToolName`s and never enter the canonical vocabulary, which stays closed. A section's model-facing schema list is assembled from three sources: canonical names resolved through `ToolMap`, the prompt's own declared state tools, and the always-present core tools, meaning `done` and the four virtual-file operations. `tools.add(..)` scopes across all three by name, so an author writes one list and never has to know which source a name came from.
+Declared names are not `ToolName`s and never enter the canonical vocabulary, which stays closed. A section's model-facing schema list is assembled from three sources: canonical names resolved through `ToolMap`, the prompt's own declared state tools, and this crate's own core tools. `tools.add(..)` scopes across all three by name, so an author writes one list and never has to know which source a name came from. `return_result` is added to that list unconditionally, as `### The canonical vocabulary is one table` sets out, and is the only name that is.
 
-Startup validation rejects a declared name colliding with a canonical name, with a core tool name - `done`, `create_file`, `append_file`, `read_file`, `delete_file` - or with another declared name in the same prompt. It also rejects an entry carrying both `collection:` and `key:`, or neither. Three namespaces meet in one schema list, and the collision check is what keeps a name in `tools.add` from being ambiguous about which of the three it reaches.
+Startup validation rejects a declared name colliding with a canonical name, with a core tool name - `return_result`, `create_file`, `append_file`, `read_file`, `delete_file`, `ask_user` - or with another declared name in the same prompt. It also rejects an entry carrying both `collection:` and `key:`, or neither. Three namespaces meet in one schema list, and the collision check is what keeps a name in `tools.add` from being ambiguous about which of the three it reaches.
 
 A generic core tool, `record_add(collection, item)` with a `record_set(key, value)` beside it, would keep the vocabulary smaller and was rejected. [design-promptforge.md](design-promptforge.md) builds the entire tool-call-state argument on flat calls with typed, enum-closed arguments, and the numbers are the reason: BFCL Non-Live AST puts a 7B to 32B open model at 85 to 90 percent on one flat call, schema complexity degrades hard tasks monotonically at 36 points for Claude Haiku and 28 for GPT-4o-mini on MATH-Hard under heavy schemas, and flat typed schemas cut malformed-call rates from 15 to 25 percent down to under 5 percent. A generic filer hands the model an untyped object under a name that says nothing about what belongs in it, which throws away every one of those numbers at the exact call where the run's state is being built. Declaring `add_claim(quote, line, kind)` with `kind` closed to three values puts the constrained-decoding path on the arguments; `record_add("claims", {..})` cannot. Tension: the schema list a model sees is now partly per-prompt, so two prompts filing the same kind of thing declare it twice and are free to declare it differently, and nothing checks that a declared schema matches what the section's prose asks the model to file.
 
@@ -710,7 +793,16 @@ The `staker` example above shows the split. `add_statement` files a structured r
 
 ### Completion and failure detection
 
-`done()` is always in the tool set and cannot be removed. The model calls it to signal intentional completion, which makes stopping without it - hitting an output limit, stalling, or losing the thread - a detectable failure distinct from finishing. Three layers catch a bad run: the missing `done()` call, a failing `check()` postcondition, and per-tool call counting that flags a required tool never called. Together these are strictly stronger than a schema check, because "the model processed all fifteen chunks, filed at least one claim, and signalled completion" is a stronger claim than "the JSON parsed."
+A section ends when the model returns a turn carrying no tool calls. That is the ordinary termination of any tool-call loop and needs no signal from the prompt: the model has nothing left to do, so it says so in prose and the executor moves on. `check` then runs, and on success the executor advances.
+
+An earlier draft required the model to call a `done()` tool to end a section, and it is removed. It signalled nothing the empty turn does not already signal, it spent a tool slot and its schema tokens in every section of every prompt, and it introduced a failure mode of its own: a model that finished its work correctly but omitted the ceremonial call was scored as a failed run. The remaining signals are stronger than it was and cost nothing.
+
+Two failures remain, and both are real rather than ceremonial:
+
+- **A budget ceiling reached with the model still calling tools.** `max_turns_per_section` or `max_tool_calls_per_section` hit while the model has not produced an empty turn means it is looping, stalled, or lost the thread. This is the detection `done()` was supposed to provide, and it provides it better: it fires on the actual pathology rather than on a missing token.
+- **A `check` postcondition failing after its retries.** Lua assertions inspect the store for the work the section was written to do - "at least one claim per chunk," "thesis is set," "every finding has a severity" - and carry the author's own message into the error.
+
+These check semantic validity, did the model do the work, rather than structural validity, is the shape right, which is the argument [design-promptforge.md](design-promptforge.md) makes at length and this document does not restate. Tension: the language document also specifies flagging a required tool that was never called, and nothing in frontmatter declares which tools are required, so that third layer is unimplemented and listed under `## Open`.
 
 ### Sandbox
 
@@ -733,27 +825,43 @@ flowchart TD
     Start["run(params)"] --> Validate["validate params against schema"]
     Validate --> Main["enter '## Main'"]
     Main --> Enter["emit Enter to extensions"]
-    Enter --> Lua["run the section's Lua block"]
-    Lua --> Pre{"top-level assert holds ?"}
-    Pre -->|no| Skip["emit SectionSkipped"] --> Back
+    Enter --> Lua["run the section's Lua block,<br/>recording any declared exit"]
+    Lua --> LuaEnd{"block called return_result ?"}
+    LuaEnd -->|yes| Outputs
+    LuaEnd -->|no| Pre{"top-level assert holds ?"}
+    Pre -->|no| Skip["emit SectionSkipped"] --> Exit
     Pre -->|yes| Turn["tool-call loop: build fresh context,<br/>call model, dispatch tools, repeat"]
-    Turn --> Signal{"model called done() ?"}
-    Signal -->|"no, budget hit"| Failed["treat as failure"]
-    Signal -->|yes| Check{"check() passes ?"}
+    Turn --> Ret{"model called return_result ?"}
+    Ret -->|yes| Outputs
+    Ret -->|no| Ended{"turn carried no tool calls ?"}
+    Ended -->|"no, budget hit"| Failed["treat as failure"]
+    Ended -->|yes| Check{"check() passes ?<br/>may declare an exit"}
     Check -->|"no, retries left"| Retry["emit Retry to extensions"] --> Lua
     Check -->|"no, exhausted"| Fail["RunError"]
     Failed --> Check
+    Check -->|"yes, called return_result"| Outputs
     Check -->|yes| Commit["emit Complete to extensions"]
-    Commit --> Back{"control flow ?"}
-    Back -->|"goto"| Clear["destroy context"] --> Enter
-    Back -->|"Task or fanout"| Nested["run nested, isolated store"] --> Enter
-    Back -->|"none"| Outputs["check required outputs produced"]
+    Commit --> Exit{"declared exit ?"}
+    Exit -->|"break_section"| Fall["destroy context,<br/>next H2 in file order"] --> Enter
+    Exit -->|"goto"| Clear["destroy context,<br/>named H2"] --> Enter
+    Exit -->|"Task or fanout"| Nested["run nested, isolated store"] --> Enter
+    Exit -->|"none declared"| Outputs["check required outputs produced"]
     Outputs --> Outcome["Outcome"]
 ```
 
-There is no file-order walk. `## Main` is the entry point and behaves as a dispatcher: it reads accumulated state through query tools, decides from its own prose, and reaches the next section with `goto` or `Task`. Because every entry into a section builds a fresh context, Main never accumulates history, and each visit to it is a clean read of state plus one control-flow decision.
+There is no implicit advance. A section exits where its Lua block said to exit, and a section that declared no exit is the last thing the run does. `## Main` is the entry point; everything after it is reached because some section named it, either positionally with `break_section` or by name with `goto`.
 
-Model context is destroyed on every `goto` and rebuilt from the target section's prose, its injected context, and its scoped tool schemas. That clearing also resets the instruction-decay that sets in past roughly fifteen tool calls, because each section starts the counter over. Every turn of a run carries the same endpoint pin per model, which the `GatewayClient` holds, so the section prefix stays in one pod's cache.
+An earlier draft made the advance implicit: a section that ended simply continued to the next H2 in the file, and only a `goto` overrode it. It is removed, and the reason is that it made file order load-bearing while leaving it unwritten. Three specific faults. Deleting a `goto` silently converted a jump into a fall-through instead of failing. Reading a section told you nothing about where control went next, so understanding a document meant holding its section order in your head. And a section that exists only as a `Task` target was reachable by accident from whatever happened to precede it, which the `## Main`, `## Digest`, `## Evaluate` shape in [design-promptforge.md](design-promptforge.md) hits directly.
+
+What replaced it costs one line per section and buys an explicit control-flow graph. Every edge is written down, which also means a startup check can walk it: an unreachable section, a `goto` naming a section that does not exist, and a cycle with no `return_result` in it are all findable before a run starts rather than during one.
+
+The cost is honest and worth stating. A four-section linear pipeline now carries four `break_section` lines that say nothing a reader could not have inferred from the order, and an author who forgets one gets a run that stops early rather than an error, because no declared exit is a legal way to end. That last case is the one to watch: the failure is silent and looks like success. The unreachable-section check catches it in the common shape, since a section nobody exits to is exactly what a forgotten `break_section` produces.
+
+Model context is destroyed on every transition, `break_section` and `goto` alike. The target section is rebuilt from its prose, its injected context, and its scoped tool schemas; the run state store survives and the conversation does not. That clearing also resets the instruction-decay that sets in past roughly fifteen tool calls, because each section starts the counter over. Every turn of a run carries the same endpoint pin per model, which the `GatewayClient` holds, so the section prefix stays in one pod's cache.
+
+A `Task`-dispatched section runs, ends, and returns its serialized store to the caller. Its own declared exit, if it has one, is ignored: a task is a call, and where a section routes on the main path is not where it routes as a subagent. Tension: the same section behaves differently in the two positions, and a section written for both has an exit declaration that is dead in one of them.
+
+A run that ends by exhausting its declared exits finishes normally with `Outcome::value` of `None`, exactly as one that fell off the last H2 did before. Reaching the end is completion, not an error.
 
 A run that fails is not resumed. There is no partial result and no checkpoint, because every write an extension performs is a replace-all write from deterministic content, so rerunning from the start needs no cleanup. This is a system-wide principle rather than a choice made here.
 
@@ -761,11 +869,15 @@ A run that fails is not resumed. There is no partial result and no checkpoint, b
 
 ```rust
 pub enum ParseError { MissingFrontmatter, Yaml(..), NoSections, DuplicateSectionName(String), UnknownToolName(String) }
-pub enum ValidateError { UnresolvedSlot(Slot), UnboundTool(ToolName), MissingOutputRoot(String), UnknownTargetTable(String), StateNameCollision(String), StateShapeInvalid(String) }
+pub enum ValidateError { UnresolvedSlot(Slot), UnboundTool(ToolName), MissingOutputRoot(String), StateNameCollision(String), StateShapeInvalid(String), UnknownGotoTarget { section: String, target: String }, UnreachableSection(String) }
 pub enum RunError { Params(..), Lua(..), Gateway(..), Tool(ToolError), Extension(ExtError), PostconditionExhausted { section: String, attempts: u32 }, MissingRequiredOutput(String), JumpLimit, TaskDepth, TaskBudget, Unimplemented(&'static str), Deadline }
 ```
 
 `ValidateError` exists so that everything a boot check can catch is caught by `Executor::new` rather than mid-run. A caller enumerating forty prompts at startup constructs forty executors to find out whether the deployment is coherent.
+
+The last two are what explicit exits bought. Because every edge is written in a Lua block, the control-flow graph can be walked at boot from the string literals in it: `UnknownGotoTarget` is a `goto` naming a section the document does not contain, and `UnreachableSection` is a section that is neither `## Main`, nor the target of any `goto`, nor positionally after a `break_section`, nor named by any `Task` or `fanout`. The second is the check that catches a forgotten `break_section`, since the section that would have followed it becomes unreachable.
+
+Both are best-effort and this is a real limit rather than a caveat. The walk reads literal arguments, so `goto("## " .. kind)` is invisible to it and a document built that way trades the check away. A conditional exit is treated as taking every branch, so a section reachable only through a condition that is never true still counts as reachable. The checks are therefore sound against typos and omissions, which is what they are for, and silent about computed control flow.
 
 `thiserror` for these; `anyhow` never appears in this crate's public surface.
 
@@ -774,12 +886,17 @@ pub enum RunError { Params(..), Lua(..), Gateway(..), Tool(ToolError), Extension
 - Parsing: golden files for each frontmatter field, each malformed case, duplicate section names, a section with no Lua block, a Lua block with no `model`, H3 children attaching to the right H2, and a file with no `## Main`.
 - Resolution: `SlotMap` and `ToolMap` hit and miss; `scoped` filtering; child inheritance of a parent's Lua configuration and a child overriding it; a `LuaOnly` tool absent from the model's schema list and a `ToolOnly` tool absent from Lua.
 - Sandbox: `io`, `os`, and `loadfile` unreachable; an infinite loop hitting the instruction interrupt; a memory bomb hitting the ceiling.
-- Execution against a fake gateway and a recording extension: Main dispatching by `goto`, a failing top-level `assert` skipping a section, `check()` retrying then passing, `check()` exhausted, a model stopping without `done()` treated as failure, a `goto` clearing context, `fanout` over three children both ordered and unordered, and `Task` returning a serialized store.
+- Execution against a fake gateway and a recording extension: a three-section document running end to end on `break_section` alone; a failing top-level `assert` skipping a section and the run continuing at that section's declared exit; `check()` retrying then passing; `check()` exhausted; a budget ceiling reached with the model still calling tools treated as failure; a `goto` reaching a section that is not the next one; `fanout` over three children both ordered and unordered; and `Task` returning a serialized store.
+- Exits and context: two sections linked by `break_section` where the second asserts the first's conversation is not visible to it; the same assertion across a `goto`; a section declaring no exit ending the run with later sections unvisited, asserted by a recording extension seeing no further `Enter`; a `Task` target that declares `break_section` asserting the task returns to its caller rather than advancing.
+- Exit declaration semantics: a top-level `break_section` followed by a `goto` in `check` taking the `goto`; a `goto` in a branch not taken having no effect; a statement after a top-level `break_section` still running, since the call declares rather than transfers; and the model turn still happening after a top-level `break_section`, which is the regression test for it being a declaration rather than a jump.
+- Graph validation: a `goto` naming a missing section failing `Executor::new` with `UnknownGotoTarget`; a section no exit reaches failing with `UnreachableSection`; a document where a forgotten `break_section` strands the remainder producing that same error and naming the first stranded section; and a computed `goto` target suppressing the check rather than falsely failing it.
+- `return_result`: from a model tool call, from a top-level Lua block, and from inside `check`, each ending the run with the string in `Outcome::value`; with no argument yielding `None`; skipping every later section, asserted by a recording extension seeing no further `Enter`; a statement after `return_result` in the same Lua block never running; and a run falling off the last H2 yielding `None` and a successful outcome.
 - Limits: `max_task_depth` refusing a fifth nesting level, `max_tasks_per_run` refusing a runaway fan-out, and `max_jumps` catching a `goto` cycle between two sections.
 - Declared state tools: a `collection:` entry appending to what `store.count` counts and a `key:` entry setting what `store.get` reads; a declared name present in the model's schema list and absent from Lua; `tools.add` scoping a canonical name, a declared name, and a core name in one call; and each of the five rejections - collision with a canonical name, with a core name, with another declared name, both shape fields, and neither.
+- Core tool surfaces: `return_result` present in every section's schema list whether or not `tools.add` named it, and unremovable by `tools.remove`; reachable from Lua as a bare global; and asserted absent from every family table, since `return.result` is the shape the family rule would have produced.
 - Virtual files: a blob written and read back within a run, discarded at run end, and a section holding only virtual-file tools unable to name a real path.
-- Extension lifecycle: `Enter` before any tool call, `Complete` after `check()` passes, `Retry` on failure, reverse order on `Complete`, and a nested pair around `Task`.
-- Observer: the exact event sequence for a Main-plus-two-section run as a golden transcript, since the MCP and CLI docs both consume this sequence and a change to it is a change to them. Assert that `done` never decreases across the transcript, including across a revisit.
+- Extension lifecycle: `Enter` before any tool call, `Complete` after `check()` passes, `Retry` on failure, reverse order on `Complete`, a nested pair around `Task`, and `RunEnded` delivered when `return_result` cuts a run short with sections unvisited.
+- Observer: the exact event sequence for a three-section run linked by `break_section` as a golden transcript, since the MCP and CLI docs both consume this sequence and a change to it is a change to them. Assert that `completed` never decreases across the transcript, including across a `goto` revisit, and that `RunFinished` carries the `return_result` string.
 - Outputs: a required output not produced fails the run; a declared name with no root fails validation; a prompt cannot reach a path outside its root.
 
 The recording extension and the fake gateway are the crate's test fixtures and are what the other crate docs mean when they refer to testing without a live service.
@@ -790,7 +907,8 @@ The recording extension and the fake gateway are the crate's test fixtures and a
 - Whether a declared `key:` name is reachable as `state.<name>` and through `{{ state.<name> }}` body substitution, or only through `store.get`. The read side names `store.get` and the substitution rule names `state`, and nothing says whether they see the same keys.
 - How `ask_user` reaches a caller, when it is implemented. It is a stub returning `Unimplemented` for now. MCP elicitation is the obvious carrier for a Cursor caller, but the observer interface is one-way and a browser caller and a terminal caller want different shapes, so the channel is unspecified rather than half-specified.
 - Whether the run state store is durable within a run or purely in memory. Discard-and-rerun means it need not survive a crash, which argues for memory, but a long fan-out holding results in memory is a different profile from one spilling them.
-- Whether `nominal_total` should instead come from a frontmatter-declared expected sequence, which would make the progress fraction reach its denominator on a normal run at the cost of a field that can drift from the sections.
 - Whether the tool-call counting layer of failure detection needs a frontmatter `required_tools` declaration, since the language document specifies flagging a required tool never called but nothing currently declares which tools are required.
+- Whether a section reached by a failing precondition should take its declared exit or end the run. It takes the declared exit above, so a skipped section still routes, which is what lets a guard section be skipped without stranding the ones after it. The alternative reading is that a section whose precondition failed did not run and therefore declared nothing, which would make a skip terminal. The first is chosen because the second makes every optional section a run-ender, and it is listed here because a skipped section running its exit declaration but not its `check` is a genuine asymmetry.
+- Whether `UnreachableSection` should be a warning rather than an error for a section reached only by a computed `goto`. It is an error above, so a document using computed targets has to be written differently or accept a failure at boot, and nothing currently lets an author annotate a section as reachable-by-construction.
 
 *2026-07-25 - design-core*

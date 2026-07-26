@@ -34,7 +34,7 @@ Every version is an exact `=` pin rather than a caret range. The reason is in `#
 
 ## The `Extension` impl
 
-The trait is `promptforge::Extension`, reproduced from the core doc without modification. `ClassifyExt` implements all eight methods, including all four the trait defaults, because a reader of this file should see every decision made rather than inherited. Two of those defaults are restated here rather than inherited and both are the empty answer: `holds_section_state` returns false, because a classification is a call and a result with nothing held past it, so this extension has no savepoint a nested section could interleave with and never costs a deployment its fan-out concurrency; `row_count` returns zero, because this crate writes no rows to any table, so no prompt declaring a `rows` output can resolve to it and there is nothing to count.
+The trait is `promptforge::Extension`, reproduced from the core doc without modification. `ClassifyExt` implements all eight methods, including all four the trait defaults, because a reader of this file should see every decision made rather than inherited. Two of those defaults are restated here rather than inherited and both are the empty answer: `holds_section_state` returns false, because a classification is a call and a result with nothing held past it, so this extension has no savepoint a nested section could interleave with and never costs a deployment its fan-out concurrency; `summarize` returns `None`, because this crate commits nothing and a run summary reporting how many times a classifier was called would be noise rather than information.
 
 ```rust
 pub struct ClassifyExt {
@@ -152,7 +152,7 @@ Zero-shot classification over a caller-supplied label set, implemented as NLI en
 
 ```lua
 model("fast")
-tools.add("done")
+break_section()
 
 local label, detail = classify.label{
   text = state.paragraph,
@@ -164,6 +164,16 @@ assert(label == "TARGET", "paragraph is not on target")
 ```
 
 A precondition is a top-level `assert`, so a classifier call that decides whether a section runs at all sits at the top of the block and the failing assertion's message is what the observer reports.
+
+The declared exit is taken whether or not that assertion holds, which is what makes this shape usable: a paragraph classified `SKIP` skips this section's model turn and the run continues at the next one, rather than the whole run stopping because one paragraph was off target. A classifier can also choose the exit outright, which is the cheapest branch in the language because no model turn is spent on it:
+
+```lua
+if classify.label{ text = state.paragraph, labels = { "TARGET", "SKIP" } } == "TARGET" then
+  goto("## Analyze")
+else
+  break_section()
+end
+```
 
 `text` and `labels` are required. `selector` names a classifier slot and defaults to `selector`. `template` overrides the classifier's configured hypothesis template and must contain one `{}` placeholder. The template belongs in configuration or in the prompt rather than in Rust, because the wording of a hypothesis is a measured domain choice: the cross-validated `TARGET` hypothesis on the Python path is what took `nli-small` to 96 percent target recall at one eighty-fifth the cost of `zeroshot-large`.
 

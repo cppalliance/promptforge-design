@@ -17,7 +17,7 @@ What it does not do, and cannot be made to do without a change to this document:
 - Know what a run is. `X-PromptForge-Run` is an opaque cache key, not a lifecycle.
 - Authenticate per client, or attribute usage to one.
 - Retry a failed upstream request, or fail over mid-response.
-- Inspect, cache, rewrite, or log message content. It rewrites the `model` field and, for one protocol, the envelope shape. Nothing else.
+- Inspect, cache, or log message content. It rewrites the `model` field, for one protocol the envelope shape, and for a model carrying a pack the whole prompt serialization. Nothing else.
 - Count tokens, enforce a token budget, or truncate a context.
 - Decide which model a prompt uses. A slot resolves to a model name in `prompts.toml`; this crate only maps that name onto a backend.
 
@@ -286,6 +286,8 @@ pub trait Upstream: Send + Sync {
 
 Tension: the Anthropic shim is the most intricate code here and the part least described by the OpenAI specification it is translating into, so it carries the largest share of the test suite for the least architectural weight.
 
+A third `Upstream` implementation exists for a model carrying a pack, which posts raw text to `/completions` rather than translating one chat protocol into another. It is selected by the model rather than by the endpoint, for a reason given under `Model packs`, and an endpoint serving a packed model still declares `protocol = "openai"`.
+
 ## Admission control
 
 ```mermaid
@@ -436,6 +438,98 @@ A pinned endpoint that becomes unavailable mid-run:
 
 A request that fails after admission is not retried onto another endpoint. Mid-request failover would either replay a body the caller may not have wanted replayed or restart a stream already partly delivered, and the system's recovery rule is that a failed run is discarded and rerun from the start.
 
+## Model packs
+
+A model pack is an optional module owning one model family's prompt serialization and output parsing, named by a `pack` field on a `[[model]]` entry. Present, the gateway renders the entire prompt itself and posts it to the backend's `/completions` route. Absent, nothing changes: the message array and the tools array go to `/chat/completions`, and the backend's chat template and tool-call parser own both directions, which is what every model does today and what every model will keep doing until a pack is written for it.
+
+Build the mechanism with no packs in it, then write the first pack for whichever model carries the most turns in production, which on the production profile is whatever `reasoning-large` resolves to. Confidence high that the seam is right, because the `Upstream` trait already is this abstraction and the Anthropic shim already proves it carries a stateful translation. Confidence medium that the payoff is worth the first pack, because no prefix-cache hit rate has been measured on this deployment and the argument below is derived rather than observed.
+
+### A pack is the missing half of endpoint pinning
+
+Pinning decides which pod a turn lands on. It does not decide what bytes that pod receives, and prefix caching pays only on the bytes.
+
+The gain pinning chases is real and already recorded above: a fixed prefix has been reported to move TTFT p50 from 480 ms to 110 ms at a 94 percent hit rate. What that figure assumes is a prefix that repeats exactly. Prefix caching matches at 16-token block granularity, so one differing token in the first block invalidates every block after it, which is the difference between a 0.3 percent and an 87 percent hit rate depending on where a volatile field sits. [design-promptforge.md](design-promptforge.md) draws the rule that follows and states it as a design rule: keep the system prompt and tool schemas byte-for-byte static, and put volatile data at the tail.
+
+That rule is currently unenforceable from inside this system. The gateway hands the backend a message array and a tools array; a Jinja2 template shipped in the model's own `tokenizer_config.json` decides the byte layout downstream of that, including whether tool schemas serialize in a stable key order, whether anything volatile is interpolated into the system preamble, and whether whitespace shifts between two vLLM releases. Nothing in this crate can assert on a prefix it never constructed, so the byte-stability rule is written down in one document and checked nowhere.
+
+A pack is where it becomes checkable, because the prefix is then a string this crate produced and can hold to a golden file. Pinning and byte-stable prefixes are two halves of one optimisation and only one half is built; the pack is the other half. Tension: this argues the pack is necessary for the pin to pay, and it does not establish that the pin pays enough to be worth a pack, which only a measured hit rate on real traffic settles.
+
+### Why the gateway, and not the core
+
+Because the core has no edge to a backend. [design-core.md](design-core.md) holds a `GatewayClient` its caller constructed and states that talking to an LLM backend is not something it does. Every piece of knowledge about a backend's dialect already lives in this crate, and the `Upstream` trait is already the place that knowledge goes.
+
+A pack is a third `Upstream` implementation, and the only one translating below the chat-completions layer rather than across to a second chat API. Anthropic translates one chat protocol into another; a pack translates a chat protocol into raw text. The trait carries both without a new concept.
+
+Placing it here also means Talktron gets it by changing nothing. Talktron reaches this service through the Python `openai` client and learns only a base URL, so a pack under the gateway benefits every consumer at once, which a pack inside the core library would not.
+
+The `Scope` section is amended by this and the amendment is stated rather than implied: the gateway rewrites the `model` field, for one protocol the envelope shape, and for a model with a pack the whole prompt serialization. It still does not inspect message content for its own purposes, cache it, or log it, and the redaction rule in `Observability` is unchanged.
+
+### The trait
+
+```rust
+/// One model family's prompt serialization and output parsing.
+///
+/// A pack owns exactly the two directions a chat template and a tool-call parser
+/// own upstream, and nothing else. It sees no credential, no endpoint, and no run
+/// token, so it is a pure function of the request. That is what makes its prefix
+/// golden-testable, which is the whole reason the trait exists.
+pub trait Pack: Send + Sync {
+    /// Matched against `model.pack` at config load.
+    fn name(&self) -> &'static str;
+
+    /// Serialize the request into the one raw prompt string the model sees.
+    ///
+    /// Reads `messages`, `tools`, and `tool_choice`, and no sampling field. The
+    /// system message and the tool schemas are rendered first and must be
+    /// byte-identical for byte-identical input, because that prefix is what the
+    /// pinned pod caches. Tool schemas serialize in a canonical key order here,
+    /// since a map iteration order that varies by run defeats the entire point.
+    fn render(&self, req: &ChatRequest) -> Result<String, PackError>;
+
+    /// Sent as `stop` on the outgoing request.
+    fn stop(&self) -> &[&str];
+
+    /// Parse one completion's text into an assistant message.
+    ///
+    /// A tool call the pack cannot parse is a `PackError` and never an empty
+    /// `tool_calls` list, because a silent absence of tool calls is the failure
+    /// this trait exists to remove.
+    fn parse(&self, text: &str, finish: FinishReason) -> Result<Message, PackError>;
+}
+
+/// The `Upstream` a packed model routes through. `build` posts the rendered
+/// prompt and the pack's stop sequences to `{base_url}/completions`; `whole`
+/// lifts the raw text back through `parse` into the ordinary `ChatResponse`
+/// every caller already receives.
+pub struct PackUpstream(Arc<dyn Pack>);
+```
+
+The registry is a `HashMap<&'static str, Arc<dyn Pack>>` built at startup from the packs the binary linked, and a `pack` name it cannot answer is a config failure rather than a first-request failure. Packs are linked, not loaded, for the reason [design.md](design.md) gives for extensions generally: Rust has no stable ABI and dead-code elimination silently drops registrations.
+
+A caller cannot tell which path served it. The response is the same `ChatResponse`, `model` is rewritten to the caller's name as always, and `X-PromptForge-Endpoint` still names the endpoint. Tension: that opacity is deliberate and it means a pack regression looks like a model regression from outside, so the pack name is recorded on the span to make the two separable in a log.
+
+### Route selection, and the rejected protocol variant
+
+The route is derived: a model with a pack goes to `/completions`, and a model without one goes to `/chat/completions`. The endpoint keeps `protocol = "openai"` either way.
+
+A `Protocol::Completions` variant was specified and rejected. It would have made the pairing fully checkable at boot, since a packed model's endpoints must speak raw completions and a raw-completions endpoint's models must all be packed, and both directions are static. It fails on the admission budget. One `[[endpoint]]` entry is one vLLM process and one semaphore, which is what the per-endpoint cap protects; a pod serving both routes would then need two endpoint entries against one `base_url`, giving one GPU two independent eight-permit semaphores and sixteen requests in flight where the cap says eight. Silently doubling the budget to gain a boot check is the wrong trade, so the protocol stays a property of the endpoint and the route stays derived from the model.
+
+The cost of that choice is one case configuration cannot reject. Whether a `base_url` serves `/completions` at all is not knowable from the file, so a pack aimed at a hosted frontier endpoint fails on its first request rather than at boot. `validate` catches the case it can, a pack on a model whose endpoints include an `anthropic` one, and the rest is a 404 from the backend surfacing as `upstream_client_error`.
+
+### Streaming a packed model synthesises the stream
+
+`parse` needs the whole completion, so a packed model cannot relay incremental chunks. `stream: true` against one is served by performing a whole upstream request and synthesising a well-formed stream from the result: one content chunk, one chunk carrying any tool calls, one finish chunk, and the terminal `[DONE]`. An unmodified SDK asking for a stream gets a stream, and the ordering rule in `Streaming` holds unchanged, since nothing is written until the upstream response has arrived and been accepted.
+
+What the caller loses is incremental delivery, which is latency and not correctness. It matters in exactly one place: Talktron speaks a voice response sentence by sentence, and a synthesised stream arrives all at once at the end. The resolution is that the voice path's model simply carries no pack, which costs nothing because a pack is opt-in per model and the pack's own benefits are aimed at long prefix-dominated agent traffic rather than at a single conversational turn. Tension: that leaves the two consumers on different paths for good reasons, so a deployment can no longer assume one model serves both well, and an incremental parser is the only thing that would close it. It is listed under `Open`.
+
+### What a pack costs
+
+A pack duplicates work the backend already does, and the duplication is the honest objection. The standing obligation is tracking the chat template in each packed model's `tokenizer_config.json` and the matching tool parser in vLLM against the pack that mirrors them. That work is bounded by the number of packed models rather than by the model zoo, it is a diff review rather than an open-ended design task, and at two or three packs it is small.
+
+The failure mode it introduces is the part worth writing down, because it is the hardest class to notice. A pack that has drifted from the format its model was trained on does not error. It renders a prompt the model still answers, slightly worse, and the symptom is a quality regression with no failing test and no log line. The golden prefix test protects byte stability and catches nothing about correctness of format, and no assertion available here distinguishes a subtly wrong delimiter from a subtly worse model. Tension: the mechanism trades a silent-no-tool-calls failure, which a parse error now makes loud, for a silent-slightly-wrong-prompt failure, which nothing here makes loud at all.
+
+That trade is still the right one, because the first failure is unbounded and undetectable from outside while the second is bounded by a diff a human or an agent reads on a known schedule. Confidence medium, on the strength of the reasoning rather than on any measurement, and the thing that would move it either way is a held-out quality check per packed model rather than a better test of the renderer.
+
 ## `gateway.toml`
 
 One file, `deny_unknown_fields` on every struct, so a misspelled limit is a boot failure rather than a setting silently ignored. Tension: adding a field is then a breaking change for anyone who set an unrecognised one early.
@@ -561,6 +655,11 @@ pub struct ModelConfig {
     /// does not. A model on an `anthropic` endpoint without it fails config validation
     /// rather than its first request.
     #[serde(default)] pub default_max_tokens: Option<u32>,
+    /// The pack owning this model's prompt serialization and output parsing, or absent
+    /// to leave both to the backend's chat template and tool-call parser. Absent is the
+    /// default and changes nothing about the request path, which is what makes a pack an
+    /// optimisation a deployment opts into one model at a time.
+    #[serde(default)] pub pack: Option<String>,
 }
 
 impl Config {
@@ -569,7 +668,7 @@ impl Config {
 }
 ```
 
-`validate` rejects: a duplicate endpoint or model name; a model naming an endpoint that is not defined; a model with an empty endpoint list; `queue_depth` below `inflight`; `admission_wait_secs` above `request_ceiling_secs`; a `${VAR}` that does not resolve; and a model on an `anthropic` endpoint with no `default_max_tokens`, which would otherwise fail on its first request. An `inflight` outside 4 to 16 loads with a warning naming the measured knee, because the developer machine legitimately runs below it.
+`validate` rejects: a duplicate endpoint or model name; a model naming an endpoint that is not defined; a model with an empty endpoint list; `queue_depth` below `inflight`; `admission_wait_secs` above `request_ceiling_secs`; a `${VAR}` that does not resolve; a model on an `anthropic` endpoint with no `default_max_tokens`, which would otherwise fail on its first request; a `pack` naming a pack no linked module answers to; and a `pack` on a model whose endpoints include an `anthropic` one, which serves no `/completions` route. An `inflight` outside 4 to 16 loads with a warning naming the measured knee, because the developer machine legitimately runs below it.
 
 `PartialEq` on `EndpointConfig` is load-bearing: it is how a reload decides whether an endpoint's definition changed and therefore whether its semaphore is preserved.
 
@@ -717,6 +816,9 @@ connect_timeout_secs = 10
 name = "reasoning-large"           # SAME NAME as development, different resolution
 endpoints = ["pod-reasoning-a", "pod-reasoning-b"]
 upstream = "Qwen/Qwen3-235B-A22B-Instruct-FP8"
+pack = "qwen3"                     # this model carries the most turns, so it earns the
+                                   # first pack: routes to /completions, and the prefix
+                                   # the pin keeps warm becomes ours to hold byte-stable
 
 [[model]]
 name = "extract-small"             # SAME NAME as development, different resolution
@@ -730,7 +832,7 @@ upstream = "claude-sonnet-4-20250514"
 default_max_tokens = 8192
 ```
 
-`reasoning-large` is an Anthropic key in development and a pair of self-hosted Qwen pods in production. `extract-small` is a laptop card in one and the production card in the other. No prompt changed, no frontmatter changed, and no slot mapping in `prompts.toml` changed. That substitution, in this file and nowhere else, is the entire mechanism by which prompts are deployment-agnostic.
+`reasoning-large` is an Anthropic key in development and a pair of self-hosted Qwen pods in production, packed there and unpacked here. `extract-small` is a laptop card in one and the production card in the other. No prompt changed, no frontmatter changed, and no slot mapping in `prompts.toml` changed. That substitution, in this file and nowhere else, is the entire mechanism by which prompts are deployment-agnostic, and a pack living on one side of it is the clearest case of the mechanism working: the same prompt reaches a chat-template-rendered Anthropic model and a gateway-rendered Qwen pod without knowing either.
 
 ## Credentials
 
@@ -901,10 +1003,16 @@ pub enum GatewayError {
     UpstreamStatus { endpoint: EndpointId, status: StatusCode, body: String }, // see below
     #[error("could not translate {endpoint} protocol: {detail}")]
     Translation { endpoint: EndpointId, detail: String },             // 502
+    #[error("pack {pack} could not render the request: {detail}")]
+    PackRender { pack: &'static str, detail: String },                // 400
+    #[error("pack {pack} could not parse the completion from {endpoint}: {detail}")]
+    PackParse { pack: &'static str, endpoint: EndpointId, detail: String }, // 502
 }
 ```
 
 `UpstreamStatus` maps by class. A 4xx from the backend passes through with its own status and truncated body, because it is the caller's request that was wrong and a caller needs the original code to react. A 429 passes through with the upstream `Retry-After` preserved, since the backend knows its own recovery window better than the gateway does. A 5xx becomes 502, counts against the endpoint's failure threshold, and does not leak the backend's internal message beyond the 2 KiB truncation.
+
+`PackParse` is the one 502 that does not count against endpoint health. The endpoint answered correctly and a module in this process could not read the answer, so cooling the endpoint down would take a healthy pod out of rotation over a defect that follows the pack to every other pod serving that model. Tension: a backend that has genuinely started emitting a different format is then indistinguishable from a stale pack, and neither trips the breaker.
 
 Every error body is the OpenAI error envelope, so an unmodified SDK surfaces it as its own error type rather than as an unparseable blob:
 
@@ -929,6 +1037,8 @@ Every error body is the OpenAI error envelope, so an unmodified SDK surfaces it 
 | `UpstreamTimeout` | 504 | `server_error` | `upstream_timeout` |
 | `UpstreamTransport` | 502 | `server_error` | `upstream_transport` |
 | `Translation` | 502 | `server_error` | `translation` |
+| `PackRender` | 400 | `invalid_request_error` | `pack_render` |
+| `PackParse` | 502 | `server_error` | `pack_parse` |
 | `UpstreamStatus`, upstream 4xx | the upstream's | `invalid_request_error` | `upstream_client_error` |
 | `UpstreamStatus`, upstream 429 | 429 | `rate_limit_error` | `rate_limit_exceeded` |
 | `UpstreamStatus`, upstream 5xx | 502 | `server_error` | `upstream_error` |
@@ -944,6 +1054,7 @@ Every error body is the OpenAI error envelope, so an unmodified SDK surfaces it 
 - `request_id` - generated per request, returned as `X-Request-Id`
 - `run` - the pin header value if present, otherwise absent
 - `model`, `endpoint`, `pinned` - routing outcome
+- `pack` - the pack name that rendered and parsed the exchange, absent when the backend's own chat template did
 - `queued_ms`, `ttfb_ms`, `total_ms` - admission wait, first byte, whole exchange
 - `prompt_tokens`, `completion_tokens` - from upstream usage when reported, zero otherwise
 - `outcome` - the `GatewayError` variant name, or `ok`
@@ -964,6 +1075,8 @@ Metrics under the `pf_gateway_` namespace, Prometheus text at `/metrics`:
 - `pf_gateway_pins` gauge and `pf_gateway_pin_evictions_total{reason}` counter, `reason` being `idle` or `capacity`
 - `pf_gateway_reloads_total{outcome}` counter and `pf_gateway_draining_endpoints` gauge
 
+No pack metric is added. `outcome` on `pf_gateway_requests_total` is the `GatewayError` variant name, so `pack_parse` is already countable per model and per endpoint, and a pack that starts failing is visible without a new series. What no metric can show is the drift failure named under `Model packs`, since a stale pack produces a successful request.
+
 Queued requests hold a connection while they wait, which is the operational consequence that matters most. `pf_gateway_queued` is therefore a socket-pressure metric as much as a fairness one, the file descriptor limit has to exceed the sum of every endpoint's in-flight plus queue depth on both sides of the gateway, and a client's own HTTP timeout must exceed `admission_wait_secs` or it will abandon requests the gateway was about to admit. `pf_gateway_admission_wait_seconds` and `pf_gateway_refusals_total` together are the signal for recalibrating `inflight` against real traffic, which the research explicitly leaves to observation rather than to derivation.
 
 ## Tests
@@ -973,6 +1086,8 @@ Queued requests hold a connection while they wait, which is the operational cons
 - **Integration against a fake backend.** An `axum` server implementing both protocols with configurable delay, failure mode, and status, linked from the library target. Asserts a non-streaming round trip; SSE relay fidelity byte for byte including the terminal `[DONE]`; the Anthropic translation in both directions, tool calls and stream events included; an upstream 429 passing through with its `Retry-After`; an upstream 5xx becoming 502 and tripping the failure threshold; a half-open probe after cooldown; a pin holding across ten sequential turns; a pin re-selecting after its endpoint is failed and the run continuing; two models under one run token pinning independently.
 - **Load, proving refusal rather than latency.** 64 concurrent requests against a fake backend holding each for 5 s, with `inflight` 8 and `queue_depth` 16. Asserts at most 8 in flight at any instant, at most 16 waiting, every remaining request refused with 503 and a `Retry-After`, and admitted-request latency bounded by queue depth times slot-hold rather than growing with the offered load. This is the test that distinguishes this design from delegating admission to vLLM's unbounded deque, and it fails loudly if a permit is ever leaked.
 - **Hot reload and drain.** A long request in flight against endpoint A; the file rewritten to point the model at B; asserts the in-flight request completes against A, a new request lands on B, A's `Arc` drops when the last request finishes and the drain is removed, and the model becoming absent makes new requests 404 while the admitted one finishes. Separately: a reload that changes nothing about an endpoint preserves its semaphore and its in-flight count, which is the specific bug this test exists to catch; a reload with a parse error keeps serving the old configuration and increments the failure counter; a drain that outlives the deadline is cancelled with 504.
+- **Model packs, unit.** The golden prefix: a fixed request renders to a recorded byte string, and two requests differing only in the last user message render to a byte-identical prefix through the end of the tool schemas, which is the test that protects the pin and the only mechanical guard the byte-stability rule has. Tool schemas render in canonical key order across repeated runs of the same process and across two processes. A recorded raw completion round-trips through `parse` into the expected text and tool calls. A malformed tool call raises `PackParse` rather than returning an empty `tool_calls` list, which is the regression test for the silent-no-tool-calls failure the mechanism exists to remove. A `PackParse` does not increment the endpoint's failure count.
+- **Model packs, integration.** The same logical request against a packed and an unpacked model produces the same `ChatResponse` shape, so a caller cannot tell which served it. `stream: true` against a packed model yields a well-formed SSE stream with a terminal `[DONE]`, and its concatenated content equals the whole-response content for the same input. Config validation rejects an unknown pack name and a pack on a model reaching an `anthropic` endpoint.
 - **Redaction, suite-wide.** A fixture captures every log line and every response body produced by the whole test run and fails if a configured key string appears in any of them.
 - **End to end with the real client.** `promptforge`'s `GatewayClient` drives this service against the fake backend, which is what keeps the two independent definitions of the wire shape honest.
 
@@ -989,6 +1104,11 @@ Queued requests hold a connection while they wait, which is the operational cons
 - Whether `Retry-After` should become an estimate from observed slot-hold history rather than the fixed admission wait.
 - The reported 2.5x P99 TTFT degradation on an endpoint after roughly 60 minutes of uptime, mechanism unattributed. If it reproduces, the gateway is where a periodic endpoint recycle would have to be expressed, and it currently has no such concept.
 - What an upstream 4xx body actually is on the wire. The errors section requires both that a 4xx passes through "with its own status and truncated body" and that every error body is the OpenAI envelope, and those cannot both hold for an `anthropic` endpoint, whose error body is Anthropic-shaped. Three readings: relay the backend's body verbatim, which preserves its detail and hands an OpenAI SDK an envelope it cannot parse on the Anthropic path; lift the upstream message into the gateway's envelope under `upstream_client_error`, which keeps one shape everywhere and discards the backend's own `type` and `code`; or lift only on the `anthropic` protocol, which keeps both at the cost of a per-protocol branch in the error path. The table above assumes the second.
+- Whether any pack earns itself. The prefix-cache argument is derived from a reported 480 ms to 110 ms at a 94 percent hit rate and from the 0.3-versus-87 percent block-invalidation figure, neither measured on this deployment. The cheap way to settle it is to read vLLM's own prefix-cache hit-rate metric on a pinned production run before writing any pack, because a hit rate already near the ceiling means the chat template is stable in practice and the whole mechanism can wait.
+- An incremental parser, which is the only thing that lets a packed model stream text as it arrives and therefore the only thing that puts the voice path and the agent path back on one model. It needs a pack to expose where a tool-call span opens so text before it can be released and everything after buffered, and that is a second parser per pack rather than a shared one.
+- Whether a pack owns sampling defaults. A model family has a recommended temperature and `top_p`, that recommendation belongs with the format knowledge, and the gateway currently forwards whatever the caller sent. Moving it into the pack would silently change results for an existing caller, which argues for leaving it out and recording it here instead.
+- How a stale pack is detected rather than reasoned about. Nothing in the test suite or the metrics distinguishes a pack that has drifted from its model's trained format from a model that has simply got worse, and a held-out quality check per packed model is the only candidate. Until one exists the drift risk is carried on argument alone.
+- Whether canonical tool-schema key ordering belongs in the pack or in `ChatRequest` deserialization. Putting it in the pack repeats it per pack; putting it in the wire struct makes every path deterministic including the unpacked one, which is arguably where it should have been all along.
 - Whether `log.level` is a single level name or a full `tracing` filter directive. Both profiles only ever set `info`, so nothing here distinguishes them. A bare level is one word to validate and cannot express per-target filtering; an `EnvFilter` directive such as `info,promptforge_gateway::upstream=debug` can isolate the Anthropic shim under real load without raising the volume of everything else, at the cost of a typo becoming a filter that silently matches nothing. The field is typed `String`, so both readings parse and only the validation differs.
 
-*2026-07-25 - design-gateway*
+*2026-07-26 - design-gateway*
