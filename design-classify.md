@@ -28,13 +28,13 @@ The test of the boundary: removing this crate from the workspace leaves every ot
 - `ort` at exactly `=2.0.0-rc.12`, with the `cuda` feature, binding ONNX Runtime for the NLI cross-encoder path.
 - `fastembed` at exactly `=5.17.2`, for text embedding and cross-encoder rerank. It re-exports `ort`, which is why the `ort` pin is not independently chosen.
 - `tokenizers` at exactly `=0.23.1`, HuggingFace's own Rust implementation, for preprocessing. No Python enters the runtime.
-- `promptforge`, `mlua`, `serde`, `serde_json`, `schemars`, `thiserror`, and `tokio` from the workspace, at whatever the workspace pins.
+- `promptforge`, `serde`, `serde_json`, `schemars`, `thiserror`, and `tokio` from the workspace, at whatever the workspace pins. Notably not `mlua`: the core owns every Lua binding.
 
 Every version is an exact `=` pin rather than a caret range. The reason is in `## Carrying the ort release-candidate risk` below and it is not a general workspace habit.
 
 ## The `Extension` impl
 
-The trait is `promptforge::Extension`, reproduced from the core doc without modification. `ClassifyExt` implements all seven methods, including both of the two the trait defaults, because a reader of this file should see every decision made rather than inherited.
+The trait is `promptforge::Extension`, reproduced from the core doc without modification. `ClassifyExt` implements all eight methods, including all four the trait defaults, because a reader of this file should see every decision made rather than inherited. Two of those defaults are restated here rather than inherited and both are the empty answer: `holds_section_state` returns false, because a classification is a call and a result with nothing held past it, so this extension has no savepoint a nested section could interleave with and never costs a deployment its fan-out concurrency; `row_count` returns zero, because this crate writes no rows to any table, so no prompt declaring a `rows` output can resolve to it and there is nothing to count.
 
 ```rust
 pub struct ClassifyExt {
@@ -80,16 +80,11 @@ impl Extension for ClassifyExt {
         ]
     }
 
-    fn bind_lua(&self, lua: &Lua) -> Result<Vec<(String, Value)>, ExtError> {
-        let t = lua.create_table()?;
-        t.set("label", lua.create_async_function(bind(self.inner.clone(), Op::Label))?)?;
-        t.set("entail", lua.create_async_function(bind(self.inner.clone(), Op::Entail))?)?;
-        t.set("embed", lua.create_async_function(bind(self.inner.clone(), Op::Embed))?)?;
-        t.set("rank", lua.create_async_function(bind(self.inner.clone(), Op::Rank))?)?;
-        Ok(vec![("classify".to_string(), Value::Table(t))])
-    }
+    // No bind_lua. The core builds the `classify` table with its four fields
+    // from the four canonical names, all declaring Surfaces::LuaOnly. This
+    // crate does not depend on mlua and constructs no Lua value.
 
-    fn validate(&self) -> Result<(), ExtError> {
+    async fn validate(&self) -> Result<(), ExtError> {
         for (name, s) in &self.inner.scorers {
             self.check_discriminates(name, s.as_ref())?;
             self.check_on_device(name, s.as_ref())?;
@@ -105,11 +100,11 @@ impl Extension for ClassifyExt {
     }
 
     /// Stateless. Nothing to begin, commit, or roll back.
-    fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError> {
+    async fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError> {
         Ok(())
     }
 
-    fn shutdown(&self) -> Result<(), ExtError> {
+    async fn shutdown(&self) -> Result<(), ExtError> {
         for s in self.inner.scorers.values() {
             s.shutdown();
         }
@@ -121,13 +116,15 @@ impl Extension for ClassifyExt {
 }
 ```
 
+`validate`, `on_section`, and `shutdown` are all `async` on the landed trait, and this extension awaits nothing inside any of the three. That is worth stating rather than leaving to the reader, because the `std::sync::Mutex` guarding each session is a blocking lock. It is sound here exactly because no guard ever crosses an await point, and an extension that did await while holding one would park a runtime worker rather than the caller. The rule an extension author should take: a blocking lock inside an async hook is fine while the hook is straight-line code, and stops being fine the moment an await appears between the lock and its release.
+
 `name` returns `"onnx"` rather than `"classify"`. The extension name is the backing implementation, because that is what a configuration line binds a canonical word to, and a second classifier extension over a different runtime would be a different name backing the same words. It appears in `ResolvedTool::extension` for diagnostics and dispatch never branches on it.
 
-`provides` returns the four canonical names in the `classify` family: `classify_label`, `classify_entail`, `classify_embed`, `classify_rank`. Four rather than one, because `ToolDef` carries exactly one `ToolName` and there are four functions. `ToolName` parses only from the core's canonical set, so landing this extension adds four words to that set. Tension: the canonical vocabulary gains four words instead of one, and that edit to a list in the core is the only core change this extension requires.
+`provides` returns the four canonical names in the `classify` family: `classify_label`, `classify_entail`, `classify_embed`, `classify_rank`. Four rather than one `classify` word carrying an operation field, and the deciding reason is the Lua surface rather than the typing. `design-core.md` derives Lua tables from a `family_operation` split on the first underscore, which is how `web_search` becomes `web.search`. A bare `classify` has no underscore, therefore no family, therefore no Lua table, and Lua is the only surface this extension has, because all four operations declare `Surfaces::LuaOnly`. One word would break the surface the extension exists for. The typing follows for free: `ToolDef` carries exactly one `ToolName`, so four functions keep four schemas and per-operation validation instead of one union type dispatched on a string. `ToolName` parses only from the core's canonical set, so landing this extension adds four words to that set. Tension: a central vocabulary gains four words instead of one, against `design.md`'s concern about the size of that list, and that edit to a list in the core is the only core change this extension requires.
 
-`tools` builds four `ToolDef` values, each cloning `Arc<Inner>` into its `ToolFn`. This is the pattern every extension needs and it is why the state sits in a separate `Inner` behind an `Arc`: `tools` receives `&self`, not `Arc<Self>`, so it cannot hand itself to a closure. Each def sets `surfaces: Surfaces::LuaOnly` and `rate_limit: None`. `description` is still written and still accurate even though no model ever reads it, because it is what an author sees in generated documentation. `schema` is derived from the argument struct by the macro and is not wasted on a `LuaOnly` tool: it is what validates the Lua argument table, so a misspelled field name fails with a message naming the field instead of being silently ignored.
+`tools` builds four `ToolDef` values, each cloning `Arc<Inner>` into its `ToolFn`. This is the pattern every extension needs and it is why the state sits in a separate `Inner` behind an `Arc`: `tools` receives `&self`, not `Arc<Self>`, so it cannot hand itself to a closure. Each def sets `surfaces: Surfaces::LuaOnly` and `rate_limit: None`. `description` is still written and still accurate even though no model ever reads it, because it is what an author sees in generated documentation. `schema` is derived from the argument struct by `register_capability` and is not wasted on a `LuaOnly` tool: it is what validates the Lua argument table, so a misspelled field name fails with a message naming the field instead of being silently ignored.
 
-`bind_lua` returns exactly one name, `classify`, bound to a table of four functions. It is called once per run because Lua state is per-run, and it holds no per-run data of its own, so the four closures capture the same `Arc<Inner>` every run and construction is four table sets. The functions are created with `create_async_function` because `ToolFn::call` is async; this requires the core's Lua driver to execute a section block with `call_async`, which is a property of the core rather than of this crate and the same requirement `promptforge-ext-paperstore` places on it.
+Lua reaches these as one table, `classify`, with four fields, and this crate writes none of that. The core groups the four canonical names by their shared `classify_` prefix and installs the table once per run, naming each field from the suffix. The functions are created with `create_async_function` because `ToolFn::call` is async; this requires the core's Lua driver to execute a section block with `call_async`, which is a property of the core rather than of this crate and the same requirement every other extension places on it.
 
 `validate` runs three checks per configured model and is the most important method in the crate. It is specified in `## The two silent-failure invariants` below.
 
@@ -195,6 +192,8 @@ local vecs = classify.embed{ texts = state.get("paragraphs") }
 
 Exactly one of `text` or `texts` is set; setting both or neither is `InvalidArgs`. The return shape follows the argument: a flat array of numbers for `text`, an array of arrays for `texts`. `normalize` overrides the classifier's configured normalization. `selector` defaults to the `embedder` slot. The batch form is one call rather than a Lua loop, which matters twice: it costs one unit of the per-section cap regardless of length, and its batch composition is exactly the array the caller passed, which is what determinism requires.
 
+A vector crosses into Lua as a table of numbers, which is what the examples above return, and not as an opaque handle. The recorded cost is 384 conversions plus a Lua table allocation per call, which is free next to a 1 ms forward pass and is not free inside a loop over 200 paragraphs. A userdata handle carrying a cosine method is the named upgrade if a ranking loop is ever measured as the bottleneck rather than assumed to be one; it would also have prevented a prompt from doing arithmetic on a vector, which may be a feature and is not enough of one to pay for the opacity now.
+
 Normalization is configuration rather than a default, because `all-MiniLM-L6-v2` uses MEAN pooling plus L2 normalization per its `1_Pooling/config.json` while a raw graph gives whatever the export baked in. A pooling or normalization mismatch produces valid-looking vectors that do not match the ones an existing index was built with, which is a silent failure of the same family as the two named below and is caught by the same golden fixture.
 
 ### `classify.rank`
@@ -223,7 +222,7 @@ One call scores every candidate as one batch, for the same two reasons as `embed
 
 ### Argument structs
 
-The macro derives the schema and the registry entry from these. `deny_unknown_fields` is what converts a Lua typo into a diagnostic.
+`register_capability` derives the schema and the registry entry from these. `deny_unknown_fields` is what converts a Lua typo into a diagnostic.
 
 ```rust
 #[derive(Deserialize, JsonSchema)]
@@ -315,14 +314,14 @@ Layer three sits in `prompts.toml` rather than `gateway.toml` because the gatewa
 ```toml
 [tools]
 web_search = "brave"
-web_fetch = "reqwest"
+web_fetch = "brave"
 paper_upsert = "paperstore"
 classify_label = "onnx"
 classify_entail = "onnx"
 classify_embed = "onnx"
 classify_rank = "onnx"
 
-[classify]
+[extensions.onnx]
 model_root = "/srv/promptforge/models"
 verify = "hash"
 self_check_max_ms = 20
@@ -362,6 +361,10 @@ ranker = "minilm-rerank"
 [prompts.staker.classifiers]
 selector = "zeroshot-base"
 ```
+
+The block key is `extensions.onnx` and not `extensions.classify`, because an extension table is keyed by whatever `Extension::name` returns, which is the backing implementation rather than the Cargo feature. The feature is `classify`, the name is `"onnx"`, and that same string is what each `[tools]` line above binds the four canonical words to. `design-mcp.md` owns `prompts.toml` and states the rule generally; this fragment is written to drop into it.
+
+Three keys sit in the block and this document is where each is decided. `model_root` is the root the per-classifier `model` paths resolve against, so moving the artifact tree is one line. `verify` selects how an artifact is checked before a session is built, and `hash` is the sha256 comparison `## Invariant three` runs ahead of the golden fixture. `self_check_max_ms` is the off-device ceiling of `## The two silent-failure invariants`. There is no block-level `device`: a device is a property of one classifier, it is already set in each `[classifiers.NAME]` table, and the off-device check reads it there to decide whether to skip, so a second device key one level up would only be a way for the two to disagree. There is no block-level call cap either, because the cap is the core's `Limits::max_lua_calls_per_section` and this crate keeps no counter of its own, which is what `## The per-section call cap` settles. Tension: `design-mcp.md`'s illustrative block writes `device`, `weights`, and `max_calls_per_section`, so reconciling the two files means renaming `weights` to `model_root`, dropping the other two keys, and adding `verify` and `self_check_max_ms` there.
 
 Three slot names rather than one, because the three roles are three different models and one name cannot resolve to all of them. Slots are typed: `selector` and `ranker` must resolve to a `PairScorer`, `embedder` to an `Embedder`, and `entail` additionally requires `Head::Nli`. A selector pointing at an embedder is a boot failure with both names in the message.
 
@@ -649,7 +652,6 @@ promptforge = { path = "../promptforge" }
 ort = { version = "=2.0.0-rc.12", default-features = false, features = ["cuda", "load-dynamic"] }
 fastembed = { version = "=5.17.2", default-features = false }
 tokenizers = { version = "=0.23.1", default-features = false, features = ["onig"] }
-mlua = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 schemars = { workspace = true }
@@ -741,7 +743,7 @@ Nothing in this list needs a GPU except the parity gate and the two device check
 - Off-device self-check, no GPU: a stub scorer that sleeps 44 ms per call, which is the measured CPU-fallback figure. `check_on_device` must reject it with `OffDevice`. A second stub sleeping 8 ms must pass. A third asserts the check is skipped when the configured device is `cpu`.
 - Lua level, no GPU: a Luau script exercising all four operations against stubs, asserting the primary-then-detail return shape of each, 1-based and descending order from `rank`, `top_k` truncation, `return_text` on and off, the flat versus nested return from `embed` under `text` versus `texts`, and that setting both or neither is `InvalidArgs`. A typo'd argument key must fail with a message naming the key, which is what `deny_unknown_fields` buys.
 - Surface separation, no GPU: build a `ToolMap` with `ClassifyExt` registered, assert that the schema list sent to the model contains none of `classify_label`, `classify_entail`, `classify_embed`, `classify_rank`, and that the list is exactly what it was without the extension registered. Then assert the converse: the Lua environment has a `classify` table with four callable fields. This is the test that encodes the `LuaOnly` decision, and it is the test that fails if someone later changes a `Surfaces` value.
-- Section scoping, no GPU: a section that calls no `tools.add` at all can still call `classify`, because `bind_lua` is run-scoped and `ToolMap::scoped` filters only what the model sees. This is surprising enough to be worth a test that documents it.
+- Section scoping, no GPU: a section that calls no `tools.add` at all can still call `classify`, because the core installs capability families once per run and `ToolMap::scoped` filters only what the model sees. This is surprising enough to be worth a test that documents it.
 - Cap, no GPU: a section looping past `max_lua_calls_per_section` fails, and a single `rank` over 200 candidates costs one call against it.
 - Lifecycle, no GPU: a recording harness asserting that `on_section` is called for every event and does nothing observable, that `validate` runs every check on every configured model, and that `shutdown` releases each session and a subsequent call returns `ShutDown`.
 - Slot resolution, no GPU: default resolution, per-prompt override, an unknown selector failing at boot with `UnknownSlot`, a `selector` slot pointing at an embedder failing with `SlotKind`, and `entail` against a `Relevance` head failing with `HeadKind`.
@@ -752,8 +754,6 @@ Nothing in this list needs a GPU except the parity gate and the two device check
 
 - Whether `ort` 2.0.0-rc.12 exposes `Session::run` as `&self` or `&mut self`. It decides only whether the per-session mutex is also a borrow requirement, since the mutex is there for determinism either way, but it decides that in the type system rather than in prose.
 - The self-check latency ceiling on the production card under MPS with a generative model resident. Twenty milliseconds is derived from an idle RTX 4070 Laptop, and memory bandwidth is partitioned by neither MPS control, so a loaded card may push a genuinely on-device median past the ceiling and turn the check into a boot failure. The likely answer is a higher ceiling in production configuration; the honest answer is that it has not been measured.
-- Whether embedding vectors cross into Lua as a table of numbers or as an opaque handle. A table of 384 numbers per call is 384 conversions and a Lua table allocation, which is free next to a 1 ms forward pass and not free inside a loop over 200 paragraphs. A userdata handle with a cosine method would avoid it and would also stop a prompt from doing arithmetic on a vector, which may be a feature.
-- Whether four canonical words is right, against one `classify` word carrying an operation field. Four keeps the schemas typed and the validation per-operation; one keeps the canonical vocabulary at the size `design.md` describes.
 - Whether `classify.rank` should cap its candidate count in the extension. The per-section cap bounds the number of calls but not the size of one, so a single call can rank ten thousand candidates and hold the session mutex for a minute.
 - Whether the export corpus should be shared across checkpoints or per checkpoint. Shared makes two exports comparable; per checkpoint lets an NLI corpus carry hypothesis templates an embedder has no use for.
 

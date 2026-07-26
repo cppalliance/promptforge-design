@@ -9,7 +9,7 @@ This crate is the process a client talks to. It loads configuration, resolves lo
 What it does not do, and cannot be made to do without a change to this document:
 
 - Talk to an LLM backend. Every model turn goes through `promptforge-gateway`, which holds the endpoint credentials and the concurrency budget.
-- Publish a tool from the canonical vocabulary. `web_search`, `web_fetch`, the `store_` family, and the `classify_` family are compiled-in Rust functions inside extensions, called directly by the executor. They never appear on the MCP surface, so Cursor is never offered a second web search.
+- Publish a tool from the canonical vocabulary. `web_search`, `web_fetch`, the `paper_` family, and the `classify_` family are compiled-in Rust functions inside extensions, called directly by the executor. They never appear on the MCP surface, so Cursor is never offered a second web search.
 - Parse a prompt, walk a section, run Lua, or resolve an output name to a path. That is `promptforge`, and this crate hands it the resolved maps.
 - Own a domain. No schema, no table, no paper, no search provider. Every domain-shaped thing arrives as an `Extension` this binary chose to link.
 - Hand execution to `promptforge-cli`. Every run executes here. The CLI is purely a client of this server and has no in-process path.
@@ -46,7 +46,7 @@ The bind address is a network interface. Loopback is not a supported configurati
 Versions confirmed against crates.io on 2026-07-25.
 
 - `rmcp` at exactly `=2.2.0`, with features `server`, `schemars`, and `transport-streamable-http-server`. Exact rather than caret: the `ServerHandler` signatures, the `Tool` field set, and the capability builder have each changed across minor releases, so an upgrade is a diff to read rather than a number to bump. `2.2.0` was published 2026-07-08 and is the current stable line.
-- `axum` at `0.9`, already a dependency through the streamable HTTP service.
+- `axum` at `0.8.9`, already a dependency through the streamable HTTP service. There is no 0.9 line; 0.8.9 is current.
 - `tokio` at `1`, with `rt-multi-thread`, `macros`, `signal`, and `fs`.
 - `serde` and `serde_json` at `1`, with the wire types themselves deriving in `promptforge` rather than here.
 - `toml` at `0.9` for configuration, `notify` at `8` for the hot-reload watcher.
@@ -338,7 +338,7 @@ pub struct RunResult {
     pub run_id: String,
     pub prompt: String,
     pub version: String,
-    pub status: RunStatus,          // Completed | Failed
+    pub status: RunStatus,          // completed | failed, a terminal status only
     pub outputs: Vec<OutputRef>,
     /// `Outcome::summary` verbatim, truncated at 600 characters so a summary bug
     /// cannot become a body dump.
@@ -351,14 +351,26 @@ pub struct RunResult {
 #[derive(Serialize, JsonSchema)]
 pub struct OutputRef {
     pub name: String,
-    pub kind: OutputRefKind,        // File | Rows
-    pub path: Option<String>,       // absolute, for File
-    pub table: Option<String>,      // for Rows
-    pub rows: Option<u64>,          // for Rows
+    pub kind: OutputRefKind,        // file | rows
+    pub path: Option<String>,       // absolute, for file
+    pub table: Option<String>,      // for rows
+    pub rows: Option<u64>,          // for rows
 }
+
+/// Four states. `RunResult` carries only a terminal one; the status endpoint
+/// serves all four from this same type, so there is one spelling of each.
+#[derive(Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub enum RunStatus { Queued, Running, Completed, Failed }
+
+#[derive(Serialize, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub enum OutputRefKind { File, Rows }
 ```
 
 `OutputRef` is built from `Outcome::outputs`, mapping `Destination::Path` to `path` and `Destination::Rows { table, count }` to `table` and `rows`. Nothing else in the outcome reaches the client.
+
+Every enum on both surfaces is lowercase on the wire, enforced by `#[serde(rename_all = "snake_case")]` on the type rather than by a hand-written `Serialize`. The wire value is `completed` and never `Completed`, because a status is a JSON token read by `queued` and `running` at the status endpoint and one casing rule across both surfaces is one fewer string comparison to get wrong. Every variant is a single word today, so `snake_case` and `lowercase` emit the same strings; `snake_case` is the one that stays readable if a later state needs two words.
 
 ```json
 {
@@ -440,6 +452,25 @@ An unknown id returns `404` with `{ "status": "unknown" }`. Celery treats that a
 
 `GET /v1/prompts` returns the enabled catalog as name, description, keywords, params schema, and declared outputs, so the site can populate a form without reading `prompts.toml` or duplicating the frontmatter. That full frontmatter is what `promptforge-cli`'s `list` renders, so the field set here is the one the CLI depends on rather than a superset chosen for the site.
 
+```json
+{
+  "prompts": [
+    {
+      "name": "staker",
+      "description": "Build a stakeholder position report for one entity",
+      "keywords": ["governance", "stakeholder"],
+      "params": { "type": "object", "properties": { "entity": { "type": "string" } }, "required": ["entity"] },
+      "outputs": [
+        { "name": "report", "kind": "file", "format": "markdown", "required": true },
+        { "name": "positions", "kind": "rows", "table": "stakeholder_position", "required": false }
+      ]
+    }
+  ]
+}
+```
+
+The body is an object holding one `prompts` array rather than a bare array, because every other body on this surface is an object and a caller's JSON handling stays uniform. `description` is the author's text alone, without the generated `Produces:` and `Keywords:` tails the MCP tool definition appends: those tails exist to steer a model's tool selection, and a form-building client reads the structured `outputs` and `keywords` fields instead. `params` is the schema verbatim and is the same value the tool definition carries in `inputSchema`, so a generated form and a calling model validate against one schema rather than two renderings of one. `outputs` is one entry per `OutputDecl` with `OutputKind` flattened, `kind` reading `file` or `rows` and the kind's own field beside it, `format` for a file and `table` for rows, which is the same flattening `OutputRef` uses in the tool result. Entries are in `Catalog` order, which is a `BTreeMap`, so the array is sorted by name and identical across restarts. Output entries are in declaration order, because that is the order the prompt author wrote and the order a form should present.
+
 ### Validation
 
 `GET /v1/validate` re-runs the boot validation pass against the configuration and prompt files currently on disk, and returns what it found without changing what the service is serving.
@@ -454,6 +485,35 @@ An unknown id returns `404` with `{ "status": "unknown" }`. Celery treats that a
   ]
 }
 ```
+
+The status is `200` whether `ok` is `true` or `false`. A configuration full of problems is the answer to the question that was asked, not a failed request: this endpoint reports a verdict about files on disk, and delivering an accurate verdict of `false` is the endpoint working. A `4xx` would tell the caller its own call was malformed and a `5xx` would tell it to retry later, and neither is true of a prompt with an unbound tool. So the status code says only that the pass ran, `ok` carries the verdict, and `problems` carries the evidence. `promptforge-cli validate` reads `ok` rather than the status, which is what makes its nonzero exit mean the service rejected these prompts rather than that the service could not be asked. The only non-200 responses are the ones genuinely about the request: `401` for a missing or wrong token, and `500` if the pass itself cannot run. Tension: a monitoring probe pointed here reads a healthy `200` for a broken deployment and has to parse the body to learn otherwise, which is part of why `/healthz` is a separate route.
+
+`kind` is a closed set, and the rule that closes it is that every `kind` is the snake_case name of the `StartupError` variant that produced it. A boot rejection with no `kind` would be a fault the service refuses to start on that this endpoint cannot name, which is the one thing `validate` exists to prevent.
+
+| `kind` | `StartupError` variant | Raised when |
+|---|---|---|
+| `config` | `Config` | `prompts.toml` does not parse, or carries a key the schema does not know. |
+| `token_missing` | `TokenMissing` | No `[server].token`. |
+| `prompt_unreadable` | `PromptUnreadable` | A `[prompts.NAME].file` is absent from `[paths].prompts` or cannot be read. |
+| `prompt_parse` | `PromptParse` | The markdown fails `Prompt::parse`, carrying the core's `ParseError` text. |
+| `prompt_name_mismatch` | `PromptNameMismatch` | The frontmatter `name` disagrees with the `[prompts.NAME]` table key. |
+| `tool_name_illegal` | `ToolNameIllegal` | The derived MCP tool name fails `^[a-z][a-z0-9_]{0,47}$`. |
+| `tool_name_duplicated` | `ToolNameDuplicated` | Two enabled prompts derive one tool name. Reported once, naming both. |
+| `params_not_object_schema` | `ParamsNotObjectSchema` | `params` is a schema that is not an object schema. |
+| `extension_not_linked` | `ExtensionNotLinked` | A `[tools]` binding names an extension this binary was not built with. The detail names the Cargo feature that would add it. |
+| `extension_does_not_provide` | `ExtensionDoesNotProvide` | The bound extension is linked but does not provide that canonical name. |
+| `extension_invalid` | `ExtensionInvalid` | An extension's own `validate` hook failed: unreachable database, unreadable weights, missing credential. |
+| `remote_unreachable` | `RemoteUnreachable` | An `[[mcp_clients]]` entry cannot be reached or does not answer `tools/list`. |
+| `remote_missing_tool` | `RemoteMissingTool` | A name in an `[[mcp_clients]]` entry's `provides` is not advertised by the remote. |
+| `output_root_unwritable` | `OutputRootUnwritable` | A configured `[outputs]` directory cannot be created or fails its write test. |
+| `unresolved_slot` | `PromptNotValid`, `ValidateError::UnresolvedSlot` | A section names a slot that neither the per-prompt nor the global `[slots]` table resolves. |
+| `unbound_tool` | `PromptNotValid`, `ValidateError::UnboundTool` | A name in `Frontmatter::tools` has no binding in the merged `[tools]` table. |
+| `missing_output_root` | `PromptNotValid`, `ValidateError::MissingOutputRoot` | A declared output name has no root in the merged `[outputs]` table. |
+| `unknown_target_table` | `PromptNotValid`, `ValidateError::UnknownTargetTable` | A rows output names a table the extension holding that root refuses. |
+
+`PromptNotValid` is the one variant that is not itself a `kind`. It wraps `promptforge::ValidateError`, and a caller handed `prompt_not_valid` would have to parse `detail` to learn which of the core's four checks failed, so the four appear directly and the wrapper does not. `Multiple` is absent for the same reason inverted: it is the accumulator, and the `problems` array is what it serializes to. `BindFailed` is the only boot rejection with no `kind` at all, because the pass called here runs steps 1 through 8 and never reaches the listener, which the live service is already holding.
+
+`prompt` is present on every kind attributable to one catalog entry and absent on the two that are not: `config` and `token_missing` describe the file itself. Those two also stop the pass where boot stops it, so a response carrying either holds exactly one problem and reports `checked` as zeros, which is honest about the fact that nothing else was examined. `detail` is the variant's `Display` text, so the message a caller reads over HTTP is the message boot would have printed for the same fault, from the same `thiserror` attribute.
 
 This exists because `promptforge-cli validate` has no other honest implementation. The question the command answers is whether this service would accept these prompts, and the service is the only thing that knows: which extensions were linked, what `[tools]` binds each canonical name to, whether a declared output root exists, and whether each extension's own `validate` hook passes against a reachable database and readable weights. A local implementation would have to reimplement the whole resolution path, and a second implementation of resolution is exactly what the CLI being a client exists to avoid.
 
@@ -532,9 +592,14 @@ fast = "qwen3-8b"
 thinking = "claude-opus-5"
 cheap = "qwen3-1.7b"
 
-[classifiers]                    # classifier selectors resolve in the same three layers as model slots
-entail = "nli-small"
-embed = "minilm-l6"
+# Classifier slots resolve in the same three layers as model slots, and these
+# are the three slot names design-classify.md defines. The [classifiers.NAME]
+# tables mapping each classifier to its weights, device, and preprocessing are
+# specified there and are not restated here.
+[classifier_defaults]
+selector = "nli-small"
+embedder = "minilm-embed"
+ranker = "minilm-rerank"
 
 [tools]                          # every canonical name bound once, globally, to the extension that backs it
 web_search      = "brave"        # one name is one function, so a family is a prefix and not a single word
@@ -544,6 +609,7 @@ paper_latest    = "paperstore"
 paper_md        = "paperstore"
 paper_cites     = "paperstore"
 paper_upsert    = "paperstore"
+paper_rows      = "paperstore"
 classify_label  = "onnx"         # likewise the classify_ family
 classify_entail = "onnx"
 classify_embed  = "onnx"
@@ -569,9 +635,11 @@ run_deadline = "20m"
 # ---------------------------------------------------------------------------
 # Extension configuration. One table per linked extension, keyed by the name
 # the extension reports from `Extension::name`, which is the same name a tool
-# binding above refers to. An extension whose Cargo feature is off must not
-# appear here; an extension that is linked and configured but bound by nothing
-# is registered, validated, and simply unused.
+# binding above refers to. That name is the backing implementation and not the
+# Cargo feature, so the `search` feature configures under [extensions.brave]
+# and the `classify` feature under [extensions.onnx]. An extension whose Cargo
+# feature is off must not appear here; an extension that is linked and
+# configured but bound by nothing is registered, validated, and simply unused.
 # ---------------------------------------------------------------------------
 
 [extensions.brave]
@@ -582,10 +650,15 @@ endpoint = "https://api.search.brave.com/res/v1"
 backend = "postgres"             # "sqlite" on a developer machine, which then needs WAL mode
 url = "postgres://promptforge@10.0.0.11/paperstore"
 
-[extensions.classify]
-device = "cuda:0"
-weights = 'D:\models\onnx'
-max_calls_per_section = 64       # the per-section classifier cap lives here, since Limits has no classifier field
+[extensions.onnx]                # the name ClassifyExt reports, not its Cargo feature
+model_root = 'D:\models\onnx'    # export directories hang off this; design-classify.md owns the layout
+verify = "hash"                  # manifest sha256 before the golden reload, so a swapped file fails at boot
+self_check_max_ms = 20           # device self-check ceiling; a silent CPU fallback is a boot failure
+# No device key and no classifier call cap here. A device is per classifier, in
+# the [classifiers.NAME] tables design-classify.md owns, because one deployment
+# can run one classifier on the GPU and another on the CPU. The classifier call
+# cap is [limits].max_lua_calls_per_section above, counted by the core at the
+# dispatch boundary, which is what lets the extension stay stateless.
 
 # A remote MCP service the executor connects to, wrapped as an extension so
 # there is one binding rule rather than two. Worth a process boundary only
@@ -671,31 +744,33 @@ impl Linked {
 pub fn register_all(cfg: &Config) -> Result<Linked, StartupError> {
     let mut exts = Linked::default();
 
-    #[cfg(feature = "ext-search")]
+    #[cfg(feature = "search")]
     if let Some(c) = &cfg.extensions.brave {
-        exts.add(Arc::new(promptforge_ext_search::Brave::new(c)?));
+        exts.add(Arc::new(promptforge_ext_search::SearchExt::new(c)?));
     }
 
-    #[cfg(feature = "ext-paperstore")]
+    #[cfg(feature = "paperstore")]
     if let Some(c) = &cfg.extensions.paperstore {
-        exts.add(Arc::new(promptforge_ext_paperstore::Paperstore::new(c)?));
+        exts.add(Arc::new(promptforge_ext_paperstore::PaperstoreExt::new(c)?));
     }
 
-    #[cfg(feature = "ext-classify")]
-    if let Some(c) = &cfg.extensions.classify {
-        exts.add(Arc::new(promptforge_ext_classify::Classify::new(c)?));
+    #[cfg(feature = "classify")]
+    if let Some(c) = &cfg.extensions.onnx {
+        exts.add(Arc::new(promptforge_ext_classify::ClassifyExt::new(c)?));
     }
 
     // A remote MCP service is an extension like any other. Its `name` is the
     // client name, so a tool binding cannot tell a remote backing from a local one.
-    #[cfg(feature = "ext-mcp")]
+    #[cfg(feature = "mcp")]
     for c in &cfg.mcp_clients {
-        exts.add(Arc::new(promptforge_ext_mcp::Remote::connect(c)?));
+        exts.add(Arc::new(promptforge_ext_mcp::RemoteExt::connect(c)?));
     }
 
     Ok(exts)
 }
 ```
+
+A Cargo feature is named for the thing itself and carries no redundant qualifier, so the features are `search`, `paperstore`, `classify`, and `mcp` while the crates behind them keep their `promptforge-ext-` prefix. The types are `SearchExt`, `PaperstoreExt`, `ClassifyExt`, and `RemoteExt`, because the `Ext` suffix is what keeps every extension type uniform and distinguishes the type from the provider name it reports through `Extension::name`.
 
 A configured binding selects among the linked extensions by name:
 
@@ -892,6 +967,7 @@ The core crate's fake gateway and recording extension are the fixtures, so nothi
 - The MCP tasks capability. Adopting it would let a run survive a client disconnect and be collected later, which is close to what the HTTP status endpoint already does for Django. Whether to converge the two or keep them separate is unsettled.
 - The catalog size at which per-prompt tools start degrading client selection, and therefore the threshold for adding a dispatcher for a demoted tail. Unmeasured, and measurable only against a real client with a real catalog.
 - Whether the run registry should persist to a small local database. Purely a function of observed Celery polling behaviour across restarts, and currently unobserved.
+- Whether `GET /v1/prompts` should also carry `version` and the prompt's declared `tools`. The five fields published today are the ones enumerated above, and `design-cli.md` renders a `VERSION` column and a `tools:` line from what it calls the full frontmatter, so one of the two documents is wrong about the field set. Three ways out: publish both, which puts canonical tool names in an HTTP response after this document kept them off the MCP surface on purpose; publish `version` only, which is inert metadata no client can act on and closes the visible half of the gap; or publish neither and let the CLI degrade to fewer columns, which it already specifies as its behaviour for an absent field. Unresolved because the first option reopens a settled boundary for the sake of a display line.
 - Whether Django should be permitted output-root overrides at all. The mechanism is specified and cheap, and the site may turn out to want the configured root every time, in which case the field should go.
 - Whether a Windows service account running under Service Control Manager can reach the GPU that `promptforge-ext-classify` needs. This is a platform question with a plain answer that nobody has looked up yet, and it only bites the classifier build.
 

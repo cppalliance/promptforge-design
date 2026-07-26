@@ -8,6 +8,8 @@ This crate is where WG21 domain knowledge enters the system, and it is the only 
 
 A deployment that does not link this crate is a working deployment. That is the load-bearing test of the domain boundary from [design.md](design.md), and this crate is the thing the test is about: with the `paperstore` feature off there is no schema, no connection, no `sqlx` in the dependency graph, no WG21 vocabulary anywhere in the binary, and every prompt that names no `paper_*` word runs unchanged. A prompt that does name one fails startup validation with an unbound canonical name, which is the correct failure and the only one.
 
+The feature is `paperstore` and the type is `PaperstoreExt`, which is the workspace convention rather than this document's preference: a feature carries no `ext-` prefix and a type carries an `Ext` suffix, matching `design-classify.md`'s `classify` and `ClassifyExt`. `design-mcp.md` has been corrected to match, and its `register_all` now gates on the `paperstore` feature and constructs a `PaperstoreExt`.
+
 This crate is also the second half of the assumption `design.md` recorded as its riskiest: that one `Extension` trait carries both a stateless extension and a transactional database one without acquiring a special case for either. [design-search.md](design-search.md) is the stateless half and the reference case for it, with [design-classify.md](design-classify.md) a second stateless example; in both, `on_section` is a no-op because neither holds anything whose lifetime is a section. This crate is the half that holds a write transaction for exactly the length of a section, so `## The Extension impl` below is the heart of the document and its verdict on the trait is the most valuable thing in it.
 
 The verdict was that the trait was close and not sufficient, and `## Verdict on the trait` names the four changes it needed. All four have since landed in [design-core.md](design-core.md): `on_section`, `validate`, and `shutdown` are async, `SectionEvent` gained `RunEnded` and a `TaskId` on the nested variants plus `NestedFailed`, `RunError` gained an `Extension` variant, and the trait gained `row_count` and `holds_section_state`. The signatures quoted below are the current ones. The assumption is retired as substantially correct: one trait carries both shapes, and no special case for either extension was required.
@@ -207,7 +209,6 @@ sqlx = { version = "=0.9.0", default-features = false, features = [
     "migrate",
 ] }
 async-trait = "0.1"
-mlua = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 schemars = { workspace = true }
@@ -265,7 +266,8 @@ pub trait Store: Send + Sync + 'static {
     /// behaviour legitimately differs. Never branched on inside a statement.
     fn kind(&self) -> Backend;
 
-    /// Reachability plus a schema check. Runs inside `Extension::validate`.
+    /// Reachability plus the per-table column check, over the allowlist the
+    /// backend was constructed with. The whole of `Extension::validate`.
     async fn ping(&self) -> Result<(), StoreError>;
 
     /// Apply embedded migrations. Called only when configuration asks.
@@ -424,7 +426,7 @@ fn pg_pool(cfg: &PgConfig) -> PgPoolOptions {
 Two session settings are set on every connection through `PgConnectOptions::options`, and one of them is a mitigation rather than a tuning knob:
 
 - `application_name = promptforge` so `pg_stat_activity` attributes a long transaction to this service rather than to an anonymous client. Note that 0.9.0 changed `PgConnectOptions::options()` to escape its input automatically, so a value with a space no longer needs hand-quoting.
-- `idle_in_transaction_session_timeout` set above the longest expected section and below the run deadline. **This is what reaps the transaction that a dead run left open**, and it exists because the `Extension` trait has no run-terminal event. It is a server-side backstop for a client-side gap, it is the reason the gap is survivable in production, and SQLite has no equivalent, which is why the same gap is worse on a developer machine. See `## Verdict on the trait`.
+- `idle_in_transaction_session_timeout` set above the longest expected section and below the run deadline. **This is what reaps a transaction that no client will ever close.** The in-process case is already covered: `SectionEvent::RunEnded` fires on every path out of `run`, so a failed run rolls back and returns its connection without help from the server. What no client-side signal covers is the process that dies before its drop guard runs, or a connection whose socket is lost, and this setting is the backstop for those. SQLite has no equivalent, so there the same case is cleared by restarting the process. See `## Verdict on the trait`.
 
 ### Schema ownership and migrations
 
@@ -502,7 +504,7 @@ struct Inner {
     /// Tables this deployment will accept rows for, from configuration,
     /// each with its ordered column specification.
     tables: BTreeMap<String, TableSpec>,
-    /// One open write transaction per run, plus its savepoint stack and the
+    /// One open write transaction per run, plus its live savepoints and the
     /// row counts a declared `Rows` output will report.
     runs: Mutex<BTreeMap<RunId, RunState>>,
     /// Committed row counts, surviving the transaction that produced them.
@@ -511,9 +513,13 @@ struct Inner {
 
 struct RunState {
     tx: Option<Box<dyn Tx>>,
-    /// Savepoint names in acquisition order, so a `NestedComplete` releases
-    /// the one a `NestedEnter` took.
-    savepoints: Vec<String>,
+    /// The savepoint each nested task holds, keyed by the `TaskId` the core
+    /// stamps on every nested event, so a `NestedComplete` releases the one
+    /// that task's `NestedEnter` took and a `NestedFailed` rolls back to it.
+    savepoints: BTreeMap<TaskId, String>,
+    /// Monotonic within the run, so a savepoint's SQL identifier is unique
+    /// inside the transaction without encoding a depth or a stack position.
+    next_savepoint: u64,
     /// Table to the row count of the most recent replace-all write.
     /// Not a running sum, because a second write to one table supersedes
     /// the first rather than adding to it.
@@ -555,21 +561,19 @@ impl Extension for PaperstoreExt {
         ]
     }
 
-    fn bind_lua(&self, lua: &Lua) -> Result<Vec<(String, Value)>, ExtError> {
-        let t = lua.create_table()?;
-        t.set("meta", lua.create_async_function(bind(self.inner.clone(), Op::Meta))?)?;
-        t.set("latest", lua.create_async_function(bind(self.inner.clone(), Op::Latest))?)?;
-        t.set("cites", lua.create_async_function(bind(self.inner.clone(), Op::Cites))?)?;
-        t.set("upsert", lua.create_async_function(bind(self.inner.clone(), Op::Upsert))?)?;
-        t.set("rows", lua.create_async_function(bind(self.inner.clone(), Op::Rows))?)?;
-        Ok(vec![("paper".to_string(), Value::Table(t))])
+    // No bind_lua. The core builds the `paper` table from the canonical names
+    // whose `surfaces` admits Lua, which is every one except `paper_md`. This
+    // crate does not depend on mlua and constructs no Lua value.
+
+    /// True. This crate holds one write transaction for the length of a
+    /// section, which is the definition the core states, so the declaration
+    /// is not optional here.
+    fn holds_section_state(&self) -> bool {
+        true
     }
 
-    fn validate(&self) -> Result<(), ExtError> {
-        block_on(self.inner.store.ping())?;
-        for (name, spec) in &self.inner.tables {
-            block_on(self.inner.store.check_table(name, spec))?;
-        }
+    async fn validate(&self) -> Result<(), ExtError> {
+        self.inner.store.ping().await?;
         Ok(())
     }
 
@@ -603,20 +607,54 @@ impl Extension for PaperstoreExt {
                 runs.insert(run, RunState::new(tx, section));
             }
 
-            SectionEvent::NestedEnter { run, depth, .. } => {
+            SectionEvent::NestedEnter { run, task, .. } => {
                 let Some(st) = runs.get_mut(&run) else { return Ok(()) };
-                let name = format!("sp_{depth}_{}", st.savepoints.len());
+                let name = format!("sp_{}", st.next_savepoint);
+                st.next_savepoint += 1;
                 st.tx.as_mut().ok_or(StoreError::NoTransaction)?.savepoint(&name).await?;
-                st.savepoints.push(name);
+                // One savepoint per task. A second `NestedEnter` for a task
+                // already holding one is a core bug and not a nesting level.
+                let prior = st.savepoints.insert(task, name);
+                debug_assert!(prior.is_none(), "NestedEnter twice for one TaskId");
             }
 
-            SectionEvent::NestedComplete { run, .. } => {
+            SectionEvent::NestedComplete { run, task, .. } => {
                 let Some(st) = runs.get_mut(&run) else { return Ok(()) };
-                let Some(name) = st.savepoints.pop() else { return Ok(()) };
+                let Some(name) = st.savepoints.remove(&task) else { return Ok(()) };
                 st.tx.as_mut().ok_or(StoreError::NoTransaction)?.release(&name).await?;
+            }
+
+            SectionEvent::NestedFailed { run, task, .. } => {
+                let Some(st) = runs.get_mut(&run) else { return Ok(()) };
+                let Some(name) = st.savepoints.remove(&task) else { return Ok(()) };
+                // Roll back to it, then release it. The failed task's writes
+                // are discarded and the section's earlier writes survive,
+                // which is the entire reason the savepoint was taken.
+                let tx = st.tx.as_mut().ok_or(StoreError::NoTransaction)?;
+                tx.rollback_to(&name).await?;
+                tx.release(&name).await?;
+            }
+
+            SectionEvent::RunEnded { run, .. } => {
+                // A run that reached `Complete` already removed itself, so
+                // this is a no-op on the success path and a rollback on every
+                // other one. `ok` is not read: an open transaction at run end
+                // is unreachable when the run succeeded and wrong when it did
+                // not, so both cases want the same statement.
+                let Some(st) = runs.remove(&run) else { return Ok(()) };
+                if let Some(tx) = st.tx {
+                    tx.rollback().await?;
+                }
             }
         }
         Ok(())
+    }
+
+    /// Reads the committed counts, so the number outlives the transaction that
+    /// produced it. Zero for a table this run never wrote.
+    async fn row_count(&self, run: RunId, table: &str) -> Result<u64, ExtError> {
+        let counts = self.inner.counts.lock().await;
+        Ok(counts.get(&run).and_then(|t| t.get(table)).copied().unwrap_or(0))
     }
 
     async fn shutdown(&self) -> Result<(), ExtError> {
@@ -637,37 +675,48 @@ impl Extension for PaperstoreExt {
 
 `provides` returns six canonical names, so landing this crate adds six words to the core's canonical set. That is the one core change this extension requires beyond the trait changes below, and it is an edit to a list.
 
-`validate` is synchronous because the trait says so, and it does async work, so it blocks. That is the smallest of the four problems below and the least defensible code in this file: `block_on` inside a runtime worker panics on a current-thread runtime, and it works here only because boot is single-threaded and nothing else is scheduled. It should be `async fn validate`.
+`validate` is one call. `ping` is the reachability check and the per-table column check together, over the allowlist the backend was constructed with, so `Store` carries no second method for the table half and the two checks have no second place to drift apart. `## The Postgres backend` specifies what it reads on each backend.
 
-`bind_lua` binds five of the six operations under one table named `paper`, matching the canonical prefix. `paper_md` is absent from Lua and the reason is in `## Surfaces`.
+`validate`, `on_section`, and `shutdown` are async, which `design-core.md` now specifies, so the reachability check, the per-table column check, and every transaction boundary are ordinary awaits and `block_on` appears nowhere in this crate. An earlier draft of the trait made all three synchronous, which forced a `block_on` here that panics inside a runtime worker on a current-thread runtime and worked only because boot is single-threaded and nothing else is scheduled. That was the smallest of the four gaps below and the least defensible code in this file, and it is closed.
+
+The match is exhaustive over all seven `SectionEvent` variants, and being exhaustive is the point rather than a style note: the compiler is what will report the eighth variant on the day the core adds one, and this crate is the one where an unhandled lifecycle event is an open transaction rather than a missed notification.
+
+`RunEnded` is the arm this document argued for and the one that keeps a failed run from wedging the database. The core emits it from a drop guard on every path out of `run`, so `Inner::runs` cannot accumulate an entry for a run that failed, timed out, or exhausted a postcondition, and the write connection goes back to the pool on the failure path exactly as it does on the success path. On SQLite that is the difference between recovery being to run it again and recovery being to restart the service, because the write pool holds one connection and the first stranded transaction takes it.
+
+Savepoints are keyed on `TaskId` and never on `depth` or on stack position. A depth number names a nesting level and three fan-out tasks share one, so a release from the task that finished first would release the savepoint the task that started last is holding, silently. The `TaskId` the core stamps on all three nested variants is what makes each release and each rollback name the savepoint its own task took. The identifier written into the SQL is a per-run counter rather than the task id itself, because the map is what needs the identity and the statement only needs a unique word. `TaskId` is a newtype over `u64`, so being a `BTreeMap` key and surviving `match *ev` cost it the ordinary derives and nothing more.
+
+`holds_section_state` returns true, and the cost is the core's to state and this crate's to own: the executor serializes `fanout` for every run in any deployment that links this extension, including runs by prompts that never touch a `paper_*` word, because the declaration is per extension and the serialization is per run. That is a heavy price at a coarse granularity. It is paid because the alternative is savepoint interleaving that produces wrong nesting with no error, and a wrong answer with no error is worse than a slow one. Tension: linking the paper store costs the whole deployment its fan-out concurrency, so a deployment that wants both is a deployment that wants the write-buffering escape hatch in `## Open`.
+
+The core binds five of the six operations under one table named `paper`, matching the canonical prefix, and this crate does nothing to make that happen beyond declaring each function's `surfaces`. `paper_md` is `ToolOnly` and therefore absent from Lua; the reason is in `## Surfaces`.
 
 ## Verdict on the trait
 
-**The `Extension` trait as originally designed was not sufficient for a transactional extension, and all four changes below have since landed in `design-core.md`.** The finding is kept rather than deleted, because the reasoning is what a future extension author needs when they hit a fifth gap. It was close: `&self` with interior mutability is fine, the registration ordering is right, and the five-variant `SectionEvent` mapped onto begin, commit, rollback, and savepoints with no contortion. Four things were missing, two of them blocking. This is the answer to the question `design.md` said was worth a day to find out, and the day was worth it.
+**The `Extension` trait as originally designed was not sufficient for a transactional extension, and all four changes below have since landed in `design-core.md`.** Everything in this section is a record of what the trait experiment found, written against the trait as it stood then. Nothing here is outstanding work: the signatures quoted below are the pre-change ones, kept so the reasoning still reads, and the current shapes are in `design-core.md`. The finding is kept rather than deleted, because the reasoning is what a future extension author needs when they hit a fifth gap. It was close: `&self` with interior mutability is fine, the registration ordering is right, and the five-variant `SectionEvent` of the day mapped onto begin, commit, rollback, and savepoints with no contortion. Four things were missing, two of them blocking. This is the answer to the question `design.md` said was worth a day to find out, and the day was worth it.
 
-### One: `on_section` must be async
+### One: `on_section` had to become async
 
-The trait declares `fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError>`. A transaction boundary is network or disk I/O: `BEGIN IMMEDIATE`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`. A synchronous hook cannot await any of them. The three ways out are all bad. `block_in_place` plus `Handle::block_on` panics on a current-thread runtime and is forbidden inside an existing `block_on`. Spawning the commit and returning `Ok(())` discards the result, so a failed commit becomes a successful run. A dedicated writer task with a channel and a blocking receive on the reply reintroduces the same block on the reply.
+The trait then declared `fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError>`. A transaction boundary is network or disk I/O: `BEGIN IMMEDIATE`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`. A synchronous hook cannot await any of them. The three ways out were all bad. `block_in_place` plus `Handle::block_on` panics on a current-thread runtime and is forbidden inside an existing `block_on`. Spawning the commit and returning `Ok(())` discards the result, so a failed commit becomes a successful run. A dedicated writer task with a channel and a blocking receive on the reply reintroduces the same block on the reply.
 
-Required: `async fn on_section(&self, ev: &SectionEvent) -> Result<(), ExtError>`, with `#[async_trait]` on the trait, which the trait already needs for `ToolFn`. `validate` and `shutdown` need the same for the same reason. This is a small, mechanical change to `design-core.md` and it is not optional.
+What was required, and what landed: `async fn on_section(&self, ev: &SectionEvent) -> Result<(), ExtError>`, with `#[async_trait]` on the trait, which the trait already needed for `ToolFn`. `validate`, `row_count`, and `shutdown` are async for the same reason. It was a small, mechanical change to `design-core.md` and it was not optional.
 
-### Two: there is no run-terminal event, and the leak is a pooled connection
+### Two: there was no run-terminal event, and the leak was a pooled connection
 
-`SectionEvent` has `Enter`, `Complete`, `Retry`, `NestedEnter`, and `NestedComplete`. Nothing fires when a run ends. Every failure path in `RunError` therefore leaves an open transaction: `PostconditionExhausted`, `MissingRequiredOutput`, `Deadline`, `JumpLimit`, `TaskDepth`, `TaskBudget`, `Unimplemented`, a Lua error, a gateway error, a tool error. `shutdown` is process shutdown, not run scope. So `Inner::runs` accumulates one entry per failed run, each holding a connection out of the pool and a write lock on the database.
+`SectionEvent` then had `Enter`, `Complete`, `Retry`, `NestedEnter`, and `NestedComplete`. Nothing fired when a run ended. Every failure path in `RunError` therefore left an open transaction: `PostconditionExhausted`, `MissingRequiredOutput`, `Deadline`, `JumpLimit`, `TaskDepth`, `TaskBudget`, `Unimplemented`, a Lua error, a gateway error, a tool error. `shutdown` is process shutdown, not run scope. So `Inner::runs` accumulated one entry per failed run, each holding a connection out of the pool and a write lock on the database.
 
-On SQLite that is total: the write pool has one connection, so **the first failed run wedges every subsequent write until the process restarts.** On Postgres it is pool exhaustion after sixteen failed runs. `idle_in_transaction_session_timeout` reaps it server-side, which is why production survives, and there is no SQLite equivalent, which is why a developer machine does not.
+On SQLite that was total: the write pool has one connection, so **the first failed run wedged every subsequent write until the process restarted.** On Postgres it was pool exhaustion after sixteen failed runs. `idle_in_transaction_session_timeout` reaped it server-side, which is why production would have survived, and there is no SQLite equivalent, which is why a developer machine would not.
 
-This is the difference between recovery being to run it again, which is the system's stated model, and recovery being to restart the service. It is the trait's real insufficiency.
+That is the difference between recovery being to run it again, which is the system's stated model, and recovery being to restart the service. It was the trait's real insufficiency.
 
-Required: a run-terminal signal. Either a sixth variant, which is the smaller change:
+What was required was a run-terminal signal, and a new variant was the smaller change than a second hook. This is the enum that landed, carrying that variant together with the task identity point Three asked for:
 
 ```rust
 pub enum SectionEvent {
     Enter { run: RunId, section: usize },
     Complete { run: RunId, section: usize },
     Retry { run: RunId, section: usize, attempt: u32 },
-    NestedEnter { run: RunId, section: usize, depth: u32 },
-    NestedComplete { run: RunId, section: usize, depth: u32 },
+    NestedEnter { run: RunId, section: usize, depth: u32, task: TaskId },
+    NestedComplete { run: RunId, section: usize, depth: u32, task: TaskId },
+    NestedFailed { run: RunId, section: usize, depth: u32, task: TaskId },
     /// Emitted exactly once per run, on every path out of `Executor::run`,
     /// including every error path and the deadline. `ok` is false when the
     /// run did not complete.
@@ -675,22 +724,22 @@ pub enum SectionEvent {
 }
 ```
 
-or a separate `async fn on_run_end(&self, run: RunId, ok: bool)`. The variant is preferable because it inherits the existing delivery and ordering guarantees rather than adding a second hook with its own. Either way the contract has to be that it fires on **every** path out of `run`, which means the core emits it from a guard rather than from the happy path, or the guarantee is worthless.
+The alternative considered was a separate `async fn on_run_end(&self, run: RunId, ok: bool)`. The variant was preferable because it inherits the existing delivery and ordering guarantees rather than adding a second hook with its own. Either way the contract had to be that it fires on **every** path out of `run`, which means the core emits it from a drop guard rather than from the happy path, or the guarantee is worthless. That is what the core does.
 
 `Tx::commit` and `Tx::rollback` taking `Box<Self>`, and a sqlx transaction rolling back when dropped, are the partial safety net that makes the gap survivable rather than corrupting: the rows are never wrong, only the connection is stuck. That is why this is a blocker on availability and not on correctness.
 
-### Three: the nested events cannot express concurrent fan-out
+### Three: the nested events could not express concurrent fan-out
 
-`NestedEnter { run, section, depth }` and `NestedComplete { run, section, depth }` identify a nesting level and not a task. `fanout` runs up to `max_fanout_concurrency` subagent tasks at once, all in one run, all at the same depth. Savepoints on one connection are strictly last-in-first-out, so three concurrent tasks at depth two produce three interleaved `SAVEPOINT` and `RELEASE` pairs against one transaction, and a `RELEASE` from the task that finished first releases the savepoint the task that started last is holding. The result is not an error; it is silently released nesting.
+`NestedEnter { run, section, depth }` and `NestedComplete { run, section, depth }` identified a nesting level and not a task. `fanout` runs up to `max_fanout_concurrency` subagent tasks at once, all in one run, all at the same depth. Savepoints on one connection are strictly last-in-first-out, so three concurrent tasks at depth two produce three interleaved `SAVEPOINT` and `RELEASE` pairs against one transaction, and a `RELEASE` from the task that finished first releases the savepoint the task that started last is holding. The result is not an error; it is silently released nesting.
 
-There is also no `NestedRetry` and no nested failure variant, so a subagent task that failed has no way to say `ROLLBACK TO SAVEPOINT`, which is the entire reason a savepoint was taken.
+There was also no `NestedRetry` and no nested failure variant, so a subagent task that failed had no way to say `ROLLBACK TO SAVEPOINT`, which is the entire reason a savepoint is taken.
 
-Required, in preference order: a task identity on both nested variants, `task: TaskId`, plus a `NestedFailed { run, task }`; or, if that is too large a change, an explicit statement in `design-core.md` that fan-out is serialized when any registered extension declares that it holds section-scoped state, which is a capability declaration the trait also does not have. The workaround available today without any core change is for this crate to take a savepoint only at depth transitions it can observe as ordered, which in practice means ignoring `NestedEnter` during a fan-out and accepting that a failed subagent's writes are rolled back with the whole section rather than alone. That is a correctness-preserving degradation and it is what the implementation should do until the trait carries a task identity.
+Required, in preference order: a task identity on both nested variants, `task: TaskId`, plus a `NestedFailed { run, task }`; or, if that were too large a change, an explicit statement in `design-core.md` that fan-out is serialized when any registered extension declares that it holds section-scoped state, which was a capability declaration the trait also did not have. Both landed, so neither the degradation this crate would otherwise have carried, which was to take a savepoint only at depth transitions it could observe as ordered and let a failed subagent's writes roll back with the whole section, nor any other workaround is in the implementation.
 
 ### Four: two smaller gaps in the plumbing
 
-- **`RunError` has no variant for an extension lifecycle failure.** A failed `COMMIT` on `Complete` has to fail the run, and `RunError` offers `Tool(ToolError)`, which is a lie, or nothing. `ValidateError::Extension(ExtError)` exists for boot. Add `RunError::Extension(ExtError)`.
-- **There is no way to report a row count for a declared `Rows` output.** See `## Declared row outputs`. One method with a default satisfies it.
+- **`RunError` had no variant for an extension lifecycle failure.** A failed `COMMIT` on `Complete` has to fail the run, and `RunError` offered `Tool(ToolError)`, which is a lie, or nothing. `ValidateError::Extension(ExtError)` existed for boot. `RunError::Extension(ExtError)` was added.
+- **There was no way to report a row count for a declared `Rows` output.** See `## Declared row outputs`. One method with a default satisfied it, and `row_count` is that method.
 
 ### What is sufficient
 
@@ -738,7 +787,7 @@ Not included, and each for a reason:
 | `paper_upsert` | `LuaOnly` | A write, and a write of metadata: title, authors, year, url, disposition. A model must not invent a paper's authors, and there is no prompt where it should. A prompt author setting up a metadata row before a section is deterministic setup, which is what the Lua layer is for. |
 | `paper_rows` | `LuaOnly` | The care the write case wants, and the more interesting of the two. The model files findings into the core run state store one validated tool call at a time, so every field crossed a boundary and the aggregate is well-formed by construction. A model-callable bulk row writer would undo that: one malformed call could write an arbitrary batch, and the table name would enter the model's vocabulary, where a hallucinated one is a plausible failure. The prompt author calls `paper.rows{ table = "assay_finding", id = pid, rows = store.get("findings") }` at the section boundary over state the model filed. This is the same argument `design-core.md` makes for `Task` returning a serialized store rather than a composed JSON object. |
 
-Two reads are `Both` and one is `ToolOnly`, so the model surface is three names and the Lua surface is five. Tension: a prompt author who wants the model to decide when to write has no way to express it, and that is this crate's declaration rather than something the core enforces on writes generally.
+Three reads are `Both` and one is `ToolOnly`, so the model surface is four names and the Lua surface is five. Tension: a prompt author who wants the model to decide when to write has no way to express it, and that is this crate's declaration rather than something the core enforces on writes generally.
 
 A `Both` read is safe during an open transaction only because it routes through it. `Inner::runs` is consulted on every read, keyed by `CallCtx::run`, so a read inside a section that has written sees its own uncommitted rows. Without that routing the two surfaces would disagree with each other depending on whether a write had happened yet in the same section.
 
@@ -762,21 +811,17 @@ Resolution, end to end:
 4. On `Complete` the counts move from `RunState` into `Inner::counts`, which outlives the transaction, so the count is available after the commit that made it true.
 5. At run end the core asks this extension for the count and builds `Destination::Rows { table, count }`. `promptforge-mcp` maps that to `OutputRef { kind: rows, table, rows }` and the text block reads `findings: 7 rows in assay_finding`.
 
-Step 5 has no method to call. Two additions to `Extension`, both defaulted so no other extension notices:
+Step 5 calls `Extension::row_count`, which `design-core.md` carries on the trait with a default of zero so no other extension notices it:
 
 ```rust
-/// Rows this extension holds for `table` after `run`. Called once per
-/// declared `OutputKind::Rows` output when a run finishes.
-fn output_rows(&self, run: RunId, table: &str) -> Result<u64, ExtError> { Ok(0) }
-
-/// Whether this extension will accept rows for `table`. Checked at boot,
-/// for every declared rows output whose root resolves to this extension.
-fn accepts_table(&self, _table: &str) -> bool { false }
+async fn row_count(&self, _run: RunId, _table: &str) -> Result<u64, ExtError> { Ok(0) }
 ```
 
-`accepts_table` could be avoided by having the host pass its `[outputs]` table names into `PaperstoreExt::new` and letting `validate` check them, which needs no core change at all. It is a trait method anyway, because the core is the thing that resolved `Root::Extension` and the core is where the error belongs; pushing it into configuration means the same check written once per host binary. `output_rows` cannot be avoided: the core owns `Destination` and nothing else can produce the number.
+The count is per run and per table because that is what a `Destination::Rows` needs, and it is read from `Inner::counts` rather than from `RunState`, which is why `Complete` moves the counts out of the transaction's state before dropping it: the core asks after the commit, and the map that answers has to outlive the thing that produced the number. The method is async, which costs nothing here and is what lets an extension that keeps its counts in the database answer from a query instead of a map.
 
-The alternative considered and rejected was for the core to sum a `rows` field out of tool results whose extension matches the output root. It needs no trait change and it requires the core to know that a JSON result field named `rows` means something, which is a domain convention in a crate that declares no domain.
+Nothing else could produce the number. The core owns `Destination`, and the alternative considered and rejected was for the core to sum a `rows` field out of tool results whose extension matches the output root: it needs no trait change and it requires the core to know that a JSON result field named `rows` means something, which is a domain convention in a crate that declares no domain.
+
+Step 2 is the half with no landed mechanism. The trait offers no predicate the core can ask about a table, so the core cannot itself reject a prompt whose declared rows output names a table this deployment does not accept, even though `design-mcp.md` already carries the error for that rejection as `ValidateError::UnknownTargetTable`. What the trait does offer is `validate`, and this crate's allowlist is exactly the answer that check needs; what is missing is the declared table names reaching this crate, since only the core resolved `Root::Extension`. Which side closes the gap is in `## Open`. Until it does, a table absent from `[extensions.paperstore.tables]` is caught at the first `paper_rows` call with `UnknownTable` naming it, which is a failed run rather than a refused boot.
 
 The table allowlist is configuration and the specification is data:
 
@@ -940,24 +985,24 @@ Every test below runs without a database server except the Postgres half of the 
 - **Parity of the divergences** in `## Behavioral parity`, one test each, because a list of known divergences with no test is a list of future bugs: a zero-or-one flag read back as the same integer, an upsert preserving unmentioned columns rather than defaulting them, `latest_revision` finding a lowercase-inserted row on both backends, an ordering applied in Rust producing identical order, and a `NULL` in a legacy `TEXT` column reading back as an empty string after the migration.
 - **Schema check**: `ping` passes against a migrated database and fails with `SchemaMismatch` naming the column against a database with one column dropped. Run on both backends, because the introspection is the one piece of SQL that is deliberately different.
 - **Transaction and savepoint under the section lifecycle**, against a recording harness that drives `on_section` directly: `Enter` then a write then `Complete` commits and the row is visible outside the transaction; `Enter` then a write then `Retry` rolls back, and a following `Complete` commits only what the second attempt wrote; a read inside the section after a write sees the uncommitted row and a read from a second run does not; `Enter` then `NestedEnter` then a write then `NestedComplete` then `Complete` commits everything; `NestedEnter` then a write then a rollback to that savepoint keeps the outer section's earlier write; a `Complete` with no `Enter` is a no-op rather than a panic; an out-of-order `Complete` returns `LifecycleOrder`; a failed commit propagates as an error rather than a silent success.
-- **The missing run-terminal event, as a failing test that documents the gap**: `Enter`, a write, and then no further event, followed by a second run's `Enter`. On SQLite the second `begin` blocks on the one write connection and times out. The test asserts that timeout and is named for the gap, so it becomes the test that starts passing when `RunEnded` lands. Asserting the bug is how a known gap stays known.
+- **The run-terminal event, as the regression test for the gap it closed**: `Enter`, a write, `RunEnded { ok: false }`, then a second run's `Enter`, a write, and `Complete`. On SQLite the second run acquires the one write connection and commits, which it could not do while a stranded transaction held it. The same shape with the `RunEnded` suppressed reproduces the original wedge, so the test asserts both the fix and what it fixed. Plus `RunEnded { ok: true }` after a `Complete` being a no-op rather than an error, since the success path removed the run already.
 - **Concurrent writers against WAL**: two `Store` instances on one file, one holding a write transaction while the other reads, asserting the read succeeds and sees pre-transaction data, which is the property WAL buys and the rollback journal does not. Then a second writer asserting it waits and then succeeds after the first commits, with a busy timeout shorter than the test's patience so a regression to the rollback journal fails rather than hangs. Then a direct assertion that `journal_mode` reads back as `wal` after `new`, since a silent fallback to `delete` mode on a filesystem that does not support WAL is exactly the kind of thing that only shows up under load.
 - **Idempotence of a re-run**: write eight rows, read them, write a different six rows for the same paper, and assert the table holds exactly six. Then write zero rows and assert the table holds zero and the stamp column is still updated. Then the multi-section case: drive `Enter`, a write, and `Complete` for three sections, abandon the fourth, and replay all four from the start, asserting the final table state is byte-identical to a clean four-section run. That is the discard-and-rerun claim as an assertion rather than a paragraph.
 - **The case-fold boundary**: `PaperId::parse` on `p4003r2`, ` P4003R2 `, `P4003r2`, and `p4003R2` all producing the same value; `as_str` uppercase and `stem` lowercase; `parse` rejecting the empty string, `4003`, `P`, `PR2`, `P4003R`, and a string with an interior space. Then the cross-method test the Python side would fail: write rows with a lowercase id, read them back with an uppercase id, and assert they are found, on both backends. Then a deserialization test asserting a lowercase id in a tool argument payload arrives as an uppercase `PaperId`.
 - **Surface separation**: build a `ToolMap` with `PaperstoreExt` registered and assert the model's schema list contains exactly `paper_meta`, `paper_latest`, `paper_md`, and `paper_cites`, and neither `paper_upsert` nor `paper_rows`. Then the converse: the Lua environment has a `paper` table with exactly `meta`, `latest`, `cites`, `upsert`, and `rows`, and no `md`. This is the test that fails if someone later changes a `Surfaces` value.
 - **Table allowlist**: `paper_rows` against a table not in the allowlist fails with `UnknownTable` and issues no statement; a row missing a required column fails with `MissingColumn` naming it; an unknown column fails with `UnknownColumn`; a string where an int is declared fails with `ColumnType` naming both types. Plus a test that a table name containing a quote or a semicolon cannot be constructed, since the allowlist is what stands between an interpolated identifier and an injection.
-- **Declared rows resolution**: a prompt declaring `kind: rows` with `table: assay_finding` and a root resolving to this extension passes boot validation; the same prompt with `table: not_a_table` fails boot with the table named; after a run that wrote seven rows, `output_rows` returns seven, and after a second write of three it returns three rather than ten.
+- **Declared rows resolution**: a prompt declaring `kind: rows` with `table: assay_finding` and a root resolving to this extension passes boot validation; the same prompt with `table: not_a_table` fails boot with the table named; after a run that wrote seven rows, `row_count` returns seven, and after a second write of three it returns three rather than ten. Plus `row_count` for a table the run never wrote returning zero rather than an error, and a count still readable after the transaction that produced it committed.
 - **Feature off**: a compile test that the host binary builds with the `paperstore` feature disabled, that no `sqlx` symbol is in the dependency graph, and a runtime test that a prompt naming `paper_meta` fails startup validation with an unbound canonical name.
 
 ## Open
 
 - The exact sqlx 0.9.0 API for opening a transaction with `BEGIN IMMEDIATE` rather than the default deferred begin. `## The SQLite backend` requires it and the requirement does not depend on the API: if no suitable entry point exists in the pinned version, `Store::begin` checks out a pooled connection, executes the statement directly, and drives `COMMIT` and `ROLLBACK` by hand, which is more code and the same semantics. This is the one place in this document where an implementation detail is unverified rather than undecided.
+- Which side closes the boot-time check that a declared rows output names a table this deployment accepts. `accepts_table` was proposed here as a defaulted `Extension` predicate and did not land, so the trait gives the core no way to ask, and `design.md`'s rule that startup rejects a prompt whose declared output names an unknown target table is unenforced for the table half. Two ways to close it. Have the host pass the declared table names from `[outputs]` into `PaperstoreExt::new` and let `validate` check them against the allowlist, which needs no core change and puts the same wiring in every host binary, with the error raised by the extension rather than where the core resolved `Root::Extension`. Or add the predicate to the core trait, which puts the error where the resolution happened and costs every extension a method answering a question only a storage extension has. Unresolved because the first is cheaper and the second is where the error belongs.
 - Whether the write-buffering escape hatch replaces the section-long transaction on SQLite. Buffering a run's writes in memory and applying them in one short transaction at `Complete` would dissolve the single-writer constraint, the pooled-connection leak, and the fan-out savepoint problem at once, and it would cost read-your-writes routing through the buffer and unbounded memory on a large section. It is not proposed here because `design.md` specifies the transaction mapping and a change to it is a change to that document rather than to this one. It is the strongest argument available if concurrent writing runs on SQLite turn out to be needed.
 - Whether the eleven zero-or-one integer flag columns should become real booleans in Postgres. Keeping them integers preserves what the Django mirror reads and imports SQLite's type poverty into a database that has a boolean type. The answer depends on the mirror code, which is in `wg21-website` and unreadable from here.
 - Whether `paper_md` should also be reachable from Lua through a guarded accessor that returns a handle rather than text. It would let a prompt author window a paper deterministically without putting untrusted text where `{{ state.x }}` substitution can reach it, and it would add a fourth thing to the language for one use case.
 - Whether the twenty-eight tables should be reduced before the Postgres migration is written. Seven of them, `claims`, `evidence`, `external_citations`, `questions`, `rhetoric`, `caput_causae`, and `citation_audit`, are documented in `CLAUDE.md` as no longer written by any production pipeline, and two more, `candidates` and `signals`, have no primary key and no caller. Migrating nine dead tables to Postgres to keep parity with a SQLite schema nobody writes is work with no reader, and deleting them is a decision about the Python side that this crate does not own.
 - Whether the indexes the Python schema lacks should be added here. Nine `paper_id` prefixes with no index mean every replace-all `DELETE` is a full table scan, which is invisible at ten thousand papers and is not free. Adding them changes the SQLite schema for the Python side too, which is the same kind of cross-boundary change as the WAL conversion and wants the same deliberateness.
-- The feature name and the type name, which two crate docs already disagree about. This document uses feature `paperstore` and type `PaperstoreExt`, matching `design-classify.md`'s `classify` and `ClassifyExt`. `design-mcp.md` uses feature `ext-paperstore` and type `Paperstore`, and also `ext-classify` and `Classify` against `design-classify.md`. One convention has to win and the choice is cosmetic, which is why it is unresolved rather than argued.
-- What `design-mcp.md`'s `[tools] store = "paperstore"` binding is meant to be. It is a single canonical word bound to this extension, which contradicts `design.md`'s settled rule that one canonical name is exactly one function, and it collides with `store`, which `design-core.md` reserves as the core's run state store host object and warns is easily confused with a persistent database. The six `paper_*` names in `## Canonical tool names` are what this document proposes instead, and that line in `design-mcp.md` needs to change to match. The same line binds `classify = "classify"` against `design-classify.md`'s four `classify_*` words, so it is one stale example rather than a disagreement about the rule.
+- Whether `RunEnded` should also evict the run's entry from `Inner::counts`. Nothing evicts it today, so a long-lived process accumulates one small map per run forever, and the arm that ends a run is the obvious place to drop it. What makes it a question rather than an edit is ordering: `row_count` is what reads that map, `RunEnded` fires from a drop guard on the way out of `run`, and this document does not know whether the core asks for its declared row counts before that guard runs. If it asks after, evicting there returns zero for every rows output and the count is silently lost. The alternatives are a retention window keyed on run end, matching what `design-mcp.md`'s run registry already does for its own records, or an explicit statement in `design-core.md` that `row_count` is called before the guard. Unresolved because the cheap fix is the one that can silently zero a reported number.
 
 *2026-07-25 - design-paperstore*

@@ -225,7 +225,9 @@ flowchart TD
 
 ### Catalog resolution
 
-How prompts enumerate on the MCP surface is an open decision in `design.md` - one entry per prompt, a single dispatcher, or a hybrid. The CLI does not wait for it. One type absorbs the shape and one function chooses it, and nothing else in the crate branches on the answer.
+How prompts enumerate on the MCP surface is settled: `design.md` gives each enabled prompt its own MCP tool, on the tools primitive, and `design-mcp.md` rejects both the dispatcher and the hybrid. `PerPrompt` is therefore the shape every deployment serves today.
+
+One type still absorbs the shape and one function still chooses it, and nothing else in the crate branches on the answer. The justification is no longer that the decision is open, because it is not. It is that `design-mcp.md` records the rejected hybrid as reachable without rework - adding a dispatcher for a demoted tail is additive to a per-prompt surface while the reverse is not - and leaves the catalog size at which that becomes worth doing as an open threshold question. Absorbing both shapes costs one enum, one `invocation` call, and one extra row in the fake-server test matrix, which is a smaller bill than teaching `run` and `list` a second calling convention after forty prompts have already degraded a client's selection. Tension: the crate carries a variant nothing serves, so the second arm of every match on `Catalog` is untested against a real service and is only as correct as the fake server that stands in for one.
 
 ```rust
 pub enum Catalog {
@@ -427,8 +429,10 @@ outputs
   report     file  markdown              required
   positions  rows  stakeholder_position  optional
 
-tools: web_search, web_fetch, store
+tools: web_search, web_fetch
 ```
+
+The `tools` line renders `Frontmatter::tools` verbatim, which is canonical names and nothing else. A prompt's declared state-filing tools live in its `state:` block and the core tools are present in every prompt, so neither is in that list and neither is printed. What the line reports is what this prompt asks the deployment to bind for it, which is the part that can fail to resolve and therefore the part a caller writing a command line needs. Tension: the printed list is narrower than the schema list any section actually sees, so a reader counting tools here will undercount.
 
 `--json` emits one JSON document on stdout and nothing else, an array for the catalog and a single object for one prompt, so `jq` needs no reshaping. `params` is the schema verbatim rather than a rendering of it, because a machine consumer wants the schema.
 
@@ -647,5 +651,6 @@ The variants carry the material their messages need rather than pre-rendered str
 
 - Whether the no-second-engine rule is worth a Cargo feature on the core crate gating `Executor`, so the CLI cannot construct one even by accident. Dropping `--local` is settled and `design.md` records it, but only the source walk in the test suite stops a future contributor adding an in-process path back, and a walk is a weaker guarantee than a type that will not link.
 - Whether `validate` should report parse results when the service is unreachable rather than exiting 5 with nothing. Useful to an author on a train, and a second output mode for one command.
+- Whether `list NAME` should render a prompt's declared state-filing tools alongside its `tools` line. Today it prints `Frontmatter::tools` only, so a reader sees the bindings that can fail and not the filing calls the model will actually make, and the two audiences want different lists: someone diagnosing a resolution failure wants the narrow one, someone reading a prompt to understand what it does wants the wide one. A second line under `tools` is the obvious shape and it widens output that exists to be piped.
 
 *2026-07-25 - design-cli*

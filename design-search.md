@@ -29,16 +29,18 @@ The test of the boundary: removing this crate from the workspace leaves every ot
 
 ## The stateless reference case
 
-The `Extension` trait has seven methods. A stateless extension implements five of them with real content and two with almost none, and which two is the entire finding.
+The `Extension` trait has eight methods. A stateless extension implements four of them with real content and four with almost none, and which four are almost empty is the entire finding.
 
 | Method | Here | In `promptforge-ext-paperstore` |
 |---|---|---|
 | `name` | The `[extensions.NAME]` block key, which also selects the provider. | The store's identity. |
-| `provides` | Two canonical words, `web_search` and `web_fetch`. | The `store_` family. |
+| `provides` | Two canonical words, `web_search` and `web_fetch`. | The `paper_` family. |
 | `tools` | Two `ToolDef` values, both `Surfaces::Both`, both rate limited. | Several, and a write is not on the model surface for free. |
-| `bind_lua` | One table, `web`, with two fields. | One table under its own name. |
+| Lua bindings | None written here. The core derives `web.search` and `web.fetch` from the canonical names. | Nothing; no extension writes Lua bindings. |
+| `holds_section_state` | `false`. A search is a request and a response, so nothing survives the tool call for a nested section to interleave with. | `true`, which serializes `fanout` for every run in the deployment. |
 | `validate` | Offline. Credential present, endpoint parses, policy compiles. Never touches the network. | Connects, checks the schema, checks migrations. |
 | `on_section` | `Ok(())`. Nothing here has a section-shaped lifetime. | Begin, commit, rollback, savepoint. The whole point of the hook. |
+| `row_count` | Zero. This crate writes no rows anywhere, so no declared `rows` output can resolve to it and there is nothing to report. | A real per-run count for the table named, read from the writes it made. |
 | `shutdown` | Drops two connection pools. | Closes a pool after rolling back anything open. |
 
 `on_section` is the load-bearing difference and it is worth being precise about why it is empty rather than merely convenient. The section lifecycle exists so an extension holding a resource whose lifetime is a section can open it on `Enter`, commit it on `Complete`, discard it on `Retry`, and nest it on `NestedEnter`. A search is a request and a response. It completes before the tool call returns, it holds nothing afterwards, and it wrote nothing that a rollback could remove. The HTTP connection pool is the only long-lived resource in the crate and its lifetime is the process, not the section: pooling a socket across sections is the point of pooling it. So there is nothing to begin, nothing to commit, and nothing to roll back, and the override is `Ok(())`.
@@ -49,9 +51,11 @@ There is one honest asymmetry, and it is the most interesting thing this crate l
 
 `shutdown` is the other near-empty method, and it does exactly one thing: it drops the two `reqwest::Client` values, which closes their idle keep-alive sockets. That is the whole method. It exists because a service that is exiting should close its connections rather than leave the peer and the local TCP stack to discover the process is gone. `reqwest::Client` is a cheap handle over shared internals, so dropping one clone releases nothing while the registry still holds others through `Arc<Inner>`; the clients therefore sit in a `RwLock<Option<Client>>` and `shutdown` takes them out. A call arriving after that returns `SearchError::ShutDown` rather than panicking.
 
+`validate`, `on_section`, and `shutdown` are all `async` on the landed trait and this crate awaits nothing inside any of the three, which is the same shape `promptforge-ext-classify` reports and for the same reason: the hooks are straight-line code, so no lock guard ever crosses an await point.
+
 The read lock on every call is the visible cost of that arrangement, and it is free next to a network round trip. This is worth contrasting with `promptforge-ext-classify`, where the per-session mutex is a determinism decision that happens to also give `shutdown` somewhere to take a session from. Here the lock is only about shutdown, because there is no determinism to protect: two concurrent searches may proceed in parallel and there is no batch composition to fix.
 
-The three methods with real content are ordinary. `bind_lua` builds one table and captures `Arc<Inner>`, which is why the state sits in a separate `Inner` behind an `Arc` in the first place: `tools` and `bind_lua` receive `&self` and cannot hand `self` to a closure. `validate` is a pure function of configuration. `tools` is two constructors.
+The two methods with real content are ordinary. `tools` is two calls to `register_capability`, each capturing `Arc<Inner>`, which is why the state sits in a separate `Inner` behind an `Arc` in the first place: `tools` receives `&self` and cannot hand `self` to a closure. `validate` is a pure function of configuration.
 
 ## Dependencies and pins
 
@@ -64,7 +68,7 @@ Every version below was checked against crates.io on 2026-07-25.
 - `dom_smoothie` at exactly `=0.18.0`, published 2026-06-07. Boilerplate removal, closely following Mozilla's `readability.js`. Chosen over `readability-rs` because that crate is a fork of an unmaintained one, and over writing selectors by hand because "which part of this page is the article" is a scoring heuristic with fifteen years of tuning behind it and no interesting local variant.
 - `html2text` at exactly `=0.17.1`, published 2026-04-19. Renders HTML to wrapped plain text. It is not redundant with `dom_smoothie`: `Article::text_content` is concatenated text with every list, table, and heading boundary collapsed, which reads badly and is exactly what a model needs preserved. `html2text` renders the cleaned HTML in `Article::content` into text that keeps list structure, table cells, and heading levels. Its MSRV of 1.85 sets the crate's Rust floor.
 - `encoding_rs` at `0.8.35`, published 2024-10-24. Decoding a declared non-UTF-8 charset. It is already in the dependency graph because `reqwest`'s `charset` feature uses it, so naming it directly adds a line to `Cargo.toml` and nothing to the build.
-- `promptforge`, `mlua`, `serde`, `serde_json`, `schemars`, `thiserror`, `tokio`, `tracing`, and `humantime_serde` from the workspace, at whatever the workspace pins.
+- `promptforge`, `serde`, `serde_json`, `schemars`, `thiserror`, `tokio`, `tracing`, and `humantime_serde` from the workspace, at whatever the workspace pins. Notably not `mlua`: the core owns every Lua binding.
 
 Two crates take exact `=` pins and the rest take caret requirements, which is the opposite habit from `promptforge-ext-classify` and for a different reason. `dom_smoothie` and `html2text` are both pre-1.0 with a long history of breaking releases, and both are compared against golden files: their output *is* the crate's observable behaviour on the fetch path. A caret bump that improves extraction is indistinguishable at build time from one that regresses it, and either way it rewrites every golden file in the test suite. Pinning them exactly makes an extraction change a deliberate commit with a diff to review. Everything else is stable, semver-respecting, and pinned by the committed workspace `Cargo.lock` rather than by the manifest.
 
@@ -78,7 +82,6 @@ mime = "0.3.17"
 dom_smoothie = { version = "=0.18.0", default-features = false }
 html2text = { version = "=0.17.1", default-features = false }
 encoding_rs = "0.8.35"
-mlua = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 schemars = { workspace = true }
@@ -101,7 +104,7 @@ humantime_serde = { workspace = true }
 
 ## The `Extension` impl
 
-The trait is `promptforge::Extension`, reproduced from `design-core.md` without modification. `SearchExt` implements all seven methods, including both of the two the trait defaults.
+The trait is `promptforge::Extension`, reproduced from `design-core.md` without modification. `SearchExt` implements all eight methods, including all four the trait defaults.
 
 ```rust
 pub struct SearchExt {
@@ -155,14 +158,11 @@ impl Extension for SearchExt {
         ]
     }
 
-    fn bind_lua(&self, lua: &Lua) -> Result<Vec<(String, Value)>, ExtError> {
-        let t = lua.create_table()?;
-        t.set("search", lua.create_async_function(bind(self.inner.clone(), Op::Search))?)?;
-        t.set("fetch", lua.create_async_function(bind(self.inner.clone(), Op::Fetch))?)?;
-        Ok(vec![("web".to_string(), Value::Table(t))])
-    }
+    // No bind_lua. The core builds `web.search` and `web.fetch` from the two
+    // canonical names above, because both declare Surfaces::Both. This crate
+    // does not depend on mlua and constructs no Lua value.
 
-    fn validate(&self) -> Result<(), ExtError> {
+    async fn validate(&self) -> Result<(), ExtError> {
         self.inner.provider.validate_credential()?;
         self.inner.policy.compile_check()?;
         self.inner.policy.check_endpoint(self.inner.provider.endpoint())?;
@@ -175,12 +175,12 @@ impl Extension for SearchExt {
 
     /// Stateless. Nothing here has a section-shaped lifetime, so there is nothing
     /// to begin, commit, or roll back. See `## The stateless reference case`.
-    fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError> {
+    async fn on_section(&self, _ev: &SectionEvent) -> Result<(), ExtError> {
         Ok(())
     }
 
     /// Drops both connection pools, closing their idle sockets. That is all it does.
-    fn shutdown(&self) -> Result<(), ExtError> {
+    async fn shutdown(&self) -> Result<(), ExtError> {
         let _ = self.inner.search_http.write().take();
         let _ = self.inner.fetch_http.write().take();
         Ok(())
@@ -224,7 +224,7 @@ fn fetch_def(inner: Arc<Inner>) -> ToolDef {
 
 `ToolName::parse` is the core's constructor and it accepts only words in the canonical set, so the `expect` is sound exactly because `design.md` already lists both words. `rate_limit` here is a default that a `[tool_limits]` entry overrides. `web_fetch`'s description tells the model in advance that what comes back is untrusted, because a description is the only place this crate can say so at a point where the model is still deciding whether to call it.
 
-`bind_lua` returns one name, `web`, bound to a table of two functions. Two canonical words sharing the `web_` prefix are one family, and `design.md` specifies that a family reaches Lua as a single table named by that prefix. The functions are created with `create_async_function` because `ToolFn::call` is async, which places the same requirement on the core's Lua driver that `promptforge-ext-classify` and `promptforge-ext-paperstore` place on it: a section block runs under `call_async`.
+Lua reaches these as `web.search` and `web.fetch`, and this crate does nothing to make that happen. Two canonical words sharing the `web_` prefix are one family, and the core builds one table per family from the `ToolDef` list, naming each field from the suffix. The functions are created with `create_async_function` because `ToolFn::call` is async, which places a requirement on the core's Lua driver rather than on this crate: a section block runs under `call_async`.
 
 `validate` is offline and that is a decision rather than an oversight. It checks that the credential is present and non-empty, that the endpoint parses as an absolute `https` URL with no userinfo and an allowed port, that every configured CIDR in the policy parses, and that the fetch policy's numbers are inside their bounds. It sends no request and resolves no name. The endpoint check applies the blocked address ranges directly when the endpoint host is written as an IP literal, which catches the configuration accidentally left pointing at a local mock and is the one check here that would be embarrassing to omit; a named endpoint whose DNS resolves into a blocked range is caught at first call instead, because the guarded resolver is installed on the provider client too. Installing it there costs nothing - a public search API never trips the policy - and it means a hijacked or typo'd provider hostname cannot reach an intranet address either. `design-mcp.md` already establishes the principle for the gateway: a dependency with its own lifecycle must not be required at boot, because requiring it makes startup order load-bearing. A third-party search API across the public internet is a stronger case than the gateway, not a weaker one, and a Brave outage must not stop a service whose other thirty-nine prompts never search.
 
@@ -298,7 +298,7 @@ pub enum Freshness { Day, Week, Month, Year }
 
 `deny_unknown_fields` is what converts a hallucinated argument name into a diagnostic that names the field, on both surfaces: a model inventing `num_results` and a Lua author typo'ing `frehsness` both get told which key was wrong instead of being silently ignored.
 
-The macro derives this schema through `schemars`, and it is worth showing what the model actually receives, because the doc comments above are the descriptions the model reads:
+`register_capability` derives this schema through `schemars`, and it is worth showing what the model actually receives, because the doc comments above are the descriptions the model reads:
 
 ```json
 {
@@ -505,7 +505,7 @@ The `Content-Type` header decides everything, and it is trusted for routing whil
 
 An absent `Content-Type` is refused rather than sniffed. Content sniffing is how a fetcher gets talked into treating a binary as text, and refusing produces a message the model can act on. Practically every HTTP server sends the header, so the cost is near zero.
 
-**A PDF is refused.** No PDF text extraction is compiled in. The message names the content type and tells the model to look for an HTML version. Three reasons, and the domain one is the strongest: WG21 papers are the PDFs this system cares about, and paper text enters through the ingestion pipeline into `promptforge-ext-paperstore`, which is where paper content belongs and where it arrives already parsed, chunked, and addressable. A second, worse PDF path through `web_fetch` would produce text of unknown quality that no prompt should be reasoning over when the good copy is one `store_` call away. Beyond that, PDF text extraction is a large dependency with output quality that varies from clean to unusable depending on how the file was produced, and a model cannot tell which it got. Tension: a document published only as a PDF and not in paperstore cannot be read by a prompt at all, which is a real gap for anything outside the committee corpus, and closing it means either a PDF crate here or an ingestion step there.
+**A PDF is refused.** No PDF text extraction is compiled in. The message names the content type and tells the model to look for an HTML version. Three reasons, and the domain one is the strongest: WG21 papers are the PDFs this system cares about, and paper text enters through the ingestion pipeline into `promptforge-ext-paperstore`, which is where paper content belongs and where it arrives already parsed, chunked, and addressable. A second, worse PDF path through `web_fetch` would produce text of unknown quality that no prompt should be reasoning over when the good copy is one `paper_` call away. Beyond that, PDF text extraction is a large dependency with output quality that varies from clean to unusable depending on how the file was produced, and a model cannot tell which it got. Tension: a document published only as a PDF and not in paperstore cannot be read by a prompt at all, which is a real gap for anything outside the committee corpus, and closing it means either a PDF crate here or an ingestion step there.
 
 Charset comes from the `charset` parameter. UTF-8 or absent decodes as UTF-8, replacing invalid sequences rather than failing, because one bad byte in a long document should not lose the document. A declared non-UTF-8 charset goes through `encoding_rs`; an unrecognised charset label is `SearchError::Undecodable` with the label named. An HTML `<meta charset>` that disagrees with the header is ignored: the header wins, and the disagreement is logged.
 
@@ -763,7 +763,18 @@ params:
   properties:
     entity: { type: string }
   required: [entity]
-tools: [web_search, web_fetch, add_statement, done]
+tools: [web_search, web_fetch]
+state:
+  - name: add_statement
+    description: File one public statement by the entity, with its source.
+    collection: statements
+    params:
+      type: object
+      properties:
+        quote: { type: string }
+        source_url: { type: string }
+        stance: { type: string, enum: [supports, opposes, mixed, unclear] }
+      required: [quote, source_url, stance]
 outputs:
   - name: report
     kind: file
@@ -774,7 +785,9 @@ progress:
 ---
 ```
 
-One reconciliation note for a reader comparing crate documents. `design-classify.md`'s illustrative `prompts.toml` fragment writes `web_fetch = "reqwest"`, which would require the fetch path to be a separately named extension. It is not: `design.md` states that one extension is one linked crate, and `design-mcp.md` - which owns `prompts.toml` - writes `web_fetch = "brave"` and keys extension tables by `Extension::name`. One instance backs both words, so both bindings name it, and `web_fetch = "brave"` is the form. Tension: the binding for the fetcher is named after the search provider even though Brave has nothing to do with fetching, and swapping to a different search engine therefore edits two `[tools]` lines rather than one.
+`tools:` holds canonical names only, so it holds exactly two. `add_statement` is not a canonical name and never becomes one: it is a state-filing tool this prompt declares for itself, generated as `Surfaces::ToolOnly` so the model files statements and Lua reads them back through `store.count("statements")`. `done` is absent for the opposite reason, that it is a core tool present in every prompt and naming it in `tools:` would be naming something the runtime already supplied. All three sources still scope by name, which is why the Lua block above writes `tools.add("web_search", "web_fetch", "add_statement", "done")` in one call without caring which source each name came from.
+
+One reconciliation note for a reader comparing crate documents. One extension is one linked crate, `design-mcp.md` owns `prompts.toml` and keys extension tables by `Extension::name`, and a single Brave-backed instance provides both canonical words. So both bindings name it: `web_search = "brave"` and `web_fetch = "brave"`. Tension: the binding for the fetcher is named after the search provider even though Brave has nothing to do with fetching, and swapping to a different search engine therefore edits two `[tools]` lines rather than one.
 
 ## Errors
 
@@ -915,7 +928,7 @@ The test server binds loopback, which the URL policy blocks, so the fetch tests 
 - **Timeouts.** A server that accepts and never responds fails with `Timeout` at the configured value plus a tolerance. A server dribbling one byte per second past the total timeout fails, which is the slow-loris case the total rather than the connect timeout catches. A `CallCtx::deadline` half a second out returns `NoTimeBudget` with no socket opened, asserted on the server's connection counter.
 - **Rate limiting.** Eight concurrent `web_search` calls through a four-permit `ResolvedTool` never put more than four in flight, asserted by a counting handler on the test server. `min_interval` of 1100 milliseconds serialises two calls to at least that gap. A 429 with `Retry-After: 2` is retried after roughly two seconds and then surfaced once `retries` is exhausted.
 - **No cache.** Two identical `web_search` calls in one run produce two requests at the test server, and two identical `web_fetch` calls produce two. This is the test that encodes the caching decision, and it fails if someone later adds a cache without amending this document.
-- **Surface presence.** The converse of the classify document's test. Build a `ToolMap` with `SearchExt` registered and assert the schema list sent to the model contains exactly `web_search` and `web_fetch`, with their derived schemas matching a committed snapshot so a change to an argument struct shows up as a diff. Then assert the Lua environment has a `web` table with two callable fields. Then assert scoping: a section calling `tools.add("web_search")` alone sends one schema and not two, while Lua can still reach `web.fetch`, because `bind_lua` is run-scoped and `ToolMap::scoped` filters only what the model sees.
+- **Surface presence.** The converse of the classify document's test. Build a `ToolMap` with `SearchExt` registered and assert the schema list sent to the model contains exactly `web_search` and `web_fetch`, with their derived schemas matching a committed snapshot so a change to an argument struct shows up as a diff. Then assert the Lua environment has a `web` table with two callable fields. Then assert scoping: a section calling `tools.add("web_search")` alone sends one schema and not two, while Lua can still reach `web.fetch`, because the core installs capability families once per run and `ToolMap::scoped` filters only what the model sees.
 - **Credential containment.** The fetch client's default headers contain no `X-Subscription-Token` and no `Authorization`. A fetch against the test server asserts the received request carries no credential and no cookie. A provider response that redirects to the test server asserts the token was not forwarded, which is the test that justifies two clients.
 - **Lifecycle.** A recording harness asserts `on_section` is called for every event and does nothing observable. `validate` passes with no network reachable at all, which is the test that encodes the offline decision. `validate` fails with `MissingCredential` on an empty key, `EndpointBlocked` on an endpoint pointed at loopback, and `BadCidr` on a malformed `deny_extra`. `shutdown` drops both pools and a subsequent call of each function returns `ShutDown`.
 - **Argument validation on both surfaces.** A model-shaped JSON call and a Lua table call with the same defect produce the same error: a misspelled key named in the message, `count = 50` as `CountTooHigh`, an empty query as `EmptyQuery`. Same function, two callers, one error taxonomy.

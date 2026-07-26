@@ -122,6 +122,17 @@ pub struct Usage { pub prompt_tokens: u32, pub completion_tokens: u32, pub total
 
 The ordering rule that makes this safe: nothing is written to the client until the upstream response headers have arrived and been accepted. Admission finishes first, the upstream exchange starts, its status is mapped, and only then does the gateway emit 200 and begin relaying. A refusal is therefore always an HTTP status with a body a client can parse, never a broken stream. Tension: once relaying has begun a later failure has no status code left, so a mid-stream fault is a final SSE event with an `error` object followed by a close, and a client must treat a stream that ends without `[DONE]` as a failure.
 
+That event is the error envelope from the Errors section, on one `data:` line, followed by the close and no `[DONE]`:
+
+```
+data: {"error":{"message":"upstream pod-reasoning-a timed out","type":"server_error","code":"upstream_timeout"}}
+
+```
+
+An object carrying an `error` key rather than a named `event: error` line, because that is the shape the OpenAI SDKs already detect: the Python client's stream decoder raises its own error type when a chunk's JSON has an `error` key, while a named event it does not recognise is dropped silently and the stream just ends. The `type` and `code` are the pair the whole-response mapping would have produced for that same `GatewayError` variant, so a caller reads one vocabulary whether the failure arrived as a status or as a chunk. The span still records the variant in `outcome` and the request still counts against the endpoint's failure threshold where the whole-response path would have counted it, because relaying beginning is not the request succeeding. Tension: the response was committed as 200 before the fault, so a client that logs status codes and ignores chunk contents records a success, which is why the missing `[DONE]` is a normative signal and not a convention.
+
+`stream_idle_secs` is unset by default, and unset means no idle timeout at all: once the upstream's headers have been accepted, the relay is bounded only by the 600 s request ceiling, which ends it wherever it has got to and emits the failure event above with `code` `request_ceiling`. Setting it arms a per-gap timer, reset on every relayed event, that ends the stream with `UpstreamTimeout` when one gap exceeds it. Unset is the default because a legitimate gap is long and hard to bound in advance - measured TTFT at 28k context and concurrency 16 is roughly 117 s, and a large tool-call argument accumulates across many `input_json_delta` events - so a value set by guess kills real work while a value set by measurement is per-deployment. Tension: an upstream that holds the socket open and sends nothing then occupies a permit for the full 600 s rather than being caught in seconds.
+
 `stream_options.include_usage` passes through untouched. When the upstream sends a final usage chunk the gateway reads it to populate token counters; when it does not, those counters record zero for that request rather than an estimate, because the gateway does not tokenize.
 
 ```rust
@@ -164,6 +175,50 @@ The `X-` prefix is chosen against RFC 6648's advice, for recognisability and bec
 200 whenever the process is serving, and 503 only while shutting down. It deliberately does not fail because a backend is unreachable: a supervisor cannot fix an unreachable pod by restarting the gateway, and a restart would discard the queue and every pin. It contacts no backend; endpoint state is what request outcomes last reported.
 
 `GET /status` returns the same document plus per-endpoint permit counts, refusal totals, pin count, and the loaded model list. `GET /metrics` is Prometheus text.
+
+The `/status` document in full, on the production profile:
+
+```json
+{
+  "status": "serving",
+  "generation": 7,
+  "uptime_secs": 91233,
+  "global": { "inflight": 5, "limit": 16 },
+  "pins": { "count": 312, "max": 4096 },
+  "endpoints": [
+    {
+      "name": "pod-reasoning-a",
+      "state": "up",
+      "inflight": 3,
+      "waiting": 0,
+      "inflight_limit": 8,
+      "queue_depth": 16,
+      "refusals": { "queue_full": 12, "admission_timeout": 4, "no_healthy_endpoint": 0, "shutting_down": 0 }
+    },
+    {
+      "name": "host-gpu",
+      "state": "down",
+      "inflight": 0,
+      "waiting": 0,
+      "inflight_limit": 8,
+      "queue_depth": 16,
+      "refusals": { "queue_full": 0, "admission_timeout": 0, "no_healthy_endpoint": 7, "shutting_down": 0 }
+    }
+  ],
+  "models": [
+    { "name": "reasoning-large", "upstream": "Qwen/Qwen3-235B-A22B-Instruct-FP8",
+      "endpoints": ["pod-reasoning-a", "pod-reasoning-b"], "default_max_tokens": null },
+    { "name": "extract-small", "upstream": "Qwen/Qwen3-8B-Instruct",
+      "endpoints": ["host-gpu"], "default_max_tokens": null },
+    { "name": "claude-sonnet-4", "upstream": "claude-sonnet-4-20250514",
+      "endpoints": ["anthropic"], "default_max_tokens": 8192 }
+  ]
+}
+```
+
+The first three keys and the `name`, `state`, `inflight`, and `waiting` fields are exactly `/health`, so one parser reads both and a supervisor that graduates to the authenticated route learns no new shape. `inflight_limit` and `queue_depth` are the configured caps rather than live counts, which is what makes `inflight` and `waiting` interpretable without reading the configuration file next to the answer. `refusals` carries the same four reasons and the same per-endpoint labelling as `pf_gateway_refusals_total`, cumulative since process start and never reset by a reload, so `/status` and `/metrics` cannot disagree about a refusal. `models` is the loaded routing table, which is how an operator answers "did my reload take" when the generation number alone only says that something changed.
+
+No credential appears here and none can: `Secret` has no `Serialize`, so `server.token` and every `api_key` are unrepresentable rather than merely omitted. `base_url` is left out too, because an endpoint is named by its configuration `name` everywhere else in this crate. Tension: `/status` therefore cannot diagnose a wrong `base_url`, and that stays a log-reading job.
 
 `server.max_body_bytes` defaults to 8 MiB and returns 413 above it. A 28k-token prompt is roughly 112 KiB and a 128k-token prompt roughly 500 KiB, so the default is generous by an order of magnitude and still bounds a hostile body.
 
@@ -396,6 +451,75 @@ pub struct Config {
     #[serde(rename = "model")] pub models: Vec<ModelConfig>,
 }
 
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct ServerConfig {
+    /// No default. A network interface, never loopback: Cursor connects from a
+    /// workstation and Talktron from its own process, so a guessed default would
+    /// either bind loopback and break both or bind every interface silently.
+    pub bind: SocketAddr,
+    /// The same shared secret `promptforge-mcp` checks, compared in constant time.
+    pub token: Secret,
+    /// Defaults to 8388608, 8 MiB. A 28k-token prompt is roughly 112 KiB and a
+    /// 128k-token prompt roughly 500 KiB, so this is an order of magnitude of
+    /// headroom over the largest legitimate body and still bounds a hostile one.
+    #[serde(default = "d_max_body")] pub max_body_bytes: usize,     // 8388608
+}
+
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct LimitsConfig {
+    /// Defaults to 16, below the naive sum of four endpoints at eight each. It bounds
+    /// blast radius and local socket pressure and protects no individual GPU, since
+    /// endpoints are separate pods. Resized in place on reload, never replaced.
+    #[serde(default = "d_global_inflight")] pub global_inflight: u32,    // 16
+    /// Defaults to 30, roughly one 27B turn: 4,000 output tokens hold a slot for 45 to
+    /// 60 s there, so the rule reads "you may wait for at most one request ahead of
+    /// you" and refuses the rest. Also the value of every `Retry-After` the gateway
+    /// generates, and the floor a client's own HTTP timeout must clear.
+    #[serde(default = "d_admission_wait")] pub admission_wait_secs: u64, // 30
+    /// Defaults to 600, RunPod's default execution timeout, so the gateway and the
+    /// platform expire together rather than the gateway holding a connection to a job
+    /// the platform already killed. Measured from admission, not from arrival.
+    #[serde(default = "d_ceiling")] pub request_ceiling_secs: u64,       // 600
+    /// Defaults to 900. Gaps between sequential turns of a live run are seconds, so
+    /// this is a wide margin, and expiry costs one prefill rather than an error.
+    #[serde(default = "d_pin_idle")] pub pin_idle_secs: u64,             // 900
+    /// Defaults to 4096. At capacity an insert evicts the least recently used entry.
+    #[serde(default = "d_max_pins")] pub max_pins: usize,                // 4096
+    /// Defaults to 600, the request ceiling, because a stop that severs a request the
+    /// gateway would otherwise have allowed to finish is the one failure mode a grace
+    /// period exists to prevent, and no admitted request can outlive the ceiling. It is
+    /// why the unit file sets `TimeoutStopSec=630`, 30 s of slack over this value. On
+    /// Windows it exceeds the SCM's roughly 30 s patience by a factor of 20, so the
+    /// service handler must report `SERVICE_STOP_PENDING` with a `wait_hint` covering
+    /// this value and re-report inside every 30 s window or the SCM kills the drain.
+    #[serde(default = "d_shutdown_grace")] pub shutdown_grace_secs: u64, // 600
+}
+
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct LogConfig {
+    /// No default. The two profiles write to `C:/ProgramData/PromptForge/logs` and
+    /// `/var/log/promptforge`, and a guess that a service account cannot write is a
+    /// service that starts and logs nowhere.
+    pub dir: PathBuf,
+    /// Defaults to "info", which is what both profiles set.
+    #[serde(default = "d_level")] pub level: String,                // "info"
+    /// Defaults to daily. A Windows service has no console, so this file is the only
+    /// diagnostic on that platform and its rotation is not optional.
+    #[serde(default = "d_rotation")] pub rotation: Rotation,        // Daily
+    /// Defaults to 14, the development profile's value. Production sets 30, because an
+    /// incident review reaches back further than a developer's morning does.
+    #[serde(default = "d_retain")] pub retain_days: u16,            // 14
+}
+
+/// Mirrors `tracing-appender`'s rotation kinds, minus a minutely rotation nothing
+/// here wants. Anything else is a new variant and a code change.
+#[derive(Deserialize, Clone, Copy, PartialEq)]
+#[serde(rename_all = "lowercase")]
+pub enum Rotation { Hourly, Daily, Never }
+
 #[derive(Deserialize, Clone, PartialEq)]
 #[serde(deny_unknown_fields)]
 pub struct EndpointConfig {
@@ -410,9 +534,33 @@ pub struct EndpointConfig {
     /// 117 s, so anything under 120 cuts off legitimate work; 180 clears that by
     /// half again and still detects a hung upstream well inside the 600 s ceiling.
     #[serde(default = "default_first_byte_timeout_secs")] pub first_byte_timeout_secs: u64,
+    /// Unset by default, and unset means no idle timeout: an established stream is
+    /// bounded only by the 600 s request ceiling. Set, it is the largest gap allowed
+    /// between two relayed events before the stream ends with `UpstreamTimeout`.
     #[serde(default)] pub stream_idle_secs: Option<u64>,
     #[serde(default = "d_failures")] pub failure_threshold: u32,    // 3
     #[serde(default = "d_cooldown")] pub cooldown_secs: u64,        // 30
+}
+
+#[derive(Deserialize, Clone)]
+#[serde(deny_unknown_fields)]
+pub struct ModelConfig {
+    /// The name a slot in `prompts.toml` resolves to, matched by one exact string
+    /// lookup. It is the string that stays fixed across deployments while everything
+    /// below it changes, which is the whole mechanism of this file.
+    pub name: String,
+    /// The string the backend knows this model by, substituted into the outgoing body
+    /// and never returned to the caller. One per model: a provider that spells the
+    /// model differently gets its own `[[model]]` entry rather than a second spelling.
+    pub upstream: String,
+    /// Endpoint names, all serving this model under the one `upstream` string. Ties in
+    /// the fewest-in-flight selection break by this order. `validate` rejects an empty
+    /// list and a name no `[[endpoint]]` defines.
+    pub endpoints: Vec<String>,
+    /// Supplied when a caller omits `max_tokens`, which Anthropic requires and OpenAI
+    /// does not. A model on an `anthropic` endpoint without it fails config validation
+    /// rather than its first request.
+    #[serde(default)] pub default_max_tokens: Option<u32>,
 }
 
 impl Config {
@@ -443,6 +591,8 @@ admission_wait_secs = 30           # wait this long for a permit, then 503 with 
 request_ceiling_secs = 600         # RunPod's execution timeout; nothing runs longer
 pin_idle_secs = 900                # a run's pin expires after this much silence
 max_pins = 4096
+shutdown_grace_secs = 600          # the request ceiling: a stop never severs a request
+                                   # the gateway would have let run to completion
 
 [log]
 dir = "C:/ProgramData/PromptForge/logs"
@@ -516,6 +666,7 @@ admission_wait_secs = 30
 request_ceiling_secs = 600
 pin_idle_secs = 900
 max_pins = 4096
+shutdown_grace_secs = 600          # TimeoutStopSec below is 630, this plus 30 s of slack
 
 [log]
 dir = "/var/log/promptforge"
@@ -762,6 +913,28 @@ Every error body is the OpenAI error envelope, so an unmodified SDK surfaces it 
              "type": "overloaded", "code": "queue_full" } }
 ```
 
+`message` is the variant's `Display`, which is the `#[error]` string above and therefore already carries the endpoint, model, depth, or duration that made the error specific. `type` and `code` are fixed per variant:
+
+| Variant | Status | `type` | `code` |
+|---|---|---|---|
+| `Unauthorized` | 401 | `authentication_error` | `unauthorized` |
+| `MalformedRequest` | 400 | `invalid_request_error` | `malformed_request` |
+| `PayloadTooLarge` | 413 | `invalid_request_error` | `payload_too_large` |
+| `UnknownModel` | 404 | `invalid_request_error` | `model_not_found` |
+| `NoHealthyEndpoint` | 503 | `overloaded` | `no_healthy_endpoint` |
+| `QueueFull` | 503 | `overloaded` | `queue_full` |
+| `AdmissionTimeout` | 503 | `overloaded` | `admission_timeout` |
+| `ShuttingDown` | 503 | `overloaded` | `shutting_down` |
+| `RequestCeiling` | 504 | `server_error` | `request_ceiling` |
+| `UpstreamTimeout` | 504 | `server_error` | `upstream_timeout` |
+| `UpstreamTransport` | 502 | `server_error` | `upstream_transport` |
+| `Translation` | 502 | `server_error` | `translation` |
+| `UpstreamStatus`, upstream 4xx | the upstream's | `invalid_request_error` | `upstream_client_error` |
+| `UpstreamStatus`, upstream 429 | 429 | `rate_limit_error` | `rate_limit_exceeded` |
+| `UpstreamStatus`, upstream 5xx | 502 | `server_error` | `upstream_error` |
+
+`code` is the variant name in snake case in every row the gateway originates, so a client switches on it without keeping a translation table and a new variant cannot reuse an old code. The one deliberate exception is `UnknownModel`, which reports `model_not_found`, OpenAI's own code for an unresolvable model and therefore the string a client written against OpenAI already handles. `type` collapses fifteen rows onto five values because it is the coarse class an SDK groups on rather than an identifier, and `overloaded` is carried from the example above rather than being an OpenAI type at all, which is safe because every SDK selects its exception class from the HTTP status and treats `type` as description. The four refusal codes are the same four strings as the `reason` label on `pf_gateway_refusals_total` and the same as the `outcome` field on the span, so one word follows a refusal from the client's error, through the log line, to the metric. Tension: `UpstreamStatus` is the only variant whose status is not fixed by the variant, so a client matching on status alone cannot tell the gateway refusing from the backend refusing, and only the `code` and `X-PromptForge-Endpoint` separate them.
+
 `Retry-After` is `limits.admission_wait_secs` in seconds on every refusal the gateway generates. A fixed value rather than an estimated drain time, because an estimate needs slot-hold history the gateway does not keep yet.
 
 ## Observability
@@ -815,5 +988,7 @@ Queued requests hold a connection while they wait, which is the operational cons
 - Per-endpoint caps for 400B-class MoE pods. No direct measurement exists; active-parameter roofline arithmetic is the only guide, and the number has to be re-derived per pod.
 - Whether `Retry-After` should become an estimate from observed slot-hold history rather than the fixed admission wait.
 - The reported 2.5x P99 TTFT degradation on an endpoint after roughly 60 minutes of uptime, mechanism unattributed. If it reproduces, the gateway is where a periodic endpoint recycle would have to be expressed, and it currently has no such concept.
+- What an upstream 4xx body actually is on the wire. The errors section requires both that a 4xx passes through "with its own status and truncated body" and that every error body is the OpenAI envelope, and those cannot both hold for an `anthropic` endpoint, whose error body is Anthropic-shaped. Three readings: relay the backend's body verbatim, which preserves its detail and hands an OpenAI SDK an envelope it cannot parse on the Anthropic path; lift the upstream message into the gateway's envelope under `upstream_client_error`, which keeps one shape everywhere and discards the backend's own `type` and `code`; or lift only on the `anthropic` protocol, which keeps both at the cost of a per-protocol branch in the error path. The table above assumes the second.
+- Whether `log.level` is a single level name or a full `tracing` filter directive. Both profiles only ever set `info`, so nothing here distinguishes them. A bare level is one word to validate and cannot express per-target filtering; an `EnvFilter` directive such as `info,promptforge_gateway::upstream=debug` can isolate the Anthropic shim under real load without raising the volume of everything else, at the cost of a typo becoming a filter that silently matches nothing. The field is typed `String`, so both readings parse and only the validation differs.
 
 *2026-07-25 - design-gateway*
