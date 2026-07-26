@@ -569,17 +569,18 @@ done, `goto("## Write")`.
 
 ```lua
 model("fast")
-tools.add("web_search", "web_fetch", "add_statement", "done")
+tools.add("web_search", "web_fetch", "add_statement", "append_file", "done")
 ```
 
 Find every public statement by {{ params.entity }} on the topic. File each one
-with `add_statement`, including its source URL.
+with `add_statement`, including its source URL, and append its full text to
+`statements.md` as you go.
 
 ## Evaluate
 
 ```lua
 model("thinking")
-tools.add("set_verdict", "done")
+tools.add("read_file", "set_verdict", "done")
 
 assert(store.count("statements") > 0, "nothing gathered to evaluate")
 
@@ -588,7 +589,7 @@ function check()
 end
 ```
 
-Weigh the statements in the record. Reach a verdict and set it.
+Read `statements.md`, weigh what it contains, reach a verdict and set it.
 ```
 
 Frontmatter is YAML because it is frontmatter, a settled convention with tooling; the configuration files are TOML for the separate reason that they are Rust configuration. The two choices are unrelated and neither argues for changing the other.
@@ -703,6 +704,10 @@ A generic core tool, `record_add(collection, item)` with a `record_set(key, valu
 
 The core provides `create_file`, `append_file`, `read_file`, and `delete_file` as tools over in-memory blobs keyed by path. The model believes it is writing files; the runtime holds a map. Blobs are scoped to the run and discarded at the end, and reaching real disk happens only through declared output resolution. This is core rather than an extension because it is the sandbox: a section reading untrusted text and holding only virtual-file tools has no real path to traverse and no exfiltration channel, which removes two legs of the private-data-plus-untrusted-content-plus-exfiltration problem at once. Tension: the guarantee holds only if such a section is also denied any tool that shells out, which is the prompt author's responsibility and not something the core can check.
 
+Blobs are run-scoped rather than section-scoped, and that is the second reason the virtual filesystem exists. It is the blackboard that carries bulk content across a `goto` and between subagents: one section writes `statements.md`, a later one reads it, and what crosses the boundary is the path rather than the payload, which is the same reference-not-copy discipline `Task` uses for instructions. The division of labour with the run state store is therefore sharp and worth stating, because the two are easy to reach for interchangeably. The store holds small structured facts that a postcondition asserts on, that a declared `rows` output resolves from, and that a subagent returns serialized; `count`, `exists` and `get` are the whole read surface and that is sufficient for those three jobs. Anything a later section needs to read in bulk is a virtual file. This is why `store` needs no read for the contents of a collection: content that a model has to weigh was never supposed to live there.
+
+The `staker` example above shows the split. `add_statement` files a structured record, which is what makes `store.count("statements")` a meaningful precondition and what the `positions` rows output resolves from, while the statement text is appended to `statements.md`, which is what `## Evaluate` actually reads after `goto` has destroyed the conversation that gathered it. Tension: the gathering section writes each statement twice, once as a record and once as text, which is a real reliability cost paid to keep structure and prose in the places that can use them.
+
 ### Completion and failure detection
 
 `done()` is always in the tool set and cannot be removed. The model calls it to signal intentional completion, which makes stopping without it - hitting an output limit, stalling, or losing the thread - a detectable failure distinct from finishing. Three layers catch a bad run: the missing `done()` call, a failing `check()` postcondition, and per-tool call counting that flags a required tool never called. Together these are strictly stronger than a schema check, because "the model processed all fifteen chunks, filed at least one claim, and signalled completion" is a stronger claim than "the JSON parsed."
@@ -783,7 +788,6 @@ The recording extension and the fake gateway are the crate's test fixtures and a
 
 - Whether `state` and the run state store are typed or free-form JSON. Free-form is assumed above.
 - Whether a declared `key:` name is reachable as `state.<name>` and through `{{ state.<name> }}` body substitution, or only through `store.get`. The read side names `store.get` and the substitution rule names `state`, and nothing says whether they see the same keys.
-- Whether `store` gains a read for the contents of a collection. `count` is the only collection read specified, so a section that must weigh what an earlier section filed has no path to the items: the `staker` example's `## Evaluate` is told to weigh the statements and can only count them. `context.inject` is the obvious carrier if Lua could read them, and the alternative is a model-facing read tool, which spends instruction budget.
 - How `ask_user` reaches a caller, when it is implemented. It is a stub returning `Unimplemented` for now. MCP elicitation is the obvious carrier for a Cursor caller, but the observer interface is one-way and a browser caller and a terminal caller want different shapes, so the channel is unspecified rather than half-specified.
 - Whether the run state store is durable within a run or purely in memory. Discard-and-rerun means it need not survive a crash, which argues for memory, but a long fan-out holding results in memory is a different profile from one spilling them.
 - Whether `nominal_total` should instead come from a frontmatter-declared expected sequence, which would make the progress fraction reach its denominator on a normal run at the cost of a field that can drift from the sections.
