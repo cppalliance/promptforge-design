@@ -5,3 +5,19 @@ target/
 dataset*.jsonl
 first-gen-out/
 first-gen-manifest.jsonl
+sharpen-in/
+sharpen-ref/
+sharpen-out/
+sharpen-tp-out/
+tp-tutor.md
+pairgen-out*
+pairgen-in*
+pairgen-run*
+
+# Experiment battery: ignore regenerable/heavy outputs (API results, web dumps,
+# blur intermediates), keep scripts (.py), the log, findings.md, and the final
+# clean dataset tracked for reproducibility.
+experiments/**/*.jsonl
+!experiments/dataset-clean.jsonl
+experiments/**/*.csv
+experiments/**/*.log
