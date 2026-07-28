@@ -35,3 +35,6 @@ plain-english/**/passages*.jsonl
 plain-english/**/*.blur.jsonl
 plain-english/**/blur-*.jsonl
 plain-english/**/gate-*.jsonl
+# Re-include the final dataset deliverables (the top-level dataset*.jsonl rule
+# above otherwise catches these).
+!plain-english/**/dataset-*.jsonl
