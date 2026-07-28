@@ -46,3 +46,19 @@ Training pairs for the prompt-compression (deblurring) study. Each pair is `{inp
 - `wikipedia-p3-32`: "Some architectural scholars believe" (A) becomes "Many architectural historians link" (B) - the quantifier shifts from "some" to "many," changing the claimed prevalence of the belief, which would yield different answers to a question about how widely held the Carolina-origin theory is.
 
 *Built 2026-07-27 from the make-dataset pipeline (blur-gen 3 passes, pairgen gate1 control path). Commit intentionally omitted; the parent will commit.*
+
+## Blur-depth confirmation (does blurring harder lift the compression signal?)
+
+- **Question**: the pilot showed blur-expansion only ~1.06x, so the (blurred -> original) pairs barely compress. Hypothesis: more blur passes accumulate padding and widen the input-to-target gap.
+- **Method**: reblurred the same 100 Wikipedia passages to 10 passes (1 variant); measured expansion per pass level; ran the directional gate1 on pass-6 and pass-10.
+- **Expansion by pass level (mean blurred/original)** - flat, not growing:
+  - p1 1.03x, p2 1.08x, p3 1.06x, p5 1.08x, p8 1.09x, p10 1.07x
+- **Gate PASS by depth** - degrades sharply:
+  - passes 1-3 (prior run): 56%
+  - pass 6: 27/100 (27%)
+  - pass 10: 19/100 (19%)
+- **Kept-pair size ratio (target/input)** at pass 6 and 10: 0.97 (still ~3% compression, no gain over shallow).
+- **Finding**: Hypothesis refuted, decisively. Blur reaches a near-fixed point (~1.07x) by pass 2 and never accumulates more padding on dense human prose, so deeper blur adds no compression signal. Worse, meaning drift compounds with depth: gate PASS falls from 56% to 19% as reshuffling accumulates. Deeper blur is counterproductive here.
+- **Recommendation**: For plain human prose, keep blur shallow (passes 1-3) and treat these as a meaning-preserving-rewrite / vocabulary-breadth signal, not a compression signal. To get a real plain-English compression signal, change the bloat mechanism (a prompt that explicitly expands and hedges, rather than "rewrite, preserve meaning") or seed with deliberately verbose text. The strong compression signal remains the AI-generated/bloated sources (first-gen prompts blurred 1.21x; web prompts). Confidence: high (flat expansion across 10 passes plus a monotonic gate-rate collapse).
+
+*Blur-depth confirmation 2026-07-28. Commit by parent.*

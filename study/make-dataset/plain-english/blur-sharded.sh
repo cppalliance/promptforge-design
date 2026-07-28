@@ -6,7 +6,8 @@
 # Usage: blur-sharded.sh <passages.jsonl> <out-blur.jsonl> <shards> [blur-gen args...]
 # Prints "DONE ..." on completion; poll the .brun.log for that marker.
 set -uo pipefail
-IN="$1"; OUT="$2"; SHARDS="$3"; shift 3
+IN="$1"; OUT="$2"; SHARDS="$3"; PASSES="${4:-3}"
+if [ "$#" -ge 4 ]; then shift 4; else shift 3; fi
 EXTRA="$*"
 DIR="$(dirname "$OUT")"
 BASE="$(basename "$OUT" .jsonl)"
@@ -30,7 +31,7 @@ pids=()
 for i in $(seq 0 $((SHARDS-1))); do
   # shellcheck disable=SC2086
   $BLURGEN --input "$DIR/$BASE.shard$i.md" --output "$DIR/$BASE.shard$i.blur.jsonl" \
-    --passes 3 --variants 1 $EXTRA > "$DIR/$BASE.shard$i.plog" 2>&1 &
+    --passes "$PASSES" --variants 1 $EXTRA > "$DIR/$BASE.shard$i.plog" 2>&1 &
   pids+=($!)
 done
 echo "launched ${#pids[@]} blur shards: ${pids[*]}"
