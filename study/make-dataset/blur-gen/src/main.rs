@@ -98,6 +98,34 @@ fn word_count(s: &str) -> usize {
     s.split_whitespace().count()
 }
 
+/// Sections under this many words are too thin to blur meaningfully and tend
+/// to trigger the model's "empty input" boilerplate. Skip them.
+const MIN_SECTION_WORDS: usize = 12;
+
+/// A blur pass has gone off the rails when the model, given a short or empty
+/// input, replies with assistant boilerplate instead of a rewrite. Detect it
+/// so the pair is discarded rather than poisoning the dataset.
+fn looks_like_boilerplate(s: &str) -> bool {
+    let low = s.to_lowercase();
+    const TELLS: &[&str] = &[
+        "came through empty",
+        "message is empty",
+        "no content here",
+        "i'd be glad to help",
+        "i'd be happy to help",
+        "please share the",
+        "please paste the",
+        "paste the text",
+        "provide the text",
+        "share the passage",
+        "as soon as i have it",
+        "there's no content",
+        "there is no content",
+        "no text to revise",
+    ];
+    TELLS.iter().any(|t| low.contains(t))
+}
+
 /// Split markdown at H2/H3 headings. A section is the heading line plus the
 /// body up to the next heading. When the file has no such headings, the whole
 /// file is one section. Blank-only sections are dropped.
@@ -225,9 +253,14 @@ async fn main() -> Result<()> {
 
     let text = std::fs::read_to_string(&args.input)
         .with_context(|| format!("read {}", args.input.display()))?;
-    let sections = split_sections(&text);
+    let all_sections = split_sections(&text);
+    // Skip sections too thin to blur; they trigger empty-input boilerplate.
+    let sections: Vec<String> = all_sections
+        .into_iter()
+        .filter(|s| word_count(s) >= MIN_SECTION_WORDS)
+        .collect();
     if sections.is_empty() {
-        return Err(anyhow!("no non-empty sections in input"));
+        return Err(anyhow!("no sections at or above {MIN_SECTION_WORDS} words"));
     }
     println!(
         "Split {source_name} into {} section(s). {} passes, {} variants, {} model(s).",
@@ -265,6 +298,13 @@ async fn main() -> Result<()> {
                     call_api(&client, &api_key, model, args.max_tokens, &current).await?;
                 let bw = word_count(&blurred);
                 println!("  {} -> {} words", word_count(&current), bw);
+
+                // A boilerplate reply means the chain degenerated; drop this
+                // pass and abandon the rest of the chain rather than write junk.
+                if looks_like_boilerplate(&blurred) {
+                    eprintln!("  boilerplate detected, abandoning variant {variant} of section {}", si + 1);
+                    break;
+                }
 
                 let pair = Pair {
                     original: original.clone(),
