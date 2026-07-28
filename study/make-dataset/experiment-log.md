@@ -94,3 +94,19 @@ Each entry uses this format:
 - **Commit**: `exp-4: blur-sharpen-roundtrip`
 
 ---
+
+## E5: Effort level sweep
+
+- **Hypothesis**: effort=medium produces less aggressive sharpening, fewer gate1 failures, but less compression.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: 15 (10 web from E3 + 5 papergate from E2), run at high and medium.
+- **Configuration**: model=claude-opus-4-8, gate2=off, 3 shards per effort.
+- **Results**:
+  - high: gate1 6/15 (40%), compression 0.889 (12% reduction)
+  - medium: gate1 8/15 (53%), compression 0.894 (11% reduction)
+  - gate1 verdict differed on 4/15, flipping both directions (3 high-FAIL->medium-PASS, 1 the reverse)
+- **Key finding**: Weak, noisy support for the hypothesis. Medium gave a marginally higher gate1 rate and negligibly less compression (0.5%), but the flips go both ways, so most of the gap is gate run-to-run noise, not a real effort effect. Absolute rates are low here only because the mix is web-heavy (E3 web prompts are ~23% gate1). Medium is marginally safer, faster, and cheaper with no compression penalty.
+- **Decision**: Prefer effort=medium for the scale run (equal compression, slightly higher yield, lower cost). Weak preference; either is defensible.
+- **Commit**: `exp-5: effort-sweep`
+
+---
