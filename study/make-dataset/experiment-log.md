@@ -126,3 +126,14 @@ Each entry uses this format:
 - **Commit**: `exp-6: multipass-sharpen`
 
 ---
+
+## Consolidation
+
+- **Completed**: 2026-07-27
+- **Dataset**: `experiments/dataset-clean.jsonl`, 337 pairs: 286 blur-to-original (gold, target is true sharp first-gen text, passes 1-3) + 51 bloat-to-sharp (gate1-verified compression pairs from E2-off, E6-minimal, E3-web, E5).
+- **Optimal config**: Gate 1 only (drop Gate 2); minimal-change or two-pass sharpen; medium effort; size irrelevant to quality (slice for volume); source is the user's own prompts, not web.
+- **Core result**: sharpening cannot recover a blurred original (E4); the training target must be the true original captured before blur, and a learned model must approximate the inverse from many pairs.
+- **Findings**: `experiments/findings.md`.
+- **Commit**: `exp-final: consolidated dataset`
+
+---
