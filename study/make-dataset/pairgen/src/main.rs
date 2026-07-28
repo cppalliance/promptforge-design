@@ -48,6 +48,11 @@ struct Args {
 
     #[arg(long)]
     api_key: Option<String>,
+
+    /// Optional path to a file whose contents replace the default TIGHTEN
+    /// instruction (used by E6 to test a gentler, minimal-change sharpen).
+    #[arg(long)]
+    tighten_file: Option<PathBuf>,
 }
 
 const TIGHTEN: &str = "Above is a set of rules for tightening a prompt. Apply every applicable rule to the prompt below. Make it unambiguous and cut dead weight. Preserve exactly the meaning an executing model would follow: every instruction, condition, number, name, and defined behavior. Do not add, explain, or improve; only tighten. Output only the tightened prompt, with no preamble and no commentary.";
@@ -163,7 +168,16 @@ fn normalize_dashes(text: &str) -> String {
                         j += 1;
                     }
                     let run = j - i;
-                    if run == 2 {
+                    // Collapse a 2-hyphen run only in prose context (flanked by
+                    // alphanumerics or whitespace). This protects HTML comment
+                    // delimiters (`<!--`, `-->`) and other punctuation-adjacent
+                    // double-hyphens, whose neighbor is `!`, `>`, etc.
+                    let prose = |c: Option<&char>| {
+                        c.map_or(true, |c| c.is_alphanumeric() || c.is_whitespace())
+                    };
+                    let prev = if i > 0 { chars.get(i - 1) } else { None };
+                    let next = chars.get(j);
+                    if run == 2 && prose(prev) && prose(next) {
                         dashed.push('-');
                     } else {
                         for _ in 0..run {
@@ -296,8 +310,15 @@ fn parse_verdict(reply: &str) -> (String, String) {
     (verdict.to_string(), rest)
 }
 
-async fn sharpen(client: &reqwest::Client, key: &str, args: &Args, instrument: &str, bloated: &str) -> Result<String> {
-    let p = format!("{instrument}\n\n---\n\n{TIGHTEN}\n\n---\n\n{bloated}");
+async fn sharpen(
+    client: &reqwest::Client,
+    key: &str,
+    args: &Args,
+    instrument: &str,
+    tighten: &str,
+    bloated: &str,
+) -> Result<String> {
+    let p = format!("{instrument}\n\n---\n\n{tighten}\n\n---\n\n{bloated}");
     call(client, key, args, &p).await
 }
 
@@ -358,6 +379,16 @@ mod tests {
     }
 
     #[test]
+    fn html_comment_delimiters_survive() {
+        // The `--` inside `<!--` / `-->` must not collapse (cabinet metadata).
+        assert_eq!(
+            normalize_dashes("<!-- source: x -->"),
+            "<!-- source: x -->"
+        );
+        assert_eq!(normalize_dashes("a<!--b-->c"), "a<!--b-->c");
+    }
+
+    #[test]
     fn code_is_protected() {
         // fenced block: em-dash left verbatim
         let fenced = "```\nx = a\u{2014}b\n```";
@@ -380,6 +411,11 @@ async fn main() -> Result<()> {
         .ok_or_else(|| anyhow!("no API key"))?;
 
     let instrument = std::fs::read_to_string(&args.instrument)?;
+    // TIGHTEN instruction: default, or overridden by --tighten-file.
+    let tighten = match &args.tighten_file {
+        Some(p) => std::fs::read_to_string(p)?.trim().to_string(),
+        None => TIGHTEN.to_string(),
+    };
     // The compliance gate uses the checklist section only.
     let checklist = instrument
         .split_once("## Checklist")
@@ -418,7 +454,8 @@ async fn main() -> Result<()> {
         } else {
             pairs += 1;
             o.bloated = r.bloated.clone();
-            let target = normalize_dashes(&sharpen(&client, &key, &args, &instrument, &r.bloated).await?);
+            let target =
+                normalize_dashes(&sharpen(&client, &key, &args, &instrument, &tighten, &r.bloated).await?);
             o.sharpened = target.clone();
             let (v1, r1) = gate1(&client, &key, &args, &r.bloated, &target).await?;
             o.gate1 = v1.clone();

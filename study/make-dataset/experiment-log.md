@@ -110,3 +110,19 @@ Each entry uses this format:
 - **Commit**: `exp-5: effort-sweep`
 
 ---
+
+## E6: Multi-pass sharpen on gate1 failures
+
+- **Hypothesis**: Gate1 failures can be recovered by a second, gentler sharpen pass with a minimal-change prompt.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: 36 gate1 failures (12 each from E1, E3, E4; 76 available). Added `--tighten-file` to pairgen to swap in the minimal-change instruction.
+- **Configuration**: model=claude-opus-4-8, effort=high, gate2=off, minimal-change TIGHTEN prompt.
+- **Results**:
+  - recovered (gate1 PASS now): 26/36 (72%); by source e1 9/12, e3 8/12, e4 9/12
+  - compression 0.959 (only 4% reduction, vs ~15% for the aggressive default)
+- **Key finding**: A minimal-change re-sharpen recovers 72% of failures, confirming most gate1 failures were the aggressive default prompt over-editing (dropping/inventing), not unrecoverable content. Trade-off: recovered pairs are barely compressed (4%). Implied two-pass yield: aggressive (~65% gate1) then minimal on the rest recovers ~0.72 x 35% = ~25%, for ~90% combined gate1 pass.
+- **Fix**: Found and fixed a third strip bug - `<!--` and `-->` HTML comment delimiters were corrupted (embedded `--` collapsed). The strip now collapses a 2-hyphen run only when flanked by alphanumerics/whitespace (prose), protecting punctuation-adjacent `--`. Added a unit test (5/5 pass).
+- **Decision**: For a meaning-preserving compressor, favor the minimal-change prompt (much safer, ~4% compression) or a two-pass aggressive-then-minimal fallback for higher compression at ~90% yield.
+- **Commit**: `exp-6: multipass-sharpen`
+
+---
