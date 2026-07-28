@@ -38,6 +38,11 @@ struct Args {
     #[arg(long, default_value = "high")]
     effort: String,
 
+    /// Gate 2 mode: strict (full checklist), narrowed (material defects only),
+    /// or off (gate 1 alone decides kept).
+    #[arg(long, default_value = "strict")]
+    gate2_mode: String,
+
     #[arg(long, default_value_t = 32000)]
     max_tokens: u32,
 
@@ -303,10 +308,26 @@ async fn gate1(client: &reqwest::Client, key: &str, args: &Args, a: &str, b: &st
     Ok(parse_verdict(&call(client, key, args, &p).await?))
 }
 
-async fn gate2(client: &reqwest::Client, key: &str, args: &Args, checklist: &str, b: &str) -> Result<(String, String)> {
-    let p = format!(
-        "Below is a checklist of rules, then a prompt. List every checklist item the prompt violates, one per line. If it violates none, write 'none'.\n\nOn the first line write PASS if it violates nothing, or FAIL if it violates at least one.\n\n--- CHECKLIST ---\n{checklist}\n\n--- PROMPT ---\n{b}"
-    );
+async fn gate2(
+    client: &reqwest::Client,
+    key: &str,
+    args: &Args,
+    checklist: &str,
+    a: &str,
+    b: &str,
+) -> Result<(String, String)> {
+    // "narrowed" checks only material, behavior-changing defects relative to A,
+    // ignoring the aspirational checklist items that reject nearly everything.
+    // "strict" (default) runs the full compliance checklist against B alone.
+    let p = if args.gate2_mode == "narrowed" {
+        format!(
+            "You are checking whether prompt B has any of these specific defects relative to prompt A: a number was changed, a condition was inverted, a prohibition was removed, a scope was narrowed or widened, or a step was dropped. Ignore style, structure, and aspirational quality.\n\nOn the first line write PASS if none of these defects exist, or FAIL if at least one does. If FAIL, name it.\n\n--- PROMPT A ---\n{a}\n\n--- PROMPT B ---\n{b}"
+        )
+    } else {
+        format!(
+            "Below is a checklist of rules, then a prompt. List every checklist item the prompt violates, one per line. If it violates none, write 'none'.\n\nOn the first line write PASS if it violates nothing, or FAIL if it violates at least one.\n\n--- CHECKLIST ---\n{checklist}\n\n--- PROMPT ---\n{b}"
+        )
+    };
     Ok(parse_verdict(&call(client, key, args, &p).await?))
 }
 
@@ -404,16 +425,23 @@ async fn main() -> Result<()> {
             o.gate1_reason = r1;
             if v1 == "PASS" {
                 g1_pass += 1;
-                let (v2, r2) = gate2(&client, &key, &args, &checklist, &target).await?;
-                o.gate2 = v2.clone();
-                o.gate2_violations = r2;
-                if v2 == "PASS" {
-                    g2_pass += 1;
+                if args.gate2_mode == "off" {
+                    // Gate 1 alone decides; record that gate 2 did not run.
+                    o.gate2 = "OFF".to_string();
+                } else {
+                    let (v2, r2) =
+                        gate2(&client, &key, &args, &checklist, &r.bloated, &target).await?;
+                    o.gate2 = v2.clone();
+                    o.gate2_violations = r2;
+                    if v2 == "PASS" {
+                        g2_pass += 1;
+                    }
                 }
             } else {
                 o.gate2 = "SKIPPED".to_string();
             }
-            o.kept = o.gate1 == "PASS" && o.gate2 == "PASS";
+            // kept: gate1 must pass; gate2 must pass unless it is off.
+            o.kept = o.gate1 == "PASS" && (args.gate2_mode == "off" || o.gate2 == "PASS");
             if o.kept {
                 kept += 1;
             }

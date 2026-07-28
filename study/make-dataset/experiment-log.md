@@ -43,3 +43,20 @@ Each entry uses this format:
 - **Commit**: `exp-1: slice-then-sharpen`
 
 ---
+
+## E2: Gate 2 modes
+
+- **Hypothesis**: Gate1-only or gate1+narrowed-gate2 raises yield without admitting bad pairs.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: the 20 validation pairs (`pairgen-in.jsonl`), run once per mode.
+- **Configuration**: model=claude-opus-4-8, effort=high; added `--gate2-mode {strict,narrowed,off}` to pairgen; 3 shards per mode, 3 modes concurrent.
+- **Results**:
+  - strict: gate1 15/20, gate2 PASS 2, kept 2/20 (10%) - matches baseline
+  - narrowed: gate1 17/20, gate2 PASS 17, kept 17/20 (85%)
+  - off (gate1-only): gate1 18/20, kept 18/20 (90%)
+- **Spot-check (off, 5 kept)**: all genuinely sharp; every specific preserved (18 names, 12 pages, "medium tier or higher", version 2.1, "closing paragraph", allocators/iterators). Em-dashes converted to `-`. No junk admitted.
+- **Key finding**: Narrowed gate2 caught zero defects beyond gate1 (all 17 gate1-survivors passed it), so it is redundant with gate1 and just costs an extra call. Strict gate2 is the yield killer (rejects on aspirational checklist items). Gate1-only yields 90% with clean output.
+- **Decision**: Standard config for E3-E6 is `--gate2-mode off` (gate1-only). Note gate1 has mild run-to-run variance on borderline cases (dropped cross-reference flips PASS/FAIL between runs); acceptable for a training set.
+- **Commit**: `exp-2: gate2-modes`
+
+---
