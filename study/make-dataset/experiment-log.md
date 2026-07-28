@@ -26,3 +26,20 @@ Each entry uses this format:
 - **Completed**: 2026-07-27
 
 ---
+
+## E1: Slice-then-sharpen
+
+- **Hypothesis**: Sharpening ~100w chunks has a higher gate1 pass rate than sharpening 300w+ sections.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: 9 papergate pass-6 bloated sections (235-1130w) as whole; the same 9 sliced into 52 chunks (median 78w). 61 pairs total.
+- **Configuration**: model=claude-opus-4-8, effort=high, gate2=strict, 4 concurrent shards.
+- **Results**:
+  - whole: gate1 6/9 (66%), gate2 0/9, kept 0/9
+  - sliced: gate1 32/52 (61%), gate2 0/52, kept 0/52
+  - sliced gate1 by band: 0-80w 62%, 80-110w 52%, 110-200w 75% (no monotonic size effect)
+- **Compression**: ~0.84-0.85 (15-16% reduction) for both.
+- **Key finding**: Hypothesis refuted. Slicing does not raise the gate1 pass rate (~60% either way) and shows no monotonic size effect. Gate2 strict rejects 100% here (0/61), confirming it is the binding constraint, not size. Slicing does multiply pair count ~5.8x (52 vs 9) at equal gate1 rate, so it helps volume, not quality.
+- **Implication**: The lever is gate2 mode (E2), not input size. Slicing is worth keeping only as a volume multiplier.
+- **Commit**: `exp-1: slice-then-sharpen`
+
+---
