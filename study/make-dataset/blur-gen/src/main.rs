@@ -36,7 +36,7 @@ struct Args {
     /// Comma-separated Anthropic model IDs to rotate through, one per pass
     #[arg(
         long,
-        default_value = "claude-sonnet-4-20250514,claude-3-5-haiku-20241022,claude-opus-4-20250514"
+        default_value = "claude-haiku-4-5-20251001,claude-sonnet-4-6,claude-opus-4-8"
     )]
     models: String,
 

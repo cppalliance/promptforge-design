@@ -75,3 +75,22 @@ Each entry uses this format:
 - **Commit**: `exp-3: web-shitprompts`
 
 ---
+
+## E4: First-gen blur-sharpen roundtrip
+
+- **Hypothesis**: Blurring a known-sharp first-gen prompt, then sharpening the blurred version, yields a pair execution-equivalent to the blurred input and closer to the original sharp than the blurred version is.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: 10 first-gen prompts (1000-3000w), split by blur-gen into ~95 sections, blurred 3 passes (1 variant). 286 blur records; pass-3 (95) fed to pairgen. Deviation from plan: used blur-gen's natural section splitting instead of ~100w slices, because E1 refuted the size effect; slicing would add complexity for no benefit.
+- **Configuration**: blur-gen models haiku-4-5 / sonnet-4-6 / opus-4-8; pairgen model=claude-opus-4-8, effort=high, gate2=off; 4 shards each stage.
+- **Fix**: blur-gen default model IDs were stale (404 on `claude-sonnet-4-20250514` etc.); updated defaults to current IDs.
+- **Results**:
+  - blur expansion original->blurred: 1.21x mean (bloat confirmed)
+  - pairgen gate1 65/95 (68%); compression blur->sharp 0.83
+  - similarity to original (difflib word-seq ratio): blurred 0.447, sharpened 0.446 (identical)
+  - sharpened closer to original than blurred: 49/95 (51%, coin flip)
+  - mean words: original 189, blurred 203, sharpened 171
+- **Key finding**: Hypothesis refuted, and this is the pivotal result. Sharpening the blurred text does NOT recover the original: the sharpened output is no closer to the original than the blurred was (0.446 vs 0.447), and it compresses even below the original's length (171 vs 189w) along a different path. Blur is irreversible from within the chain (data processing inequality, confirmed empirically). Instrument-sharpening produces A valid compression, not THE original.
+- **Decision**: The training target must be the true original, not a re-sharpened blur. The dataset product from E4 is the 286 (blurred -> original) pairs across passes 1-3, where the target is the known-sharp first-gen text. This is the scalable deblurring-training source (85 first-gen prompts x passes x variants -> thousands of pairs).
+- **Commit**: `exp-4: blur-sharpen-roundtrip`
+
+---
