@@ -60,3 +60,18 @@ Each entry uses this format:
 - **Commit**: `exp-2: gate2-modes`
 
 ---
+
+## E3: Web shitprompts
+
+- **Hypothesis**: Bloated web prompts, sharpened by the instrument, produce clean training pairs at reasonable yield under gate1-only.
+- **Started / Completed**: 2026-07-27
+- **Inputs**: 30 prompts from `awesome-chatgpt-prompts` (1504 qualifying at 50-500w; sampled diversely, 50-440w).
+- **Configuration**: model=claude-opus-4-8, effort=high, gate2=off, 4 shards.
+- **Results**: gate1 7/30 (23%), kept 7/30 (23%), compression 0.86 (14% reduction).
+- **Failure breakdown**: of 23 gate1 failures, ~8 were the sharpener ADDING constraints the source never had (invented numbers, edge-case branches, revise-loops, fixed orders), ~15 were dropped/narrowed scope.
+- **Spot-check (kept)**: clean (Gomoku board rules, Elasticsearch project spec preserved verbatim).
+- **Key finding**: Web prompts are a low-yield, contaminated source (23% vs 60-90% for the user's own prose). The instrument's gap-filling rules ("quantify every quantity", "define the empty case", "escape hatch per hard rule") cause it to INVENT specifics when the source is vague, and gate1 correctly rejects those as behavior changes. This empirically confirms the earlier conclusion: the training source must already contain the specifics (the user's own prompts / blurred versions of them), not arbitrary web text.
+- **Decision**: Do not scale web prompts (yield below the 50% threshold). Keep the 7 clean pairs. E4 (blur-sharpen of first-gen prompts) is the right source.
+- **Commit**: `exp-3: web-shitprompts`
+
+---
