@@ -24,3 +24,14 @@ experiments/**/*.log
 experiments/**/*.plog
 experiments/**/*.json
 experiments/**/shard*.md
+
+# Plain-english blur datasets: ignore intermediates, keep scripts, logs, and
+# the final dataset-*.jsonl deliverables tracked.
+plain-english/**/*.shard*
+plain-english/**/*.plog
+plain-english/**/*.run.log
+plain-english/**/*.brun.log
+plain-english/**/passages*.jsonl
+plain-english/**/*.blur.jsonl
+plain-english/**/blur-*.jsonl
+plain-english/**/gate-*.jsonl
