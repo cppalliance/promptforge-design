@@ -288,6 +288,30 @@ Tension: the Anthropic shim is the most intricate code here and the part least d
 
 A third `Upstream` implementation exists for a model carrying a pack, which posts raw text to `/completions` rather than translating one chat protocol into another. It is selected by the model rather than by the endpoint, for a reason given under `Model packs`, and an endpoint serving a packed model still declares `protocol = "openai"`.
 
+## Gateway composition and deployment topologies
+
+Because the gateway presents an OpenAI-compatible endpoint on its front and consumes one on its back, another gateway is a valid backend. An `[[endpoint]]` whose `base_url` names a second gateway and whose `api_key` is that gateway's shared token is indistinguishable, to the routing table, from a vendor endpoint. Gateways therefore compose, and a request can traverse a chain of them before it reaches a pod.
+
+The topology this exists for: a developer at home runs a personal gateway, and that gateway forwards self-hosted-model requests to the company gateway on the intranet, which is the only process that reaches the RunPod pods.
+
+```mermaid
+flowchart LR
+    Exec["executor (home)"] -->|"one base_url"| Local["local gateway (home)"]
+    Local -->|"local models"| Card["local vLLM / SGLang"]
+    Local -->|"self-hosted models"| Company["company gateway (intranet)"]
+    Company -->|"pods only reachable here"| Pods["RunPod vLLM pods"]
+```
+
+The reason for the chain rather than a direct home-to-pod hop is the rule from `Scope`: the concurrency budget only holds if exactly one process reaches a given backend, because vLLM's own queue is unbounded. The company gateway is that one process for the pods. A second gateway that reached the pods directly would give each its own budget, and the global cap would be a fiction. So the home gateway does not hold the RunPod credential or an endpoint to the pods at all; it holds an endpoint to the company gateway, and every self-hosted request is admitted, queued, and pinned by the company gateway exactly as a direct request would be. The home gateway's local card, which only it can reach, is its own disjoint backend and needs no coordination.
+
+`upstream` at each hop is the name the next hop knows the model by, not the name the final pod knows. In the chain above, the home gateway's `reasoning-large` entry sets `upstream = "reasoning-large"`, because the company gateway routes by that name; the company gateway's `reasoning-large` entry sets `upstream = "Qwen/Qwen3-235B-A22B-Instruct-FP8"`, the string the pod knows. Each gateway rewrites `model` for its own next hop and no further. A home entry that put the pod's string in `upstream` would miss the company gateway's routing table and 404. Tension: a model's identity is now spelled in as many places as there are hops, and a rename propagates along the chain rather than in one file.
+
+The single-owner rule is a convention until the network enforces it. A RunPod proxy URL is public, so the pods must accept connections only from the company gateway's egress address, by IP allowlist or by placing the pods on the intranet. Without that, a leaked RunPod credential reaches the pods around the company gateway and around its budget. The allowlist keys on source IP, so the company gateway needs a stable egress address. This is network configuration outside any `gateway.toml` and is stated here because the budget's integrity depends on it.
+
+Two chain concerns are deferred. Pinning needs the run header to survive each hop, so a forwarding endpoint must relay `X-PromptForge-Run` for the terminal gateway's pin to hold; a chain that drops it costs a prefill per hop and no more. And a forwarding gateway's own admission budget sits in front of the authoritative one, so a passthrough hop should run an effectively unbounded budget rather than throttle before the process that owns the backend does. Neither matters until admission control and pinning exist.
+
+Tension: composition multiplies the places a request can wait, fail, or lose its pin, and a symptom seen at the executor may originate two gateways away. The `X-PromptForge-Endpoint` header names only the terminal endpoint, so diagnosing a chain means reading a log line at each hop rather than one.
+
 ## Admission control
 
 ```mermaid
@@ -1104,6 +1128,7 @@ Queued requests hold a connection while they wait, which is the operational cons
 - Whether `Retry-After` should become an estimate from observed slot-hold history rather than the fixed admission wait.
 - The reported 2.5x P99 TTFT degradation on an endpoint after roughly 60 minutes of uptime, mechanism unattributed. If it reproduces, the gateway is where a periodic endpoint recycle would have to be expressed, and it currently has no such concept.
 - What an upstream 4xx body actually is on the wire. The errors section requires both that a 4xx passes through "with its own status and truncated body" and that every error body is the OpenAI envelope, and those cannot both hold for an `anthropic` endpoint, whose error body is Anthropic-shaped. Three readings: relay the backend's body verbatim, which preserves its detail and hands an OpenAI SDK an envelope it cannot parse on the Anthropic path; lift the upstream message into the gateway's envelope under `upstream_client_error`, which keeps one shape everywhere and discards the backend's own `type` and `code`; or lift only on the `anthropic` protocol, which keeps both at the cost of a per-protocol branch in the error path. The table above assumes the second.
+- Whether an upstream 4xx is ever transient, which the Errors section assumes it is not. Observed against Anthropic's OpenAI-compatible endpoint: an identical chat-completions request returned 400 twice and then 200 unchanged, so a 400 was not deterministically the caller's request being wrong. If some upstream 400s are retryable, two rules are in tension. The pass-through-4xx rule hands the executor a fatal error for a request that would have succeeded on a second attempt, and the no-retry stance says the client owns any retry, so the natural place for a small bounded retry with backoff on idempotent completions is `GatewayClient` in the core, not the gateway. What is unsettled is whether a transient 400 is frequent enough to warrant it, and whether it can be told apart from a genuine 400 without retrying blindly, since the envelope carries no retryable signal the way a 429 carries `Retry-After`.
 - Whether any pack earns itself. The prefix-cache argument is derived from a reported 480 ms to 110 ms at a 94 percent hit rate and from the 0.3-versus-87 percent block-invalidation figure, neither measured on this deployment. The cheap way to settle it is to read vLLM's own prefix-cache hit-rate metric on a pinned production run before writing any pack, because a hit rate already near the ceiling means the chat template is stable in practice and the whole mechanism can wait.
 - An incremental parser, which is the only thing that lets a packed model stream text as it arrives and therefore the only thing that puts the voice path and the agent path back on one model. It needs a pack to expose where a tool-call span opens so text before it can be released and everything after buffered, and that is a second parser per pack rather than a shared one.
 - Whether a pack owns sampling defaults. A model family has a recommended temperature and `top_p`, that recommendation belongs with the format knowledge, and the gateway currently forwards whatever the caller sent. Moving it into the pack would silently change results for an existing caller, which argues for leaving it out and recording it here instead.
