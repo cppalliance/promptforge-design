@@ -1,0 +1,329 @@
+{
+  "catalog_id": "real_toolret_pos_0131",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Team Week Players",
+      "description": "Retrieve team week players for a given season and round",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me",
+      "description": "Get detailed profile information about the current user (including the\ncurrent user's username).\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BDapi_All_Divisions",
+      "description": "`/v1.0/divisions`\nGet all divisions of Bangladesh in English and Bangla.\n\n**Response**\n```\nstatus: object,\ndata: [\n  _id: string,\n  division: string\n  divisionbn: string\n]\n```",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "video_post_metadata",
+      "description": "Fetch metadata for a single TikTok video post.",
+      "params": [
+        "video",
+        "fresh"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_out_Sharing_w_Rachael_LastName",
+      "description": "Last name of customer",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_topic_benefits_or_drawbacks(query: str, topic: str, aspect: str) -> str",
+      "description": "def discuss_topic_benefits_or_drawbacks(query: str, topic: str, aspect: str) -> str:\n    '''Discuss the benefits or drawbacks of a specific topic.\n    \n    Args:\n        query (str): The original query to answer.\n        topic (str): The topic to discuss.\n        aspect (str): The aspect to discuss about the topic. Options: [\"benefits\", \"drawbacks\"].\n       \n    Returns:\n        str: The discussion result.\n    '''\n    \n    assert aspect in [\"benefits\", \"drawbacks\"]\n    query = f\"Discuss the {aspect} of {topic}.\"\n    return llm_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "categorizeDocument",
+      "description": "Categorizes a given text into one or more predefined categories.",
+      "params": [
+        "text",
+        "config_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OS_Sports_Perform_Substages_motorsport",
+      "description": "Get substages by stage_id (motorsport)",
+      "params": [
+        "{'name': 'stage_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "percentage_like_all_three",
+      "description": "This function calculates the minimum percentage of people who like all three fruits.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "pe_demo_View_request_headers_and_body",
+      "description": "View the request headers and body in JSON format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLandscapeDesign",
+      "description": "Retrieve landscape design information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_term",
+      "description": "Calculates the nth term of the sequence",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SearchFollowers",
+      "description": "Search for followers of a specific user on Instagram",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QueryBankAccount",
+      "description": "\"A query bank account API that takes two parameters - 'account' and 'token'. The 'account' parameter refers to the bank account number that needs to be queried and the 'token' parameter is used to authenticate the user making the request.\"",
+      "params": [
+        "{'name': 'account', 'in': 'query', 'sche",
+        "{'name': 'token', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indian_Stock_Exchange_API_StockPrice",
+      "description": "Enter the SYMBOL such as TATAMOTORS, M&M etc as a parameter at the endpoint and it will give your the Live Price updates from exchange.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Onboarding_Project_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arbitrage Bets API",
+      "description": "This API returns a list of bets that have arbitrage opportunities, along with the combinations of bookmakers that make up these arbitrage bets.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Air_Quality_By_Coordinates",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "MusicGenerator",
+      "description": "music generator, can generate music according to the conditions provided.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_kfc_locations_by_state_and_city",
+      "description": "Retrieve KFC locations for a given state and city with pagination support.",
+      "params": [
+        "state",
+        "city",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_constant_of_proportionality_between_two_variables(data_frame, variable",
+      "description": "def calculate_constant_of_proportionality_between_two_variables(data_frame, variable1_col, variable2_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of two variables and returns the constant of proportionality between them.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing two variables with columns specified by variable1_col and variable2_col.\n    variable1_col (str): The column name for the first variable.\n    variable2_col (str): The column name for the second variable.\n    \n    Returns:\n    float: The constant of proportionality be",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "generateJoke",
+      "description": "Generate a random joke",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 52 Week Low by Country",
+      "description": "Retrieve the 52-week low stock prices for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SendSMS",
+      "description": "Send a single SMS message",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Audio Posts",
+      "description": "Retrieve audio posts from Instagram",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TLE_Collection",
+      "description": "Search records",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Trailing Total Returns",
+      "description": "Retrieve the trailing total returns for a given performance ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_Feed_Hot",
+      "description": "Feed Hot API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Linear Regression Intercept",
+      "description": "Calculates the intercept for the linear regression trendline for each data point.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getNonprofitBudget",
+      "description": "Retrieve budget information of a nonprofit organization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "insert_daily_trend_analysis",
+      "description": "Insert daily trend analysis into the report document",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "curl -X GET 'https://api.openweathermap.org/data/2.5/forecast?q={city_formatted}",
+      "description": "# Get the weather forecast data in {city}\ncurl -X GET 'https://api.openweathermap.org/data/2.5/forecast?q={city_formatted}&appid={API_KEY}{optional_params}'\n\nParameters:\nq: (required) City name.\nappid: (required) Your unique API key.\nunits: (optional) Units of measurement. 'standard' (default), 'metric' and 'imperial' units are available.\nmode: (optional) Response format. 'JSON' format is used by default. To get data in 'XML' format use mode=xml.\nlang: (optional) You can use the lang parameter to get the output in your language. 'en' for English (default); 'fr' for French; 'zh_cn' for simplifi",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_market_v2_auto_complete",
+      "description": "Get auto suggestion by word or phase",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_family_members",
+      "description": "This method takes three arguments, 'vegetarian', 'non_veg', and 'both', which represent the number of people who eat only vegetarian, only non-vegetarian, and both types of food, respectively. It returns the total number of people in the family.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Scraper_v2_Hashtag_info",
+      "description": "Get hashtag (challenge) info.",
+      "params": [
+        "{'name': 'hashtag', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football Players",
+      "description": "Returns a list of all active football players, including their details such as name, position, team, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_time",
+      "description": "Calculates the average time taken by two runners to run a leg of the course",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Order History",
+      "description": "Retrieve a list of orders placed by a customer and account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dgsub_breed",
+      "description": "Returns an array of all the sub-breeds from a breed.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aaaa_Get_all_Billing_Plans",
+      "description": "Get all Billing Plans",
+      "params": [
+        "{'name': 'apiId', 'type': 'STRING', 'des"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_neg_0008",
+  "tools": [
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_string",
+      "description": "Create a filter string for OpenF1 API requests.",
+      "params": [
+        "filter_name",
+        "filter_value",
+        "operator"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_acknowledge_reminder_and_hide",
+      "description": "FIXED: Acknowledge reminder without UI flashing",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorgenerate_html_code",
+      "description": "Generate HTML/CSS/JavaScript code based on a website description.",
+      "params": [
+        "description",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_driver_info",
+      "description": "Retrieve detailed information about a specific driver.",
+      "params": [
+        "driver_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "find_opening_by_name",
+      "description": "Search for a chess opening by its name in the Lichess openings database. Return the ECO code, name, PGN, FEN and sub-variations of a chess opening by its name. The name is matched case-insensitively.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_entity_relationship_diagram",
+      "description": "Generates an Entity Relationship (ER) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_voice_enhanced",
+      "description": "POLISHED: Enhanced voice upload with better validation and feedback",
+      "params": [
+        "audio_file",
+        "category"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "ehottl-take-1",
+      "name": "ehottl_take_1_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_trains_by_station",
+      "description": "Retrieves comprehensive information about all trains passing through a specific railway station. This function queries the Indian Railways API to fetch details of trains that have a scheduled stop at the specified station, including arrival/departure times, train types, and frequency of service. Returns: JSON response containing train details including:, Train numbers and names, Scheduled arrival and departure times, Platform numbers, Train types (Express/Mail/Passenger), Days of operation, Regular/Special train status, , If station code is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "station_code"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_update_ui_on_language_change",
+      "description": "Atualiza a interface com base no novo idioma selecionado. Usa gr.update() para garantir que as propriedades dos componentes sejam atualizadas corretamente.",
+      "params": [
+        "language"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_generate_unit_test",
+      "description": "Generates a Jest unit test file for the provided source code using the Anthropic API. This function leverages the 'QA-Sentinel' automated test engineering bot to create comprehensive unit tests aiming for 100% statement, branch, function, and line coverage. Returns: The content of the generated Jest test file as a string, or an error message, if the code is not provided or an exception occurs during generation.",
+      "params": [
+        "code",
+        "source_code_path",
+        "test_root_dir_path",
+        "additional_system_prompt",
+        "anthropic_api_key"
+      ]
+    },
+    {
+      "server": "mcp-brawlstats",
+      "name": "mcp_brawlstats_save_brawlstars_key",
+      "description": "Store a Brawl Stars API key in server memory for later use. This should be the **first** tool called in a session.  Once the key is saved, subsequent calls to `get_recent_battles` can access the API without requiring the LLM (or user) to resend the long token. Returns: Status message \u2014, \u2022 \"\u2705 API key saved in server memory\" on success, \u2022 \"\u274c No key provided\" if the argument was empty",
+      "params": [
+        "api_key"
+      ]
+    },
+    {
+      "server": "nationstates-mcp",
+      "name": "nationstates_mcp_address_nation_issues",
+      "description": "Address a specific issue for a nation in NationStates API. Returns: API response text.",
+      "params": [
+        "NATION",
+        "X_PASSWORD",
+        "issue_id",
+        "option_id"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_add_token_light",
+      "description": "Add light to a token. This will allow to show it inside the fog of war. It can be used to add light to items like torches or characters. It will be attached so that the light moves with the token.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "light_radius"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoint",
+      "description": "Retrieve the API endpoint URL and filter metadata for a given OpenF1 endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_available_npcs",
+      "description": "Handle testing available NPCs data access.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    }
+  ]
+}

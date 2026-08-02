@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0089",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Query_Mark_Price_Kline",
+      "description": "Query mark price kline.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'from', 'type': 'NUMBER', 'desc",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ticker",
+      "description": "Retrieve real-time or historical stock ticker data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRefugeeStatistics",
+      "description": "Retrieve statistics on refugee population",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "runas",
+      "description": "A tool in the Windows environment for running programs as a specified user.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "British_Airways_Flight_Info_Search_departures_by_flight",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [{\"name\": \"flightnumber-scheduleddeparturedate-scheduleddeparturedate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"\"}, {\"name\": \"flightNumber\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"011\"}, {\"name\": \"scheduledDepartureDate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"2014-06-01\"}], \"optional_parameters\": [], \"method\": \"GET\", ",
+      "params": [
+        "{'name': 'flightnumber-scheduleddepartur",
+        "{'name': 'flightNumber', 'type': 'STRING",
+        "{'name': 'scheduledDepartureDate', 'type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education_equity.compare_student_groups",
+      "description": "Compares academic achievements between different student groups within a region to highlight educational inequalities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_23andMe_profile_picture",
+      "description": "{\"category_name\": \"Medical\", \"required_parameters\": [{\"name\": \"profile_id\", \"type\": \"STRING\", \"description\": \"profile_id as returned from /user/\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"get_23andMe_profile_picture\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'profile_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airport_arrivals",
+      "description": "Fetch the flight arrivals for a specified airport on a given date, optionally filtered by carrier.",
+      "params": [
+        "airportcode",
+        "carriercode",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_transaction_details",
+      "description": "Retrieve the transaction details for a specified account ID on a specific date with a specific merchant",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_episode_downloadable_audio",
+      "description": "Fetches the full details of a given podcast episode. Provides a downloadable URL of the full audio if available.",
+      "params": [
+        "episodeid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Events List",
+      "description": "Retrieve a list of events by sport, string, and locale",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "items",
+      "description": "Fetches item details from the Codester API using the specified item ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TimeManager",
+      "description": "managing time and effort",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "openai/whisper-base",
+      "description": "Whisper is a pre-trained model for automatic speech recognition (ASR) and speech translation. Trained on 680k hours of labelled data, Whisper models demonstrate a strong ability to generalize to many datasets and domains without the need for fine-tuning.",
+      "params": [
+        "model_name",
+        "input_features",
+        "forced_decoder_ids"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_initial_fee(cost1, nights1, cost2, nights2)",
+      "description": "def find_initial_fee(cost1, nights1, cost2, nights2):\n    \"\"\"\n    Find the initial fee based on the total cost of two different durations.\n\n    Parameters:\n    cost1 (float): The total cost of the first duration.\n    nights1 (int): The number of units of the first duration.\n    cost2 (float): The total cost of the second duration.\n    nights2 (int): The number of units of the second duration.\n\n    Returns:\n    float: The initial fee.\n    \"\"\"\n    # Calculate the cost per unit after the first unit\n    cost_per_unit = (cost2 - cost1) / (nights2 - nights1)\n\n    # Calculate the initial fee\n    init",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "f_of_x",
+      "description": "This function takes an integer as input and returns the result of applying the function f(x) = 3x+2 to the input integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_che",
+      "description": "def check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_check: str, query: str) -> str:\n    '''Check the activity of an object and compare it with a specific activity.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for activity.\n        activity_to_check (str): The activity to compare with.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"Just {activity_to_check}\" if the object is engaged in the activity_to_check, \"Engaged in {activity}\" otherwise",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ticket_cancellation_time",
+      "description": "Get the latest cancellation time for each train ticket option",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_movies",
+      "description": "List and search through all the available movies with various sorting, filtering, and ordering options.",
+      "params": [
+        "genre",
+        "order_by",
+        "with_rt_ratings",
+        "sort_by",
+        "page",
+        "query_term",
+        "quality",
+        "minimum_rating"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cat_facts",
+      "description": "Returns a list of facts of cats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Property Types",
+      "description": "Retrieves a list of property types from Priceline.com",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dictionary_synonyms_temporarily_unavailable",
+      "description": "Fetches synonyms from a dictionary API for a given word in the specified language.",
+      "params": [
+        "language",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Defi_Data_Protocols",
+      "description": "List of protocols along with their tvl",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_best_players_in_playoffs_if_exist",
+      "description": "Works the same like regular season just for the playoffs.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'STRING', '",
+        "{'name': 'competitionId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone_Validator_API_Is_mobile",
+      "description": "Returns `true` or `false` depending on whether the number is a mobile line or not.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_nightly_rate",
+      "description": "This method takes two arguments, 'total_charge' and 'nightly_fee', and returns the nightly rate of the room.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ExerciseDB_List_by_equipment",
+      "description": "Fetch exercises by type of equipment",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "basic_search",
+      "description": "Performs a basic search for movie news articles using the `/news/basic/search` endpoint.",
+      "params": [
+        "q",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magic_AliExpress_api_bestSales_product_productID_salesHistory",
+      "description": "This resource returns the historic of sales",
+      "params": [
+        "{'name': 'productID', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Tournament_Info",
+      "description": "Current season, stage structure(divisions,conferences etc.), country and many more information about a tournament.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_nutritional_values",
+      "description": "Calculates the nutritional values for a given dish based on its ingredients and their quantities.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getSmsMessagesPaginated",
+      "description": "By default returns all SMS messages across all phone numbers sorted by ascending created at date. Responses are paginated. You can restrict results to a list of phone number IDs. You can also filter out read messages",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seller Prostring API",
+      "description": "Retrieves seller prostring details for a single seller on Amazon.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get NFL Team Roster",
+      "description": "This API returns the current or historical roster of any NFL team, using the team ID or abbreviation. The roster is upstringd periodically throughout the day, and historical rosters are saved on a daily basis starting from May 5th, 2023.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List source languages",
+      "description": "Returns a collection of all source languages supported by TEXTKING.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Concert",
+      "description": "Retrieve information about a specific concert on Spotify",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_unit_digit",
+      "description": "This method takes an integer and returns its unit digit.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "European Champions API",
+      "description": "Retrieve information about European football champions, including titles and success.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Channel Search",
+      "description": "This endpoint gets search results in a given YouTube channel using the channel ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_product",
+      "description": "This function searches for a product using the Tokopedia API based on the given query and act parameters.",
+      "params": [
+        "query",
+        "act"
+      ]
+    }
+  ]
+}

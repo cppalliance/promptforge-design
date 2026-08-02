@@ -1,0 +1,366 @@
+{
+  "catalog_id": "real_toolret_pos_0125",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "forwardGeocoding",
+      "description": "Convert a textual address into geographic coordinates (latitude and longitude).",
+      "params": [
+        "query",
+        "normalizecity",
+        "addressdetails",
+        "accept-language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Author Ratings for Symbol",
+      "description": "Retrieve author ratings for a given stock symbol from Seeking Alpha Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_recommendations",
+      "description": "Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks. If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.\n\nFor artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'seed_artists', ",
+        "{'in': 'query', 'name': 'seed_genres', '",
+        "{'in': 'query', 'name': 'seed_tracks', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_dog_image_by_breed",
+      "description": "Returns some random dog images from a breed, e.g. hound.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_and_book_meeting_room",
+      "description": "Find and book a meeting room that meets specific capacity and timing requirements",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "apimail10_getNewEmail10",
+      "description": "get New Email 10",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Sweden_Songs",
+      "description": "Provide the Sweden Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimeMarketData",
+      "description": "Retrieve real-time market data for multiple exchanges around the world.",
+      "params": [
+        "symbols",
+        "exchange",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_refund_status",
+      "description": "Check the refund status after canceling the flight",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEnergySupply",
+      "description": "Retrieve the energy supply for a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_files",
+      "description": "Finds all files with a specific extension in a directory and its subdirectories.",
+      "params": [
+        "directory",
+        "extension"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Time Zones",
+      "description": "Get Time Zone list",
+      "params": []
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_search",
+      "description": "Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks\nthat match a keyword string.<br />\n**Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.**\n",
+      "params": [
+        "{'in': 'query', 'name': 'q', 'required':",
+        "{'explode': 'false', 'in': 'query', 'nam",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi",
+        "{'in': 'query', 'name': 'include_externa"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live Whois Lookup",
+      "description": "Retrieves detailed Whois information for a given domain name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "animationScheduler.schedule",
+      "description": "Schedules an animation sequence to be executed at a specific time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateShipmentDetails",
+      "description": "Update the details of a shipment in the logistics management software",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "qMhAxMN",
+      "description": "Get live summary information of market by region. In terms of Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "currencyExchangeRate.query",
+      "description": "Fetches real-time exchange rates between two specified currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ReservationBooking",
+      "description": "This API is to book a hotel and a restaurant.",
+      "params": [
+        "{'name': 'hotelDetails', 'in': 'query', ",
+        "{'name': 'restaurantLocations', 'in': 'q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Recetas_en_espa_ol_Get_recipes_details",
+      "description": "Get details of any recipe",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Images_Infos_API2_extracttext",
+      "description": "Extract text from an image",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "etiquette.phone_call_schedule",
+      "description": "Schedule a phone call with a specific person at a specific time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geocoding_Places_Get_Geocoding_with_Images",
+      "description": "Get complete readable place info with high resolution images in prefered language based on given latitude and longitude.",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr",
+        "{'name': 'version', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeProteins",
+      "description": "Analyze a protein sequence and provide information about its structure and function",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football Category Schedules",
+      "description": "Retrieves schedules of a specific football category for a given string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "boatMaintenance.logRepair",
+      "description": "Log a completed repair job on a specific boat.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_day_average",
+      "description": "This method takes two arguments, 'total_earning' and 'num_days', and returns the average earning per day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "hotel_selection_and_verification",
+      "description": "Select hotels that meet the travel standards and check the availability and price of rooms",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FilterDuplicateRemover",
+      "description": "Removes duplicates from the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cities",
+      "description": "Find cities, filtering by optional criteria. If no criteria are set, you will get back all known cities with a population of at least 1000.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sports",
+      "description": "Get listing of all upcoming sports events for football, cricket and golf in json(regarless of the query).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_Image_Search_Search",
+      "description": "Webit Image Search API provides you a powerful endpoint to search billions of images from the world wide web featuring rating, reverse search by image and multi-lingual capabilities.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Ephemeral Proxies Service Status",
+      "description": "This API returns the current status of the ephemeral proxies service, including the total number of datacenter proxies available and grouped by country.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "License Plate Lookup",
+      "description": "Search for vehicle information by license plate number and state.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AppointmentRegistration",
+      "description": "\"Register an appointment API that takes three parameters - 'patient_name', 'doctor_name', and 'appointment_time'. The 'patient_name' parameter refers to the name of the patient who wants to register an appointment, 'doctor_name' refers to the name of the doctor who will take the appointment, and 'appointment_time' specifies the date and time of the appointment.\"",
+      "params": [
+        "{'name': 'patient_name', 'in': 'query', ",
+        "{'name': 'doctor_name', 'in': 'query', '",
+        "{'name': 'appointment_time', 'in': 'quer"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "JavaScript Jobs API",
+      "description": "Retrieve a list of job openings related to JavaScript programming in the USA.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Team Regular Season Top Players",
+      "description": "Retrieve the top players of a specific American Football team during a regular season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestByEdinetCode",
+      "description": "Return the latest securities report data of a company specified with an EDINET code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "evaluate_floor_ceil(floor_value, ceil_value)",
+      "description": "def evaluate_floor_ceil(floor_value, ceil_value):\n    \"\"\"\n    Evaluates the sum of the floor of a number and the ceiling of another number.\n\n    Parameters:\n    floor_value (float): The number to take the floor of.\n    ceil_value (float): The number to take the ceiling of.\n\n    Returns:\n    int: The sum of the floor of floor_value and the ceiling of ceil_value.\n    \"\"\"\n    return math.floor(floor_value) + math.ceil(ceil_value)",
+      "params": []
+    }
+  ]
+}

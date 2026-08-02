@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_pos_0121",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "German_Cities_city_name",
+      "description": "Gibt Informationen zu der angegebenen Stadt zur\u00fcck. Bei Mehrdeutigkeit werden maximal drei Ergebnisse zur\u00fcckgegeben. Zur\u00fcckgegebene Werte sind: Einwohnerzahl, Durchschnittsalter, umliegende Orte.",
+      "params": [
+        "{'name': 'city-name', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Smile_get_webhook",
+      "description": "Get a webhook endpoint.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "extractEntities",
+      "description": "Extract named entities from a given text.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fixture Result",
+      "description": "Retrieve the result of a specific football fixture by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "display_recent_transactions",
+      "description": "Display recent transaction details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSeedInfo",
+      "description": "Retrieve information about a specific seed",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_adult_age",
+      "description": "Calculates the average age of the adults",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football Players",
+      "description": "Returns a list of all active football players, including their details such as name, position, team, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getHarvest",
+      "description": "Retrieve harvest details",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_following",
+      "description": "Get the current user's followed artists.\n",
+      "params": [
+        "{'in': 'query', 'name': 'type', 'require",
+        "{'in': 'query', 'name': 'after', 'requir",
+        "{'in': 'query', 'name': 'limit', 'requir"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Clubs",
+      "description": "Retrieve a list of clubs from the transfermarkt database, filtered by competition and locale.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ChurchApp_Get_all_Contacts",
+      "description": "Get all contacts, listed alphabetically",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "What_s_Language_LanguageDetection",
+      "description": "Detect the language of a given text and return the detected language code",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "txt",
+      "description": "Fetches a plain text blocklist of sites for a specified game using the StopModReposts API.",
+      "params": [
+        "game"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SOTI_Sync_No_of_Participants",
+      "description": "No. of Participants",
+      "params": [
+        "{'name': 'ParticipantsCount', 'type': 'N"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scaleApp",
+      "description": "Scale an application on the PaaS platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RetrieveUSTaxRate_GetTaxRateByZip",
+      "description": "Retrieve the US tax rate by zip code",
+      "params": [
+        "{'name': 'zip', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ContextoGuess_guessWord",
+      "description": "guess a word and it will return the position it holds",
+      "params": [
+        "{'name': 'game', 'type': 'string', 'desc",
+        "{'name': 'guess', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateOpticalRotation",
+      "description": "Calculate the optical rotation of a given compound",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parse",
+      "description": "Extracts metadata from a given URL using OpenGraph protocol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimeTrades",
+      "description": "Retrieves real-time trade data for a specific security",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "apostaganha-aviator-latest",
+      "description": "Retrieves the latest results from Aviator at Aposta Ganha, including the most recent and oldest results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getComplaints",
+      "description": "SMTP complaints made against your account",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "f_of_x",
+      "description": "This function takes an integer as input and returns the result of applying the function f(x) = 3x+2 to the input integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateLibraryUsability",
+      "description": "Calculate the usability of a library based on user feedback",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorcycle_Specs_Database_List_of_all_Makes",
+      "description": "List of all Makes\n[MakeAll]\nGet a list of all makes\nsample:\n\n```\n   {\n        \"id\": \"55\",\n        \"name\": \"BMW\"\n    },\n    {\n        \"id\": \"60\",\n        \"name\": \"BPG\"\n    },\n    {\n        \"id\": \"66\",\n        \"name\": \"BSA\"\n    }\n```",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FCN",
+      "description": "Deep learning image segmentation tool, high accuracy, suitable for complex scenes, but the effect of the detail region processing is general, need a lot of training data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zipwhip_group_addmember",
+      "description": "Once a group is created via the group/save call, you then need to populate members.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'group', 'type': 'STRING', 'des",
+        "{'name': 'session', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submit_sell_order",
+      "description": "Submit stock sell order",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LinkedIn_Outreach_Linkedin_Connections",
+      "description": "This API does the sending connections job easy for you , just feed the URLs of the people you want to connect with and leave the job to us.",
+      "params": [
+        "{'name': 'urls', 'type': 'STRING', 'desc",
+        "{'name': 'message', 'type': 'STRING', 'd",
+        "{'name': 'cookie', 'type': 'STRING', 'de",
+        "{'name': 'email', 'type': 'STRING', 'des",
+        "{'name': 'key', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "offers",
+      "description": "This function retrieves a list of offers for a product identified by the `is_id` parameter from a price comparison API. Latitude, longitude, country, and the API key can be optionally provided to refine the search.",
+      "params": [
+        "is_id",
+        "latitude",
+        "longitude",
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Joke Property",
+      "description": "This API retrieves properties of a joke from the joke database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ghana_Food_Recipe_Api_Get_Recipe_by_ID",
+      "description": "This endpoint gets specific recipe by id",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "peers",
+      "description": "Retrieves a list of company peers given a stock symbol.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/random_credit_card",
+      "description": "Generates a list of fake credit cards",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realtime_Crypto_Prices_Get_Realtime_Rates",
+      "description": "Returns Realtime price of a coin",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Minecraft_UUID_Converter_UUID_to_Name",
+      "description": "Convert your Mineccraft UUID to a Name",
+      "params": [
+        "{'name': 'uuid', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_v2_Billboard_Hot_100",
+      "description": "Billboard Hot 100 chart \nis weekly based. \n\nIf `week` is not supplied, will default to last week. \nif the week date is not Saturday, will default to Saturday of that week",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_to_square_meters",
+      "description": "This method takes two arguments, 'length' and 'unit', where 'unit' is a string representing the unit of length (e.g. \"m\", \"ft\", \"in\"). It converts the length to meters and returns the result.",
+      "params": []
+    }
+  ]
+}

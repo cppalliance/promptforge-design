@@ -1,0 +1,56 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 14910.88it/s]
+{
+  "n_tools": 9922,
+  "nn_sim_percentiles": {
+    "50": 0.8596081733703613,
+    "75": 0.9121795296669006,
+    "90": 0.9999998807907104,
+    "95": 1.0000001192092896,
+    "99": 1.000000238418579
+  },
+  "thresholds": {
+    "0.9": {
+      "tools_with_nn_above": 2963,
+      "frac": 0.29862930860713566,
+      "cross_server": 1188,
+      "same_server": 1775
+    },
+    "0.95": {
+      "tools_with_nn_above": 1361,
+      "frac": 0.13716992541826245,
+      "cross_server": 1040,
+      "same_server": 321
+    },
+    "0.98": {
+      "tools_with_nn_above": 1118,
+      "frac": 0.11267889538399516,
+      "cross_server": 1022,
+      "same_server": 96
+    },
+    "0.99": {
+      "tools_with_nn_above": 1081,
+      "frac": 0.10894980850634953,
+      "cross_server": 1019,
+      "same_server": 62
+    }
+  }
+}
+
+Example near-duplicate pairs (nn_sim >= 0.97):
+  1.000 | [cli::config_reset] <> [claude-flow::config_reset]
+  1.000 | [cli::hooks_intelligence_trajectory-step] <> [claude-flow::hooks_intelligence_trajectory-step]
+  1.000 | [cli::embeddings_diskann_search] <> [claude-flow::embeddings_diskann_search]
+  1.000 | [cli::progress_sync] <> [claude-flow::progress_sync]
+  1.000 | [cli::daa_agent_create] <> [claude-flow::daa_agent_create]
+  1.000 | [internet-archive-mcp::clear_cache] <> [mcp-wayback-machine::clear_cache]
+  1.000 | [devtools::stub_mock-http-response] <> [browser-devtools-mcp::stub_mock-http-response]
+  1.000 | [cli::neural_compress] <> [claude-flow::neural_compress]
+  1.000 | [cli::github_pr_manage] <> [claude-flow::github_pr_manage]
+  1.000 | [cli::github_workflow] <> [claude-flow::github_workflow]
+  1.000 | [cli::daa_workflow_execute] <> [claude-flow::daa_workflow_execute]
+  1.000 | [cli::hooks_intelligence_pattern-store] <> [claude-flow::hooks_intelligence_pattern-store]
+  1.000 | [cli::ruvllm_sona_adapt] <> [claude-flow::ruvllm_sona_adapt]
+  1.000 | [cli::browser_session_replay] <> [claude-flow::browser_session_replay]
+  1.000 | [cli::managed_agent_create] <> [claude-flow::managed_agent_create]
+EXIT=0

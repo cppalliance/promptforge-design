@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_neg_0070",
+  "tools": [
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_session_results",
+      "description": "Retrieve and format the results of a specific session.",
+      "params": [
+        "year",
+        "round",
+        "session_type"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_reset_session",
+      "description": "Reset the current pomodoro session completely and clear all progress. This function resets all session data including work time, break status, timers, and accumulated statistics. Use this to start completely fresh. Returns: Confirmation message that the session has been successfully reset",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_generate_data_profiling",
+      "description": "Generates detailed data profiling report. Returns: Missing data analysis, Numeric statistics, Categorical statistics",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_datasets_homepage",
+      "description": "Fetches the homepage for the the U.S. Census Bureau 2020 decennial census API housed at https://api.census.gov/data/2020/dec/dp.html. Contains descriptions of available datasets. Also includes links to additional helpful documentation such as available geographies and example API calls. Returns: The homepage in markdown format",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_clear_fields",
+      "description": "Clear the subject and story text fields. Returns: List[str]: Empty strings for the fields to clear",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_company_details",
+      "description": "Fetch company details for the given LinkedIn username. Returns: A dictionary containing the company details",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_brand_to_generic_lookup_mcp",
+      "description": "Converts a drug brand name to its generic (active ingredient) name. It can also provide information on the countries where the brand name is marketed. This tool is fundamental for identifying the active component of a branded medication, which is necessary for most other clinical lookups and to avoid therapeutic duplication. Returns: JSON string with generic drug information and country-specific data",
+      "params": [
+        "brand_name"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_memories",
+      "description": "Universal memory listing interface.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_client_config",
+      "description": "\u521b\u5efa\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = { \"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000, \"webServer\": {               # webServer\u4e0d\u662f\u5fc5\u8981\u914d\u7f6e\uff0c\u5982\u679c\u7528\u6237\u6ca1\u8bf4\uff0c\u5c31\u4e0d\u8981\u914d\u7f6ewebServer \"addr\": \"127.0.0.1\", \"port\": 7400, \"user\": \"admin\", \"password\": \"admin\" } } \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_setup_jest",
+      "description": "Automates the setup of Jest with TypeScript and code coverage in a new project. Returns: A comprehensive guide for Jest setup, including TypeScript, integration and code coverage configuration, generated by the AI., Returns an error message string if an exception occurs.",
+      "params": []
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpcreate_hf_dataset",
+      "description": "Create a new HuggingFace dataset for memory storage.",
+      "params": [
+        "dataset_name",
+        "private",
+        "description"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_token",
+      "description": "Create a token with specified properties, they can be items or characters.",
+      "params": [
+        "name",
+        "type",
+        "x",
+        "y",
+        "size",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_run_shell_command",
+      "description": "Generate, plan, or execute commands based on mode.",
+      "params": [
+        "query",
+        "history"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "moondream-pointer",
+      "name": "moondream_pointerpredict",
+      "description": "Open Vocabulary Detection using moondream2",
+      "params": [
+        "im",
+        "object_name",
+        "mode"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "SafeBox",
+      "name": "SafeBox_code_eval",
+      "description": "Run a python code snippet into a sandbox environment. Returns: , A dictionary containing execution results:, 'stdout', 'stderr', 'returncode', and 'error' (if any)., A string with the image build logs (empty if no dependencies were detected).",
+      "params": [
+        "code_snippet"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_execute_command",
+      "description": "Executes a command in a specified Modal sandbox environment. Useful for running arbitrary commands in isolated environments, testing scripts and programs, executing programs with specific dependencies, debugging environment-specific issues, and running automated tests in isolation. Note: Commands are processed using shlex.split() and executed via subprocess.run(), so shell operators like &&, ||, |, >, < are not supported. Use separate command calls for chaining operations. Returns: JSON string containing stdout, stderr, returncode and execution time",
+      "params": [
+        "sandbox_id",
+        "command",
+        "timeout_seconds"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_geolocation",
+      "description": "Get location information from an ip address. Returns the following information on an ip address: 1. IPv4 2. city 4. country_code 5. country_name 6. latitude 7. longitude 8. postal 9. state Example: >>> from pprint import pprint >>> pprint(get_location(\"103.100.104.0\")) ... {'IPv4': '103.100.104.0', 'city': None, 'country_code': 'NZ', 'country_name': 'New Zealand', 'latitude': -41, 'longitude': 174, 'postal': None, 'state': None}",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "Website_Builder",
+      "name": "Website_Builder_generate_website",
+      "description": "Generates a simple website mockup based on the user's design request. Returns: HTML code for the website mockup.",
+      "params": [
+        "design_request"
+      ]
+    }
+  ]
+}

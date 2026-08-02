@@ -1,0 +1,372 @@
+{
+  "catalog_id": "real_pos_0171",
+  "tools": [
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_lookup",
+      "description": "Function to lookup a name in the Office of Inspector General (OIG) List of Excluded Individuals & Entitites (LEIE) who are legally excluded from receiving any Federal Medicare or Medicaid funds for services. Search can look for first name, last name, or both. All persons are presumed innocent unless the name and address match the results of a search. For legal chain of custody reasons, this information is inadmissable, but can be verified on the US Health and Human Services Website here: https://exclusions.oig.hhs.gov/",
+      "params": [
+        "last",
+        "first"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_deploy_contract_ui",
+      "description": "Gradio wrapper for contract deployment",
+      "params": [
+        "source_code",
+        "contract_name",
+        "from_account",
+        "constructor_args_str"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_current_weather",
+      "description": "Fetches current weather for a given city name or coordinates using OpenWeatherMap API. Returns: A formatted weather report string.",
+      "params": [
+        "location"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_join_game",
+      "description": "Handle player joining the game.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_proxy_by_name",
+      "description": "\u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053 \u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053\uff0c\u5982\u679c\u96a7\u9053\u4e0d\u5b58\u5728\u5219\u8fd4\u56de\u5931\u8d25\u3002 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_proxy_by_name",
+      "description": "\u4fee\u6539\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0\uff0c\u9700\u8981\u662f\u5b58\u5728\u7684\u96a7\u9053 - `type`: \u96a7\u9053\u7c7b\u578b\uff0c\u5fc5\u987b\u548c\u539f\u96a7\u9053\u4e00\u6837\uff0c\u4e0d\u652f\u6301\u4fee\u6539 - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_get_advice",
+      "description": "Get advice for a problem from IRC-based advisors. Returns: The advice from the advisor",
+      "params": [
+        "description",
+        "binary_file"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoints",
+      "description": "Retrieve a list of all available OpenF1 API endpoints. Returns: dict: A dictionary containing a single key 'endpoints' with a list of available endpoint names as strings.",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_discover_server_tools",
+      "description": "Discover available MCP tools from a server. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_deploy_for_user",
+      "description": "Deploy a Modal endpoint for a user using their API key. Unless the user has already done this, this must be done before they can train a LoRA. This function deploys a Modal script using the user's Modal API token ID and secret, allowing them to set up their own training endpoint. You can create them at https://modal.com/settings/tokens. Returns: tuple[str, str, str]: (status_message, stdout, stderr), status_message: Human-readable deployment status, stdout: Standard output from the modal deploy command, stderr: Standard error output from the modal deploy command, , status, out, err = deploy_for_user(\"ak-1234567890abcdef\", \"as-secret123...\")",
+      "params": [
+        "token_id",
+        "token_secret"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_generate_video_from_image",
+      "description": "Generate a video from an image and a prompt using the Google Veo-2.0 model. Returns: Path to the generated video file (temporary file used for Gradio display).",
+      "params": [
+        "path",
+        "prompt",
+        "aspect_ratio",
+        "duration",
+        "output_path"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htr_text",
+      "description": "Extract text from handwritten documents using HTR. returns: str: Extracted text from the image.",
+      "params": [
+        "image_path",
+        "document_type",
+        "custom_settings"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_process_file",
+      "description": "Memproses file yang diupload dan menghasilkan preview serta chart",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_video",
+      "description": "SAM2 Video Segmentation",
+      "params": [
+        "video_path",
+        "variant",
+        "masks",
+        "drop_masks",
+        "ref_frame_idx",
+        "async_frame_load"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_check_tools",
+      "description": "Sync wrapper for tool status check",
+      "params": []
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_mcp_server_instructions",
+      "description": "Returns comprehensive usage guidelines and documentation for all MCP server functions. Call this function first to understand available tools, workflows, and best practices. This function provides: - Complete function documentation - Recommended workflows - Best practices for MCP clients - Database schema information - Statistical analysis guidelines",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_process_return",
+      "description": "Process a return request for an order.",
+      "params": [
+        "order_id",
+        "item_ids_str",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_records_simple",
+      "description": "Recherche d'enregistrements simple",
+      "params": [
+        "model",
+        "domain_text",
+        "fields_text",
+        "limit"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_process_story_generation",
+      "description": "Process the story generation request from the UI.",
+      "params": [
+        "story_type",
+        "tone",
+        "kid_interests",
+        "subject",
+        "kid_age",
+        "kid_language",
+        "reading_time",
+        "pdf_file",
+        "model_selector"
+      ]
+    }
+  ]
+}

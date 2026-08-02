@@ -1,0 +1,389 @@
+{
+  "catalog_id": "real_neg_0020",
+  "tools": [
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_audio_info",
+      "description": "This component should not be used by agents or automated systems.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image_",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_stream_response_with_state",
+      "description": "Stream response and update appropriate chat state",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_s2_citations",
+      "description": "Get all papers that cited a given arXiv paper based on Semantic Scholar info. Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"arxiv_id\", \"external_ids\", \"title\", \"authors\", \"venue\", \"citation_count\", \"publication_date\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "arxiv_id",
+        "offset",
+        "limit"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_analyze_time_series",
+      "description": "Analiza una serie temporal para detectar tendencias, anomal\u00edas, estacionalidad y picos/valles.",
+      "params": [
+        "file",
+        "column_name",
+        "trend_window",
+        "anomaly_method",
+        "forecast_periods"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themerconvert_css_to_theme",
+      "description": "Convert CSS styles or style descriptions into standardized theme JSON format using HF hosted LLM.",
+      "params": [
+        "css_input",
+        "theme_name",
+        "user_token",
+        "model_choice"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_event_info",
+      "description": "Retrieve information about a specific Formula 1 event.",
+      "params": [
+        "year",
+        "round",
+        "format"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_arxiv",
+      "description": "Search arXiv using LangChain ArxivLoader. Returns: Formatted arXiv search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "FinancialRatioCalculator",
+      "name": "FinancialRatioCalculator__build_metric_help",
+      "description": "Returns a tuple (description, json_template) for the chosen ratio.",
+      "params": [
+        "selected_ratio"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_print_headers",
+      "description": "Print the headers of the request for debugging purposes.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_generate_video_from_image",
+      "description": "Generate a video from an image and a prompt using the Google Veo-2.0 model. Returns: Path to the generated video file (temporary file used for Gradio display).",
+      "params": [
+        "path",
+        "prompt",
+        "aspect_ratio",
+        "duration",
+        "output_path"
+      ]
+    },
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_code_wrapper",
+      "description": "### `generate_code_wrapper(user_request: str)` - **Purpose**: Generate Python code based on user request - **Parameters**: `user_request` - Textual description of the analysis - **Returns**: Generated code and status message - **Use Case**: AI-powered code generation for data analysis",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_info_bottle",
+      "description": "analyse une image de bouteille. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_radial_diagram",
+      "description": "Generates a radial (center-expanded) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_drug_burden_index_mcp",
+      "description": "Calculates the Drug Burden Index (DBI) for a patient's medication list. The DBI is a measure of a person's total exposure to anticholinergic and sedative drugs, which are associated with an increased risk of falls and cognitive impairment, especially in the elderly. This intelligent version automatically detects the route of administration for each medication (e.g., oral, transdermal patches, parenteral injections) and uses the appropriate reference data for each route, making it suitable for complex, real-world medication regimens. Returns: JSON string with DBI calculation results broken down by route and individual drug contributions",
+      "params": [
+        "drug_list"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "run_my_script",
+      "name": "run_my_script_run_script",
+      "description": "Executes a user-provided self contained Python script inside an isolated virtual environment with automatic dependency management. This function is intended to serve as a backend execution engine in a Model Context Protocol (MCP) server setting, where a language model may submit scripts for evaluation. It creates a secure workspace, detects dependencies, installs them using `uv`, executes the script, captures its output (including stdout and generated files), and returns all relevant results. \u26a0\ufe0f Limitations & Guidance for LLM-based Use: - Scripts should be self-contained, avoid system-level access, and primarily focus on data processing, text generation, visualization, or machine learning tasks. - The code can output logs, JSON, images, CSVs, or any other files, which are returned as artifacts. - Avoid infinite loops or long-running background processes. Timeout support can be added externally. Returns: , logs (str): Full stdout and stderr logs of the executed script., artifacts (Dict[str, str]): A dictionary of output files with their names and summaries or indicators, (e.g., image or CSV placeholders). Includes a \"__workdir__\" key pointing to the working directory., zip_path (str): Path to a ZIP archive containing all output artifacts for download.",
+      "params": [
+        "code",
+        "user_input",
+        "cleanup_enabled",
+        "cleanup_after"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_analyze_stack_trace_sync",
+      "description": "Analyze a stack trace and find relevant solutions on Stack Overflow. Returns: Formatted search results",
+      "params": [
+        "stack_trace",
+        "language",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competitions_list",
+      "description": "List Kaggle competitions with optional filtering and pagination. Returns: Formatted JSON string containing list of competitions with their details, , Each page contains 20 competitions. Use pagination for larger result sets.",
+      "params": [
+        "group",
+        "category",
+        "sort_by",
+        "page",
+        "search",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_cache_status",
+      "description": "Get cache status and statistics.",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_add_problem_solving_template",
+      "description": "Adds a problem-solving template to the database that defines a sequence of Modal sandbox tool operations to solve a specific task. Templates provide guidance on tool orchestration, required variables, volumes, and dependencies for common use cases like resume screening, code analysis, data processing etc. For example, a resume screening template would specify: 1. Required volumes for storing resumes and results 2. Python packages needed (e.g., PyPDF2, spacy) 3. Sequence of sandbox operations: - Launch sandbox with specific memory/CPU requirements - Create directories for resumes and results - Push resume files to sandbox - Execute NLP processing commands - Pull results from sandbox - Clean up resources. Returns: JSON string containing:, success (bool): Whether template was added successfully, template_id (str): Unique ID of added template, message (str): Status message",
+      "params": [
+        "name",
+        "description",
+        "required_tools",
+        "required_volumes",
+        "required_packages",
+        "tool_sequence",
+        "resource_requirements",
+        "example_usage"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_analyze_dataset_overview",
+      "description": "Analyzes dataset using Gemini AI and provides storytelling overview. Returns: AI-generated data story, Dataset basic information, Data quality percentage",
+      "params": [
+        "file_obj",
+        "api_key"
+      ]
+    }
+  ]
+}

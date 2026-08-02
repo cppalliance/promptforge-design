@@ -1,0 +1,368 @@
+{
+  "catalog_id": "real_pos_0114",
+  "tools": [
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpdelete_memory",
+      "description": "Universal memory deletion interface.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_cancel_order",
+      "description": "Cancel an existing order in the ERP system. Returns: Result of the cancellation operation",
+      "params": [
+        "order_id",
+        "reason"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpsave_to_hf_dataset",
+      "description": "Save all client memory data to a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name",
+        "private"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_hourly_analysis",
+      "description": "Process hourly timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> hourly_analysis(\"AAPL\", 3, 14, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_make_directory",
+      "description": "Creates a new directory in the sandbox. Useful for setting up directory structures, preparing for file operations, and organizing sandbox content. Returns: JSON string containing success status and created path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "parents"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_generate_images",
+      "description": "Generate images using a trained LoRA model. This function sends a request to generate images using a previously trained LoRA model. It takes a list of prompts and generates images for each one. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with generation details or error message, job_id: Unique identifier for the generation job, empty string if failed, , status, job_id = generate_images(, prompts_json='[\"a photo of a dog\", \"a photo of a cat\"]',, lora_repo=\"myuser/my-dog-lora\",, hf_token=\"hf_abcdef123456\",, //modal-app-url-api-generate-images.modal.run\", )",
+      "params": [
+        "prompts_json",
+        "lora_repo",
+        "hf_token",
+        "generate_images_url"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_both_sources",
+      "description": "Search both Wikipedia and arXiv simultaneously. Returns: (wikipedia_results, arxiv_results)",
+      "params": [
+        "query",
+        "wiki_max_docs",
+        "arxiv_max_docs"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_stix_object_of_attack_id",
+      "description": "Retrieves a STIX object identified by an ATT&CK ID in all ATT&CK matrices.",
+      "params": [
+        "attack_id",
+        "object_type"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_time",
+      "description": "Extract travel time from route data. Returns: Time in human format like '15 min' or '1 h 23 min'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_client_config",
+      "description": "\u4fee\u6539\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = {\"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000} \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_multiple_captions_interface",
+      "description": "Generate multiple caption variations using Meta-Llama-3.2-3B-Instruct",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_driver_championship_standings",
+      "description": "Get the championship standing for a specific driver in a given year.",
+      "params": [
+        "year",
+        "driver_name"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_start_agent_tracing",
+      "description": "Start tracing an AI agent execution. Call this at the beginning of any agent workflow. Returns: JSON response with execution_id for tracking",
+      "params": [
+        "agent_name",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_entity_relationship_diagram",
+      "description": "Generates an Entity Relationship (ER) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_year",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given year. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "years"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_recalls_mcp",
+      "description": "Searches for recent FDA-issued recall events for a specific drug product. This is critical for ensuring patient safety by identifying if a drug or specific batch has been recalled due to manufacturing defects, contamination, or other safety concerns. The results include details on the recall reason, status, and affected lots. Returns: JSON string with recall notices including recall number, status, and reason",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "FootballMatchesByDate",
+      "name": "FootballMatchesByDate_get_matches_by_date",
+      "description": "Fetches all matches for a given date from the Football Data API. Returns: A dictionary with the match ID as the key, and a dictionary containing the competition, home team, away team, home score and away score as the value",
+      "params": [
+        "date"
+      ]
+    }
+  ]
+}

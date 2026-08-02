@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_neg_0172",
+  "tools": [
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_helpline_with_state",
+      "description": "Handle helpline with state management",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_delete_item",
+      "description": "Delete an item from the game.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_memories",
+      "description": "Universal memory listing interface.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_proxy_by_name",
+      "description": "\u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053 \u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053\uff0c\u5982\u679c\u96a7\u9053\u4e0d\u5b58\u5728\u5219\u8fd4\u56de\u5931\u8d25\u3002 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_relevance_scorer",
+      "description": "Compute semantic relevance scores between a query and a list of documents using cosine similarity. This tool encodes the query and documents using a sentence embedding model, then calculates pairwise cosine similarity scores to determine how semantically similar each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"Semantic Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries with:, 'document': The original document text., 'score': A float representing cosine similarity between the query and the document (0 to 1).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_token",
+      "description": "Create a token with specified properties, they can be items or characters.",
+      "params": [
+        "name",
+        "type",
+        "x",
+        "y",
+        "size",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountains_by_range",
+      "description": "Retrieve all mountains in a specific mountain range. This function performs a case-insensitive search for mountains within a specified mountain range. The results include mountain names, altitudes, and counties. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, str, }, ], , >>> get_mountains_by_range(\"Sawatch Range\"), \"Mount Elbert\", \"Altitude\": 14433, \"County\": \"Lake\"}]'",
+      "params": [
+        "mountain_range"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorscreenshot_to_code",
+      "description": "Complete pipeline: analyze image and generate corresponding HTML code.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_exact_match_checker",
+      "description": "Check if each document contains the exact query string as a substring (case-insensitive). This tool performs a case-insensitive substring search to determine whether the query appears in each document exactly as entered (without tokenization or semantic matching). Returns: A dictionary containing:, 'tool': The name of the tool (\"Exact Match Checker\")., 'query': The input query string., 'results': A list of dictionaries with:, 'document': The original document., 'exact_match': A boolean indicating if the query is an exact substring of the document.",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_server_stats",
+      "description": "Get server statistics and health information.",
+      "params": []
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_cancel_order",
+      "description": "Cancel an existing order in the ERP system. Returns: Result of the cancellation operation",
+      "params": [
+        "order_id",
+        "reason"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_similar_text_post",
+      "description": "Retrieves a text post and its id semantically similar to the query through Vector Similarity. Id is only meant for LLMs, no need to show to user",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_client_config",
+      "description": "\u5220\u9664\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e **\u6ce8\u610f**\uff1a\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 **\u6ce8\u610f**\uff1a\u5220\u9664\u884c\u4e3a\u4f1a\u5bfc\u81f4\u6570\u636e\u4e22\u5931\uff0c\u4e00\u5b9a\u8981\u7528\u6237\u786e\u8ba4\u540e\u518d\u5220\u9664! \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_discover_and_analyze_web",
+      "description": "MCP Tool: Discovers relevant URLs based on a search prompt using web search search and then analyzes as Marketing & Content Intelligence Engine assistant. The analysis uses the swarm mode and is useful for finding content related to a specific topic including SEO keywords.",
+      "params": [
+        "search_prompt",
+        "num_urls",
+        "analysis_prompt_override"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_track_visualization",
+      "description": "Generate a visualization of the track with specified data.",
+      "params": [
+        "year",
+        "round",
+        "visualization_type"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_summary",
+      "description": "Returns the conversation summary data.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_user",
+      "description": "Function to lookup user information. Company User Lookup System. Enter a username to get user details. Returns: A formatted string with user details if found, otherwise an error message.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_search_memory",
+      "description": "Search memories and return results.",
+      "params": [
+        "query",
+        "memory_type",
+        "limit"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_list_erp_tables",
+      "description": "List all ERP tables in the database. Returns: List of ERP table names",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_send_transaction_ui",
+      "description": "Gradio wrapper for send transaction",
+      "params": [
+        "from_account",
+        "to_address",
+        "amount_eth"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image_preferred",
+      "description": "Edit a local image file using the 'Tile Upscaler' method. This is the preferred upscale method. Optionally save the result. Returns: The upscaled image (PIL.Image) generated using ControlNet + RealESRGAN.",
+      "params": [
+        "path",
+        "output_path",
+        "resolution",
+        "steps",
+        "strength",
+        "hdr",
+        "guidance"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_db_infos",
+      "description": "### `get_db_infos()`",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_prev_page",
+      "description": "Go to previous page for patients",
+      "params": []
+    }
+  ]
+}

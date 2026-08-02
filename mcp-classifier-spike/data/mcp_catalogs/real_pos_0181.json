@@ -1,0 +1,376 @@
+{
+  "catalog_id": "real_pos_0181",
+  "tools": [
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_event_info",
+      "description": "Retrieve information about a specific Formula 1 event.",
+      "params": [
+        "year",
+        "round",
+        "format"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_research_request",
+      "description": "This function researches a coding request from the user, generates code, executes it, and returns a clean summary of the results. This is an mcp server function that responds to research coding requests from users. Returns: A tuple containing the JSON result from the orchestrator and a clean summary",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorgenerate_html_code",
+      "description": "Generate HTML/CSS/JavaScript code based on a website description.",
+      "params": [
+        "description",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_extract_information",
+      "description": "Run the extraction pipeline and return output logs + state as a dict.",
+      "params": [
+        "cv_file",
+        "job_description_file",
+        "motivation_file",
+        "examples_file",
+        "max_iterations"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_column_in_table",
+      "description": "### `get_list_of_column_in_table(schema_name: str, table_name: str)`",
+      "params": [
+        "schema",
+        "table"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_bit_plane_extractor",
+      "description": "Extract and visualize a bit plane from a selected channel of the image.",
+      "params": [
+        "image",
+        "channel",
+        "bit",
+        "filter_type"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoint",
+      "description": "Retrieve the API endpoint URL and filter metadata for a given OpenF1 endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask_",
+      "description": "Ask the D&D rule agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_get_text_post_comments",
+      "description": "Retrieves latest 5 comments from the text post with id post_id",
+      "params": [
+        "post_id"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_list_ethereum_accounts",
+      "description": "List all created Ethereum accounts with their balances. Note: Only shows local testnet accounts for safety. Returns: dict: List of accounts",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_get_advice",
+      "description": "Get advice for a problem from IRC-based advisors. Returns: The advice from the advisor",
+      "params": [
+        "description",
+        "binary_file"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_text_extract",
+      "description": "Extract the text from any website or youtube video. Returns: A string containing text extracted from website or youtube",
+      "params": [
+        "generic_url"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_visitor",
+      "description": "\u65b0\u5efa\u6307\u5b9a\u5ba2\u6237\u7aef ID \u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e \u4f20\u5165\u53c2\u6570\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8): - program_id: \u5ba2\u6237\u7aef ID\uff0c\u6574\u6570\u6216\u5b57\u7b26\u4e32 - data: \u65b0\u89c2\u5bdf\u8005\u914d\u7f6e\uff0cJSON \u5b57\u7b26\u4e32\u3002\u5fc5\u987b\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a - name: \u89c2\u5bdf\u8005\u540d\u79f0\uff0c\u548c\u8981\u4fee\u6539\u7684name\u4e00\u81f4 - type: \u89c2\u5bdf\u8005\u7c7b\u578b\uff0c\u548c\u8981\u4fee\u6539\u7684type\u4e00\u81f4 - serverName: \u670d\u52a1\u7aef\u540d\u79f0\uff0c\u7528\u4e8e\u5173\u8054\u540e\u7aef\u670d\u52a1 - secretKey: \u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - bindAddr: \u7ed1\u5b9a\u7684\u672c\u5730 IP \u5730\u5740\uff08\u4f8b\u5982 \"127.0.0.1\"\uff09 - bindPort: \u7ed1\u5b9a\u7684\u672c\u5730\u7aef\u53e3\uff08\u6574\u6570, 65535 \u4ee5\u5185\uff09 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u64cd\u4f5c\u7ed3\u679c\uff0c\u683c\u5f0f `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5177\u4f53\u4fe1\u606f\"}`",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    }
+  ]
+}

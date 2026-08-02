@@ -1,0 +1,377 @@
+{
+  "catalog_id": "real_neg_0180",
+  "tools": [
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_download",
+      "description": "Downloads a paper from Arxiv and converts it to text. Use mode = \"html\" by default. Fall back to mode = \"pdf\" if there are any problems with the HTML version. Returns a JSON with a following structure: { \"title\": \"...\", \"abstract\": \"...\", \"toc\": \"...\", \"sections\": [\"...\", ...], \"citations\": [...] } Use `json.loads` to deserialize the result if you want to get specific fields. For example, `abstract = json.loads(arxiv_download(\"2409.06820v1\"))` The \"toc\" key contains Table of Contents, that sometimes has indexing for sections.",
+      "params": [
+        "paper_id",
+        "include_citations",
+        "mode"
+      ]
+    },
+    {
+      "server": "Patent-Scout",
+      "name": "Patent_Scout_analyze_patent_idea",
+      "description": "Analyzes a product idea to assess its patentability and finds similar patents. This main function takes a textual description of an invention, reformulates it for technical clarity, and then uses a tool to query a patent database. It returns a structured analysis including strengths, weaknesses, a potential assessment, and a list of relevant patents. Returns: The final structured result is embedded as JSON in the last status message within an HTML comment., {...} -->\" in the final yielded status to extract the complete analysis result., strengths (list), weaknesses (list), rating (dict), patents (list), rewritten_query (str), status (str)., Complete analysis results for all UI components.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_books_book_by_id",
+      "description": "Get a book from Google Books API by its ID. Returns: dict - book",
+      "params": [
+        "book_id"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_clear_fields",
+      "description": "Clear the subject and story text fields. Returns: List[str]: Empty strings for the fields to clear",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_suggest_move",
+      "description": "Suggest a move for the given FEN position. This function can be used to give a hint to the user about the best move to play. This function takes a FEN string representing the current board state and returns the best move in SAN format. Returns: The best move in SAN format.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_hourly_analysis",
+      "description": "Process hourly timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> hourly_analysis(\"AAPL\", 3, 14, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_list_repository_files",
+      "description": "List all files in a GitHub repository with specified extensions. Returns: JSON response with file list and metadata",
+      "params": [
+        "repo_url",
+        "branch",
+        "extensions"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_custom_respond",
+      "description": "Custom respond function with dynamic system prompt.",
+      "params": [
+        "message",
+        "book_name",
+        "book_content",
+        "selected_hero",
+        "lang_prompt"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_monitor_crm",
+      "description": "Monitoring CRM natif",
+      "params": [
+        "time_window",
+        "threshold"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_size_guide",
+      "description": "Get size guide information for clothing, shoes, and accessories.",
+      "params": [
+        "product_type",
+        "brand"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp_fips_lookup",
+      "description": "Fetches FIPS code for a given geography hierarchy and name. Also returns FIPS code for any parent geographies. Returns: dictionary representing FIPS code values for provided geography_hierarchy.",
+      "params": [
+        "geography_hierarchy",
+        "name",
+        "required_parent_geographies"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_class_diagram",
+      "description": "Generates a class diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TravAI",
+      "name": "TravAI_get_directions",
+      "description": "Returns a Markdown-formatted string with step-by-step directions and a static map URL. Returns: A single Markdown string summarizing the route or an error message.",
+      "params": [
+        "source",
+        "destination",
+        "mode",
+        "departure_time"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_disproportionality_analysis_mcp",
+      "description": "Performs a disproportionality analysis (also known as signal detection) on adverse event data. This statistical method compares the reporting rate of a specific drug-event combination to the reporting rate of that event for all other drugs in the database. It calculates metrics like Proportional Reporting Ratio (PRR) and Reporting Odds Ratio (ROR) to identify potential safety signals that may warrant further investigation. Returns: JSON string with PRR, ROR, IC values and statistical significance",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "background_limit"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "SlideDeck-AI",
+      "name": "SlideDeck_AI_execute_agent_task",
+      "description": "Orchestrates the full tool chain and updates the UI with native audio components.",
+      "params": [
+        "uploaded_files_list",
+        "user_topic_input"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_hf_datasets_search",
+      "description": "Search or filter HF datasets. Examples: List only the datasets in Russian for language modeling: hf_datasets_search(filter=(language:ru\", \"task_ids:language-modeling\")) List all recent datasets with \"text\" in their name hf_datasets_search(query=\"text\", sort_by=\"last_modified\") Returns a JSON object serialized to a string. The structure is: {\"results\": [...]} Every item in the \"results\" has the following fields: (\"id\", \"created_at\", \"last_modified\", \"downloads\", \"likes\", \"tags\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "search_filter",
+        "limit",
+        "sort_by",
+        "sort_order"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_local_file",
+      "description": "Convert a local document to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "local_file_path",
+        "output_format"
+      ]
+    }
+  ]
+}

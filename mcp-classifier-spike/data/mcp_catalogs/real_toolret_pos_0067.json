@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_pos_0067",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Search Patent",
+      "description": "Search patents globally based on a keyword and return a list of patents",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBikeStations",
+      "description": "Retrieve the list of bike stations, their locations, and the number of bikes available.",
+      "params": [
+        "contract"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_variable_value(equation, variable, disallowed_solutions)",
+      "description": "def find_variable_value(equation, variable, disallowed_solutions):\n    \"\"\"\n    Find the value of a variable that satisfies a given equation, excluding any disallowed solutions.\n\n    Parameters:\n    equation (sympy.Eq): The equation to be solved.\n    variable (sympy.Symbol): The variable to be solved for.\n    disallowed_solutions (list): A list of solutions that are not allowed.\n\n    Returns:\n    float: The value of the variable that satisfies the equation.\n    \"\"\"\n    # Solve the equation for the variable\n    solution = solve(equation, variable)\n    \n    # Filter out any disallowed solutions\n ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_List_of_Foods",
+      "description": "This endpoint responds with a list of mexican foods that includes their names and images, as well as their IDs, which must be provided in the \"Detailed Food Recipe by ID\" endpoint to receive the detailed recipe.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_zeros",
+      "description": "Counts the number of zeros at the end of a number obtained by multiplying a range of numbers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Best of the Day Predictions",
+      "description": "Retrieve the best betting predictions for the day in the sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Abuse IP Check Endpoint",
+      "description": "Checks the abuse status of an IP address and returns relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pop Songs API",
+      "description": "Retrieve information about the Greatest of All Time Pop Songs chart from Billboard.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.RunTo",
+      "description": "# Run to a room or object. 'object' can only be: ['table', 'laptop', 'water', 'chair', 'cup', 'dining_room', 'toilet', 'sink', 'home_office', 'washing_machine', 'bathroom', 'bedroom']. \nAgent.RunTo(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "hls_to_mp4_converter",
+      "description": "Converts HLS video format to MP4 format for Instagram V3",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_email_of_a_person",
+      "description": "Fetch the email address of a person based on their first name, last name, and domain using the Email Finder API.",
+      "params": [
+        "first_name",
+        "domain",
+        "last_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Asos_products_v2_list",
+      "description": "List products, search products with options and filters version 2",
+      "params": [
+        "{'name': 'store', 'type': 'STRING', 'des",
+        "{'name': 'offset', 'type': 'NUMBER', 'de",
+        "{'name': 'categoryId', 'type': 'NUMBER',",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_balance_sheet",
+      "description": "Fetches the balance sheet data of a company identified by the given ticker symbol.",
+      "params": [
+        "symbol",
+        "formstyle",
+        "freq"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Supported Symbols",
+      "description": "Retrieve a list of supported commodities and currencies for querying commodity rates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getArchitecturalCriticism",
+      "description": "Retrieve architectural criticism for a specific building or structure",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_categories_list_Deprecated",
+      "description": "List all root and sub categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Joke Property",
+      "description": "This API retrieves properties of a joke from the joke database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_Get_the_timezones",
+      "description": "Get the timezones.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tennis_Live_Data_Tournament_Matches_and_Results_by_Date",
+      "description": "This endpoint is the same as the /matches-results/{tournament_id} endpoint but can be narrowed down by date for faster loading.",
+      "params": [
+        "{'name': 'tournament_id', 'type': 'NUMBE",
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "wpinteract",
+      "description": "Fetch or search posts from self-hosted WordPress websites, opening new possibilities for smart interaction with content.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flightera_Flight_Data_flightInfo",
+      "description": "Returns the info for a flight on a specified date, or the current flight if date is omitted. Will return a 400 if the date requested is outside the subscription level",
+      "params": [
+        "{'name': 'flnr', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "relative_speed",
+      "description": "Calculates the relative speed of two trains in m/s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_detail_Deprecated",
+      "description": "Get property detail information",
+      "params": [
+        "{'name': 'property_id', 'type': 'STRING'",
+        "{'name': 'listing_id', 'type': 'STRING',",
+        "{'name': 'prop_status', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Crime Outcomes",
+      "description": "Returns the outcomes (case history) for the specified crime. Crime ID is a 64-character identifier, as returned by other API methods.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_numbers_fraction(num_digits, fraction)",
+      "description": "def count_numbers_fraction(num_digits, fraction):\n    \"\"\"\n    Counts the number of n-digit numbers that have the property that the (n-1)-digit number obtained by removing the leftmost digit is a fraction of the original number.\n\n    Parameters:\n    num_digits (int): The number of digits in the original number.\n    fraction (float): The fraction that the (n-1)-digit number should be of the original number.\n\n    Returns:\n    int: The number of n-digit numbers that satisfy the given property.\n    \"\"\"\n    count = 0\n\n    # Iterate over all n-digit numbers\n    for i in range(10**(num_digits-1), 10**",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_quarterly_interest",
+      "description": "This method takes two arguments, 'principal' and 'rate', and returns the amount of interest earned in a quarter year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "etiquette.phone_call_schedule",
+      "description": "Schedule a phone call with a specific person at a specific time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List of Countries",
+      "description": "Retrieve a list of countries, optionally with language support.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LinkedIn_Outreach_Linkedin_Connections",
+      "description": "This API does the sending connections job easy for you , just feed the URLs of the people you want to connect with and leave the job to us.",
+      "params": [
+        "{'name': 'urls', 'type': 'STRING', 'desc",
+        "{'name': 'message', 'type': 'STRING', 'd",
+        "{'name': 'cookie', 'type': 'STRING', 'de",
+        "{'name': 'email', 'type': 'STRING', 'des",
+        "{'name': 'key', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_qr_code",
+      "description": "Creates and returns a static QR code encoded with the provided email address. The QR code can be customized with various design parameters such as background color, eye pattern, error correction level, size, data gradient colors, and data patterns. When scanned, the QR code will prompt the user to send an email to the specified address.",
+      "params": [
+        "address",
+        "background_color",
+        "eye_pattern",
+        "error_correction",
+        "size",
+        "data_gradient_start_color",
+        "data_gradient_style",
+        "data_pattern"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.sort",
+      "description": "# Sorts worksheet using given sort orders. \nworksheet.sort(*specs, **kwargs)\n\nExamples:\n# Sort sheet A -> Z by column 'B'\nwks.sort((2, 'asc'))\n# Sort range A2:G8 basing on column 'G' A -> Z\n# and column 'B' Z -> A\nwks.sort((7, 'asc'), (2, 'des'), range='A2:G8')\n",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sshleifer/distilbart-cnn-12-6",
+      "description": "DistilBART is a distilled version of BART, a model for text summarization. This specific checkpoint, 'sshleifer/distilbart-cnn-12-6', is trained on the cnn_dailymail dataset and provides a fast and effective way to generate summaries of text. The model can be loaded using the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMAAPI_TeamNextEvents",
+      "description": "Get information about the next events for a specific team.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Horoscopes_AI_Get_Signs",
+      "description": "Return 12 horoscope sign names.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sustainable Development Goals API",
+      "description": "Returns the United Nations' global goals for sustainable development in JSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "appMonetization.getPurchaseData",
+      "description": "Obtains detailed in-app purchase data for a mobile app, segmented by item and user demographics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Webtoon Providers",
+      "description": "Fetches a list of webtoon providers from the Entertainment domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "send_notifications",
+      "description": "Send notifications to users",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_Tuesday_Wednesday",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the tickets sold on Tuesday and Wednesday.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TV Series Season",
+      "description": "Retrieves information about a specific season of a TV series from the movies database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_neg_0179",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "CA_Lottery_Super_Lotto_Plus_Recent",
+      "description": "Most recent draw for Super Lotto Plus",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "CorpusCollector",
+      "description": "for collecting a corpus of texts",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pszemraj/flan-t5-large-grammar-synthesis",
+      "description": "A fine-tuned version of google/flan-t5-large for grammar correction on an expanded version of the JFLEG dataset.",
+      "params": [
+        "raw_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Backtrack Kline",
+      "description": "Retrieves historical k-line (candlestick) data for a specific cryptocurrency pair on a chosen exchange and market.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEPTA_Plain_text_Bus_Schedules",
+      "description": "Intended for SMS.",
+      "params": [
+        "{'name': 'req1', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_limit_check_daily_check",
+      "description": "daily limit check",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Card Templates",
+      "description": "Retrieve a list of available business card templates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.SitOn",
+      "description": "# Sit on an object. 'object' can only be: ['bed', 'chair', 'toilet', 'couch', 'love_seat']. \nAgent.SitOn(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bhagavad_Gita_v3_Get_chapter_details_by_id",
+      "description": "Get chapter details  by id",
+      "params": [
+        "{'name': 'chapterId', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "All_In_One_Crypto_Swiss_Knife_Tokens_Balances",
+      "description": "get balance of any address.\nsupportedChains: eth, bsc, matic, avax, okt, hmy, heco, klay, op, arb, ftm, xdai, cro, mobm, celo, aurora, fuse, evmos, cfx, kava",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'chain', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify ICMAI Request",
+      "description": "Verifies the ICMAI request using the provided request ID and returns the result.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Information",
+      "description": "Retrieve postal information, such as addresses or shipping rates, for a business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List All Bot Category Groups",
+      "description": "Retrieve a list of category groups linked to user-owned bots (not locked bots).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Domain_DA_PA_Check_URL_Metrics",
+      "description": "- Title\n- Domain Authority Score\n- Page Authority Score\n- Equity\n- Links\n- Moz Rank",
+      "params": [
+        "{'name': 'target', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeneSequenceAnalyzer.identifyMutationPatterns",
+      "description": "Analyzes a DNA sequence to identify potential mutation patterns and their locations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetGames",
+      "description": "Retrieve a list of Diablo 4 gameplays, paginated by page number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_search_enterprise",
+      "description": "Perform a highly customizable search through the enterprise database with various filters and sorting options.",
+      "params": [
+        "q",
+        "link_begins_with",
+        "sort_by",
+        "topic",
+        "to",
+        "to_rank",
+        "from_rank",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_vehicle_capacity",
+      "description": "This method takes two arguments, 'cargo_capacity' and 'vehicle_weights', where 'vehicle_weights' is a list of tuples containing the number of vehicles and their average weight. It returns the maximum number of vehicles that can be carried by the given cargo capacity.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Editorial",
+      "description": "Retrieve information about a Deezer editorial content",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exercisePlanner.createWorkoutSchedule",
+      "description": "Creates a personalized workout schedule based on user preferences and fitness goals.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Song Search",
+      "description": "Searches for a song from popular song platforms. The API will search YouTube for the item by default. Prepend *scsearch:* to the search term to specify a search from SoundCloud, *spsearch:* for Spotify, or *bcsearch:* for BandCamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Store_API_DLC_details",
+      "description": "Returns details of the selected DLC.",
+      "params": [
+        "{'name': 'appId', 'type': 'NUMBER', 'des",
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRandomWord",
+      "description": "Returns a random word based on the specified type and count.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "format_currency",
+      "description": "This method takes one argument, 'amount', and returns a string representation of the amount in the format \"Rs. X.XX\".",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "AI2sql",
+      "description": "Converts a natural language text into an SQL query.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Baseball_venues",
+      "description": "Baseball venues",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "investment_portfolio_builder",
+      "description": "A tool for building investment portfolios, suitable for stocks, bonds, money market securities, commodity futures, and foreign exchange investments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "nft_news",
+      "description": "Fetches up-to-date NFT news from the specified API.",
+      "params": [
+        "nftnews"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chaingateway_io_importAddress",
+      "description": "Returns all ethereum addresses created with an account.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotes_API_get_random_quote",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Top_property_managers",
+      "description": "Returns the largest property managers",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_Compare_players",
+      "description": "Compare players by player_ids",
+      "params": [
+        "{'name': 'player_ids', 'type': 'STRING',",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Halsey Album Information",
+      "description": "Retrieves album information for Halsey's lyric snippets when searched by album ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get API Current Version",
+      "description": "Get information for the current version of a specified API, including the `id`, `name`, and `status`.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flight Information for Hong Kong International Airport",
+      "description": "Retrieve flight information for the Hong Kong International Airport for the next 3 months, with optional filtering by arrival and cargo.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoDB_Cities_Places_Near_Location",
+      "description": "Get places near the given location, filtering by optional criteria.",
+      "params": [
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'locationid', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_soccer_team_names_First_25_teams",
+      "description": "You'll get only the first 25 team names and their short names if you have basic plan.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SurveyMethods_Responses_Summary",
+      "description": "Using this API call you can retrieve information such as custom field labels & values, date on which  a response was started and when was it completed, the survey response method (email/web), the  email address of the respondent in case of an email response, IP address and the response code  for each individual response of your survey.",
+      "params": [
+        "{'name': 'login_id', 'type': 'STRING', '",
+        "{'name': 'api_key', 'type': 'STRING', 'd",
+        "{'name': 'survey_code', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "current_air_quality",
+      "description": "Fetches the current air quality conditions for a given location specified by its longitude and latitude.",
+      "params": [
+        "lon",
+        "lat"
+      ]
+    }
+  ]
+}

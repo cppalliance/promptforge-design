@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_toolret_neg_0010",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "StudentName2ID",
+      "description": "This API converts a student's name to their ID.",
+      "params": [
+        "{'name': 'student_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_numbers_fraction(num_digits, fraction)",
+      "description": "def count_numbers_fraction(num_digits, fraction):\n    \"\"\"\n    Counts the number of n-digit numbers that have the property that the (n-1)-digit number obtained by removing the leftmost digit is a fraction of the original number.\n\n    Parameters:\n    num_digits (int): The number of digits in the original number.\n    fraction (float): The fraction that the (n-1)-digit number should be of the original number.\n\n    Returns:\n    int: The number of n-digit numbers that satisfy the given property.\n    \"\"\"\n    count = 0\n\n    # Iterate over all n-digit numbers\n    for i in range(10**(num_digits-1), 10**",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "generatequiz",
+      "description": "Generates a quiz based on the specified topic using the Quizy API.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instant_Cameroon_News_Home_page",
+      "description": "Home and Welcome page that introduces the API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "What_s_Language_LanguageDetection",
+      "description": "Detect the language of a given text and return the detected language code",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Video_Streaming_Data",
+      "description": "Video Streaming Data",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airlines_countries",
+      "description": "Return a list of countries where an airline operates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Auction Listings",
+      "description": "This API returns a list of auction listings from the Database domain, called by the gsaauction tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "shredder_material_processing",
+      "description": "Process various materials through a specified industrial shredder and get the output metrics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentCalendarCreator",
+      "description": "for creating content calendars",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "aircraft.update_service_records",
+      "description": "Updates the service records of an aircraft after maintenance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Regular Commodities with Quotes",
+      "description": "Retrieve a list of regular commodities with their current quotes from the Commerce domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Suggest",
+      "description": "Provides search suggestions for users based on their input keywords, with optional filtering by country and language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguelogoimage",
+      "description": "Fetch the logo image for a specific Rugby league in PNG format using the given tournament ID and RapidAPI key.",
+      "params": [
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "boatMaintenance.logRepair",
+      "description": "Log a completed repair job on a specific boat.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_dog_image_by_breed",
+      "description": "Returns some random dog images from a breed, e.g. hound.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_getPetById",
+      "description": "Returns a single pet",
+      "params": [
+        "{'name': 'petId', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "format_document",
+      "description": "Format document content",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_sex_offenders",
+      "description": "Search for sex offenders using either GIS parameters or attribute parameters.",
+      "params": [
+        "lastname",
+        "zipcode",
+        "state",
+        "city",
+        "firstname",
+        "lat",
+        "radius",
+        "lng"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Tournament_Teams",
+      "description": "List of teams participating in a specific tournament.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_event_reminder",
+      "description": "Create event reminder",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_Media",
+      "description": "Media",
+      "params": [
+        "{'name': 'uniqueTournamentId', 'type': '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "animation_create_project",
+      "description": "Create a new animation project in Toon Boom Harmony.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wilaya_Informations",
+      "description": "Retrieve a list of provinces in Algeria",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTrainingPlan",
+      "description": "Retrieve a personalized training plan for bodybuilding",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "home_improvement.get_contractor_availability",
+      "description": "Retrieve the availability of contractors for a specific home improvement project.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "emailverification",
+      "description": "Verifies an email address using the Fast Email Verifier API.",
+      "params": [
+        "emailsimple"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_intraday",
+      "description": "This API returns current and 20+ years of historical intraday OHLCV time series of the equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Performance Details",
+      "description": "Retrieves player performance details for a specific player in a given competition and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_valid_numbers",
+      "description": "This method takes one argument, 'n', which is the number of digits in the numbers to be counted. It returns the number of valid numbers (i.e. numbers that do not contain the digit 0) with 'n' digits.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "spreadsheet.worksheets",
+      "description": "# Returns a list of all worksheets in a spreadsheet. \nspreadsheet.worksheets()\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getReserves",
+      "description": "Retrieve petroleum reserves information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_List_of_Club_competitions",
+      "description": "Get the list of Club competitions",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dictionary_synonyms_temporarily_unavailable",
+      "description": "Fetches synonyms from a dictionary API for a given word in the specified language.",
+      "params": [
+        "language",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Statistics_esports",
+      "description": "Get statistics (esports) by event_id",
+      "params": [
+        "{'name': 'event_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_max_pieces",
+      "description": "This method takes two arguments, 'cake_length' and 'piece_length', and returns the maximum number of pieces of the given length that can be cut from the cake.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "deeplabv3_257_mv_gpu",
+      "description": "DeepLabv3 is a state-of-the-art deep learning model for image segmentation. It assigns a semantic label to each pixel in the input image, allowing for a more detailed understanding of the image content. This model is trained on the PASCAL VOC 2012 dataset and achieves a mean intersection-over-union (mIoU) score of 0.897.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_flickr_photos",
+      "description": "Search for photos on Flickr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dimondevosint_Phone_number_information",
+      "description": "It gives you some public information about the phone number.",
+      "params": [
+        "{'name': 'phone', 'type': 'STRING', 'des"
+      ]
+    }
+  ]
+}

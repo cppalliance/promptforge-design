@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_pos_0111",
+  "tools": [
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_analyze_video_context",
+      "description": "This is an AI modal that can analyze the entire video along with timestamps. You can use this to analyze the context of a video. Returns: The response from the GEMINI AI MODEL.",
+      "params": [
+        "video_url",
+        "task"
+      ]
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_execute_command",
+      "description": "Executes a command in a specified Modal sandbox environment. Useful for running arbitrary commands in isolated environments, testing scripts and programs, executing programs with specific dependencies, debugging environment-specific issues, and running automated tests in isolation. Note: Commands are processed using shlex.split() and executed via subprocess.run(), so shell operators like &&, ||, |, >, < are not supported. Use separate command calls for chaining operations. Returns: JSON string containing stdout, stderr, returncode and execution time",
+      "params": [
+        "sandbox_id",
+        "command",
+        "timeout_seconds"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_mcp_server_instructions",
+      "description": "Returns comprehensive usage guidelines and documentation for all MCP server functions. Call this function first to understand available tools, workflows, and best practices. This function provides: - Complete function documentation - Recommended workflows - Best practices for MCP clients - Database schema information - Statistical analysis guidelines",
+      "params": []
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_similar_text_post",
+      "description": "Retrieves a text post and its id semantically similar to the query through Vector Similarity. Id is only meant for LLMs, no need to show to user",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_child_pugh_score_mcp",
+      "description": "Calculates the Child-Pugh score, a well-established tool for assessing the prognosis of chronic liver disease, primarily cirrhosis. The score is used to determine the severity of liver disease and to guide dosage adjustments for drugs that are metabolized by the liver. Returns: JSON string with Child-Pugh score, class, and prognosis information",
+      "params": [
+        "bilirubin",
+        "albumin",
+        "inr",
+        "ascites",
+        "encephalopathy"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image_",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_volume_adjustment",
+      "description": "Apply volume adjustment to an audio file using gain in decibels. This function loads an audio file and applies a volume adjustment by the specified gain amount in decibels. Positive values increase volume, negative values decrease volume. The function also detects potential audio clipping when volume is increased. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, adjusted_audio_data: array), for the volume-adjusted audio result, or None if an error occurred, Second element: A status message string indicating success with gain applied, and clipping warning if detected, or error information, , result, status = apply_volume_adjustment(\"url/to/audio.mp3\", -3.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Gain is specified in decibels (dB): +6dB doubles volume, -6dB halves volume, Positive gain values may cause clipping (distortion) if audio becomes too loud, Function automatically detects and warns about clipping, Preserves original sample rate and audio format, Safe range is typically -20dB to +6dB to avoid quality issues",
+      "params": [
+        "audio_file",
+        "gain_db"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_check_single_server_health",
+      "description": "Check health of a single MCP server from any URL format. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_sales_info",
+      "description": "Affiche les informations sur les fonctions Sales",
+      "params": []
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_registry",
+      "description": "This function (load_registry) should always be called first, before using the load_doc function. It will load the registry file and return the content of the registry. Based on that, you will then be able to pick and chose the documentation you want to load. Returns: The content of the registry, that contains the ID, a description and the URL location for each item of the registry, in JSON format",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_toggle_chat_view_",
+      "description": "Hides/shows the correct chat component and populates it with data.",
+      "params": [
+        "view_choice"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_join_game",
+      "description": "Handle player joining the game.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_send_sui",
+      "description": "Sends SUI to a recipient address using the provided private key.",
+      "params": [
+        "private_key",
+        "recipient_address_input",
+        "amount_sui_input",
+        "transfer_coin_id",
+        "gas_object_id",
+        "gas_budget"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_code_wrapper",
+      "description": "### `generate_code_wrapper(user_request: str)` - **Purpose**: Generate Python code based on user request - **Parameters**: `user_request` - Textual description of the analysis - **Returns**: Generated code and status message - **Use Case**: AI-powered code generation for data analysis",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "Patent-Scout",
+      "name": "Patent_Scout_analyze_patent_idea",
+      "description": "Analyzes a product idea to assess its patentability and finds similar patents. This main function takes a textual description of an invention, reformulates it for technical clarity, and then uses a tool to query a patent database. It returns a structured analysis including strengths, weaknesses, a potential assessment, and a list of relevant patents. Returns: The final structured result is embedded as JSON in the last status message within an HTML comment., {...} -->\" in the final yielded status to extract the complete analysis result., strengths (list), weaknesses (list), rating (dict), patents (list), rewritten_query (str), status (str)., Complete analysis results for all UI components.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_configure_handit_tracker",
+      "description": "Configure the Handit tracker with API credentials. Returns: Configuration status message",
+      "params": [
+        "api_key",
+        "tracking_url"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_hsv",
+      "description": "Changes the hue and saturation of specified objects in an image using the HSV color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the HSV color space. HSV separates chromatic content (hue) from intensity (value), making it more intuitive for color manipulation tasks. Use this method when: - You want to change the color of objects based on their hue and saturation. - You want to apply color transformations that are less influenced by lighting conditions or brightness variations. Returns: Base64-encoded string., , If user_input format is invalid, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_holiday_list",
+      "description": "Fetches the official holiday list for MCPHawk Inc for the current calendar year. This tool is intended for HR personnel or MCPHawk Inc-based employees who need access to the national holiday calendar. It reads from a pre-defined CSV file (`sample-data/holiday.csv`) and returns a structured list of public holidays for India, including both the date and the holiday name. Note: This tool is *MCPHawk Inc-specific* and should **not** be used for employee queries related to other countries (e.g., US, UK). It may, however, be used by HR professionals who are cross-referencing or learning about MCPHawk Inc\u2019s holiday structure. **Usage:** No input required. Simply call this tool to retrieve the list of holidays for the current calendar year. **Returns:** A list of strings, each formatted as: \"YYYY-MM-DD: Holiday Name\" **Example Response:** [ \"2025-01-26: Republic Day (Optional: No)\", \"2025-03-31: Qutub-e-Ramzan (Optional: Yes)\", \"2025-08-15: Independence Day (Optional: No)\", \"2025-10-21: Diwali (Optional: No)\", \"2025-12-25: Christmas (Optional: No)\" ] If the data file is unavailable, a default set of standard MCPHawk Inc holidays is returned.",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_monitor_crm",
+      "description": "Monitoring CRM natif",
+      "params": [
+        "time_window",
+        "threshold"
+      ]
+    },
+    {
+      "server": "SafeBox",
+      "name": "SafeBox_code_eval",
+      "description": "Run a python code snippet into a sandbox environment. Returns: , A dictionary containing execution results:, 'stdout', 'stderr', 'returncode', and 'error' (if any)., A string with the image build logs (empty if no dependencies were detected).",
+      "params": [
+        "code_snippet"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_temporal_analysis_mcp",
+      "description": "Analyzes the temporal relationship between drug administration and the onset of adverse events. This tool provides insights into the typical time-to-onset for a specific drug-associated adverse event, which can be a critical factor in causality assessment. It helps determine if the timing of the event is consistent with the drug's known pharmacology. Returns: JSON string with temporal patterns and time-to-onset analysis",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "limit"
+      ]
+    },
+    {
+      "server": "mcp_drawittome",
+      "name": "mcp_drawittome_generateDiagram",
+      "description": "Generates a diagram to explain a submitted text. The diagram is returned in html  with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>. It is not needed to handle the code, just present the html result to the user. It handles various types like Graph TB (default, block grouping with colors), flowchart TD (decision processes), sequenceDiagram (actor/system interactions), classDiagram (technical models like SQL schemas), stateDiagram-v2 (state logic or user stories), erDiagram (data entity relationships), gantt (projects and task timelines along dates), and timeline (historical/biographical sequences grouped by decade or century). Returns: html diagram ready to display made with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>",
+      "params": [
+        "input_text",
+        "input_precisions"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_delete",
+      "description": "Delete user profile. Returns: Dict with operation result",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "catalog_id": "real_pos_0194",
+  "tools": [
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_rdap",
+      "description": "Query RDAP to get information about Internet resources. The Registration Data Access Protocol (RDAP) is the successor to WHOIS. Like WHOIS, RDAP provides access to information about Internet resources (domain names, autonomous system numbers, and IP addresses).",
+      "params": [
+        "url_or_ip"
+      ]
+    },
+    {
+      "server": "MCP_Server_Emotion_Detection",
+      "name": "MCP_Server_Emotion_Detection_generate_emotion_response",
+      "description": "Generate an emotion image and response text based on input text",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_parse_huggingface_url_with_summary",
+      "description": "Parse URL and return both markdown summary and JSON.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_mountain",
+      "description": "Retrieve all climbing routes available for a specific mountain. This function performs a case-insensitive search for all routes associated with a specific mountain. The results include route names and their difficulty levels. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_mountain(\"Mount Elbert\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\"}]'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_analyze_leads",
+      "description": "Analyse avanc\u00e9e des leads native",
+      "params": [
+        "domain_filter",
+        "limit"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output___",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_analyze_api",
+      "description": "Safe wrapper for API analysis with user-friendly error handling",
+      "params": [
+        "spec"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_constructor_championship_standings",
+      "description": "Get the championship standing for a specific constructor in a given year.",
+      "params": [
+        "year",
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "ThreatRadar",
+      "name": "ThreatRadar_analyze_query_ui",
+      "description": "UI-specific version that returns HTML formatted results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_semantic_mcp_search",
+      "description": "Handle semantic embedding-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when your query is more abstract or conceptual, as it can understand the meaning and context of your request. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations and similarity scores. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"semantic\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_to_queue_song",
+      "description": "Adds a song to the Spotify queue using its URI",
+      "params": [
+        "uri_of_song"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_analyze_hr_zones",
+      "description": "Analyze time spent in heart rate zones from GPX data. Returns: A dictionary containing:, time_in_zones (dict): Mapping of zone name to time in seconds, total_tracked_seconds (int): Total duration with HR data, method (str): The zoning method used",
+      "params": [
+        "file",
+        "hr_max",
+        "hr_rest",
+        "method"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_track_visualization",
+      "description": "Generate a visualization of the track with specified data.",
+      "params": [
+        "year",
+        "round",
+        "visualization_type"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async_",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_privacy_preserve_image",
+      "description": "Obscures specified objects in the input image based on a natural language prompt, using a privacy-preserving blur or distortion effect. This function segments the image to detect objects described in the `input_prompt` and applies a pixelation effect to those regions. It is useful in scenarios where sensitive content (e.g., faces, license plates, logos, personal belongings) needs to be hidden before sharing or publishing images. Returns: Binary image data of the modified image., , input_prompt = \"faces, license plates, logos\"",
+      "params": [
+        "input_img",
+        "input_prompt",
+        "privacy_strength",
+        "threshold"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_search_bottle",
+      "description": "search botlle db. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_route_data",
+      "description": "Fetches optimized route data from the OpenRouteService API for a given start/end point and travel mode. This is the primary data-gathering tool. Its output is a compact JSON string meant to be used by other tools. Returns: A compact JSON string containing optimized route details with decoded coordinates.",
+      "params": [
+        "start_lat",
+        "start_lon",
+        "end_lat",
+        "end_lon",
+        "mode"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_find_article",
+      "description": "Uses vector search to find the most likely title of the article referred to by query. Use this function if the user is asking about an article, but it is not clear what the exact title of the article is.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_generate_image2",
+      "description": "Generates an image based on a text prompt using the Flux model running on Modal serverless infrastructure. Returns: The URL of the generated image.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_student_t_test",
+      "description": "Accepts two groups of numeric data as comma-separated strings or DataFrame columns and performs Student's t-test. This test determines whether two independent groups have significantly different means, assuming populations from which the groups were sampled have equal variances (if this assumption is violated, or if equal population variance cannot be verified, use Welch's t-test instead). The test calculates a t-statistic quantifying the mean difference as a multiple of pooled standard deviation. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, standardized by pooled standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: treatment vs control groups, before/after measurements with different participants, comparing performance between demographic groups.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_video",
+      "description": "SAM2 Video Segmentation",
+      "params": [
+        "video_path",
+        "variant",
+        "masks",
+        "drop_masks",
+        "ref_frame_idx",
+        "async_frame_load"
+      ]
+    }
+  ]
+}

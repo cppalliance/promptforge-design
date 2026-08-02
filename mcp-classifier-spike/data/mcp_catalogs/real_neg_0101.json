@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_neg_0101",
+  "tools": [
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoints",
+      "description": "Retrieve a list of all available OpenF1 API endpoints. Returns: dict: A dictionary containing a single key 'endpoints' with a list of available endpoint names as strings.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_search",
+      "description": "Search for board games on BoardGameGeek by title. Returns: A list of dictionaries, each representing a matching game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'year' (str): The year the game was published (or 'Unknown' if not available)., , >>> search_game(\"Catan\"), [, \"13\", \"title\": \"Catan\", \"year\": \"1995\"},, ..., ]",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask",
+      "description": "Ask the D&D narrative agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "run_my_script",
+      "name": "run_my_script_run_script",
+      "description": "Executes a user-provided self contained Python script inside an isolated virtual environment with automatic dependency management. This function is intended to serve as a backend execution engine in a Model Context Protocol (MCP) server setting, where a language model may submit scripts for evaluation. It creates a secure workspace, detects dependencies, installs them using `uv`, executes the script, captures its output (including stdout and generated files), and returns all relevant results. \u26a0\ufe0f Limitations & Guidance for LLM-based Use: - Scripts should be self-contained, avoid system-level access, and primarily focus on data processing, text generation, visualization, or machine learning tasks. - The code can output logs, JSON, images, CSVs, or any other files, which are returned as artifacts. - Avoid infinite loops or long-running background processes. Timeout support can be added externally. Returns: , logs (str): Full stdout and stderr logs of the executed script., artifacts (Dict[str, str]): A dictionary of output files with their names and summaries or indicators, (e.g., image or CSV placeholders). Includes a \"__workdir__\" key pointing to the working directory., zip_path (str): Path to a ZIP archive containing all output artifacts for download.",
+      "params": [
+        "code",
+        "user_input",
+        "cleanup_enabled",
+        "cleanup_after"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_custom_respond",
+      "description": "Custom respond function with dynamic system prompt.",
+      "params": [
+        "message",
+        "book_name",
+        "book_content",
+        "selected_hero",
+        "lang_prompt"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_disproportionality_analysis_mcp",
+      "description": "Performs a disproportionality analysis (also known as signal detection) on adverse event data. This statistical method compares the reporting rate of a specific drug-event combination to the reporting rate of that event for all other drugs in the database. It calculates metrics like Proportional Reporting Ratio (PRR) and Reporting Odds Ratio (ROR) to identify potential safety signals that may warrant further investigation. Returns: JSON string with PRR, ROR, IC values and statistical significance",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "background_limit"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_download_file_wrapper",
+      "description": "### `download_file_wrapper(file_path: str)` - **Purpose**: Download files from the service - **Use Case**: Retrieving generated reports or datasets",
+      "params": [
+        "file_path"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_upload_profile_picture",
+      "description": "Uploads a profile picture for the authenticated user. The new filename will be based on the user's profile_id. Requires X-Auth-ID header for authentication.",
+      "params": [
+        "image_upload"
+      ]
+    },
+    {
+      "server": "FootballMatchesByDate",
+      "name": "FootballMatchesByDate_get_matches_by_date",
+      "description": "Fetches all matches for a given date from the Football Data API. Returns: A dictionary with the match ID as the key, and a dictionary containing the competition, home team, away team, home score and away score as the value",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_visitor_by_name",
+      "description": "\u4fee\u6539\u6307\u5b9a\u5ba2\u6237\u7aef ID \u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e \u4f20\u5165\u53c2\u6570\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8): - program_id: \u5ba2\u6237\u7aef ID\uff0c\u6574\u6570\u6216\u5b57\u7b26\u4e32 - data: \u89c2\u5bdf\u8005\u914d\u7f6e\uff0cJSON \u5b57\u7b26\u4e32\u3002\u5fc5\u987b\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a - name: \u89c2\u5bdf\u8005\u540d\u79f0\uff0c\u548c\u8981\u4fee\u6539\u7684name\u4e00\u81f4 - type: \u89c2\u5bdf\u8005\u7c7b\u578b\uff0c\u548c\u8981\u4fee\u6539\u7684type\u4e00\u81f4 - serverName: \u670d\u52a1\u540d\u79f0 - secretKey: \u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - bindAddr: \u7ed1\u5b9a\u7684\u672c\u5730 IP \u5730\u5740\uff08\u4f8b\u5982 \"127.0.0.1\"\uff09 - bindPort: \u7ed1\u5b9a\u7684\u672c\u5730\u7aef\u53e3\uff08\u6574\u6570, 65535 \u4ee5\u5185\uff09 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u64cd\u4f5c\u7ed3\u679c\uff0c\u683c\u5f0f `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5177\u4f53\u4fe1\u606f\"}`",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_auth_with_spotify",
+      "description": "It auths with the spotify and returns current user info to confirm the success of auth",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_time_series_tool",
+      "description": "MCP Tool: Creates a time-series plot for a drug-event pair. Returns: A Plotly figure.",
+      "params": [
+        "drug_name",
+        "event_name",
+        "aggregation"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_process_prescription_upload",
+      "description": "COMPLETELY FIXED prescription processing with proper grouping",
+      "params": [
+        "image_file",
+        "llama_endpoint"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_find_article",
+      "description": "Uses vector search to find the most likely title of the article referred to by query. Use this function if the user is asking about an article, but it is not clear what the exact title of the article is.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info_",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_bm25_relevance_scorer",
+      "description": "Compute relevance scores between a query and a list of documents using the BM25 algorithm. This tool tokenizes each document and the query using a simple whitespace and punctuation-based tokenizer, then calculates BM25 scores to measure how relevant each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"BM25 Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries, each with:, 'document': The original document string., 'score': The BM25 relevance score (higher means more relevant).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_query_owid_table_sql",
+      "description": "Executes a read-only SQL query against one or more tables loaded from the OWID catalog.",
+      "params": [
+        "table_references_json",
+        "sql_query",
+        "limit"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpdelete_memory",
+      "description": "Universal memory deletion interface.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_square_info",
+      "description": "Get information about a specific square in the chess position. This function retrieves the piece on the specified square, as well as the attackers and defenders of that square.",
+      "params": [
+        "fen",
+        "square_name"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_station",
+      "description": "Searches for railway stations in Indian Railways network by name or station code. Returns: JSON response containing matched station details including:, Station name, Station code, State/Region, Geographical coordinates, Available facilities, Connected routes, , If station parameter is empty or no matching stations found, If API request fails or returns non-200 status code",
+      "params": [
+        "station"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_program",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u5220\u9664\u5ba2\u6237\u7aef\u53ca\u5176\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_interest_calculator",
+      "description": "Calculates the simple interest payable for a given principal amount based on the current Bank of England base rate. Returns: A string detailing the principal, interest payable, and the annual interest rate,, or an error message if the calculation fails.",
+      "params": [
+        "principal"
+      ]
+    }
+  ]
+}

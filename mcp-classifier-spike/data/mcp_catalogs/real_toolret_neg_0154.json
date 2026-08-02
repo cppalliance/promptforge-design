@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_toolret_neg_0154",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Exchange Rate",
+      "description": "Get the exchange rate between two different currencies",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_combined_rate",
+      "description": "This method takes three arguments, 'rate_1', 'rate_2', and 'rate_3', and returns the combined rate at which the three pipes can fill the tank in units per hour.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "continents",
+      "description": "get a list of all the continents filtering by name",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Alert Adverts",
+      "description": "Retrieve alert adverts from the Data domain using the Fluximmo tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_share",
+      "description": "This method takes two arguments, 'total_gain' and 'investments', where 'investments' is a list of tuples containing the amount invested by each partner and the number of months they invested for. It returns the share of the first partner in the total gain.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_v3_Web_Search",
+      "description": "This endpoint is used for web searches",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_2_Google_Images",
+      "description": "Using this API you can get the JSON data of the image results.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bible_Search_Get_Chapter_by_BookName",
+      "description": "Returns a chapter of a book in the Bible.",
+      "params": [
+        "{'name': 'bookName', 'type': 'STRING', '",
+        "{'name': 'chapterId', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_value_from_category_and_item(data_frame, category_col, item_col, item_name)",
+      "description": "def get_value_from_category_and_item(data_frame, category_col, item_col, item_name):\n    \"\"\"\n    This function takes in a pandas DataFrame, a category column, an item column, and an item name, and returns the value in the category column for the specified item.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing various categories and items.\n    category_col (str): The column name for the categories.\n    item_col (str): The column name for the items.\n    item_name (str): The name of the item.\n    \n    Returns:\n    float: The value in the category column for the specifie",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_greatest_least",
+      "description": "This method takes a list of numbers and returns a tuple containing the greatest and the least number.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Algerian Provinces and Municipalities",
+      "description": "Retrieve a list of all provinces and their corresponding municipalities in Algeria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Scraper_List_User_Recently_Played_Artists",
+      "description": "This endpoint lists recently played artists of a user.",
+      "params": [
+        "{'name': 'userId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Haber API",
+      "description": "Retrieves the latest news headlines from ntv.com.tr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "marriage_session_booking",
+      "description": "Book a counseling session for marriage therapy, specifying the type of session, preferred time, and counselor details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_Compare_players",
+      "description": "Compare players by player_ids",
+      "params": [
+        "{'name': 'player_ids', 'type': 'STRING',",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Memeados_drakelikehate",
+      "description": "Generate Drake Likes and Hates meme",
+      "params": [
+        "{'name': 'text2', 'type': 'STRING', 'des",
+        "{'name': 'text1', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SymptomSearch",
+      "description": "\"An API that searches for medical conditions based on symptom descriptions.\"",
+      "params": [
+        "{'name': 'symptom_description', 'in': 'q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Mnemonic",
+      "description": "Generates a random mnemonic with a specified level of entropy",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PublicAPITestingInbox_logoutUser",
+      "description": "{\"category_name\": \"Advertising\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"PublicAPITestingInbox_logoutUser\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Baseball_DataFeeds_by_Rolling_Insights_Team_Depth_Charts",
+      "description": "Returns player depth charts for a team",
+      "params": [
+        "{'name': 'sport', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_items_arithmetic_series(first_term, common_difference, number_of",
+      "description": "def calculate_total_items_arithmetic_series(first_term, common_difference, number_of_terms):\n    \"\"\"\n    Calculate the total number of items collected over a given number of terms, where the number of items collected each term forms an arithmetic sequence.\n\n    Parameters:\n    first_term (int): The first term of the arithmetic sequence.\n    common_difference (int): The common difference between consecutive terms in the arithmetic sequence.\n    number_of_terms (int): The number of terms in the arithmetic sequence.\n\n    Returns:\n    int: The total number of items collected.\n    \"\"\"\n    # This is",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_v2_Get_Followings_by_pk",
+      "description": "Get lists of any public Instagram account followings via pk",
+      "params": [
+        "{'name': 'pk', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_circumference",
+      "description": "To find the circumference of a circle given its radius",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Handball_Data_Result_Statistics_Goals",
+      "description": "Provides the result list of the last 20 matches between the two teams in overall, with home and away filters.\n\n**The data will return for only -+7 days period, so endpoint can be tested with match that its date is in today +- 7 days. You can choose suitable match from Handbal Match List or Fixture endpoints.**",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AmericanFootballApi_LeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER",
+        "{'name': 'seasonId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "queryDatabaseRecords",
+      "description": "Executes a custom SQL query on the database and retrieves records based on the provided SQL statement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_atmosphere(image_patch: ImagePatch, location: str) -> str",
+      "description": "def determine_atmosphere(image_patch: ImagePatch, location: str) -> str:\n    '''Determine the overall atmosphere of a given location.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        location (str): The location to determine the atmosphere of.\n       \n    Returns:\n        str: The overall atmosphere of the location.\n    '''\n    query = f\"What is the overall atmosphere of the {location}?\"\n    return image_patch.simple_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Object Detection API",
+      "description": "Detect landmarks, places, plants, animals, products, and other objects in an image, including bounding boxes, labels/types, and confidence scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Logo",
+      "description": "Returns logo of the company.\n\nAvailability: Basic plan\nData weighting: 1 API credit per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryTechnologyFramework",
+      "description": "Retrieve the technology framework for effective library technology governance",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "map",
+      "description": "Fetches a map image in WMTS format based on the given parameters.",
+      "params": [
+        "tilerow",
+        "tilematrix",
+        "tilecol",
+        "rotationangle",
+        "mapstyle",
+        "landmarkicon",
+        "resolution",
+        "contour"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Inferno_Inferno",
+      "description": "Meme API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cinema Showtimes",
+      "description": "Retrieve showtimes for a specific cinema, optionally filtered by a specific film.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Compile C++ 14 Code",
+      "description": "Compiles C++ 14 code into an executable",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "updateLog",
+      "description": "Update the content or tags of an existing log entry.",
+      "params": [
+        "logId",
+        "content",
+        "tags"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomName",
+      "description": "Returns a random Spanish name with gender information",
+      "params": [
+        "gender"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "jokes_categories_get",
+      "description": "Retrieve a list of available categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Staffs by Competition",
+      "description": "Retrieve a list of staffs related to a specific competition or league.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_zeros",
+      "description": "Counts the number of zeros at the end of a number obtained by multiplying a range of numbers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Distance",
+      "description": "Calculates the distance between two places, given a place ID and an optional second place ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

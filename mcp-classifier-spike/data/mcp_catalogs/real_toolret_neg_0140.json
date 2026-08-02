@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_toolret_neg_0140",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "spawnEnemy",
+      "description": "Spawn an enemy in a game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MotorsportApi_TeamPlaceholderImage",
+      "description": "Get the team placeholder image in SVG format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Organization Surveys",
+      "description": "Retrieves a list of customer survey responses for a given organization, identified by its organization ID (oid).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BINGMap.search_nearby",
+      "description": "Search for places nearby a location, within a given radius, and return the results into a list. Put the location name at the end of the query.",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Details",
+      "description": "Retrieve detailed information about a specific post on Reddit.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Search",
+      "description": "Search for active and historic/inactive players by name. The active_sw parameter should be set depending on whether you want to search for active or inactive players. You can omit this parameter, though you will notice a slower response time as the search is done across all (active and inactive) players.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguelastmatches",
+      "description": "Retrieve the last matches of an American Football league for a given tournament and season.",
+      "params": [
+        "page",
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_box_height",
+      "description": "This method takes two arguments, 'length' and 'width', and returns the height of the box after squares are cut off from each corner.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_symbol_search_endpoint",
+      "description": "The Search Endpoint returns the best-matching symbols and market information based on keywords of your choice.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_smallest_value_in_stem_leaf(data_frame, stem_col, leaf_col)",
+      "description": "def find_smallest_value_in_stem_leaf(data_frame, stem_col, leaf_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a stem-and-leaf plot of groups, and returns the smallest value among the groups.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the stem-and-leaf plot of items with columns specified by stem_col and leaf_col.\n    stem_col (str): The column name for the stem values.\n    leaf_col (str): The column name for the leaf values.\n    \n    Returns:\n    int: The smallest value among the groups.\n    \"\"\"\n    # Initialize the list to calculate ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "animation_create_project",
+      "description": "Create a new animation project in Toon Boom Harmony.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataiku.dataset_audit",
+      "description": "Performs an audit on a dataset to ensure compliance with data governance policies.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Plants by Scientific Name",
+      "description": "Searches for plant species by their scientific name and returns a list of matching plants.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "livescores",
+      "description": "Retrieve a list of current soccer live scores",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameReviewTimeline.generateReviewTimeline",
+      "description": "Generates a timeline of game reviews for a specific game across different platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Auction Listings",
+      "description": "This API returns a list of auction listings from the Database domain, called by the gsaauction tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "spreadsheet.share",
+      "description": "# Share the spreadsheet with other accounts. \nspreadsheet.share(email_address, perm_type, role, notify=True, email_message=None, with_link=False)\n\nExamples:\n# Give Otto a write permission on this spreadsheet\nsh.share('otto@example.com', perm_type='user', role='writer')\n# Give Otto's family a read permission on this spreadsheet\nsh.share('otto-familly@example.com', perm_type='group', role='reader')\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_matches_get_leanback",
+      "description": "Get match leanback",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Russian Premier League Standings",
+      "description": "Russian Premier League Standings",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "WordCloud",
+      "description": "Create word cloud images from text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get M1 Money Stock Not Adjusted",
+      "description": "Retrieve weekly not seasonally adjusted M1 monetary aggregate from the Federal Reserve. M1 is the money supply that is composed of physical currency and coin, demand deposits, travelers' checks, other checkable deposits, and negotiable order of withdrawal (NOW) accounts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submitServiceRequest",
+      "description": "Allow citizens to submit service requests to the government",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Food Ingredients",
+      "description": "This API returns a list of all available food ingredients.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "second_train_length",
+      "description": "Calculates the length of the second train",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "streamingAnalytics.trackViewerEngagement",
+      "description": "Tracks and analyzes viewer engagement metrics during a live Q&A session on a streaming platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_type_people_get_proxy_voting_management",
+      "description": "Get proxy voting management as displayed in the People tab",
+      "params": [
+        "{'name': 'securityId', 'type': 'STRING',",
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_Stats_and_Live_Data_getStandingsByType",
+      "description": " ",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_Finance_Symbols_Author_ratings",
+      "description": "Get a author ratings for symbol. Ex result: https://seekingalpha.com/symbol/NVDA/ratings/author-ratings",
+      "params": [
+        "{'name': 'ticker_slug', 'type': 'STRING'",
+        "{'name': 'page_number', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Air Quality by City",
+      "description": "Retrieve the latest air quality data for a specified city",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes",
+      "description": "Retrieve quotes from anime shows based on the title of the anime.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "vitouphy/wav2vec2-xls-r-300m-phoneme",
+      "description": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the None dataset. It is designed for Automatic Speech Recognition tasks.",
+      "params": [
+        "input_values"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StreamlineWatch_Streaming_Guide_search",
+      "description": "Returns a list of titles that match the query.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetFavouritesChamps",
+      "description": "Retrieve the favorite champions for a specific skin in a sports-related context.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listportfolios",
+      "description": "Fetches a list of portfolios from the Trader Wagon API based on the given parameters.",
+      "params": [
+        "limit",
+        "portfoliotype",
+        "available"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_news_by_date",
+      "description": "Search for stock news by date",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "sendsms",
+      "description": "Sends an SMS message using the Rivet SMS service.",
+      "params": [
+        "senderid",
+        "clientid",
+        "mobilenumbers",
+        "message",
+        "apikey",
+        "content_type",
+        "is_unicode",
+        "scheduletime"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ebay_Product_Details",
+      "description": "Get the product details for a given product id and a specific country.\nDefault country is `United States`.\nSpecify country with country name or country code.\n\nAllowed countries:\nDefault: `us`\n- Germany (de)\n- France (fr)\n- Australia (au)\n- Austria (at)\n- Canada (ca)\n- Hong Kong (hk)\n- Ireland (ie)\n- Italy (it)\n- Malaysia (my)\n- Netherlands (nl)\n- Singapore (sg)\n- Switzerland (ch)\n- United Kingdom (uk)",
+      "params": [
+        "{'name': 'product_id', 'type': 'NUMBER',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getWebhookResultsUnseenErrorCount",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Returns",
+      "description": "Retrieve returns data for an ETF or FUND in the Performance tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCricketScore",
+      "description": "Retrieve current score information for a cricket match",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

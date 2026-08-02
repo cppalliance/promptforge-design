@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_pos_0168",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "extract_pizzas_made",
+      "description": "This method takes a dictionary representing a table, and returns a list containing the number of pizzas made each day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Async Content",
+      "description": "Fetches async content using the provided prompt and thread ID. This endpoint is free and allows you to pull content once every 2 seconds.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchAddress",
+      "description": "Search for a specific address in Singapore and retrieve its geospatial information.",
+      "params": [
+        "searchVal",
+        "returnGeom",
+        "getAddrDetails",
+        "pageNum"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "makepayment",
+      "description": "send money to your friends",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Golf_Course_Finder_Get_Courses",
+      "description": "This endpoint will return courses within a mile radius of the passed latitude and longitude",
+      "params": [
+        "{'name': 'lng', 'type': 'STRING', 'descr",
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lat', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_SMA",
+      "description": "Simple Moving Average(SMA) is an arithmetic moving average calculated by adding the latest closing prices and then dividing them by the number of time periods.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_dog_image",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "findtrains",
+      "description": "find trains to a given destination city",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "convertToRGB",
+      "description": "Convert a color code to its RGB representation",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetListingsByGeoValuation",
+      "description": "API returns property listings by accepting various filters like Zip code, Street, City and State",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/companies/company_data",
+      "description": "This endpoint returns the basic information of a company with the given identifier. The information includes core data, web data, legal information, industries, and revenue and employees classification.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ukraine_war_data_Refugee_by_country",
+      "description": "Ukranian refugees per country",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "peers",
+      "description": "Retrieves a list of company peers given a stock symbol.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_cigar_average_length",
+      "description": "Fetches the average length of cigars based on specified filters.",
+      "params": [
+        "wrapper",
+        "name",
+        "filler",
+        "country",
+        "color",
+        "strength",
+        "brandid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "promptcap-coco-vqa",
+      "description": "PromptCap is a captioning model that can be controlled by natural language instruction. The instruction may contain a question that the user is interested in. It achieves SOTA performance on COCO captioning (150 CIDEr) and knowledge-based VQA tasks when paired with GPT-3 (60.4% on OK-VQA and 59.6% on A-OKVQA).",
+      "params": [
+        "prompt",
+        "image"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_smallest_R",
+      "description": "This method takes a list of integers, 'divisors', and an integer, 'start', as arguments. It returns the smallest integer greater than 'start' that leaves a remainder of 1 when divided by all the integers in 'divisors'.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Chats",
+      "description": "Retrieves a list of chats from a WhatsApp instance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "percentage",
+      "description": "Calculates the percentage of a given number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Movie Showtimes",
+      "description": "Retrieve the showtimes for a specific movie based on its IMDb ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResumeScreeningTool",
+      "description": "for screening resumes and scheduling interviews",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_ratios_retrieve",
+      "description": "Retrieve financial ratios for a given company or stock, with the option to specify a specific index (quarter) for the data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pe_demo_View_request_headers_and_body",
+      "description": "View the request headers and body in JSON format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_products_types_typeId_locations",
+      "description": "A list of locations that have issues products for a type. Example: /products/types/AFD/locations",
+      "params": [
+        "{'name': 'typeId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWordMeaning",
+      "description": "Retrieve the meaning of a word",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "product_catalog_import",
+      "description": "Product Catalog Import Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "teammedia",
+      "description": "Fetches media information for a specific baseball team using the given team ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ChatGPT_Detector_AI_Powered_ChatGPT_Answer_Detector_ChatGPT_Detector_API",
+      "description": "Our API can detect text in over 140 languages",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "playerShotChartDataSeasonPlayoffs",
+      "description": "Return player shot chart data for a specified player and season (both regular season and playoffs).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_possible_tens_digits",
+      "description": "This method takes two integers representing the tens digits of x and y, and returns a list of possible tens digits for 2(x+y).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "transfers_list",
+      "description": "Fetches a list of football player transfers based on various filter criteria.",
+      "params": [
+        "competitionid",
+        "positiongroup",
+        "limit",
+        "maxvalue",
+        "positionid",
+        "clubid",
+        "minvalue",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Undervalued Growth Stocks",
+      "description": "Retrieve a list of undervalued growth stocks from Yahoo Finance, with the option to specify a start index.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Places Near Place",
+      "description": "Retrieve places near the given place, with optional filtering criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BarPatterns_Stock_list",
+      "description": "Get list of stocks covered by the screener. Result includes stock information.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tsacerof",
+      "description": "Forecast weather API method returns, depending upon your price plan level, upto next 14 day weather forecast and weather alert as json. The data is returned as a Forecast Object.Forecast object contains astronomy data, day weather forecast and hourly interval weather information for a given city. ",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Keyword_Analysis_PopularSitesForQuery",
+      "description": "Get the **popular sites** for a given search query.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameSchedule",
+      "description": "This API provides a schedule for the team's games based on the team information.",
+      "params": [
+        "{'name': 'team_info', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/chart/artists/",
+      "description": "Chart: Artists, a leaderboard of artists.",
+      "params": [
+        "{'name': 'time_period', 'in': 'optional'",
+        "{'name': 'page', 'in': 'optional', 'sche",
+        "{'name': 'per_page', 'in': 'optional', '",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatBreedDB_All_Cats",
+      "description": "Get a list of all Cats with their basic meta data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "slovakia_songs",
+      "description": "Fetches Slovakia Songs chart information for a given date range.",
+      "params": [
+        "range",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football League Cup Trees",
+      "description": "Retrieve the league cup trees for a specific season and tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

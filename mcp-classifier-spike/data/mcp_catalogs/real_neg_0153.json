@@ -1,0 +1,320 @@
+{
+  "catalog_id": "real_neg_0153",
+  "tools": [
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_upload_file",
+      "description": "Handle file uploads in the Gradio interface. Returns: Tuple of (status_message, updated_file_uploads_log)",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_url_http_content",
+      "description": "Get the content of a URL using an HTTP GET request.",
+      "params": [
+        "url",
+        "content_type"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_parse_huggingface_url_with_summary",
+      "description": "Parse URL and return both markdown summary and JSON.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques CRM natives",
+      "params": []
+    },
+    {
+      "server": "CafChem-ADME",
+      "name": "CafChem_ADME_calc_adme",
+      "description": "Calculate the ADME properties of a molecule from a SMILES string. These properties, covering absorption, distribution, metabolism, and excretion, describe how a drug is transported and is processed by the body. They should follow Lipinkski's rule of 5 for a viable drug. Returns: The qualitative estimate of drug-likeness (QED), the molecular weight, the, distribution coefficient (aLogP), the number of hydrogen bond donors,, the number of hydrogen bond acceptors, the polar surface area,the number, of rotatable bonds, the number of aromatic rings, and the number of undesireable, moieties all in a text string., An image of the molecule.",
+      "params": [
+        "smile"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_monitor_multiple_servers",
+      "description": "Monitor health and tools of multiple MCP servers simultaneously. Returns: (markdown_summary, json_data)",
+      "params": [
+        "urls_text"
+      ]
+    },
+    {
+      "server": "moondream-pointer",
+      "name": "moondream_pointerpredict",
+      "description": "Open Vocabulary Detection using moondream2",
+      "params": [
+        "im",
+        "object_name",
+        "mode"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_correlation_test",
+      "description": "Accepts two variables as comma-separated strings or DataFrame columns and performs correlation analysis. This test determines the strength and direction of the linear relationship between two continuous variables. Pearson correlation measures linear relationships, Spearman correlation measures monotonic relationships (rank-based), and Kendall's tau is robust to outliers and suitable for small samples. The test calculates a correlation coefficient ranging from -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship. A significant result (p-value < alpha) indicates that the observed correlation is statistically different from zero. Effect size interpretation: |r| < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: examining relationship between height and weight, analyzing correlation between study time and test scores, investigating association between variables in research.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "method",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_sandbox_pool_status_sync",
+      "description": "Synchronous wrapper for sandbox pool status.",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_clear_job_cache",
+      "description": "Clear the job search cache to force fresh results. Returns: Dict with operation result",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_patients",
+      "description": "Refresh patients table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_scrape_website_content",
+      "description": "Scrape a website and return its main content formatted as markdown and a downloadable file path.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_analyze_dataset_overview",
+      "description": "Analyzes dataset using Gemini AI and provides storytelling overview. Returns: AI-generated data story, Dataset basic information, Data quality percentage",
+      "params": [
+        "file_obj",
+        "api_key"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output__",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "KGB-mcp",
+      "name": "KGB_mcp_build_knowledge_graph",
+      "description": "Main function to build knowledge graph from text or URL.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "AgenticClaimVerificationSystem",
+      "name": "AgenticClaimVerificationSystem_verify_claim",
+      "description": "Use this tool to verify a claim",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_process_prescription_upload",
+      "description": "COMPLETELY FIXED prescription processing with proper grouping",
+      "params": [
+        "image_file",
+        "llama_endpoint"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status_",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_dad_joke",
+      "description": "Fetches a random dad joke from the icanhazdadjoke.com API. The function makes an HTTP GET request to the <https://icanhazdadjoke.com/> API with appropriate headers to receive JSON response. Returns: A random dad joke if successful, otherwise returns an error message., Success: Returns the joke text, Failure: Returns \"Failed to retrieve a joke.\" if the API request fails, No joke: Returns \"No joke found.\" if the API response doesn't contain a joke, , The requests library must be imported to make HTTP requests",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_support_info",
+      "description": "Get customer support information for a specific topic.",
+      "params": [
+        "topic",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_generate_image2",
+      "description": "Generates an image based on a text prompt using the Flux model running on Modal serverless infrastructure. Returns: The URL of the generated image.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_messages",
+      "description": "Gets all messages for the authenticated user (sent and received). Marks retrieved messages where the user is the receiver as read for subsequent calls. Requires X-Auth-ID header for authentication.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_prev_page",
+      "description": "Go to previous page for equipment",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_pawn_structure",
+      "description": "Analyze pawn\u2010structure features for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_profile",
+      "description": "Returns the detailed employee profile for a given employee. This tool retrieves the profile details for an individual employee, including role, cloud expertise, data warehouse tools, domain exposure, office location, gender, and other relevant attributes. It queries data from the internal employee master database (`EMPLOYEE_MASTER_DB`) and returns the complete profile as a dictionary. This function is typically used in internal workforce management, reporting dashboards, or talent mapping systems within MCPHawk Inc to retrieve standardized employee data. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended) **Returns:** A dictionary containing: - `employee_name`: Name of the employee - `employee_profile`: A dictionary of profile details, such as: { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.png\" } If the employee is not found, a fallback message is returned instead of the profile. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"employee_profile\": { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.pdf\" } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "ehottl-take-1",
+      "name": "ehottl_take_1_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_geographies",
+      "description": "Fetches information on available geographies for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/geography.html. Includes: * Geography Levels * Geography Hierarchy. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "MCPyLate",
+      "name": "MCPyLate_pylate_search_leetcode",
+      "description": "Search the PyLate with multi-vector models in the leetcode collection containing code problems solutions and return top-k hits. Returns: List of search results with docid, score, text snippet, and index name",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_web_search",
+      "description": "Wrapper for WebSearchAgent to perform web searches. Returns: Web search results with summaries and URLs",
+      "params": [
+        "query"
+      ]
+    }
+  ]
+}

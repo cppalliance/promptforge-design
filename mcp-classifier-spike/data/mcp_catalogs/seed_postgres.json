@@ -1,0 +1,27 @@
+{
+  "catalog_id": "postgres",
+  "tools": [
+    {
+      "server": "postgres",
+      "name": "query",
+      "description": "Run a read-only SQL query against the connected PostgreSQL database",
+      "params": [
+        "sql"
+      ]
+    },
+    {
+      "server": "postgres",
+      "name": "list_tables",
+      "description": "List the tables in the database schema",
+      "params": []
+    },
+    {
+      "server": "postgres",
+      "name": "describe_table",
+      "description": "Show the columns and types of a database table",
+      "params": [
+        "table_name"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "catalog_id": "real_pos_0078",
+  "tools": [
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_analyze_app_environmental_impact",
+      "description": "Analyze the complete environmental impact of an application. Returns: Comprehensive environmental impact analysis",
+      "params": [
+        "app_description",
+        "user_count",
+        "tech_stack"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response_",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpset_storage_mode",
+      "description": "Set storage mode for runtime configuration.",
+      "params": [
+        "mode",
+        "client_id"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_way_anova",
+      "description": "Accepts multiple groups of numeric data as semicolon-separated groups or DataFrame columns and performs a one-way ANOVA (Analysis of Variance). This test determines whether there are statistically significant differences between the means of three or more independent groups. ANOVA tests the null hypothesis that all group means are equal against the alternative that at least one group mean differs from the others. The test calculates an F-statistic by comparing the variance between groups to the variance within groups. A significant result (p-value < alpha) indicates that at least one group differs, but does not identify which specific groups differ (post-hoc tests needed for pairwise comparisons). Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by group membership, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: comparing means across multiple treatment conditions, testing differences between multiple demographic groups, evaluating performance across several experimental conditions.",
+      "params": [
+        "groups_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_prime_factors",
+      "description": "Compute the prime factorization of a positive integer.",
+      "params": [
+        "n"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_app_code",
+      "description": "Generate complete Gradio application code with integrated theming system.",
+      "params": [
+        "theme_names",
+        "app_title",
+        "include_components"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_student_t_test",
+      "description": "Accepts two groups of numeric data as comma-separated strings or DataFrame columns and performs Student's t-test. This test determines whether two independent groups have significantly different means, assuming populations from which the groups were sampled have equal variances (if this assumption is violated, or if equal population variance cannot be verified, use Welch's t-test instead). The test calculates a t-statistic quantifying the mean difference as a multiple of pooled standard deviation. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, standardized by pooled standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: treatment vs control groups, before/after measurements with different participants, comparing performance between demographic groups.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_size_guide",
+      "description": "Get size guide information for clothing, shoes, and accessories.",
+      "params": [
+        "product_type",
+        "brand"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_generate_data_profiling",
+      "description": "Generates detailed data profiling report. Returns: Missing data analysis, Numeric statistics, Categorical statistics",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_naranjo_score_mcp",
+      "description": "Calculates the Naranjo score, a standardized and widely used causality assessment tool to determine the probability that an adverse event is related to a specific drug. The score helps clinicians and researchers classify the likelihood of an adverse drug reaction (ADR) as doubtful, possible, probable, or definite. Sometimes the user might not have provided all the information, so you will need to ask for the missing information (remember to give them the option to say \"unknown\" if they don't know the answer). Returns: JSON string with score, probability category, and detailed breakdown",
+      "params": [
+        "adverse_reaction_after_drug",
+        "reaction_improved_after_stopping",
+        "reaction_reappeared_after_readministration",
+        "alternative_causes_exist",
+        "reaction_when_placebo_given",
+        "drug_detected_in_blood",
+        "reaction_worse_with_higher_dose",
+        "similar_reaction_to_drug_before",
+        "adverse_event_confirmed_objectively",
+        "reaction_appeared_after_suspected_drug_given"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_analyze_leads",
+      "description": "Analyse avanc\u00e9e des leads native",
+      "params": [
+        "domain_filter",
+        "limit"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_discover_server_tools",
+      "description": "Discover available MCP tools from a server. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_profile",
+      "description": "Returns the detailed employee profile for a given employee. This tool retrieves the profile details for an individual employee, including role, cloud expertise, data warehouse tools, domain exposure, office location, gender, and other relevant attributes. It queries data from the internal employee master database (`EMPLOYEE_MASTER_DB`) and returns the complete profile as a dictionary. This function is typically used in internal workforce management, reporting dashboards, or talent mapping systems within MCPHawk Inc to retrieve standardized employee data. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended) **Returns:** A dictionary containing: - `employee_name`: Name of the employee - `employee_profile`: A dictionary of profile details, such as: { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.png\" } If the employee is not found, a fallback message is returned instead of the profile. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"employee_profile\": { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.pdf\" } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_create_account_ui",
+      "description": "Gradio wrapper for create account",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image",
+      "description": "Edit a local image using the 'Clarity Upscaler' method. Optionally save result. Useful for stylized upscaling with fractal detail control. Returns: The edited image (PIL.Image) upscaled via AI model.",
+      "params": [
+        "path",
+        "output_path",
+        "scale",
+        "dynamic",
+        "creativity",
+        "resemblance",
+        "tiling_width",
+        "tiling_height",
+        "model",
+        "scheduler",
+        "steps",
+        "seed",
+        "downscale",
+        "downscale_resolution"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_report",
+      "description": "Generate a code analysis report using the Anthropic API. Returns: A detailed analysis report including top fixes.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatoranalyze_image",
+      "description": "Analyze an uploaded image and provide a detailed description of its content and layout.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_store_memory",
+      "description": "Store a new memory and return feedback.",
+      "params": [
+        "content",
+        "memory_type",
+        "context",
+        "tags"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_deploy_contract_ui",
+      "description": "Gradio wrapper for contract deployment",
+      "params": [
+        "source_code",
+        "contract_name",
+        "from_account",
+        "constructor_args_str"
+      ]
+    }
+  ]
+}

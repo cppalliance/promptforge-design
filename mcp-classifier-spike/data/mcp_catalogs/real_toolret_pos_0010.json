@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_pos_0010",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getURLInfo",
+      "description": "Retrieve information about a specific URL.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_v2_Billboard_Hot_100",
+      "description": "Billboard Hot 100 chart \nis weekly based. \n\nIf `week` is not supplied, will default to last week. \nif the week date is not Saturday, will default to Saturday of that week",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ethereum Price in Uniswap v2",
+      "description": "Retrieve the current Ethereum price in Uniswap v2",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_actors_get_filmography_appearances",
+      "description": "Get filmography appearances of an actor, actress, etc...",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de",
+        "{'name': 'nconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetFare",
+      "description": "Retrieves the fare information for a specific train route.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iiot.get_sensor_data",
+      "description": "Retrieve the sensor data from a specific industrial IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "URL_Intelligence_Rip",
+      "description": "Extract links and info from a given URL",
+      "params": [
+        "{'name': 'target', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aliexpress_DataHub_Aliexpress_Store_Item_Search_by_Keyword",
+      "description": "In-store item search by keyword.",
+      "params": [
+        "{'name': 'sellerId', 'type': 'STRING', '",
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random MLEM Image",
+      "description": "Returns a random MLEM image with customizable parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v2_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "verify_technician_qualification",
+      "description": "Confirm the technician's repair experience and qualifications for the specified appliance model",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sim_based_Location_Tracking_NumberList",
+      "description": "\n<p>All  of <b>last updated locations</b> of provided concents phone numbers can be fetched through this endpoint,</p>\n\n<h2 id=\"output\">OUTPUT</h2>\n<p>\n<h4>Invalid user credentials</h4>\n</p>\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper language-undefined\"><code class=\"is-highlighted language-undefined\">{\n    \"errors\": \"Invalid username/password.\"\n}\n</code></pre>\n",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "GetUserToken",
+      "description": "description = \"Get user token API that takes two parameters - 'username' and 'password'. The 'username' parameter is used to identify the user and the 'password' parameter is used to authenticate the user's identity.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the user.'},\n    'password': {'type': 'str', 'description': 'The password of the user.'}\n}\noutput_parameters = {\n    'token': {'type': 'str', 'description': 'The token generated upon successful authentication.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exponential Moving Average (EMA)",
+      "description": "Retrieve historical data of the Exponential Moving Average (EMA) indicator for a specific market, exchange, symbol, and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Manga",
+      "description": "Fetch manga based on the provided text, which includes the title and subtitle.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "share_calendar",
+      "description": "Share Calendar",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguepowerrankingrounds",
+      "description": "Fetches the power ranking rounds for the specified tournament and season in a football league.",
+      "params": [
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Forex OHLC History",
+      "description": "Retrieve historical OHLC data for available forex pairs",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getResidentialConstructionCost",
+      "description": "Retrieve the cost of residential construction",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getQRCode",
+      "description": "Generates a QR code for a given phone ID and returns the QR code image.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAllInboxes",
+      "description": "List inboxes in paginated form. The results are available on the `content` property of the returned object. This method allows for page index (zero based), page size (how many results to return), and a sort direction (based on createdAt time). You Can also filter by whether an inbox is favorited or use email address pattern. This method is the recommended way to query inboxes. The alternative `getInboxes` method returns a full list of inboxes but is limited to 100 results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auther_Check_Get_person_by_id",
+      "description": "To check if the person_id already exists in the system, just specify the path with person_id. If the person_id exists in response you will get the same person_id and information when a person was created and updated.",
+      "params": [
+        "{'name': 'person_id', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_LeagueTotalTeamEvents",
+      "description": "Get last 5 events for a specific E-Sports league by providing the tournament ID and season ID.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BIN_IIN_Lookup_BIN_IIN_Lookup",
+      "description": "This API for Lookup, check, or search Issuer card information using card BIN.\nInput first 6 digits number of the Credit/Debit Card",
+      "params": [
+        "{'name': 'bin', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fitnessTracker.compareFeatures",
+      "description": "Compares features of multiple fitness tracker models.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currencies_And_Countries_Crypto_Convert",
+      "description": "You can convert crypto currencies.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_get_fund_profile",
+      "description": "Fetch the fund profile information for a given stock using the provided ticker ID and API key.",
+      "params": [
+        "tickerid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "welcome",
+      "description": "Fetches NFT-related data from the specified API using optional parameters.",
+      "params": [
+        "nft"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YT_API_Post_Comments",
+      "description": "Get post's comments or thread.\nQuota cost is 1 unit.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DseajrchU_airplaKne",
+      "description": "Return data of the airplane determined by query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Daily Match List-Results",
+      "description": "Retrieve a list of daily basketball matches, including finished matches, for a specified string range within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetVerses",
+      "description": "Retrieves a range of verses from the Holy Bible.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VOD_App_Series",
+      "description": "Series Endpoint, will have details about series and it's episodes",
+      "params": [
+        "{'name': 'series-slug', 'type': 'string'",
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "event",
+      "description": "Fetches the details of a single event using its ID from the Spectation Sports Events API.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_transaction_details",
+      "description": "Retrieve the transaction details for a specified account ID on a specific date with a specific merchant",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TV Series Season",
+      "description": "Retrieves information about a specific season of a TV series from the movies database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LemurBot_Get_A_Bot_Category_Group",
+      "description": "Get a specific bot category group by it's id and view it's details",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCalendar",
+      "description": "Retrieves a calendar of upcoming matches for a specific video game and region",
+      "params": [
+        "video_game",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "DCGAN",
+      "description": "DCGAN is a model designed in 2015 by Radford et. al. in the paper Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. It is a GAN architecture both very simple and efficient for low resolution image generation (up to 64x64).",
+      "params": [
+        "pretrained",
+        "useGPU"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAssessmentMethods",
+      "description": "Retrieve the assessment methods for a specific learning objective",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

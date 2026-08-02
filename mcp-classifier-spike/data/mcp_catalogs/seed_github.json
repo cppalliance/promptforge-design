@@ -1,0 +1,69 @@
+{
+  "catalog_id": "github",
+  "tools": [
+    {
+      "server": "github",
+      "name": "create_issue",
+      "description": "Create a new issue in a GitHub repository",
+      "params": [
+        "owner",
+        "repo",
+        "title",
+        "body"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "create_pull_request",
+      "description": "Open a new pull request from a branch",
+      "params": [
+        "owner",
+        "repo",
+        "head",
+        "base",
+        "title"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "search_code",
+      "description": "Search for code across GitHub repositories",
+      "params": [
+        "q",
+        "sort",
+        "order"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "get_file_contents",
+      "description": "Read the contents of a file from a GitHub repository",
+      "params": [
+        "owner",
+        "repo",
+        "path",
+        "ref"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "list_commits",
+      "description": "List commits on a branch of a repository",
+      "params": [
+        "owner",
+        "repo",
+        "sha"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "merge_pull_request",
+      "description": "Merge an open pull request",
+      "params": [
+        "owner",
+        "repo",
+        "pull_number"
+      ]
+    }
+  ]
+}

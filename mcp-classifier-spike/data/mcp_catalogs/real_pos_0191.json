@@ -1,0 +1,378 @@
+{
+  "catalog_id": "real_pos_0191",
+  "tools": [
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_hourly_analysis",
+      "description": "Process hourly timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> hourly_analysis(\"AAPL\", 3, 14, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_time_series_tool",
+      "description": "MCP Tool: Creates a time-series plot for a drug-event pair. Returns: A Plotly figure.",
+      "params": [
+        "drug_name",
+        "event_name",
+        "aggregation"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_multi_way_anova",
+      "description": "Accepts multiple categorical factors and performs Multi-Way ANOVA to determine whether there are statistically significant differences between group means when multiple factors are involved simultaneously. Multi-way ANOVA extends the one-way ANOVA framework to handle complex experimental designs with multiple categorical independent variables (factors), each with two or more levels. Unlike one-way ANOVA which tests a single factor, multi-way ANOVA can simultaneously test: (1) main effects of each individual factor, (2) interaction effects between factors, and (3) higher-order interactions. The test uses F-statistics to compare variance between groups to variance within groups for each effect. Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by each factor and interaction, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: 2-way ANOVA for treatment \u00d7 gender effects on blood pressure, 3-way ANOVA for teaching method \u00d7 school type \u00d7 student age on test scores, 4-way ANOVA for drug \u00d7 dose \u00d7 gender \u00d7 age effects on recovery.",
+      "params": [
+        "dependent_var",
+        "factors",
+        "alpha",
+        "effect_thresholds",
+        "include_interactions",
+        "max_interaction_order",
+        "sum_squares_type"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_volume_adjustment",
+      "description": "Apply volume adjustment to an audio file using gain in decibels. This function loads an audio file and applies a volume adjustment by the specified gain amount in decibels. Positive values increase volume, negative values decrease volume. The function also detects potential audio clipping when volume is increased. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, adjusted_audio_data: array), for the volume-adjusted audio result, or None if an error occurred, Second element: A status message string indicating success with gain applied, and clipping warning if detected, or error information, , result, status = apply_volume_adjustment(\"url/to/audio.mp3\", -3.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Gain is specified in decibels (dB): +6dB doubles volume, -6dB halves volume, Positive gain values may cause clipping (distortion) if audio becomes too loud, Function automatically detects and warns about clipping, Preserves original sample rate and audio format, Safe range is typically -20dB to +6dB to avoid quality issues",
+      "params": [
+        "audio_file",
+        "gain_db"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_create_table_from_query",
+      "description": "### `create_table_from_query(table_name: str, source_query: str)`",
+      "params": [
+        "table_name",
+        "source_query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "Patent-Scout",
+      "name": "Patent_Scout_analyze_patent_idea",
+      "description": "Analyzes a product idea to assess its patentability and finds similar patents. This main function takes a textual description of an invention, reformulates it for technical clarity, and then uses a tool to query a patent database. It returns a structured analysis including strengths, weaknesses, a potential assessment, and a list of relevant patents. Returns: The final structured result is embedded as JSON in the last status message within an HTML comment., {...} -->\" in the final yielded status to extract the complete analysis result., strengths (list), weaknesses (list), rating (dict), patents (list), rewritten_query (str), status (str)., Complete analysis results for all UI components.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_predict_modal_lead",
+      "description": "Pr\u00e9diction Modal pour un lead",
+      "params": [
+        "name",
+        "industry",
+        "company_size",
+        "budget_range",
+        "urgency",
+        "source",
+        "expected_revenue",
+        "response_time"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_opinion",
+      "description": "Returns the opinion data generated by LLM.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_score_from_audio",
+      "description": "Generate a MusicXML score from an input audio (.wav) file. Returns: File path to the generated MusicXML file, or error message on failure.",
+      "params": [
+        "wav_file"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_min15_analysis",
+      "description": "Process 15-minute timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> min15_analysis(\"AAPL\", 1, 3, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_speed",
+      "description": "Change video playback speed while maintaining audio quality. Returns: URL to processed video or None if failed, , Handles audio speed limits (0.5-2.0) by chaining atempo filters, Maintains video and audio synchronization, Preserves original quality",
+      "params": [
+        "video_url",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_temporal_analysis_mcp",
+      "description": "Analyzes the temporal relationship between drug administration and the onset of adverse events. This tool provides insights into the typical time-to-onset for a specific drug-associated adverse event, which can be a critical factor in causality assessment. It helps determine if the timing of the event is consistent with the drug's known pharmacology. Returns: JSON string with temporal patterns and time-to-onset analysis",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "limit"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_process_story_generation",
+      "description": "Process the story generation request from the UI.",
+      "params": [
+        "story_type",
+        "tone",
+        "kid_interests",
+        "subject",
+        "kid_age",
+        "kid_language",
+        "reading_time",
+        "pdf_file",
+        "model_selector"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get",
+      "description": "Get user profile by ID. Returns: Dict with profile data or error message",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_artist_and_track",
+      "description": "Searches for a track and returns artist info and URIs",
+      "params": [
+        "track_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_analyze_video_context",
+      "description": "This is an AI modal that can analyze the entire video along with timestamps. You can use this to analyze the context of a video. Returns: The response from the GEMINI AI MODEL.",
+      "params": [
+        "video_url",
+        "task"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_confirm_changes",
+      "description": "Applies the staged changes from the changeset.",
+      "params": [
+        "hf_api_key",
+        "owner_name",
+        "space_name"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_initialize_whoop_client_with_input",
+      "description": "Authenticates a user using the provided WHOOP email and password. Stores credentials in the environment variables and initializes the WhoopClient.",
+      "params": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_login",
+      "description": "UI-only function to switch views and update components after login.",
+      "params": [
+        "final_username",
+        "final_channel"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    },
+    {
+      "server": "ThreatRadar",
+      "name": "ThreatRadar_analyze_query_ui",
+      "description": "UI-specific version that returns HTML formatted results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_train_modal_model",
+      "description": "Entra\u00eene le mod\u00e8le Modal ML",
+      "params": [
+        "num_leads"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_position",
+      "description": "Describe the current chess position from a FEN string, plus a material summary. Attempts to classify the opening, and if successful, adds the opening information to the position. Otherwise, it adds a piece map with the current pieces and the list of legal moves.",
+      "params": [
+        "fen"
+      ]
+    }
+  ]
+}

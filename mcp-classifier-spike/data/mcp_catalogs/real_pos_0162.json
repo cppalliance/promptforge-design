@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_pos_0162",
+  "tools": [
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_qa_reply",
+      "description": "MCP Endpoint: qa.reply Drafts concise answers to client questions like \"Why should we hire you?\" Speeds up Upwork, Fiverr, or LinkedIn chats.",
+      "params": [
+        "user_id",
+        "question",
+        "context"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_compare_voices",
+      "description": "Use this tool to compare two voices for a match",
+      "params": [
+        "audio1",
+        "audio2"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_error_sync",
+      "description": "Search Stack Overflow for solutions to an error message. Returns: Formatted search results",
+      "params": [
+        "error_message",
+        "language",
+        "technologies",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_delete_item",
+      "description": "Delete an item from the game.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "StockSense",
+      "name": "StockSense_stock_sentiment_pipeline",
+      "description": "Analyzes stock news sentiment by fetching articles and performing sentiment analysis. Returns: A list of dictionaries with article metadata and sentiment results.",
+      "params": [
+        "ticker",
+        "max_articles"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_question_enhancer",
+      "description": "Wrapper for QuestionEnhancerAgent to provide question enhancement. Returns: Enhanced question result with sub-questions",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_file",
+      "description": "This function is used to connect to a data source file like CSV or parquet. Returns: -------, tuple, , schema (str): A string representation of the data schema if successful, or an empty string on failure., status (str): A message indicating the success or failure of the connection.",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_network_info_ui",
+      "description": "Get current network info for UI",
+      "params": []
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_next_page",
+      "description": "Go to next page for patients",
+      "params": []
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_logout",
+      "description": "UI-only function to switch views after logout.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_generate_data_profiling",
+      "description": "Generates detailed data profiling report. Returns: Missing data analysis, Numeric statistics, Categorical statistics",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "kokoro-mcp-marcodsn",
+      "name": "kokoro_mcp_marcodsn_kokoro_tts",
+      "description": "Generate speech audio from text using Kokoro TTS. Returns: Path to the generated WAV audio file.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle_image",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "classify_opening",
+      "description": "Attempt to classify a chess opening using the Lichess openings database. Return the ECO code, name, moves and main sub-variations of the opening.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_clear_fields",
+      "description": "Clear the subject and story text fields. Returns: List[str]: Empty strings for the fields to clear",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_merge_videos",
+      "description": "Merge multiple videos into a single video. Returns: URL to merged video or None if failed, , Handles various input formats, Maintains original quality, Preserves audio from all videos, Gracefully handles failed downloads",
+      "params": [
+        "video_urls"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask",
+      "description": "Ask the D&D narrative agent a question.",
+      "params": [
+        "question"
+      ]
+    }
+  ]
+}

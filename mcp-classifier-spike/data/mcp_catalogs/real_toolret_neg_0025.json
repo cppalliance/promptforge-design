@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0025",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Card Information",
+      "description": "Returns card information for a given card ID. User authentication is required.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football Match Player Shotmap",
+      "description": "Retrieve a player's shotmap for a specific football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchColor",
+      "description": "Searches for a color based on an input value.",
+      "params": [
+        "searchValue"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coin Markets",
+      "description": "Retrieve markets on different exchanges that trade a specific coin.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forecast_crypto_and_fiat_currency_exchange_rates_Currency_rates_for_1_bank_Histo",
+      "description": "Free subscribe plan available! Check it in pricing and subscribe for tests!\n**S**o it does - get exchange rates for selected bank on chosen date. Timezone is important!!!\n\nExample 1 - get currency rates provided by ECB(European Central Bank) in Berlin:\n`/api/get_all_currencies_values_for_1bank/?country_code=eu&date_yyyy_mm_dd_from=2021-11-15&date_yyyy_mm_dd_till=2021-11-15&bank_id=15&tz=Europe/Berlin`\n\nExample 2, MAIB (private Moldavian bank): `/api/get_all_currencies_values_for_1bank/?country_code=md&date_yyyy_mm_dd_from=2021-11-12&date_yyyy_mm_dd_till=2021-11-12&bank_id=1&tz=Europe/Chisinau`",
+      "params": [
+        "{'name': 'country_code', 'type': 'STRING",
+        "{'name': 'date_yyyy_mm_dd_from', 'type':",
+        "{'name': 'bank_id', 'type': 'STRING', 'd",
+        "{'name': 'date_yyyy_mm_dd_till', 'type':",
+        "{'name': 'tz', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Qvantana_Stochastic_RSI",
+      "description": "Stochastic RSI indicator",
+      "params": [
+        "{'name': 'exchange', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'market', 'type': 'STRING', 'de",
+        "{'name': 'interval', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRobotStatus",
+      "description": "Retrieve the status of a robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bucket_List_by_API_Ninjas_v1_bucketlist",
+      "description": "Returns a random bucket list idea.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_sleep_duration",
+      "description": "Calculate the recommended sleep duration based on age",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CinemaFinder",
+      "description": "This API finds the cinemas where the searched movie is being shown.",
+      "params": [
+        "{'name': 'movieDetails', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pricelist API",
+      "description": "The Pricelist API is used to retrieve the list of available Pulsa and Data products along with their details such as code, name, nominal, and price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_vehicle_capacity",
+      "description": "This method takes two arguments, 'cargo_capacity' and 'vehicle_weights', where 'vehicle_weights' is a list of tuples containing the number of vehicles and their average weight. It returns the maximum number of vehicles that can be carried by the given cargo capacity.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Vampirism Imbuements",
+      "description": "This API retrieves a list of imbuements related to Vampirism (Life steal) in the Tibia Items tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ASCII Art by ID",
+      "description": "Retrieve a previously generated ASCII art image by its unique identifier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "percent_increase_calculation",
+      "description": "Calculates the percentage increase between two values",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEnergySupply",
+      "description": "Retrieve the energy supply for a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_object_occurrences(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def count_object_occurrences(image_patch: ImagePatch, object_name: str) -> str:\n    '''Count the number of occurrences of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to count.\n       \n    Returns:\n        str: The number of occurrences of the object.\n    '''\n    object_patches = image_patch.find(object_name)\n    return str(len(object_patches))",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Proxy API",
+      "description": "Proxy your request to a specified URL with optional headers and query parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_JSON_search_web",
+      "description": "This endpoint is used to perform text search on the web using the Google Search JSON API. You can send a request with various parameters such as **q** (search query), **num** (desired number of results), **start** (starting index of results),  and more. The request will return search results in JSON format containing information such as titles, URLs, and descriptions of the search results.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Risk Return Summary",
+      "description": "Retrieves a summary of the risk return for a specified security type and ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Game_of_Thrones_Get_character_by_ID",
+      "description": "Returns a character by their ID",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicAPI_public_search_introspection",
+      "description": "Allows you to fetch all different enums needed for sending API requests",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "feeds",
+      "description": "Fetch recent TikTok feeds for a given user.",
+      "params": [
+        "schematype",
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Recipe",
+      "description": "Uses AI to generate a unique recipe based on a provided name and a list of ingredients",
+      "params": [
+        "{'name': 'ingredients', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Daily Match List-Scheduled",
+      "description": "This API returns a list of scheduled matches for a given string. The data is limited to the next 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllCards",
+      "description": "Retrieve a list of all available cards and their corresponding data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetTempMail_End",
+      "description": "Endp",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_a_List_of_Fund_Managers",
+      "description": "Get a List of Fund Managers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThermoCalc.calculateHeatTransfer",
+      "description": "Calculates the heat transfer between two substances based on their specific heat capacities, masses, and temperature changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Data Analyst Jobs API",
+      "description": "Retrieve data analyst job listings in the USA",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_competitions_detail",
+      "description": "Get competition information, recent and up coming matches",
+      "params": [
+        "{'name': 'CompId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Keyword_Search_YouTube_Keyword_Search",
+      "description": "YouTube Keyword Search",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuizQuestions",
+      "description": "Retrieves a set of quiz questions based on specified parameters.",
+      "params": [
+        "apiKey",
+        "category",
+        "difficulty",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageRadioButtonFields",
+      "description": "Retrieves radio button fields from a specific page in a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_profit_share",
+      "description": "This method takes two arguments, 'investment' and 'profit', and returns the share of profit for a given investment. In this case, it will be used to calculate the share of A in the profit.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pinterest_APIs_Get_User_Pins",
+      "description": "Get User Pins by user name",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ModifyScene",
+      "description": "\"ModifyScene API that takes two parameters - 'scene_name' and 'new_device_list'. The 'scene_name' parameter specifies the name of the scene which needs to be modified and the 'new_device_list' parameter is a list of strings containing the names of the new devices that will replace the old ones in the scene.\"",
+      "params": [
+        "{'name': 'scene_name', 'in': 'query', 's",
+        "{'name': 'new_device_list', 'in': 'query"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_problems",
+      "description": "This method takes two arguments, 'start' and 'end', representing the range of problems to be solved, and returns the number of problems in that range.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "asdfadsf_Get_Products_in_Category",
+      "description": " ",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'skip', 'type': 'NUMBER', 'desc",
+        "{'name': 'category', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_similarity",
+      "description": "This calculates the similarity between two texts in percentage.",
+      "params": [
+        "{'name': 'text1', 'schema': {'type': 'st",
+        "{'name': 'text2', 'schema': {'type': 'st",
+        "{'name': 'api_key', 'schema': {'type': '"
+      ]
+    }
+  ]
+}

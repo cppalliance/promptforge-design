@@ -1,0 +1,330 @@
+{
+  "catalog_id": "real_toolret_pos_0001",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pairs",
+      "description": "\nQuery different combinations of the trading pairs.\n\nThe most common query is all trading pairs of a decentralised exchange.\n\n`/pairs?chain_slugs=ethereum&exchange-slugs=uniswap-v2`\n\nThe results are always paginated.\n\n## Parameter seralisation\n\nNote that lists are not JSON serialised, but use [OpenAPI query parameter serialization](https://swagger.io/docs/specification/serialization/). I.e. lists are comma separated, no spaces between items.\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "offers",
+      "description": "Retrieve offers for a specific product from various e-commerce platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_box_height",
+      "description": "This method takes two arguments, 'length' and 'width', and returns the height of the box after squares are cut off from each corner.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSupplyChainStatus",
+      "description": "Retrieve the current status of the humanitarian supply chain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_max_subarray_sum",
+      "description": "Finds the maximum sum of a contiguous subarray within a list of integers.",
+      "params": [
+        "nums"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tradier_Get_a_user_s_profile",
+      "description": "{\"category_name\": \"Finance\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Tradier_Get_a_user_s_profile\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "earnings",
+      "description": "Fetch the player earnings for a given tournament ID and year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_v2_list_similar_homes_Deprecated",
+      "description": "List similar properties for sale\n* This endpoint is deprecating, the official have changed to use .../properties/v2/list.... endpoints to list similar properties.",
+      "params": [
+        "{'name': 'property_id', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "businessplan",
+      "description": "Generates a business plan for the given idea using the Business Starter API.",
+      "params": [
+        "idea"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_temperatures",
+      "description": "This method takes a dictionary representing a table, and returns a list containing the temperature values.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SyntaxTreeAnalyzer.parseSentenceStructure",
+      "description": "Analyzes a sentence to identify its grammatical structure and categorizes each component based on syntax rules.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) ->",
+      "description": "def infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) -> str:\n    '''Infer the purpose of an object in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to infer the purpose of.\n        context (str): The context in which the object is placed.\n       \n    Returns:\n        str: The inferred purpose of the object.\n    '''\n    object_patches = image_patch.find(object_name)\n    # Question assumes single patch\n    object_patch = object_patches[0]\n    return object_patch.llm_quer",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulate_vr_experience",
+      "description": "Simulate a virtual reality (VR) experience based on the provided parameters such as user actions, scene conditions, and time duration.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get PAN Card OCR Result",
+      "description": "Fetch the result of a PAN card OCR process using the provided request ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cubic_feet_to_gallons",
+      "description": "This function converts a given volume in cubic feet to gallons.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube Video Converter",
+      "description": "Convert YouTube videos to other formats",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FilterDuplicateRemover",
+      "description": "Removes duplicates from the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "OpenBlur_Retrieve_Bids",
+      "description": "Retrieve All Blur Bids",
+      "params": [
+        "{'name': 'contractAddress', 'type': 'STR"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Jokes_Get_animes",
+      "description": "Get all the anime from Anime Jokes",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> st",
+      "description": "def check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> str:\n    '''Determine the best match from a list of possible attributes of an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        attributes (List[str]): The list of possible attributes to check for.\n       \n    Returns:\n        str: The best match attribute from the list.\n    '''\n    return image_patch.best_text_match(attributes)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "appMonetization.getPurchaseData",
+      "description": "Obtains detailed in-app purchase data for a mobile app, segmented by item and user demographics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Yummly_feeds_list",
+      "description": "List feeds by category",
+      "params": [
+        "{'name': 'start', 'type': 'NUMBER', 'des",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_v2_house_prices_get_sales_history",
+      "description": "Get sales history",
+      "params": [
+        "{'name': 'property_id', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Player_Heatmap",
+      "description": "Get a player's heatmap",
+      "params": [
+        "{'name': 'seasons_id', 'type': 'NUMBER',",
+        "{'name': 'unique_tournament_id', 'type':",
+        "{'name': 'player_id', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguehometeamevents",
+      "description": "Retrieves the last 5 home events for a specific league and season using the Baseball API.",
+      "params": [
+        "seasonid",
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mSrge",
+      "description": "Merge multiple pdf into single file",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_price_to_sales",
+      "description": "return price to sales",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ID_Game_Checker_GET_username_Point_Blank",
+      "description": "Enter your Point Blank ID  in the required parameters",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "German_Cities_city_name",
+      "description": "Gibt Informationen zu der angegebenen Stadt zur\u00fcck. Bei Mehrdeutigkeit werden maximal drei Ergebnisse zur\u00fcckgegeben. Zur\u00fcckgegebene Werte sind: Einwohnerzahl, Durchschnittsalter, umliegende Orte.",
+      "params": [
+        "{'name': 'city-name', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Shopee Category Tree",
+      "description": "Retrieve the category tree structure from Shopee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DietPatternAnalysis.evaluateDiet",
+      "description": "Evaluates the dietary patterns of vertebrate species over different seasons and their impact on health.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_days",
+      "description": "Calculates the total number of days required to complete the work",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "READ - AUTH REQUESTS 1",
+      "description": "Retrieve a list of authentication requests or a specific authentication request by ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_periods_for_entity(df, entity_col, period1_col, per",
+      "description": "def calculate_difference_between_periods_for_entity(df, entity_col, period1_col, period2_col, entity_name):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values over different periods, the name of the entity, and two periods, and returns the difference in values between the two periods for the specified entity.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the values of entities over different periods.\n    entity_col (str): The column name for the entities.\n    period1_col (str): The column name for the first period.\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "EmergencyKnowledge",
+      "description": "description = \"An API that provides information about emergency procedures and first aid activities related to a particular disease or injury. Takes one input parameter - 'disease_injury_name', which is a string referring to the name of the injury or disease for which the user needs emergency knowledge.\"\ninput_parameters = {\n    'disease_injury_name': {'type': 'str', 'description': \"The name of the disease or injury for which emergency knowledge is required.\"}\n}\noutput_parameters = {\n    'emergency_procedures': {'type': 'str', 'description': 'Emergency procedures for the specified disease or i",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hearthstone_Card_Set",
+      "description": "Returns all cards in a set. Example values: Blackrock Mountain, Classic.",
+      "params": [
+        "{'name': 'set', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_wage",
+      "description": "This method takes three arguments, 'male_wage', 'female_wage', and 'child_wage', and returns the average wage per day paid by the contractor.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Albums",
+      "description": "Retrieve a list of albums from the music database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Onboarding_Project_Get_Product",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    }
+  ]
+}

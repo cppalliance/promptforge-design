@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_pos_0139",
+  "tools": [
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_audio_to_video",
+      "description": "Add audio to video with precise timing and volume control. Returns: URL to processed video or None if failed, , Supports both local and remote audio files, Handles audio mixing with original track, Maintains video quality, Preserves audio synchronization",
+      "params": [
+        "video_url",
+        "audio_path",
+        "start_time",
+        "volume",
+        "keep_original_audio"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_normalization",
+      "description": "Apply audio normalization to adjust the peak level of an audio file. This function loads an audio file and applies normalization to adjust the peak audio level to a specified target level in decibels (dB). It provides before and after statistics to show the effect of the normalization process. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, normalized_audio_data: array), for the normalized audio result, or None if an error occurred, Second element: A status message string showing before/after peak levels, and success/error information, , result, status = apply_normalization(\"url/to/audio.mp3\", -6.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Target level is specified in decibels (dB), Common target levels: -6dB (moderate), -3dB (loud), -12dB (quiet), Positive target levels will amplify audio and may cause clipping, Negative target levels will reduce audio volume, Function preserves original sample rate and audio format, Returns comparison statistics showing original vs normalized peak levels",
+      "params": [
+        "audio_file",
+        "target_level"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_latest_text_posts",
+      "description": "Retrieves latest 5 text posts with their ids from the database. Ids are only meant for LLMs, no need to show to user",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_info",
+      "description": "Affiche les informations sur les fonctions CRM",
+      "params": []
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_store_memory",
+      "description": "Store a new memory and return feedback.",
+      "params": [
+        "content",
+        "memory_type",
+        "context",
+        "tags"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_local_file",
+      "description": "Convert a local document to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "local_file_path",
+        "output_format"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_suggest_move",
+      "description": "Suggest a move for the given FEN position. This function can be used to give a hint to the user about the best move to play. This function takes a FEN string representing the current board state and returns the best move in SAN format. Returns: The best move in SAN format.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_best_bottle",
+      "description": "ask for the best bottle comments. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp_fips_lookup",
+      "description": "Fetches FIPS code for a given geography hierarchy and name. Also returns FIPS code for any parent geographies. Returns: dictionary representing FIPS code values for provided geography_hierarchy.",
+      "params": [
+        "geography_hierarchy",
+        "name",
+        "required_parent_geographies"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_advanced_search_sync",
+      "description": "Advanced search for Stack Overflow questions with comprehensive filters. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "excluded_tags",
+        "min_score",
+        "title",
+        "body",
+        "min_answers",
+        "has_accepted_answer",
+        "min_views",
+        "sort_by",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_send_sui",
+      "description": "Sends SUI to a recipient address using the provided private key.",
+      "params": [
+        "private_key",
+        "recipient_address_input",
+        "amount_sui_input",
+        "transfer_coin_id",
+        "gas_object_id",
+        "gas_budget"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_lab",
+      "description": "Changes the color of specified objects in an image using the LAB color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the LAB color space. LAB separates luminance (L) from color components (A for green-red, B for blue-yellow), making it more perceptually uniform and closer to how humans perceive color differences. Use this method when: - Precise perceptual color control is needed (e.g., subtle shifts in tone or matching specific brand colors). - Working in lighting-sensitive tasks where separating lightness from chroma improves quality. - You want color transformations that are less influenced by lighting conditions or brightness variations. OpenCV LAB Ranges: - L: 0-255 (lightness) - A: 0-255 (green-red, 128 = neutral) - B: 0-255 (blue-yellow, 128 = neutral) Common LAB color references: - Green: (L=?, A\u224880, B\u2248128) - Red: (L=?, A\u2248180, B\u2248160) - Blue: (L=?, A\u2248128, B\u224880) - Yellow: (L=?, A\u2248120, B\u2248180) - Purple: (L=?, A\u2248180, B\u2248100). Returns: Base64-encoded string, , If user_input format is invalid, a/b values are outside [0, 255] range, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status_",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API filter.",
+      "params": [
+        "filter_name"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_opinion",
+      "description": "Returns the opinion data generated by LLM.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_register_ai_agent",
+      "description": "Handle AI agent registration.",
+      "params": [
+        "ai_name"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_driver_info",
+      "description": "Retrieve detailed information about a specific driver.",
+      "params": [
+        "driver_name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_analyze_quotations",
+      "description": "Analyse avanc\u00e9e des devis native",
+      "params": [
+        "domain_filter",
+        "limit"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_program",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u5220\u9664\u5ba2\u6237\u7aef\u53ca\u5176\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_start_chat",
+      "description": "Handle starting a private chat.",
+      "params": [
+        "entity_selection"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_write_file_content_to_sandbox",
+      "description": "Writes content to a file in a Modal sandbox. Useful for writing code, text, or any other content, rapid prototyping, creating boilerplate code, implementing algorithms, and generating test cases. Returns: JSON string containing success status and written file path",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "content"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_duckduckgo_search",
+      "description": "Given a search query, returns the search results from DuckDuckGo. Returns: The search results from DuckDuckGo Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_model_access",
+      "description": "Check if the user has access to the gated FLUX.1-dev model. This function verifies that the user's HuggingFace token has access to the gated FLUX.1-dev model required for LoRA training. This has to be done before we can deploy the endpoint. Returns: str: Status message indicating access status and next steps, , status = check_model_access(\"hf_abcdef123456\")",
+      "params": [
+        "hf_token"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    }
+  ]
+}

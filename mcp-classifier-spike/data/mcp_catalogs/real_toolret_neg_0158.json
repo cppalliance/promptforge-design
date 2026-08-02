@@ -1,0 +1,331 @@
+{
+  "catalog_id": "real_toolret_neg_0158",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "cultural_festival_schedule",
+      "description": "Fetches the schedule of events for a specified cultural festival including performances and workshops.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_ut",
+      "description": "Returns current gas price data for Utah. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResumeScreeningTool",
+      "description": "for screening resumes and scheduling interviews",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "emailValidation",
+      "description": "Valistring an email address to ensure its existence and deliverability",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulate_vr_experience",
+      "description": "Simulate a virtual reality (VR) experience based on the provided parameters such as user actions, scene conditions, and time duration.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "agent_s_active_listings",
+      "description": "Fetches the active listings for a given agent from Zillow's API.",
+      "params": [
+        "zuid",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuotesByAuthor",
+      "description": "Filter quotes by author name.",
+      "params": [
+        "author"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPhoneNumberInfo",
+      "description": "Retrieves detailed information about a phone number, including its carrier, region, and type (landline or mobile).",
+      "params": [
+        "phoneNumber",
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "file_backup",
+      "description": "Used for backing up specified files.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_Blockchain_Get_Balance",
+      "description": "Get balance from any wallet on different blockchains, including Ethereum, Polygon, Binance, Solana mainnets, including Ropsten, Rinkey, Goerly, Kovan, Mumbai testnets.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Euro_Millions_Get_All_draws_results",
+      "description": "Get the results of all draws in history of EuroMillions since 2004",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iOS_Store_Get_app_reviews",
+      "description": "This endpoint allows us to fetch app reviews given app Id",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'appId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mass_from_to_number",
+      "description": "Converts a mass value from one unit to another using the RapidAPI unit conversion service.",
+      "params": [
+        "number",
+        "is_from",
+        "to"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Overview",
+      "description": "Returns overview stats (ADR, OCC ,Revenue ..) of a location rental data",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v2_Get_Track_Details_Single",
+      "description": "Get track_name, thumbnail, duration & artist_name of any Spotify Track. Album/Podcast/Show not supported.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Vimeo_GetAllCategories",
+      "description": "{\"category_name\": \"Media\", \"required_parameters\": [{\"name\": \"format\", \"type\": \"STRING\", \"description\": \"json or xml or php\", \"default\": \"json\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"generated_in\": \"str\", \"stat\": \"str\", \"err\": {\"code\": \"str\", \"expl\": \"str\", \"msg\": \"str\"}}, \"name\": \"Vimeo_GetAllCategories\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_qr_code",
+      "description": "Creates and returns a static QR code encoded with the provided email address. The QR code can be customized with various design parameters such as background color, eye pattern, error correction level, size, data gradient colors, and data patterns. When scanned, the QR code will prompt the user to send an email to the specified address.",
+      "params": [
+        "address",
+        "background_color",
+        "eye_pattern",
+        "error_correction",
+        "size",
+        "data_gradient_start_color",
+        "data_gradient_style",
+        "data_pattern"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Any_Anime_anime_img",
+      "description": "Show only the image from the api on your browser .",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bucket_List_by_API_Ninjas_v1_bucketlist",
+      "description": "Returns a random bucket list idea.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Locations",
+      "description": "Search for locations on Instagram based on a keyword",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "deleteIssue",
+      "description": "Delete an existing issue",
+      "params": [
+        "issueId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_Language_Supported_Languages",
+      "description": "Supported Languages",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "factorial_divide_by_2",
+      "description": "Calculates the factorial of a number and divides it by 2",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "clickMouse",
+      "description": "Simulate a mouse click at the current position",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_List_of_Foods",
+      "description": "This endpoint responds with a list of mexican foods that includes their names and images, as well as their IDs, which must be provided in the \"Detailed Food Recipe by ID\" endpoint to receive the detailed recipe.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_2023_Get_hashtags_followed_by_an_user_using_user_id",
+      "description": "Get hashtags followed by an Instagram user using user_id.",
+      "params": [
+        "{'name': 'user_id', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_news_v2_list",
+      "description": "List latest news relating to all sports at once",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get NFL Team Roster",
+      "description": "This API returns the current or historical roster of any NFL team, using the team ID or abbreviation. The roster is upstringd periodically throughout the day, and historical rosters are saved on a daily basis starting from May 5th, 2023.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "display_account_balance",
+      "description": "Display account balance information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_acaivity_byhpricP_raNge",
+      "description": "Find an event with a specified price in an inclusively constrained range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Elevation_From_Latitude_and_Longitude_Get_Elevation",
+      "description": "Get Elevation",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IRCTC_GetTrainClasses",
+      "description": " ",
+      "params": [
+        "{'name': 'trainNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2)",
+      "description": "def calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2):\n    \"\"\"\n    This function takes in a pandas DataFrame, a row identifier, and two column names, and returns the difference in values between the two columns for the specified row.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing various data.\n    id_col (str): The column name for the row identifiers.\n    row_id (str): The identifier for the row.\n    col1 (str): The name of the first column.\n    col2 (str): The name of the second column.\n    \n    Returns:\n    int: The difference in values between",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "all articles",
+      "description": "Endpoint to gather all articles from all listed publications detailed in API",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_val",
+      "description": "def get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_value, col_value):\n    \"\"\"\n    This function takes in a pandas DataFrame, row and column criteria, and returns the value of the cell that matches the criteria.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing data with columns specified by row_col and col_name.\n    row_col (str): The column name for the row criteria.\n    col_name (str): The column name for the column criteria.\n    row_value (str): The value of the row criteria.\n    col_value (str): The value of the column criteria.\n    \n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NREL_National_Renewable_Energy_Laboratory_Utility_Rates",
+      "description": "This service returns annual average utility rates ($/kWH) for residential, commercial and industrial sectors as well as the local utility name for a specific location. This service does not return complex rate information.  Version 3 is the current version of the utility rates API. Previous versions have been deprecated and its users are encouraged to migrate to this newly enhanced version.",
+      "params": [
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real Time Commodity Futures Prices API",
+      "description": "Retrieves real-time commodity futures prices from Investing.com",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateGuidanceSystemSettings",
+      "description": "Update the settings of a guidance system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance.forecast_stock_prices",
+      "description": "Predict future stock prices based on historical data and selected forecasting model.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "read_user",
+      "description": "Fetch user details from the IronWifi API using the provided user ID.",
+      "params": [
+        "user_id"
+      ]
+    }
+  ]
+}

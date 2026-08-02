@@ -1,0 +1,369 @@
+{
+  "catalog_id": "real_neg_0002",
+  "tools": [
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response_",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_list_ethereum_accounts",
+      "description": "List all created Ethereum accounts with their balances. Note: Only shows local testnet accounts for safety. Returns: dict: List of accounts",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_search",
+      "description": "Search for board games on BoardGameGeek by title. Returns: A list of dictionaries, each representing a matching game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'year' (str): The year the game was published (or 'Unknown' if not available)., , >>> search_game(\"Catan\"), [, \"13\", \"title\": \"Catan\", \"year\": \"1995\"},, ..., ]",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_prev_page",
+      "description": "Go to previous page for patients",
+      "params": []
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_latest_text_posts",
+      "description": "Retrieves latest 5 text posts with their ids from the database. Ids are only meant for LLMs, no need to show to user",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_add_token_light",
+      "description": "Add light to a token. This will allow to show it inside the fog of war. It can be used to add light to items like torches or characters. It will be attached so that the light moves with the token.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "light_radius"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_custom_respond",
+      "description": "Custom respond function with dynamic system prompt.",
+      "params": [
+        "message",
+        "book_name",
+        "book_content",
+        "selected_hero",
+        "lang_prompt"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_order_status",
+      "description": "Get the status of an order by order ID. Returns: Order status information including shipping and destination countries",
+      "params": [
+        "order_id"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_top",
+      "description": "Function to aggregate and list Medicare and Medicaid Fraud Practitioner Exclusions by state. System examines the most recent Office of Inspector General List of Excluded Individuals and Entities (LEIE) and aggregates the number of excluded entities by state. A shorter list of the top 20 locations can be returned with a True flag. Example use includes \"which states have the most excluded entities?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_news_endpoint",
+      "description": "Search news articles, similar to Google News. Returns: News search results as a dictionary",
+      "params": [
+        "q",
+        "num"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_time_series_tool",
+      "description": "MCP Tool: Creates a time-series plot for a drug-event pair. Returns: A Plotly figure.",
+      "params": [
+        "drug_name",
+        "event_name",
+        "aggregation"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_client_config_by_id",
+      "description": "\u6839\u636eID\u83b7\u53d6\u5355\u4e2a\u5ba2\u6237\u7aef\u914d\u7f6e \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8fd4\u56de\u683c\u5f0f(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", \"data\": { \"serverAddr\" = \"127.0.0.1\", \"serverPort\" = 25566, } } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u914d\u7f6e - `serverAddr`: \u670d\u52a1\u5668\u5730\u5740 - `serverPort`: \u670d\u52a1\u5668\u7aef. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message_",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_cover_letter_template",
+      "description": "Get a basic cover letter template for the specified tone. Returns: Dict with template structure and guidelines",
+      "params": [
+        "tone"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_diversity_checker",
+      "description": "Measures how semantically diverse the generated outputs are using cosine similarity. Returns: A report showing pairwise similarities and average similarity.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_get_sui_balance",
+      "description": "Retrieves the SUI balance for a given address using the Sui blockchain.",
+      "params": [
+        "wallet_address"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_search_content",
+      "description": "Search content using AnyCrawl API",
+      "params": [
+        "query",
+        "pages",
+        "api_key"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_exact_match_checker",
+      "description": "Check if each document contains the exact query string as a substring (case-insensitive). This tool performs a case-insensitive substring search to determine whether the query appears in each document exactly as entered (without tokenization or semantic matching). Returns: A dictionary containing:, 'tool': The name of the tool (\"Exact Match Checker\")., 'query': The input query string., 'results': A list of dictionaries with:, 'document': The original document., 'exact_match': A boolean indicating if the query is an exact substring of the document.",
+      "params": [
+        "query",
+        "documents"
+      ]
+    }
+  ]
+}

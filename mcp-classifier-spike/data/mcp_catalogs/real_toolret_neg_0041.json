@@ -1,0 +1,352 @@
+{
+  "catalog_id": "real_toolret_neg_0041",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_codes",
+      "description": "Calculates the total number of possible codes that can be formed with 4 digits, where each digit is different and ranges from 1 to 50.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Channel Search Continuation",
+      "description": "This endpoint gets the next list of search results in a given YouTube channel using the channel ID and a continuation token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_appointments",
+      "description": "Retrieves all appointments for a given date and clinic name from the API.",
+      "params": [
+        "date",
+        "clinicname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatchLoc_Group_Management_API_access_for_removing_group_information",
+      "description": "API access to remove location object's group information.\n\nrequired parameter : api (api.common.group.set.delete)",
+      "params": [
+        "{'name': 'api', 'type': 'STRING', 'descr",
+        "{'name': 'api_key', 'type': 'STRING', 'd",
+        "{'name': 'cert_key', 'type': 'STRING', '",
+        "{'name': 'group_key', 'type': 'STRING', ",
+        "{'name': 'timestamp', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Movie Search",
+      "description": "Search for movies by title, person, or year of production",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VideoAnalyzer",
+      "description": "used to analyze video and identify people, objects and actions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Items by Tag",
+      "description": "Returns a list of items (games or products) based on the provided tag ID. The tag ID can be found by calling the Tag List endpoint from the Tags section.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get League Champions Meta Data",
+      "description": "Fetches the Meta Data for all available League of Legends Champions, including their stats, roles, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Tweets and Replies by REST ID",
+      "description": "Retrieves a user's tweets and replies by providing a REST ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "chavinlo/TempoFunk",
+      "description": "A Text-to-Video model using Hugging Face Transformers library. Model is capable of generating video content based on the input text.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getStandingsByType",
+      "description": "Retrieve NHL standings by type (e.g., by conference, division, league, etc.)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "line_equation",
+      "description": "Calculate the value of y for a given x using the equation of a line",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TestingTool",
+      "description": "for testing prototypes and collecting feedback",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "openai/clip-vit-large-patch14",
+      "description": "The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner.",
+      "params": [
+        "text",
+        "images",
+        "return_tensors",
+        "padding"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_Thursday_Friday",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the tickets sold on Thursday and Friday.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: s",
+      "description": "def infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: str, context: str, query: str) -> str:\n    '''Infer the reason why a certain object is exhibiting a certain behavior in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for behavior.\n        behavior (str): The behavior of the object to infer reason for.\n        context (str): The context in which the behavior is exhibited.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: Th",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketballLeagueGroupMatches",
+      "description": "Retrieve the matches of a specific league group in a basketball tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Comany_Details_Search_Online_Fetch_Company_Details",
+      "description": "Fetch Company Details by company name",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "keremberke/yolov8m-blood-cell-detection",
+      "description": "A YOLOv8 model for blood cell detection, including Platelets, RBC, and WBC. Trained on the blood-cell-object-detection dataset.",
+      "params": [
+        "conf",
+        "iou",
+        "agnostic_nms",
+        "max_det"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SearchWebRequest",
+      "description": "Retrieve web search results for a specified keyword",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "climate.get_air_quality_index",
+      "description": "Retrieve the Air Quality Index (AQI) for a specific location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Divanscore_matches_get_esport_games",
+      "description": "Get eSport games (Only supports eSport matches)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "deleteFromCloud",
+      "description": "Deletes a file from the cloud storage",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageSoundAnnotations",
+      "description": "Retrieve sound annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WeatherCheck",
+      "description": "This API checks the weather of a specific location.",
+      "params": [
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "businessplan",
+      "description": "Generates a business plan for the given idea using the Business Starter API.",
+      "params": [
+        "idea"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestEmail",
+      "description": "Retrieve the latest email(s) from a set of inboxes, either all inboxes or a specific set of inbox IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_point_on_line_segment(point_a, point_b, distance_ratio)",
+      "description": "def find_point_on_line_segment(point_a, point_b, distance_ratio):\n    \"\"\"\n    Find the coordinates of a point on a line segment, given the coordinates of the endpoints and a ratio of distances from the point to the endpoints.\n\n    Parameters:\n    point_a (tuple): The coordinates of the first endpoint.\n    point_b (tuple): The coordinates of the second endpoint.\n    distance_ratio (float): The ratio of the distance from the point to the first endpoint to the distance from the point to the second endpoint.\n\n    Returns:\n    tuple: The coordinates of the point.\n    \"\"\"\n    x_a, y_a = point_a\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_TeamLastMatches",
+      "description": "Get the last matches for a specific baseball team by providing its ID and page number.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_last_stem_leaf",
+      "description": "This method takes a dictionary representing a stem-and-leaf plot, and returns a tuple containing the last stem and leaf.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Github_API_Scraper_Get_list_of_GitHub_repo_for_Ruby_web_scrapping",
+      "description": "Get list of GitHub repo for Ruby web scrapping",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_13_getAccountById",
+      "description": "Retrieves an account",
+      "params": [
+        "{'name': 'accountID', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFinancialSummary",
+      "description": "Retrieve financial summary information for healthcare",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rugby League Logo Image",
+      "description": "Retrieve the logo image of a specified rugby league tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cubic_feet_to_gallons",
+      "description": "This function converts a given volume in cubic feet to gallons.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Star Rating Description",
+      "description": "Retrieves a human-readable string description of a star rating (1-5) for a specific locale.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuotes",
+      "description": "Get quotes for precious metals and cryptocurrencies.",
+      "params": [
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "basic_search",
+      "description": "Performs a basic search for movie news articles using the `/news/basic/search` endpoint.",
+      "params": [
+        "q",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN_decoder_US_License_Plate_to_VIN",
+      "description": "Get the vin by license plate number.",
+      "params": [
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'license_plate', 'type': 'STRIN"
+      ]
+    }
+  ]
+}

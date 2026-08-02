@@ -1,0 +1,375 @@
+{
+  "catalog_id": "real_pos_0124",
+  "tools": [
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_letter_generate",
+      "description": "MCP Endpoint: letter.generate Calls an LLM to create a short, personalized cover letter in any tone. Saves time and improves response quality.",
+      "params": [
+        "user_id",
+        "job_description",
+        "tone"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_retrieve_ioc_from_threatfox",
+      "description": "Retrieves information about a potential IoC from ThreatFox. It may be used to retrieve information of indicators of compromise (IOCs) associated with malware, with the infosec community, AV vendors and cyber threat intelligence providers. Examples: >>> retrieve_ioc_from_threatfox(\"139.180.203.104\") ... { \"query_status\": \"ok\", \"data\": [ { \"id\": \"12\", \"ioc\": \"139.180.203.104:443\", \"threat_type\": \"botnet_cc\", \"threat_type_desc\": \"Indicator that identifies a botnet command&control...\", \"ioc_type\": \"ip:port\", \"ioc_type_desc\": \"ip:port combination that is used for botnet Command&..., \"malware\": \"win.cobalt_strike\", \"malware_printable\": \"Cobalt Strike\", \"malware_alias\": \"Agentemis,BEACON,CobaltStrike\", \"malware_malpedia\": \"https:\\/\\/malpedia.caad.fkie.fraunhofer.de\\/...\", \"confidence_level\": 75, \"first_seen\": \"2020-12-06 09:10:23 UTC\", \"last_seen\": null, \"reference\": null, \"reporter\": \"abuse_ch\", \"tags\": null, \"malware_samples\": [ { \"time_stamp\": \"2021-03-23 08:18:06 UTC\", \"md5_hash\": \"5b7e82e051ade4b14d163eea2a17bf8b\", \"sha256_hash\": \"b325c92fa540edeb89b95dbfd4400c1cb33599c66859....\", \"malware_bazaar\": \"https:\\/\\/bazaar.abuse.ch\\/sample\\/b325c...\\/\" }, ] } ] }",
+      "params": [
+        "potentially_ioc"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_company_details",
+      "description": "Fetch company details for the given LinkedIn username. Returns: A dictionary containing the company details",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_track_agent_node",
+      "description": "Track a specific node execution within an agent workflow. Call this for each step in your agent. Returns: JSON response with tracking status",
+      "params": [
+        "input_data",
+        "output_data",
+        "node_name",
+        "agent_name",
+        "node_type",
+        "execution_id",
+        "api_key"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_hf_datasets",
+      "description": "List available HuggingFace datasets for the current user. Returns: str: JSON string with available datasets",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_datasets_homepage",
+      "description": "Fetches the homepage for the the U.S. Census Bureau 2020 decennial census API housed at https://api.census.gov/data/2020/dec/dp.html. Contains descriptions of available datasets. Also includes links to additional helpful documentation such as available geographies and example API calls. Returns: The homepage in markdown format",
+      "params": []
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_live_station_update",
+      "description": "Retrieves real-time train information and updates for a specific railway station. This function queries the Indian Railways API to fetch live status updates including arriving/departing trains, expected arrival/departure times, and platform information for a specified time window. Returns: JSON response containing live station information including:, List of trains arriving/departing, Scheduled and expected arrival/departure times, Platform numbers, Current train locations, Delay information if any, Train running status, , If station code is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "station_code",
+        "for_next_hours"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_upload_file_to_server",
+      "description": "Upload a file to the server's video directory and return a URL. Supports various video formats and handles format detection. Returns: URL to access the uploaded file or None if failed",
+      "params": [
+        "file_path"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_audio_info",
+      "description": "This component should not be used by agents or automated systems.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_download_file_wrapper",
+      "description": "### `download_file_wrapper(file_path: str)` - **Purpose**: Download files from the service - **Use Case**: Retrieving generated reports or datasets",
+      "params": [
+        "file_path"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_extract_basic_metrics",
+      "description": "Extracts key metrics from a running activity stored in a GPX file. Returns: A dictionary containing:, distance_km (float): Total distance in kilometers, duration (str): Total time in HH:MM:SS, duration_seconds (int): Duration in seconds, average_pace_min_per_km (float): Average pace in min/km, elevation_gain (int): Total positive elevation gain in meters, average_hr (int or None): Average heart rate, if available, max_hr (int or None): Maximum heart rate, if available",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_endpoint",
+      "description": "Search the internet as if it were Google. Returns: Search results as a dictionary",
+      "params": [
+        "q",
+        "num",
+        "start",
+        "site",
+        "date_restrict"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_multiple_captions_interface",
+      "description": "Generate multiple caption variations using Meta-Llama-3.2-3B-Instruct",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_apply_color_filter",
+      "description": "Apply professional-grade color filters to video. Returns: URL to processed video or None if failed, , Implements various color transformations, Supports intensity control, Maintains video quality, Preserves original audio",
+      "params": [
+        "video_url",
+        "filter_type",
+        "intensity"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_search_internet",
+      "description": "**Navigates to a specified URL, performs web scraping based on a given task, and returns relevant information in a human-readable sentence(s).**. Returns: A string containing the extracted information or a summary of the, Browse outcome. This will be a human-readable sentence or paragraph., Returns an error message if navigation or scraping fails.",
+      "params": [
+        "url",
+        "task"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_way_anova",
+      "description": "Accepts multiple groups of numeric data as semicolon-separated groups or DataFrame columns and performs a one-way ANOVA (Analysis of Variance). This test determines whether there are statistically significant differences between the means of three or more independent groups. ANOVA tests the null hypothesis that all group means are equal against the alternative that at least one group mean differs from the others. The test calculates an F-statistic by comparing the variance between groups to the variance within groups. A significant result (p-value < alpha) indicates that at least one group differs, but does not identify which specific groups differ (post-hoc tests needed for pairwise comparisons). Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by group membership, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: comparing means across multiple treatment conditions, testing differences between multiple demographic groups, evaluating performance across several experimental conditions.",
+      "params": [
+        "groups_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "clinical-triage-mcp",
+      "name": "clinical_triage_mcp_triage_response",
+      "description": "Sends a triage prompt to Mistral API and parses the JSON response.",
+      "params": [
+        "symptoms"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_upload_file",
+      "description": "Handle file uploads in the Gradio interface. Returns: Tuple of (status_message, updated_file_uploads_log)",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "TravAI",
+      "name": "TravAI_get_directions",
+      "description": "Returns a Markdown-formatted string with step-by-step directions and a static map URL. Returns: A single Markdown string summarizing the route or an error message.",
+      "params": [
+        "source",
+        "destination",
+        "mode",
+        "departure_time"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_voice_enhanced",
+      "description": "POLISHED: Enhanced voice upload with better validation and feedback",
+      "params": [
+        "audio_file",
+        "category"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_send_quotation_email",
+      "description": "Envoi d'email de devis natif",
+      "params": [
+        "order_id",
+        "subject",
+        "body"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_process_prescription_upload",
+      "description": "COMPLETELY FIXED prescription processing with proper grouping",
+      "params": [
+        "image_file",
+        "llama_endpoint"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_add_problem_solving_template",
+      "description": "Adds a problem-solving template to the database that defines a sequence of Modal sandbox tool operations to solve a specific task. Templates provide guidance on tool orchestration, required variables, volumes, and dependencies for common use cases like resume screening, code analysis, data processing etc. For example, a resume screening template would specify: 1. Required volumes for storing resumes and results 2. Python packages needed (e.g., PyPDF2, spacy) 3. Sequence of sandbox operations: - Launch sandbox with specific memory/CPU requirements - Create directories for resumes and results - Push resume files to sandbox - Execute NLP processing commands - Pull results from sandbox - Clean up resources. Returns: JSON string containing:, success (bool): Whether template was added successfully, template_id (str): Unique ID of added template, message (str): Status message",
+      "params": [
+        "name",
+        "description",
+        "required_tools",
+        "required_volumes",
+        "required_packages",
+        "tool_sequence",
+        "resource_requirements",
+        "example_usage"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_game_details",
+      "description": "Get detailed information for one or more board games. Returns: Detailed game information including mechanics, categories, ratings, etc.",
+      "params": [
+        "game_ids"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    }
+  ]
+}

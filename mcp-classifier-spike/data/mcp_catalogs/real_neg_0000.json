@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_neg_0000",
+  "tools": [
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpchat_with_memory",
+      "description": "Universal chat interface with stored memory context.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_analyze_specific_urls",
+      "description": "MCP Tool: Analyzes web content from a specific list of URLs using swarm analysis. Is useful for finding content related to a specific topic and compare the content with other URLs.",
+      "params": [
+        "urls_json",
+        "analysis_prompt"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_points_of_interest",
+      "description": "Find points of interest near given coordinates. Increase radius if not found (10km is default), try with more categories if not found any poi. Returns: Formatted text with POI information",
+      "params": [
+        "lat",
+        "lon",
+        "radius_km",
+        "categories"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_advanced_caption_interface",
+      "description": "Advanced interface function for caption generation",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_code_generator",
+      "description": "Wrapper for CodeGeneratorAgent to generate Python code. Returns: A tuple containing the generation result and raw code",
+      "params": [
+        "user_request",
+        "grounded_context"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_confirm_changes",
+      "description": "Applies the staged changes from the changeset.",
+      "params": [
+        "hf_api_key",
+        "owner_name",
+        "space_name"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_generate_and_prepare_download",
+      "description": "Generate SDK and prepare download file",
+      "params": [
+        "spec",
+        "api_type"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_post_text",
+      "description": "Posts a text post in the database, and returns True if it was successfuly posted",
+      "params": [
+        "content"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_list_erp_tables",
+      "description": "List all ERP tables in the database. Returns: List of ERP table names",
+      "params": []
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_silence_trimming",
+      "description": "Trim silence from the beginning and end of an audio file. This function loads an audio file and automatically removes silent or very quiet sections from the beginning and end based on a specified volume threshold. This is useful for cleaning up recordings and removing unwanted quiet sections. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, trimmed_audio_data: array), for the silence-trimmed audio result, or None if an error occurred, Second element: A status message string showing original and new duration, or error information, , result, status = apply_silence_trimming(\"url/to/audio.mp3\", -40.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Threshold is specified in decibels (dB) - more negative values = quieter threshold, Common thresholds: -30dB (conservative), -40dB (moderate), -60dB (aggressive), Only trims from beginning and end, preserves silence within the audio, Useful for removing recording artifacts, room tone, or equipment noise, May significantly reduce file duration depending on original content, Preserves original sample rate and audio quality, Be careful with very low thresholds as they may trim wanted quiet content",
+      "params": [
+        "audio_file",
+        "threshold_db"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_optimize_energy_consumption",
+      "description": "Analyze code and suggest energy consumption optimizations. Returns: Optimization suggestions with estimated energy savings",
+      "params": [
+        "code_snippet",
+        "language"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message_",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_full_prediction",
+      "description": "Full prediction run, with a team of ensembles and agents. Returns: A dictionary containing the model details, classification scores, and label.",
+      "params": [
+        "img",
+        "confidence_threshold",
+        "rotate_degrees",
+        "noise_level",
+        "sharpen_strength"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_server_stats",
+      "description": "Get server statistics and health information.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_new_profile",
+      "description": "Generates and returns a dating profile questionnaire, a new public profile_id, and a new private auth_id. Also creates an initial profile stub.",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame_",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input_",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_clear_previous_outputs",
+      "description": "Clears all video-related outputs to ensure a clean state for new uploads.",
+      "params": []
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    }
+  ]
+}

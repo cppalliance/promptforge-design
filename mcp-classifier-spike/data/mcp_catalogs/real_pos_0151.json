@@ -1,0 +1,373 @@
+{
+  "catalog_id": "real_pos_0151",
+  "tools": [
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_next_page",
+      "description": "Go to next page for equipment",
+      "params": []
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_build_timeline_prompt",
+      "description": "Generate a user-friendly, chronologically ordered timeline from a list of structured events. Use this tool with keyword arguments: build_timeline_prompt(events=[]). Returns: A sequence of chat messages forming a prompt for an LLM to generate a readable timeline.",
+      "params": [
+        "events"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_calculate_hiking_time",
+      "description": "Calculate the estimated hiking time for a specific route based on hiker level. This function calculates the estimated hiking time using the formula: hiking time in hours = (distance / speed) + (elevation in feet / 2000). Returns: JSON string containing hiking time information in the format:, {, str,, str,, str,, float,, int,, float,, str, }, , >>> calculate_hiking_time(\"Mount Elbert\", \"Northeast Ridge\", \"average\"), \"Mount Elbert\", \"route_name\": \"Northeast Ridge\", \"hiker_level\": \"average\", \"distance\": 9.75, \"elevation_gain\": 4500, \"estimated_time_hours\": 4.5, \"estimated_time_formatted\": \"4 hours and 30 minutes\"}'",
+      "params": [
+        "mountain_name",
+        "route_name",
+        "hiker_level"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_clear_previous_outputs",
+      "description": "Clears all video-related outputs to ensure a clean state for new uploads.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques CRM natives",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_bm25_relevance_scorer",
+      "description": "Compute relevance scores between a query and a list of documents using the BM25 algorithm. This tool tokenizes each document and the query using a simple whitespace and punctuation-based tokenizer, then calculates BM25 scores to measure how relevant each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"BM25 Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries, each with:, 'document': The original document string., 'score': The BM25 relevance score (higher means more relevant).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_position",
+      "description": "Describe the current chess position from a FEN string, plus a material summary. Attempts to classify the opening, and if successful, adds the opening information to the position. Otherwise, it adds a piece map with the current pieces and the list of legal moves.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_upload_profile_picture",
+      "description": "Uploads a profile picture for the authenticated user. The new filename will be based on the user's profile_id. Requires X-Auth-ID header for authentication.",
+      "params": [
+        "image_upload"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_sandbox_pool_status_sync",
+      "description": "Synchronous wrapper for sandbox pool status.",
+      "params": []
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "Frugal_AI_Agent",
+      "name": "Frugal_AI_Agent_CodeAgent",
+      "description": "In this agent, the tool calls will be formulated by the LLM in code format, then parsed and executed.",
+      "params": [
+        "task"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image",
+      "description": "Edit a local image using the 'Clarity Upscaler' method. Optionally save result. Useful for stylized upscaling with fractal detail control. Returns: The edited image (PIL.Image) upscaled via AI model.",
+      "params": [
+        "path",
+        "output_path",
+        "scale",
+        "dynamic",
+        "creativity",
+        "resemblance",
+        "tiling_width",
+        "tiling_height",
+        "model",
+        "scheduler",
+        "steps",
+        "seed",
+        "downscale",
+        "downscale_resolution"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get",
+      "description": "Get user profile by ID. Returns: Dict with profile data or error message",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_print_headers",
+      "description": "Print the headers of the request for debugging purposes.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_move_item",
+      "description": "Move an item to a new position.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_use_preview_in_chat",
+      "description": "Gunakan isi file preview sebagai prompt untuk chatbot.",
+      "params": [
+        "chat_history"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_stix_object_of_attack_id",
+      "description": "Retrieves a STIX object identified by an ATT&CK ID in all ATT&CK matrices.",
+      "params": [
+        "attack_id",
+        "object_type"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_predict_modal_lead",
+      "description": "Pr\u00e9diction Modal pour un lead",
+      "params": [
+        "name",
+        "industry",
+        "company_size",
+        "budget_range",
+        "urgency",
+        "source",
+        "expected_revenue",
+        "response_time"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "KGB-mcp",
+      "name": "KGB_mcp_build_knowledge_graph",
+      "description": "Main function to build knowledge graph from text or URL.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_game_details",
+      "description": "Get detailed information for one or more board games. Returns: Detailed game information including mechanics, categories, ratings, etc.",
+      "params": [
+        "game_ids"
+      ]
+    }
+  ]
+}

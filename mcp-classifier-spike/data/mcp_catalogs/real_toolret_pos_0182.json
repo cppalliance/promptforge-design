@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_toolret_pos_0182",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Hearthstone_Card_Set",
+      "description": "Returns all cards in a set. Example values: Blackrock Mountain, Classic.",
+      "params": [
+        "{'name': 'set', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/v1/aggregation",
+      "description": "Searches for news articles and returns the count of articles per hour or day",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes",
+      "description": "Retrieve quotes from anime shows based on the title of the anime.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/flan-t5-xl",
+      "description": "FLAN-T5 XL is a large-scale language model fine-tuned on more than 1000 tasks covering multiple languages. It achieves state-of-the-art performance on several benchmarks and is designed for research on zero-shot and few-shot NLP tasks, such as reasoning, question answering, and understanding the limitations of current large language models.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSellers",
+      "description": "Retrieve a list of users who are selling an item.",
+      "params": [
+        "world",
+        "itemID"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameReviewTimeline.generateReviewTimeline",
+      "description": "Generates a timeline of game reviews for a specific game across different platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "google_fake_autocomplete",
+      "description": "Generate a fake Google autocomplete suggestion using three input texts.",
+      "params": [
+        "text1",
+        "text3",
+        "text2"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP_ECHO_json",
+      "description": "Response your real IP with json format",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_Data_Post_Likers",
+      "description": "Get users that liked specific post\n\n**NOTE:** Profile should be public(not private)",
+      "params": [
+        "{'name': 'post', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_v2_get_price_fair_value",
+      "description": "Fetches the price vs fair value data for a given stock.",
+      "params": [
+        "performanceid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Temu_com_Shopping_API_Realtime_api_scrapper_from_temu_com_product_search",
+      "description": "Search for list of products by providing the keyword.",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "enterprise_credit_assessment",
+      "description": "Enterprise Credit Assessment Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Redbubble Items API",
+      "description": "Retrieve items from Redbubble e-commerce platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "roomReservation.cancel",
+      "description": "Cancels an existing room reservation in the hospitality system.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Deals",
+      "description": "Get a list of Amazon deals filtered by category, country, and language. The response includes a list of deals and a list of available categories.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "location_information",
+      "description": "Fetch Instagram location information using a location ID.",
+      "params": [
+        "locationid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "errorNotifier",
+      "description": "This function sends an email notification when an error occurs. It formats the error details and sends it to the specified email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://ai-weather-by-meteosource.p.rapidapi.com/minutely",
+      "description": "Minute-by-minute precipitation forecast for the next 60 minutes. Updated in real-time based on our AI nowcasting models. Define your location using GPS coordinates or place_id from Location endpoints.",
+      "params": [
+        "{'name': 'place_id', 'in': 'optional', '",
+        "{'name': 'lat', 'in': 'optional', 'schem",
+        "{'name': 'lon', 'in': 'optional', 'schem",
+        "{'name': 'timezone', 'in': 'optional', '",
+        "{'name': 'language', 'in': 'optional', '",
+        "{'name': 'units', 'in': 'optional', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Convexity_convert_rgb",
+      "description": "Endpoint to converts RGB color code to other color code like Hex , HSL, CMYK",
+      "params": [
+        "{'name': 'r', 'type': 'NUMBER', 'descrip",
+        "{'name': 'g', 'type': 'NUMBER', 'descrip",
+        "{'name': 'b', 'type': 'NUMBER', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_sale",
+      "description": "This method takes a list of sales values as integers and returns the total sale.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "QR_Code_API_v33_QR_code_image",
+      "description": "This Api takes URL, or string and returns the QR code image",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Also Bought",
+      "description": "Retrieves also bought details for a single product on Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US Gas Prices for North Dakota",
+      "description": "Returns current and historical gas price data for North Dakota. Historical data can be queried by adding the `string` parameter to this endpoint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Answer Question About The Image",
+      "description": "useful when you need an answer for a question based on an image. like: what is the background color of the last image, how many cats in this figure, what is in this figure. The input to this tool should be a comma separated string of two, representing the image_path and the question",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_matches_get_table_Deprecated",
+      "description": "Get table of related match",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip",
+        "{'name': 'category', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SteamGames_Special_offers_GamesData",
+      "description": "This endpoint will give you the Games Data if you provide the APP_ID.\nYou can use the GamesList endpoint to get the list of APP_IDs and Feed it to this Endpoint to get the Games Data. Sample Details are given below:\n`{\n    \"discount\": \"-40%\",\n    \"original_price\": \"$49.99\",\n    \"price\": \"$29.99\",\n    \"title\": \"God of War\",\n    \"url\": \"https://store.steampowered.com/app/1593500/\"\n}`",
+      "params": [
+        "{'name': 'app_id', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomBearImage",
+      "description": "Retrieve a random bear image with optional background color and format.",
+      "params": [
+        "backgroundColor",
+        "format",
+        "withBear"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PetVaccinationScheduler.scheduleAppointment",
+      "description": "Schedules a vaccination appointment for a pet, allowing the user to specify the pet details and preferred appointment time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_duration",
+      "description": "Calculate the duration between two dates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPainLevel",
+      "description": "Retrieve the current pain level of a patient",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "PDFExtractor",
+      "description": "PDF files can be extracted from the form.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEmployeeAttendance",
+      "description": "Retrieve the attendance record of an employee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SongKick search Artist",
+      "description": "Search for artists by name on SongKick",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Simple_Surf_Forecast_Api_GetSurfbreaksByName",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_position_on_another(image_patch: ImagePatch, object_name: str, base",
+      "description": "def check_object_position_on_another(image_patch: ImagePatch, object_name: str, base_object_name: str, possible_positions: list) -> str:\n    '''Check the position of an object on another object and return the best match from a list of possible positions.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for position.\n        base_object_name (str): The name of the base object on which the object is positioned.\n        possible_positions (list): A list of possible positions.\n       \n    Returns:\n        str: The",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PrivatePublicAPI_getOrderById",
+      "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+      "params": [
+        "{'name': 'orderId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_multiple_of_three",
+      "description": "This function checks if a given integer is a multiple of three or not.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Clubs",
+      "description": "Retrieve a list of clubs from the transfermarkt database, filtered by competition and locale.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "jokes",
+      "description": "Fetches jokes from the Jokester API, optionally filtered by category.",
+      "params": [
+        "category"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Teams by Season",
+      "description": "Retrieve a list of major league teams that were active during a given season. If all_star_sw is set to 'Y', you will instead receive data on the all-star teams for that season. You can sort the results using the sort_order parameter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

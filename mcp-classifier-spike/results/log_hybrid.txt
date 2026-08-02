@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 15488.91it/s]
+{
+  "eval": "real",
+  "embed": "BAAI/bge-small-en-v1.5",
+  "n": 188,
+  "results": {
+    "bm25": {
+      "top1": 0.5159574468085106,
+      "recall@3": 0.6702127659574468
+    },
+    "embed": {
+      "top1": 0.8404255319148937,
+      "recall@3": 0.9202127659574468
+    },
+    "rrf": {
+      "top1": 0.6648936170212766,
+      "recall@3": 0.776595744680851
+    }
+  }
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 16627.15it/s]
+{
+  "eval": "toolret",
+  "embed": "BAAI/bge-small-en-v1.5",
+  "n": 204,
+  "results": {
+    "bm25": {
+      "top1": 0.5049019607843137,
+      "recall@3": 0.6666666666666666
+    },
+    "embed": {
+      "top1": 0.803921568627451,
+      "recall@3": 0.8921568627450981
+    },
+    "rrf": {
+      "top1": 0.6617647058823529,
+      "recall@3": 0.7892156862745098
+    }
+  }
+}
+EXIT=0

@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_pos_0048",
+  "tools": [
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_wikipedia",
+      "description": "Search Wikipedia using LangChain WikipediaLoader. Returns: Formatted Wikipedia search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_visualizer",
+      "description": "Visualize HTR results by overlaying text regions and polygons on the original image. Returns: File path to the generated visualization imagegenerated visualization image for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name}), https://gabriel-htrflow-mcp.hf.space/gradio_api/file=/tmp/gradio/34d5c1a8b7d5445469c4f7c638c490e0e3046b3008a0182f89c688b1b42d139b/htr_visualization.png",
+      "params": [
+        "image_path",
+        "htr_document_path",
+        "server_name"
+      ]
+    },
+    {
+      "server": "healthify-me-mcp",
+      "name": "healthify_me_mcp_search_food_products",
+      "description": "Recherche des produits alimentaires dans la base de donn\u00e9es OpenFoodFacts. Cette fonction effectue une recherche intelligente de produits alimentaires en analysant la requ\u00eate utilisateur avec Mistral AI pour extraire le nom du produit et la marque, puis interroge la base DuckDB.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_speed",
+      "description": "Change video playback speed while maintaining audio quality. Returns: URL to processed video or None if failed, , Handles audio speed limits (0.5-2.0) by chaining atempo filters, Maintains video and audio synchronization, Preserves original quality",
+      "params": [
+        "video_url",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_recalls_mcp",
+      "description": "Searches for recent FDA-issued recall events for a specific drug product. This is critical for ensuring patient safety by identifying if a drug or specific batch has been recalled due to manufacturing defects, contamination, or other safety concerns. The results include details on the recall reason, status, and affected lots. Returns: JSON string with recall notices including recall number, status, and reason",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_cut_audio",
+      "description": "Process audio cutting to extract a segment from an audio file. This function loads an audio file, validates the time parameters, and cuts out a specific segment between the start and end times. It handles various audio formats and provides detailed error messages for troubleshooting. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, audio_data: array), for the cut audio segment, or None if an error occurred, Second element: A status message string indicating success with details, or error information, , result, status = process_cut_audio(\"/path/to/audio.mp3\", 10.5, 25.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Time parameters are automatically validated and clamped to valid ranges, Start time must be less than end time after validation, Output audio data maintains the original sample rate, Function returns user-friendly status messages for UI display",
+      "params": [
+        "audio_file",
+        "_start_time",
+        "_end_time"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorscreenshot_to_code",
+      "description": "Complete pipeline: analyze image and generate corresponding HTML code.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_error_sync",
+      "description": "Search Stack Overflow for solutions to an error message. Returns: Formatted search results",
+      "params": [
+        "error_message",
+        "language",
+        "technologies",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_correlation_test",
+      "description": "Accepts two variables as comma-separated strings or DataFrame columns and performs correlation analysis. This test determines the strength and direction of the linear relationship between two continuous variables. Pearson correlation measures linear relationships, Spearman correlation measures monotonic relationships (rank-based), and Kendall's tau is robust to outliers and suitable for small samples. The test calculates a correlation coefficient ranging from -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship. A significant result (p-value < alpha) indicates that the observed correlation is statistically different from zero. Effect size interpretation: |r| < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: examining relationship between height and weight, analyzing correlation between study time and test scores, investigating association between variables in research.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "method",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_mountain",
+      "description": "Retrieve all climbing routes available for a specific mountain. This function performs a case-insensitive search for all routes associated with a specific mountain. The results include route names and their difficulty levels. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_mountain(\"Mount Elbert\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\"}]'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_show_cif_file",
+      "description": "Plot a 3D structure from a CIF file with the Molecule3D library. Returns: PDB file name if successful, None if no file was provided, or if conversion failed.",
+      "params": [
+        "cif_file"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_endpoint_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_quarters",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for given quarters from 10-Q filings. Caveat the quarter used here is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "quarters"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitors_by_program_id",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "clinical-triage-mcp",
+      "name": "clinical_triage_mcp_triage_response",
+      "description": "Sends a triage prompt to Mistral API and parses the JSON response.",
+      "params": [
+        "symptoms"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_list_erp_tables",
+      "description": "List all ERP tables in the database. Returns: List of ERP table names",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_ELA",
+      "description": "Perform Error Level Analysis on an image. Returns: Processed ELA image",
+      "params": [
+        "img",
+        "quality",
+        "scale",
+        "contrast",
+        "linear",
+        "grayscale"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_fuzzy_search",
+      "description": "Fuzzy-match *query* against DF['food']. \u2022 First, return any rows that contain the whole query as a substring. \u2022 Otherwise, keep only rows that share \u22651 meaningful token and score them with token_set_ratio.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_next_page",
+      "description": "Go to next page for patients",
+      "params": []
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_hourly_analysis",
+      "description": "Process hourly timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> hourly_analysis(\"AAPL\", 3, 14, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_join_game",
+      "description": "Handle player joining the game.",
+      "params": [
+        "name"
+      ]
+    }
+  ]
+}

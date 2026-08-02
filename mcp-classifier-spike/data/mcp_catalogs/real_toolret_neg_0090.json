@@ -1,0 +1,331 @@
+{
+  "catalog_id": "real_toolret_neg_0090",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "markArticleAsRead",
+      "description": "Mark an article as read.",
+      "params": [
+        "authToken",
+        "articleId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coin Markets",
+      "description": "Retrieve markets on different exchanges that trade a specific coin.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "playlist_info",
+      "description": "Fetches information about a SoundCloud playlist using the RapidAPI service.",
+      "params": [
+        "playlist_url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Image by ID",
+      "description": "Returns the details of a generated image based on the provided `id`.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WhatsMyIP",
+      "description": "Fetches the user's public IP address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "validate_card_number",
+      "description": "Validate a credit card number and get the card type by using the Toolbench RapidAPI service.",
+      "params": [
+        "cardnumber"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "requestVulnerabilityAnalysis",
+      "description": "Request an analysis and report on the vulnerability data.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_salary",
+      "description": "Calculates the average salary of the school based on the total salary and the number of teaching and non-teaching staff.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_360_Business_Tool_GetDocumentTypesSince",
+      "description": "Get document types modified since",
+      "params": [
+        "{'name': 'timestamp', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NFTs_by_address_getNFTs_byaddress",
+      "description": "Gets all NFTs currently owned by a given address. Unlimited, results display in 100s.",
+      "params": [
+        "{'name': 'owner', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_HEIKINASHICANDLES",
+      "description": "Heikin-Ashi Candles(HEIKINASHICANDLES) translated from Japanese means \"average bar\". It can be used to detect market trends and predict future price fluctuations.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Transactions",
+      "description": "Fetch the list of transactions submitted to the blockchain database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nationalize",
+      "description": "Fetches the nationality of the provided name using the Genderize-Nationalize API.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_recent_login_activities",
+      "description": "Check the account's recent login activities",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football League Home Standings",
+      "description": "Retrieve the home standings of a specific Football league for a given season and tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CellPhones_GetPhoneDetails",
+      "description": "Get all phone specifications & photos by phone id, get the phone id from the endpoint GetPhonesByBrandId",
+      "params": [
+        "{'name': 'phoneid', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseQueryConfigurator.configureQuery",
+      "description": "Configures a database query based on the provided parameters and returns the configured query string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sephora_products_search_Deprecated",
+      "description": "Search products by term or phrase with options and filters",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_object_size(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def find_object_size(image_patch: ImagePatch, object_name: str) -> str:\n    '''Find the size of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to find the size of.\n       \n    Returns:\n        str: The size of the object if it exists, \"no\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if not object_patches:\n        # No such object in the image\n        return \"no\"\n    object_patch = object_patches[0]\n    size_query = object_patch.simple_query(\"What is th",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "OneLike_Social_Media_News_in_Greek",
+      "description": "Get social media news in Greek",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "topic",
+      "description": "Fetches topics from the Quotes Diffusion API with optional pagination and search functionality.",
+      "params": [
+        "page",
+        "search"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "German_Cities_city_name",
+      "description": "Gibt Informationen zu der angegebenen Stadt zur\u00fcck. Bei Mehrdeutigkeit werden maximal drei Ergebnisse zur\u00fcckgegeben. Zur\u00fcckgegebene Werte sind: Einwohnerzahl, Durchschnittsalter, umliegende Orte.",
+      "params": [
+        "{'name': 'city-name', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAllWebhooks",
+      "description": "Retrieve a list of webhooks associated with the mailslurp email testing tool, allowing for pagination, filtering, and sorting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Alternative_Artists",
+      "description": "Provide the Greatest of All Time Alternative Artists chart information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_annual_avg_div_rate",
+      "description": "return annual average dividend rate",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Tacotron 2",
+      "description": "The Tacotron 2 model generates mel spectrograms from input text using an encoder-decoder architecture, and it is designed for generating natural-sounding speech from raw transcripts without any additional prosody information. This implementation uses Dropout instead of Zoneout to regularize the LSTM layers. The WaveGlow model (also available via torch.hub) is a flow-based model that consumes the mel spectrograms to generate speech.",
+      "params": [
+        "model_math"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_news_list",
+      "description": "List latest news",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "investing_financial_stocks_income_statement",
+      "description": "get income statement  by pair id for some stocks \nnot all",
+      "params": [
+        "{'name': 'pair_id', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_binary_operation(operand1, operand2, operation_formula)",
+      "description": "def calculate_binary_operation(operand1, operand2, operation_formula):\n    \"\"\"\n    Calculate the result of a binary operation defined by a specific formula.\n\n    Parameters:\n    operand1 (float): The first operand of the operation.\n    operand2 (float): The second operand of the operation.\n    operation_formula (function): The formula defining the operation, as a function of two variables.\n\n    Returns:\n    float: The result of the operation.\n    \"\"\"\n    return operation_formula(operand1, operand2)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "availability",
+      "description": "Checks if a given URL is archived and currently accessible in the Wayback Machine.",
+      "params": [
+        "url",
+        "timestamp",
+        "callback"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indicator Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football Team Logo Image",
+      "description": "Retrieve the logo image of a football team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Financial Statements",
+      "description": "Retrieve financial statements for a given stock symbol, including income, balance, and cash statements, for a specified frequency and region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Complete_Study_Bible_Book_List_and_Chapter_Counts_API",
+      "description": "Lists all books of the Bible, abbreviations, and chapter counts. Can be used as a reference for a chapter selection screen",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_x_squared_plus_y_squared",
+      "description": "Calculates the value of x^2 + y^2 given (x + y)^2 and xy.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_CategoryTournaments",
+      "description": "Get all leagues from a specific E-Sports category using the category ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball Team Tournaments",
+      "description": "Retrieve information about basketball team tournaments, including tournament schedules, standings, and results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "echo_get",
+      "description": "Make a HTTP GET request to the echo API with specified content type and code.",
+      "params": [
+        "content_type",
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Sectors_by_Market",
+      "description": "Get Sectors by Market",
+      "params": [
+        "{'name': 'marketID', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SpeechNoted_Get_Voices",
+      "description": "Get available voice",
+      "params": []
+    }
+  ]
+}

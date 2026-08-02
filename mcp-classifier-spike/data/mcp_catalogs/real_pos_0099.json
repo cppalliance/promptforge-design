@@ -1,0 +1,367 @@
+{
+  "catalog_id": "real_pos_0099",
+  "tools": [
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_start_server",
+      "description": "Start the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_lookup",
+      "description": "Function to lookup a name in the Office of Inspector General (OIG) List of Excluded Individuals & Entitites (LEIE) who are legally excluded from receiving any Federal Medicare or Medicaid funds for services. Search can look for first name, last name, or both. All persons are presumed innocent unless the name and address match the results of a search. For legal chain of custody reasons, this information is inadmissable, but can be verified on the US Health and Human Services Website here: https://exclusions.oig.hhs.gov/",
+      "params": [
+        "last",
+        "first"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_edit_video_segment",
+      "description": "Edit a video segment by either cutting it out or keeping only that segment. Returns: URL to processed video or None if failed, , For \"keep\": Extracts segment with 1-second padding for smooth transitions, For \"cut\": Splits video into segments and concatenates non-cut portions, Preserves both video and audio quality, Uses x264 for video and AAC for audio encoding",
+      "params": [
+        "video_url",
+        "start_time",
+        "end_time",
+        "action"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_enhanced_ai_chat_with_multilingual",
+      "description": "Enhanced AI chat that creates multilingual reminders",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatoranalyze_image",
+      "description": "Analyze an uploaded image and provide a detailed description of its content and layout.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_validate_api_configuration",
+      "description": "TOOL: Validate and store API configuration for monitoring. PURPOSE: Test an API endpoint and store the configuration if successful. This is STEP 1 of the monitoring setup process. If validation fails, retry with corrected parameters.    If successful, use the returned config_id in activate_monitoring() function. CRITICAL: Even if success=True, you MUST manually check the 'sample_response' field before proceeding to activate_monitoring(). The API call may return success=True but contain error messages (like \"401 Unauthorized\", \"Invalid API key\", etc.) in the sample_response. CRITICAL: Always try to add parameters that will limit the API response to a manageable size. CRITICAL: Be sure to always clearly inform the user of the config_id after a desired validation result. CRITICAL: If you don't have an MCP API KEY given by the user, prompt them to get it here: https://mcp-hackathon.vercel.app/ WORKFLOW: 1. Call this function to validate API configuration 2. If success=False: Fix parameters and retry this function 3. If success=True: MANUALLY INSPECT the 'sample_response' field for errors 4. If sample_response contains error messages: Fix API parameters and retry validation 5. If sample_response looks valid: Use config_id in activate_monitoring() to activate monitoring ARGUMENTS: - mcp_api_key: MCP API key serves as user identifier. - name: User-friendly name for the monitoring task - description: Description of what is being monitored - method: HTTP method (GET, POST, PUT, DELETE) - base_url: The base URL of the API - endpoint: The specific API endpoint - param_keys_values: Parameter key-value pairs, one per line - header_keys_values: Header key-value pairs, one per line - additional_params: Optional JSON string for complex parameters - schedule_interval_minutes: Minutes between calls - stop_after_hours: Hours after which to stop (supports decimals, max 168 = 1 week) - start_at: Optional datetime string for when to start the monitoring. IMPORTANT: Leave as empty string \"\" for immediate start (most common use case, always default to this if no start time provided). Only provide a datetime string (e.g., \"2024-06-15 09:00:00\") if you need to schedule monitoring for a specific future time. Input Examples: 1. Simple GET request to monitor stock price: mcp_api_key: \"your_mcp_key_here\" name: \"NVDA Stock Price\" description: \"Monitor NVIDIA stock price every 30 minutes\" method: \"GET\" base_url: \"https://api.example.com\" endpoint: \"stocks/NVDA\" param_keys_values: \"symbol: NVDA interval: 1min\" header_keys_values: \"Authorization: Bearer your_token\" additional_params: \"{}\" schedule_interval_minutes: 30 stop_after_hours: 1.5 start_at: \"\" 2. Weather monitoring with free API: mcp_api_key: \"\" name: \"Weather Monitor\" description: \"Monitor current weather conditions every 2 hours for one week using Open-Meteo free API\" method: \"GET\" base_url: \"https://api.open-meteo.com\" endpoint: \"v1/forecast\" param_keys_values: \"latitude: 40.7128 longitude: -74.0060 current: temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m timezone: America/New_York\" header_keys_values: \"Content-Type: application/json\" additional_params: \"{}\" schedule_interval_minutes: 120 stop_after_hours: 168 start_at: \"2024-06-15 09:00:00\". Returns: Dictionary with success status, config_id (needed for setup_scheduler), message, and sample_response, , {, True,, 123,, \"API call tested and stored successfully\",, {...},, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:00:00Z\", }, If success=True, call activate_monitoring(config_id, mcp_api_key) to activate monitoring",
+      "params": [
+        "mcp_api_key",
+        "name",
+        "description",
+        "method",
+        "base_url",
+        "endpoint",
+        "param_keys_values",
+        "header_keys_values",
+        "additional_params",
+        "schedule_interval_minutes",
+        "stop_after_hours",
+        "start_at"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_add_problem_solving_template",
+      "description": "Adds a problem-solving template to the database that defines a sequence of Modal sandbox tool operations to solve a specific task. Templates provide guidance on tool orchestration, required variables, volumes, and dependencies for common use cases like resume screening, code analysis, data processing etc. For example, a resume screening template would specify: 1. Required volumes for storing resumes and results 2. Python packages needed (e.g., PyPDF2, spacy) 3. Sequence of sandbox operations: - Launch sandbox with specific memory/CPU requirements - Create directories for resumes and results - Push resume files to sandbox - Execute NLP processing commands - Pull results from sandbox - Clean up resources. Returns: JSON string containing:, success (bool): Whether template was added successfully, template_id (str): Unique ID of added template, message (str): Status message",
+      "params": [
+        "name",
+        "description",
+        "required_tools",
+        "required_volumes",
+        "required_packages",
+        "tool_sequence",
+        "resource_requirements",
+        "example_usage"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_forecast",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte string JSON a lista y llama mcp_forecast_series. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros hist\u00f3ricos - periods (int): Per\u00edodos a pronosticar Retorna resultado de mcp_forecast_series o mensaje de error.",
+      "params": [
+        "data_str",
+        "periods"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_research_request",
+      "description": "This function researches a coding request from the user, generates code, executes it, and returns a clean summary of the results. This is an mcp server function that responds to research coding requests from users. Returns: A tuple containing the JSON result from the orchestrator and a clean summary",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_search_knowledge_base_for_context",
+      "description": "Searches and retrieves relevant context from a knowledge base on Sukhoi SU-35, based on the user's query. Example queries: - \"What are the main features of fuel system of SU-35.\" - \"What are the combat potential of SU-35.\". Returns: Relevant text content that can be used by the LLM to answer the query.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Model_Analysis_MCP",
+      "name": "Model_Analysis_MCP_process_text_comprehensive_analysis",
+      "description": "Processes only text/code descriptions for comprehensive analysis (no ONNX support). Accepts llms_to_query as a string or a list for compatibility.",
+      "params": [
+        "model_input",
+        "llms_to_query",
+        "analysis_types"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_clear_all_chats",
+      "description": "Handle clearing all private chat tabs.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_render_board",
+      "description": "Render the chess board in the specified format. Default is ASCII. Instructions for LLMs: - LLMs should default to ascii rendering mode. Returns: The rendered board as a string in the specified format.",
+      "params": [
+        "fen",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_info",
+      "description": "Affiche les informations sur les fonctions CRM",
+      "params": []
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_health_topics_gr",
+      "description": "Gradio wrapper for HealthFinder topic retrieval. Parameters ---------- topic : str Health topic slug or phrase. language : str Output language (``\"en\"`` / ``\"es\"``). Returns ------- str JSON\u2011formatted HealthFinder result.",
+      "params": [
+        "topic",
+        "language"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_query_and_generate_graph_wrapper",
+      "description": "Executes a SQL query and generates a graph visualization from the results. This function is particularly useful when query results are too large for the context window or when visual representation of data is preferred over tabular format. Returns: A tuple containing:, image_path (str or None): Path to the generated graph image if successful, None if failed, status (str): Status message indicating success or error details",
+      "params": [
+        "query",
+        "graph_type"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_available_npcs",
+      "description": "Handle testing available NPCs data access.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_redundancy_checker",
+      "description": "Detect redundant or highly similar document pairs using semantic similarity. This tool encodes all documents into embeddings and computes cosine similarity scores between every pair. It flags document pairs with similarity greater than 0.8 as redundant. Returns: A dictionary containing:, 'tool': The name of the tool (\"Redundancy Checker\")., 'results': A list of redundant document pairs with their similarity scores,, or a message indicating no redundancy if none are found.",
+      "params": [
+        "_",
+        "documents"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_analyze_dataset_overview",
+      "description": "Analyzes dataset using Gemini AI and provides storytelling overview. Returns: AI-generated data story, Dataset basic information, Data quality percentage",
+      "params": [
+        "file_obj",
+        "api_key"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    }
+  ]
+}

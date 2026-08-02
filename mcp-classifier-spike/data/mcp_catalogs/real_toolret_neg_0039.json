@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_toolret_neg_0039",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "bookSpaService",
+      "description": "Book a spa service",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Library2ID",
+      "description": "This API is to convert library name to library ID.",
+      "params": [
+        "{'name': 'library_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vaccination_campaign.get_schedule",
+      "description": "Retrieve the schedule of a specified vaccination campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get US County Data for a Single State",
+      "description": "Retrieves county-level data for a specific US state",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSentEmailPreviewURLs",
+      "description": "Retrieve a list of URLs for sent email content as text/html or raw SMTP message for viewing the message in a browser.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetUsersRelatedPeople",
+      "description": "Retrieve a list of people related to a given user from the email domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "tts_transformer-ar-cv7",
+      "description": "Transformer text-to-speech model for Arabic language with a single-speaker male voice, trained on Common Voice v7 dataset.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "decapoda-research/llama-7b-hf",
+      "description": "LLaMA-7B is an auto-regressive language model based on the transformer architecture. It is designed for research on large language models, including question answering, natural language understanding, and reading comprehension. The model is trained on various sources, including CCNet, C4, GitHub, Wikipedia, Books, ArXiv, and Stack Exchange, with the majority of the dataset being in English.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarShadowImpact.evaluate",
+      "description": "Evaluates the impact of shadows on solar panel performance for a given location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "healthData.fetchRegionalStatistics",
+      "description": "Fetches detailed COVID-19 statistics for a specific region including active cases, recovered cases, and deaths.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quran_Com_recitations_by_page_number",
+      "description": "Get list of ayah recitations for a Madani Mushaf page.",
+      "params": [
+        "{'name': 'recitation_id', 'type': 'NUMBE",
+        "{'name': 'page_number', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listportfolios",
+      "description": "Fetches a list of portfolios from the Trader Wagon API based on the given parameters.",
+      "params": [
+        "limit",
+        "portfoliotype",
+        "available"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPolicyDetails",
+      "description": "Retrieve detailed information on a specific government policy measure related to Covid-19.",
+      "params": [
+        "policyId"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createSignatureRequest",
+      "description": "Create a new signature request for a document",
+      "params": [
+        "document_id",
+        "signers",
+        "message",
+        "subject"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> st",
+      "description": "def check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> str:\n    '''Determine the best match from a list of possible attributes of an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        attributes (List[str]): The list of possible attributes to check for.\n       \n    Returns:\n        str: The best match attribute from the list.\n    '''\n    return image_patch.best_text_match(attributes)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "/get-social-trending/posts",
+      "description": "Retrieve social media trending posts for a list of tickers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TradesQ",
+      "description": "Collects trading data and information for businesses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_travel_reminder",
+      "description": "Set travel reminder",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Body Fat Percentage Calculator",
+      "description": "Calculates the body fat percentage based on user input.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Patent",
+      "description": "Search patents globally based on a keyword and return a list of patents",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FormCollector",
+      "description": "Used to collect form data and store it in the database.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Store_Apps_Top_Free_Apps",
+      "description": "Top free apps chart.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRockAge",
+      "description": "Retrieve the age of a rock formation",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCharacterById",
+      "description": "Retrieve detailed information about a specific Marvel character by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon_Web_Scraping_API_Get_Product_Reviews_All_countries",
+      "description": "Get the reviews for specific product using the ASIN code.",
+      "params": [
+        "{'name': 'asin', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "addInnovation",
+      "description": "Add a new innovation to the database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLovePercentage",
+      "description": "Calculates the love percentage between two individuals based on their names.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_artist_appears_on",
+      "description": "artist-appears-on",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareMotorControl",
+      "description": "Compare motor control and learning abilities of two individuals",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_multiple_of_three",
+      "description": "This function checks if a given integer is a multiple of three or not.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SpatialGeometry.determineLinearity",
+      "description": "Evaluates whether a sequence of points in a plane are collinear using cross product method.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCustomJoke",
+      "description": "Returns a Yo Momma joke with a custom name inserted into the joke.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer Match Data",
+      "description": "Retrieve data about soccer matches, including teams, scores, and schedules.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetchAllSchemeTypes",
+      "description": "Fetches all scheme types for mutual funds",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Server Connection Information",
+      "description": "Retrieve the connection IP and Port of a vRising server.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getInfo",
+      "description": "Retrieve information about a Hanime video by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_correct_total_weight",
+      "description": "This method takes three arguments, 'average_weight', 'num_students', and 'incorrect_weight', and returns the correct total weight of all students in the class.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_online_store",
+      "description": "Search for a product in an online store",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "KST",
+      "description": "Calculates the Know Sure Thing (KST) price momentum for four distinct price cycles (ROC).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

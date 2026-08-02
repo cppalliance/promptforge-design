@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_pos_0053",
+  "tools": [
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_search_problem_solving_templates",
+      "description": "Performs semantic search across problem-solving templates to find the most relevant ones for a given task. Useful for discovering existing solutions, finding similar use cases, and reusing proven template patterns. The search uses semantic similarity to match task descriptions with template descriptions and requirements. Returns: JSON string containing an array of template matches, each with:, template_id (str): Unique identifier of the template, name (str): Template name, description (str): Template description, similarity_score (float): Semantic similarity score (0-1), required_tools (List[str]): Tools needed by the template, required_packages (List[str]): Dependencies needed, resource_requirements (Dict): CPU/memory/GPU requirements",
+      "params": [
+        "task_description",
+        "top_k"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_student_t_test",
+      "description": "Accepts two groups of numeric data as comma-separated strings or DataFrame columns and performs Student's t-test. This test determines whether two independent groups have significantly different means, assuming populations from which the groups were sampled have equal variances (if this assumption is violated, or if equal population variance cannot be verified, use Welch's t-test instead). The test calculates a t-statistic quantifying the mean difference as a multiple of pooled standard deviation. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, standardized by pooled standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: treatment vs control groups, before/after measurements with different participants, comparing performance between demographic groups.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image_",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_reset_game",
+      "description": "Reset the game state",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_scrape_hf_spaces_with_progress",
+      "description": "Wrapper function for scraping.",
+      "params": [
+        "max_pages",
+        "sort_by"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_context_search",
+      "description": "Searches for context relevant to query. Use this Function to search for additional general information if needed before answering the user's question about an article. If article_title is provided the search will only return results from that article. If article_title is omitted, the search will include all articles currently in the cache. Ags: query: user query to find context for article_title: optional, use this argument to search only for context from a specific article, defaults to None Returns: Text relevant to the query",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_tool_selection",
+      "description": "Handle tool selection from dropdown with separate chat flows",
+      "params": [
+        "tool_name",
+        "current_chat"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "clinical-triage-mcp",
+      "name": "clinical_triage_mcp_triage_response",
+      "description": "Sends a triage prompt to Mistral API and parses the JSON response.",
+      "params": [
+        "symptoms"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_find_similar_cases_mcp",
+      "description": "Identifies and retrieves adverse event cases from the FAERS database that are similar to a given reference case. Similarity is calculated based on a combination of patient demographics (age, gender), reported reactions, and concomitant drugs. This tool is useful for contextualizing a specific case and identifying potential case series for further review. Returns: JSON string with similar cases and similarity scores",
+      "params": [
+        "reference_case_id",
+        "similarity_threshold",
+        "limit"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_remove_path",
+      "description": "Removes a file or directory from the sandbox. Useful for cleaning up temporary files, removing unwanted content, and managing sandbox storage. Returns: JSON string containing success status and removed path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "recursive"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_setup_jest",
+      "description": "Automates the setup of Jest with TypeScript and code coverage in a new project. Returns: A comprehensive guide for Jest setup, including TypeScript, integration and code coverage configuration, generated by the AI., Returns an error message string if an exception occurs.",
+      "params": []
+    },
+    {
+      "server": "nationstates-mcp",
+      "name": "nationstates_mcp_address_nation_issues",
+      "description": "Address a specific issue for a nation in NationStates API. Returns: API response text.",
+      "params": [
+        "NATION",
+        "X_PASSWORD",
+        "issue_id",
+        "option_id"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get",
+      "description": "Get user profile by ID. Returns: Dict with profile data or error message",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_generate_image2",
+      "description": "Generates an image based on a text prompt using the Flux model running on Modal serverless infrastructure. Returns: The URL of the generated image.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_discover_server_tools",
+      "description": "Discover available MCP tools from a server. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_merge_videos",
+      "description": "Merge multiple videos into a single video. Returns: URL to merged video or None if failed, , Handles various input formats, Maintains original quality, Preserves audio from all videos, Gracefully handles failed downloads",
+      "params": [
+        "video_urls"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_recommend_dosing_weight_mcp",
+      "description": "Recommends the most appropriate weight to use for medication dosing calculations (i.e., actual, ideal, or adjusted body weight) based on the patient's actual weight and height. This is crucial for obese or underweight patients, as using the wrong weight can lead to sub-therapeutic or toxic drug levels for certain medications. Returns: JSON string with dosing weight recommendation and rationale",
+      "params": [
+        "actual_weight",
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_data",
+      "description": "Fetch LinkedIn profile data for the given username. Returns: A dictionary containing the profile data",
+      "params": [
+        "username"
+      ]
+    }
+  ]
+}

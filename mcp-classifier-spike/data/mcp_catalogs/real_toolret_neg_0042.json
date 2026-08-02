@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_neg_0042",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Track List - Playlist",
+      "description": "Retrieves the track list from a Spotify playlist",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_full",
+      "description": "Get all field and information about tickers",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "keremberke/yolov8m-blood-cell-detection",
+      "description": "A YOLOv8 model for blood cell detection, including Platelets, RBC, and WBC. Trained on the blood-cell-object-detection dataset.",
+      "params": [
+        "conf",
+        "iou",
+        "agnostic_nms",
+        "max_det"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Serie_A_Matches_List_by_Season_and_Matchday",
+      "description": "Via this endpoint, you can retrieve all the matches that occurred on a given matchday in a given season. Note that we support season starting from **1990** till **2022**, and matchday between **1** and **38**.",
+      "params": [
+        "{'name': 'matchday', 'type': 'NUMBER', '",
+        "{'name': 'year', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "similar_hashtags",
+      "description": "Fetches related hashtags for a given keyword using the Hashtag API.",
+      "params": [
+        "keyword"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Global_Achievement_Percentages_For_App",
+      "description": "Get the list of all achievements and their percentages success rate",
+      "params": [
+        "{'name': 'appId', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "removeBookFromBookshelf",
+      "description": "Remove a book from a virtual bookshelf.",
+      "params": [
+        "bookshelfId",
+        "bookId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotient_indexes_daily",
+      "description": "Return end of day (daily) time series (Date, Open, High, Low, Close, Volume) given the input parameters.",
+      "params": [
+        "{'name': 'from', 'type': 'STRING', 'desc",
+        "{'name': 'to', 'type': 'STRING', 'descri",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "population_info_search",
+      "description": "Population Information Query Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.PutIn",
+      "description": "# Put an object inside some other object. 'object1' can only be: ['food_vegetable', 'food_cereal', 'vacuum_cleaner', 'milk', 'food_egg', 'food_turkey', 'food_oatmeal', 'shoes', 'bills', 'food_fish', 'folder', 'dish_soap', 'food_pizza', 'knife', 'hanger', 'food_chicken', 'food_food', 'spoon', 'juice', 'food_carrot', 'clothes_shirt', 'clothes_jacket', 'clothes_dress', 'food_cheese', 'food_apple', 'check', 'plate', 'bowl', 'fork']. 'object2' can only be: ['dresser', 'folder', 'microwave', 'filing_cabinet', 'oven', 'freezer', 'kitchen_cabinet']. \nAgent.PutIn(object1, object2)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "communication.broadcast_schedule",
+      "description": "Generates a schedule for broadcasting segments based on priority and duration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_entity_type(entity_name: str, entity_category: str) -> str",
+      "description": "def identify_entity_type(entity_name: str, entity_category: str) -> str:\n    '''Identify the type of an entity based on its name.\n    \n    Args:\n        entity_name (str): The name of the entity.\n        entity_category (str): The category of the entity (e.g., \"restaurant\", \"book\", \"movie\").\n       \n    Returns:\n        str: The type of the entity.\n    '''\n    external_knowledge_query = \"What type of {} is {}?\".format(entity_category, entity_name)\n    entity_type = llm_query(external_knowledge_query, long_answer=False)\n    return entity_type",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "route_precedence_test_1_prices_today",
+      "description": "/prices/today",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_loan",
+      "description": "Calculate the loan amount based on interest rate and monthly payment",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "stack_pop",
+      "description": "This tool takes in a stack and returns the stack with the top element removed.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "QuickBlox_GET_blobs_uid_xml",
+      "description": "Download File (Get File as a redirect to the S3 object) by uid. 'uid' is a parameter which should be taken from the response of the request for the creating a file. To have a possibility to download a file you should set a status complete to your file firstly.",
+      "params": [
+        "{'name': 'uid', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market_auto_complete",
+      "description": "Fetch auto-complete suggestions for stock market queries.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_School_List_Number_of_Schools_in_the_Province_of_Indonesia",
+      "description": "Number of Schools in the Province of Indonesia, also return region code (kode_wilayah) that used in other endpoints",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_prostrings",
+      "description": "Retrieves a list of prostrings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "trackProjectProgress",
+      "description": "Retrieve visual analytics to track the progress of a project.",
+      "params": [
+        "projectId",
+        "startDate",
+        "endDate"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotient_forex_signal",
+      "description": "Return a trading signal based on market sentiment, reliable indicators, analyst ratings and news. Signal : `1`=**buy**, `0`=**hold** and `-1`=**sell**. Confidence interval : [0%-100%].",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BinarySearchUtil.performSearch",
+      "description": "Performs a binary search on a sorted array to find the position of a specific element.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "partenaire_par_id",
+      "description": "Fetches a partner's details by their ID from the designated API.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeBusinessProcess",
+      "description": "Analyze the existing business process in order to identify areas for improvement",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "event.lookup",
+      "description": "Find events in a city by type and date.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Category",
+      "description": "Retrieves category results from Home Depot's Product Data API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_podcast_episodes",
+      "description": "Fetch podcast episodes including audio, image, and description using the username of the podcast.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "legal_regulation_search",
+      "description": "Legal Regulation Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_day_average",
+      "description": "This method takes two arguments, 'total_earning' and 'num_days', and returns the average earning per day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance.roeTrendAnalysis",
+      "description": "Analyzes the trend in Return on Equity over a range of years for multiple companies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "keyword_search_at_coordinate_point",
+      "description": "Fetch search results for a given query at a specified geographic coordinate point using the RapidAPI Local Rank Tracker service.",
+      "params": [
+        "lat",
+        "lng",
+        "query",
+        "x_user_agent",
+        "zoom"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Data_Get_Company_Balance_Sheet",
+      "description": "Get Company latest data for balance sheet",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aaaa_Get_All_API_Versions",
+      "description": "Get all the versions (and their corresponding information) that exist for a specified API.",
+      "params": [
+        "{'name': 'apiId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SongMeanings_comments_get",
+      "description": "Get comments from our database for a specific song.",
+      "params": [
+        "{'name': 'artist_name', 'type': 'STRING'",
+        "{'name': 'lyric_title', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetUsersRelatedPeople",
+      "description": "Retrieve a list of people related to a given user from the email domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StringTransformer",
+      "description": "Transforms a given string according to a specified action, such as converting to upper-case, lower-case, title-case, or mirroring.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createLineGraph",
+      "description": "This function creates a line graph based on the provided data and graph specifications. It handles different types of data formats and allows customization of the graph's appearance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: st",
+      "description": "def determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Determine the leaning direction of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for leaning direction.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The leaning direction of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = objec",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_remaining_work",
+      "description": "Calculates the remaining work to be done by the man",
+      "params": []
+    }
+  ]
+}

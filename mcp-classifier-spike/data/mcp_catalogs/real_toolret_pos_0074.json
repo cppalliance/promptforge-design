@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_toolret_pos_0074",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Verify Signup Code",
+      "description": "Verify the signup code received by the user and complete the signup process.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Whois_Lookup_v3_Check_Similarity",
+      "description": "This endpoint Helps to check if two domains are similar.\n\nParemeters:\n> domain1 \n>domain2",
+      "params": [
+        "{'name': 'domain1', 'type': 'STRING', 'd",
+        "{'name': 'domain2', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "distilgpt2",
+      "description": "DistilGPT2 is an English-language model pre-trained with the supervision of the 124 million parameter version of GPT-2. With 82 million parameters, it was developed using knowledge distillation and designed to be a faster, lighter version of GPT-2. It can be used for text generation, writing assistance, creative writing, entertainment, and more.",
+      "params": [
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getclimatescorebygps",
+      "description": "Fetches the climate score for a given GPS position based on specific disaster and activity types.",
+      "params": [
+        "latitude",
+        "longitude",
+        "disaster_type_number",
+        "activity_type_number"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_news",
+      "description": "Get news related to the title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listTransactions",
+      "description": "Retrieve a list of transactions for a specific location and date range.",
+      "params": [
+        "locationId",
+        "startDate",
+        "endDate",
+        "limit",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PosterDesignSelector.selectTemplate",
+      "description": "Selects a poster template based on game genre and desired theme, providing customization options for text and images.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Computer Vision Models",
+      "description": "This API returns a list of domain-specific models supported by the Microsoft Computer Vision API, including celebrity recognizers and landmark recognizers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wisdom_Quotes_Get_Wisdom_Quote_By_ID",
+      "description": "Returns a single wisdom quote by a given ID. The highest is 27753.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_Facebook",
+      "description": "Check username on Facebook",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorcycle_Specs_Database_Specifications_by_Make_Model",
+      "description": "Get Specifications by {Make} / {Model}\n[MakeModelGetCompleteSpecification]",
+      "params": [
+        "{'name': 'make', 'type': 'string', 'desc",
+        "{'name': 'model', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_actors_get_filmography_appearances",
+      "description": "Get filmography appearances of an actor, actress, etc...",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de",
+        "{'name': 'nconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_LinkedinFinder",
+      "description": "This API endpoint generates or retrieves the most likely email address from a Linkedin URL.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tibia_Items_Get_all_imbuements_Items",
+      "description": "This enpoint will get all imbuement",
+      "params": [
+        "{'name': 'World', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBookList",
+      "description": "Fetches the list of books in the Dune series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Predict Feature Forecast 7 Day",
+      "description": "Predicts the weather forecast for the next 7 days, providing a binary predict value, rating, and tips for astronomers based on the forecast.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_timetable",
+      "description": "Fetches the timetable for a given FlixBus station and date using the Toolbench RapidAPI service.",
+      "params": [
+        "station_id",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Video_Streaming_Data",
+      "description": "Video Streaming Data",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "login_to_car_rental_platform",
+      "description": "Login to car rental reservation platform tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Ephemeral Proxies Service Status",
+      "description": "This API returns the current status of the ephemeral proxies service, including the total number of datacenter proxies available and grouped by country.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "British_Airways_Flight_Info_Search_today_s_departures_by_time",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [{\"name\": \"departurelocation-starttime-starttime-endtime-endtime\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"\"}, {\"name\": \"departureLocation\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"LHR\"}, {\"name\": \"startTime\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"06:00\"}, {\"name\": \"endTime\", \"type\": \"STRING\", \"description\": \"\", \"defau",
+      "params": [
+        "{'name': 'departurelocation-starttime-st",
+        "{'name': 'departureLocation', 'type': 'S",
+        "{'name': 'startTime', 'type': 'STRING', ",
+        "{'name': 'endTime', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football League Home Standings",
+      "description": "Retrieve the home standings of a specific Football league for a given season and tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_gcd_multiple",
+      "description": "This function takes a list of numbers as input and returns their greatest common divisor (GCD).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_ratios_retrieve",
+      "description": "Retrieve financial ratios for a given company or stock, with the option to specify a specific index (quarter) for the data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ModifyBankAccount",
+      "description": "\"Modify bank account API that takes five parameters - 'account', 'password', 'name', 'email' and 'token'. The 'token' parameter is used for user authentication. The 'account' parameter refers to the user's account number and the 'password' parameter is used to authenticate the user. The 'name' parameter refers to the user's name and the 'email' parameter refers to the user's email address.\"",
+      "params": [
+        "{'name': 'account', 'in': 'query', 'sche",
+        "{'name': 'password', 'in': 'query', 'sch",
+        "{'name': 'name', 'in': 'query', 'schema'",
+        "{'name': 'email', 'in': 'query', 'schema",
+        "{'name': 'token', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Genius_Song_Lyrics_User_Contributions_suggestions",
+      "description": "User Contributions (suggestions)",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AmericanFootballApi_MatchManagers",
+      "description": "Get managers for a specific American Football match by providing its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EV_Charging_Stations_Get_Stations_within_10_km",
+      "description": "Return nearest charging stations within 10 km radius.",
+      "params": [
+        "{'name': 'region', 'type': 'ENUM', 'desc",
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Search_Country_by_Name",
+      "description": "Get details of the country specified by name, fuzzy search is supported. Up to 10 records for countries with similar name may be returned. Information includes country name, capital, area, population, languages, neighbors, phone code, postal code, and more.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_info_Get_Joke_by_id",
+      "description": "Search joke by id",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ChangeNOW_crypto_exchange_Currency_info",
+      "description": "This method returns the name of the coin, the coin's main features (such as anonymity, the need for Extra ID, and logo), and the coin's supported wallets.\n\n<h3>Successful response:</h3>\n\t<p>The response contains an object with currency information.</p>\n\n<h5>Successful response fields</h5>\n\n<table>\n\t<tr>\n        <td><b>Name</b></td>\n        <td><b>Type</b></td>\n        <td><b>Description</b></td>\n    </tr>\n    <tr>\n        <td><b><i>ticker</i></b></td>\n        <td><i>String</i></td>\n        <td>Currency ticker</td>\n    </tr>\n    <tr>\n        <td><b><i>name</i></b></td>\n        <td><i>String</i>",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThermoCalc.calculateHeatTransfer",
+      "description": "Calculates the heat transfer between two substances based on their specific heat capacities, masses, and temperature changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_List_Comments",
+      "description": "List Comments API",
+      "params": [
+        "{'name': 'photoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Snap to Road",
+      "description": "Given a geographical coordinate, this API retrieves the snapped coordinate which is found by calculating the intersection between the longitudinal axis of the nearest road segment and the perpendicular line between the provided coordinate and this longitudinal axis.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sentence-transformers/bert-base-nli-mean-tokens",
+      "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AssetReallocationRecommender",
+      "description": "Provides recommendations for asset reallocation within portfolios to optimize performance based on current market conditions and historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ObjectExists",
+      "description": "Checks if a string or folder exists in a storage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ubidots_GET_variables",
+      "description": "Retrieves the list of all the variables owned by a user. The header X-Auth-Token is needed to have the permissions for this endpoint.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_products_search_by_barcode",
+      "description": "Search product by barcode",
+      "params": [
+        "{'name': 'store_id', 'type': 'STRING', '",
+        "{'name': 'barcode', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mboum_Finance_market_undervalued_large_caps",
+      "description": "Large cap stocks that are potentially undervalued.",
+      "params": []
+    }
+  ]
+}

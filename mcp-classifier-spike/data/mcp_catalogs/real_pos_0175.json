@@ -1,0 +1,383 @@
+{
+  "catalog_id": "real_pos_0175",
+  "tools": [
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_monitor_multiple_servers",
+      "description": "Monitor health and tools of multiple MCP servers simultaneously. Returns: (markdown_summary, json_data)",
+      "params": [
+        "urls_text"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_enumerate_dns",
+      "description": "Enumerates information about a specific domain's DNS configuration. Information collected about the domain name: 1. A records: the IPv4 associated with the domain 2. AAAA records: the IPv6 associated with the domain 3. CAA records: used by owners to specify which Certificate Authorities are authorized to issue SSL/TLS certificates for their domains. 4. CNAME records: alias of one name to another - the DNS lookup will continue by retrying the lookup with the new name. 5. LOC records: geographic location associated with a domain name. 6. MX records: associated email servers to the domain. 7. NS records: DNS servers that are authoritative for a particular domain. These may be use to inquire information about the domain. 8. SOA records: defines authoritative information about a DNS zone, including zone transfers and cache expiration. 9. TXT records: used for domain verification and email security. 10. RP records: the responsible person for a domain. 11. SPF records: defines authorized email servers. 12. SRV records: specifies location of specific services (port and host) for the domain. 14. NSEC records: proves non-existence of DNS records and prevents zone enumeration. 15. RRSIG records: contains cryptographic signatures for DNSSEC-signed records, providing authentication and integrity. Example: >>> from pprint import pprint >>> pprint(enumerate_dns(\"youtube.com\")) ... {'A': 'youtube.com. 300 IN A 142.250.200.142', 'AAAA': 'youtube.com. 286 IN AAAA 2a00:1450:4003:80f::200e', 'CAA': 'youtube.com. 14352 IN CAA 0 issue \"pki.goog\"', 'CNAME': None, 'LOC': None, 'MX': 'youtube.com. 300 IN MX 0 smtp.google.com.', 'NS': 'youtube.com. 21600 IN NS ns4.google.com.\\n' 'youtube.com. 21600 IN NS ns1.google.com.\\n' 'youtube.com. 21600 IN NS ns2.google.com.\\n' 'youtube.com. 21600 IN NS ns3.google.com.', 'NSEC': None, 'RP': None, 'RRSIG': None, 'SOA': 'youtube.com. 60 IN SOA ns1.google.com. dns-admin.google.com. ' '766113658 900 900 1800 60', 'SPF': None, 'SRV': None, 'TXT': 'youtube.com. 3586 IN TXT \"v=spf1 include:google.com mx -all\"\\n' 'youtube.com. 3586 IN TXT ' '\"facebook-domain-verification=64jdes7le4h7e7lfpi22rijygx58j1\"\\n' 'youtube.com. 3586 IN TXT ' '\"google-site-verification=QtQWEwHWM8tHiJ4s-jJWzEQrD_fF3luPnpzNDH-Nw-w\"'}",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_holiday_list",
+      "description": "Fetches the official holiday list for MCPHawk Inc for the current calendar year. This tool is intended for HR personnel or MCPHawk Inc-based employees who need access to the national holiday calendar. It reads from a pre-defined CSV file (`sample-data/holiday.csv`) and returns a structured list of public holidays for India, including both the date and the holiday name. Note: This tool is *MCPHawk Inc-specific* and should **not** be used for employee queries related to other countries (e.g., US, UK). It may, however, be used by HR professionals who are cross-referencing or learning about MCPHawk Inc\u2019s holiday structure. **Usage:** No input required. Simply call this tool to retrieve the list of holidays for the current calendar year. **Returns:** A list of strings, each formatted as: \"YYYY-MM-DD: Holiday Name\" **Example Response:** [ \"2025-01-26: Republic Day (Optional: No)\", \"2025-03-31: Qutub-e-Ramzan (Optional: Yes)\", \"2025-08-15: Independence Day (Optional: No)\", \"2025-10-21: Diwali (Optional: No)\", \"2025-12-25: Christmas (Optional: No)\" ] If the data file is unavailable, a default set of standard MCPHawk Inc holidays is returned.",
+      "params": []
+    },
+    {
+      "server": "Patent-Scout",
+      "name": "Patent_Scout_analyze_patent_idea",
+      "description": "Analyzes a product idea to assess its patentability and finds similar patents. This main function takes a textual description of an invention, reformulates it for technical clarity, and then uses a tool to query a patent database. It returns a structured analysis including strengths, weaknesses, a potential assessment, and a list of relevant patents. Returns: The final structured result is embedded as JSON in the last status message within an HTML comment., {...} -->\" in the final yielded status to extract the complete analysis result., strengths (list), weaknesses (list), rating (dict), patents (list), rewritten_query (str), status (str)., Complete analysis results for all UI components.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "KGB-mcp",
+      "name": "KGB_mcp_build_knowledge_graph",
+      "description": "Main function to build knowledge graph from text or URL.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_lookup_food",
+      "description": "Return one row (food, purine, label) that exactly matches *name* (case-insensitive).",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_temporal_analysis_mcp",
+      "description": "Analyzes the temporal relationship between drug administration and the onset of adverse events. This tool provides insights into the typical time-to-onset for a specific drug-associated adverse event, which can be a critical factor in causality assessment. It helps determine if the timing of the event is consistent with the drug's known pharmacology. Returns: JSON string with temporal patterns and time-to-onset analysis",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "limit"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_daily_analysis",
+      "description": "Process daily timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> daily_analysis(\"AAPL\", 30, 365, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_add_problem_solving_template",
+      "description": "Adds a problem-solving template to the database that defines a sequence of Modal sandbox tool operations to solve a specific task. Templates provide guidance on tool orchestration, required variables, volumes, and dependencies for common use cases like resume screening, code analysis, data processing etc. For example, a resume screening template would specify: 1. Required volumes for storing resumes and results 2. Python packages needed (e.g., PyPDF2, spacy) 3. Sequence of sandbox operations: - Launch sandbox with specific memory/CPU requirements - Create directories for resumes and results - Push resume files to sandbox - Execute NLP processing commands - Pull results from sandbox - Clean up resources. Returns: JSON string containing:, success (bool): Whether template was added successfully, template_id (str): Unique ID of added template, message (str): Status message",
+      "params": [
+        "name",
+        "description",
+        "required_tools",
+        "required_volumes",
+        "required_packages",
+        "tool_sequence",
+        "resource_requirements",
+        "example_usage"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_research_write_review_topic",
+      "description": "Helps with writing a report with research, writing, and review on any topic. Returns a reviewed topic. The query is a string that contains the topic to be researched and reviewed. Example queries: - \"Write me a report on the history of the internet.\" - \"Write me a report on origin of the universe.\" - \"Write me a report on the impact of climate change on polar bears.\" - \"Write me a report on the benefits of meditation.\" - \"Write me a report on the future of artificial intelligence.\" - \"Write me a report on the effects of social media on mental health.\". Returns: A nicely formatted string.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_proxy_by_name",
+      "description": "\u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053 \u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053\uff0c\u5982\u679c\u96a7\u9053\u4e0d\u5b58\u5728\u5219\u8fd4\u56de\u5931\u8d25\u3002 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async_",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_embed_text_modal_api",
+      "description": "This function allows you to send a list of text to be embeded by our external model. the format should be the following: [ \"text_to_embed 1\", \"text_to_embed 2\", \"text_to_embed 3\", ... ] the return is the vector embedding corresponding to the text you input or a list of vector in case you gave a list of text. thoses vectors are compatible with the one you can find in the database and can be used to be compared with vectors you'll get by querying the database.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_token",
+      "description": "Create a token with specified properties, they can be items or characters.",
+      "params": [
+        "name",
+        "type",
+        "x",
+        "y",
+        "size",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_bm25_relevance_scorer",
+      "description": "Compute relevance scores between a query and a list of documents using the BM25 algorithm. This tool tokenizes each document and the query using a simple whitespace and punctuation-based tokenizer, then calculates BM25 scores to measure how relevant each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"BM25 Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries, each with:, 'document': The original document string., 'score': The BM25 relevance score (higher means more relevant).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_advanced_search_sync",
+      "description": "Advanced search for Stack Overflow questions with comprehensive filters. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "excluded_tags",
+        "min_score",
+        "title",
+        "body",
+        "min_answers",
+        "has_accepted_answer",
+        "min_views",
+        "sort_by",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_tavily_search",
+      "description": "Given a search query, returns the search results from Tavily. Returns: The search results from Tavily Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_contact_information",
+      "description": "Get customer service contact information.",
+      "params": [
+        "issue_type",
+        "urgency"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_sandbox_pool_status_sync",
+      "description": "Synchronous wrapper for sandbox pool status.",
+      "params": []
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_arxiv",
+      "description": "Search arXiv using LangChain ArxivLoader. Returns: Formatted arXiv search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    }
+  ]
+}

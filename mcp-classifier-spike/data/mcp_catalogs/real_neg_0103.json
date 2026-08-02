@@ -1,0 +1,366 @@
+{
+  "catalog_id": "real_neg_0103",
+  "tools": [
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_milestones",
+      "description": "Returns all scheduled milestones and their dates for a given MCPHawk Inc project. This tool delivers a detailed timeline of milestones for a project, including: - Milestone names (e.g., Sprint-1, Sprint-2, QA Release, Production Release) - Corresponding milestone dates - Planned Cumulative Burn in USD for different project milestones - Actual Burn based on MCPHawk Inc employee billing - Cumulative Actual Burn rate basedon Actual Burn rate values (This is important to understand the financials of the project) This tool is helpful for project managers, scrum masters, and stakeholders to track progress, important delivery dates and understand if project is running within budget or not and understnad financial health of the project. **Input:** - `project_name` (str): The project whose milestones are requested. **Returns:** A dictionary containing: - `project_name` (str): The name of the project - `milestones` (list): A list of dictionaries, each with: - `milestone` (str): Name of the milestone (e.g., \"Sprint-1\", \"QA Release\") - `milestone_date` (date): Scheduled date for the milestone (in `YYYY-MM-DD` format) - `planned_cumulative_burn` (float): Planned cumulative burn amount by this milestone - `actual_burn` (float): Actual burn recorded for this milestone period - `cumulative_actual_burn` (float): Cumulative total of actual burn up to this milestone If no milestones are found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"milestones\": [ { \"milestone\": \"Sprint-1\", \"milestone_date\": \"2025-02-25\", \"planned_cumulative_burn\": 113160.0, \"actual_burn\": 106528.85, \"cumulative_actual_burn\": 106529.0 }, { \"milestone\": \"Sprint-2\", \"milestone_date\": \"2025-03-11\", \"planned_cumulative_burn\": 226321.0, \"actual_burn\": 111444.79, \"cumulative_actual_burn\": 217974.0 }, { \"milestone\": \"UAT Release\", \"milestone_date\": \"2025-05-20\", \"planned_cumulative_burn\": 905283.52, \"actual_burn\": 107937.74, \"cumulative_actual_burn\": 881532.64 }, { \"milestone\": \"Production Release\", \"milestone_date\": \"2025-05-27\", \"planned_cumulative_burn\": 1018443.96, \"actual_burn\": 107682.72, \"cumulative_actual_burn\": 989215.36 } ] }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_calculate",
+      "description": "Performs basic arithmetic operations between two numbers. This function takes two numbers and an operator as input and returns the result of the arithmetic operation. Supported operations are addition (+), subtraction (-), multiplication (*), and division (/). For division, checks for division by zero. Returns: Result of the arithmetic operation if valid, \"Error\" if invalid operation (like division by zero), , >>> calculate(10, \"+\", 5), 15, >>> calculate(10, \"/\", 0), \"Error\"",
+      "params": [
+        "n1",
+        "op",
+        "n2"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_greet",
+      "description": "Greets the user with a personalized hello message. Returns: A greeting message addressed to the specified user.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "MCP_Server_Respurce_German_Errors",
+      "name": "MCP_Server_Respurce_German_Errors_german_errors_resource",
+      "description": "The most typical German Errors and mistakes database Use this database to find common German errors and their corrections",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_naranjo_score_mcp",
+      "description": "Calculates the Naranjo score, a standardized and widely used causality assessment tool to determine the probability that an adverse event is related to a specific drug. The score helps clinicians and researchers classify the likelihood of an adverse drug reaction (ADR) as doubtful, possible, probable, or definite. Sometimes the user might not have provided all the information, so you will need to ask for the missing information (remember to give them the option to say \"unknown\" if they don't know the answer). Returns: JSON string with score, probability category, and detailed breakdown",
+      "params": [
+        "adverse_reaction_after_drug",
+        "reaction_improved_after_stopping",
+        "reaction_reappeared_after_readministration",
+        "alternative_causes_exist",
+        "reaction_when_placebo_given",
+        "drug_detected_in_blood",
+        "reaction_worse_with_higher_dose",
+        "similar_reaction_to_drug_before",
+        "adverse_event_confirmed_objectively",
+        "reaction_appeared_after_suspected_drug_given"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_quarters",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for given quarters from 10-Q filings. Caveat the quarter used here is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "quarters"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_serve_image_from_path",
+      "description": "Serve the sample image",
+      "params": []
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_file",
+      "description": "This function is used to connect to a data source file like CSV or parquet. Returns: -------, tuple, , schema (str): A string representation of the data schema if successful, or an empty string on failure., status (str): A message indicating the success or failure of the connection.",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_url_http_content",
+      "description": "Get the content of a URL using an HTTP GET request.",
+      "params": [
+        "url",
+        "content_type"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_visualizer",
+      "description": "Visualize HTR results by overlaying text regions and polygons on the original image. Returns: File path to the generated visualization imagegenerated visualization image for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name}), https://gabriel-htrflow-mcp.hf.space/gradio_api/file=/tmp/gradio/34d5c1a8b7d5445469c4f7c638c490e0e3046b3008a0182f89c688b1b42d139b/htr_visualization.png",
+      "params": [
+        "image_path",
+        "htr_document_path",
+        "server_name"
+      ]
+    },
+    {
+      "server": "MCP_Server_Web2JSON",
+      "name": "MCP_Server_Web2JSON_webpage_to_json_wrapper",
+      "description": "Wrapper function that converts schema input to BaseModel",
+      "params": [
+        "content",
+        "is_url",
+        "schema_input"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_disproportionality_analysis_mcp",
+      "description": "Performs a disproportionality analysis (also known as signal detection) on adverse event data. This statistical method compares the reporting rate of a specific drug-event combination to the reporting rate of that event for all other drugs in the database. It calculates metrics like Proportional Reporting Ratio (PRR) and Reporting Odds Ratio (ROR) to identify potential safety signals that may warrant further investigation. Returns: JSON string with PRR, ROR, IC values and statistical significance",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "background_limit"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_process_image",
+      "description": "PII Detection & Masking Tool - Mistral Models Process an image with the given parameters. Pass an image URL(starting with http or https) to detect and mask PII based on privacy regulations using custom Mistral model. Available regulations include: GDPR, CCPA, PIPEDA, LGPD, PECR, PDPA, HIPAA. Available masking strategies: blur, single_color, none. The tool supports various Mistral models for image processing. (Available models: pixtral-large-latest, mistral-ocr-latest, mistral-medium-2505). This method returns a tuple containing the output image and a JSON result and mcp.types.ImageContent. Returns: Tuple of (output_image_path, result_json, download_btn_visibility)",
+      "params": [
+        "image",
+        "model_name",
+        "default_strategy",
+        "blur_amount",
+        "color_hex",
+        "gdpr_strategy",
+        "ccpa_strategy",
+        "pipeda_strategy",
+        "lgpd_strategy",
+        "pecr_strategy",
+        "pdpa_strategy",
+        "hipaa_strategy"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "StockSense",
+      "name": "StockSense_stock_sentiment_pipeline",
+      "description": "Analyzes stock news sentiment by fetching articles and performing sentiment analysis. Returns: A list of dictionaries with article metadata and sentiment results.",
+      "params": [
+        "ticker",
+        "max_articles"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_hot_games",
+      "description": "Get a list of the Top 50 trending games today from BoardGameGeek. Returns: A list of dictionaries, each representing a popular game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'rank' (str): The current hotness rank of the game on BGG., 'year' (str): The year the game was published (or 'Unknown' if not available)., 'url' (str): URL to the similar game's page on BoardGameGeek.",
+      "params": []
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_deploy_contract_ui",
+      "description": "Gradio wrapper for contract deployment",
+      "params": [
+        "source_code",
+        "contract_name",
+        "from_account",
+        "constructor_args_str"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_accounts_list",
+      "description": "Get list of current accounts with balances",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_question_enhancer",
+      "description": "Wrapper for QuestionEnhancerAgent to provide question enhancement. Returns: Enhanced question result with sub-questions",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_list_repository_files",
+      "description": "List all files in a GitHub repository with specified extensions. Returns: JSON response with file list and metadata",
+      "params": [
+        "repo_url",
+        "branch",
+        "extensions"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_rag_query",
+      "description": "This is a tool that returns law content by input a question. It will find the related law and return. Returns: A list of law content related to the question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_post_text",
+      "description": "Posts a text post in the database, and returns True if it was successfuly posted",
+      "params": [
+        "content"
+      ]
+    },
+    {
+      "server": "kaggle-mcp-server",
+      "name": "kaggle_mcp_server_search_datasets",
+      "description": "Return brief metadata for up to `max_results` public datasets whose title or description matches `query`.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_lookup",
+      "description": "Function to lookup a name in the Office of Inspector General (OIG) List of Excluded Individuals & Entitites (LEIE) who are legally excluded from receiving any Federal Medicare or Medicaid funds for services. Search can look for first name, last name, or both. All persons are presumed innocent unless the name and address match the results of a search. For legal chain of custody reasons, this information is inadmissable, but can be verified on the US Health and Human Services Website here: https://exclusions.oig.hhs.gov/",
+      "params": [
+        "last",
+        "first"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_news_endpoint",
+      "description": "Search news articles, similar to Google News. Returns: News search results as a dictionary",
+      "params": [
+        "q",
+        "num"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_welch_t_test",
+      "description": "Accepts two groups of numeric data as comma-separated strings or DataFrame columns and performs Welch's t-test. This test determines whether two independent groups have significantly different means. This test is valid even when populations have different variances. Default to this test instead of students t-test if you are unsure about population variance. This test calculates a t-statistic using Welch's formula that accounts for unequal variances. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are considered statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated using pooled standard deviation for consistency with other t-tests, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: treatment vs control groups, before/after measurements with different participants, comparing performance between demographic groups.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    }
+  ]
+}

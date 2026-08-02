@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_pos_0143",
+  "tools": [
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_database",
+      "description": "This function is used to connect to a database using the provided database URL and returns its schema. Returns: -------, tuple, , schema (str): A string representation of the database schema if the connection is successful,, or an empty string if it fails., status (str): A message indicating the result of the connection attempt., , -----, The dialect is extracted from the URI to determine the database type (e.g., MySQL, PostgreSQL).",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_endpoint_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "mcp-brawlstats",
+      "name": "mcp_brawlstats_save_brawlstars_key",
+      "description": "Store a Brawl Stars API key in server memory for later use. This should be the **first** tool called in a session.  Once the key is saved, subsequent calls to `get_recent_battles` can access the API without requiring the LLM (or user) to resend the long token. Returns: Status message \u2014, \u2022 \"\u2705 API key saved in server memory\" on success, \u2022 \"\u274c No key provided\" if the argument was empty",
+      "params": [
+        "api_key"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_process_flow_diagram",
+      "description": "Generates a Process Flow Diagram (Flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_interest_calculator",
+      "description": "Calculates the simple interest payable for a given principal amount based on the current Bank of England base rate. Returns: A string detailing the principal, interest payable, and the annual interest rate,, or an error message if the calculation fails.",
+      "params": [
+        "principal"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_brave_search",
+      "description": "Given a search query, returns the search results from Brave. Returns: The search results from Brave Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_holiday_list",
+      "description": "Fetches the official holiday list for MCPHawk Inc for the current calendar year. This tool is intended for HR personnel or MCPHawk Inc-based employees who need access to the national holiday calendar. It reads from a pre-defined CSV file (`sample-data/holiday.csv`) and returns a structured list of public holidays for India, including both the date and the holiday name. Note: This tool is *MCPHawk Inc-specific* and should **not** be used for employee queries related to other countries (e.g., US, UK). It may, however, be used by HR professionals who are cross-referencing or learning about MCPHawk Inc\u2019s holiday structure. **Usage:** No input required. Simply call this tool to retrieve the list of holidays for the current calendar year. **Returns:** A list of strings, each formatted as: \"YYYY-MM-DD: Holiday Name\" **Example Response:** [ \"2025-01-26: Republic Day (Optional: No)\", \"2025-03-31: Qutub-e-Ramzan (Optional: Yes)\", \"2025-08-15: Independence Day (Optional: No)\", \"2025-10-21: Diwali (Optional: No)\", \"2025-12-25: Christmas (Optional: No)\" ] If the data file is unavailable, a default set of standard MCPHawk Inc holidays is returned.",
+      "params": []
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_entity_relationship_diagram",
+      "description": "Generates an Entity Relationship (ER) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "MCP_Server_LinkedIn_Image_Generator",
+      "name": "MCP_Server_LinkedIn_Image_Generator_process_linkedin_image",
+      "description": "Process an image for LinkedIn optimization using Flux Kontext. Returns: Processed image optimized for LinkedIn",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_list_mountains",
+      "description": "Retrieve mountains, optionally filtered by elevation range. This function returns mountains, with optional filtering based on their elevation. If no elevation filters are provided, all mountains are returned. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, int,, str, }, ], , >>> get_list_mountains(14000, 14500)  # With elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}]', >>> get_list_mountains()  # Without elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}, ...]'",
+      "params": [
+        "min_elevation",
+        "max_elevation"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_session_status",
+      "description": "Get current pomodoro session status and detailed progress statistics. This function provides comprehensive information about the current session including: work time elapsed, break status, total accumulated work time, and current activity. Returns: Detailed session status including work time, break duration, and progress info",
+      "params": []
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_translate_caption_interface",
+      "description": "Generate multi-language versions of captions",
+      "params": [
+        "base_caption",
+        "selected_languages"
+      ]
+    },
+    {
+      "server": "MCP_Server_Respurce_German_Errors",
+      "name": "MCP_Server_Respurce_German_Errors_german_errors_resource",
+      "description": "The most typical German Errors and mistakes database Use this database to find common German errors and their corrections",
+      "params": []
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_remove_background",
+      "description": "Remove the background of the image. Returns: Binary image data of the modified image.",
+      "params": [
+        "input_img"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output___",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_points_of_interest",
+      "description": "Find points of interest near given coordinates. Increase radius if not found (10km is default), try with more categories if not found any poi. Returns: Formatted text with POI information",
+      "params": [
+        "lat",
+        "lon",
+        "radius_km",
+        "categories"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_anthology_search",
+      "description": "Search ACL Anthology papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. In most cases, you need OR and not AND. You can scroll all search results with the \"offset\" parameter. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. The names of authors should be in Latin script. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: abs:\"machine learning\" au:\"del maestro\" au:vaswani AND ti:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Return a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") You can use `json.loads` to deserialize the result and get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_next_page",
+      "description": "Go to next page for patients",
+      "params": []
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    }
+  ]
+}

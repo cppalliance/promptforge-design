@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_pos_0172",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "view_user_list",
+      "description": "Retrieves the list of favorite libraries for a given user based on their user ID.",
+      "params": [
+        "userid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Clubs",
+      "description": "Retrieve a list of clubs from the transfermarkt database, filtered by competition and locale.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Sandbox_SAND_Past_1_Month",
+      "description": "Get price data for the past month. (~30 days)\n\n~hourly data points.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "KST",
+      "description": "Calculates the Know Sure Thing (KST) price momentum for four distinct price cycles (ROC).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "investmentPortfolioAnalysis",
+      "description": "Analyzes a real estate investment portfolio to provide insights on performance metrics and risk assessment.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_average",
+      "description": "Find the average of a list of numbers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Learn_to_read_and_write_Japanese_kanji_Kanji_grade_level",
+      "description": "The Advanced Search URL parameters are described here as individual endpoints to permit per parameter testing. Parameters may be combined as required.",
+      "params": [
+        "{'name': 'grade', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "historicalEventSearch",
+      "description": "Searches for historical events based on keywords and optional date filters.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Recognize Face",
+      "description": "useful when you only want to recognize faces in the picture. like: recognize who appears in the photo. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_kfc_locations_by_state_and_city",
+      "description": "Retrieve KFC locations for a given state and city with pagination support.",
+      "params": [
+        "state",
+        "city",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "optimizeRoomLayout",
+      "description": "Provides an optimized layout plan for furniture and fixtures in a room based on dimensions and user preferences.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Twitter User Details",
+      "description": "Retrieve detailed information about a Twitter user, including their follower count, prostring image, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "predict_evolution_rate",
+      "description": "Predict the evolutionary rate for a specific species for a given timeframe.",
+      "params": [
+        "species",
+        "years",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.RunTo",
+      "description": "# Run to a room or object. 'object' can only be: ['table', 'laptop', 'water', 'chair', 'cup', 'dining_room', 'toilet', 'sink', 'home_office', 'washing_machine', 'bathroom', 'bedroom']. \nAgent.RunTo(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandURL",
+      "description": "Expand a Bitly link into its original long URL.",
+      "params": [
+        "short_url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Car_API_Engines",
+      "description": "To include additional information about the returned body (such as year, make, model and trim) request with the query parameter as verbose=yes.\n\nFor complex queries you may use the json field to send an array of URL encoded JSON conditions, example:\n\n`[{\"field\": \"horsepower_hp\", \"op\": \">=\", \"val\": 100}, {\"field\": \"horsepower_hp\", \"op\": \"<=\", \"val\": 300}]`\n\nSee /api/vehicle-attributes for a complete list of vehicle attributes.\n\nAllowed operators are: `>`, `<`, `>=`, `<=`, `in`, `not in`, `like`, `not like`, `is null` and `not null`.\n\nAllowed json search fields are: year, make, model, trim, fuel",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_List_Comments",
+      "description": "List Comments API",
+      "params": [
+        "{'name': 'photoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Media Downloader",
+      "description": "Downloads videos, reels, and stories from an Instagram media URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_youtube_24h_type",
+      "description": "Youtube most viewed music video by content language type: (English, Spanish, Asian or Other)",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consulta_estabelecimento",
+      "description": "Queries the CNPJ for unified information from Receita Federal, Simples Nacional, and Cadastro de Contribuintes.",
+      "params": [
+        "cnpj",
+        "maxage",
+        "simpleshistory",
+        "registrations",
+        "simples"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_MACD",
+      "description": "Moving Average Convergence Divergence(MACD) is a trend following momentum indicator, which works by subtracting the longer moving average from the shorter one. MACD has an unstable period ~ 100.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cards",
+      "description": "This function draws multiple cards from a regular 52-card playing deck using the Card Draw Simulator API.",
+      "params": [
+        "value",
+        "suit",
+        "back",
+        "pulls"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mental_multiplication(num1, num2)",
+      "description": "def mental_multiplication(num1, num2):\n    \"\"\"\n    Computes the product of two numbers using mental math techniques.\n\n    Parameters:\n    num1 (int): The first number to be multiplied.\n    num2 (int): The second number to be multiplied.\n\n    Returns:\n    int: The product of the two numbers.\n    \"\"\"\n    # Find the average of the two numbers\n    average = (num1 + num2) / 2\n\n    # Find the difference between the average and each number\n    diff_num1 = average - num1\n    diff_num2 = num2 - average\n\n    # Compute the product using the difference of squares formula\n    product = average**2 - diff_nu",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MatinApi_9939c2c0_7fad_11e9_8019_f5bb8c5310ff",
+      "description": "a",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dna2protein_DNA2AminoAcid",
+      "description": "Transform a DNA sequence into a sequence of Amino Acids",
+      "params": [
+        "{'name': 'dna', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Keyword_Search_YouTube_Keyword_Search",
+      "description": "YouTube Keyword Search",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Followings by Public Key",
+      "description": "Retrieve the list of public Instagram accounts followed by a given public key",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Goofs",
+      "description": "Retrieve goofs (errors or mistakes) in a specific movie or TV title.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "queryDatabaseRecords",
+      "description": "Executes a custom SQL query on the database and retrieves records based on the provided SQL statement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_color(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def check_object_color(image_patch: ImagePatch, object_name: str) -> str:\n    '''Check whether a specific object in the image is tinted in any specific color.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for color.\n       \n    Returns:\n        str: \"yes\" if the object is tinted in a specific color, \"no\" otherwise.\n    '''\n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return f\"no {object_name} found\"\n    # Let's make the assumption there's only one object of thi",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_Phone_Specs_Database_Get_Specifications_by_Brand_Name_and_Model_Name",
+      "description": "Get all phone specifications by brand name and model name",
+      "params": [
+        "{'name': 'brandName', 'type': 'string', ",
+        "{'name': 'modelName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Web Signature Generation API",
+      "description": "Generate X-Bogus signature for a given web request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_new_note",
+      "description": "Create a new note",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestEmail",
+      "description": "Retrieve the latest email(s) from a set of inboxes, either all inboxes or a specific set of inbox IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GTrend_categoryList",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "embedDashboard",
+      "description": "Embed a dashboard into another application",
+      "params": [
+        "dashboardId",
+        "targetApp"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance/rates",
+      "description": "Get finance rates for a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuotes",
+      "description": "Get quotes for precious metals and cryptocurrencies.",
+      "params": [
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Recipe_Finder_salad_ingredient",
+      "description": "This API endpoint allows users to retrieve a random salad recipe that contains a specific ingredient. Users can make a GET request to the endpoint with the name of the ingredient as a query parameter, and the API will return a JSON response with the given recipe, including the name, list of ingredients, and instructions.",
+      "params": [
+        "{'name': 'ingredient', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ScrapTik_Get_Live_Stream_Messages",
+      "description": "Get live stream chat messages.",
+      "params": [
+        "{'name': 'room_id', 'type': 'STRING', 'd"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_neg_0011",
+  "tools": [
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tukey_test",
+      "description": "this function runs a Tukey's HSD (Honestly Significant Difference) test \u2014 a post-hoc analysis following ANOVA. It tells you which specific pairs of groups differ significantly in their means IT is meant to be used after you run a successful anova and you obtain sgnificant F-satatistics and p-value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', 36 'Coat', 36 'Hat/beanie', 32 ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected the return result is the raw dataframe that correspond to the pair wize categorie that reject the hypothesis of non statistically difference between two group the signature of the dataframe is the following: group1 | group2 | meandiff p-adj | lower | upper | reject (only true)",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_contact_information",
+      "description": "Get customer service contact information.",
+      "params": [
+        "issue_type",
+        "urgency"
+      ]
+    },
+    {
+      "server": "Website_Builder",
+      "name": "Website_Builder_generate_website",
+      "description": "Generates a simple website mockup based on the user's design request. Returns: HTML code for the website mockup.",
+      "params": [
+        "design_request"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_ELA",
+      "description": "Perform Error Level Analysis on an image. Returns: Processed ELA image",
+      "params": [
+        "img",
+        "quality",
+        "scale",
+        "contrast",
+        "linear",
+        "grayscale"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_enhanced_ai_chat_with_multilingual",
+      "description": "Enhanced AI chat that creates multilingual reminders",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle_image",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details",
+        "image"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_multiple_captions_interface",
+      "description": "Generate multiple caption variations using Meta-Llama-3.2-3B-Instruct",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "mcp_drawittome",
+      "name": "mcp_drawittome_generateDiagram",
+      "description": "Generates a diagram to explain a submitted text. The diagram is returned in html  with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>. It is not needed to handle the code, just present the html result to the user. It handles various types like Graph TB (default, block grouping with colors), flowchart TD (decision processes), sequenceDiagram (actor/system interactions), classDiagram (technical models like SQL schemas), stateDiagram-v2 (state logic or user stories), erDiagram (data entity relationships), gantt (projects and task timelines along dates), and timeline (historical/biographical sequences grouped by decade or century). Returns: html diagram ready to display made with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>",
+      "params": [
+        "input_text",
+        "input_precisions"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_scrape_hf_spaces_with_progress",
+      "description": "Wrapper function for scraping.",
+      "params": [
+        "max_pages",
+        "sort_by"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_sales_info",
+      "description": "Affiche les informations sur les fonctions Sales",
+      "params": []
+    },
+    {
+      "server": "FootballMatchesByDate",
+      "name": "FootballMatchesByDate_get_matches_by_date",
+      "description": "Fetches all matches for a given date from the Football Data API. Returns: A dictionary with the match ID as the key, and a dictionary containing the competition, home team, away team, home score and away score as the value",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_helpline_with_state",
+      "description": "Handle helpline with state management",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame_",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_creative_activity",
+      "description": "Suggest a creative activity for a child based on their emotion. Returns: A fun and calming creative task.",
+      "params": [
+        "emotion"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_track_visualization",
+      "description": "Generate a visualization of the track with specified data.",
+      "params": [
+        "year",
+        "round",
+        "visualization_type"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_analyze_specific_urls",
+      "description": "MCP Tool: Analyzes web content from a specific list of URLs using swarm analysis. Is useful for finding content related to a specific topic and compare the content with other URLs.",
+      "params": [
+        "urls_json",
+        "analysis_prompt"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_remove_background",
+      "description": "Remove the background of the image. Returns: Binary image data of the modified image.",
+      "params": [
+        "input_img"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_from_url",
+      "description": "Convert a document from a URL to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "document_url",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_check_model_status_session",
+      "description": "Check and display current model availability for specific session",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_load_settings",
+      "description": "Loads settings for the last active provider and their respective configs.",
+      "params": []
+    },
+    {
+      "server": "T2I",
+      "name": "T2I_text_to_images_and_base64_generator",
+      "description": "Converts text into images, returning both PIL objects for UI preview and base64 strings for an API/MCP client, with customizable options.",
+      "params": [
+        "text_content",
+        "style",
+        "font_size",
+        "bg_color_name",
+        "aspect_ratio_str",
+        "font_choice"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_staff",
+      "description": "Refresh staff table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    }
+  ]
+}

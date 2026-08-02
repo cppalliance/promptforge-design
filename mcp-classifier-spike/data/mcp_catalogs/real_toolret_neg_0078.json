@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_neg_0078",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Active_Search_v2",
+      "description": "{\"category_name\": \"Other\", \"required_parameters\": [{\"name\": \"current_page\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"1\"}, {\"name\": \"per_page\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"10\"}, {\"name\": \"sort\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"distance\"}, {\"name\": \"exclude_children\", \"type\": \"STRING\", \"description\": \"\", \"default\": true}], \"optional_parameters\": [], \"met",
+      "params": [
+        "{'name': 'current_page', 'type': 'STRING",
+        "{'name': 'per_page', 'type': 'STRING', '",
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'exclude_children', 'type': 'ST"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_NBA_Injury_List_History",
+      "description": "This table currently has injury history from the years 2020, 2021, 2022, and 2023 for players who played an NBA game in the 21-22 season and afterwards.  Consider this table as \"beta\" at this point, as we are still collecting previous seasons' data and working through some challenges. \n\nparameters:\n(All dates must be in format YYYYMMDD)\nplayerID - Use this if you only want to pull back injury history from a specific player.\ninjDate - Use this is to pull back injury history for only a specific date.\nThe next two are used to pull back a range of dates.  You can use one or the other. Or none. \nbe",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Song Search",
+      "description": "Searches for a song from popular song platforms. The API will search YouTube for the item by default. Prepend *scsearch:* to the search term to specify a search from SoundCloud, *spsearch:* for Spotify, or *bcsearch:* for BandCamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "symbols/get-chart",
+      "description": "Retrieve historical data for a specific stock symbol to generate a chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create Group",
+      "description": "Create a new group with the provided name and optional textline routing information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TrueWay_Geocoding_Geocode",
+      "description": "Obtain geocoordinates for address",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "txt",
+      "description": "Fetches a plain text blocklist of sites for a specified game using the StopModReposts API.",
+      "params": [
+        "game"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "covid19ph",
+      "description": "Provides information about the COVID-19 pandemic, specifically the number of infected and tested individuals.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotient_forex_signal",
+      "description": "Return a trading signal based on market sentiment, reliable indicators, analyst ratings and news. Signal : `1`=**buy**, `0`=**hold** and `-1`=**sell**. Confidence interval : [0%-100%].",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Store_Apps_Top_Grossing_Games",
+      "description": "Top grossing games chart.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_coupons_endpoint",
+      "description": "Fetches daily AI-analyzed betting coupons with a high win rate from the specified endpoint.",
+      "params": [
+        "content_type",
+        "connection",
+        "sort"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generateScienceFictionStory",
+      "description": "Generate a science fiction story",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMobileInfo",
+      "description": "Retrieves information about a mobile number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "description": "A CLIP ViT L/14 model trained with the LAION-2B English subset of LAION-5B using OpenCLIP. Intended for research purposes and exploring zero-shot, arbitrary image classification. Can be used for interdisciplinary studies of the potential impact of such model.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_analysis_v2_list",
+      "description": "List analysis of specific symbol",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ndricks_sports_api",
+      "description": "Get information about pro teams (NHL, NBA, NFL, MLB) teams by calling the ndricks Software Sports API.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rich Menu List",
+      "description": "Retrieves a list of all uploaded rich menus for Line messaging.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NextEvents",
+      "description": "Retrieve upcoming events for a specific team in the sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Season_Hitting_Stats",
+      "description": "Retrieve a players hitting stats for a given season.",
+      "params": [
+        "{'name': 'league_list_id', 'type': 'STRI",
+        "{'name': 'game_type', 'type': 'STRING', ",
+        "{'name': 'season', 'type': 'STRING', 'de",
+        "{'name': 'player_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forward_Reverse_Geocoding_ReverseGeocoding",
+      "description": "Find address or place by latitude and longitude",
+      "params": [
+        "{'name': 'lon', 'type': 'NUMBER', 'descr",
+        "{'name': 'lat', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEPTA_Plain_text_Bus_Schedules",
+      "description": "Intended for SMS.",
+      "params": [
+        "{'name': 'req1', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kiann_Options_Project_lognormal_call",
+      "description": "Black-Scholes Pricer/premium, Lognormal vols. Params are as per :\nk = strike (float)\nf = forward (float)\nt = time-to-expiry (float)\nv = implied volatility, lognormal, annualized (float)\nr = risk-free-rate (float). Note can be combined with dividend, funding, risk-free rate into one value",
+      "params": [
+        "{'name': 'ret_', 'type': 'NUMBER', 'desc",
+        "{'name': 'v', 'type': 'NUMBER', 'descrip",
+        "{'name': 'r', 'type': 'NUMBER', 'descrip",
+        "{'name': 'cp', 'type': 'STRING', 'descri",
+        "{'name': 'k', 'type': 'NUMBER', 'descrip",
+        "{'name': 'f', 'type': 'NUMBER', 'descrip",
+        "{'name': 't', 'type': 'NUMBER', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "updateDocument",
+      "description": "Updates an existing document in Google Drive.",
+      "params": [
+        "documentId",
+        "content"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "League_of_Legends_API_GET_champions",
+      "description": "Get list of all champions by default give you in english",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Email_Cloud_DisposableEmailIsDisposable",
+      "description": " ",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weather_5_day_Forecast",
+      "description": "3 hour interval - 5 day forecast for a given lat/lon",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lon', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_correct_total_weight",
+      "description": "This method takes three arguments, 'average_weight', 'num_students', and 'incorrect_weight', and returns the correct total weight of all students in the class.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Search",
+      "description": "This endpoint return search results",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "KFC_locations_GET_all_KFC_locations_by_state",
+      "description": "Get all KFC locations by state",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'state', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_stock_v2_get_valuation",
+      "description": "Mapped to Valuation  tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRobotHealth",
+      "description": "Retrieve the health status of a robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Health News API",
+      "description": "This API retrieves health news from Google News based on the specified language region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Heck_Yes_Markdown_Get_Markdown",
+      "description": "Enter a url or some HTML code to convert the page to Markdown. One parameter between \"u\" and \"html\" must be submitted with the request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballLeagueAwayTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for away events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "openHAB Device Integration",
+      "description": "API for integrating devices with openHAB smart home system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Data by Attribute Search",
+      "description": "Extract data from a webpage by searching for a specific part of an attribute in a tag selector.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Yes or No Response",
+      "description": "This API returns a random 'Yes' or 'No' response, often used for entertainment or game-related purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_efficiency_ratio",
+      "description": "This method takes one argument, 'percent_increase', which represents the percentage increase in efficiency of one person compared to another. It returns the corresponding efficiency ratio.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unofficial_Trust_Pilot_consumers_get_web_links",
+      "description": "Get web links to a consumer",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_population_increase_per_day",
+      "description": "This method takes one argument, 'population_increase', which is the net increase in population per two seconds. It returns the estimated net increase in population per day.",
+      "params": []
+    }
+  ]
+}

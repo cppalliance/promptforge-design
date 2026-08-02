@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_neg_0065",
+  "tools": [
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__auto_refresh_game_state",
+      "description": "Auto-refresh game state and UI elements with update objects.",
+      "params": [
+        "auto_refresh"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_letter_generate",
+      "description": "MCP Endpoint: letter.generate Calls an LLM to create a short, personalized cover letter in any tone. Saves time and improves response quality.",
+      "params": [
+        "user_id",
+        "job_description",
+        "tone"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_coverage_evaluator",
+      "description": "Evaluate how diverse the content is across multiple system outputs (coverage proxy). Returns: Pairwise cosine similarities and average to estimate content spread.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_clear_job_cache",
+      "description": "Clear the job search cache to force fresh results. Returns: Dict with operation result",
+      "params": []
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_process_image",
+      "description": "PII Detection & Masking Tool - Mistral Models Process an image with the given parameters. Pass an image URL(starting with http or https) to detect and mask PII based on privacy regulations using custom Mistral model. Available regulations include: GDPR, CCPA, PIPEDA, LGPD, PECR, PDPA, HIPAA. Available masking strategies: blur, single_color, none. The tool supports various Mistral models for image processing. (Available models: pixtral-large-latest, mistral-ocr-latest, mistral-medium-2505). This method returns a tuple containing the output image and a JSON result and mcp.types.ImageContent. Returns: Tuple of (output_image_path, result_json, download_btn_visibility)",
+      "params": [
+        "image",
+        "model_name",
+        "default_strategy",
+        "blur_amount",
+        "color_hex",
+        "gdpr_strategy",
+        "ccpa_strategy",
+        "pipeda_strategy",
+        "lgpd_strategy",
+        "pecr_strategy",
+        "pdpa_strategy",
+        "hipaa_strategy"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_update_api_keys",
+      "description": "Updates the global MISTRAL_API_KEY and GEMINI_API_KEY variables. Returns: A string confirming that the API keys have been saved.",
+      "params": [
+        "mistral_key",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_soothing_story",
+      "description": "Generate a short calming story for a child. Returns: A safe, gentle short story.",
+      "params": [
+        "theme"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_enhanced_batch_generation",
+      "description": "Generate strategic variations for A/B testing",
+      "params": [
+        "prompt",
+        "variation_type",
+        "count",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_wikipedia",
+      "description": "Search Wikipedia using LangChain WikipediaLoader. Returns: Formatted Wikipedia search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_clear_all_chats",
+      "description": "Handle clearing all private chat tabs.",
+      "params": []
+    },
+    {
+      "server": "cybersec_intel-tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_station",
+      "description": "Searches for railway stations in Indian Railways network by name or station code. Returns: JSON response containing matched station details including:, Station name, Station code, State/Region, Geographical coordinates, Available facilities, Connected routes, , If station parameter is empty or no matching stations found, If API request fails or returns non-200 status code",
+      "params": [
+        "station"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_workouts_gr",
+      "description": "Fetches recent workouts for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "classify_opening",
+      "description": "Attempt to classify a chess opening using the Lichess openings database. Return the ECO code, name, moves and main sub-variations of the opening.",
+      "params": [
+        "fen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_neg_0124",
+  "tools": [
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_train_modal_model",
+      "description": "Entra\u00eene le mod\u00e8le Modal ML",
+      "params": [
+        "num_leads"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state_",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "MCP_Server_Respurce_German_Errors",
+      "name": "MCP_Server_Respurce_German_Errors_german_errors_resource",
+      "description": "The most typical German Errors and mistakes database Use this database to find common German errors and their corrections",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_load_saved_credentials",
+      "description": "Charge les credentials sauvegard\u00e9s",
+      "params": []
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status_",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_account_help",
+      "description": "Get help with account-related issues and login problems.",
+      "params": [
+        "issue_type"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_generate_multiple_tones",
+      "description": "Generate cover letters in multiple tones for comparison. Returns: Dict with multiple cover letters in different tones",
+      "params": [
+        "user_id",
+        "job_description"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_toggle_chat_view",
+      "description": "Hides/shows the correct chat component and populates it with data.",
+      "params": [
+        "view_choice"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_tavily_search",
+      "description": "Given a search query, returns the search results from Tavily. Returns: The search results from Tavily Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_time",
+      "description": "Extract travel time from route data. Returns: Time in human format like '15 min' or '1 h 23 min'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_initialize_mindbody_client",
+      "description": "Instantiate the global MindbodyClient reading credentials from ./config/.env",
+      "params": []
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_current_weather",
+      "description": "Fetches current weather for a given city name or coordinates using OpenWeatherMap API. Returns: A formatted weather report string.",
+      "params": [
+        "location"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_column_in_table",
+      "description": "### `get_list_of_column_in_table(schema_name: str, table_name: str)`",
+      "params": [
+        "schema",
+        "table"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_create_account_ui",
+      "description": "Gradio wrapper for create account",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_geolocation",
+      "description": "Get location information from an ip address. Returns the following information on an ip address: 1. IPv4 2. city 4. country_code 5. country_name 6. latitude 7. longitude 8. postal 9. state Example: >>> from pprint import pprint >>> pprint(get_location(\"103.100.104.0\")) ... {'IPv4': '103.100.104.0', 'city': None, 'country_code': 'NZ', 'country_name': 'New Zealand', 'latitude': -41, 'longitude': 174, 'postal': None, 'state': None}",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_predict",
+      "description": "Predicts whether an image is AI-generated or real using the SOTA Community Forensics model. Returns: A dictionary containing:, 'Fake Probability' (float): Probability score between 0 and 1 indicating likelihood of being AI-generated, 'Result Description' (str): Human-readable description of the prediction result, , >>> result = predict(\"path/to/image.jpg\"), >>> print(result), 0.002, 'Result Description': 'The image is likely real.'}",
+      "params": [
+        "img"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_books_book_by_id",
+      "description": "Get a book from Google Books API by its ID. Returns: dict - book",
+      "params": [
+        "book_id"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output___",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_brand_to_generic_lookup_mcp",
+      "description": "Converts a drug brand name to its generic (active ingredient) name. It can also provide information on the countries where the brand name is marketed. This tool is fundamental for identifying the active component of a branded medication, which is necessary for most other clinical lookups and to avoid therapeutic duplication. Returns: JSON string with generic drug information and country-specific data",
+      "params": [
+        "brand_name"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_proxy_by_name",
+      "description": "\u4fee\u6539\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0\uff0c\u9700\u8981\u662f\u5b58\u5728\u7684\u96a7\u9053 - `type`: \u96a7\u9053\u7c7b\u578b\uff0c\u5fc5\u987b\u548c\u539f\u96a7\u9053\u4e00\u6837\uff0c\u4e0d\u652f\u6301\u4fee\u6539 - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_report",
+      "description": "Generate a code analysis report using the Anthropic API. Returns: A detailed analysis report including top fixes.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "CyberSec_Intel_Tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    }
+  ]
+}

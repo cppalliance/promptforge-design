@@ -1,0 +1,369 @@
+{
+  "catalog_id": "real_pos_0005",
+  "tools": [
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_duckduckgo_search",
+      "description": "Given a search query, returns the search results from DuckDuckGo. Returns: The search results from DuckDuckGo Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_correlation_test",
+      "description": "Accepts two variables as comma-separated strings or DataFrame columns and performs correlation analysis. This test determines the strength and direction of the linear relationship between two continuous variables. Pearson correlation measures linear relationships, Spearman correlation measures monotonic relationships (rank-based), and Kendall's tau is robust to outliers and suitable for small samples. The test calculates a correlation coefficient ranging from -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship. A significant result (p-value < alpha) indicates that the observed correlation is statistically different from zero. Effect size interpretation: |r| < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: examining relationship between height and weight, analyzing correlation between study time and test scores, investigating association between variables in research.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "method",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_cut_audio",
+      "description": "Process audio cutting to extract a segment from an audio file. This function loads an audio file, validates the time parameters, and cuts out a specific segment between the start and end times. It handles various audio formats and provides detailed error messages for troubleshooting. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, audio_data: array), for the cut audio segment, or None if an error occurred, Second element: A status message string indicating success with details, or error information, , result, status = process_cut_audio(\"/path/to/audio.mp3\", 10.5, 25.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Time parameters are automatically validated and clamped to valid ranges, Start time must be less than end time after validation, Output audio data maintains the original sample rate, Function returns user-friendly status messages for UI display",
+      "params": [
+        "audio_file",
+        "_start_time",
+        "_end_time"
+      ]
+    },
+    {
+      "server": "grady",
+      "name": "grady_ask",
+      "description": "Ask General AI Assistant a question to answer. Returns: The answer to the question",
+      "params": [
+        "question",
+        "openai_api_key",
+        "gemini_api_key",
+        "anthropic_api_key",
+        "file_name"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_mcp_get_analysis_report",
+      "description": "Recupera el reporte textual completo de un an\u00e1lisis previo a partir de su ID. Par\u00e1metros: - analysis_id (str): Identificador \u00fanico del an\u00e1lisis almacenado, obtenido de mcp_analyze_trends. Formato: \"mcp_analysis_YYYYMMDD_HHMMSS\" Retorna: - str: Reporte completo en formato Markdown con: * Estad\u00edsticas b\u00e1sicas (media, desviaci\u00f3n, min/max) * An\u00e1lisis de tendencias (fuerza y direcci\u00f3n) * Detecci\u00f3n de anomal\u00edas (cantidad y porcentaje) * An\u00e1lisis de estacionalidad (patrones detectados) * Picos y valles (conteo de extremos) * Informaci\u00f3n de pron\u00f3stico si est\u00e1 disponible En caso de error o ID no encontrado, devuelve mensaje de error.",
+      "params": [
+        "analysis_id"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_create_record_simple",
+      "description": "Cr\u00e9ation d'enregistrement simple",
+      "params": [
+        "model",
+        "values_json"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_contact_information",
+      "description": "Get customer service contact information.",
+      "params": [
+        "issue_type",
+        "urgency"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoint",
+      "description": "Retrieve the API endpoint URL and filter metadata for a given OpenF1 endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_client_config",
+      "description": "\u5220\u9664\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e **\u6ce8\u610f**\uff1a\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 **\u6ce8\u610f**\uff1a\u5220\u9664\u884c\u4e3a\u4f1a\u5bfc\u81f4\u6570\u636e\u4e22\u5931\uff0c\u4e00\u5b9a\u8981\u7528\u6237\u786e\u8ba4\u540e\u518d\u5220\u9664! \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_helpline_with_state",
+      "description": "Handle helpline with state management",
+      "params": []
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_dataset_view",
+      "description": "View comprehensive details about a specific dataset. Returns: Formatted JSON string containing combined dataset information:, metadata: Dataset description, tags, license, creation date, etc., files: List of all files in the dataset with sizes and types, , dataset_view(\"zillow/zecon\") returns complete information about Zillow's economic dataset, , The dataset parameter must include both owner and dataset name separated by a slash",
+      "params": [
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_hourly_analysis",
+      "description": "Process hourly timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> hourly_analysis(\"AAPL\", 3, 14, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_prime_factors",
+      "description": "Compute the prime factorization of a positive integer.",
+      "params": [
+        "n"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpsave_to_hf_dataset",
+      "description": "Save all client memory data to a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name",
+        "private"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    }
+  ]
+}

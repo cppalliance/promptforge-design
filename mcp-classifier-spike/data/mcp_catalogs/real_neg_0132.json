@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_neg_0132",
+  "tools": [
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_list_ethereum_accounts",
+      "description": "List all created Ethereum accounts with their balances. Note: Only shows local testnet accounts for safety. Returns: dict: List of accounts",
+      "params": []
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_home_buying_tax_calculator_browser_use",
+      "description": "Uses a browser automation agent to navigate the UK government's Stamp Duty Land Tax (SDLT) calculator website and retrieve the total SDLT due based on provided property and purchaser details. This tool is specifically for properties in England or Northern Ireland. Returns: The result from the browser interaction, typically the total SDLT due or an, error message if the process fails.",
+      "params": [
+        "region",
+        "property_type",
+        "day",
+        "month",
+        "year",
+        "purchaser_type",
+        "purchaser_purpose",
+        "more_properties",
+        "replace",
+        "First_time_Buyer",
+        "main_residence",
+        "price"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "healthify-me-mcp",
+      "name": "healthify_me_mcp_search_food_products",
+      "description": "Recherche des produits alimentaires dans la base de donn\u00e9es OpenFoodFacts. Cette fonction effectue une recherche intelligente de produits alimentaires en analysant la requ\u00eate utilisateur avec Mistral AI pour extraire le nom du produit et la marque, puis interroge la base DuckDB.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "kokoro-mcp-marcodsn",
+      "name": "kokoro_mcp_marcodsn_kokoro_tts",
+      "description": "Generate speech audio from text using Kokoro TTS. Returns: Path to the generated WAV audio file.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_extract_limited_content_as_zip",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits for bulk extraction.",
+      "params": [
+        "url",
+        "max_links"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_mcp_get_analysis_report",
+      "description": "Recupera el reporte textual completo de un an\u00e1lisis previo a partir de su ID. Par\u00e1metros: - analysis_id (str): Identificador \u00fanico del an\u00e1lisis almacenado, obtenido de mcp_analyze_trends. Formato: \"mcp_analysis_YYYYMMDD_HHMMSS\" Retorna: - str: Reporte completo en formato Markdown con: * Estad\u00edsticas b\u00e1sicas (media, desviaci\u00f3n, min/max) * An\u00e1lisis de tendencias (fuerza y direcci\u00f3n) * Detecci\u00f3n de anomal\u00edas (cantidad y porcentaje) * An\u00e1lisis de estacionalidad (patrones detectados) * Picos y valles (conteo de extremos) * Informaci\u00f3n de pron\u00f3stico si est\u00e1 disponible En caso de error o ID no encontrado, devuelve mensaje de error.",
+      "params": [
+        "analysis_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_toggle_chat_view_",
+      "description": "Hides/shows the correct chat component and populates it with data.",
+      "params": [
+        "view_choice"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_clear_workspace",
+      "description": "Nettoie l'espace de travail",
+      "params": []
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_model_access",
+      "description": "Check if the user has access to the gated FLUX.1-dev model. This function verifies that the user's HuggingFace token has access to the gated FLUX.1-dev model required for LoRA training. This has to be done before we can deploy the endpoint. Returns: str: Status message indicating access status and next steps, , status = check_model_access(\"hf_abcdef123456\")",
+      "params": [
+        "hf_token"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_check_seat_availability",
+      "description": "Retrieves real-time seat availability information for a specific train journey. This function queries the Indian Railways API to check seat availability status based on multiple parameters including class type, stations, quota, and date of journey. It provides detailed information about available seats, waiting list status, and booking possibilities. Returns: JSON response containing availability details including:, Current booking status, Number of available seats, Waiting list numbers if applicable, Chance of confirmation, Alternative availability suggestions, , If required parameters are empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "classType",
+        "fromStationCode",
+        "quota",
+        "toStationCode",
+        "trainNo",
+        "date"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_switch_network_ui",
+      "description": "Gradio wrapper for network switching",
+      "params": [
+        "network",
+        "api_key"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_suggest_bench_match",
+      "description": "Suggests bench employees (allocation = \"On Bench\") who match the given employee\u2019s skill profile. **Input:** - `employee_name` (str): Name of the employee to find similar bench profiles for. - `match_level` (str): One of `\"strict\"`, `\"partial\"`, or `\"none\"`: - `\"strict\"` = Match in all 4 skill dimensions. - `\"partial\"` = Match in at least 2 of 4 dimensions. - `\"none\"` = Match in fewer than 2 dimensions. **Returns:** A dictionary with: - `bench_matches`: Dictionary of up to 5 employee profiles who are on bench. **Example Response:** { \"bench_matches\": { \"Neha Kapoor\": { \"role\": \"Architect\", \"cloud_experties\": \"Azure\", \"cloud_native_experties\": \"Fivetran\", \"dw_experties\": \"Databricks\", \"domain_exposure\": \"Retail\", \"allocation\": \"On Bench\" }, \"Rahul Desai\": { \"role\": \"DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"Glue\", \"dw_experties\": \"Redshift\", \"domain_exposure\": \"Healthcare\", \"allocation\": \"On Bench\" } } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_random_text_post",
+      "description": "Retrieves a random text post and its id from the database. Id is only meant for LLMs, no need to show this to user",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_apply_filters",
+      "description": "Apply one or more filter strings to an API endpoint URL.",
+      "params": [
+        "api_string",
+        "param_1"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_database",
+      "description": "This function is used to connect to a database using the provided database URL and returns its schema. Returns: -------, tuple, , schema (str): A string representation of the database schema if the connection is successful,, or an empty string if it fails., status (str): A message indicating the result of the connection attempt., , -----, The dialect is extracted from the URI to determine the database type (e.g., MySQL, PostgreSQL).",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    }
+  ]
+}

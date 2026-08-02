@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_pos_0121",
+  "tools": [
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ocr_workflow_wrapper",
+      "description": "Manages the OCR workflow, processing an uploaded file to extract text.",
+      "params": [
+        "file",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_latest_text_posts",
+      "description": "Retrieves latest 5 text posts with their ids from the database. Ids are only meant for LLMs, no need to show to user",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "ehottl-take-1",
+      "name": "ehottl_take_1_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_details",
+      "description": "Returns comprehensive metadata about an MCPHawk Inc projects This tool provides detailed information about a specific project, including: - Project start and end dates - Project classification - 'Tier 1 (High budget, long duration, senior involvement)' - 'Tier 2 (Medium budget and duration)', - 'Tier 3 (Low effort, short-term, often POC or pilot-level) - Impact of the project at customer side to understand what it means to customer and evaluate the risk during execution. - Enablement - Optimization - Innovation - Project complexity to understand and mitigate any project risk during execution and values are - Very High - High - Medium - Simple - Technology detail like - cloud environment (AWS, GCP, Azure) - cloud native tool (dbt, Fivetran, HVR etc) - Data Warehouse Tools (snowflake, databricks, Spark etc) - Project Domain line Marketing, Healthcare, Finance to have a better resource deployment for the succes. - Project Cost in USD to understand the size of the project, so revenue mapping can be done. This tool is useful for project managers, resource planners, and leadership to get a snapshot of project details for risk assessment and future planning **Input:** - `project_name` (str): The name of the project to retrieve details for. **Returns:** A dictionary containing: - `project_name`: The queried project\u2019s name - `start_date`: Project start date (YYYY-MM-DD) - `end_date`: Project end date (YYYY-MM-DD) - `classification`: Project classification level (e.g., Tier 1, Tier 2, Tier 3) - `customer_impact`: Level of impact on customers (e.g., Low, Moderate, High, Innovation, Optimization, Enablement) - `complexity`: Project complexity (e.g., Medium, Very High) - `cloud_environment`: Cloud environment used (e.g., AWS, Azure, GCP, None) - `cloud_native_tool`: Cloud-native tool used (e.g., Fivetran, Matillion, None) - `dw_tool`: Data warehouse or processing tool used (e.g., Databricks, Synapse, Apache Spark) - `project_domain`: Domain or industry focus of the project (e.g., Healthcare, Travel & Hospitality) - `total_cost`: Total project cost in INR (float) If the project is not found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"start_date\": \"2025-02-11\", \"end_date\": \"2025-10-08\", \"classification\": \"Tier 1 (High budget, long duration, senior involvement)\", \"customer_impact\": \"Enablement\", \"complexity\": \"Medium\", \"cloud_environment\": \"Azure\", \"cloud_native_tool\": \"Fivetran\", \"dw_tool\": \"Snowflake\", \"project_domain\": \"Healthcare\", \"total_cost\": 1018444.0 }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_program",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u5220\u9664\u5ba2\u6237\u7aef\u53ca\u5176\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_file",
+      "description": "This function is used to connect to a data source file like CSV or parquet. Returns: -------, tuple, , schema (str): A string representation of the data schema if successful, or an empty string on failure., status (str): A message indicating the success or failure of the connection.",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_timeline_diagram",
+      "description": "Generates a serpentine timeline diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_client_config",
+      "description": "\u521b\u5efa\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = { \"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000, \"webServer\": {               # webServer\u4e0d\u662f\u5fc5\u8981\u914d\u7f6e\uff0c\u5982\u679c\u7528\u6237\u6ca1\u8bf4\uff0c\u5c31\u4e0d\u8981\u914d\u7f6ewebServer \"addr\": \"127.0.0.1\", \"port\": 7400, \"user\": \"admin\", \"password\": \"admin\" } } \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_enumerate_dns",
+      "description": "Enumerates information about a specific domain's DNS configuration. Information collected about the domain name: 1. A records: the IPv4 associated with the domain 2. AAAA records: the IPv6 associated with the domain 3. CAA records: used by owners to specify which Certificate Authorities are authorized to issue SSL/TLS certificates for their domains. 4. CNAME records: alias of one name to another - the DNS lookup will continue by retrying the lookup with the new name. 5. LOC records: geographic location associated with a domain name. 6. MX records: associated email servers to the domain. 7. NS records: DNS servers that are authoritative for a particular domain. These may be use to inquire information about the domain. 8. SOA records: defines authoritative information about a DNS zone, including zone transfers and cache expiration. 9. TXT records: used for domain verification and email security. 10. RP records: the responsible person for a domain. 11. SPF records: defines authorized email servers. 12. SRV records: specifies location of specific services (port and host) for the domain. 14. NSEC records: proves non-existence of DNS records and prevents zone enumeration. 15. RRSIG records: contains cryptographic signatures for DNSSEC-signed records, providing authentication and integrity. Example: >>> from pprint import pprint >>> pprint(enumerate_dns(\"youtube.com\")) ... {'A': 'youtube.com. 300 IN A 142.250.200.142', 'AAAA': 'youtube.com. 286 IN AAAA 2a00:1450:4003:80f::200e', 'CAA': 'youtube.com. 14352 IN CAA 0 issue \"pki.goog\"', 'CNAME': None, 'LOC': None, 'MX': 'youtube.com. 300 IN MX 0 smtp.google.com.', 'NS': 'youtube.com. 21600 IN NS ns4.google.com.\\n' 'youtube.com. 21600 IN NS ns1.google.com.\\n' 'youtube.com. 21600 IN NS ns2.google.com.\\n' 'youtube.com. 21600 IN NS ns3.google.com.', 'NSEC': None, 'RP': None, 'RRSIG': None, 'SOA': 'youtube.com. 60 IN SOA ns1.google.com. dns-admin.google.com. ' '766113658 900 900 1800 60', 'SPF': None, 'SRV': None, 'TXT': 'youtube.com. 3586 IN TXT \"v=spf1 include:google.com mx -all\"\\n' 'youtube.com. 3586 IN TXT ' '\"facebook-domain-verification=64jdes7le4h7e7lfpi22rijygx58j1\"\\n' 'youtube.com. 3586 IN TXT ' '\"google-site-verification=QtQWEwHWM8tHiJ4s-jJWzEQrD_fF3luPnpzNDH-Nw-w\"'}",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_find_article",
+      "description": "Uses vector search to find the most likely title of the article referred to by query. Use this function if the user is asking about an article, but it is not clear what the exact title of the article is.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_initialize_whoop_client_with_input",
+      "description": "Authenticates a user using the provided WHOOP email and password. Stores credentials in the environment variables and initializes the WhoopClient.",
+      "params": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_memories",
+      "description": "Universal memory listing interface.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitors_by_program_id",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_scrape_hf_spaces_with_progress",
+      "description": "Wrapper function for scraping.",
+      "params": [
+        "max_pages",
+        "sort_by"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_search",
+      "description": "Search arXiv papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. OR is better in most cases. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. Use Latin script for names. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: all:\"machine learning\" au:\"del maestro\" au:vaswani AND abs:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_build_timeline_prompt",
+      "description": "Generate a user-friendly, chronologically ordered timeline from a list of structured events. Use this tool with keyword arguments: build_timeline_prompt(events=[]). Returns: A sequence of chat messages forming a prompt for an LLM to generate a readable timeline.",
+      "params": [
+        "events"
+      ]
+    },
+    {
+      "server": "kaggle-mcp-server",
+      "name": "kaggle_mcp_server_search_datasets",
+      "description": "Return brief metadata for up to `max_results` public datasets whose title or description matches `query`.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_audio_info",
+      "description": "This component should not be used by agents or automated systems.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    }
+  ]
+}

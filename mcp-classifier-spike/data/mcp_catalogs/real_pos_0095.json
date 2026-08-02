@@ -1,0 +1,368 @@
+{
+  "catalog_id": "real_pos_0095",
+  "tools": [
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_rdap",
+      "description": "Query RDAP to get information about Internet resources. The Registration Data Access Protocol (RDAP) is the successor to WHOIS. Like WHOIS, RDAP provides access to information about Internet resources (domain names, autonomous system numbers, and IP addresses).",
+      "params": [
+        "url_or_ip"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_update_ui_on_language_change",
+      "description": "Atualiza a interface com base no novo idioma selecionado. Usa gr.update() para garantir que as propriedades dos componentes sejam atualizadas corretamente.",
+      "params": [
+        "language"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_show_cif_file",
+      "description": "Plot a 3D structure from a CIF file with the Molecule3D library. Returns: PDB file name if successful, None if no file was provided, or if conversion failed.",
+      "params": [
+        "cif_file"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_search",
+      "description": "Search for board games on BoardGameGeek by title. Returns: A list of dictionaries, each representing a matching game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'year' (str): The year the game was published (or 'Unknown' if not available)., , >>> search_game(\"Catan\"), [, \"13\", \"title\": \"Catan\", \"year\": \"1995\"},, ..., ]",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_advanced_search_sync",
+      "description": "Advanced search for Stack Overflow questions with comprehensive filters. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "excluded_tags",
+        "min_score",
+        "title",
+        "body",
+        "min_answers",
+        "has_accepted_answer",
+        "min_views",
+        "sort_by",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_reset_database",
+      "description": "Reset the ERP database by deleting it and recreating it with fresh data. Returns: Result of the database reset operation",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_latest_cycle_gr",
+      "description": "Retrieves the most recent WHOOP cycle (recovery data) for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_update_modal_components_visibility",
+      "description": "Update visibility of Modal-dependent components",
+      "params": [
+        "use_modal"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_search",
+      "description": "Search arXiv papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. OR is better in most cases. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. Use Latin script for names. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: all:\"machine learning\" au:\"del maestro\" au:vaswani AND abs:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_search_internet",
+      "description": "**Navigates to a specified URL, performs web scraping based on a given task, and returns relevant information in a human-readable sentence(s).**. Returns: A string containing the extracted information or a summary of the, Browse outcome. This will be a human-readable sentence or paragraph., Returns an error message if navigation or scraping fails.",
+      "params": [
+        "url",
+        "task"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_send_sui",
+      "description": "Sends SUI to a recipient address using the provided private key.",
+      "params": [
+        "private_key",
+        "recipient_address_input",
+        "amount_sui_input",
+        "transfer_coin_id",
+        "gas_object_id",
+        "gas_budget"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_analyze_specific_urls",
+      "description": "MCP Tool: Analyzes web content from a specific list of URLs using swarm analysis. Is useful for finding content related to a specific topic and compare the content with other URLs.",
+      "params": [
+        "urls_json",
+        "analysis_prompt"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_voices",
+      "description": "Use this tool to compare two voices for a match",
+      "params": [
+        "audio1",
+        "audio2"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_reverse",
+      "description": "Reverse the playback direction of an audio file. This function loads an audio file and reverses the audio data so that it plays backwards. This creates a reverse playback effect commonly used for artistic purposes, sound design, or audio analysis. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, reversed_audio_data: array), for the reversed audio result, or None if an error occurred, Second element: A status message string indicating successful reversal, or error information, , result, status = apply_reverse(\"url/to/audio.mp3\"), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Reverses the entire audio file from end to beginning, Preserves original sample rate, duration, and audio quality, Commonly used for creative effects, sound design, or subliminal messaging detection, The reversed audio will have the same duration as the original, All audio characteristics (pitch, timbre) are preserved but played backwards, Works with both mono and stereo audio files",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_year",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given year. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "years"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_registry",
+      "description": "This function (load_registry) should always be called first, before using the load_doc function. It will load the registry file and return the content of the registry. Based on that, you will then be able to pick and chose the documentation you want to load. Returns: The content of the registry, that contains the ID, a description and the URL location for each item of the registry, in JSON format",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_analyze_app_environmental_impact",
+      "description": "Analyze the complete environmental impact of an application. Returns: Comprehensive environmental impact analysis",
+      "params": [
+        "app_description",
+        "user_count",
+        "tech_stack"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_set_preferred_model",
+      "description": "Stores the selected model for the current endpoint and saves it.",
+      "params": [
+        "model_selection",
+        "current_url"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_coin_flip",
+      "description": "Simulate flipping a coin multiple times.",
+      "params": [
+        "flips"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_validate_api_configuration",
+      "description": "TOOL: Validate and store API configuration for monitoring. PURPOSE: Test an API endpoint and store the configuration if successful. This is STEP 1 of the monitoring setup process. If validation fails, retry with corrected parameters.    If successful, use the returned config_id in activate_monitoring() function. CRITICAL: Even if success=True, you MUST manually check the 'sample_response' field before proceeding to activate_monitoring(). The API call may return success=True but contain error messages (like \"401 Unauthorized\", \"Invalid API key\", etc.) in the sample_response. CRITICAL: Always try to add parameters that will limit the API response to a manageable size. CRITICAL: Be sure to always clearly inform the user of the config_id after a desired validation result. CRITICAL: If you don't have an MCP API KEY given by the user, prompt them to get it here: https://mcp-hackathon.vercel.app/ WORKFLOW: 1. Call this function to validate API configuration 2. If success=False: Fix parameters and retry this function 3. If success=True: MANUALLY INSPECT the 'sample_response' field for errors 4. If sample_response contains error messages: Fix API parameters and retry validation 5. If sample_response looks valid: Use config_id in activate_monitoring() to activate monitoring ARGUMENTS: - mcp_api_key: MCP API key serves as user identifier. - name: User-friendly name for the monitoring task - description: Description of what is being monitored - method: HTTP method (GET, POST, PUT, DELETE) - base_url: The base URL of the API - endpoint: The specific API endpoint - param_keys_values: Parameter key-value pairs, one per line - header_keys_values: Header key-value pairs, one per line - additional_params: Optional JSON string for complex parameters - schedule_interval_minutes: Minutes between calls - stop_after_hours: Hours after which to stop (supports decimals, max 168 = 1 week) - start_at: Optional datetime string for when to start the monitoring. IMPORTANT: Leave as empty string \"\" for immediate start (most common use case, always default to this if no start time provided). Only provide a datetime string (e.g., \"2024-06-15 09:00:00\") if you need to schedule monitoring for a specific future time. Input Examples: 1. Simple GET request to monitor stock price: mcp_api_key: \"your_mcp_key_here\" name: \"NVDA Stock Price\" description: \"Monitor NVIDIA stock price every 30 minutes\" method: \"GET\" base_url: \"https://api.example.com\" endpoint: \"stocks/NVDA\" param_keys_values: \"symbol: NVDA interval: 1min\" header_keys_values: \"Authorization: Bearer your_token\" additional_params: \"{}\" schedule_interval_minutes: 30 stop_after_hours: 1.5 start_at: \"\" 2. Weather monitoring with free API: mcp_api_key: \"\" name: \"Weather Monitor\" description: \"Monitor current weather conditions every 2 hours for one week using Open-Meteo free API\" method: \"GET\" base_url: \"https://api.open-meteo.com\" endpoint: \"v1/forecast\" param_keys_values: \"latitude: 40.7128 longitude: -74.0060 current: temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m timezone: America/New_York\" header_keys_values: \"Content-Type: application/json\" additional_params: \"{}\" schedule_interval_minutes: 120 stop_after_hours: 168 start_at: \"2024-06-15 09:00:00\". Returns: Dictionary with success status, config_id (needed for setup_scheduler), message, and sample_response, , {, True,, 123,, \"API call tested and stored successfully\",, {...},, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:00:00Z\", }, If success=True, call activate_monitoring(config_id, mcp_api_key) to activate monitoring",
+      "params": [
+        "mcp_api_key",
+        "name",
+        "description",
+        "method",
+        "base_url",
+        "endpoint",
+        "param_keys_values",
+        "header_keys_values",
+        "additional_params",
+        "schedule_interval_minutes",
+        "stop_after_hours",
+        "start_at"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_question_enhancer",
+      "description": "Wrapper for QuestionEnhancerAgent to provide question enhancement. Returns: Enhanced question result with sub-questions",
+      "params": [
+        "user_request"
+      ]
+    }
+  ]
+}

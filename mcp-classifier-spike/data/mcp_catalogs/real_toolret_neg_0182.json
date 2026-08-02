@@ -1,0 +1,338 @@
+{
+  "catalog_id": "real_toolret_neg_0182",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) ->",
+      "description": "def infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) -> str:\n    '''Infer the purpose of an object in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to infer the purpose of.\n        context (str): The context in which the object is placed.\n       \n    Returns:\n        str: The inferred purpose of the object.\n    '''\n    object_patches = image_patch.find(object_name)\n    # Question assumes single patch\n    object_patch = object_patches[0]\n    return object_patch.llm_quer",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarPanelOptimizer.configurePanel",
+      "description": "Configures solar panels for optimal energy output based on environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "AIAnalysisTool",
+      "description": "for analyzing customer data and recognizing patterns using AI techniques",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_word_by_start",
+      "description": "Fetches a random word that begins with the specified starting string from the Random Word API.",
+      "params": [
+        "start"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scaleApp",
+      "description": "Scale an application on the PaaS platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_currency",
+      "description": "return get currency",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DogBreedDB_Paginated",
+      "description": "Get all dog breed results in a set of 10 per page.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ticket_cancellation_time",
+      "description": "Get the latest cancellation time for each train ticket option",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "algebra.matrixOperations",
+      "description": "Performs specified operations on matrices, such as addition, multiplication, or inversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_playMovie",
+      "description": "Output an HTML web page with the requested movie embedded within.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'format', 'type': 'STRING', 'de",
+        "{'name': 'height', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fill_date_sequence",
+      "description": "Fill an increasing date sequence in a specific column of the designated worksheet starting from a specified date",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulateUserInteraction",
+      "description": "This API simulates user interactions on a web UI, such as clicking buttons or entering text, based on a sequence of actions provided. It is useful for automated testing and UI interaction scripting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog Day Prediction",
+      "description": "Returns the prediction of whether it will be sunny or cloudy on Groundhog Day based on the weather forecast.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getIP",
+      "description": "Retrieve information about a specific IP address",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "AssignmentTool",
+      "description": "Used to assign issues to the appropriate support personnel",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataiku.dataset_audit",
+      "description": "Performs an audit on a dataset to ensure compliance with data governance policies.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Calendar Exceptions",
+      "description": "Retrieves exceptions from a calendar.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_answer",
+      "description": "Finds the answer from a list of options",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Authenticated_Users_Cards",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [], \"optional_parameters\": [{\"name\": \"featured\", \"type\": \"STRING\", \"description\": \"Returns only featured cards for user (only for cards and not contribs).\", \"default\": \"\"}], \"method\": \"GET\", \"name\": \"Geeklist_Get_Authenticated_Users_Cards\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RestaurantLocation",
+      "description": "This API is to get the location of a renowned restaurant in a city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_team_details",
+      "description": "You'll get all details to a specific team by its id.",
+      "params": [
+        "{'name': 'teamId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hourly",
+      "description": "Fetch hourly weather forecast for a specified location over the next 5 days using AI technology.",
+      "params": [
+        "lon",
+        "lat",
+        "language",
+        "place_id",
+        "units",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Norway_Songs",
+      "description": "Provide the Norway Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v2_v2_Users_By_Rest_IDs",
+      "description": "Users By Rest IDs",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_Scuba_Diving_Sites_Api_Query_divesites_by_gps_boundaries_For_use_with_maps",
+      "description": "The API endpoint that queries dive sites by GPS boundaries allows developers to search for dive sites within a specified geographical region, defined by a set of latitude and longitude coordinates. This endpoint can be particularly useful for creating interactive maps or applications that require displaying dive sites within a specific area. To use it add the four map bounds as query params",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "solve_for_percentage",
+      "description": "This method takes two arguments, 'part' and 'whole', and returns the percentage that 'part' represents of 'whole'.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch No-CORS Image URLs",
+      "description": "Fetch no-CORS image URLs for Instagram posts, stories, and reels.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TOTD Tracks by Date",
+      "description": "Get the TOTD tracks by string containing the year and month.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MBOX_Migrator_Terminate",
+      "description": "Termination of MBOX Migrator after successful conversion",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Card Templates",
+      "description": "Retrieve a list of available business card templates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMediaAndGlobalization",
+      "description": "Retrieve information about media and globalization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Indices List",
+      "description": "Retrieve a list of available indices from Twelve Data API, filtered by exchange, symbol, or format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "confirm_meeting_room_booking",
+      "description": "Confirm the reservation of the specified meeting room",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historic Events By Year",
+      "description": "Retrieve a list of historical events that occurred in a specific year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_Player_Info",
+      "description": "Get player info. Name, image, shirt number, nationalities, market value, club",
+      "params": [
+        "{'name': 'player_id', 'type': 'NUMBER', ",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate to Old English",
+      "description": "Translate text from modern English to Old English",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "query_by_fsa_code",
+      "description": "Fetches geographical boundary information for a given Canadian Forward Sortation Area (FSA) code using the VanitySoft API.",
+      "params": [
+        "postal_fsa"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_rounds",
+      "description": "This method takes a dictionary representing a table, and returns a list of the rounds in each year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Financial_Modeling_Prep_Earning_Call_Transcript_API_PREMIUM",
+      "description": "Analyzing Earnings Conference Call With NLP",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Sports News Topics",
+      "description": "Retrieve a list of available sports news topics",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

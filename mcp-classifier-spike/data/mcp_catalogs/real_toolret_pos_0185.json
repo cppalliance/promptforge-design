@@ -1,0 +1,359 @@
+{
+  "catalog_id": "real_toolret_pos_0185",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Currency_Ex_Currency_List",
+      "description": "List of available currency in JSON format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_International_Market_Data",
+      "description": "Get International Market Data",
+      "params": [
+        "{'name': 'marketID', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketAPI_LeagueOverallTopPlayers",
+      "description": "Get the best players overall in the basketball league.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlayerDetails",
+      "description": "Retrieves detailed information about a specific player in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "multipleImages",
+      "description": "Generates multiple images of a specific breed.",
+      "params": [
+        "breed",
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "wire_resistance",
+      "description": "Calculates the resistance of a wire based on its length, cross-sectional area, and material resistivity.",
+      "params": [
+        "length_m",
+        "area_sq_m",
+        "material"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Detect Face",
+      "description": "useful when you only want to detect out or tag faces in the picture. like: find all the faces that appear in the picture. tag someone in the picture. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generateTypographySample",
+      "description": "Generate a sample of typography using provided parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get_Promo_Codes_Get_Stores",
+      "description": "Get Stores",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getImageMetadata",
+      "description": "Retrieve metadata associated with a specific cat image.",
+      "params": [
+        "imageId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "view_sms_history",
+      "description": "Retrieves all received SMS messages for a given phone number and country ID.",
+      "params": [
+        "number",
+        "countryid"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchJobPostings",
+      "description": "Search job postings based on various criteria such as location, job title, and keywords.",
+      "params": [
+        "location",
+        "jobTitle",
+        "keywords",
+        "company",
+        "jobType",
+        "jobCategory",
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_nutritional_values",
+      "description": "Calculates the nutritional values for a given dish based on its ingredients and their quantities.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Team Playoffs Top Players",
+      "description": "Get the top players for a specific American Football team in a playoff tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_day_average",
+      "description": "This method takes two arguments, 'total_earning' and 'num_days', and returns the average earning per day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_users_paged_by_hundreds",
+      "description": "Fetches a list of users from a specified page, with each page containing up to one hundred users, using the provided RapidAPI key.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "image_to_pdf",
+      "description": "Converts an image to pdf.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/v1/rates/banks",
+      "description": "History of average rates from banks",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance.forecast_stock_prices",
+      "description": "Predict future stock prices based on historical data and selected forecasting model.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get County Boundaries by Name and State",
+      "description": "Retrieves the boundaries of a county by its name and state in GeoJSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getData",
+      "description": "Retrieve a specific data set or resource from the Open Government API.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Market_Intelligence_by_Automata_similar",
+      "description": " ",
+      "params": [
+        "{'name': 'link', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aaaa_Get_Multiple_Users",
+      "description": "Get information on all or multiple users in your Enterprise Hub. Use the optional parameters to return a more narrow range of users.The information returned for each user includes userId , status, email, lastActive, and more. ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Token Forwarding Wallets",
+      "description": "Retrieve a list of token forwarding wallets",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VFXNodeManager.createNode",
+      "description": "Creates a new node in the Nuke VFX software, allowing for detailed configuration of node properties and connections.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_crime_rates_by_zip",
+      "description": "Retrieve crime statistics for a given ZIP code using the Crime Data by Zipcode API.",
+      "params": [
+        "zip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TEXTKING_Translation_List_target_languages",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [], \"optional_parameters\": [{\"name\": \"page\", \"type\": \"NUMBER\", \"description\": \"Return search results starting at a given page. Used for paging through more than one page of results.\", \"default\": \"1\"}, {\"name\": \"per_page\", \"type\": \"NUMBER\", \"description\": \"An integer value defining how many entries should be returned. Only values between 1 and 10",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search/leaderboard",
+      "description": "Returns a leaderboard of traders that match your search filters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRheumatologyStatus",
+      "description": "Retrieve the current status of a patient with rheumatological conditions",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "googl_reltd_question_earch",
+      "description": "Search question others asked on google which relate to the query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getJudicialRecords",
+      "description": "Retrieve judicial records and public law information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "PublicHolidayNextPublicHolidays",
+      "description": "Returns the upcoming public holidays for the next 365 days for the given country",
+      "params": [
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEO_Keyword_Research_Keyword_Research_API",
+      "description": "Keyword Research API",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd",
+        "{'name': 'country', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createRiskProfile",
+      "description": "Create a risk profile for a particular project or activity",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leadership.conflict_resolution_outcomes",
+      "description": "Record and analyze outcomes of conflict resolution attempts led by senior leaders.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN_decoder_US_License_Plate_to_VIN",
+      "description": "Get the vin by license plate number.",
+      "params": [
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'license_plate', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchAddress",
+      "description": "Search for a specific address in Singapore and retrieve its geospatial information.",
+      "params": [
+        "searchVal",
+        "returnGeom",
+        "getAddrDetails",
+        "pageNum"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_DomainSearch",
+      "description": "You can use this endpoint to show different browser icons to your users. The code argument receives the browser code as it appears in your user /account/sessions endpoint. Use width, height and quality arguments to change the output settings.",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_Wikipedia",
+      "description": "Check username on Wikipedia",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TokApi_mobile_version_v1_user_user_id_playlist",
+      "description": "User playlists",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd"
+      ]
+    }
+  ]
+}

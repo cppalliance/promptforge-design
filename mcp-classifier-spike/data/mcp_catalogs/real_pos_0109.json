@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_pos_0109",
+  "tools": [
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_dataset_view",
+      "description": "View comprehensive details about a specific dataset. Returns: Formatted JSON string containing combined dataset information:, metadata: Dataset description, tags, license, creation date, etc., files: List of all files in the dataset with sizes and types, , dataset_view(\"zillow/zecon\") returns complete information about Zillow's economic dataset, , The dataset parameter must include both owner and dataset name separated by a slash",
+      "params": [
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_daily_analysis",
+      "description": "Process daily timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> daily_analysis(\"AAPL\", 30, 365, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "MCP_Server_Web2JSON",
+      "name": "MCP_Server_Web2JSON_webpage_to_json_wrapper",
+      "description": "Wrapper function that converts schema input to BaseModel",
+      "params": [
+        "content",
+        "is_url",
+        "schema_input"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_search_internet",
+      "description": "**Navigates to a specified URL, performs web scraping based on a given task, and returns relevant information in a human-readable sentence(s).**. Returns: A string containing the extracted information or a summary of the, Browse outcome. This will be a human-readable sentence or paragraph., Returns an error message if navigation or scraping fails.",
+      "params": [
+        "url",
+        "task"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_question_enhancer",
+      "description": "Wrapper for QuestionEnhancerAgent to provide question enhancement. Returns: Enhanced question result with sub-questions",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_deploy_for_user",
+      "description": "Deploy a Modal endpoint for a user using their API key. Unless the user has already done this, this must be done before they can train a LoRA. This function deploys a Modal script using the user's Modal API token ID and secret, allowing them to set up their own training endpoint. You can create them at https://modal.com/settings/tokens. Returns: tuple[str, str, str]: (status_message, stdout, stderr), status_message: Human-readable deployment status, stdout: Standard output from the modal deploy command, stderr: Standard error output from the modal deploy command, , status, out, err = deploy_for_user(\"ak-1234567890abcdef\", \"as-secret123...\")",
+      "params": [
+        "token_id",
+        "token_secret"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_full_prediction",
+      "description": "Full prediction run, with a team of ensembles and agents. Returns: A dictionary containing the model details, classification scores, and label.",
+      "params": [
+        "img",
+        "confidence_threshold",
+        "rotate_degrees",
+        "noise_level",
+        "sharpen_strength"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_serve_image_from_path",
+      "description": "Serve the sample image",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_job_status",
+      "description": "Check the current status of a LoRA training job or image generation job. This function queries the Modal API to get the current status of a training job using its unique job ID. It returns detailed information about the job progress. Note that if we are invoking this function with MCP, the user cannot neccecarily see the images in the tool call, so you will have to render them again in the chat. **MCP Client Limitation:** Due to MCP client constraints, we cannot render a gallery of images in the chat. The MCP client should render these URLs as clickable markdown links when possible. Returns: tuple[str, List[Image.Image]]: (status_message, all_images), status_message: Detailed status message containing job information, all_images: List of PIL Image objects if images are available, empty list otherwise, , \"completed\": Job finished successfully, \"running\": Job is still in progress, \"failed\": Job failed due to an error, \"error\": System error occurred, , //modal-app-url-api-job-status.modal.run\")",
+      "params": [
+        "job_id",
+        "job_status_url"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_records_simple",
+      "description": "Recherche d'enregistrements simple",
+      "params": [
+        "model",
+        "domain_text",
+        "fields_text",
+        "limit"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_rooms",
+      "description": "Refresh rooms table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "calculator-mcp-marcodsn",
+      "name": "calculator_mcp_marcodsn_safe_math_eval",
+      "description": "Enter a math formula using the supported operators and functions. **Supported Operators:** - `+` (addition) - `-` (subtraction) - `*` (multiplication) - `/` (division) - `**` (power) - `%` (modulus) - `<`, `<=`, `==`, `!=`, `>=`, `>` (comparisons) - `&`, `|`, `~` (bitwise and logical operators) **Supported Functions:** - Trigonometric: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `arctan2` - Hyperbolic: `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh` - Logarithmic & Exponential: `log`, `log10`, `log1p`, `exp`, `expm1` - Other: `sqrt`, `abs`, `where`, `complex`, `real`, `imag`, `conj` **Examples:** - `exp(2) + sqrt(9)` - `log(10) / 2` - `where(5 > 2, 10, 0)` - `sin(3.14/2) * 2` - `abs(-7) + 5**2` - `log1p(9)` - `real(complex(3, 4))` - `arctan2(1, 1)` - `tanh(2) > 0.9`. Returns: The result of the evaluation",
+      "params": [
+        "expression"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_get_text_post_comments",
+      "description": "Retrieves latest 5 comments from the text post with id post_id",
+      "params": [
+        "post_id"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_health_topics_gr",
+      "description": "Gradio wrapper for HealthFinder topic retrieval. Parameters ---------- topic : str Health topic slug or phrase. language : str Output language (``\"en\"`` / ``\"es\"``). Returns ------- str JSON\u2011formatted HealthFinder result.",
+      "params": [
+        "topic",
+        "language"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_messages",
+      "description": "Gets all messages for the authenticated user (sent and received). Marks retrieved messages where the user is the receiver as read for subsequent calls. Requires X-Auth-ID header for authentication.",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_analyze_stack_trace_sync",
+      "description": "Analyze a stack trace and find relevant solutions on Stack Overflow. Returns: Formatted search results",
+      "params": [
+        "stack_trace",
+        "language",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_accounts_list",
+      "description": "Get list of current accounts with balances",
+      "params": []
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_interest_calculator",
+      "description": "Calculates the simple interest payable for a given principal amount based on the current Bank of England base rate. Returns: A string detailing the principal, interest payable, and the annual interest rate,, or an error message if the calculation fails.",
+      "params": [
+        "principal"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_normalization",
+      "description": "Apply audio normalization to adjust the peak level of an audio file. This function loads an audio file and applies normalization to adjust the peak audio level to a specified target level in decibels (dB). It provides before and after statistics to show the effect of the normalization process. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, normalized_audio_data: array), for the normalized audio result, or None if an error occurred, Second element: A status message string showing before/after peak levels, and success/error information, , result, status = apply_normalization(\"url/to/audio.mp3\", -6.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Target level is specified in decibels (dB), Common target levels: -6dB (moderate), -3dB (loud), -12dB (quiet), Positive target levels will amplify audio and may cause clipping, Negative target levels will reduce audio volume, Function preserves original sample rate and audio format, Returns comparison statistics showing original vs normalized peak levels",
+      "params": [
+        "audio_file",
+        "target_level"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    }
+  ]
+}

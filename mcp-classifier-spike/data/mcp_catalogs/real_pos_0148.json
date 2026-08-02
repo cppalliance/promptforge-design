@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_pos_0148",
+  "tools": [
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_comments",
+      "description": "Fetch comments from a given LinkedIn profile. Returns: A dictionary containing the profile comments",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_tavily_search",
+      "description": "Given a search query, returns the search results from Tavily. Returns: The search results from Tavily Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_pawn_structure",
+      "description": "Analyze pawn\u2010structure features for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_accounts_list",
+      "description": "Get list of current accounts with balances",
+      "params": []
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_lookup_food",
+      "description": "Return one row (food, purine, label) that exactly matches *name* (case-insensitive).",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_get_employee_project_assignment",
+      "description": "Returns the mapping of an employee to their project and role within that project for MCPHawk Inc. This tool provides a simple overview of which project an employee is assigned to and their specific role on that project. This tool is useful for team leads, project managers, and HR systems needing to quickly identify employee assignments and responsibilities. **Input:** - `employee_name` (str): The full name of the employee whose project-role mapping is requested. **Returns:** A dictionary containing: - `project_name`: Name of the project the employee is working on - `role`: The employee\u2019s role within that project (e.g., SDE, Architect, DE) If no mapping is found for the given employee, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Aggregate Innovative Paradigms\", \"role\": \"Architect\" }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_time",
+      "description": "Extract travel time from route data. Returns: Time in human format like '15 min' or '1 h 23 min'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_search_knowledge_base_for_context",
+      "description": "Searches and retrieves relevant context from a knowledge base on Sukhoi SU-35, based on the user's query. Example queries: - \"What are the main features of fuel system of SU-35.\" - \"What are the combat potential of SU-35.\". Returns: Relevant text content that can be used by the LLM to answer the query.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_calculate_code_carbon_footprint",
+      "description": "Calculate the carbon footprint of a codebase. Returns: Detailed carbon footprint analysis with recommendations",
+      "params": [
+        "github_url",
+        "deployment_info"
+      ]
+    },
+    {
+      "server": "mcp-brawlstats",
+      "name": "mcp_brawlstats_get_recent_battles",
+      "description": "Retrieve a player's 25 most-recent Brawl Stars battles. Call `save_brawlstars_key` **once** beforehand to cache the API key. Returns: On success \u2013, {, \"#TAG\",, <int>,            # number of battles returned, <list[dict]>      # raw JSON from Supercell, }, On failure \u2013, \"<human-readable message>\" }",
+      "params": [
+        "player_tag"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_live_updates",
+      "description": "Fetches and formats the latest data from the backend for both views.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_send_quotation_email",
+      "description": "Envoi d'email de devis natif",
+      "params": [
+        "order_id",
+        "subject",
+        "body"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_create_table_from_query",
+      "description": "### `create_table_from_query(table_name: str, source_query: str)`",
+      "params": [
+        "table_name",
+        "source_query"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoint",
+      "description": "Retrieve the API endpoint URL and filter metadata for a given OpenF1 endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    }
+  ]
+}

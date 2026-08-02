@@ -1,0 +1,367 @@
+{
+  "catalog_id": "real_neg_0151",
+  "tools": [
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_mcp_server_instructions",
+      "description": "Returns comprehensive usage guidelines and documentation for all MCP server functions. Call this function first to understand available tools, workflows, and best practices. This function provides: - Complete function documentation - Recommended workflows - Best practices for MCP clients - Database schema information - Statistical analysis guidelines",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_code_generator",
+      "description": "Wrapper for CodeGeneratorAgent to generate Python code. Returns: A tuple containing the generation result and raw code",
+      "params": [
+        "user_request",
+        "grounded_context"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_list",
+      "description": "Get list of available books. Returns: JSON string containing the list of book names.",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "calculator-mcp-marcodsn",
+      "name": "calculator_mcp_marcodsn_safe_math_eval",
+      "description": "Enter a math formula using the supported operators and functions. **Supported Operators:** - `+` (addition) - `-` (subtraction) - `*` (multiplication) - `/` (division) - `**` (power) - `%` (modulus) - `<`, `<=`, `==`, `!=`, `>=`, `>` (comparisons) - `&`, `|`, `~` (bitwise and logical operators) **Supported Functions:** - Trigonometric: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `arctan2` - Hyperbolic: `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh` - Logarithmic & Exponential: `log`, `log10`, `log1p`, `exp`, `expm1` - Other: `sqrt`, `abs`, `where`, `complex`, `real`, `imag`, `conj` **Examples:** - `exp(2) + sqrt(9)` - `log(10) / 2` - `where(5 > 2, 10, 0)` - `sin(3.14/2) * 2` - `abs(-7) + 5**2` - `log1p(9)` - `real(complex(3, 4))` - `arctan2(1, 1)` - `tanh(2) > 0.9`. Returns: The result of the evaluation",
+      "params": [
+        "expression"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_book_filtered",
+      "description": "Get a filtered list of books from Google Books API. It can be filtered by title, author, genre, and ISBN. Results are ordered by relevance to the query. Only a subset of the volume info is included. Only 10 results are returned. Returns: list - list of books",
+      "params": [
+        "title",
+        "author",
+        "genre",
+        "isbn"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_cover_letter_template",
+      "description": "Get a basic cover letter template for the specified tone. Returns: Dict with template structure and guidelines",
+      "params": [
+        "tone"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_scrape",
+      "description": "The function `process_scrape` takes in parameters related to website scraping, performs the scraping operation, and returns a success message or an error message based on the result. :param url: The `url` parameter is the URL of the website that you want to scrape :param site_name: The `site_name` parameter is a string that represents the name of the website being scraped. It is one of the required parameters for the `process_scrape` function :param site_description: The `site_description` parameter in the `process_scrape` function is used to provide a description of the website being scraped. It is a text description that helps in identifying and describing the content or purpose of the website. This information can be used for various purposes such as categorizing the website, :param site_category: The `site_category` parameter in the `process_scrape` function is used to specify the category of the website being scraped. It is one of the inputs required for the scraping process :param max_pages: The `max_pages` parameter in the `process_scrape` function represents the maximum number of pages to scrape on the website. It is an integer value that determines the limit for the number of pages that will be scraped during the process :param max_depth: The `max_depth` parameter in the `process_scrape` function represents the maximum depth of links to follow during the website scraping process. It determines how many levels deep the scraper will navigate through the website's links starting from the initial URL. This parameter helps control the extent of the scraping process and :param delay: The `delay` parameter in the `process_scrape` function represents the time delay (in seconds) between consecutive requests made during the scraping process. This delay is useful for preventing overwhelming the target website with too many requests in a short period, which could lead to being blocked or flagged as suspicious activity :param external_links: The `external_links` parameter in the `process_scrape` function is a boolean flag that determines whether external links should be scraped along with the internal links of the website. If `external_links` is set to `True`, the scraper will also follow and scrape external links found on the website :return: The function `process_scrape` returns a tuple containing a message string, and three `None` values. The message string can vary depending on the outcome of the scraping process. If the scraping is successful, it returns a success message with details such as the number of pages scraped, duration, output directory, and a list of files created. If the scraping fails, it returns an error message indicating",
+      "params": [
+        "url",
+        "site_name",
+        "site_description",
+        "site_category",
+        "max_pages",
+        "max_depth",
+        "delay",
+        "external_links"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_endpoint_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_analyze_api",
+      "description": "Safe wrapper for API analysis with user-friendly error handling",
+      "params": [
+        "spec"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountains_by_range",
+      "description": "Retrieve all mountains in a specific mountain range. This function performs a case-insensitive search for mountains within a specified mountain range. The results include mountain names, altitudes, and counties. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, str, }, ], , >>> get_mountains_by_range(\"Sawatch Range\"), \"Mount Elbert\", \"Altitude\": 14433, \"County\": \"Lake\"}]'",
+      "params": [
+        "mountain_range"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "CafChem-ADME",
+      "name": "CafChem_ADME_calc_adme",
+      "description": "Calculate the ADME properties of a molecule from a SMILES string. These properties, covering absorption, distribution, metabolism, and excretion, describe how a drug is transported and is processed by the body. They should follow Lipinkski's rule of 5 for a viable drug. Returns: The qualitative estimate of drug-likeness (QED), the molecular weight, the, distribution coefficient (aLogP), the number of hydrogen bond donors,, the number of hydrogen bond acceptors, the polar surface area,the number, of rotatable bonds, the number of aromatic rings, and the number of undesireable, moieties all in a text string., An image of the molecule.",
+      "params": [
+        "smile"
+      ]
+    },
+    {
+      "server": "run_my_script",
+      "name": "run_my_script_run_script",
+      "description": "Executes a user-provided self contained Python script inside an isolated virtual environment with automatic dependency management. This function is intended to serve as a backend execution engine in a Model Context Protocol (MCP) server setting, where a language model may submit scripts for evaluation. It creates a secure workspace, detects dependencies, installs them using `uv`, executes the script, captures its output (including stdout and generated files), and returns all relevant results. \u26a0\ufe0f Limitations & Guidance for LLM-based Use: - Scripts should be self-contained, avoid system-level access, and primarily focus on data processing, text generation, visualization, or machine learning tasks. - The code can output logs, JSON, images, CSVs, or any other files, which are returned as artifacts. - Avoid infinite loops or long-running background processes. Timeout support can be added externally. Returns: , logs (str): Full stdout and stderr logs of the executed script., artifacts (Dict[str, str]): A dictionary of output files with their names and summaries or indicators, (e.g., image or CSV placeholders). Includes a \"__workdir__\" key pointing to the working directory., zip_path (str): Path to a ZIP archive containing all output artifacts for download.",
+      "params": [
+        "code",
+        "user_input",
+        "cleanup_enabled",
+        "cleanup_after"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info_",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_suggest_bench_match",
+      "description": "Suggests bench employees (allocation = \"On Bench\") who match the given employee\u2019s skill profile. **Input:** - `employee_name` (str): Name of the employee to find similar bench profiles for. - `match_level` (str): One of `\"strict\"`, `\"partial\"`, or `\"none\"`: - `\"strict\"` = Match in all 4 skill dimensions. - `\"partial\"` = Match in at least 2 of 4 dimensions. - `\"none\"` = Match in fewer than 2 dimensions. **Returns:** A dictionary with: - `bench_matches`: Dictionary of up to 5 employee profiles who are on bench. **Example Response:** { \"bench_matches\": { \"Neha Kapoor\": { \"role\": \"Architect\", \"cloud_experties\": \"Azure\", \"cloud_native_experties\": \"Fivetran\", \"dw_experties\": \"Databricks\", \"domain_exposure\": \"Retail\", \"allocation\": \"On Bench\" }, \"Rahul Desai\": { \"role\": \"DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"Glue\", \"dw_experties\": \"Redshift\", \"domain_exposure\": \"Healthcare\", \"allocation\": \"On Bench\" } } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_abuseipdb",
+      "description": "Query AbuseIP to find if an IP has been reported for abusive behavior.",
+      "params": [
+        "ip_address"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_mountain",
+      "description": "Retrieve all climbing routes available for a specific mountain. This function performs a case-insensitive search for all routes associated with a specific mountain. The results include route names and their difficulty levels. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_mountain(\"Mount Elbert\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\"}]'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_memory_stats",
+      "description": "Get aggregated memory statistics with performance comparison in dual mode.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status_",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_temporal_analysis_mcp",
+      "description": "Analyzes the temporal relationship between drug administration and the onset of adverse events. This tool provides insights into the typical time-to-onset for a specific drug-associated adverse event, which can be a critical factor in causality assessment. It helps determine if the timing of the event is consistent with the drug's known pharmacology. Returns: JSON string with temporal patterns and time-to-onset analysis",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "limit"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_session_results",
+      "description": "Retrieve and format the results of a specific session.",
+      "params": [
+        "year",
+        "round",
+        "session_type"
+      ]
+    }
+  ]
+}

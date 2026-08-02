@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_neg_0161",
+  "tools": [
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_client_config",
+      "description": "\u521b\u5efa\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = { \"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000, \"webServer\": {               # webServer\u4e0d\u662f\u5fc5\u8981\u914d\u7f6e\uff0c\u5982\u679c\u7528\u6237\u6ca1\u8bf4\uff0c\u5c31\u4e0d\u8981\u914d\u7f6ewebServer \"addr\": \"127.0.0.1\", \"port\": 7400, \"user\": \"admin\", \"password\": \"admin\" } } \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_required_geograpy_hierarchy_parents",
+      "description": "Given the intent to look up a geography hierarchy within from U.S. Census Bureau 2020 decennial census demographic profile API, return the parent geographies that must be included. Returns: List of strings representing the required parent geographies.",
+      "params": [
+        "geography_hierarchy"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_client_config_by_id",
+      "description": "\u6839\u636eID\u83b7\u53d6\u5355\u4e2a\u5ba2\u6237\u7aef\u914d\u7f6e \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8fd4\u56de\u683c\u5f0f(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", \"data\": { \"serverAddr\" = \"127.0.0.1\", \"serverPort\" = 25566, } } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u914d\u7f6e - `serverAddr`: \u670d\u52a1\u5668\u5730\u5740 - `serverPort`: \u670d\u52a1\u5668\u7aef. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_load_settings",
+      "description": "Loads settings for the last active provider and their respective configs.",
+      "params": []
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_add_token_light",
+      "description": "Add light to a token. This will allow to show it inside the fog of war. It can be used to add light to items like torches or characters. It will be attached so that the light moves with the token.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "light_radius"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_initialize_mindbody_client",
+      "description": "Instantiate the global MindbodyClient reading credentials from ./config/.env",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_use_preview_in_chat",
+      "description": "Gunakan isi file preview sebagai prompt untuk chatbot.",
+      "params": [
+        "chat_history"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_driver_championship_standings",
+      "description": "Get the championship standing for a specific driver in a given year.",
+      "params": [
+        "year",
+        "driver_name"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_generate_images",
+      "description": "Generate images using a trained LoRA model. This function sends a request to generate images using a previously trained LoRA model. It takes a list of prompts and generates images for each one. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with generation details or error message, job_id: Unique identifier for the generation job, empty string if failed, , status, job_id = generate_images(, prompts_json='[\"a photo of a dog\", \"a photo of a cat\"]',, lora_repo=\"myuser/my-dog-lora\",, hf_token=\"hf_abcdef123456\",, //modal-app-url-api-generate-images.modal.run\", )",
+      "params": [
+        "prompts_json",
+        "lora_repo",
+        "hf_token",
+        "generate_images_url"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement__",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_create_record_simple",
+      "description": "Cr\u00e9ation d'enregistrement simple",
+      "params": [
+        "model",
+        "values_json"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_timeline_diagram",
+      "description": "Generates a serpentine timeline diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_entity_relationship_diagram",
+      "description": "Generates an Entity Relationship (ER) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_load_saved_credentials",
+      "description": "Charge les credentials sauvegard\u00e9s",
+      "params": []
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_report",
+      "description": "Generate a code analysis report using the Anthropic API. Returns: A detailed analysis report including top fixes.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "SafeBox",
+      "name": "SafeBox_code_eval",
+      "description": "Run a python code snippet into a sandbox environment. Returns: , A dictionary containing execution results:, 'stdout', 'stderr', 'returncode', and 'error' (if any)., A string with the image build logs (empty if no dependencies were detected).",
+      "params": [
+        "code_snippet"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info_",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_geographies",
+      "description": "Fetches information on available geographies for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/geography.html. Includes: * Geography Levels * Geography Hierarchy. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_multi_way_anova",
+      "description": "Accepts multiple categorical factors and performs Multi-Way ANOVA to determine whether there are statistically significant differences between group means when multiple factors are involved simultaneously. Multi-way ANOVA extends the one-way ANOVA framework to handle complex experimental designs with multiple categorical independent variables (factors), each with two or more levels. Unlike one-way ANOVA which tests a single factor, multi-way ANOVA can simultaneously test: (1) main effects of each individual factor, (2) interaction effects between factors, and (3) higher-order interactions. The test uses F-statistics to compare variance between groups to variance within groups for each effect. Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by each factor and interaction, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: 2-way ANOVA for treatment \u00d7 gender effects on blood pressure, 3-way ANOVA for teaching method \u00d7 school type \u00d7 student age on test scores, 4-way ANOVA for drug \u00d7 dose \u00d7 gender \u00d7 age effects on recovery.",
+      "params": [
+        "dependent_var",
+        "factors",
+        "alpha",
+        "effect_thresholds",
+        "include_interactions",
+        "max_interaction_order",
+        "sum_squares_type"
+      ]
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_monitor_sales",
+      "description": "Monitoring Sales natif",
+      "params": [
+        "time_window",
+        "threshold"
+      ]
+    }
+  ]
+}

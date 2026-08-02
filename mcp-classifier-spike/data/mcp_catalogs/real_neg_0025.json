@@ -1,0 +1,371 @@
+{
+  "catalog_id": "real_neg_0025",
+  "tools": [
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_endpoint_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbackup_client_data",
+      "description": "Backup all client data to HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_silence_trimming",
+      "description": "Trim silence from the beginning and end of an audio file. This function loads an audio file and automatically removes silent or very quiet sections from the beginning and end based on a specified volume threshold. This is useful for cleaning up recordings and removing unwanted quiet sections. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, trimmed_audio_data: array), for the silence-trimmed audio result, or None if an error occurred, Second element: A status message string showing original and new duration, or error information, , result, status = apply_silence_trimming(\"url/to/audio.mp3\", -40.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Threshold is specified in decibels (dB) - more negative values = quieter threshold, Common thresholds: -30dB (conservative), -40dB (moderate), -60dB (aggressive), Only trims from beginning and end, preserves silence within the audio, Useful for removing recording artifacts, room tone, or equipment noise, May significantly reduce file duration depending on original content, Preserves original sample rate and audio quality, Be careful with very low thresholds as they may trim wanted quiet content",
+      "params": [
+        "audio_file",
+        "threshold_db"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_send_transaction_ui",
+      "description": "Gradio wrapper for send transaction",
+      "params": [
+        "from_account",
+        "to_address",
+        "amount_eth"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_calculate_hiking_time",
+      "description": "Calculate the estimated hiking time for a specific route based on hiker level. This function calculates the estimated hiking time using the formula: hiking time in hours = (distance / speed) + (elevation in feet / 2000). Returns: JSON string containing hiking time information in the format:, {, str,, str,, str,, float,, int,, float,, str, }, , >>> calculate_hiking_time(\"Mount Elbert\", \"Northeast Ridge\", \"average\"), \"Mount Elbert\", \"route_name\": \"Northeast Ridge\", \"hiker_level\": \"average\", \"distance\": 9.75, \"elevation_gain\": 4500, \"estimated_time_hours\": 4.5, \"estimated_time_formatted\": \"4 hours and 30 minutes\"}'",
+      "params": [
+        "mountain_name",
+        "route_name",
+        "hiker_level"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_profile",
+      "description": "Returns the detailed employee profile for a given employee. This tool retrieves the profile details for an individual employee, including role, cloud expertise, data warehouse tools, domain exposure, office location, gender, and other relevant attributes. It queries data from the internal employee master database (`EMPLOYEE_MASTER_DB`) and returns the complete profile as a dictionary. This function is typically used in internal workforce management, reporting dashboards, or talent mapping systems within MCPHawk Inc to retrieve standardized employee data. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended) **Returns:** A dictionary containing: - `employee_name`: Name of the employee - `employee_profile`: A dictionary of profile details, such as: { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.png\" } If the employee is not found, a fallback message is returned instead of the profile. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"employee_profile\": { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.pdf\" } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_show_cif_file",
+      "description": "Plot a 3D structure from a CIF file with the Molecule3D library. Returns: PDB file name if successful, None if no file was provided, or if conversion failed.",
+      "params": [
+        "cif_file"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_registry",
+      "description": "This function (load_registry) should always be called first, before using the load_doc function. It will load the registry file and return the content of the registry. Based on that, you will then be able to pick and chose the documentation you want to load. Returns: The content of the registry, that contains the ID, a description and the URL location for each item of the registry, in JSON format",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_visitor",
+      "description": "\u65b0\u5efa\u6307\u5b9a\u5ba2\u6237\u7aef ID \u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e \u4f20\u5165\u53c2\u6570\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8): - program_id: \u5ba2\u6237\u7aef ID\uff0c\u6574\u6570\u6216\u5b57\u7b26\u4e32 - data: \u65b0\u89c2\u5bdf\u8005\u914d\u7f6e\uff0cJSON \u5b57\u7b26\u4e32\u3002\u5fc5\u987b\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a - name: \u89c2\u5bdf\u8005\u540d\u79f0\uff0c\u548c\u8981\u4fee\u6539\u7684name\u4e00\u81f4 - type: \u89c2\u5bdf\u8005\u7c7b\u578b\uff0c\u548c\u8981\u4fee\u6539\u7684type\u4e00\u81f4 - serverName: \u670d\u52a1\u7aef\u540d\u79f0\uff0c\u7528\u4e8e\u5173\u8054\u540e\u7aef\u670d\u52a1 - secretKey: \u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - bindAddr: \u7ed1\u5b9a\u7684\u672c\u5730 IP \u5730\u5740\uff08\u4f8b\u5982 \"127.0.0.1\"\uff09 - bindPort: \u7ed1\u5b9a\u7684\u672c\u5730\u7aef\u53e3\uff08\u6574\u6570, 65535 \u4ee5\u5185\uff09 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u64cd\u4f5c\u7ed3\u679c\uff0c\u683c\u5f0f `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5177\u4f53\u4fe1\u606f\"}`",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_list_repository_files",
+      "description": "List all files in a GitHub repository with specified extensions. Returns: JSON response with file list and metadata",
+      "params": [
+        "repo_url",
+        "branch",
+        "extensions"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image_preferred",
+      "description": "Edit a local image file using the 'Tile Upscaler' method. This is the preferred upscale method. Optionally save the result. Returns: The upscaled image (PIL.Image) generated using ControlNet + RealESRGAN.",
+      "params": [
+        "path",
+        "output_path",
+        "resolution",
+        "steps",
+        "strength",
+        "hdr",
+        "guidance"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_analyze_mcp_request",
+      "description": "MCP-compatible security analysis function",
+      "params": [
+        "task_id",
+        "user_query",
+        "context",
+        "history_json"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_details",
+      "description": "Returns comprehensive metadata about an MCPHawk Inc projects This tool provides detailed information about a specific project, including: - Project start and end dates - Project classification - 'Tier 1 (High budget, long duration, senior involvement)' - 'Tier 2 (Medium budget and duration)', - 'Tier 3 (Low effort, short-term, often POC or pilot-level) - Impact of the project at customer side to understand what it means to customer and evaluate the risk during execution. - Enablement - Optimization - Innovation - Project complexity to understand and mitigate any project risk during execution and values are - Very High - High - Medium - Simple - Technology detail like - cloud environment (AWS, GCP, Azure) - cloud native tool (dbt, Fivetran, HVR etc) - Data Warehouse Tools (snowflake, databricks, Spark etc) - Project Domain line Marketing, Healthcare, Finance to have a better resource deployment for the succes. - Project Cost in USD to understand the size of the project, so revenue mapping can be done. This tool is useful for project managers, resource planners, and leadership to get a snapshot of project details for risk assessment and future planning **Input:** - `project_name` (str): The name of the project to retrieve details for. **Returns:** A dictionary containing: - `project_name`: The queried project\u2019s name - `start_date`: Project start date (YYYY-MM-DD) - `end_date`: Project end date (YYYY-MM-DD) - `classification`: Project classification level (e.g., Tier 1, Tier 2, Tier 3) - `customer_impact`: Level of impact on customers (e.g., Low, Moderate, High, Innovation, Optimization, Enablement) - `complexity`: Project complexity (e.g., Medium, Very High) - `cloud_environment`: Cloud environment used (e.g., AWS, Azure, GCP, None) - `cloud_native_tool`: Cloud-native tool used (e.g., Fivetran, Matillion, None) - `dw_tool`: Data warehouse or processing tool used (e.g., Databricks, Synapse, Apache Spark) - `project_domain`: Domain or industry focus of the project (e.g., Healthcare, Travel & Hospitality) - `total_cost`: Total project cost in INR (float) If the project is not found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"start_date\": \"2025-02-11\", \"end_date\": \"2025-10-08\", \"classification\": \"Tier 1 (High budget, long duration, senior involvement)\", \"customer_impact\": \"Enablement\", \"complexity\": \"Medium\", \"cloud_environment\": \"Azure\", \"cloud_native_tool\": \"Fivetran\", \"dw_tool\": \"Snowflake\", \"project_domain\": \"Healthcare\", \"total_cost\": 1018444.0 }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_file",
+      "description": "Process HTR and return a formatted file for download. Returns: File path for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name})",
+      "params": [
+        "image_path",
+        "document_type",
+        "output_format",
+        "custom_settings",
+        "server_name"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_stix_object_of_attack_id",
+      "description": "Retrieves a STIX object identified by an ATT&CK ID in all ATT&CK matrices.",
+      "params": [
+        "attack_id",
+        "object_type"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_post_text",
+      "description": "Posts a text post in the database, and returns True if it was successfuly posted",
+      "params": [
+        "content"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    }
+  ]
+}

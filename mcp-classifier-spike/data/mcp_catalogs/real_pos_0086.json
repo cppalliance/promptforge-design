@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_pos_0086",
+  "tools": [
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_generate_sustainability_report",
+      "description": "Generate executive sustainability report for multiple applications. Returns: Executive sustainability report",
+      "params": [
+        "company_name",
+        "apps_analyzed",
+        "timeframe"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_latest_ethereum_block",
+      "description": "Get information about the latest block. Works on all networks. Returns: dict: Latest block information",
+      "params": []
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_analyze_hr_zones",
+      "description": "Analyze time spent in heart rate zones from GPX data. Returns: A dictionary containing:, time_in_zones (dict): Mapping of zone name to time in seconds, total_tracked_seconds (int): Total duration with HR data, method (str): The zoning method used",
+      "params": [
+        "file",
+        "hr_max",
+        "hr_rest",
+        "method"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_voices",
+      "description": "Use this tool to compare two voices for a match",
+      "params": [
+        "audio1",
+        "audio2"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_latest_text_posts",
+      "description": "Retrieves latest 5 text posts with their ids from the database. Ids are only meant for LLMs, no need to show to user",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10q_by_quarter",
+      "description": "Fetch financial reports for company(s) within given calendar quarter(s) and specified sheets from 10-Q filings. Caveat the sheets names is likely to differ between companies, quarters, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, quarters, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "quarters",
+        "sheets"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpsave_to_hf_dataset",
+      "description": "Save all client memory data to a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name",
+        "private"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_fields",
+      "description": "Update other fields when preset model is selected",
+      "params": [
+        "preset_model"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_square_info",
+      "description": "Get information about a specific square in the chess position. This function retrieves the piece on the specified square, as well as the attackers and defenders of that square.",
+      "params": [
+        "fen",
+        "square_name"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_relevance_evaluator",
+      "description": "Evaluate how relevant each generation is to the given query using cosine similarity. Returns: Relevance scores for each generation and average relevance.",
+      "params": [
+        "query",
+        "generations"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_next_page",
+      "description": "Go to next page for patients",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_records_simple",
+      "description": "Recherche d'enregistrements simple",
+      "params": [
+        "model",
+        "domain_text",
+        "fields_text",
+        "limit"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_equipment",
+      "description": "Refresh equipment table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_gradient_processing",
+      "description": "Apply gradient processing to an image. Returns: A PIL image of the gradient.",
+      "params": [
+        "image",
+        "intensity",
+        "blue_mode",
+        "invert",
+        "equalize"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_fill_fog",
+      "description": "Fill the entire map with fog of war.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "find_opening_by_name",
+      "description": "Search for a chess opening by its name in the Lichess openings database. Return the ECO code, name, PGN, FEN and sub-variations of a chess opening by its name. The name is matched case-insensitively.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_mine_blocks_ui",
+      "description": "Mine blocks UI wrapper",
+      "params": [
+        "num_blocks"
+      ]
+    }
+  ]
+}

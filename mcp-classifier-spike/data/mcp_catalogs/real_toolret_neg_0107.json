@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_neg_0107",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "/random_credit_card",
+      "description": "Generates a list of fake credit cards",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Number2Words_Get",
+      "description": "Get equivalent words of this number",
+      "params": [
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'number', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Local Neighbourhood Crime Data",
+      "description": "Returns crime data for a specific location (neighborhood) in the UK.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "alerts_active_region_region",
+      "description": "Fetches a list of active weather alerts for a specific region from the National Weather Service API in CAP-ATOM format.",
+      "params": [
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "currency_exchange_rate",
+      "description": "Fetches exchange rates between two currencies or cryptocurrencies.",
+      "params": [
+        "from_symbol",
+        "to_symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GenerateOrderSummary",
+      "description": "This API is to generate a summary of the order using the order_id.",
+      "params": [
+        "{'name': 'order_id', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Currency Options",
+      "description": "Retrieve the currency options for a specific currency pair",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webull_market_get_ipo_center",
+      "description": "Get IPO center information of specific region",
+      "params": [
+        "{'name': 'regionId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dictionary_Translation_Hablaa_Get_available_languages",
+      "description": "Get a list of available languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_holders",
+      "description": "Get holders related to a symbol. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketAPI2_TeamNextMatches",
+      "description": "Get the next matches for a cricket team by specifying the team ID and the page number (starting from 0).",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Read_a_Link_or_Token_by_its_id",
+      "description": "Read a link or token by its id. It is used to see the content (t=link or t=token), but cannot validate the signature.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "marketing.campaignTrendAnalysis",
+      "description": "Provides trend analysis for marketing campaigns based on historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieving_a_collection",
+      "description": "Retrieve detailed information about a specific collection on OpenSea, including real-time statistics such as floor price.",
+      "params": [
+        "collection_slug"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "address_autosuggest",
+      "description": "Fetches address suggestions based on a partial or complete address query using the Address Autosuggest API.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_final_weight",
+      "description": "This method takes no arguments and returns the final weight of the statue after the three weeks of carving.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_youtube_topviews_published_year",
+      "description": "Top Youtube viewed videos that was published in year X (X: 2010 - now)",
+      "params": [
+        "{'name': 'year', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "health.initiativeMaternalChild",
+      "description": "Gathers data on maternal and child health programs globally, focusing on specific health indicators.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCountdown",
+      "description": "Calculate and return the number of days, hours, minutes, and seconds remaining until the next MCU film release.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "lvwerra/distilbert-imdb",
+      "description": "This model is a fine-tuned version of distilbert-base-uncased on the imdb dataset. It is used for sentiment analysis on movie reviews and achieves an accuracy of 0.928 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top NFT Collections",
+      "description": "Retrieve the top NFT collections ordered by volume, sales, or other metrics, with optional filtering and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Judge0_Extra_CE_Get_Configuration",
+      "description": "Configuration information gives you detailed information about the configuration of Judge0.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Learning_Engine_memre_api_v1_readiness",
+      "description": "Get the readiness of the user for the specified item.\n",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd",
+        "{'name': 'item_id', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodMenuQuery",
+      "description": "This API is used to find out the food menu of a specific restaurant.",
+      "params": [
+        "{'name': 'restaurant', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_market_get_volatility",
+      "description": "Get market volatility\n* There are response images in encoded base 64 string, you need to decode to get the images yourself",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Database Status",
+      "description": "Returns information about the freshness of the Trademark Search API database, including the last upstring string and a sample of recent registered trademarks.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SteamGames_Special_offers_GamesData",
+      "description": "This endpoint will give you the Games Data if you provide the APP_ID.\nYou can use the GamesList endpoint to get the list of APP_IDs and Feed it to this Endpoint to get the Games Data. Sample Details are given below:\n`{\n    \"discount\": \"-40%\",\n    \"original_price\": \"$49.99\",\n    \"price\": \"$29.99\",\n    \"title\": \"God of War\",\n    \"url\": \"https://store.steampowered.com/app/1593500/\"\n}`",
+      "params": [
+        "{'name': 'app_id', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Vehicle Market Value by License Plate",
+      "description": "This API provides the market value of a vehicle based on its license plate number and other optional parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DevelopmentTool",
+      "description": "used to develop functionality and perform unit testing",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "verify_technician_qualification",
+      "description": "Confirm the technician's repair experience and qualifications for the specified appliance model",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currencygenie_Get_list_of_Currency_Exchanges_copy_copy",
+      "description": "Performs GET request for getting list of currencies",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange Range Fixed-Rate",
+      "description": "Retrieve the minimum and maximum payment amounts required for a cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetAllCampaigns",
+      "description": "The API returns all the CSV Campaigns associated with the user's account, including Images, Videos & Image+Video Campaigns. Note: The campaigns must be in Success state.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dummyData_overview",
+      "description": "Overview of all entry points and usage",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeDentalRecords",
+      "description": "Analyze dental records for forensic purposes",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Pollen_Data_latest_by_lat_lng",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCommunitiesByTopic",
+      "description": "Retrieves a list of Power BI communities related to a specific topic.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_TeamLastMatches",
+      "description": "Get the last matches for a specific baseball team by providing its ID and page number.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Order Transaction",
+      "description": "Retrieves the details of a specific order transaction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CalculateShippingCost",
+      "description": "This API calculates the shipping cost for a product to a specific location.",
+      "params": [
+        "{'name': 'productID', 'in': 'query', 'sc",
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    }
+  ]
+}

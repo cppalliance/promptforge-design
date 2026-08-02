@@ -1,0 +1,383 @@
+{
+  "catalog_id": "real_pos_0084",
+  "tools": [
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_column_in_table",
+      "description": "### `get_list_of_column_in_table(schema_name: str, table_name: str)`",
+      "params": [
+        "schema",
+        "table"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_abuseipdb",
+      "description": "Query AbuseIP to find if an IP has been reported for abusive behavior.",
+      "params": [
+        "ip_address"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_naranjo_score_mcp",
+      "description": "Calculates the Naranjo score, a standardized and widely used causality assessment tool to determine the probability that an adverse event is related to a specific drug. The score helps clinicians and researchers classify the likelihood of an adverse drug reaction (ADR) as doubtful, possible, probable, or definite. Sometimes the user might not have provided all the information, so you will need to ask for the missing information (remember to give them the option to say \"unknown\" if they don't know the answer). Returns: JSON string with score, probability category, and detailed breakdown",
+      "params": [
+        "adverse_reaction_after_drug",
+        "reaction_improved_after_stopping",
+        "reaction_reappeared_after_readministration",
+        "alternative_causes_exist",
+        "reaction_when_placebo_given",
+        "drug_detected_in_blood",
+        "reaction_worse_with_higher_dose",
+        "similar_reaction_to_drug_before",
+        "adverse_event_confirmed_objectively",
+        "reaction_appeared_after_suspected_drug_given"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_get_law",
+      "description": "This is a tool that returns law content by input the category and number. Returns: The content of the law.",
+      "params": [
+        "category",
+        "number"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "MCP_Server_Emotion_Detection",
+      "name": "MCP_Server_Emotion_Detection_generate_emotion_response",
+      "description": "Generate an emotion image and response text based on input text",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_privacy_preserve_image",
+      "description": "Obscures specified objects in the input image based on a natural language prompt, using a privacy-preserving blur or distortion effect. This function segments the image to detect objects described in the `input_prompt` and applies a pixelation effect to those regions. It is useful in scenarios where sensitive content (e.g., faces, license plates, logos, personal belongings) needs to be hidden before sharing or publishing images. Returns: Binary image data of the modified image., , input_prompt = \"faces, license plates, logos\"",
+      "params": [
+        "input_img",
+        "input_prompt",
+        "privacy_strength",
+        "threshold"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_error_sync",
+      "description": "Search Stack Overflow for solutions to an error message. Returns: Formatted search results",
+      "params": [
+        "error_message",
+        "language",
+        "technologies",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_search_people",
+      "description": "Search for people on LinkedIn. Returns: A dictionary containing the search results or an error message if the request fails.",
+      "params": [
+        "keywords",
+        "start_index",
+        "geo_id",
+        "school_id",
+        "first_name",
+        "last_name",
+        "school_keywords",
+        "title_keywords",
+        "company_keywords"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_generate_video_from_image",
+      "description": "Generate a video from an image and a prompt using the Google Veo-2.0 model. Returns: Path to the generated video file (temporary file used for Gradio display).",
+      "params": [
+        "path",
+        "prompt",
+        "aspect_ratio",
+        "duration",
+        "output_path"
+      ]
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_update_openai_inputs",
+      "description": "Update base URL and model inputs based on provider selection.",
+      "params": [
+        "provider"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_db_infos",
+      "description": "### `get_db_infos()`",
+      "params": []
+    },
+    {
+      "server": "StockSense",
+      "name": "StockSense_stock_sentiment_pipeline",
+      "description": "Analyzes stock news sentiment by fetching articles and performing sentiment analysis. Returns: A list of dictionaries with article metadata and sentiment results.",
+      "params": [
+        "ticker",
+        "max_articles"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_calculate_direct_distance",
+      "description": "Calculates the distance between two points on the Earth's surface using the Haversine formula. Returns: The distance between the two points in kilometers.",
+      "params": [
+        "lat1",
+        "lon1",
+        "lat2",
+        "lon2",
+        "unit"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_class_diagram",
+      "description": "Generates a class diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_dad_joke",
+      "description": "Fetches a random dad joke from the icanhazdadjoke.com API. The function makes an HTTP GET request to the <https://icanhazdadjoke.com/> API with appropriate headers to receive JSON response. Returns: A random dad joke if successful, otherwise returns an error message., Success: Returns the joke text, Failure: Returns \"Failed to retrieve a joke.\" if the API request fails, No joke: Returns \"No joke found.\" if the API response doesn't contain a joke, , The requests library must be imported to make HTTP requests",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_duckduckgo_search",
+      "description": "Given a search query, returns the search results from DuckDuckGo. Returns: The search results from DuckDuckGo Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "calculator-mcp-marcodsn",
+      "name": "calculator_mcp_marcodsn_safe_math_eval",
+      "description": "Enter a math formula using the supported operators and functions. **Supported Operators:** - `+` (addition) - `-` (subtraction) - `*` (multiplication) - `/` (division) - `**` (power) - `%` (modulus) - `<`, `<=`, `==`, `!=`, `>=`, `>` (comparisons) - `&`, `|`, `~` (bitwise and logical operators) **Supported Functions:** - Trigonometric: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `arctan2` - Hyperbolic: `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh` - Logarithmic & Exponential: `log`, `log10`, `log1p`, `exp`, `expm1` - Other: `sqrt`, `abs`, `where`, `complex`, `real`, `imag`, `conj` **Examples:** - `exp(2) + sqrt(9)` - `log(10) / 2` - `where(5 > 2, 10, 0)` - `sin(3.14/2) * 2` - `abs(-7) + 5**2` - `log1p(9)` - `real(complex(3, 4))` - `arctan2(1, 1)` - `tanh(2) > 0.9`. Returns: The result of the evaluation",
+      "params": [
+        "expression"
+      ]
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_run_shell_command",
+      "description": "Generate, plan, or execute commands based on mode.",
+      "params": [
+        "query",
+        "history"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_network_info_ui",
+      "description": "Get current network info for UI",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_hsv",
+      "description": "Changes the hue and saturation of specified objects in an image using the HSV color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the HSV color space. HSV separates chromatic content (hue) from intensity (value), making it more intuitive for color manipulation tasks. Use this method when: - You want to change the color of objects based on their hue and saturation. - You want to apply color transformations that are less influenced by lighting conditions or brightness variations. Returns: Base64-encoded string., , If user_input format is invalid, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_model_access",
+      "description": "Check if the user has access to the gated FLUX.1-dev model. This function verifies that the user's HuggingFace token has access to the gated FLUX.1-dev model required for LoRA training. This has to be done before we can deploy the endpoint. Returns: str: Status message indicating access status and next steps, , status = check_model_access(\"hf_abcdef123456\")",
+      "params": [
+        "hf_token"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_score_from_audio",
+      "description": "Generate a MusicXML score from an input audio (.wav) file. Returns: File path to the generated MusicXML file, or error message on failure.",
+      "params": [
+        "wav_file"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_video",
+      "description": "SAM2 Video Segmentation",
+      "params": [
+        "video_path",
+        "variant",
+        "masks",
+        "drop_masks",
+        "ref_frame_idx",
+        "async_frame_load"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10q_by_quarter",
+      "description": "Fetch financial reports for company(s) within given calendar quarter(s) and specified sheets from 10-Q filings. Caveat the sheets names is likely to differ between companies, quarters, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, quarters, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "quarters",
+        "sheets"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    }
+  ]
+}

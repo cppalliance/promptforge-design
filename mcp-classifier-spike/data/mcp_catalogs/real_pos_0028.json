@@ -1,0 +1,379 @@
+{
+  "catalog_id": "real_pos_0028",
+  "tools": [
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_delete",
+      "description": "Delete user profile. Returns: Dict with operation result",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_remove_background",
+      "description": "Remove the background of the image. Returns: Binary image data of the modified image.",
+      "params": [
+        "input_img"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competitions_list",
+      "description": "List Kaggle competitions with optional filtering and pagination. Returns: Formatted JSON string containing list of competitions with their details, , Each page contains 20 competitions. Use pagination for larger result sets.",
+      "params": [
+        "group",
+        "category",
+        "sort_by",
+        "page",
+        "search",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_volume_adjustment",
+      "description": "Apply volume adjustment to an audio file using gain in decibels. This function loads an audio file and applies a volume adjustment by the specified gain amount in decibels. Positive values increase volume, negative values decrease volume. The function also detects potential audio clipping when volume is increased. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, adjusted_audio_data: array), for the volume-adjusted audio result, or None if an error occurred, Second element: A status message string indicating success with gain applied, and clipping warning if detected, or error information, , result, status = apply_volume_adjustment(\"url/to/audio.mp3\", -3.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Gain is specified in decibels (dB): +6dB doubles volume, -6dB halves volume, Positive gain values may cause clipping (distortion) if audio becomes too loud, Function automatically detects and warns about clipping, Preserves original sample rate and audio format, Safe range is typically -20dB to +6dB to avoid quality issues",
+      "params": [
+        "audio_file",
+        "gain_db"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_edit_video_segment",
+      "description": "Edit a video segment by either cutting it out or keeping only that segment. Returns: URL to processed video or None if failed, , For \"keep\": Extracts segment with 1-second padding for smooth transitions, For \"cut\": Splits video into segments and concatenates non-cut portions, Preserves both video and audio quality, Uses x264 for video and AAC for audio encoding",
+      "params": [
+        "video_url",
+        "start_time",
+        "end_time",
+        "action"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_write_file_content_to_sandbox",
+      "description": "Writes content to a file in a Modal sandbox. Useful for writing code, text, or any other content, rapid prototyping, creating boilerplate code, implementing algorithms, and generating test cases. Returns: JSON string containing success status and written file path",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "content"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_lookup",
+      "description": "Function to lookup a name in the Office of Inspector General (OIG) List of Excluded Individuals & Entitites (LEIE) who are legally excluded from receiving any Federal Medicare or Medicaid funds for services. Search can look for first name, last name, or both. All persons are presumed innocent unless the name and address match the results of a search. For legal chain of custody reasons, this information is inadmissable, but can be verified on the US Health and Human Services Website here: https://exclusions.oig.hhs.gov/",
+      "params": [
+        "last",
+        "first"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_generate_unit_test",
+      "description": "Generates a Jest unit test file for the provided source code using the Anthropic API. This function leverages the 'QA-Sentinel' automated test engineering bot to create comprehensive unit tests aiming for 100% statement, branch, function, and line coverage. Returns: The content of the generated Jest test file as a string, or an error message, if the code is not provided or an exception occurs during generation.",
+      "params": [
+        "code",
+        "source_code_path",
+        "test_root_dir_path",
+        "additional_system_prompt",
+        "anthropic_api_key"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_soothing_story",
+      "description": "Generate a short calming story for a child. Returns: A safe, gentle short story.",
+      "params": [
+        "theme"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_latest_ethereum_block",
+      "description": "Get information about the latest block. Works on all networks. Returns: dict: Latest block information",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_remove_path",
+      "description": "Removes a file or directory from the sandbox. Useful for cleaning up temporary files, removing unwanted content, and managing sandbox storage. Returns: JSON string containing success status and removed path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "recursive"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_live_updates",
+      "description": "Fetches and formats the latest data from the backend for both views.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async_",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitors_by_program_id",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_prime_factors",
+      "description": "Compute the prime factorization of a positive integer.",
+      "params": [
+        "n"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "StockSense",
+      "name": "StockSense_stock_sentiment_pipeline",
+      "description": "Analyzes stock news sentiment by fetching articles and performing sentiment analysis. Returns: A list of dictionaries with article metadata and sentiment results.",
+      "params": [
+        "ticker",
+        "max_articles"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    }
+  ]
+}

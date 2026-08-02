@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_neg_0117",
+  "tools": [
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_health_status",
+      "description": "Get comprehensive system health status including advanced monitoring features. Retrieves detailed health information about the system including availability of advanced features, system resources, and operational metrics. Returns basic information if advanced monitoring is not available. Returns: A dictionary containing system health status and metrics",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_workouts_gr",
+      "description": "Fetches recent workouts for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message_",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_get_schedule",
+      "description": "Return upcoming classes in a human-friendly Markdown list.",
+      "params": [
+        "location_id",
+        "days"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_datasets_homepage",
+      "description": "Fetches the homepage for the the U.S. Census Bureau 2020 decennial census API housed at https://api.census.gov/data/2020/dec/dp.html. Contains descriptions of available datasets. Also includes links to additional helpful documentation such as available geographies and example API calls. Returns: The homepage in markdown format",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_distance",
+      "description": "Extract distance from route data. Returns: Distance like '5.2 km'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "MCP_Server_Respurce_German_Errors",
+      "name": "MCP_Server_Respurce_German_Errors_german_errors_resource",
+      "description": "The most typical German Errors and mistakes database Use this database to find common German errors and their corrections",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_send_sui",
+      "description": "Sends SUI to a recipient address using the provided private key.",
+      "params": [
+        "private_key",
+        "recipient_address_input",
+        "amount_sui_input",
+        "transfer_coin_id",
+        "gas_object_id",
+        "gas_budget"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_convert_mp4_to_gif",
+      "description": "Converts a video file to a high-quality animated GIF using a two-pass ffmpeg method. Returns: The path to the generated GIF file, or an error string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_query_owid_table_sql",
+      "description": "Executes a read-only SQL query against one or more tables loaded from the OWID catalog.",
+      "params": [
+        "table_references_json",
+        "sql_query",
+        "limit"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_tables_in_schema",
+      "description": "### `get_list_of_tables_in_schema(schema_name: str)`",
+      "params": [
+        "schema"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques CRM natives",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_prev_page",
+      "description": "Go to previous page for patients",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_generate_multiple_tones",
+      "description": "Generate cover letters in multiple tones for comparison. Returns: Dict with multiple cover letters in different tones",
+      "params": [
+        "user_id",
+        "job_description"
+      ]
+    }
+  ]
+}

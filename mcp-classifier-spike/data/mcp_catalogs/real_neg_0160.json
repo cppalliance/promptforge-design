@@ -1,0 +1,369 @@
+{
+  "catalog_id": "real_neg_0160",
+  "tools": [
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status_",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_way_anova",
+      "description": "Accepts multiple groups of numeric data as semicolon-separated groups or DataFrame columns and performs a one-way ANOVA (Analysis of Variance). This test determines whether there are statistically significant differences between the means of three or more independent groups. ANOVA tests the null hypothesis that all group means are equal against the alternative that at least one group mean differs from the others. The test calculates an F-statistic by comparing the variance between groups to the variance within groups. A significant result (p-value < alpha) indicates that at least one group differs, but does not identify which specific groups differ (post-hoc tests needed for pairwise comparisons). Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by group membership, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: comparing means across multiple treatment conditions, testing differences between multiple demographic groups, evaluating performance across several experimental conditions.",
+      "params": [
+        "groups_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_health_status",
+      "description": "Get comprehensive system health status including advanced monitoring features. Retrieves detailed health information about the system including availability of advanced features, system resources, and operational metrics. Returns basic information if advanced monitoring is not available. Returns: A dictionary containing system health status and metrics",
+      "params": []
+    },
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_square_info",
+      "description": "Get information about a specific square in the chess position. This function retrieves the piece on the specified square, as well as the attackers and defenders of that square.",
+      "params": [
+        "fen",
+        "square_name"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message_",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_enumerate_dns",
+      "description": "Enumerates information about a specific domain's DNS configuration. Information collected about the domain name: 1. A records: the IPv4 associated with the domain 2. AAAA records: the IPv6 associated with the domain 3. CAA records: used by owners to specify which Certificate Authorities are authorized to issue SSL/TLS certificates for their domains. 4. CNAME records: alias of one name to another - the DNS lookup will continue by retrying the lookup with the new name. 5. LOC records: geographic location associated with a domain name. 6. MX records: associated email servers to the domain. 7. NS records: DNS servers that are authoritative for a particular domain. These may be use to inquire information about the domain. 8. SOA records: defines authoritative information about a DNS zone, including zone transfers and cache expiration. 9. TXT records: used for domain verification and email security. 10. RP records: the responsible person for a domain. 11. SPF records: defines authorized email servers. 12. SRV records: specifies location of specific services (port and host) for the domain. 14. NSEC records: proves non-existence of DNS records and prevents zone enumeration. 15. RRSIG records: contains cryptographic signatures for DNSSEC-signed records, providing authentication and integrity. Example: >>> from pprint import pprint >>> pprint(enumerate_dns(\"youtube.com\")) ... {'A': 'youtube.com. 300 IN A 142.250.200.142', 'AAAA': 'youtube.com. 286 IN AAAA 2a00:1450:4003:80f::200e', 'CAA': 'youtube.com. 14352 IN CAA 0 issue \"pki.goog\"', 'CNAME': None, 'LOC': None, 'MX': 'youtube.com. 300 IN MX 0 smtp.google.com.', 'NS': 'youtube.com. 21600 IN NS ns4.google.com.\\n' 'youtube.com. 21600 IN NS ns1.google.com.\\n' 'youtube.com. 21600 IN NS ns2.google.com.\\n' 'youtube.com. 21600 IN NS ns3.google.com.', 'NSEC': None, 'RP': None, 'RRSIG': None, 'SOA': 'youtube.com. 60 IN SOA ns1.google.com. dns-admin.google.com. ' '766113658 900 900 1800 60', 'SPF': None, 'SRV': None, 'TXT': 'youtube.com. 3586 IN TXT \"v=spf1 include:google.com mx -all\"\\n' 'youtube.com. 3586 IN TXT ' '\"facebook-domain-verification=64jdes7le4h7e7lfpi22rijygx58j1\"\\n' 'youtube.com. 3586 IN TXT ' '\"google-site-verification=QtQWEwHWM8tHiJ4s-jJWzEQrD_fF3luPnpzNDH-Nw-w\"'}",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_stix_object_of_attack_id",
+      "description": "Retrieves a STIX object identified by an ATT&CK ID in all ATT&CK matrices.",
+      "params": [
+        "attack_id",
+        "object_type"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_reset_session",
+      "description": "Reset the current pomodoro session completely and clear all progress. This function resets all session data including work time, break status, timers, and accumulated statistics. Use this to start completely fresh. Returns: Confirmation message that the session has been successfully reset",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_get_training_types",
+      "description": "Fetch human-readable list of class description names.",
+      "params": [
+        "location_id"
+      ]
+    },
+    {
+      "server": "Patent-Scout",
+      "name": "Patent_Scout_analyze_patent_idea",
+      "description": "Analyzes a product idea to assess its patentability and finds similar patents. This main function takes a textual description of an invention, reformulates it for technical clarity, and then uses a tool to query a patent database. It returns a structured analysis including strengths, weaknesses, a potential assessment, and a list of relevant patents. Returns: The final structured result is embedded as JSON in the last status message within an HTML comment., {...} -->\" in the final yielded status to extract the complete analysis result., strengths (list), weaknesses (list), rating (dict), patents (list), rewritten_query (str), status (str)., Complete analysis results for all UI components.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_from_url",
+      "description": "Convert a document from a URL to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "document_url",
+        "output_format"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_home_buying_tax_calculator_browser_use",
+      "description": "Uses a browser automation agent to navigate the UK government's Stamp Duty Land Tax (SDLT) calculator website and retrieve the total SDLT due based on provided property and purchaser details. This tool is specifically for properties in England or Northern Ireland. Returns: The result from the browser interaction, typically the total SDLT due or an, error message if the process fails.",
+      "params": [
+        "region",
+        "property_type",
+        "day",
+        "month",
+        "year",
+        "purchaser_type",
+        "purchaser_purpose",
+        "more_properties",
+        "replace",
+        "First_time_Buyer",
+        "main_residence",
+        "price"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame_",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_accounts_list",
+      "description": "Get list of current accounts with balances",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_cut_audio",
+      "description": "Process audio cutting to extract a segment from an audio file. This function loads an audio file, validates the time parameters, and cuts out a specific segment between the start and end times. It handles various audio formats and provides detailed error messages for troubleshooting. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, audio_data: array), for the cut audio segment, or None if an error occurred, Second element: A status message string indicating success with details, or error information, , result, status = process_cut_audio(\"/path/to/audio.mp3\", 10.5, 25.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Time parameters are automatically validated and clamped to valid ranges, Start time must be less than end time after validation, Output audio data maintains the original sample rate, Function returns user-friendly status messages for UI display",
+      "params": [
+        "audio_file",
+        "_start_time",
+        "_end_time"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_speed_adjustment",
+      "description": "Apply speed adjustment to an audio file, changing playback speed and pitch. This function loads an audio file and adjusts its playback speed by the specified factor. Speed changes affect both duration and pitch - faster speeds increase pitch and reduce duration, while slower speeds decrease pitch and increase duration. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, speed_adjusted_audio_data: array), for the speed-adjusted audio result, or None if an error occurred, Second element: A status message string showing speed factor and duration change, or error information, , result, status = apply_speed_adjustment(\"url/to/audio.mp3\", 1.5), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Speed factor affects both playback speed and pitch (chipmunk/slow-motion effect), Values > 1.0 increase speed and pitch, reduce duration, Values < 1.0 decrease speed and pitch, increase duration, Common values: 0.5 (half speed), 1.25 (25% faster), 2.0 (double speed), Extreme values (< 0.25 or > 4.0) may result in poor audio quality, For pitch-preserving speed changes, use time-stretching instead, Preserves original sample rate but changes audio duration",
+      "params": [
+        "audio_file",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_create_table_from_query",
+      "description": "### `create_table_from_query(table_name: str, source_query: str)`",
+      "params": [
+        "table_name",
+        "source_query"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_quick_check",
+      "description": "Quick security check with minimal JSON output",
+      "params": [
+        "user_query",
+        "use_llm_analysis"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image",
+      "description": "Edit a local image using the 'Clarity Upscaler' method. Optionally save result. Useful for stylized upscaling with fractal detail control. Returns: The edited image (PIL.Image) upscaled via AI model.",
+      "params": [
+        "path",
+        "output_path",
+        "scale",
+        "dynamic",
+        "creativity",
+        "resemblance",
+        "tiling_width",
+        "tiling_height",
+        "model",
+        "scheduler",
+        "steps",
+        "seed",
+        "downscale",
+        "downscale_resolution"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_redundancy_checker",
+      "description": "Detect redundant or highly similar document pairs using semantic similarity. This tool encodes all documents into embeddings and computes cosine similarity scores between every pair. It flags document pairs with similarity greater than 0.8 as redundant. Returns: A dictionary containing:, 'tool': The name of the tool (\"Redundancy Checker\")., 'results': A list of redundant document pairs with their similarity scores,, or a message indicating no redundancy if none are found.",
+      "params": [
+        "_",
+        "documents"
+      ]
+    }
+  ]
+}

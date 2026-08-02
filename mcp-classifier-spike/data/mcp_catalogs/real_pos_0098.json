@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_pos_0098",
+  "tools": [
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_mine_blocks_ui",
+      "description": "Mine blocks UI wrapper",
+      "params": [
+        "num_blocks"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_similar_text_post",
+      "description": "Retrieves a text post and its id semantically similar to the query through Vector Similarity. Id is only meant for LLMs, no need to show to user",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_prev_page",
+      "description": "Go to previous page for equipment",
+      "params": []
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio_from_url",
+      "description": "Transcribe audio/video files from a URL into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Provide a URL to a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_url",
+        "api_key"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_gradient_processing",
+      "description": "Apply gradient processing to an image. Returns: A PIL image of the gradient.",
+      "params": [
+        "image",
+        "intensity",
+        "blue_mode",
+        "invert",
+        "equalize"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_station",
+      "description": "Searches for railway stations in Indian Railways network by name or station code. Returns: JSON response containing matched station details including:, Station name, Station code, State/Region, Geographical coordinates, Available facilities, Connected routes, , If station parameter is empty or no matching stations found, If API request fails or returns non-200 status code",
+      "params": [
+        "station"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_forecast",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte string JSON a lista y llama mcp_forecast_series. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros hist\u00f3ricos - periods (int): Per\u00edodos a pronosticar Retorna resultado de mcp_forecast_series o mensaje de error.",
+      "params": [
+        "data_str",
+        "periods"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_stream_response_with_state",
+      "description": "Stream response and update appropriate chat state",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_hf_datasets",
+      "description": "List available HuggingFace datasets for the current user. Returns: str: JSON string with available datasets",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_track_visualization",
+      "description": "Generate a visualization of the track with specified data.",
+      "params": [
+        "year",
+        "round",
+        "visualization_type"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_column_in_table",
+      "description": "### `get_list_of_column_in_table(schema_name: str, table_name: str)`",
+      "params": [
+        "schema",
+        "table"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_constructor_championship_standings",
+      "description": "Get the championship standing for a specific constructor in a given year.",
+      "params": [
+        "year",
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_push_file_to_sandbox",
+      "description": "Copies a file from the local filesystem to a Modal sandbox. Useful for uploading input files, transferring configuration files, setting up sandbox environments, and deploying code to sandboxes. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "local_path",
+        "sandbox_path",
+        "read_file_mode",
+        "writefile_mode"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_rdap",
+      "description": "Query RDAP to get information about Internet resources. The Registration Data Access Protocol (RDAP) is the successor to WHOIS. Like WHOIS, RDAP provides access to information about Internet resources (domain names, autonomous system numbers, and IP addresses).",
+      "params": [
+        "url_or_ip"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_analyze_mcp_request",
+      "description": "MCP-compatible security analysis function",
+      "params": [
+        "task_id",
+        "user_query",
+        "context",
+        "history_json"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_check_tools",
+      "description": "Sync wrapper for tool status check",
+      "params": []
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_get_sui_balance",
+      "description": "Retrieves the SUI balance for a given address using the Sui blockchain.",
+      "params": [
+        "wallet_address"
+      ]
+    },
+    {
+      "server": "Google-Sheets-Assistant",
+      "name": "Google_Sheets_Assistant_upload_csv",
+      "description": "Handle CSV file upload",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_milestones",
+      "description": "Returns all scheduled milestones and their dates for a given MCPHawk Inc project. This tool delivers a detailed timeline of milestones for a project, including: - Milestone names (e.g., Sprint-1, Sprint-2, QA Release, Production Release) - Corresponding milestone dates - Planned Cumulative Burn in USD for different project milestones - Actual Burn based on MCPHawk Inc employee billing - Cumulative Actual Burn rate basedon Actual Burn rate values (This is important to understand the financials of the project) This tool is helpful for project managers, scrum masters, and stakeholders to track progress, important delivery dates and understand if project is running within budget or not and understnad financial health of the project. **Input:** - `project_name` (str): The project whose milestones are requested. **Returns:** A dictionary containing: - `project_name` (str): The name of the project - `milestones` (list): A list of dictionaries, each with: - `milestone` (str): Name of the milestone (e.g., \"Sprint-1\", \"QA Release\") - `milestone_date` (date): Scheduled date for the milestone (in `YYYY-MM-DD` format) - `planned_cumulative_burn` (float): Planned cumulative burn amount by this milestone - `actual_burn` (float): Actual burn recorded for this milestone period - `cumulative_actual_burn` (float): Cumulative total of actual burn up to this milestone If no milestones are found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"milestones\": [ { \"milestone\": \"Sprint-1\", \"milestone_date\": \"2025-02-25\", \"planned_cumulative_burn\": 113160.0, \"actual_burn\": 106528.85, \"cumulative_actual_burn\": 106529.0 }, { \"milestone\": \"Sprint-2\", \"milestone_date\": \"2025-03-11\", \"planned_cumulative_burn\": 226321.0, \"actual_burn\": 111444.79, \"cumulative_actual_burn\": 217974.0 }, { \"milestone\": \"UAT Release\", \"milestone_date\": \"2025-05-20\", \"planned_cumulative_burn\": 905283.52, \"actual_burn\": 107937.74, \"cumulative_actual_burn\": 881532.64 }, { \"milestone\": \"Production Release\", \"milestone_date\": \"2025-05-27\", \"planned_cumulative_burn\": 1018443.96, \"actual_burn\": 107682.72, \"cumulative_actual_burn\": 989215.36 } ] }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_directory_contents",
+      "description": "Lists contents of a directory in the sandbox. Useful for exploring sandbox filesystem structure, verifying file operations, debugging file-related issues, and managing sandbox content. Returns: JSON string containing list of directory contents",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_show_cif_file",
+      "description": "Plot a 3D structure from a CIF file with the Molecule3D library. Returns: PDB file name if successful, None if no file was provided, or if conversion failed.",
+      "params": [
+        "cif_file"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_ELA",
+      "description": "Perform Error Level Analysis on an image. Returns: Processed ELA image",
+      "params": [
+        "img",
+        "quality",
+        "scale",
+        "contrast",
+        "linear",
+        "grayscale"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_load_settings",
+      "description": "Loads settings for the last active provider and their respective configs.",
+      "params": []
+    },
+    {
+      "server": "SafeBox",
+      "name": "SafeBox_code_eval",
+      "description": "Run a python code snippet into a sandbox environment. Returns: , A dictionary containing execution results:, 'stdout', 'stderr', 'returncode', and 'error' (if any)., A string with the image build logs (empty if no dependencies were detected).",
+      "params": [
+        "code_snippet"
+      ]
+    }
+  ]
+}

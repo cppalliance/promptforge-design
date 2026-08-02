@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_toolret_pos_0077",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Target_categories_list_Deprecated",
+      "description": "List all root and sub categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_meeting_reminder",
+      "description": "Set meeting reminder",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "cointegrated/rubert-base-cased-nli-threeway",
+      "description": "This is the DeepPavlov/rubert-base-cased fine-tuned to predict the logical relationship between two short texts: entailment, contradiction, or neutral.",
+      "params": [
+        "text1",
+        "text2"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Hitting_Leaders",
+      "description": "Retrieve n leaders for a given hitting statistic.  This endpoint is best used alongside col_in/col_ex to prune response data. Without, it returns entire player objects.  For best results, include the player\u2019s name, id, and the stat as a starting point.  See: Using col_in & col_ex",
+      "params": [
+        "{'name': 'game_type', 'type': 'STRING', ",
+        "{'name': 'results', 'type': 'STRING', 'd",
+        "{'name': 'sort_column', 'type': 'STRING'",
+        "{'name': 'sports_code', 'type': 'STRING'",
+        "{'name': 'season', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_New_build_developments",
+      "description": "New build developments",
+      "params": [
+        "{'name': 'search_area', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CPF_CNPJ_Brasil_Consulta_por_CNPJ",
+      "description": "**Consulta dados e informa\u00e7\u00f5es do CNPJ, a demanda de informa\u00e7\u00f5es est\u00e1 sempre sendo atualizada para melhor atende-los **",
+      "params": [
+        "{'name': 'cnpj', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "file_backup",
+      "description": "Used for backing up specified files.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> ",
+      "description": "def count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Count the number of parts a specific object is divided into.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to count parts of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The number of parts the object is divided into.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = obj",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "points_point_forecast",
+      "description": "Fetches weather forecast data for a specific geographic point using the National Weather Service API.",
+      "params": [
+        "point"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hydration_tracker.update",
+      "description": "Update and track hydration levels during gym sessions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MovieReviewCollector.fetchReviews",
+      "description": "Retrieves a list of movie reviews based on specified criteria including date range and reviewer details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get US Card Spending Data",
+      "description": "Retrieve the daily United States 7-day moving average percentage change in credit and debit card spending, seasonally adjusted relative to January 4-31, 2020.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sportsbook_Odds_Game_Odds_Tiered_Schedule",
+      "description": "This is a schedule that is tiered and separated with qualitative information. It is used for the website BookBreakers.us to create accordion tables of bet data.\n\nThe Tiers:\n1. Bet Type and Game Period (Eg. P3^0 is 3 Pointers Full Game in Basketball)\n2. Player (Eg. Jayson Tatum) (NOTE: If this is not a prop this tier will not exists)\n3. Lines Available (Eg. 2.5, 3.5)\n4. Outcomes for Those Lines (Eg. O, U for Over and Under)\n5. Sites (Eg. Fanduel, DraftKings, ETC.)",
+      "params": [
+        "{'name': 'event_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_max_pieces",
+      "description": "This method takes two arguments, 'cake_length' and 'piece_length', and returns the maximum number of pieces of the given length that can be cut from the cake.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Classification_Cloud_GetSupportedFileFormats",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "EcoFootprintCalculator.calculate",
+      "description": "Calculates the ecological footprint based on user's lifestyle choices and consumption patterns. This tool helps in understanding the impact on the environment and suggests ways to reduce the footprint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Lists_Tweets_Continuation",
+      "description": "This endpoint returns the next list of tweets in a given Twitter list",
+      "params": [
+        "{'name': 'list_id', 'type': 'STRING', 'd",
+        "{'name': 'continuation_token', 'type': '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_equivalent_repetitions(original_weight, original_repetitions, new_weig",
+      "description": "def calculate_equivalent_repetitions(original_weight, original_repetitions, new_weight):\n    \"\"\"\n    Calculate the number of repetitions needed with a new weight to match the total weight lifted with the original weight.\n\n    Parameters:\n    original_weight (float): The weight of the original weights.\n    original_repetitions (int): The number of repetitions with the original weights.\n    new_weight (float): The weight of the new weights.\n\n    Returns:\n    int: The number of repetitions needed with the new weights to match the total weight lifted with the original weights.\n    \"\"\"\n    total_or",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_genres",
+      "description": "Get genres information of the title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indeed_Search",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [{\"name\": \"v\", \"type\": \"STRING\", \"description\": \"Version. Which version of the API you wish to use. All publishers should be using version 2. Currently available versions are 1 and 2. This parameter is required.\", \"default\": \"2\"}, {\"name\": \"format\", \"type\": \"STRING\", \"description\": \"Format. Which output format of the API you wish to use. The opt",
+      "params": [
+        "{'name': 'v', 'type': 'STRING', 'descrip",
+        "{'name': 'format', 'type': 'STRING', 'de",
+        "{'name': 'callback', 'type': 'STRING', '",
+        "{'name': 'q', 'type': 'STRING', 'descrip",
+        "{'name': 'l', 'type': 'STRING', 'descrip",
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'st', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Polyglot",
+      "description": "Supports multilingual detection, especially optimized for recognition of non-mainstream languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "sutats_gnihsinif",
+      "description": "To obtain a list of all finishing status codes in F1 races.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StopModReposts_Blocklist_XML",
+      "description": "Extensible Markup Language endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "channel-videos",
+      "description": "Retrieves videos from a YouTube channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VRObjectGenerator.generateObject",
+      "description": "Generates a virtual object in the specified VR environment. It initializes the object parameters, performs object-specific initialization, and starts a special thread for object-specific actions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Artist Related Artists",
+      "description": "Retrieve a list of artists related to a given artist by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Decathlon_Sport_Places_Places",
+      "description": "List out places around a location",
+      "params": [
+        "{'name': 'coordinates', 'type': 'STRING'",
+        "{'name': 'radius', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_members",
+      "description": "Returns all members of the collective (core contributors, contributors, backers, sponsors).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetchamatch",
+      "description": "Fetches match details from the specified screening and customer IDs using the provided API credentials.",
+      "params": [
+        "authorization",
+        "content_type",
+        "customer_a_id",
+        "match_1_id",
+        "screening_a_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/titles/{id}/main_actors",
+      "description": "Retrieves the main actors of a movie based on its IMDB ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Available Authors",
+      "description": "Returns a list of available authors for quote retrieval",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alpha_Vantage_Busca_por_simbolo",
+      "description": "buscar dados pelo simbolo",
+      "params": [
+        "{'name': 'function', 'type': 'STRING', '",
+        "{'name': 'apikey', 'type': 'STRING', 'de",
+        "{'name': 'outputsize', 'type': 'STRING',",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v13_User_Profile_Picture",
+      "description": "Get instagram user profile picture by username.",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "ImRma/Brucelee",
+      "description": "A Hugging Face model for converting Persian and English text into video.",
+      "params": [
+        "your_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_random_number",
+      "description": "This tool return a random number.",
+      "params": [
+        "{'name': 'min', 'schema': {'type': 'stri",
+        "{'name': 'max', 'schema': {'type': 'stri",
+        "{'name': 'cnt', 'schema': {'type': 'stri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TimeManager",
+      "description": "managing time and effort",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSignalStrength",
+      "description": "Retrieve the current signal strength of a wireless connection",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_Profile_GET_Detail_Post",
+      "description": "Detail post information from shortcode",
+      "params": [
+        "{'name': 'shortcode', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trending NFT Collections on Testnets",
+      "description": "Returns the trending NFT collections on testnets, similar to the OpenSea trending rankings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "machine.set_film_tension",
+      "description": "Adjust the tension of the film in an industrial wrapping machine to optimize wrapping quality.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

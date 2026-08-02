@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_pos_0009",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Top Exchanges API",
+      "description": "Fetches data of top exchanges including names, prices, ranks, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "British_Airways_Flight_Info_Search_departures_by_flight",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [{\"name\": \"flightnumber-scheduleddeparturedate-scheduleddeparturedate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"\"}, {\"name\": \"flightNumber\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"011\"}, {\"name\": \"scheduledDepartureDate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"2014-06-01\"}], \"optional_parameters\": [], \"method\": \"GET\", ",
+      "params": [
+        "{'name': 'flightnumber-scheduleddepartur",
+        "{'name': 'flightNumber', 'type': 'STRING",
+        "{'name': 'scheduledDepartureDate', 'type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDamHeight",
+      "description": "Retrieve the height information of a dam",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scout_index",
+      "description": "Root endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Qvantana_Three_Stars_In_The_South",
+      "description": "Three Stars In The South indicator",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'exchange', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'market', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "shareOnLineButton",
+      "description": "Allows users to easily share content from your website on Line.",
+      "params": [
+        "url",
+        "text",
+        "image"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Tags_Count",
+      "description": "Get a count of the tags. You can use the same filters of \"/tags\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "All_In_One_Crypto_Swiss_Knife_Tokens_Balances",
+      "description": "get balance of any address.\nsupportedChains: eth, bsc, matic, avax, okt, hmy, heco, klay, op, arb, ftm, xdai, cro, mobm, celo, aurora, fuse, evmos, cfx, kava",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'chain', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMA_Stats_UFC_Fight_Night_Emmett_vs_Topuriar_June_24_2023",
+      "description": "**UFC Fight Night: Emmett vs. Topuria**.                                                          \n Access a range of information about each fighter, including their win-loss record, height, weight, reach, and age. results of a particular fight or a fighter's win-loss record.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_color(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def check_object_color(image_patch: ImagePatch, object_name: str) -> str:\n    '''Check whether a specific object in the image is tinted in any specific color.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for color.\n       \n    Returns:\n        str: \"yes\" if the object is tinted in a specific color, \"no\" otherwise.\n    '''\n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return f\"no {object_name} found\"\n    # Let's make the assumption there's only one object of thi",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_pineapple_count",
+      "description": "This method takes two arguments, 'total_amount' and 'pineapple_price', and returns the number of pineapples that can be purchased with the given amount.",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "Wiki",
+      "description": "description = \"Wikipedia search API that takes one parameter - 'keyword'. The 'keyword' parameter refers to the search term to be looked up on Wikipedia.\"\ninput_parameters = {\n    'keyword': {'type': 'str', 'description': 'The keyword to be searched on Wikipedia.'}\n}\noutput_parameters = {\n    'title': {'type': 'str', 'description': 'The title of the Wikipedia page matching the search term.'},\n    'summary': {'type': 'str', 'description': 'The summary of the Wikipedia page matching the search term.'},\n    'url': {'type': 'str', 'description': 'The URL of the Wikipedia page matching the search t",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_winning_time",
+      "description": "This method takes a dictionary representing a table and a year, and returns the corresponding winning time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange Range Fixed-Rate",
+      "description": "Retrieve the minimum and maximum payment amounts required for a cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real_Time_Lens_Data_Image_to_Text_OCR",
+      "description": "Extract text from an image and get paragraph, sentence and word level text detections from Google Lens.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "InvestmentSuggestion",
+      "description": "This API suggests where to invest considering the prices of cryptocurrency and stock.",
+      "params": [
+        "{'name': 'cryptoPrice', 'in': 'query', '",
+        "{'name': 'stockPrice', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_stock_historical_price_data",
+      "description": "This method will pull historical pricing data for stocks, currencies, ETFs, mutual funds, U.S. Treasuries, cryptocurrencies, commodities, and indexes.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'start_date', 'type': 'STRING',",
+        "{'name': 'time_interval', 'type': 'STRIN",
+        "{'name': 'end_date', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Get_a_full_list_of_groups_with_statistics",
+      "description": "Get a full list of groups with statistics",
+      "params": [
+        "{'name': 'timeframe', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoAPI_Get_Country_Details",
+      "description": "Get details of country from its name and prefix.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Restaurants by Local Authority",
+      "description": "This API allows users to search for restaurants within a specific local authority.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "modding.schedule_mod_release",
+      "description": "Schedule a future release for a game mod.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getprojects",
+      "description": "Fetches artificial intelligence projects from the specified page using the provided RapidAPI key.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast_Food_Restaurants_USA_TOP_50_Chains_Get_Restaurant_Logo_by_Chain_Name",
+      "description": "Get Restaurant {Logo} by {Chain} Name",
+      "params": [
+        "{'name': 'restaurantChainName', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CallTrackingMetrics_List_Users",
+      "description": "The users API allows you to create and manage users.",
+      "params": [
+        "{'name': 'aid', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentEnricher",
+      "description": "used to enrich text with external information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fashion.get_sustainable_brands",
+      "description": "Retrieve a list of sustainable fashion brands based on specified criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "circuits",
+      "description": "Get the list of available circuits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search By Keyword Filters",
+      "description": "Complimentary to the \"Search By Keyword\" endpoint. Obtain a list of filters available based on a keyword.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNBC_symbols_translate",
+      "description": "Get issueId from specific symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fantasy_Cricket_Series_List_API",
+      "description": "A list of currently running  and upcoming cricket series from around the world. Any issues, queries, api integration, custom plan or to **Create your own Fantasy Sports Application**  contact us at support@techflinch.com",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getForensicBiologyProfile",
+      "description": "Retrieve forensic biology profile for a given sample",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TVCountries",
+      "description": "Get a list of countries and their respective TV channels broadcasting a specific Football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Evictions_Suits_Liens_and_Judgments_GetArchiveReport",
+      "description": " ",
+      "params": [
+        "{'name': 'AppId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "n",
+      "description": "Get ticker's profile. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rocket_League_Tournaments",
+      "description": "Check the scheduled tournaments:\n`rocket-league1.p.rapidapi.com/tournaments/:region`",
+      "params": [
+        "{'name': 'region', 'type': 'ENUM', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_b_squared",
+      "description": "Calculates the value of b squared using the given value of b",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "youtube_topviews_artist_nationality",
+      "description": "Fetches the top viewed music video by artists of the given nationality from YouTube.",
+      "params": [
+        "nationality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_MACD",
+      "description": "Moving Average Convergence Divergence(MACD) is a trend following momentum indicator, which works by subtracting the longer moving average from the shorter one. MACD has an unstable period ~ 100.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuestInfo",
+      "description": "Retrieve information on a specific quest.",
+      "params": [
+        "quest"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTrafficInfo",
+      "description": "Retrieve current traffic information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

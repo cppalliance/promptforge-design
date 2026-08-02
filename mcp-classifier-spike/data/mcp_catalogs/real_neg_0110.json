@@ -1,0 +1,359 @@
+{
+  "catalog_id": "real_neg_0110",
+  "tools": [
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_wikipedia",
+      "description": "Search Wikipedia using LangChain WikipediaLoader. Returns: Formatted Wikipedia search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_mcp_get_analysis_report",
+      "description": "Recupera el reporte textual completo de un an\u00e1lisis previo a partir de su ID. Par\u00e1metros: - analysis_id (str): Identificador \u00fanico del an\u00e1lisis almacenado, obtenido de mcp_analyze_trends. Formato: \"mcp_analysis_YYYYMMDD_HHMMSS\" Retorna: - str: Reporte completo en formato Markdown con: * Estad\u00edsticas b\u00e1sicas (media, desviaci\u00f3n, min/max) * An\u00e1lisis de tendencias (fuerza y direcci\u00f3n) * Detecci\u00f3n de anomal\u00edas (cantidad y porcentaje) * An\u00e1lisis de estacionalidad (patrones detectados) * Picos y valles (conteo de extremos) * Informaci\u00f3n de pron\u00f3stico si est\u00e1 disponible En caso de error o ID no encontrado, devuelve mensaje de error.",
+      "params": [
+        "analysis_id"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_relevance_scorer",
+      "description": "Compute semantic relevance scores between a query and a list of documents using cosine similarity. This tool encodes the query and documents using a sentence embedding model, then calculates pairwise cosine similarity scores to determine how semantically similar each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"Semantic Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries with:, 'document': The original document text., 'score': A float representing cosine similarity between the query and the document (0 to 1).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_initialize_mindbody_client",
+      "description": "Instantiate the global MindbodyClient reading credentials from ./config/.env",
+      "params": []
+    },
+    {
+      "server": "daggerheart-card-reflavor-generator",
+      "name": "daggerheart_card_reflavor_generator_generate_daggerheart_card",
+      "description": "Generate a full Daggerheart domain card image with illustration and layout. Returns: Path to the generated card image.",
+      "params": [
+        "card_title",
+        "image_description"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_analyze_dataset_overview",
+      "description": "Analyzes dataset using Gemini AI and provides storytelling overview. Returns: AI-generated data story, Dataset basic information, Data quality percentage",
+      "params": [
+        "file_obj",
+        "api_key"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_clear_previous_outputs",
+      "description": "Clears all video-related outputs to ensure a clean state for new uploads.",
+      "params": []
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_lookup_food",
+      "description": "Return one row (food, purine, label) that exactly matches *name* (case-insensitive).",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_book_filtered",
+      "description": "Get a filtered list of books from Google Books API. It can be filtered by title, author, genre, and ISBN. Results are ordered by relevance to the query. Only a subset of the volume info is included. Only 10 results are returned. Returns: list - list of books",
+      "params": [
+        "title",
+        "author",
+        "genre",
+        "isbn"
+      ]
+    },
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10q_by_quarter",
+      "description": "Fetch financial reports for company(s) within given calendar quarter(s) and specified sheets from 10-Q filings. Caveat the sheets names is likely to differ between companies, quarters, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, quarters, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "quarters",
+        "sheets"
+      ]
+    },
+    {
+      "server": "CyberSec_Intel_Tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "ThreatRadar",
+      "name": "ThreatRadar_analyze_query_ui",
+      "description": "UI-specific version that returns HTML formatted results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_delete",
+      "description": "Delete user profile. Returns: Dict with operation result",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input_",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "Model_Analysis_MCP",
+      "name": "Model_Analysis_MCP_process_text_comprehensive_analysis",
+      "description": "Processes only text/code descriptions for comprehensive analysis (no ONNX support). Accepts llms_to_query as a string or a list for compatibility.",
+      "params": [
+        "model_input",
+        "llms_to_query",
+        "analysis_types"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_session_status",
+      "description": "Get current pomodoro session status and detailed progress statistics. This function provides comprehensive information about the current session including: work time elapsed, break status, total accumulated work time, and current activity. Returns: Detailed session status including work time, break duration, and progress info",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display_",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_audio_info",
+      "description": "This component should not be used by agents or automated systems.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_download_file_wrapper",
+      "description": "### `download_file_wrapper(file_path: str)` - **Purpose**: Download files from the service - **Use Case**: Retrieving generated reports or datasets",
+      "params": [
+        "file_path"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_predict_modal_lead",
+      "description": "Pr\u00e9diction Modal pour un lead",
+      "params": [
+        "name",
+        "industry",
+        "company_size",
+        "budget_range",
+        "urgency",
+        "source",
+        "expected_revenue",
+        "response_time"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_modal_status",
+      "description": "Statut du mod\u00e8le Modal",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get",
+      "description": "Get user profile by ID. Returns: Dict with profile data or error message",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_error_sync",
+      "description": "Search Stack Overflow for solutions to an error message. Returns: Formatted search results",
+      "params": [
+        "error_message",
+        "language",
+        "technologies",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    }
+  ]
+}

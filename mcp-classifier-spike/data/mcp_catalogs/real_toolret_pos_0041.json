@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_pos_0041",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "marriage_session_booking",
+      "description": "Book a counseling session for marriage therapy, specifying the type of session, preferred time, and counselor details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "checkUrlSafety",
+      "description": "Check whether a single URL or domain has been flagged as unsafe",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Earthquake Data for the Past Day",
+      "description": "Retrieve a list of earthquakes that have occurred in the past day, along with their details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Tags",
+      "description": "Retrieve a list of blogs that have the specified tags.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "games_per_team",
+      "description": "Calculates the total number of games each team plays in a season",
+      "params": []
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "NewsTool",
+      "description": "Stay connected to global events with our up-to-date news around the world.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Golf_Course_Finder_Get_Courses",
+      "description": "This endpoint will return courses within a mile radius of the passed latitude and longitude",
+      "params": [
+        "{'name': 'lng', 'type': 'STRING', 'descr",
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lat', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSecurity",
+      "description": "Retrieve all associated information for a specific security, including all related identifiers.",
+      "params": [
+        "idType",
+        "idValue"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Commodities",
+      "description": "Retrieve a list of commodities from the Commerce domain using the argaam_data_apis_free tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Plants",
+      "description": "This endpoint retrieves a list of all plants in the database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateData",
+      "description": "Update data in a table",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_products",
+      "description": "Fetches a list of products from an external API with optional query parameters for limiting and skipping items in the response.",
+      "params": [
+        "limit",
+        "skip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Leagues",
+      "description": "Search for leagues in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Logo",
+      "description": "Returns logo of the company.\n\nAvailability: Basic plan\nData weighting: 1 API credit per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Jean-Baptiste/camembert-ner",
+      "description": "camembert-ner is a Named Entity Recognition (NER) model fine-tuned from camemBERT on the wikiner-fr dataset. It can recognize entities such as persons, organizations, locations, and miscellaneous entities.",
+      "params": [
+        "model",
+        "tokenizer",
+        "aggregation_strategy"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.sort",
+      "description": "# Sorts worksheet using given sort orders. \nworksheet.sort(*specs, **kwargs)\n\nExamples:\n# Sort sheet A -> Z by column 'B'\nwks.sort((2, 'asc'))\n# Sort range A2:G8 basing on column 'G' A -> Z\n# and column 'B' Z -> A\nwks.sort((7, 'asc'), (2, 'des'), range='A2:G8')\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMilkProduction",
+      "description": "Retrieve milk production information for a specific dairy farm",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_hillshading_tile",
+      "description": "Fetches a hillshading raster tile as a PNG.",
+      "params": [
+        "x",
+        "version",
+        "z",
+        "y"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_temperatures",
+      "description": "This method takes a dictionary representing a table, and returns a list containing the temperature values.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Player Market Value",
+      "description": "Retrieve the market value of a specific player.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes",
+      "description": "Retrieve quotes from anime shows based on the title of the anime.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Seasonal_Goal_Analysis_Goal_Conceded_Minutes",
+      "description": "Provides the goal conceded goal statistics of the teams against to other teams in the tournament in the minutes intervals(0-10, 11-20, 21-30...etc.)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Championship Table",
+      "description": "Retrieve the current championship table for a specified league.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Translation",
+      "description": "Translation is the task of converting text from one language to another.",
+      "params": [
+        "{'name': 'text', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Newly_added_events",
+      "description": "Newly added events",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Get_tracks",
+      "description": "Get one or more tracks",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "difficulty",
+      "description": "Fetches weed strain information based on the difficulty of growing (easy, medium, or difficult).",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cellbiology.protein_expression_analysis",
+      "description": "Analyze the expression levels of specific proteins in different cell types under various conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 3D Model Information",
+      "description": "Retrieves information about a 3D model from Shapeways",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDestinationWeddings",
+      "description": "Retrieve information about destination weddings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Epic_Free_Games_Get_Epic_Free_Games_Coming_Soon",
+      "description": "Get Epic Free Games - Coming Soon",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_denomination_count",
+      "description": "This method takes one argument, 'total_amount', which is the total amount of money the man has. It returns a dictionary containing the count of each denomination of notes he has.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "effluentQualityControl.checkParameters",
+      "description": "Checks and validates the quality of effluent based on regulatory standards.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Watchmode_Title_Streaming_Sources",
+      "description": "Get all of the streaming sources this title is available on and direct links to watch the title (web, iOS deeplinks and Android deeplinks for paid users). Streaming sources are limited to USA only for free plans.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Top_property_managers",
+      "description": "Returns the largest property managers",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "courtCase.searchByDateRange",
+      "description": "Search and retrieve court cases within a specified date range and jurisdiction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str:\n    '''Describe the appearance of an object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to describe.\n       \n    Returns:\n        str: The description of the object's appearance.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # Assume that there is only one object of the given type in the photo\n    object_patch = object_patches[0]\n    description = object_patch.simple_query(f\"Can you describe the {object_name}'s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Calendar_Converter_Convert_Date",
+      "description": "# Converts a date to a specified calendar.",
+      "params": [
+        "{'name': 'to', 'type': 'ENUM', 'descript"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BetSports_get_banners_new",
+      "description": "get-banners-new data",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "imagenet-mobilenet_v2_100_224-feature_vector",
+      "description": "A pre-trained model that can be used to extract feature vectors from images using MobileNetV2 architecture with 224x224 input size.",
+      "params": [
+        "url"
+      ]
+    }
+  ]
+}

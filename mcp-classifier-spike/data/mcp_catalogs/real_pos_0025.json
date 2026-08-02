@@ -1,0 +1,371 @@
+{
+  "catalog_id": "real_pos_0025",
+  "tools": [
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_monitor_crm",
+      "description": "Monitoring CRM natif",
+      "params": [
+        "time_window",
+        "threshold"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_score_from_audio",
+      "description": "Generate a MusicXML score from an input audio (.wav) file. Returns: File path to the generated MusicXML file, or error message on failure.",
+      "params": [
+        "wav_file"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_generate_unit_test",
+      "description": "Generates a Jest unit test file for the provided source code using the Anthropic API. This function leverages the 'QA-Sentinel' automated test engineering bot to create comprehensive unit tests aiming for 100% statement, branch, function, and line coverage. Returns: The content of the generated Jest test file as a string, or an error message, if the code is not provided or an exception occurs during generation.",
+      "params": [
+        "code",
+        "source_code_path",
+        "test_root_dir_path",
+        "additional_system_prompt",
+        "anthropic_api_key"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_set_preferred_model",
+      "description": "Stores the selected model for the current endpoint and saves it.",
+      "params": [
+        "model_selection",
+        "current_url"
+      ]
+    },
+    {
+      "server": "stock-predictions",
+      "name": "stock_predictions_min15_analysis",
+      "description": "Process 15-minute timeframe stock analysis and generate predictions. Returns: A tuple containing:, Trading signals dictionary, Plotly figure with price and technical analysis, Product metrics dictionary, Risk metrics dictionary, Sector metrics dictionary, , >>> min15_analysis(\"AAPL\", 1, 3, \"chronos\"), 'Neutral', 'MACD': 'Buy', ...}, <Figure>, {...}, {...}, {...})",
+      "params": [
+        "s",
+        "pd",
+        "ld",
+        "st"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async_",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_next_page",
+      "description": "Go to next page for equipment",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_remove_from_cellar",
+      "description": "remove a bottle from the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_session_status",
+      "description": "Get current pomodoro session status and detailed progress statistics. This function provides comprehensive information about the current session including: work time elapsed, break status, total accumulated work time, and current activity. Returns: Detailed session status including work time, break duration, and progress info",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_recalls_mcp",
+      "description": "Searches for recent FDA-issued recall events for a specific drug product. This is critical for ensuring patient safety by identifying if a drug or specific batch has been recalled due to manufacturing defects, contamination, or other safety concerns. The results include details on the recall reason, status, and affected lots. Returns: JSON string with recall notices including recall number, status, and reason",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_rdap",
+      "description": "Query RDAP to get information about Internet resources. The Registration Data Access Protocol (RDAP) is the successor to WHOIS. Like WHOIS, RDAP provides access to information about Internet resources (domain names, autonomous system numbers, and IP addresses).",
+      "params": [
+        "url_or_ip"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_multiple_captions_interface",
+      "description": "Generate multiple caption variations using Meta-Llama-3.2-3B-Instruct",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_latest_cycle_gr",
+      "description": "Retrieves the most recent WHOOP cycle (recovery data) for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_correlation_test",
+      "description": "Accepts two variables as comma-separated strings or DataFrame columns and performs correlation analysis. This test determines the strength and direction of the linear relationship between two continuous variables. Pearson correlation measures linear relationships, Spearman correlation measures monotonic relationships (rank-based), and Kendall's tau is robust to outliers and suitable for small samples. The test calculates a correlation coefficient ranging from -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship. A significant result (p-value < alpha) indicates that the observed correlation is statistically different from zero. Effect size interpretation: |r| < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: examining relationship between height and weight, analyzing correlation between study time and test scores, investigating association between variables in research.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "method",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_build_timeline_prompt",
+      "description": "Generate a user-friendly, chronologically ordered timeline from a list of structured events. Use this tool with keyword arguments: build_timeline_prompt(events=[]). Returns: A sequence of chat messages forming a prompt for an LLM to generate a readable timeline.",
+      "params": [
+        "events"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_graph_wrapper",
+      "description": "### `generate_graph_wrapper(graph_type: str, data_json: str)` - **Purpose**: Create visualizations using matplotlib - **Parameters**: `graph_type` - Type of chart (bar, line, pie, scatter) - **Returns**: Image file path and status - **Use Case**: Creating charts and graphs for presentations",
+      "params": [
+        "graph_type",
+        "data_json"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_url_http_content",
+      "description": "Get the content of a URL using an HTTP GET request.",
+      "params": [
+        "url",
+        "content_type"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpchat_with_memory",
+      "description": "Universal chat interface with stored memory context.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_qa_reply",
+      "description": "MCP Endpoint: qa.reply Drafts concise answers to client questions like \"Why should we hire you?\" Speeds up Upwork, Fiverr, or LinkedIn chats.",
+      "params": [
+        "user_id",
+        "question",
+        "context"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_redundancy_checker",
+      "description": "Detect redundant or highly similar document pairs using semantic similarity. This tool encodes all documents into embeddings and computes cosine similarity scores between every pair. It flags document pairs with similarity greater than 0.8 as redundant. Returns: A dictionary containing:, 'tool': The name of the tool (\"Redundancy Checker\")., 'results': A list of redundant document pairs with their similarity scores,, or a message indicating no redundancy if none are found.",
+      "params": [
+        "_",
+        "documents"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_account_help",
+      "description": "Get help with account-related issues and login problems.",
+      "params": [
+        "issue_type"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_train_classes",
+      "description": "Retrieves available travel class categories for a specific train based on its number. This function queries the Indian Railways API to fetch information about the different classes of accommodation available on the specified train (e.g., Sleeper, AC First Class, AC Second Class, etc.). Returns: JSON response containing available class details including:, Class codes (e.g., SL, 1A, 2A, 3A), , If train number is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_translation_workflow",
+      "description": "Translates the provided text to the target language.",
+      "params": [
+        "text",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_hot_games",
+      "description": "Get a list of the Top 50 trending games today from BoardGameGeek. Returns: A list of dictionaries, each representing a popular game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'rank' (str): The current hotness rank of the game on BGG., 'year' (str): The year the game was published (or 'Unknown' if not available)., 'url' (str): URL to the similar game's page on BoardGameGeek.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_tables_in_schema",
+      "description": "### `get_list_of_tables_in_schema(schema_name: str)`",
+      "params": [
+        "schema"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    }
+  ]
+}

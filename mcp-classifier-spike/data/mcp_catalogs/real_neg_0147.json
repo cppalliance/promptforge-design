@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_neg_0147",
+  "tools": [
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "moondream-pointer",
+      "name": "moondream_pointerpredict",
+      "description": "Open Vocabulary Detection using moondream2",
+      "params": [
+        "im",
+        "object_name",
+        "mode"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_fields",
+      "description": "Update other fields when preset model is selected",
+      "params": [
+        "preset_model"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_search_bottle",
+      "description": "search botlle db. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_cover_letter_template",
+      "description": "Get a basic cover letter template for the specified tone. Returns: Dict with template structure and guidelines",
+      "params": [
+        "tone"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_endpoint",
+      "description": "Search the internet as if it were Google. Returns: Search results as a dictionary",
+      "params": [
+        "q",
+        "num",
+        "start",
+        "site",
+        "date_restrict"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_train_modal_model",
+      "description": "Entra\u00eene le mod\u00e8le Modal ML",
+      "params": [
+        "num_leads"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_check_seat_availability",
+      "description": "Retrieves real-time seat availability information for a specific train journey. This function queries the Indian Railways API to check seat availability status based on multiple parameters including class type, stations, quota, and date of journey. It provides detailed information about available seats, waiting list status, and booking possibilities. Returns: JSON response containing availability details including:, Current booking status, Number of available seats, Waiting list numbers if applicable, Chance of confirmation, Alternative availability suggestions, , If required parameters are empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "classType",
+        "fromStationCode",
+        "quota",
+        "toStationCode",
+        "trainNo",
+        "date"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_generate_image2",
+      "description": "Generates an image based on a text prompt using the Flux model running on Modal serverless infrastructure. Returns: The URL of the generated image.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_balance_ui",
+      "description": "Gradio wrapper for get balance",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_update_modal_components_visibility",
+      "description": "Update visibility of Modal-dependent components",
+      "params": [
+        "use_modal"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_voice_enhanced",
+      "description": "POLISHED: Enhanced voice upload with better validation and feedback",
+      "params": [
+        "audio_file",
+        "category"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_connect_to_file",
+      "description": "This function is used to connect to a data source file like CSV or parquet. Returns: -------, tuple, , schema (str): A string representation of the data schema if successful, or an empty string on failure., status (str): A message indicating the success or failure of the connection.",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "pbc-cell-classifier-mcp",
+      "name": "pbc_cell_classifier_mcp_main_classification_fn",
+      "description": "Main function called by gr.Interface. Expects PIL Image from gr.Image(type=\"pil\") but handles edge cases.",
+      "params": [
+        "image_input_from_gradio"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_driver_info",
+      "description": "Retrieve detailed information about a specific driver.",
+      "params": [
+        "driver_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_switch_network_ui",
+      "description": "Gradio wrapper for network switching",
+      "params": [
+        "network",
+        "api_key"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state_",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_speed",
+      "description": "Change video playback speed while maintaining audio quality. Returns: URL to processed video or None if failed, , Handles audio speed limits (0.5-2.0) by chaining atempo filters, Maintains video and audio synchronization, Preserves original quality",
+      "params": [
+        "video_url",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_name",
+      "description": "\u6839\u636eproxy_name\u83b7\u53d6\u4ee3\u7406\u4fe1\u606f \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u96a7\u9053\u914d\u7f6e\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    }
+  ]
+}

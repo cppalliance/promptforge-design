@@ -1,0 +1,362 @@
+{
+  "catalog_id": "real_pos_0102",
+  "tools": [
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_upload_profile_picture",
+      "description": "Uploads a profile picture for the authenticated user. The new filename will be based on the user's profile_id. Requires X-Auth-ID header for authentication.",
+      "params": [
+        "image_upload"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_store_memory",
+      "description": "Store a new memory and return feedback.",
+      "params": [
+        "content",
+        "memory_type",
+        "context",
+        "tags"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_clear_all_chats",
+      "description": "Handle clearing all private chat tabs.",
+      "params": []
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatoranalyze_image",
+      "description": "Analyze an uploaded image and provide a detailed description of its content and layout.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_payment_information",
+      "description": "Get information about accepted payment methods and billing.",
+      "params": [
+        "inquiry_type"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_login",
+      "description": "UI-only function to switch views and update components after login.",
+      "params": [
+        "final_username",
+        "final_channel"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_initialize_whoop_client_with_input",
+      "description": "Authenticates a user using the provided WHOOP email and password. Stores credentials in the environment variables and initializes the WhoopClient.",
+      "params": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_lab",
+      "description": "Changes the color of specified objects in an image using the LAB color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the LAB color space. LAB separates luminance (L) from color components (A for green-red, B for blue-yellow), making it more perceptually uniform and closer to how humans perceive color differences. Use this method when: - Precise perceptual color control is needed (e.g., subtle shifts in tone or matching specific brand colors). - Working in lighting-sensitive tasks where separating lightness from chroma improves quality. - You want color transformations that are less influenced by lighting conditions or brightness variations. OpenCV LAB Ranges: - L: 0-255 (lightness) - A: 0-255 (green-red, 128 = neutral) - B: 0-255 (blue-yellow, 128 = neutral) Common LAB color references: - Green: (L=?, A\u224880, B\u2248128) - Red: (L=?, A\u2248180, B\u2248160) - Blue: (L=?, A\u2248128, B\u224880) - Yellow: (L=?, A\u2248120, B\u2248180) - Purple: (L=?, A\u2248180, B\u2248100). Returns: Base64-encoded string, , If user_input format is invalid, a/b values are outside [0, 255] range, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_start_chat",
+      "description": "Handle starting a private chat.",
+      "params": [
+        "entity_selection"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_generate_unit_test",
+      "description": "Generates a Jest unit test file for the provided source code using the Anthropic API. This function leverages the 'QA-Sentinel' automated test engineering bot to create comprehensive unit tests aiming for 100% statement, branch, function, and line coverage. Returns: The content of the generated Jest test file as a string, or an error message, if the code is not provided or an exception occurs during generation.",
+      "params": [
+        "code",
+        "source_code_path",
+        "test_root_dir_path",
+        "additional_system_prompt",
+        "anthropic_api_key"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_forecast",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte string JSON a lista y llama mcp_forecast_series. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros hist\u00f3ricos - periods (int): Per\u00edodos a pronosticar Retorna resultado de mcp_forecast_series o mensaje de error.",
+      "params": [
+        "data_str",
+        "periods"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_cancel_order",
+      "description": "Cancel an existing order in the ERP system. Returns: Result of the cancellation operation",
+      "params": [
+        "order_id",
+        "reason"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_bm25_relevance_scorer",
+      "description": "Compute relevance scores between a query and a list of documents using the BM25 algorithm. This tool tokenizes each document and the query using a simple whitespace and punctuation-based tokenizer, then calculates BM25 scores to measure how relevant each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"BM25 Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries, each with:, 'document': The original document string., 'score': The BM25 relevance score (higher means more relevant).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_top",
+      "description": "Function to aggregate and list Medicare and Medicaid Fraud Practitioner Exclusions by state. System examines the most recent Office of Inspector General List of Excluded Individuals and Entities (LEIE) and aggregates the number of excluded entities by state. A shorter list of the top 20 locations can be returned with a True flag. Example use includes \"which states have the most excluded entities?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_compare_voices",
+      "description": "Use this tool to compare two voices for a match",
+      "params": [
+        "audio1",
+        "audio2"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_reset_game",
+      "description": "Reset the game state",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_string",
+      "description": "Create a filter string for OpenF1 API requests.",
+      "params": [
+        "filter_name",
+        "filter_value",
+        "operator"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_search_content",
+      "description": "Search content using AnyCrawl API",
+      "params": [
+        "query",
+        "pages",
+        "api_key"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_file",
+      "description": "Process HTR and return a formatted file for download. Returns: File path for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name})",
+      "params": [
+        "image_path",
+        "document_type",
+        "output_format",
+        "custom_settings",
+        "server_name"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_endpoint",
+      "description": "Search the internet as if it were Google. Returns: Search results as a dictionary",
+      "params": [
+        "q",
+        "num",
+        "start",
+        "site",
+        "date_restrict"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_advanced_caption_interface",
+      "description": "Advanced interface function for caption generation",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_equipment",
+      "description": "Refresh equipment table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    }
+  ]
+}

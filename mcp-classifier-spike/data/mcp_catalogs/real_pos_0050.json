@@ -1,0 +1,361 @@
+{
+  "catalog_id": "real_pos_0050",
+  "tools": [
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_balance_ui",
+      "description": "Gradio wrapper for get balance",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "TravAI",
+      "name": "TravAI_get_directions",
+      "description": "Returns a Markdown-formatted string with step-by-step directions and a static map URL. Returns: A single Markdown string summarizing the route or an error message.",
+      "params": [
+        "source",
+        "destination",
+        "mode",
+        "departure_time"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_quarters",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for given quarters from 10-Q filings. Caveat the quarter used here is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "quarters"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_research_request",
+      "description": "This function researches a coding request from the user, generates code, executes it, and returns a clean summary of the results. This is an mcp server function that responds to research coding requests from users. Returns: A tuple containing the JSON result from the orchestrator and a clean summary",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_with_limit",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits per domain.",
+      "params": [
+        "url",
+        "max_links_per_domain"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_semantic_mcp_search",
+      "description": "Handle semantic embedding-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when your query is more abstract or conceptual, as it can understand the meaning and context of your request. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations and similarity scores. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"semantic\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output__",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_web_search",
+      "description": "Wrapper for WebSearchAgent to perform web searches. Returns: Web search results with summaries and URLs",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_question_enhancer",
+      "description": "Wrapper for QuestionEnhancerAgent to provide question enhancement. Returns: Enhanced question result with sub-questions",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_code_wrapper",
+      "description": "### `generate_code_wrapper(user_request: str)` - **Purpose**: Generate Python code based on user request - **Parameters**: `user_request` - Textual description of the analysis - **Returns**: Generated code and status message - **Use Case**: AI-powered code generation for data analysis",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_scrape_website_content",
+      "description": "Scrape a website and return its main content formatted as markdown and a downloadable file path.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_dad_joke",
+      "description": "Fetches a random dad joke from the icanhazdadjoke.com API. The function makes an HTTP GET request to the <https://icanhazdadjoke.com/> API with appropriate headers to receive JSON response. Returns: A random dad joke if successful, otherwise returns an error message., Success: Returns the joke text, Failure: Returns \"Failed to retrieve a joke.\" if the API request fails, No joke: Returns \"No joke found.\" if the API response doesn't contain a joke, , The requests library must be imported to make HTTP requests",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_graph_wrapper",
+      "description": "### `generate_graph_wrapper(graph_type: str, data_json: str)` - **Purpose**: Create visualizations using matplotlib - **Parameters**: `graph_type` - Type of chart (bar, line, pie, scatter) - **Returns**: Image file path and status - **Use Case**: Creating charts and graphs for presentations",
+      "params": [
+        "graph_type",
+        "data_json"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_client_config",
+      "description": "\u521b\u5efa\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = { \"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000, \"webServer\": {               # webServer\u4e0d\u662f\u5fc5\u8981\u914d\u7f6e\uff0c\u5982\u679c\u7528\u6237\u6ca1\u8bf4\uff0c\u5c31\u4e0d\u8981\u914d\u7f6ewebServer \"addr\": \"127.0.0.1\", \"port\": 7400, \"user\": \"admin\", \"password\": \"admin\" } } \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    },
+    {
+      "server": "Google-Sheets-Assistant",
+      "name": "Google_Sheets_Assistant_upload_csv",
+      "description": "Handle CSV file upload",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_update_session_api_keys",
+      "description": "Update API keys for THIS SESSION ONLY",
+      "params": [
+        "mistral_key",
+        "sambanova_key"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_hot_games",
+      "description": "Get a list of the Top 50 trending games today from BoardGameGeek. Returns: A list of dictionaries, each representing a popular game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'rank' (str): The current hotness rank of the game on BGG., 'year' (str): The year the game was published (or 'Unknown' if not available)., 'url' (str): URL to the similar game's page on BoardGameGeek.",
+      "params": []
+    }
+  ]
+}

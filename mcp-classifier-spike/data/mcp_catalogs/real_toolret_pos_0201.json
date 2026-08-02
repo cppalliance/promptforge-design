@@ -1,0 +1,327 @@
+{
+  "catalog_id": "real_toolret_pos_0201",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Accounts_API_GetByAccountNumber",
+      "description": "To get a virtual account by account number.",
+      "params": [
+        "{'name': 'accountNumber', 'type': 'NUMBE"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exhibition.search_exhibitions",
+      "description": "Search for modern art exhibitions based on specific criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/v1/aggregation",
+      "description": "Searches for news articles and returns the count of articles per hour or day",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_search_recipe_information",
+      "description": "Get information about a recipe.",
+      "params": [
+        "{'name': 'recipe_id', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_repayment_schedule",
+      "description": "Calculates the repayment schedule for a loan using specified parameters.",
+      "params": [
+        "installmentcount",
+        "principalamount",
+        "annualinterestrate",
+        "startdate",
+        "repaymentinterval"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGamificationUsage",
+      "description": "Retrieve information about the usage of gamification in education",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mixer.schedule_speed_adjustment",
+      "description": "Schedule a speed adjustment for a specified industrial mixer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_price_chart",
+      "description": "Get related data to draw price chart",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BetSports_get_banners_new",
+      "description": "get-banners-new data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MongoDB_Wix_Get_Vault_By_Name",
+      "description": "Get Vault by name",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_object_size(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def find_object_size(image_patch: ImagePatch, object_name: str) -> str:\n    '''Find the size of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to find the size of.\n       \n    Returns:\n        str: The size of the object if it exists, \"no\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if not object_patches:\n        # No such object in the image\n        return \"no\"\n    object_patch = object_patches[0]\n    size_query = object_patch.simple_query(\"What is th",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "generatequiz",
+      "description": "Generates a quiz based on the specified topic using the Quizy API.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "openai/whisper-base",
+      "description": "Whisper is a pre-trained model for automatic speech recognition (ASR) and speech translation. Trained on 680k hours of labelled data, Whisper models demonstrate a strong ability to generalize to many datasets and domains without the need for fine-tuning.",
+      "params": [
+        "model_name",
+        "input_features",
+        "forced_decoder_ids"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listDatasetsByCategory",
+      "description": "Retrieve a list of datasets belonging to a specific category.",
+      "params": [
+        "category",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_ratio",
+      "description": "This method takes a list of ratios and returns the total ratio.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: s",
+      "description": "def compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: str, interaction_object_name: str, query: str) -> str:\n    '''Compare the interactions of two objects with a third object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object1_name (str): The name of the first object.\n        object2_name (str): The name of the second object.\n        interaction_object_name (str): The name of the object with which the interactions are being compared.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"The sa",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RapidWeather_Call_5_day_3_hour_forecast_data_By_ZIP_code",
+      "description": "Please note if country is not specified then the search works for USA as a default.",
+      "params": [
+        "{'name': 'zip', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geolocation_Simulation_For_Mobile_Apps_List_All_Groups",
+      "description": "List All Groups",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AugustSmartLock",
+      "description": "Used for controlling and managing the August Smart Lock, specifically installed on the front door of the user's residence. It provides tools to lock and unlock the door, check the lock status, add and delete guests, grant and revoke access for guests, generate and revoke access codes, and view access history.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LiveMatches",
+      "description": "Get live handball matches.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mapilion_Vector_and_Raster_Map_Tiles_Get_Fonts",
+      "description": "Returns Fonts for vector tiles. This endpoint is typically used in your style.json.",
+      "params": [
+        "{'name': 'range', 'type': 'string', 'des",
+        "{'name': 'fontstack', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sshleifer/distilbart-cnn-12-6",
+      "description": "DistilBART is a distilled version of BART, a model for text summarization. This specific checkpoint, 'sshleifer/distilbart-cnn-12-6', is trained on the cnn_dailymail dataset and provides a fast and effective way to generate summaries of text. The model can be loaded using the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_comprehensive_report",
+      "description": "Create comprehensive analysis report",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fancy_text_text",
+      "description": "{\"category_name\": \"Entertainment\", \"required_parameters\": [{\"name\": \"text\", \"type\": \"STRING\", \"description\": \"\\u0454\\u03b7\\u0442\\u0454\\u044f \\u0443\\u03c3\\u03c5\\u044f \\u0442\\u0454\\u03c7\\u0442 \\u03b1\\u03b7\\u2202 \\u00a2\\u043d\\u03b1\\u03b7g\\u0454 \\u0442\\u03c3 \\u0192\\u03b1\\u03b7\\u00a2\\u0443 \\u0442\\u0454\\u03c7\\u0442 \\u03c5\\u0455\\u03b9\\u03b7g \\u0442\\u043d\\u03b9\\u0455 \\u00a2\\u03c3\\u03c3\\u2113 \\u03b1\\u03c1\\",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "kotak7_Artis_info",
+      "description": "Artis info",
+      "params": [
+        "{'name': 'num', 'type': 'NUMBER', 'descr",
+        "{'name': 'lang', 'type': 'STRING', 'desc",
+        "{'name': 'index', 'type': 'NUMBER', 'des",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SystemSetting",
+      "description": "Modify system settings under Linux environment, including boot settings.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rate Comparable Companies",
+      "description": "Enables the user to rate the output returned by the /similar API. It is advisable to refresh results after ratings have been submitted as the algorithm fine-tunes its output based on them. Re-searching a company is always free of charge.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Sketch Detection On Image",
+      "description": "useful when you want to generate a scribble of the image. like: generate a scribble of this image, or generate a sketch from this image, detect the sketch from this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Data_playlist_videos",
+      "description": "playlist-videos",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "News Data API",
+      "description": "Retrieve news data by news ID, including author and content, from Seeking Alpha Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_news",
+      "description": "Fetches the latest news related to a specific stock symbol/ticker.",
+      "params": [
+        "symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "contact_restaurant",
+      "description": "Contact the restaurant a specified number of days in advance to inquire about special family gathering meal packages or services, and to obtain a menu and price list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mocking_Rock_Get_Locales_List",
+      "description": "You can use this API to get the list of available locales \nWhich can be used to generate profile APIs response.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_13_getAccountById",
+      "description": "Retrieves an account",
+      "params": [
+        "{'name': 'accountID', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Air Quality by Postal Code",
+      "description": "Retrieve air quality data for a given postal code",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_articles_get_details",
+      "description": "Get analysis detail by id",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ideal_body_weight",
+      "description": "Calculates the ideal body weight based on height, body frame size, gender, and optional formula.",
+      "params": [
+        "body_frame",
+        "height",
+        "gender",
+        "formula"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "change_file_permission",
+      "description": "Change the permission settings of a specified file",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_awesome_product_details",
+      "description": "Fetches detailed information about a product using a given product ID from the Amazon Data Scraper API.",
+      "params": [
+        "productid"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0191",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "scaleApp",
+      "description": "Scale an application on the PaaS platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Booking_com_v2_stays_properties_detail_policies",
+      "description": "Get detail policies",
+      "params": [
+        "{'name': 'id_detail', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "ingen51/DialoGPT-medium-GPT4",
+      "description": "A GPT-4 model for generating conversational responses in a dialogue setting.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Cryptocurrencies",
+      "description": "Retrieve a list of all available cryptocurrencies",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "queryDatabaseRecords",
+      "description": "Executes a custom SQL query on the database and retrieves records based on the provided SQL statement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aviator Latest Results API",
+      "description": "Retrieves the latest results from Aviator at Vai de Bob. The API returns the most recent results first, followed by the oldest results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "timezone_for_location",
+      "description": "Fetch the current time for a given location and area using the World Time API.",
+      "params": [
+        "location",
+        "area"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Rewards",
+      "description": "This endpoint is used to retrieve bid rewards for a given slug.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cross-encoder/nli-deberta-v3-xsmall",
+      "description": "This model is a Cross-Encoder for Natural Language Inference, trained on the SNLI and MultiNLI datasets. It can be used for zero-shot classification tasks.",
+      "params": [
+        "sent",
+        "candidate_labels"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime Illustrations API",
+      "description": "Retrieve anime illustrations made by anime fans, filtered by page and sensitivity, with optional quality parameter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "bigwiz83/sapbert-from-pubmedbert-squad2",
+      "description": "This model is a fine-tuned version of cambridgeltl/SapBERT-from-PubMedBERT-fulltext on the squad_v2 dataset.",
+      "params": [
+        "context",
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_videos",
+      "description": "Search for videos based on a keyword",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "morning_time_range",
+      "description": "Determine the specific time range for the morning period",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "PublicHolidayNextPublicHolidaysWorldwide",
+      "description": "Returns the upcoming public holidays for the next 7 days",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_v3_v3_Channels",
+      "description": "Returns a collection of zero or more `channel` resources that match the request criteria.",
+      "params": [
+        "{'name': 'part', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createDesktopApp",
+      "description": "Create a new desktop application",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getNonprofitBudget",
+      "description": "Retrieve budget information of a nonprofit organization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v2_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "OpenSea_Data_Query_Retrieve_collection_offers_V2",
+      "description": "This endpoint is used to get collection offers for a specified collection.",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NAVITIME_Maps_map_image_GET",
+      "description": "Get a static map image of the location, range and zoom value specified in the parameter.",
+      "params": [
+        "{'name': 'width', 'type': 'NUMBER', 'des",
+        "{'name': 'center', 'type': 'STRING', 'de",
+        "{'name': 'zoom', 'type': 'NUMBER', 'desc",
+        "{'name': 'height', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "companies_profile",
+      "description": "Fetch the profile of a company from the Financial Modeling Prep API.",
+      "params": [
+        "symbol",
+        "apikey"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real_Estate_Records_transactions",
+      "description": "Show transactions given a zipcode. The API returns 50 records each time in descending order by date and supports pagination. This API requires a subscription cost.\n\nThe returned data shows the summary of information. To get further detail (such as the unit of a building that posts the most recent transaction, use summary API.\n\nSample data of the API when query zipcode 10019 is:\n \"data\": [\n    {\n      \"_id\": {\n        \"STREET_NUMBER\": \"310\",\n        \"STREET\": \"W 56th St\",\n        \"PROPERTY_TYPE\": \"SINGLE RESIDENTIAL COOP UNIT\",\n        \"ZIPCODE\": \"10019\",\n        \"STATE\": \"NY\"\n      },\n      \"l",
+      "params": [
+        "{'name': 'zipcode', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "b_b_availability_check",
+      "description": "B&B Availability Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currency_v3_Latest_Rates",
+      "description": "Get the latest rates for all supported countries.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyze_sentiment",
+      "description": "Analyze the sentiment of a given text",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "jokes_Search_for_joke",
+      "description": "Find joke by text",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Snapchat Story",
+      "description": "Retrieve a Snapchat story and its associated data for a given username.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cl-tohoku/bert-base-japanese-char",
+      "description": "This is a BERT model pretrained on texts in the Japanese language. This version of the model processes input texts with word-level tokenization based on the IPA dictionary, followed by character-level tokenization.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fights",
+      "description": "Fetch fights for upcoming/previous sports events",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetDocumentTables",
+      "description": "This API retrieves tables from a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "schedule_email",
+      "description": "Schedule to send an email at a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "lGbThUEr",
+      "description": "Get the list of available teams.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Hotel Information",
+      "description": "Retrieve detailed information about a specific hotel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_session_messages",
+      "description": "Retrieve the message history for a specific character within a given session.",
+      "params": [
+        "character_id",
+        "session_id",
+        "page",
+        "page_size"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airlines_countries",
+      "description": "Return a list of countries where an airline operates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: L",
+      "description": "def find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: List[str], attribute_query: str) -> str:\n    '''Find the attribute of an object or its alternative in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_names (List[str]): The names of the objects to check.\n        attribute_query (str): The query to find the attribute of the object.\n       \n    Returns:\n        str: The attribute of the object if found, \"Unknown\" otherwise.\n    '''\n    for object_name in object_names:\n        object_patches = image_patch.find(obj",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandLink",
+      "description": "Retrieves information on the original URL from a shortened link.",
+      "params": [
+        "apiKey",
+        "shortUrl"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonendconstructorstanding",
+      "description": "Fetches the Constructor Standings at the end of the specified Formula 1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_u_54_athlete_ranking",
+      "description": "Fetches the under-54 athlete ranking for Taekwondo from the provided RapidAPI service.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "feeds",
+      "description": "Fetch recent TikTok feeds for a given user.",
+      "params": [
+        "schematype",
+        "username"
+      ]
+    }
+  ]
+}

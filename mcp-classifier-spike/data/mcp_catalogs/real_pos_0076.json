@@ -1,0 +1,352 @@
+{
+  "catalog_id": "real_pos_0076",
+  "tools": [
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_health_topics_gr",
+      "description": "Gradio wrapper for HealthFinder topic retrieval. Parameters ---------- topic : str Health topic slug or phrase. language : str Output language (``\"en\"`` / ``\"es\"``). Returns ------- str JSON\u2011formatted HealthFinder result.",
+      "params": [
+        "topic",
+        "language"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_modal_status",
+      "description": "Statut du mod\u00e8le Modal",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_from_url",
+      "description": "Convert a document from a URL to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "document_url",
+        "output_format"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_lab",
+      "description": "Changes the color of specified objects in an image using the LAB color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the LAB color space. LAB separates luminance (L) from color components (A for green-red, B for blue-yellow), making it more perceptually uniform and closer to how humans perceive color differences. Use this method when: - Precise perceptual color control is needed (e.g., subtle shifts in tone or matching specific brand colors). - Working in lighting-sensitive tasks where separating lightness from chroma improves quality. - You want color transformations that are less influenced by lighting conditions or brightness variations. OpenCV LAB Ranges: - L: 0-255 (lightness) - A: 0-255 (green-red, 128 = neutral) - B: 0-255 (blue-yellow, 128 = neutral) Common LAB color references: - Green: (L=?, A\u224880, B\u2248128) - Red: (L=?, A\u2248180, B\u2248160) - Blue: (L=?, A\u2248128, B\u224880) - Yellow: (L=?, A\u2248120, B\u2248180) - Purple: (L=?, A\u2248180, B\u2248100). Returns: Base64-encoded string, , If user_input format is invalid, a/b values are outside [0, 255] range, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_forecast",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte string JSON a lista y llama mcp_forecast_series. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros hist\u00f3ricos - periods (int): Per\u00edodos a pronosticar Retorna resultado de mcp_forecast_series o mensaje de error.",
+      "params": [
+        "data_str",
+        "periods"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_staff",
+      "description": "Refresh staff table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_return_policy",
+      "description": "Get comprehensive return and refund policy information.",
+      "params": [
+        "product_category"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_image",
+      "description": "SAM2 Image Segmentation",
+      "params": [
+        "im",
+        "variant",
+        "bboxes",
+        "points",
+        "point_labels"
+      ]
+    },
+    {
+      "server": "daggerheart-card-reflavor-generator",
+      "name": "daggerheart_card_reflavor_generator_generate_daggerheart_card",
+      "description": "Generate a full Daggerheart domain card image with illustration and layout. Returns: Path to the generated card image.",
+      "params": [
+        "card_title",
+        "image_description"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_messages",
+      "description": "Gets all messages for the authenticated user (sent and received). Marks retrieved messages where the user is the receiver as read for subsequent calls. Requires X-Auth-ID header for authentication.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_client_config",
+      "description": "\u5220\u9664\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e **\u6ce8\u610f**\uff1a\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 **\u6ce8\u610f**\uff1a\u5220\u9664\u884c\u4e3a\u4f1a\u5bfc\u81f4\u6570\u636e\u4e22\u5931\uff0c\u4e00\u5b9a\u8981\u7528\u6237\u786e\u8ba4\u540e\u518d\u5220\u9664! \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_remove_path",
+      "description": "Removes a file or directory from the sandbox. Useful for cleaning up temporary files, removing unwanted content, and managing sandbox storage. Returns: JSON string containing success status and removed path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "recursive"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_kernels_list",
+      "description": "List Kaggle kernels (notebooks/scripts) with extensive filtering capabilities. Returns: Formatted JSON string containing array of kernel objects with metadata, , kernels_list(language=\"python\", sort_by=\"hottest\", competition=\"titanic\", page_size=10), Returns top 10 hottest Python kernels for the Titanic competition",
+      "params": [
+        "sort_by",
+        "page",
+        "page_size",
+        "search",
+        "mine",
+        "user",
+        "kernel_type",
+        "output_type",
+        "competition",
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_time",
+      "description": "Extract travel time from route data. Returns: Time in human format like '15 min' or '1 h 23 min'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_proxy_by_name",
+      "description": "\u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053 \u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053\uff0c\u5982\u679c\u96a7\u9053\u4e0d\u5b58\u5728\u5219\u8fd4\u56de\u5931\u8d25\u3002 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_health_status",
+      "description": "Get comprehensive system health status including advanced monitoring features. Retrieves detailed health information about the system including availability of advanced features, system resources, and operational metrics. Returns basic information if advanced monitoring is not available. Returns: A dictionary containing system health status and metrics",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "pbc-cell-classifier-mcp",
+      "name": "pbc_cell_classifier_mcp_main_classification_fn",
+      "description": "Main function called by gr.Interface. Expects PIL Image from gr.Image(type=\"pil\") but handles edge cases.",
+      "params": [
+        "image_input_from_gradio"
+      ]
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_cancel_changes",
+      "description": "Clears the staged changeset and hides the confirmation UI.",
+      "params": []
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_data",
+      "description": "Fetch LinkedIn profile data for the given username. Returns: A dictionary containing the profile data",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state_",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_mine_blocks_ui",
+      "description": "Mine blocks UI wrapper",
+      "params": [
+        "num_blocks"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    }
+  ]
+}

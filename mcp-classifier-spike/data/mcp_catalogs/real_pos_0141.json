@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_pos_0141",
+  "tools": [
+    {
+      "server": "SQlord",
+      "name": "SQlord_update_ui_on_language_change",
+      "description": "Atualiza a interface com base no novo idioma selecionado. Usa gr.update() para garantir que as propriedades dos componentes sejam atualizadas corretamente.",
+      "params": [
+        "language"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info_",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "classify_opening",
+      "description": "Attempt to classify a chess opening using the Lichess openings database. Return the ECO code, name, moves and main sub-variations of the opening.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_extract_limited_content_as_zip",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits for bulk extraction.",
+      "params": [
+        "url",
+        "max_links"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_best_bottle",
+      "description": "ask for the best bottle comments. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_start_server",
+      "description": "Start the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_search_people",
+      "description": "Search for people on LinkedIn. Returns: A dictionary containing the search results or an error message if the request fails.",
+      "params": [
+        "keywords",
+        "start_index",
+        "geo_id",
+        "school_id",
+        "first_name",
+        "last_name",
+        "school_keywords",
+        "title_keywords",
+        "company_keywords"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_artist_and_track",
+      "description": "Searches for a track and returns artist info and URIs",
+      "params": [
+        "track_name"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_speed",
+      "description": "Change video playback speed while maintaining audio quality. Returns: URL to processed video or None if failed, , Handles audio speed limits (0.5-2.0) by chaining atempo filters, Maintains video and audio synchronization, Preserves original quality",
+      "params": [
+        "video_url",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    },
+    {
+      "server": "DuckDuckGo-MCP-Server",
+      "name": "DuckDuckGo_MCP_Server_search_duckduckgo",
+      "description": "Extract the information based on the query. Returns: A list of dictionaries containing title, href and body",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "T2I",
+      "name": "T2I_text_to_images_and_base64_generator",
+      "description": "Converts text into images, returning both PIL objects for UI preview and base64 strings for an API/MCP client, with customizable options.",
+      "params": [
+        "text_content",
+        "style",
+        "font_size",
+        "bg_color_name",
+        "aspect_ratio_str",
+        "font_choice"
+      ]
+    },
+    {
+      "server": "pbc-cell-classifier-mcp",
+      "name": "pbc_cell_classifier_mcp_main_classification_fn",
+      "description": "Main function called by gr.Interface. Expects PIL Image from gr.Image(type=\"pil\") but handles edge cases.",
+      "params": [
+        "image_input_from_gradio"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_from_url",
+      "description": "Convert a document from a URL to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "document_url",
+        "output_format"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_size_guide",
+      "description": "Get size guide information for clothing, shoes, and accessories.",
+      "params": [
+        "product_type",
+        "brand"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_book_filtered",
+      "description": "Get a filtered list of books from Google Books API. It can be filtered by title, author, genre, and ISBN. Results are ordered by relevance to the query. Only a subset of the volume info is included. Only 10 results are returned. Returns: list - list of books",
+      "params": [
+        "title",
+        "author",
+        "genre",
+        "isbn"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_deploy_contract_ui",
+      "description": "Gradio wrapper for contract deployment",
+      "params": [
+        "source_code",
+        "contract_name",
+        "from_account",
+        "constructor_args_str"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_duckduckgo_search",
+      "description": "Given a search query, returns the search results from DuckDuckGo. Returns: The search results from DuckDuckGo Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_search_content",
+      "description": "Search content using AnyCrawl API",
+      "params": [
+        "query",
+        "pages",
+        "api_key"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_registry",
+      "description": "This function (load_registry) should always be called first, before using the load_doc function. It will load the registry file and return the content of the registry. Based on that, you will then be able to pick and chose the documentation you want to load. Returns: The content of the registry, that contains the ID, a description and the URL location for each item of the registry, in JSON format",
+      "params": []
+    }
+  ]
+}

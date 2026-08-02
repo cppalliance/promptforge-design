@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_pos_0116",
+  "tools": [
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output__",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async_",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_search_content",
+      "description": "Search content using AnyCrawl API",
+      "params": [
+        "query",
+        "pages",
+        "api_key"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_call_orchestrator",
+      "description": "Function prototype to call the orchestrator agent",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "Frugal_AI_Agent",
+      "name": "Frugal_AI_Agent_CodeAgent",
+      "description": "In this agent, the tool calls will be formulated by the LLM in code format, then parsed and executed.",
+      "params": [
+        "task"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_datasets_homepage",
+      "description": "Fetches the homepage for the the U.S. Census Bureau 2020 decennial census API housed at https://api.census.gov/data/2020/dec/dp.html. Contains descriptions of available datasets. Also includes links to additional helpful documentation such as available geographies and example API calls. Returns: The homepage in markdown format",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "MCP_Server_LinkedIn_Image_Generator",
+      "name": "MCP_Server_LinkedIn_Image_Generator_process_linkedin_image",
+      "description": "Process an image for LinkedIn optimization using Flux Kontext. Returns: Processed image optimized for LinkedIn",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "BioMedNorm-MCP-Server",
+      "name": "BioMedNorm_MCP_Server_extract_and_normalize",
+      "description": "Extract entities from a paragraph and normalize them in one operation. Returns: List of best matching standard terms in the same order as the, input terms. An entry may be None if normalization failed.",
+      "params": [
+        "paragraph",
+        "target_entity"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_string",
+      "description": "Create a filter string for OpenF1 API requests.",
+      "params": [
+        "filter_name",
+        "filter_value",
+        "operator"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_get_employee_project_assignment",
+      "description": "Returns the mapping of an employee to their project and role within that project for MCPHawk Inc. This tool provides a simple overview of which project an employee is assigned to and their specific role on that project. This tool is useful for team leads, project managers, and HR systems needing to quickly identify employee assignments and responsibilities. **Input:** - `employee_name` (str): The full name of the employee whose project-role mapping is requested. **Returns:** A dictionary containing: - `project_name`: Name of the project the employee is working on - `role`: The employee\u2019s role within that project (e.g., SDE, Architect, DE) If no mapping is found for the given employee, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Aggregate Innovative Paradigms\", \"role\": \"Architect\" }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_product_care_info",
+      "description": "Get care instructions and maintenance information for products.",
+      "params": [
+        "product_category",
+        "material"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_retrieve_ioc_from_threatfox",
+      "description": "Retrieves information about a potential IoC from ThreatFox. It may be used to retrieve information of indicators of compromise (IOCs) associated with malware, with the infosec community, AV vendors and cyber threat intelligence providers. Examples: >>> retrieve_ioc_from_threatfox(\"139.180.203.104\") ... { \"query_status\": \"ok\", \"data\": [ { \"id\": \"12\", \"ioc\": \"139.180.203.104:443\", \"threat_type\": \"botnet_cc\", \"threat_type_desc\": \"Indicator that identifies a botnet command&control...\", \"ioc_type\": \"ip:port\", \"ioc_type_desc\": \"ip:port combination that is used for botnet Command&..., \"malware\": \"win.cobalt_strike\", \"malware_printable\": \"Cobalt Strike\", \"malware_alias\": \"Agentemis,BEACON,CobaltStrike\", \"malware_malpedia\": \"https:\\/\\/malpedia.caad.fkie.fraunhofer.de\\/...\", \"confidence_level\": 75, \"first_seen\": \"2020-12-06 09:10:23 UTC\", \"last_seen\": null, \"reference\": null, \"reporter\": \"abuse_ch\", \"tags\": null, \"malware_samples\": [ { \"time_stamp\": \"2021-03-23 08:18:06 UTC\", \"md5_hash\": \"5b7e82e051ade4b14d163eea2a17bf8b\", \"sha256_hash\": \"b325c92fa540edeb89b95dbfd4400c1cb33599c66859....\", \"malware_bazaar\": \"https:\\/\\/bazaar.abuse.ch\\/sample\\/b325c...\\/\" }, ] } ] }",
+      "params": [
+        "potentially_ioc"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display_",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_optimize_energy_consumption",
+      "description": "Analyze code and suggest energy consumption optimizations. Returns: Optimization suggestions with estimated energy savings",
+      "params": [
+        "code_snippet",
+        "language"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_dataset_view",
+      "description": "View comprehensive details about a specific dataset. Returns: Formatted JSON string containing combined dataset information:, metadata: Dataset description, tags, license, creation date, etc., files: List of all files in the dataset with sizes and types, , dataset_view(\"zillow/zecon\") returns complete information about Zillow's economic dataset, , The dataset parameter must include both owner and dataset name separated by a slash",
+      "params": [
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_pull_file_from_sandbox",
+      "description": "Copies a file from a Modal sandbox to the local filesystem. Useful for retrieving output files, backing up sandbox data, analyzing sandbox-generated content locally, and debugging sandbox operations. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "local_path"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    }
+  ]
+}

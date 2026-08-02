@@ -1,0 +1,332 @@
+{
+  "catalog_id": "real_toolret_pos_0085",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "parenting_advice_tool",
+      "description": "Parenting Guidance Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Earthquake Data for the Past Day",
+      "description": "Retrieve a list of earthquakes that have occurred in the past day, along with their details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v",
+      "description": "Return the realtime exchange rate for two currencies. They can either be physical or digital/crypto.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auto_Profanity_Filter_Remove_Profanity",
+      "description": "Removes Profanity from Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SPAC Top-10 Rankings",
+      "description": "Returns the top-10 gainers, losers, and volume leaders for a given period and equity type (i.e., common, unit, warrants).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Supported Languages for Image Processing",
+      "description": "This API returns a list of all supported languages for image processing, including their corresponding language codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pricer_Search_for_a_product",
+      "description": "search by product name",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "d4data/biomedical-ner-all",
+      "description": "An English Named Entity Recognition model, trained on Maccrobat to recognize the bio-medical entities (107 entities) from a given text corpus (case reports etc.). This model was built on top of distilbert-base-uncased.",
+      "params": [
+        "model",
+        "tokenizer",
+        "aggregation_strategy"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_role_or_attribute(image_patch: ImagePatch, object_context: str, query: ",
+      "description": "def identify_role_or_attribute(image_patch: ImagePatch, object_context: str, query: str) -> str:\n    '''Identify the role or attribute of a specific object in a given context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_context (str): The context of the object to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The role or attribute of the object if it exists, \"No {object_context} found.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_context)\n    if len(object_patches) > 0:\n        o",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getgamelevel",
+      "description": "Fetches a game level from the Roomtek Music Trivia API.",
+      "params": [
+        "level",
+        "output"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pet_Store_getPetById",
+      "description": "Returns a single pet",
+      "params": [
+        "{'name': 'petId', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Face_Recognition_View_DB",
+      "description": "Read / view all face uids in your DB as \"faces_list\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_climate_data_by_lat_lon_or_key",
+      "description": "Fetch climate data for a specific location by latitude and longitude or by city key.",
+      "params": [
+        "lat",
+        "lon",
+        "key",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_Reviews_by_ID",
+      "description": "Get reviews for a chosen app by app id",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Haber API",
+      "description": "Retrieves the latest news headlines from ntv.com.tr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scout_Basic_Phone_Number_Validation",
+      "description": "**Basic Phone Number Validation**\n\n- determine if a phone number is in a valid format \n\n- determine if a phone number is impossible for a particular region\n\n- properly format the number for various scenarios like international or local dialing\n\n- attempts to determine line type\n\n- determines country and country code",
+      "params": [
+        "{'name': 'dialcode', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "company_search",
+      "description": "Search for companies by name using the Indeed API.",
+      "params": [
+        "company_name",
+        "locality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Makes",
+      "description": "Retrieve a list of car makes from the car database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorcycle Specifications",
+      "description": "Retrieves motorcycle specifications based on the provided article and specification type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TOTD Tracks by Date",
+      "description": "Get the TOTD tracks by string containing the year and month.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_points_point_forecast",
+      "description": "Forecast data for a point. The DWML format is a temporary format to aid transition and will be sunset at a later date. This response is derrived from the /gridpoints endpoint and is intentionally less structured. If more structure is required, developers should use the /gridpoints endpoint directly. Example: /points/39.0693,-94.6716/forecast",
+      "params": [
+        "{'name': 'point', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DateClock_Convert_to_Islamic_Hijri_Hijriah",
+      "description": "Convert date to Islamic or (Hijri) (Hijriah)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mathematical_Symbolic_Expression_Manipulator_SimplifyBasic",
+      "description": " ",
+      "params": [
+        "{'name': 'expression', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ice Hockey Tournaments",
+      "description": "Retrieve a list of ice hockey tournaments covered by the data provider.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RapidWeather_By_ZIP_code",
+      "description": "Please note if country is not specified then the search works for USA as a default.",
+      "params": [
+        "{'name': 'zip', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chaingateway_io_importAddress",
+      "description": "Returns all ethereum addresses created with an account.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TargetHeartRate",
+      "description": "Calculates the target heart rate range for cardiovascular exercise based on the user's age and fitness level using the Karvonen method.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_transaction_deletion",
+      "description": "Create a request to delete erroneous transactions",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_point_on_line_segment(point_a, point_b, distance_ratio)",
+      "description": "def find_point_on_line_segment(point_a, point_b, distance_ratio):\n    \"\"\"\n    Find the coordinates of a point on a line segment, given the coordinates of the endpoints and a ratio of distances from the point to the endpoints.\n\n    Parameters:\n    point_a (tuple): The coordinates of the first endpoint.\n    point_b (tuple): The coordinates of the second endpoint.\n    distance_ratio (float): The ratio of the distance from the point to the first endpoint to the distance from the point to the second endpoint.\n\n    Returns:\n    tuple: The coordinates of the point.\n    \"\"\"\n    x_a, y_a = point_a\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Inferno_Inferno",
+      "description": "Meme API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_South_Asian_Express_get_users_68a613f6_d503_4942_9c11_e04e59427ec1",
+      "description": "List Tags",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Cat Picture",
+      "description": "Fetches a random cat picture from the Reward domain, called by the kitten_placeholder tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chaingateway_io_newAddress",
+      "description": "Generates a new ethereum addresses you can use to send or receive funds. Do not lose the password! We can't restore access to an address if you lose it.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indicator Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWordMeaning",
+      "description": "Retrieve the meaning of a word",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Deep_Image_rest_api_deep_image_result_jobHash",
+      "description": " ",
+      "params": [
+        "{'name': 'jobHash', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "entertainment",
+      "description": "Fetches entertainment news from Google News using the provided language region.",
+      "params": [
+        "lr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HoG_18_1_App_Config",
+      "description": "\u53d6\u5f97\u7cfb\u7d71\u53c3\u6578",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "format_currency",
+      "description": "This method takes one argument, 'amount', and returns a string representation of the amount in the format \"Rs. X.XX\".",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getBouncedRecipients",
+      "description": "Retrieve a list of bounced email recipients.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

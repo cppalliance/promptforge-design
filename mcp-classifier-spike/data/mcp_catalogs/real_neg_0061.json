@@ -1,0 +1,373 @@
+{
+  "catalog_id": "real_neg_0061",
+  "tools": [
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_stream_response_with_state",
+      "description": "Stream response and update appropriate chat state",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_return_policy",
+      "description": "Get comprehensive return and refund policy information.",
+      "params": [
+        "product_category"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_search_content",
+      "description": "Search content using AnyCrawl API",
+      "params": [
+        "query",
+        "pages",
+        "api_key"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input_",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_sales_orders_wrapper",
+      "description": "Recherche des commandes de vente native",
+      "params": [
+        "name",
+        "min_amount",
+        "state",
+        "limit"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle_image",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details",
+        "image"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_pull_file_from_sandbox",
+      "description": "Copies a file from a Modal sandbox to the local filesystem. Useful for retrieving output files, backing up sandbox data, analyzing sandbox-generated content locally, and debugging sandbox operations. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "local_path"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_extract_information",
+      "description": "Run the extraction pipeline and return output logs + state as a dict.",
+      "params": [
+        "cv_file",
+        "job_description_file",
+        "motivation_file",
+        "examples_file",
+        "max_iterations"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_messages",
+      "description": "Gets all messages for the authenticated user (sent and received). Marks retrieved messages where the user is the receiver as read for subsequent calls. Requires X-Auth-ID header for authentication.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_analyze_stack_trace_sync",
+      "description": "Analyze a stack trace and find relevant solutions on Stack Overflow. Returns: Formatted search results",
+      "params": [
+        "stack_trace",
+        "language",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpsearch_memory",
+      "description": "Universal memory search interface with performance comparison in dual mode.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name",
+        "top_k"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_with_limit",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits per domain.",
+      "params": [
+        "url",
+        "max_links_per_domain"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_memories",
+      "description": "Universal memory listing interface.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_wikipedia",
+      "description": "Search Wikipedia using LangChain WikipediaLoader. Returns: Formatted Wikipedia search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "grady",
+      "name": "grady_ask",
+      "description": "Ask General AI Assistant a question to answer. Returns: The answer to the question",
+      "params": [
+        "question",
+        "openai_api_key",
+        "gemini_api_key",
+        "anthropic_api_key",
+        "file_name"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_distance",
+      "description": "Extract distance from route data. Returns: Distance like '5.2 km'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_generate_all_content",
+      "description": "Generate content for all platforms using Modal AI or local service",
+      "params": [
+        "business_type",
+        "target_audience",
+        "content_goal",
+        "brand_name",
+        "key_message",
+        "use_modal",
+        "model_name"
+      ]
+    }
+  ]
+}

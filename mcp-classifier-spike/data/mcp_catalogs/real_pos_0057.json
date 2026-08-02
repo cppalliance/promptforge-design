@@ -1,0 +1,335 @@
+{
+  "catalog_id": "real_pos_0057",
+  "tools": [
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_messages",
+      "description": "Gets all messages for the authenticated user (sent and received). Marks retrieved messages where the user is the receiver as read for subsequent calls. Requires X-Auth-ID header for authentication.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__auto_refresh_game_state",
+      "description": "Auto-refresh game state and UI elements with update objects.",
+      "params": [
+        "auto_refresh"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_new_profile",
+      "description": "Generates and returns a dating profile questionnaire, a new public profile_id, and a new private auth_id. Also creates an initial profile stub.",
+      "params": []
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_coin_flip",
+      "description": "Simulate flipping a coin multiple times.",
+      "params": [
+        "flips"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_memory",
+      "description": "Universal memory storage interface - supports memvid, vector, or dual storage modes.",
+      "params": [
+        "text",
+        "client_id",
+        "metadata"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display_",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output___",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_raw_world_data",
+      "description": "Handle testing raw world data access.",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_cache_status",
+      "description": "Get cache status and statistics.",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_tactical_patterns",
+      "description": "Analyze immediate tactical patterns from a given FEN string. This function detects: - Potential knight forks and double attacks (refering to next move) - Pins, skewers, discovered attacks and x\u2010ray attacks in the current position.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_health_topics_gr",
+      "description": "Gradio wrapper for HealthFinder topic retrieval. Parameters ---------- topic : str Health topic slug or phrase. language : str Output language (``\"en\"`` / ``\"es\"``). Returns ------- str JSON\u2011formatted HealthFinder result.",
+      "params": [
+        "topic",
+        "language"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_rag_query",
+      "description": "This is a tool that returns law content by input a question. It will find the related law and return. Returns: A list of law content related to the question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_download",
+      "description": "Downloads a paper from Arxiv and converts it to text. Use mode = \"html\" by default. Fall back to mode = \"pdf\" if there are any problems with the HTML version. Returns a JSON with a following structure: { \"title\": \"...\", \"abstract\": \"...\", \"toc\": \"...\", \"sections\": [\"...\", ...], \"citations\": [...] } Use `json.loads` to deserialize the result if you want to get specific fields. For example, `abstract = json.loads(arxiv_download(\"2409.06820v1\"))` The \"toc\" key contains Table of Contents, that sometimes has indexing for sections.",
+      "params": [
+        "paper_id",
+        "include_citations",
+        "mode"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_full_prediction",
+      "description": "Full prediction run, with a team of ensembles and agents. Returns: A dictionary containing the model details, classification scores, and label.",
+      "params": [
+        "img",
+        "confidence_threshold",
+        "rotate_degrees",
+        "noise_level",
+        "sharpen_strength"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_next_page",
+      "description": "Go to next page for rooms",
+      "params": []
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_start_agent_tracing",
+      "description": "Start tracing an AI agent execution. Call this at the beginning of any agent workflow. Returns: JSON response with execution_id for tracking",
+      "params": [
+        "agent_name",
+        "api_key"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_check_tools",
+      "description": "Sync wrapper for tool status check",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_clear_job_cache",
+      "description": "Clear the job search cache to force fresh results. Returns: Dict with operation result",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themerconvert_css_to_theme",
+      "description": "Convert CSS styles or style descriptions into standardized theme JSON format using HF hosted LLM.",
+      "params": [
+        "css_input",
+        "theme_name",
+        "user_token",
+        "model_choice"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_login_user",
+      "description": "Handles login logic. Returns final username, channel, unformatted history, and roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_info",
+      "description": "Affiche les informations sur les fonctions CRM",
+      "params": []
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_neg_0031",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Sim_based_Location_Tracking_NumberList",
+      "description": "\n<p>All  of <b>last updated locations</b> of provided concents phone numbers can be fetched through this endpoint,</p>\n\n<h2 id=\"output\">OUTPUT</h2>\n<p>\n<h4>Invalid user credentials</h4>\n</p>\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper language-undefined\"><code class=\"is-highlighted language-undefined\">{\n    \"errors\": \"Invalid username/password.\"\n}\n</code></pre>\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DailyCred_Create_a_User_With_Only_an_Email",
+      "description": "{\"category_name\": \"Tools\", \"required_parameters\": [{\"name\": \"email\", \"type\": \"STRING\", \"description\": \"The user's email.\", \"default\": \"\"}, {\"name\": \"client_id\", \"type\": \"STRING\", \"description\": \"Your client id, found on your settings page.\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"DailyCred_Create_a_User_With_Only_an_Email\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des",
+        "{'name': 'client_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_establishment(image_patch: ImagePatch, sign_name: str) -> str",
+      "description": "def identify_establishment(image_patch: ImagePatch, sign_name: str) -> str:\n    '''Identify the type of establishment represented by a given sign.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        sign_name (str): The name of the sign to identify the establishment.\n       \n    Returns:\n        str: The type of establishment if the sign is detected, \"no {sign_name} sign detected\" otherwise.\n    '''\n    sign_patches = image_patch.find(sign_name)\n    if sign_patches: \n        establishment = sign_patches[0].simple_query(f\"What kind of establishment is this?\")\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNBC_symbols_translate",
+      "description": "Get issueId from specific symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "restrictAccess",
+      "description": "Restrict access to a specific section in the library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "conductEthnographicResearch",
+      "description": "Conduct ethnographic research to study human behavior and cultures",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_combined_rate",
+      "description": "This method takes three arguments, 'rate_1', 'rate_2', and 'rate_3', and returns the combined rate at which the three pipes can fill the tank in units per hour.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Verse Details by Verse ID",
+      "description": "Retrieves detailed information about a specific verse in the Bhagavad Gita by providing its chapter ID and verse ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "send_email",
+      "description": "Send an email to a specific email address",
+      "params": [
+        "{'name': 'email_address', 'in': 'query',",
+        "{'name': 'content', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hryvna_Today_v1_convert",
+      "description": "Use this method to convert money",
+      "params": [
+        "{'name': 'to', 'type': 'NUMBER', 'descri",
+        "{'name': 'sum', 'type': 'NUMBER', 'descr",
+        "{'name': 'from', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Photos",
+      "description": "Retrieve photos of a specific business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FilmTMDB.get_now_playing",
+      "description": "Get a list of movies that are currently in theatres",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_rows",
+      "description": "This method takes a list of integers representing a stem-and-leaf plot, a minimum stem value, and a maximum stem value, and returns the total number of rows with stems in the given range.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fast_Email_verifier_EmailVerification",
+      "description": "Basic usage\nIt is a simple way to verify an email address with different dimensions.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VenueTool",
+      "description": "for booking and setting up the venue for the event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Archive Events by Sport",
+      "description": "Retrieves a list of archived events for a specific sport, with optional filtering by league ID and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Watchmode_Title_Streaming_Sources",
+      "description": "Get all of the streaming sources this title is available on and direct links to watch the title (web, iOS deeplinks and Android deeplinks for paid users). Streaming sources are limited to USA only for free plans.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Classify",
+      "description": "Classifies input text into categories based on the IAB taxonomy and returns the confidence score and classification result.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareOrganismsAnatomy",
+      "description": "Compare the anatomy of two organisms",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bus_trolley_locations",
+      "description": "Retrieves the current bus and trolley locations for a specified route.",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List_Movies_Limit",
+      "description": "The limit of results per page that has been set",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "geQt_threatds",
+      "description": "A summarized list of all threads on a board including thread numbers, their modification time and reply count.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Thesaurus_by_API_Ninjas_v1_thesaurus",
+      "description": "API Ninjas Thesaurus API endpoint. Returns a list of synonyms and a list of antonyms for a given word.",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "delete_folder",
+      "description": "Delete a specific folder",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PubNub_Network_Time",
+      "description": "Timetoken from PubNub Network",
+      "params": [
+        "{'name': 'callback', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_World_News",
+      "description": "This endpoint provides the world news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alaska Gas Prices API",
+      "description": "Returns current and historical gas price data for Alaska. Users can query historical data by adding the `string` parameter to this endpoint. The API returns the data in JSON format by default, but users can switch to XML format by adding the `Accept: application/xml` header to their request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_arrangement(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def determine_arrangement(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the arrangement of a group of objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for arrangement.\n       \n    Returns:\n        str: \"scattered\" if the objects are scattered, \"lined up\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) < 1:\n        return f\"There are no {object_name}.\"\n    # Defining the threshold for determining whether the objects are scatter",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_pineapple_count",
+      "description": "This method takes two arguments, 'total_amount' and 'pineapple_price', and returns the number of pineapples that can be purchased with the given amount.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "/v1/thesaurus",
+      "description": "API Ninjas Thesaurus API endpoint. Returns a list of synonyms and a list of antonyms for a given word.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Sky_news_Arabic",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0627\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0633\u0643\u0627\u064a \u0646\u064a\u0648\u0632 \u0639\u0631\u0628\u064a",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Uncovered_Treasure_random",
+      "description": "Get random treasure",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Team Playoffs Top Players",
+      "description": "Get the top players for a specific American Football team in a playoff tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "trends",
+      "description": "Fetches the latest charts data from YouTube Music for a specified country. The charts include top songs, top videos, top artists, and top trending videos. For the US, it has an additional Genres section with some genre-specific charts.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get School Details",
+      "description": "Retrieve detailed information about a specific school",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iiot.get_sensor_data",
+      "description": "Retrieve the sensor data from a specific industrial IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Data_community_post_details",
+      "description": "community-post-details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Symbols Splits",
+      "description": "Retrieve historical price quotes for a given stock symbol, including any splits that occurred during that time period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getUserPastes",
+      "description": "Retrieve a list of pastes created by a specific user.",
+      "params": [
+        "userKey",
+        "limit"
+      ]
+    }
+  ]
+}

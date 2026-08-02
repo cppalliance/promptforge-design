@@ -1,0 +1,99 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  drop degenerate config ultratool: 1 distinct golds over 500 queries
+pool=44453 tools  queries=7460  model=BAAI/bge-small-en-v1.5
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 15255.36it/s]
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "n_queries": 7460,
+  "pool": 44453,
+  "distractors": 39,
+  "top1": 0.7819034852546917,
+  "recall@3": 0.8690348525469169,
+  "per_config_top1": {
+    "apibank": 0.900990099009901,
+    "apigen": 0.955,
+    "appbench": 0.96875,
+    "autotools-food": 1.0,
+    "autotools-music": 1.0,
+    "autotools-weather": 1.0,
+    "craft-math-algebra": 0.9607142857142857,
+    "craft-tabmwp": 0.29310344827586204,
+    "craft-vqa": 0.495,
+    "gorilla-huggingface": 0.554,
+    "gorilla-pytorch": 0.46511627906976744,
+    "gorilla-tensor": 0.509090909090909,
+    "gpt4tools": 0.75,
+    "gta": 0.2857142857142857,
+    "metatool": 0.7,
+    "mnms": 1.0,
+    "restgpt-spotify": 1.0,
+    "restgpt-tmdb": 0.8518518518518519,
+    "reversechain": 0.965,
+    "rotbench": 0.34545454545454546,
+    "t-eval-dialog": 0.7,
+    "t-eval-step": 0.92,
+    "taskbench-daily": 0.95,
+    "taskbench-huggingface": 0.9130434782608695,
+    "taskbench-multimedia": 0.975,
+    "tool-be-honest": 0.9371428571428572,
+    "toolace": 0.897,
+    "toolalpaca": 0.9574468085106383,
+    "toolbench": 0.9254545454545454,
+    "toolbench-sam": 0.34517766497461927,
+    "toolemu": 0.2894736842105263,
+    "tooleyes": 0.5157894736842106,
+    "toolink": 0.8169014084507042,
+    "toollens": 0.7388535031847133
+  }
+}
+wrote C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\results\toolret_large_bge-small-en-v1.5.json
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  drop degenerate config ultratool: 1 distinct golds over 500 queries
+pool=44453 tools  queries=7460  model=sentence-transformers/all-MiniLM-L6-v2
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 15082.16it/s]
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "n_queries": 7460,
+  "pool": 44453,
+  "distractors": 39,
+  "top1": 0.7896782841823057,
+  "recall@3": 0.8809651474530831,
+  "per_config_top1": {
+    "apibank": 0.7326732673267327,
+    "apigen": 0.963,
+    "appbench": 0.9375,
+    "autotools-food": 0.9090909090909091,
+    "autotools-music": 0.875,
+    "autotools-weather": 0.9090909090909091,
+    "craft-math-algebra": 0.8964285714285715,
+    "craft-tabmwp": 0.40804597701149425,
+    "craft-vqa": 0.48,
+    "gorilla-huggingface": 0.618,
+    "gorilla-pytorch": 0.4883720930232558,
+    "gorilla-tensor": 0.7272727272727273,
+    "gpt4tools": 0.71875,
+    "gta": 0.5,
+    "metatool": 0.735,
+    "mnms": 1.0,
+    "restgpt-spotify": 0.925,
+    "restgpt-tmdb": 0.8703703703703703,
+    "reversechain": 0.98,
+    "rotbench": 0.33454545454545453,
+    "t-eval-dialog": 0.62,
+    "t-eval-step": 0.9,
+    "taskbench-daily": 0.9,
+    "taskbench-huggingface": 0.9130434782608695,
+    "taskbench-multimedia": 1.0,
+    "tool-be-honest": 0.9342857142857143,
+    "toolace": 0.926,
+    "toolalpaca": 0.8723404255319149,
+    "toolbench": 0.8981818181818182,
+    "toolbench-sam": 0.37055837563451777,
+    "toolemu": 0.47368421052631576,
+    "tooleyes": 0.5578947368421052,
+    "toolink": 0.937625754527163,
+    "toollens": 0.6337579617834395
+  }
+}
+wrote C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\results\toolret_large_all-MiniLM-L6-v2.json
+EXIT=0

@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_neg_0018",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getNewTenderNotifications",
+      "description": "Receive notifications of new tenders that match specific criteria.",
+      "params": [
+        "keyword",
+        "region",
+        "category",
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Free_NBA_Get_All_Teams",
+      "description": "This endpoint retrieves all teams for the current season.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindNearbyRestaurant",
+      "description": "This API finds a nearby restaurant based on the user's current location.",
+      "params": [
+        "{'name': 'user_location', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Active_Search_v2",
+      "description": "{\"category_name\": \"Other\", \"required_parameters\": [{\"name\": \"current_page\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"1\"}, {\"name\": \"per_page\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"10\"}, {\"name\": \"sort\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"distance\"}, {\"name\": \"exclude_children\", \"type\": \"STRING\", \"description\": \"\", \"default\": true}], \"optional_parameters\": [], \"met",
+      "params": [
+        "{'name': 'current_page', 'type': 'STRING",
+        "{'name': 'per_page', 'type': 'STRING', '",
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'exclude_children', 'type': 'ST"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "confirm_available_appointment_times",
+      "description": "Confirm the available appointment times of the service center",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPhoto",
+      "description": "Retrieve details about a specific photo, including its URL, download link, and metadata.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "arrange_letters",
+      "description": "Calculates the number of ways the letters of a word can be arranged",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "REMarketLite_APIs_GetListingsByGeo_Valuation",
+      "description": "API returns property listings by accepting various filters like Zip code, Street, City and State",
+      "params": [
+        "{'name': 'OrderId', 'type': 'STRING', 'd",
+        "{'name': 'State', 'type': 'STRING', 'des",
+        "{'name': 'City', 'type': 'STRING', 'desc",
+        "{'name': 'Zip', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_newspapers",
+      "description": "This method takes a dictionary representing a table and a string representing a person's name, and returns the corresponding integer value of the number of newspapers collected by that person.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuestInfo",
+      "description": "Retrieve information on a specific quest.",
+      "params": [
+        "quest"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_related_questions",
+      "description": "Fetches related questions from Google SERP \"People Also Ask\" boxes based on a provided query.",
+      "params": [
+        "query",
+        "location",
+        "max_results"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "customerAnalytics.segmentationAnalysis",
+      "description": "Performs customer segmentation based on demographic and behavioral data to identify distinct customer groups.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Codes",
+      "description": "Returns a list of language codes in ISO 639-1 format, which can be used for language detection and translation purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flightera_Flight_Data_flightInfo",
+      "description": "Returns the info for a flight on a specified date, or the current flight if date is omitted. Will return a 400 if the date requested is outside the subscription level",
+      "params": [
+        "{'name': 'flnr', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YTS_am_Torrent_Movie_Comments_XML",
+      "description": "Returns all the comments for the specified movie",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TRW_news_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "keyword_search_at_coordinate_point",
+      "description": "Fetch search results for a given query at a specified geographic coordinate point using the RapidAPI Local Rank Tracker service.",
+      "params": [
+        "lat",
+        "lng",
+        "query",
+        "x_user_agent",
+        "zoom"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Thai_Lottery_Get_lottery_result_by_date",
+      "description": "Get lottery result by date - \u0e14\u0e36\u0e07\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e1c\u0e25\u0e01\u0e32\u0e23\u0e2d\u0e2d\u0e01\u0e23\u0e32\u0e07\u0e27\u0e31\u0e25 \u0e42\u0e14\u0e22\u0e23\u0e30\u0e1a\u0e38\u0e27\u0e31\u0e19\u0e17\u0e35\u0e48",
+      "params": [
+        "{'name': 'date', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Company_s_Profile",
+      "description": "Get Company's Profile",
+      "params": [
+        "{'name': 'marketID', 'type': 'NUMBER', '",
+        "{'name': 'companyID', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP_ECHO_json",
+      "description": "Response your real IP with json format",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance.roeTrendAnalysis",
+      "description": "Analyzes the trend in Return on Equity over a range of years for multiple companies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ResponseTemplateGenerator.generate",
+      "description": "Generates a response template based on the type of negative review, incorporating business policies and tone guidelines.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getVolleyballScore",
+      "description": "Retrieve the current score of a volleyball match",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Videos",
+      "description": "Retrieve a list of videos associated with a specific user on Likee.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TV Series Season",
+      "description": "Retrieves information about a specific season of a TV series from the movies database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoAPI_Get_Country_Details",
+      "description": "Get details of country from its name and prefix.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDepartures",
+      "description": "Retrieves real-time information about departures from a specific stop or station.",
+      "params": [
+        "stop_id",
+        "transport_mode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Music_Genre_Classification_Tool",
+      "description": "Classifies music tracks into genres based on audio features and metadata, providing insights into the musical attributes and genre distribution.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "climate.get_air_quality_index",
+      "description": "Retrieve the Air Quality Index (AQI) for a specific location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_petstore_loginUser",
+      "description": "Logs user into the system",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Retweet Users Continuation",
+      "description": "This API returns the next list of users who retweeted a tweet, given a tweet ID and continuation token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Revision",
+      "description": "Retrieve a specific revision of a post",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Most Popular News",
+      "description": "Returns a list of the most popular news articles from the Finance domain, as determined by readers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "souvenir_search",
+      "description": "Travel Souvenir Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestOutfit",
+      "description": "This API suggests an outfit based on the current weather.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_initial_fee(cost1, nights1, cost2, nights2)",
+      "description": "def find_initial_fee(cost1, nights1, cost2, nights2):\n    \"\"\"\n    Find the initial fee based on the total cost of two different durations.\n\n    Parameters:\n    cost1 (float): The total cost of the first duration.\n    nights1 (int): The number of units of the first duration.\n    cost2 (float): The total cost of the second duration.\n    nights2 (int): The number of units of the second duration.\n\n    Returns:\n    float: The initial fee.\n    \"\"\"\n    # Calculate the cost per unit after the first unit\n    cost_per_unit = (cost2 - cost1) / (nights2 - nights1)\n\n    # Calculate the initial fee\n    init",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_state1_time(total_progress, total_time, state1_rate, state2_rate)",
+      "description": "def find_state1_time(total_progress, total_time, state1_rate, state2_rate):\n    \"\"\"\n    Find the time spent in state 1 based on the total progress, total time, and rates of progress in each state.\n\n    Parameters:\n    total_progress (float): The total progress made.\n    total_time (float): The total time spent.\n    state1_rate (float): The rate of progress in state 1.\n    state2_rate (float): The rate of progress in state 2.\n\n    Returns:\n    sympy.Rational: The time spent in state 1 as a common fraction.\n    \"\"\"\n    state1_time, state2_time = symbols('state1_time state2_time')\n\n    # Define t",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shazam_Track_Info",
+      "description": "This endpoint will return info of any track from shazam.com",
+      "params": [
+        "{'name': 'track_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Gainers",
+      "description": "Get the top gainers in cryptocurrency markets today, including their current prices and percentage changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Haber API",
+      "description": "Retrieves the latest news headlines from ntv.com.tr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

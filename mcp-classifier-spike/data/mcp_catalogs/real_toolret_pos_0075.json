@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_pos_0075",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "get_last_login_time",
+      "description": "Get the last login time of the account",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Card Information",
+      "description": "Returns card information for a given card ID. User authentication is required.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_from_frequency_table(data_frame, frequency_col)",
+      "description": "def calculate_total_from_frequency_table(data_frame, frequency_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a frequency table and returns the total number of items based on the frequencies.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the frequency table with a column specified by frequency_col.\n    frequency_col (str): The column name for the frequencies.\n    \n    Returns:\n    int: The total number of items.\n    \"\"\"\n    # Sum up the values in the frequency column\n    total_items = data_frame[frequency_col].sum()\n    \n    return total_",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_divisible_by",
+      "description": "This method takes two arguments, 'number' and 'divisor', and returns True if 'number' is divisible by 'divisor', and False otherwise.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWarehouseInformation",
+      "description": "Retrieve information about a warehouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "REMarketLite_APIs_GetListingsByGeo_Valuation",
+      "description": "API returns property listings by accepting various filters like Zip code, Street, City and State",
+      "params": [
+        "{'name': 'OrderId', 'type': 'STRING', 'd",
+        "{'name': 'State', 'type': 'STRING', 'des",
+        "{'name': 'City', 'type': 'STRING', 'desc",
+        "{'name': 'Zip', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "optimizeWebsite",
+      "description": "Optimize a website for better search engine rankings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_2023_Get_reel_by_shortcode",
+      "description": "Get reel info by shortcode.",
+      "params": [
+        "{'name': 'shortcode', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_by_username",
+      "description": "Fetches user data from Instagram using a given username via the Toolbench RapidAPI.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAdvocacyPhone",
+      "description": "Retrieve phone number for advocacy inquiries",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Driver_Standings",
+      "description": "To list the driver standings in F1 races.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getdownloadurl",
+      "description": "Generates an mp3 download URL using a Text-to-Speech (TTS) engine for the provided text and voice.",
+      "params": [
+        "text",
+        "voice_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "businessplan",
+      "description": "Generates a business plan for the given idea using the Business Starter API.",
+      "params": [
+        "idea"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "pcoloc/autotrain-mikrotik-7-7-1860563588",
+      "description": "A tabular regression model trained with AutoTrain to predict carbon emissions based on input features.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Format Units",
+      "description": "Formats a given value with a specified unit and returns the formatted string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "flair/ner-english-ontonotes-fast",
+      "description": "This is the fast version of the 18-class NER model for English that ships with Flair. It predicts 18 tags such as cardinal value, date value, event name, building name, geo-political entity, language name, law name, location name, money name, affiliation, ordinal value, organization name, percent value, person name, product name, quantity value, time value, and name of work of art. The model is based on Flair embeddings and LSTM-CRF.",
+      "params": [
+        "sentence"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "enterprise_credit_assessment",
+      "description": "Enterprise Credit Assessment Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "collibra_get_data_dictionary",
+      "description": "Retrieve the data dictionary of a specific domain in Collibra.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_intraday",
+      "description": "This API returns current and 20+ years of historical intraday OHLCV time series of the equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTemplates",
+      "description": "Retrieve a list of email templates for the mailslurp_email_testing tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Abiola_Amazon_Data_Scraper_Get_Amazon_Product_Details",
+      "description": "This endpoint get the general product description of any amazon product.",
+      "params": [
+        "{'name': 'productId', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Movies_Tv_Shows_Database_Get_Trending_Movies",
+      "description": "return movie results with title , year , id",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TopicIdentifier",
+      "description": "used to identify the topic in the text",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "alerts_active_area_area",
+      "description": "Retrieves a list of active weather alerts for a specified area using the National Weather Service API. The data is returned in CAP-ATOM format.",
+      "params": [
+        "area"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historical Exchange Rates",
+      "description": "Retrieve historical exchange rate data for a given string and currency conversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_v2_VenueDetails",
+      "description": "Venue Details",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'lang', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get NCAA Final Four Teams",
+      "description": "Retrieve a list of teams that have appeared in the NCAA Final Four, along with the years they appeared.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "setLoadForecast",
+      "description": "Set load forecast for a specific area",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumer_phone_search",
+      "description": "Search for people in the Data Axle database based on the provided criteria.",
+      "params": [
+        "limit",
+        "packages",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Product2ID",
+      "description": "This API generates the ID of a specific product through its product name.",
+      "params": [
+        "{'name': 'product_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "format_document",
+      "description": "Format document content",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_exchange_details",
+      "description": " ",
+      "params": [
+        "{'name': 'exchange_slug', 'type': 'STRIN",
+        "{'name': 'chain_slug', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ingredient_substitutes_by_id",
+      "description": "Search for substitutes for a given ingredient.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Get_company_Basic_data",
+      "description": "The Get company details endpoint will return all basic company data on B2BHint.",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'internationalNumber', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_type_people_get_proxy_voting_management",
+      "description": "Get proxy voting management as displayed in the People tab",
+      "params": [
+        "{'name': 'securityId', 'type': 'STRING',",
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProjectScheduler.allocateResources",
+      "description": "Allocates resources to different tasks within a construction project, ensuring optimal utilization based on task priority and resource availability.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "driveRobot",
+      "description": "Control the movement of an automotive robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/search/image",
+      "description": "This endpoint is used to perform image search using the Google Search JSON API. You can send a request with parameters like **q** (search query), **num** (desired number of images), **start** (starting index of results), and others. The request will generate a JSON response containing information about images that match the search query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "KVStore_Get_storage_info",
+      "description": "Show the user's storage status and information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getInsectLifeCycle",
+      "description": "Retrieve the life cycle information of insect species",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

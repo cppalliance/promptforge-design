@@ -1,0 +1,380 @@
+{
+  "catalog_id": "real_neg_0034",
+  "tools": [
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_upload_file",
+      "description": "Handle file uploads in the Gradio interface. Returns: Tuple of (status_message, updated_file_uploads_log)",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_exact_match_checker",
+      "description": "Check if each document contains the exact query string as a substring (case-insensitive). This tool performs a case-insensitive substring search to determine whether the query appears in each document exactly as entered (without tokenization or semantic matching). Returns: A dictionary containing:, 'tool': The name of the tool (\"Exact Match Checker\")., 'query': The input query string., 'results': A list of dictionaries with:, 'document': The original document., 'exact_match': A boolean indicating if the query is an exact substring of the document.",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_client_config",
+      "description": "\u4fee\u6539\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = {\"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000} \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_update_modal_components_visibility",
+      "description": "Update visibility of Modal-dependent components",
+      "params": [
+        "use_modal"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_update_api_keys",
+      "description": "Update API keys and restart connection",
+      "params": [
+        "modal_url",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state_",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_home_buying_tax_calculator_browser_use",
+      "description": "Uses a browser automation agent to navigate the UK government's Stamp Duty Land Tax (SDLT) calculator website and retrieve the total SDLT due based on provided property and purchaser details. This tool is specifically for properties in England or Northern Ireland. Returns: The result from the browser interaction, typically the total SDLT due or an, error message if the process fails.",
+      "params": [
+        "region",
+        "property_type",
+        "day",
+        "month",
+        "year",
+        "purchaser_type",
+        "purchaser_purpose",
+        "more_properties",
+        "replace",
+        "First_time_Buyer",
+        "main_residence",
+        "price"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_initialize_whoop_client_with_input",
+      "description": "Authenticates a user using the provided WHOOP email and password. Stores credentials in the environment variables and initializes the WhoopClient.",
+      "params": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_retrieve_ioc_from_threatfox",
+      "description": "Retrieves information about a potential IoC from ThreatFox. It may be used to retrieve information of indicators of compromise (IOCs) associated with malware, with the infosec community, AV vendors and cyber threat intelligence providers. Examples: >>> retrieve_ioc_from_threatfox(\"139.180.203.104\") ... { \"query_status\": \"ok\", \"data\": [ { \"id\": \"12\", \"ioc\": \"139.180.203.104:443\", \"threat_type\": \"botnet_cc\", \"threat_type_desc\": \"Indicator that identifies a botnet command&control...\", \"ioc_type\": \"ip:port\", \"ioc_type_desc\": \"ip:port combination that is used for botnet Command&..., \"malware\": \"win.cobalt_strike\", \"malware_printable\": \"Cobalt Strike\", \"malware_alias\": \"Agentemis,BEACON,CobaltStrike\", \"malware_malpedia\": \"https:\\/\\/malpedia.caad.fkie.fraunhofer.de\\/...\", \"confidence_level\": 75, \"first_seen\": \"2020-12-06 09:10:23 UTC\", \"last_seen\": null, \"reference\": null, \"reporter\": \"abuse_ch\", \"tags\": null, \"malware_samples\": [ { \"time_stamp\": \"2021-03-23 08:18:06 UTC\", \"md5_hash\": \"5b7e82e051ade4b14d163eea2a17bf8b\", \"sha256_hash\": \"b325c92fa540edeb89b95dbfd4400c1cb33599c66859....\", \"malware_bazaar\": \"https:\\/\\/bazaar.abuse.ch\\/sample\\/b325c...\\/\" }, ] } ] }",
+      "params": [
+        "potentially_ioc"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement__",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_call_orchestrator",
+      "description": "Function prototype to call the orchestrator agent",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_token",
+      "description": "Create a token with specified properties, they can be items or characters.",
+      "params": [
+        "name",
+        "type",
+        "x",
+        "y",
+        "size",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_event_info",
+      "description": "Retrieve information about a specific Formula 1 event.",
+      "params": [
+        "year",
+        "round",
+        "format"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_music_recommendations",
+      "description": "Fetches multiple music recommendations from Spotify API. Returns: Markdown-formatted string of top song recommendations.",
+      "params": [
+        "prompt",
+        "num_songs",
+        "min_popularity",
+        "year"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_push_file_to_sandbox",
+      "description": "Copies a file from the local filesystem to a Modal sandbox. Useful for uploading input files, transferring configuration files, setting up sandbox environments, and deploying code to sandboxes. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "local_path",
+        "sandbox_path",
+        "read_file_mode",
+        "writefile_mode"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_recommend_dosing_weight_mcp",
+      "description": "Recommends the most appropriate weight to use for medication dosing calculations (i.e., actual, ideal, or adjusted body weight) based on the patient's actual weight and height. This is crucial for obese or underweight patients, as using the wrong weight can lead to sub-therapeutic or toxic drug levels for certain medications. Returns: JSON string with dosing weight recommendation and rationale",
+      "params": [
+        "actual_weight",
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    }
+  ]
+}

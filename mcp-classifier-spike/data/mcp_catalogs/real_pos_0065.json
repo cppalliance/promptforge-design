@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_pos_0065",
+  "tools": [
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "FinancialRatioCalculator",
+      "name": "FinancialRatioCalculator__build_metric_help",
+      "description": "Returns a tuple (description, json_template) for the chosen ratio.",
+      "params": [
+        "selected_ratio"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_clear_fields",
+      "description": "Clear the subject and story text fields. Returns: List[str]: Empty strings for the fields to clear",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "MCP_ClaimVerificationSystem",
+      "name": "MCP_ClaimVerificationSystem_verify_claim",
+      "description": "Use this tool to verify a claim",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_analyze_stack_trace_sync",
+      "description": "Analyze a stack trace and find relevant solutions on Stack Overflow. Returns: Formatted search results",
+      "params": [
+        "stack_trace",
+        "language",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_user",
+      "description": "Function to lookup user information. Company User Lookup System. Enter a username to get user details. Returns: A formatted string with user details if found, otherwise an error message.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_normalization",
+      "description": "Apply audio normalization to adjust the peak level of an audio file. This function loads an audio file and applies normalization to adjust the peak audio level to a specified target level in decibels (dB). It provides before and after statistics to show the effect of the normalization process. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, normalized_audio_data: array), for the normalized audio result, or None if an error occurred, Second element: A status message string showing before/after peak levels, and success/error information, , result, status = apply_normalization(\"url/to/audio.mp3\", -6.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Target level is specified in decibels (dB), Common target levels: -6dB (moderate), -3dB (loud), -12dB (quiet), Positive target levels will amplify audio and may cause clipping, Negative target levels will reduce audio volume, Function preserves original sample rate and audio format, Returns comparison statistics showing original vs normalized peak levels",
+      "params": [
+        "audio_file",
+        "target_level"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_create_table_from_query",
+      "description": "### `create_table_from_query(table_name: str, source_query: str)`",
+      "params": [
+        "table_name",
+        "source_query"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_optimize_energy_consumption",
+      "description": "Analyze code and suggest energy consumption optimizations. Returns: Optimization suggestions with estimated energy savings",
+      "params": [
+        "code_snippet",
+        "language"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_reverse",
+      "description": "Reverse the playback direction of an audio file. This function loads an audio file and reverses the audio data so that it plays backwards. This creates a reverse playback effect commonly used for artistic purposes, sound design, or audio analysis. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, reversed_audio_data: array), for the reversed audio result, or None if an error occurred, Second element: A status message string indicating successful reversal, or error information, , result, status = apply_reverse(\"url/to/audio.mp3\"), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Reverses the entire audio file from end to beginning, Preserves original sample rate, duration, and audio quality, Commonly used for creative effects, sound design, or subliminal messaging detection, The reversed audio will have the same duration as the original, All audio characteristics (pitch, timbre) are preserved but played backwards, Works with both mono and stereo audio files",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_compare_enhancement_methods",
+      "description": "Vergleicht verschiedene Bildverbesserungsmethoden f\u00fcr veterin\u00e4rmedizinische Analyse.",
+      "params": [
+        "image_file",
+        "species",
+        "body_part"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_search_adverse_events_mcp",
+      "description": "Searches the FDA Adverse Event Reporting System (FAERS) database for adverse events associated with a specific drug. This tool is useful for initial investigation into a drug's safety profile by retrieving summaries of reported adverse event cases. It provides a quick overview of potential side effects reported by healthcare professionals and the public. Returns: JSON string with adverse event contexts and metadata",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_position",
+      "description": "Describe the current chess position from a FEN string, plus a material summary. Attempts to classify the opening, and if successful, adds the opening information to the position. Otherwise, it adds a piece map with the current pieces and the list of legal moves.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "MCP_Server_Web2JSON",
+      "name": "MCP_Server_Web2JSON_webpage_to_json_wrapper",
+      "description": "Wrapper function that converts schema input to BaseModel",
+      "params": [
+        "content",
+        "is_url",
+        "schema_input"
+      ]
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_quick_check",
+      "description": "Quick security check with minimal JSON output",
+      "params": [
+        "user_query",
+        "use_llm_analysis"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_logout",
+      "description": "UI-only function to switch views after logout.",
+      "params": []
+    },
+    {
+      "server": "FootballMatchesByDate",
+      "name": "FootballMatchesByDate_get_matches_by_date",
+      "description": "Fetches all matches for a given date from the Football Data API. Returns: A dictionary with the match ID as the key, and a dictionary containing the competition, home team, away team, home score and away score as the value",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_session_results",
+      "description": "Retrieve and format the results of a specific session.",
+      "params": [
+        "year",
+        "round",
+        "session_type"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle_image",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_move_item",
+      "description": "Move an item to a new position.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_start_server",
+      "description": "Start the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_recommend_dosing_weight_mcp",
+      "description": "Recommends the most appropriate weight to use for medication dosing calculations (i.e., actual, ideal, or adjusted body weight) based on the patient's actual weight and height. This is crucial for obese or underweight patients, as using the wrong weight can lead to sub-therapeutic or toxic drug levels for certain medications. Returns: JSON string with dosing weight recommendation and rationale",
+      "params": [
+        "actual_weight",
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_technical_analysis",
+      "description": "Get the technical analysis for the given symbol. Returns: Technical analysis for the symbol/ticker for the given period. Returns a dict containing the analysis.",
+      "params": [
+        "symbol",
+        "exchange",
+        "country",
+        "interval"
+      ]
+    },
+    {
+      "server": "CraftJest",
+      "name": "CraftJest_generate_unit_test",
+      "description": "Generates a Jest unit test file for the provided source code using the Anthropic API. This function leverages the 'QA-Sentinel' automated test engineering bot to create comprehensive unit tests aiming for 100% statement, branch, function, and line coverage. Returns: The content of the generated Jest test file as a string, or an error message, if the code is not provided or an exception occurs during generation.",
+      "params": [
+        "code",
+        "source_code_path",
+        "test_root_dir_path",
+        "additional_system_prompt",
+        "anthropic_api_key"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_serve_image_from_path",
+      "description": "Serve the sample image",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    }
+  ]
+}

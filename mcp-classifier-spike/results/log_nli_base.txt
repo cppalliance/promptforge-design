@@ -1,0 +1,12 @@
+eval=seed  examples=111  catalogs=16
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli template=capability ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 11522.03it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:capability] 111 records in 317.9s (0.3/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli template=usage ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 11443.90it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:usage] 111 records in 302.7s (0.4/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli template=example ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 11427.85it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:example] 111 records in 328.5s (0.3/s)
+wrote results\seed_nli_base.jsonl

@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_pos_0064",
+  "tools": [
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_find_article",
+      "description": "Uses vector search to find the most likely title of the article referred to by query. Use this function if the user is asking about an article, but it is not clear what the exact title of the article is.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_update_api_keys",
+      "description": "Updates the global MISTRAL_API_KEY and GEMINI_API_KEY variables. Returns: A string confirming that the API keys have been saved.",
+      "params": [
+        "mistral_key",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_position",
+      "description": "Describe the current chess position from a FEN string, plus a material summary. Attempts to classify the opening, and if successful, adds the opening information to the position. Otherwise, it adds a piece map with the current pieces and the list of legal moves.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SlideDeck-AI",
+      "name": "SlideDeck_AI_execute_agent_task",
+      "description": "Orchestrates the full tool chain and updates the UI with native audio components.",
+      "params": [
+        "uploaded_files_list",
+        "user_topic_input"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_medical_document_wrapper",
+      "description": "Wrapper function for medical document upload",
+      "params": [
+        "file_path",
+        "document_type"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "TravAI",
+      "name": "TravAI_get_directions",
+      "description": "Returns a Markdown-formatted string with step-by-step directions and a static map URL. Returns: A single Markdown string summarizing the route or an error message.",
+      "params": [
+        "source",
+        "destination",
+        "mode",
+        "departure_time"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_clear_previous_outputs",
+      "description": "Clears all video-related outputs to ensure a clean state for new uploads.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_info_bottle",
+      "description": "analyse une image de bouteille. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_suggest_move",
+      "description": "Suggest a move for the given FEN position. This function can be used to give a hint to the user about the best move to play. This function takes a FEN string representing the current board state and returns the best move in SAN format. Returns: The best move in SAN format.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_job_status",
+      "description": "Check the current status of a LoRA training job or image generation job. This function queries the Modal API to get the current status of a training job using its unique job ID. It returns detailed information about the job progress. Note that if we are invoking this function with MCP, the user cannot neccecarily see the images in the tool call, so you will have to render them again in the chat. **MCP Client Limitation:** Due to MCP client constraints, we cannot render a gallery of images in the chat. The MCP client should render these URLs as clickable markdown links when possible. Returns: tuple[str, List[Image.Image]]: (status_message, all_images), status_message: Detailed status message containing job information, all_images: List of PIL Image objects if images are available, empty list otherwise, , \"completed\": Job finished successfully, \"running\": Job is still in progress, \"failed\": Job failed due to an error, \"error\": System error occurred, , //modal-app-url-api-job-status.modal.run\")",
+      "params": [
+        "job_id",
+        "job_status_url"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle_image",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_code_wrapper",
+      "description": "### `generate_code_wrapper(user_request: str)` - **Purpose**: Generate Python code based on user request - **Parameters**: `user_request` - Textual description of the analysis - **Returns**: Generated code and status message - **Use Case**: AI-powered code generation for data analysis",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output__",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message_",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_start_agent_tracing",
+      "description": "Start tracing an AI agent execution. Call this at the beginning of any agent workflow. Returns: JSON response with execution_id for tracking",
+      "params": [
+        "agent_name",
+        "api_key"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_client_config",
+      "description": "\u521b\u5efa\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8bf7\u6c42\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): - program_id = \"0\" - data = { \"serverAddr\": \"127.0.0.1\", \"serverPort\": 7000, \"webServer\": {               # webServer\u4e0d\u662f\u5fc5\u8981\u914d\u7f6e\uff0c\u5982\u679c\u7528\u6237\u6ca1\u8bf4\uff0c\u5c31\u4e0d\u8981\u914d\u7f6ewebServer \"addr\": \"127.0.0.1\", \"port\": 7400, \"user\": \"admin\", \"password\": \"admin\" } } \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_points_of_interest",
+      "description": "Find points of interest near given coordinates. Increase radius if not found (10km is default), try with more categories if not found any poi. Returns: Formatted text with POI information",
+      "params": [
+        "lat",
+        "lon",
+        "radius_km",
+        "categories"
+      ]
+    }
+  ]
+}

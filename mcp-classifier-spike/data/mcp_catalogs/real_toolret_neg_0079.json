@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0079",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "layoutlmv2-base-uncased-finetuned-infovqa",
+      "description": "This model is a fine-tuned version of microsoft/layoutlmv2-base-uncased on an unknown dataset.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "museumExplorer.getExhibits",
+      "description": "Retrieve detailed information about exhibits in specified museums including exhibit themes, dates, and visitor restrictions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_likecounts_by_itemids_styleids",
+      "description": "Retrieves like counts for specified item IDs and style IDs from the Zappos API.",
+      "params": [
+        "siteid",
+        "itemids"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PredictEvolutionRate.calculateMutationRate",
+      "description": "Calculates the mutation rate for a given species over a specified time period using a complex evolutionary model. The input data must be structured according to the specified format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Most Popular News",
+      "description": "Returns a list of the most popular news articles from the Finance domain, as determined by readers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDataSources",
+      "description": "Returns a hierarchical list of available data sources for the Education domain, used by the Helioviewer v1 tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COD_API_2_0_Season_Kills_Leaderboard_MW_2",
+      "description": "Get season kills information for up to 2000 players on the MW 2 leaderboard.",
+      "params": [
+        "{'name': 'season', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest News",
+      "description": "This endpoint provides the latest news on stocks, commodities, money, politics, etc.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_ticket_by_train_number",
+      "description": "Find the train ticket ID by train number and ID number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Top_Charts_2022_Spotify_Music",
+      "description": "Spotify top chart songs 2022",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "improveLeadershipCommunication",
+      "description": "Provides tips and techniques to enhance leadership communication skills",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Track Details (Single)",
+      "description": "Retrieve detailed information about a single Spotify track, including track name, thumbnail, duration, and artist name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockTwits_watchlists_show",
+      "description": "Returns the the list of ticker symbols in a specified watch list for the authenticating user. Required parameter is the ID of the watch list, not the name of the watch list.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Medium_stories_topic",
+      "description": "{\"category_name\": \"News_Media\", \"required_parameters\": [{\"name\": \"topic\", \"type\": \"STRING\", \"description\": \"Topic slug\", \"default\": \"\"}], \"optional_parameters\": [{\"name\": \"limit\", \"type\": \"NUMBER\", \"description\": \"Number of results to return\", \"default\": 10}, {\"name\": \"page\", \"type\": \"NUMBER\", \"description\": \"Page offset\", \"default\": 0}, {\"name\": \"filter\", \"type\": \"STRING\", \"description\": \"Page of",
+      "params": [
+        "{'name': 'topic', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "downloadMinecraftJar",
+      "description": "Downloads a Minecraft .jar string for a specific version.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Media_Downloader_Search_for_Playlists",
+      "description": "This endpoint searches for YouTube playlists. Pagination scraping is supported. Thumbnails will not be blurred by age safety.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LANDR_Mastering_v1_Master_GetDownloadPath",
+      "description": "Rate Limits: 100 requests per minute\n            ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ai.train_model",
+      "description": "Train a machine learning model with specified algorithm and dataset.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_average",
+      "description": "Find the average of a list of numbers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "kan-bayashi_ljspeech_joint_finetune_conformer_fastspeech2_hifigan",
+      "description": "A pretrained Text-to-Speech model based on the ESPnet framework, fine-tuned on the LJSpeech dataset. This model is capable of converting text input into synthesized speech.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "government.structureAnalysis",
+      "description": "Analyzes the government structure of a specified country during a particular year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asset_checkout_approval",
+      "description": "Asset checkout approval process tool for taking company assets off company premises",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IRCTC_GetTrainClasses",
+      "description": " ",
+      "params": [
+        "{'name': 'trainNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGeriatricSocialWorkInfo",
+      "description": "Retrieve information about geriatric social work",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_House_prices_for_detail",
+      "description": "House-prices for detail",
+      "params": [
+        "{'name': 'uprn', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP_Geolocation_Find_IP_Location_and_IP_Info_Get_IP_Geolocation",
+      "description": "This endpoint returns geolocation and other useful points from an IP Address. If IP address is provided as query parameter, geolocation is performed on that IP address. If IP address is left empty, geolocation data of client IP is returned.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard 200 Albums (Greatest of All Time)",
+      "description": "Provides the Greatest of All Time Billboard 200 Albums chart information, including album titles, artists, and relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Diagnosis2Treatment",
+      "description": "This API is to convert a disease name to its treatment plan.",
+      "params": [
+        "{'name': 'disease', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submitServiceRequest",
+      "description": "Allow citizens to submit service requests to the government",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Team_data",
+      "description": "Get team data by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Text Styler API",
+      "description": "This API is used to style and format text using various fonts, colors, and effects.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_History_Timeline_Random_Historic_Event",
+      "description": "Returns a Random World Historic Event with the year and the event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "audio.setup_microphone_array",
+      "description": "Configure and optimize a microphone array setup for live sound reinforcement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Football Team Logo Image",
+      "description": "Retrieve the logo image of a football team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateFarmArea",
+      "description": "Update the area of a farm",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Data",
+      "description": "Retrieves all data from the database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok Video Downloader",
+      "description": "Downloads a TikTok video without watermarks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Direct_Debit_Managed_Service_Rapidata_Services",
+      "description": "Direct Debit Managed Service API",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_action_location(image_patch: ImagePatch, action: str) -> str",
+      "description": "def find_action_location(image_patch: ImagePatch, action: str) -> str:\n    '''Find the location of a specific action happening in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        action (str): The action to find the location of.\n       \n    Returns:\n        str: The location of the action if found, \"Not found\" otherwise.\n    '''\n    \n    action_query = image_patch.find(action)\n    if action_query:\n        location = action_query[0].simple_query(\"Where is this happening?\")\n        return location\n    else:\n        return \"Not found\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_a_face",
+      "description": "Generates a face image using an AI service and returns the result as a JSON object or text. It utilizes the Toolbench RapidAPI service.",
+      "params": [
+        "ai"
+      ]
+    }
+  ]
+}

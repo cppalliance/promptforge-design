@@ -1,0 +1,365 @@
+{
+  "catalog_id": "real_toolret_neg_0069",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "calculateWorkDone",
+      "description": "Calculate the work done in a thermodynamic process",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestApparel",
+      "description": "This API suggests suitable apparel based on the weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "InvestmentOptimizer.optimizePortfolio",
+      "description": "Optimizes a portfolio of investments based on the provided investment data and optimization parameters. The optimization algorithm considers factors such as expected returns, risk tolerance, and investment constraints.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_search_grocery_product",
+      "description": "Search packaged food products like frozen pizza and snickers bars.",
+      "params": [
+        "{'name': 'query', 'in': 'query', 'schema",
+        "{'name': 'maxCalories', 'in': 'query', '",
+        "{'name': 'minProtein', 'in': 'query', 's",
+        "{'name': 'maxProtein', 'in': 'query', 's",
+        "{'name': 'minCarbs', 'in': 'query', 'sch",
+        "{'name': 'maxCarbs', 'in': 'query', 'sch",
+        "{'name': 'number', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quadro_de_s_cios_CPF_CNPJ_CPF",
+      "description": "Buscar pelo CPF do s\u00f3cio ou administrador",
+      "params": [
+        "{'name': 'cpf', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_best_players_in_playoffs_if_exist",
+      "description": "Works the same like regular season just for the playoffs.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'STRING', '",
+        "{'name': 'competitionId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_greater_number_from_sum_and_difference(sum_of_numbers, difference_of_number",
+      "description": "def find_greater_number_from_sum_and_difference(sum_of_numbers, difference_of_numbers):\n    \"\"\"\n    Find the greater of two numbers given their sum and difference.\n\n    Parameters:\n    sum_of_numbers (float): The sum of the two numbers.\n    difference_of_numbers (float): The difference between the two numbers.\n\n    Returns:\n    float: The greater of the two numbers.\n    \"\"\"\n    # Let x be one number and y be the other number\n    x, y = symbols('x y')\n\n    # Define the equations based on the given conditions\n    equation1 = Eq(x + y, sum_of_numbers)\n    equation2 = Eq(x - y, difference_of_numbe",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon_India_Scraper_v3_Product_Reviews",
+      "description": "Get The Product's Reviews",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindProductId",
+      "description": "This API returns the id of a product.",
+      "params": [
+        "{'name': 'product_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "map",
+      "description": "Fetches a map image in WMTS format based on the given parameters.",
+      "params": [
+        "tilerow",
+        "tilematrix",
+        "tilecol",
+        "rotationangle",
+        "mapstyle",
+        "landmarkicon",
+        "resolution",
+        "contour"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MAX",
+      "description": "Retrieve the highest value over a specified period for a given instrument.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseQueryExecutor.runProcedure",
+      "description": "Runs a stored procedure on the specified database and returns the result. The database connection, procedure name, and optional parameters must be provided.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomBearImage",
+      "description": "Retrieve a random bear image with optional background color and format.",
+      "params": [
+        "backgroundColor",
+        "format",
+        "withBear"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_constant_for_one_real_root(a, b, c, variable)",
+      "description": "def find_constant_for_one_real_root(a, b, c, variable):\n    \"\"\"\n    Find the constant that makes a quadratic equation have exactly one real root.\n\n    Parameters:\n    a (float): The coefficient of the square term in the quadratic equation.\n    b (float): The coefficient of the linear term in the quadratic equation.\n    c (float): The constant term in the quadratic equation.\n    variable (symbol): The symbol for the variable.\n\n    Returns:\n    float: The constant value that makes the equation have exactly one real root.\n    \"\"\"\n\n    # For a quadratic equation ax^2 + bx + c = 0 to have exactly o",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPharmacyLaw",
+      "description": "Retrieve information related to pharmacy law and ethics",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "lakahaga/novel_reading_tts",
+      "description": "This model was trained by lakahaga using novelspeech recipe in espnet. It is designed for Korean text-to-speech tasks.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Udemy_course_scrapper_api_Course_name",
+      "description": "Provide course name",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Epoch_Converter_seconds_simplified",
+      "description": "Convert seconds to get days, hours, minutes, seconds. (Seconds) -> Days: 1, Hours: 3, Minutes: 46, Seconds: 40",
+      "params": [
+        "{'name': 'data_type', 'type': 'STRING', ",
+        "{'name': 'figure', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createSignatureRequest",
+      "description": "Create a new signature request for a document",
+      "params": [
+        "document_id",
+        "signers",
+        "message",
+        "subject"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Pollen_Data_latest_by_lat_lng",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_categories_v2_list",
+      "description": "List all root and sub categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Princier_Couture_Postal",
+      "description": "Postal",
+      "params": [
+        "{'name': 'get', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aircraft Database Stats",
+      "description": "Retrieve statistics about the aircraft database, including the total number of known aircraft.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_review_tracker",
+      "description": "Track user reviews for a specified product ID and time range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "T3MA",
+      "description": "Calculates the Triple Exponential Moving Average (T3MA) for a given financial instrument.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Team Details",
+      "description": "Retrieve detailed information about a specific Motorsport team by providing the team ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_2_Google_Videos",
+      "description": "Using this API you can get the JSON data of the video results.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_val",
+      "description": "def get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_value, col_value):\n    \"\"\"\n    This function takes in a pandas DataFrame, row and column criteria, and returns the value of the cell that matches the criteria.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing data with columns specified by row_col and col_name.\n    row_col (str): The column name for the row criteria.\n    col_name (str): The column name for the column criteria.\n    row_value (str): The value of the row criteria.\n    col_value (str): The value of the column criteria.\n    \n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseConstraintValidator.checkUniqueConstraint",
+      "description": "Checks if a unique constraint is valid in a database table.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vin_decoder_v4_AU_Decode",
+      "description": "AU Decode",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pipeline Management",
+      "description": "The Pipeline Management API allows users to manage business processes, specifically pipelines, within the Streak CRM for Gmail tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airbnb_Search_Search_Property_By_GEO",
+      "description": "Search Property By GEO",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de",
+        "{'name': 'swLat', 'type': 'NUMBER', 'des",
+        "{'name': 'neLng', 'type': 'NUMBER', 'des",
+        "{'name': 'neLat', 'type': 'NUMBER', 'des",
+        "{'name': 'swLng', 'type': 'NUMBER', 'des",
+        "{'name': 'currency', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get MX Records",
+      "description": "Retrieve the MX records associated with a given email address",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog_Day_API_spec",
+      "description": "Gets the schema for the JSON API as a yaml file.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_airport_details",
+      "description": "Fetches and returns detailed information about an airport specified by its IATA code.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Flight Details",
+      "description": "Retrieve detailed information about a flight based on a unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sanitizeInput",
+      "description": "Sanitize user input to prevent common security vulnerabilities",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_further_contents",
+      "description": "Get detailed results from retrievaled URL.",
+      "params": [
+        "{'name': 'request_url', 'schema': {'type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Liquidation Report",
+      "description": "Get the latest liquidation data from Binance, Bybit, and OKX exchange. Data is limited to 1000 rows.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock General Tables",
+      "description": "Retrieve general tables for stocks, including financial information and stock details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

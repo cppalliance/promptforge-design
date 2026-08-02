@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_pos_0147",
+  "tools": [
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_clear_all_chats",
+      "description": "Handle clearing all private chat tabs.",
+      "params": []
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_distance",
+      "description": "Extract distance from route data. Returns: Distance like '5.2 km'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_station",
+      "description": "Searches for railway stations in Indian Railways network by name or station code. Returns: JSON response containing matched station details including:, Station name, Station code, State/Region, Geographical coordinates, Available facilities, Connected routes, , If station parameter is empty or no matching stations found, If API request fails or returns non-200 status code",
+      "params": [
+        "station"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_constructor_championship_standings",
+      "description": "Get the championship standing for a specific constructor in a given year.",
+      "params": [
+        "year",
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_citation_formatter",
+      "description": "Wrapper for CitationFormatterAgent to format citations. Returns: Formatted citations result with APA-style references",
+      "params": [
+        "text_block"
+      ]
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get",
+      "description": "Get user profile by ID. Returns: Dict with profile data or error message",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorgenerate_html_code",
+      "description": "Generate HTML/CSS/JavaScript code based on a website description.",
+      "params": [
+        "description",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_available_npcs",
+      "description": "Handle testing available NPCs data access.",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_use_preview_in_chat",
+      "description": "Gunakan isi file preview sebagai prompt untuk chatbot.",
+      "params": [
+        "chat_history"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_get_law",
+      "description": "This is a tool that returns law content by input the category and number. Returns: The content of the law.",
+      "params": [
+        "category",
+        "number"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_configure_handit_tracker",
+      "description": "Configure the Handit tracker with API credentials. Returns: Configuration status message",
+      "params": [
+        "api_key",
+        "tracking_url"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_check_single_server_health",
+      "description": "Check health of a single MCP server from any URL format. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_visitor",
+      "description": "\u65b0\u5efa\u6307\u5b9a\u5ba2\u6237\u7aef ID \u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e \u4f20\u5165\u53c2\u6570\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8): - program_id: \u5ba2\u6237\u7aef ID\uff0c\u6574\u6570\u6216\u5b57\u7b26\u4e32 - data: \u65b0\u89c2\u5bdf\u8005\u914d\u7f6e\uff0cJSON \u5b57\u7b26\u4e32\u3002\u5fc5\u987b\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a - name: \u89c2\u5bdf\u8005\u540d\u79f0\uff0c\u548c\u8981\u4fee\u6539\u7684name\u4e00\u81f4 - type: \u89c2\u5bdf\u8005\u7c7b\u578b\uff0c\u548c\u8981\u4fee\u6539\u7684type\u4e00\u81f4 - serverName: \u670d\u52a1\u7aef\u540d\u79f0\uff0c\u7528\u4e8e\u5173\u8054\u540e\u7aef\u670d\u52a1 - secretKey: \u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - bindAddr: \u7ed1\u5b9a\u7684\u672c\u5730 IP \u5730\u5740\uff08\u4f8b\u5982 \"127.0.0.1\"\uff09 - bindPort: \u7ed1\u5b9a\u7684\u672c\u5730\u7aef\u53e3\uff08\u6574\u6570, 65535 \u4ee5\u5185\uff09 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u64cd\u4f5c\u7ed3\u679c\uff0c\u683c\u5f0f `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5177\u4f53\u4fe1\u606f\"}`",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_new_profile",
+      "description": "Generates and returns a dating profile questionnaire, a new public profile_id, and a new private auth_id. Also creates an initial profile stub.",
+      "params": []
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_privacy_preserve_image",
+      "description": "Obscures specified objects in the input image based on a natural language prompt, using a privacy-preserving blur or distortion effect. This function segments the image to detect objects described in the `input_prompt` and applies a pixelation effect to those regions. It is useful in scenarios where sensitive content (e.g., faces, license plates, logos, personal belongings) needs to be hidden before sharing or publishing images. Returns: Binary image data of the modified image., , input_prompt = \"faces, license plates, logos\"",
+      "params": [
+        "input_img",
+        "input_prompt",
+        "privacy_strength",
+        "threshold"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_raw_world_data",
+      "description": "Handle testing raw world data access.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_account_help",
+      "description": "Get help with account-related issues and login problems.",
+      "params": [
+        "issue_type"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_analyze_api",
+      "description": "Safe wrapper for API analysis with user-friendly error handling",
+      "params": [
+        "spec"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio_from_url",
+      "description": "Transcribe audio/video files from a URL into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Provide a URL to a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_url",
+        "api_key"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_pubmed_search_gr",
+      "description": "Gradio wrapper for PubMed literature search. Parameters ---------- query : str PubMed query string. max_results : int Maximum number of articles requested from the backend tool. date_range : str If non\u2011empty, restricts search to the last *N* years. Returns ------- str Pretty\u2011printed JSON with article details.",
+      "params": [
+        "query",
+        "max_results",
+        "date_range"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    }
+  ]
+}

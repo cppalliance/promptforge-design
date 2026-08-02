@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_neg_0106",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "streamer.get_schedule",
+      "description": "Fetches the streaming schedule for a specific streamer on Mixer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tiktok_Video_Feature_Summary_region_list",
+      "description": "the region list use in video search params",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_condition_based_on_object(image_patch: ImagePatch, object_name: str, condi",
+      "description": "def infer_condition_based_on_object(image_patch: ImagePatch, object_name: str, condition: str, query: str) -> str:\n    '''Infer a condition based on the presence of a certain object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for presence.\n        condition (str): The condition to infer if the object is present.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The inferred condition if the object is present, or the result of the original query if the object is not pres",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Credit Quality",
+      "description": "Retrieves the credit quality of a specified security as displayed in the Portfolio tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_price_after_percentage_change",
+      "description": "This method takes two arguments, 'price' and 'percentage', and returns the new price after a percentage change.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_Wikipedia",
+      "description": "Check username on Wikipedia",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_competitions_detail",
+      "description": "Get competition information, recent and up coming matches",
+      "params": [
+        "{'name': 'CompId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TLE_Collection",
+      "description": "Search records",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "medical.get_clinical_trial_updates",
+      "description": "Fetches the latest updates on clinical trials for a specific medical condition.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Idealista_v2_auto_complete",
+      "description": "Get auto complete suggestion by term or phrase",
+      "params": [
+        "{'name': 'prefix', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Daily_Influencer_Posts",
+      "description": "Retrieve news and posts from Top Influencers in social media ordered by date\nThis endpoint contains results from all coins. To search for posts on a specific coins check \"Get Daily Influencer Posts by Coin Name\" or \"Get Daily Influencer Posts by Coin Ticker\"\n\n**Output:**\n\n- EventId \n- EventType\n- Event Time\n- Publisher\n- Source\n- Related coins\n- Event Color\n- Number of followers\n- Event text\n\n**Definitions:** \n\n- Publisher: User name of the publisher of the event in social media\n- Source: Social media where the post was published\n- Related coins: Coins mentioned in the post\n- Event Color: Show",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "HealthTips.getExerciseTips",
+      "description": "Provides exercise tips based on user's age, gender and fitness level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball Categories",
+      "description": "Retrieve a list of categories related to basketball.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider3_live_upcoming",
+      "description": "get upcoming matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SubjectName2ID",
+      "description": "This API is to convert subject name to subject ID.",
+      "params": [
+        "{'name': 'subject_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_a",
+      "description": "def determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_attributes: list, query: str) -> str:\n    '''Determine the attribute of an object from a list of possible attributes.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for attributes.\n        possible_attributes (list): A list of possible attributes.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The best matching attribute if the object exists, otherwise the result of the simple_query.\n    '",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "route_precedence_test_1_prices_today",
+      "description": "/prices/today",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "pdf_to_img",
+      "description": "Converts a pdf into jpeg image",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customizeIcon",
+      "description": "Modify an existing animated icon to fit your desired style.",
+      "params": [
+        "iconId",
+        "color",
+        "size",
+        "stroke",
+        "strokeColor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "alerts_active_area_area",
+      "description": "Retrieves a list of active weather alerts for a specified area using the National Weather Service API. The data is returned in CAP-ATOM format.",
+      "params": [
+        "area"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_duration",
+      "description": "Calculate the duration between two dates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_autKcomplete",
+      "description": "Get auto complete suggestions by term or phrase. In terms of Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SupplyChainAnalysis.performVendorAnalysis",
+      "description": "Performs an analysis of vendors to identify the most reliable and cost-effective suppliers for retail chains. This tool uses vendor performance data to rank and suggest optimal suppliers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Leagues",
+      "description": "Search for leagues in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parenting_advice_tool",
+      "description": "Parenting Guidance Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_v3_Accurate_Language_Detection",
+      "description": "This endpoint will return the Language of the Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Unique_tournament_logo",
+      "description": "Get unique tournament logo by unique tournament id",
+      "params": [
+        "{'name': 'unique_tournament_id', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_podcast_episodes",
+      "description": "Gets a list of episodes for a given podcast show from the Spotify Scraper API.",
+      "params": [
+        "showid",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "is_valid_ip_address",
+      "description": "Checks if a string is a valid IP address (IPv4).",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "audio.setup_microphone_array",
+      "description": "Configure and optimize a microphone array setup for live sound reinforcement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historical Daily Stock Prices",
+      "description": "Retrieve 2-year historical daily stock prices for a given ticker symbol, including adjusted Open, High, Low, and Close prices, as well as daily Volume, Dividend, and Split information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/api/TripDetails/{MFRef}",
+      "description": "Retrieves trip details based on the provided MFRef number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MoviesDatabase_titles_id_main_actors",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_Similar_Apps_By_bundle_ID",
+      "description": "Get a list of apps similar to the provided app by app bundle ID",
+      "params": [
+        "{'name': 'appId', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getIP",
+      "description": "Retrieve information about a specific IP address",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "legal.caseSummary",
+      "description": "Retrieve a summary of a legal case including basic information and involved parties.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Merger_Cloud_GetFileVersions",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dad Jokes Health Check",
+      "description": "Returns the health status of the Dad Jokes API, including the current UTC time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_info",
+      "description": "Retrieve TikTok user information by username using the Toolbench RapidAPI.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aaaa_Get_Multiple_Users",
+      "description": "Get information on all or multiple users in your Enterprise Hub. Use the optional parameters to return a more narrow range of users.The information returned for each user includes userId , status, email, lastActive, and more. ",
+      "params": []
+    }
+  ]
+}

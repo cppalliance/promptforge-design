@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_toolret_pos_0110",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Shazam_Track_Info",
+      "description": "This endpoint will return info of any track from shazam.com",
+      "params": [
+        "{'name': 'track_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_appointments",
+      "description": "Retrieves all appointments for a given date and clinic name from the API.",
+      "params": [
+        "date",
+        "clinicname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Prostring Information",
+      "description": "Retrieves prostring information from Instagram given a unique identifier (cid).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_recommendations",
+      "description": "Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks. If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.\n\nFor artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'seed_artists', ",
+        "{'in': 'query', 'name': 'seed_genres', '",
+        "{'in': 'query', 'name': 'seed_tracks', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Versions",
+      "description": "Retrieve different versions of a car model",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Post Downloader",
+      "description": "Downloads a post from Instagram using the provided link.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football Category Schedules",
+      "description": "Retrieves schedules of a specific football category for a given string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_problems",
+      "description": "This method takes two arguments, 'start' and 'end', representing the range of problems to be solved, and returns the number of problems in that range.",
+      "params": []
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_playlists",
+      "description": "Get a list of the playlists owned or followed by the current Spotify\nuser.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCuisineRecommendation",
+      "description": "This API is to get cuisine recommendation based on the restaurant review.",
+      "params": [
+        "{'name': 'restaurant_review', 'in': 'que"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_AU_auto_complete",
+      "description": "Get suggestions by term or phrase. The returned data will be used with .../properties/list endpoint",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResumeScreeningTool",
+      "description": "for screening resumes and scheduling interviews",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "translation.quickTranslate",
+      "description": "Quickly translates text from one language to another without additional customization options.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_LinkedinFinder",
+      "description": "This API endpoint generates or retrieves the most likely email address from a Linkedin URL.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Search_company_by_Name",
+      "description": "Search for a company by parameters will return a list of companies that match your query",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Countries By Continent",
+      "description": "Search countries by their continent.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pszemraj/flan-t5-large-grammar-synthesis",
+      "description": "A fine-tuned version of google/flan-t5-large for grammar correction on an expanded version of the JFLEG dataset.",
+      "params": [
+        "raw_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Items",
+      "description": "Search items in Rakuten's marketplace",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Street-Level Crimes API",
+      "description": "Retrieve street-level crime data from the UK Police for a specific location and string (optional).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Card Templates",
+      "description": "Retrieve a list of available business card templates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Inernational_Markets",
+      "description": "Get International Markets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MDBList_Get_by_TMDb_ID",
+      "description": "Returns movie or TV Show info",
+      "params": [
+        "{'name': 'tm', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createBin",
+      "description": "Creates a new JSON bin with the specified name and initial content.",
+      "params": [
+        "name",
+        "content"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSignalStrength",
+      "description": "Retrieve the current signal strength of a wireless connection",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Track_the_mentions_and_conversations_about_your_business_GetMentions",
+      "description": "Find your brand, competitor, or any other query mentions across the web",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reinforcement_learning.q_learning",
+      "description": "Implement the Q-Learning algorithm for a given environment and policy.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market/v2/get-movers",
+      "description": "Get movers, such as actives, gainers, losers, etc...",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IRCTC_GetTrainClasses",
+      "description": " ",
+      "params": [
+        "{'name': 'trainNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unofficial_Trust_Pilot_business_units_detail",
+      "description": "Get detailed information of a business unit",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "universal",
+      "description": "Enables to access web pages, analyze PDFs, generate QR codes, etc.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange Range Fixed-Rate",
+      "description": "Retrieve the minimum and maximum payment amounts required for a cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_fraction_to_decimal",
+      "description": "This method takes a string representing a fraction in the format 'a b/c' and returns the corresponding decimal value.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Web Scraper API",
+      "description": "Fetch and parse HTML content from a given URL, optionally filtering by a specific selector.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketAPI_LeagueOverallTopPlayers",
+      "description": "Get the best players overall in the basketball league.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPainLevel",
+      "description": "Retrieve the current pain level of a patient",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "film.get_movement_info",
+      "description": "Fetches detailed information about a specific international film movement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Guest_Permissions",
+      "description": "A list of permission that guest have",
+      "params": [
+        "{'name': 'guestid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "pcoloc/autotrain-mikrotik-7-7-1860563588",
+      "description": "A tabular regression model trained with AutoTrain to predict carbon emissions based on input features.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get_Crypto",
+      "description": "Retrieve cryptocurrency data, such as prices, market capitalization, or other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

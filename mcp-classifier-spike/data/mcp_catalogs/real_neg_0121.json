@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_neg_0121",
+  "tools": [
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_workouts_gr",
+      "description": "Fetches recent workouts for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_analyze_stack_trace_sync",
+      "description": "Analyze a stack trace and find relevant solutions on Stack Overflow. Returns: Formatted search results",
+      "params": [
+        "stack_trace",
+        "language",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_toggle_chat_view",
+      "description": "Hides/shows the correct chat component and populates it with data.",
+      "params": [
+        "view_choice"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_cache_status",
+      "description": "Get cache status and statistics.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_predict",
+      "description": "Predicts whether an image is AI-generated or real using the SOTA Community Forensics model. Returns: A dictionary containing:, 'Fake Probability' (float): Probability score between 0 and 1 indicating likelihood of being AI-generated, 'Result Description' (str): Human-readable description of the prediction result, , >>> result = predict(\"path/to/image.jpg\"), >>> print(result), 0.002, 'Result Description': 'The image is likely real.'}",
+      "params": [
+        "img"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_clear_previous_outputs",
+      "description": "Clears all video-related outputs to ensure a clean state for new uploads.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_check_single_server_health",
+      "description": "Check health of a single MCP server from any URL format. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_user",
+      "description": "Function to lookup user information. Company User Lookup System. Enter a username to get user details. Returns: A formatted string with user details if found, otherwise an error message.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_both_sources",
+      "description": "Search both Wikipedia and arXiv simultaneously. Returns: (wikipedia_results, arxiv_results)",
+      "params": [
+        "query",
+        "wiki_max_docs",
+        "arxiv_max_docs"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_required_geograpy_hierarchy_parents",
+      "description": "Given the intent to look up a geography hierarchy within from U.S. Census Bureau 2020 decennial census demographic profile API, return the parent geographies that must be included. Returns: List of strings representing the required parent geographies.",
+      "params": [
+        "geography_hierarchy"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "MCPyLate",
+      "name": "MCPyLate_pylate_search_leetcode",
+      "description": "Search the PyLate with multi-vector models in the leetcode collection containing code problems solutions and return top-k hits. Returns: List of search results with docid, score, text snippet, and index name",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_milestones",
+      "description": "Returns all scheduled milestones and their dates for a given MCPHawk Inc project. This tool delivers a detailed timeline of milestones for a project, including: - Milestone names (e.g., Sprint-1, Sprint-2, QA Release, Production Release) - Corresponding milestone dates - Planned Cumulative Burn in USD for different project milestones - Actual Burn based on MCPHawk Inc employee billing - Cumulative Actual Burn rate basedon Actual Burn rate values (This is important to understand the financials of the project) This tool is helpful for project managers, scrum masters, and stakeholders to track progress, important delivery dates and understand if project is running within budget or not and understnad financial health of the project. **Input:** - `project_name` (str): The project whose milestones are requested. **Returns:** A dictionary containing: - `project_name` (str): The name of the project - `milestones` (list): A list of dictionaries, each with: - `milestone` (str): Name of the milestone (e.g., \"Sprint-1\", \"QA Release\") - `milestone_date` (date): Scheduled date for the milestone (in `YYYY-MM-DD` format) - `planned_cumulative_burn` (float): Planned cumulative burn amount by this milestone - `actual_burn` (float): Actual burn recorded for this milestone period - `cumulative_actual_burn` (float): Cumulative total of actual burn up to this milestone If no milestones are found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"milestones\": [ { \"milestone\": \"Sprint-1\", \"milestone_date\": \"2025-02-25\", \"planned_cumulative_burn\": 113160.0, \"actual_burn\": 106528.85, \"cumulative_actual_burn\": 106529.0 }, { \"milestone\": \"Sprint-2\", \"milestone_date\": \"2025-03-11\", \"planned_cumulative_burn\": 226321.0, \"actual_burn\": 111444.79, \"cumulative_actual_burn\": 217974.0 }, { \"milestone\": \"UAT Release\", \"milestone_date\": \"2025-05-20\", \"planned_cumulative_burn\": 905283.52, \"actual_burn\": 107937.74, \"cumulative_actual_burn\": 881532.64 }, { \"milestone\": \"Production Release\", \"milestone_date\": \"2025-05-27\", \"planned_cumulative_burn\": 1018443.96, \"actual_burn\": 107682.72, \"cumulative_actual_burn\": 989215.36 } ] }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_post_text",
+      "description": "Posts a text post in the database, and returns True if it was successfuly posted",
+      "params": [
+        "content"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_coverage_evaluator",
+      "description": "Evaluate how diverse the content is across multiple system outputs (coverage proxy). Returns: Pairwise cosine similarities and average to estimate content spread.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle_image",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details",
+        "image"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10q_by_quarter",
+      "description": "Fetch financial reports for company(s) within given calendar quarter(s) and specified sheets from 10-Q filings. Caveat the sheets names is likely to differ between companies, quarters, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, quarters, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "quarters",
+        "sheets"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_prev_page",
+      "description": "Go to previous page for equipment",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_best_bottle",
+      "description": "ask for the best bottle comments. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    }
+  ]
+}

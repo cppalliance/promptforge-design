@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_neg_0073",
+  "tools": [
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_process_file",
+      "description": "Memproses file yang diupload dan menghasilkan preview serta chart",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_update_api_keys",
+      "description": "Updates the global MISTRAL_API_KEY and GEMINI_API_KEY variables. Returns: A string confirming that the API keys have been saved.",
+      "params": [
+        "mistral_key",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "AgenticClaimVerificationSystem",
+      "name": "AgenticClaimVerificationSystem_verify_claim",
+      "description": "Use this tool to verify a claim",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "mcp-brawlstats",
+      "name": "mcp_brawlstats_get_recent_battles",
+      "description": "Retrieve a player's 25 most-recent Brawl Stars battles. Call `save_brawlstars_key` **once** beforehand to cache the API key. Returns: On success \u2013, {, \"#TAG\",, <int>,            # number of battles returned, <list[dict]>      # raw JSON from Supercell, }, On failure \u2013, \"<human-readable message>\" }",
+      "params": [
+        "player_tag"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle_image",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details",
+        "image"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_prev_page",
+      "description": "Go to previous page for equipment",
+      "params": []
+    },
+    {
+      "server": "grady",
+      "name": "grady_ask",
+      "description": "Ask General AI Assistant a question to answer. Returns: The answer to the question",
+      "params": [
+        "question",
+        "openai_api_key",
+        "gemini_api_key",
+        "anthropic_api_key",
+        "file_name"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_session_results",
+      "description": "Retrieve and format the results of a specific session.",
+      "params": [
+        "year",
+        "round",
+        "session_type"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_info_bottle",
+      "description": "analyse une image de bouteille. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp_drawittome",
+      "name": "mcp_drawittome_generateDiagram",
+      "description": "Generates a diagram to explain a submitted text. The diagram is returned in html  with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>. It is not needed to handle the code, just present the html result to the user. It handles various types like Graph TB (default, block grouping with colors), flowchart TD (decision processes), sequenceDiagram (actor/system interactions), classDiagram (technical models like SQL schemas), stateDiagram-v2 (state logic or user stories), erDiagram (data entity relationships), gantt (projects and task timelines along dates), and timeline (historical/biographical sequences grouped by decade or century). Returns: html diagram ready to display made with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>",
+      "params": [
+        "input_text",
+        "input_precisions"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_cancel_changes",
+      "description": "Clears the staged changeset and hides the confirmation UI.",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_payment_information",
+      "description": "Get information about accepted payment methods and billing.",
+      "params": [
+        "inquiry_type"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_child_pugh_score_mcp",
+      "description": "Calculates the Child-Pugh score, a well-established tool for assessing the prognosis of chronic liver disease, primarily cirrhosis. The score is used to determine the severity of liver disease and to guide dosage adjustments for drugs that are metabolized by the liver. Returns: JSON string with Child-Pugh score, class, and prognosis information",
+      "params": [
+        "bilirubin",
+        "albumin",
+        "inr",
+        "ascites",
+        "encephalopathy"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask",
+      "description": "Ask the D&D narrative agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_delete_item",
+      "description": "Delete an item from the game.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_program",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u5220\u9664\u5ba2\u6237\u7aef\u53ca\u5176\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    }
+  ]
+}

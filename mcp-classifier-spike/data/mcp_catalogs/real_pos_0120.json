@@ -1,0 +1,370 @@
+{
+  "catalog_id": "real_pos_0120",
+  "tools": [
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_cache_status",
+      "description": "Get cache status and statistics.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_vector_centroid",
+      "description": "this tool allow you to compute the centroid of a list of embedding vectors the input query, is a sql query that MUST return a table with only 1 column, the embeddings. exemple: result = db_connection.read_only_query(query) result shape: embedding [0.3, 0.5 ...] the return value is the computed centroid vector, that you can use to work with.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_mine_blocks_ui",
+      "description": "Mine blocks UI wrapper",
+      "params": [
+        "num_blocks"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_random_recipe",
+      "description": "Fetches a random recipe using the Spoonacular API and returns it in a formatted string. Returns: A formatted string with title, preparation time, ingredients, and cooking steps.",
+      "params": [
+        "tags",
+        "exclude_ingredients"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_qa_reply",
+      "description": "MCP Endpoint: qa.reply Drafts concise answers to client questions like \"Why should we hire you?\" Speeds up Upwork, Fiverr, or LinkedIn chats.",
+      "params": [
+        "user_id",
+        "question",
+        "context"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_process_return",
+      "description": "Process a return request for an order.",
+      "params": [
+        "order_id",
+        "item_ids_str",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_convert_and_prepare_download",
+      "description": "Convert API and prepare download file",
+      "params": [
+        "spec",
+        "target_format"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_job_status",
+      "description": "Check the current status of a LoRA training job or image generation job. This function queries the Modal API to get the current status of a training job using its unique job ID. It returns detailed information about the job progress. Note that if we are invoking this function with MCP, the user cannot neccecarily see the images in the tool call, so you will have to render them again in the chat. **MCP Client Limitation:** Due to MCP client constraints, we cannot render a gallery of images in the chat. The MCP client should render these URLs as clickable markdown links when possible. Returns: tuple[str, List[Image.Image]]: (status_message, all_images), status_message: Detailed status message containing job information, all_images: List of PIL Image objects if images are available, empty list otherwise, , \"completed\": Job finished successfully, \"running\": Job is still in progress, \"failed\": Job failed due to an error, \"error\": System error occurred, , //modal-app-url-api-job-status.modal.run\")",
+      "params": [
+        "job_id",
+        "job_status_url"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_validate_api_configuration",
+      "description": "TOOL: Validate and store API configuration for monitoring. PURPOSE: Test an API endpoint and store the configuration if successful. This is STEP 1 of the monitoring setup process. If validation fails, retry with corrected parameters.    If successful, use the returned config_id in activate_monitoring() function. CRITICAL: Even if success=True, you MUST manually check the 'sample_response' field before proceeding to activate_monitoring(). The API call may return success=True but contain error messages (like \"401 Unauthorized\", \"Invalid API key\", etc.) in the sample_response. CRITICAL: Always try to add parameters that will limit the API response to a manageable size. CRITICAL: Be sure to always clearly inform the user of the config_id after a desired validation result. CRITICAL: If you don't have an MCP API KEY given by the user, prompt them to get it here: https://mcp-hackathon.vercel.app/ WORKFLOW: 1. Call this function to validate API configuration 2. If success=False: Fix parameters and retry this function 3. If success=True: MANUALLY INSPECT the 'sample_response' field for errors 4. If sample_response contains error messages: Fix API parameters and retry validation 5. If sample_response looks valid: Use config_id in activate_monitoring() to activate monitoring ARGUMENTS: - mcp_api_key: MCP API key serves as user identifier. - name: User-friendly name for the monitoring task - description: Description of what is being monitored - method: HTTP method (GET, POST, PUT, DELETE) - base_url: The base URL of the API - endpoint: The specific API endpoint - param_keys_values: Parameter key-value pairs, one per line - header_keys_values: Header key-value pairs, one per line - additional_params: Optional JSON string for complex parameters - schedule_interval_minutes: Minutes between calls - stop_after_hours: Hours after which to stop (supports decimals, max 168 = 1 week) - start_at: Optional datetime string for when to start the monitoring. IMPORTANT: Leave as empty string \"\" for immediate start (most common use case, always default to this if no start time provided). Only provide a datetime string (e.g., \"2024-06-15 09:00:00\") if you need to schedule monitoring for a specific future time. Input Examples: 1. Simple GET request to monitor stock price: mcp_api_key: \"your_mcp_key_here\" name: \"NVDA Stock Price\" description: \"Monitor NVIDIA stock price every 30 minutes\" method: \"GET\" base_url: \"https://api.example.com\" endpoint: \"stocks/NVDA\" param_keys_values: \"symbol: NVDA interval: 1min\" header_keys_values: \"Authorization: Bearer your_token\" additional_params: \"{}\" schedule_interval_minutes: 30 stop_after_hours: 1.5 start_at: \"\" 2. Weather monitoring with free API: mcp_api_key: \"\" name: \"Weather Monitor\" description: \"Monitor current weather conditions every 2 hours for one week using Open-Meteo free API\" method: \"GET\" base_url: \"https://api.open-meteo.com\" endpoint: \"v1/forecast\" param_keys_values: \"latitude: 40.7128 longitude: -74.0060 current: temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m timezone: America/New_York\" header_keys_values: \"Content-Type: application/json\" additional_params: \"{}\" schedule_interval_minutes: 120 stop_after_hours: 168 start_at: \"2024-06-15 09:00:00\". Returns: Dictionary with success status, config_id (needed for setup_scheduler), message, and sample_response, , {, True,, 123,, \"API call tested and stored successfully\",, {...},, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:00:00Z\", }, If success=True, call activate_monitoring(config_id, mcp_api_key) to activate monitoring",
+      "params": [
+        "mcp_api_key",
+        "name",
+        "description",
+        "method",
+        "base_url",
+        "endpoint",
+        "param_keys_values",
+        "header_keys_values",
+        "additional_params",
+        "schedule_interval_minutes",
+        "stop_after_hours",
+        "start_at"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_with_limit",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits per domain.",
+      "params": [
+        "url",
+        "max_links_per_domain"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_monthly_payment",
+      "description": "Calculates the fixed monthly payment for a loan based on the principal amount, number of years, and the current Bank of England base rate. Returns: The calculated monthly payment as a string, or an error message if the, calculation fails or interest rate data cannot be fetched.",
+      "params": [
+        "principal",
+        "number_of_years"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_memory",
+      "description": "Universal memory storage interface - supports memvid, vector, or dual storage modes.",
+      "params": [
+        "text",
+        "client_id",
+        "metadata"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_matches",
+      "description": "Finds potential matches for the authenticated user. Requires X-Auth-ID header for authentication. For P1, this returns up to 3 random profiles, excluding the user's own.",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_recalls_mcp",
+      "description": "Searches for recent FDA-issued recall events for a specific drug product. This is critical for ensuring patient safety by identifying if a drug or specific batch has been recalled due to manufacturing defects, contamination, or other safety concerns. The results include details on the recall reason, status, and affected lots. Returns: JSON string with recall notices including recall number, status, and reason",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_start_chat",
+      "description": "Handle starting a private chat.",
+      "params": [
+        "entity_selection"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_available_npcs",
+      "description": "Handle testing available NPCs data access.",
+      "params": []
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    }
+  ]
+}

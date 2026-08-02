@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_neg_0083",
+  "tools": [
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_job_status",
+      "description": "Check the current status of a LoRA training job or image generation job. This function queries the Modal API to get the current status of a training job using its unique job ID. It returns detailed information about the job progress. Note that if we are invoking this function with MCP, the user cannot neccecarily see the images in the tool call, so you will have to render them again in the chat. **MCP Client Limitation:** Due to MCP client constraints, we cannot render a gallery of images in the chat. The MCP client should render these URLs as clickable markdown links when possible. Returns: tuple[str, List[Image.Image]]: (status_message, all_images), status_message: Detailed status message containing job information, all_images: List of PIL Image objects if images are available, empty list otherwise, , \"completed\": Job finished successfully, \"running\": Job is still in progress, \"failed\": Job failed due to an error, \"error\": System error occurred, , //modal-app-url-api-job-status.modal.run\")",
+      "params": [
+        "job_id",
+        "job_status_url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "llmstxt",
+      "name": "llmstxt_load_doc",
+      "description": "After getting the registry with the load_registry function, you can use this function to load the documentation you want to use. Returns: The documentation content",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_redundancy_checker",
+      "description": "Detect redundant or highly similar document pairs using semantic similarity. This tool encodes all documents into embeddings and computes cosine similarity scores between every pair. It flags document pairs with similarity greater than 0.8 as redundant. Returns: A dictionary containing:, 'tool': The name of the tool (\"Redundancy Checker\")., 'results': A list of redundant document pairs with their similarity scores,, or a message indicating no redundancy if none are found.",
+      "params": [
+        "_",
+        "documents"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_logout",
+      "description": "UI-only function to switch views after logout.",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_deploy_contract_ui",
+      "description": "Gradio wrapper for contract deployment",
+      "params": [
+        "source_code",
+        "contract_name",
+        "from_account",
+        "constructor_args_str"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_quarters",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for given quarters from 10-Q filings. Caveat the quarter used here is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "quarters"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_join_game",
+      "description": "Handle player joining the game.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_fields",
+      "description": "Update other fields when preset model is selected",
+      "params": [
+        "preset_model"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display_",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_geolocation",
+      "description": "Get location information from an ip address. Returns the following information on an ip address: 1. IPv4 2. city 4. country_code 5. country_name 6. latitude 7. longitude 8. postal 9. state Example: >>> from pprint import pprint >>> pprint(get_location(\"103.100.104.0\")) ... {'IPv4': '103.100.104.0', 'city': None, 'country_code': 'NZ', 'country_name': 'New Zealand', 'latitude': -41, 'longitude': 174, 'postal': None, 'state': None}",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message_",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_get_text_post_comments",
+      "description": "Retrieves latest 5 comments from the text post with id post_id",
+      "params": [
+        "post_id"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoints",
+      "description": "Retrieve a list of all available OpenF1 API endpoints. Returns: dict: A dictionary containing a single key 'endpoints' with a list of available endpoint names as strings.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_merge_videos",
+      "description": "Merge multiple videos into a single video. Returns: URL to merged video or None if failed, , Handles various input formats, Maintains original quality, Preserves audio from all videos, Gracefully handles failed downloads",
+      "params": [
+        "video_urls"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_proxy_by_name",
+      "description": "\u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053 \u6839\u636e\u96a7\u9053\u540d\u5220\u9664\u96a7\u9053\uff0c\u5982\u679c\u96a7\u9053\u4e0d\u5b58\u5728\u5219\u8fd4\u56de\u5931\u8d25\u3002 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "proxy_name"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_multiple_files",
+      "description": "Retrieve multiple files from GitHub repository. Returns: JSON response with multiple file contents and metadata",
+      "params": [
+        "repo_url",
+        "file_paths_str",
+        "branch"
+      ]
+    },
+    {
+      "server": "Frugal_AI_Agent",
+      "name": "Frugal_AI_Agent_CodeAgent",
+      "description": "In this agent, the tool calls will be formulated by the LLM in code format, then parsed and executed.",
+      "params": [
+        "task"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_start_training",
+      "description": "Start a LoRA training job for Flux image generation model. This function initiates a LoRA (Low-Rank Adaptation) training job on a dataset of images. It sends a request to a Modal API endpoint to start the training process. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with training details or error message, job_id: Unique identifier for the training job, empty string if failed, , status, job_id = start_training(, dataset_id=\"myuser/dog-photos\",, hf_token=\"hf_abcdef123456\",, output_repo=\"myuser/my-dog-lora\",, instance_name=\"Fluffy\",, class_name=\"dog\",, max_train_steps=500, )",
+      "params": [
+        "dataset_id",
+        "hf_token",
+        "output_repo",
+        "start_training_url",
+        "instance_name",
+        "class_name",
+        "max_train_steps"
+      ]
+    }
+  ]
+}

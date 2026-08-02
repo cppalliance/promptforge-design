@@ -1,0 +1,375 @@
+{
+  "catalog_id": "real_neg_0015",
+  "tools": [
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_silence_trimming",
+      "description": "Trim silence from the beginning and end of an audio file. This function loads an audio file and automatically removes silent or very quiet sections from the beginning and end based on a specified volume threshold. This is useful for cleaning up recordings and removing unwanted quiet sections. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, trimmed_audio_data: array), for the silence-trimmed audio result, or None if an error occurred, Second element: A status message string showing original and new duration, or error information, , result, status = apply_silence_trimming(\"url/to/audio.mp3\", -40.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Threshold is specified in decibels (dB) - more negative values = quieter threshold, Common thresholds: -30dB (conservative), -40dB (moderate), -60dB (aggressive), Only trims from beginning and end, preserves silence within the audio, Useful for removing recording artifacts, room tone, or equipment noise, May significantly reduce file duration depending on original content, Preserves original sample rate and audio quality, Be careful with very low thresholds as they may trim wanted quiet content",
+      "params": [
+        "audio_file",
+        "threshold_db"
+      ]
+    },
+    {
+      "server": "clinical-triage-mcp",
+      "name": "clinical_triage_mcp_triage_response",
+      "description": "Sends a triage prompt to Mistral API and parses the JSON response.",
+      "params": [
+        "symptoms"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_workouts_gr",
+      "description": "Fetches recent workouts for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "Google-Sheets-Assistant",
+      "name": "Google_Sheets_Assistant_upload_csv",
+      "description": "Handle CSV file upload",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_validate_api_configuration",
+      "description": "TOOL: Validate and store API configuration for monitoring. PURPOSE: Test an API endpoint and store the configuration if successful. This is STEP 1 of the monitoring setup process. If validation fails, retry with corrected parameters.    If successful, use the returned config_id in activate_monitoring() function. CRITICAL: Even if success=True, you MUST manually check the 'sample_response' field before proceeding to activate_monitoring(). The API call may return success=True but contain error messages (like \"401 Unauthorized\", \"Invalid API key\", etc.) in the sample_response. CRITICAL: Always try to add parameters that will limit the API response to a manageable size. CRITICAL: Be sure to always clearly inform the user of the config_id after a desired validation result. CRITICAL: If you don't have an MCP API KEY given by the user, prompt them to get it here: https://mcp-hackathon.vercel.app/ WORKFLOW: 1. Call this function to validate API configuration 2. If success=False: Fix parameters and retry this function 3. If success=True: MANUALLY INSPECT the 'sample_response' field for errors 4. If sample_response contains error messages: Fix API parameters and retry validation 5. If sample_response looks valid: Use config_id in activate_monitoring() to activate monitoring ARGUMENTS: - mcp_api_key: MCP API key serves as user identifier. - name: User-friendly name for the monitoring task - description: Description of what is being monitored - method: HTTP method (GET, POST, PUT, DELETE) - base_url: The base URL of the API - endpoint: The specific API endpoint - param_keys_values: Parameter key-value pairs, one per line - header_keys_values: Header key-value pairs, one per line - additional_params: Optional JSON string for complex parameters - schedule_interval_minutes: Minutes between calls - stop_after_hours: Hours after which to stop (supports decimals, max 168 = 1 week) - start_at: Optional datetime string for when to start the monitoring. IMPORTANT: Leave as empty string \"\" for immediate start (most common use case, always default to this if no start time provided). Only provide a datetime string (e.g., \"2024-06-15 09:00:00\") if you need to schedule monitoring for a specific future time. Input Examples: 1. Simple GET request to monitor stock price: mcp_api_key: \"your_mcp_key_here\" name: \"NVDA Stock Price\" description: \"Monitor NVIDIA stock price every 30 minutes\" method: \"GET\" base_url: \"https://api.example.com\" endpoint: \"stocks/NVDA\" param_keys_values: \"symbol: NVDA interval: 1min\" header_keys_values: \"Authorization: Bearer your_token\" additional_params: \"{}\" schedule_interval_minutes: 30 stop_after_hours: 1.5 start_at: \"\" 2. Weather monitoring with free API: mcp_api_key: \"\" name: \"Weather Monitor\" description: \"Monitor current weather conditions every 2 hours for one week using Open-Meteo free API\" method: \"GET\" base_url: \"https://api.open-meteo.com\" endpoint: \"v1/forecast\" param_keys_values: \"latitude: 40.7128 longitude: -74.0060 current: temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m timezone: America/New_York\" header_keys_values: \"Content-Type: application/json\" additional_params: \"{}\" schedule_interval_minutes: 120 stop_after_hours: 168 start_at: \"2024-06-15 09:00:00\". Returns: Dictionary with success status, config_id (needed for setup_scheduler), message, and sample_response, , {, True,, 123,, \"API call tested and stored successfully\",, {...},, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:00:00Z\", }, If success=True, call activate_monitoring(config_id, mcp_api_key) to activate monitoring",
+      "params": [
+        "mcp_api_key",
+        "name",
+        "description",
+        "method",
+        "base_url",
+        "endpoint",
+        "param_keys_values",
+        "header_keys_values",
+        "additional_params",
+        "schedule_interval_minutes",
+        "stop_after_hours",
+        "start_at"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_comment_on_text_post",
+      "description": "Adds a text comment to the text post with id post_id. Returns True if successful",
+      "params": [
+        "post_id",
+        "content"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_modal_status",
+      "description": "Statut du mod\u00e8le Modal",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_scrape_hf_spaces_with_progress",
+      "description": "Wrapper function for scraping.",
+      "params": [
+        "max_pages",
+        "sort_by"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_analyze_quotations",
+      "description": "Analyse avanc\u00e9e des devis native",
+      "params": [
+        "domain_filter",
+        "limit"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_login",
+      "description": "UI-only function to switch views and update components after login.",
+      "params": [
+        "final_username",
+        "final_channel"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_relevance_scorer",
+      "description": "Compute semantic relevance scores between a query and a list of documents using cosine similarity. This tool encodes the query and documents using a sentence embedding model, then calculates pairwise cosine similarity scores to determine how semantically similar each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"Semantic Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries with:, 'document': The original document text., 'score': A float representing cosine similarity between the query and the document (0 to 1).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_monitor_sales",
+      "description": "Monitoring Sales natif",
+      "params": [
+        "time_window",
+        "threshold"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_list_erp_tables",
+      "description": "List all ERP tables in the database. Returns: List of ERP table names",
+      "params": []
+    },
+    {
+      "server": "FootballMatchesByDate",
+      "name": "FootballMatchesByDate_get_matches_by_date",
+      "description": "Fetches all matches for a given date from the Football Data API. Returns: A dictionary with the match ID as the key, and a dictionary containing the competition, home team, away team, home score and away score as the value",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_test_connection_only",
+      "description": "TESTE uniquement la connexion sans sauvegarder",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_analyze_time_series",
+      "description": "Analiza una serie temporal para detectar tendencias, anomal\u00edas, estacionalidad y picos/valles.",
+      "params": [
+        "file",
+        "column_name",
+        "trend_window",
+        "anomaly_method",
+        "forecast_periods"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_login_user",
+      "description": "Handles login logic. Returns final username, channel, unformatted history, and roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_sandboxes",
+      "description": "Lists all Modal sandboxes for a specific app namespace and their current status. Useful for monitoring active Modal sandbox environments, checking which sandboxes are running, and getting sandbox IDs for further management operations. Returns: JSON string containing list of sandboxes with their IDs and status",
+      "params": [
+        "app_name"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_top_moves",
+      "description": "Get the top N moves for a given chess position using StockFish. Returns a list of the top moves with their absolute scores (in centipawns) and whether they are leading to a mate. DISCLAIMER: This function uses the Stockfish chess engine, ONLY use it if explicitly allowed.",
+      "params": [
+        "fen",
+        "top_n"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_convert_creatinine_units_mcp",
+      "description": "Converts serum creatinine values between the two standard units of measurement: milligrams per deciliter (mg/dL) and micromoles per liter (\u03bcmol/L). This is essential for interoperability, as different laboratories and clinical calculators may use different units. Returns: JSON string with converted creatinine value and conversion factor",
+      "params": [
+        "value",
+        "from_unit",
+        "to_unit"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_write_file_content_to_sandbox",
+      "description": "Writes content to a file in a Modal sandbox. Useful for writing code, text, or any other content, rapid prototyping, creating boilerplate code, implementing algorithms, and generating test cases. Returns: JSON string containing success status and written file path",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "content"
+      ]
+    }
+  ]
+}

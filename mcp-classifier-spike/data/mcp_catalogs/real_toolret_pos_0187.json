@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_toolret_pos_0187",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "artists",
+      "description": "Returns a list of music artists who contributed to JSR/JSRF.",
+      "params": [
+        "limit",
+        "sortby",
+        "orderby"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "us_presidential_election_osay",
+      "description": "Returns JSON block of results for One State, All Years (OSAY), for the specified US Presidential Election year (i.e., Illinois).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Futures Expiration Calendar",
+      "description": "This API provides information about the futures expiration calendar, including the strings and details of upcoming futures contract expirations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_whois",
+      "description": "Fetches the WHOIS information for a given domain using the API Ninjas Whois API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "music_info",
+      "description": "Retrieve music information using a given music ID from the TikTok API.",
+      "params": [
+        "music_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportScore_Media_list",
+      "description": "Returns a list of medias. Simple pagination is used",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "inquire_benefits_of_activity(activity: str, group: str) -> str",
+      "description": "def inquire_benefits_of_activity(activity: str, group: str) -> str:\n    '''Inquire about the benefits of a certain activity involving a certain group of people.\n    \n    Args:\n        activity (str): The activity to inquire about.\n        group (str): The group of people involved in the activity.\n       \n    Returns:\n        str: The benefits of the activity involving the group of people.\n    '''\n    return llm_query(f\"What benefits can {activity} with {group} have?\")",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThisisaPublicAPI_v2_getInventory",
+      "description": "Returns a map of status codes to quantities",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Weather by Geographic Coordinates",
+      "description": "Retrieve weather information by providing geographic coordinates (latitude and longitude).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "api_v2_minimal_exchange_amount",
+      "description": "Fetch the minimal payment amount required to perform a cryptocurrency exchange using the ChangeNow API v2.",
+      "params": [
+        "flow",
+        "tocurrency",
+        "fromcurrency",
+        "fromnetwork",
+        "tonetwork"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TectonicPlateMovement.predictMovement",
+      "description": "Predicts the future position of tectonic plates based on current data and historical trends.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magisto_Check_Movie_Status",
+      "description": "Check the state of the movie session",
+      "params": [
+        "{'name': 'vsid', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "webcams_list_continent_continent_continent",
+      "description": "Fetches a list of webcams for a specified continent.",
+      "params": [
+        "continent",
+        "lang",
+        "show"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Concert",
+      "description": "Retrieve information about a specific concert on Spotify",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "economy.get_inflation_trends",
+      "description": "Analyzes inflation trends over a specified time period for a given country.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest_Mutual_Fund_NAV_fetchAllSchemeTypes",
+      "description": "Fetch All Scheme Types",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dad Jokes Health Check",
+      "description": "Returns the health status of the Dad Jokes API, including the current UTC time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "season_episodes",
+      "description": "Fetch episodes for a given season from the Netflix RapidAPI.",
+      "params": [
+        "ids",
+        "lang",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_numbers_fraction(num_digits, fraction)",
+      "description": "def count_numbers_fraction(num_digits, fraction):\n    \"\"\"\n    Counts the number of n-digit numbers that have the property that the (n-1)-digit number obtained by removing the leftmost digit is a fraction of the original number.\n\n    Parameters:\n    num_digits (int): The number of digits in the original number.\n    fraction (float): The fraction that the (n-1)-digit number should be of the original number.\n\n    Returns:\n    int: The number of n-digit numbers that satisfy the given property.\n    \"\"\"\n    count = 0\n\n    # Iterate over all n-digit numbers\n    for i in range(10**(num_digits-1), 10**",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "VideoEffects.applyEffect",
+      "description": "Adds a visual effect to a video clip over a specified time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Sentiment Analysis API",
+      "description": "Returns a list of articles related to the input stock and their associated sentiment scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get a Random Anime Quote",
+      "description": "Retrieve a random quote from an anime source",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ai.train_model",
+      "description": "Train a machine learning model with specified algorithm and dataset.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createSignatureRequest",
+      "description": "Create a new signature request for a document",
+      "params": [
+        "document_id",
+        "signers",
+        "message",
+        "subject"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_spinsters",
+      "description": "Calculates the number of spinsters given the ratio of spinsters to cats and the difference between the number of cats and spinsters.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getNamedayByDate",
+      "description": "Retrieve the nameday for a specific day and country.",
+      "params": [
+        "date",
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PageantDB_Single_contest",
+      "description": "Get details of a single pageant contest by its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRadioAdPerformance",
+      "description": "Retrieve performance metrics for a specific radio advertisement",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "petTraining.scheduleSession",
+      "description": "Schedule a training session for a pet, specifying the type of training and preferred timing.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_daily_schedule",
+      "description": "Generate a daily schedule based on the user's tasks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Versions",
+      "description": "Retrieve different versions of a car model",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getReachAndFrequency",
+      "description": "Calculate the reach and frequency for a specific advertising campaign",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseConverterAPI_getAlphabets",
+      "description": "This endpoint is used for getting all the alphabets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_global_stats",
+      "description": "Fetches global statistics available on CoinRanking using the RapidAPI service.",
+      "params": [
+        "referencecurrencyuuid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VisionHealth.evaluateMacularDegeneration",
+      "description": "Evaluates the risk of Age-related Macular Degeneration (AMD) using genetic markers and lifestyle factors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkDisposableEmail",
+      "description": "REST API to check if an email is disposable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Segment the Image",
+      "description": "useful when you want to segment all the part of the image, but not segment a certain object.like: segment all the object in this image, or generate segmentations on this image, or segment the image,or perform segmentation on this image, or segment all the object in this image.The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bcaa",
+      "description": "Fetches Branched-Chain Amino Acids (BCAA) product details from Amazon API.",
+      "params": [
+        "product_name_brand"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "earthquakeRiskAssessment",
+      "description": "Analyzes geological data to assess the risk of earthquakes in specified regions, providing risk scores and mitigation recommendations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BookSummary",
+      "description": "This API is to get a summary of a particular book.",
+      "params": [
+        "{'name': 'book_name', 'in': 'query', 'sc"
+      ]
+    }
+  ]
+}

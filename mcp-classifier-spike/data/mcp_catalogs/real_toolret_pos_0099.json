@@ -1,0 +1,338 @@
+{
+  "catalog_id": "real_toolret_pos_0099",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "createCloudDNSZone",
+      "description": "Create a new DNS zone in the cloud",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arbitrage & Low Hold",
+      "description": "This returns the bets that have arbitrage and all bets that have low holds. It may be a bit confusing at the moment so if you have questions feel free to ask. Just as a basic overview, all of the lines for each side of the bet are shown in \"outcomes\", in \"alt_low_hold\" it shows the combinations of 2 sites that make up low hold bets from those outcomes, in \"alt_arb\" it likewise shows the combinations that are arbitrage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Candlestick_Chart_Health",
+      "description": "Health check",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateLipophilicity",
+      "description": "Calculate the lipophilicity of a molecule",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stacks_Patent_Similarity_get_infringement_v1_infringement_research_predict_get",
+      "description": "Create a request item with the following information:\n\n- **text**: could be the description of a company asset or a product explanation. It should be minimum length of `20` words for better performance. Note that GET queries are limited to `2048` characters (_required_).\n- **patent_number**: should start with a country code and end with the _Kind_ _Code_. You can enter as many as `5` patent numbers, each separated with a comma (_required_).\n- **model_name**: is the name of the model empowering Stacks Patent Similarity engine. Defaults to `stk_nova`.",
+      "params": [
+        "{'name': 'patent_number', 'type': 'STRIN",
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataReorganizer",
+      "description": "used to reorganize visualization results",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tiktok_download_video_get_music_post_video_list",
+      "description": "get music post video list",
+      "params": [
+        "{'name': 'cursor', 'type': 'STRING', 'de",
+        "{'name': 'count', 'type': 'STRING', 'des",
+        "{'name': 'music_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "microsoft/speecht5_vc",
+      "description": "SpeechT5 model fine-tuned for voice conversion (speech-to-speech) on CMU ARCTIC. The SpeechT5 framework consists of a shared encoder-decoder network and six modal-specific (speech/text) pre/post-nets. It is designed to improve the modeling capability for both speech and text. This model can be used for speech conversion tasks.",
+      "params": [
+        "audio",
+        "sampling_rate",
+        "return_tensors"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Products by Brand Name",
+      "description": "Retrieves a list of products by brand name, allowing for filtering by various parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBookList",
+      "description": "Fetches the list of books in the Dune series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getBooks",
+      "description": "Retrieve a list of books with optional filtering and pagination",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResultAnalyzer",
+      "description": "used to analyze the results of experiments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ForestGrowthAnalyzer.predictGrowth",
+      "description": "Predicts the growth of a forest over a specified period using environmental data and historical growth patterns.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Championships by Count",
+      "description": "Retrieve a list of teams ranked by the total number of championships they have won.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "U_S_Economic_Indicators_Nonfarm_Payrolls_Adjusted",
+      "description": "Get monthly seasonally adjusted nonfarm payrolls.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shazam_Track_Info",
+      "description": "This endpoint will return info of any track from shazam.com",
+      "params": [
+        "{'name': 'track_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAccountInfo",
+      "description": "Provide account information.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "repost",
+      "description": "Reposts an article to the Telegraph platform using the Telegraph API.",
+      "params": [
+        "article_url",
+        "title",
+        "author_url",
+        "author_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "yoga.retreat_bookings",
+      "description": "Book yoga retreats with options for customization and additional services.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLawsuitStatus",
+      "description": "Retrieve the status of a lawsuit",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "LangID",
+      "description": "A fast language detection tool with good recognition rates for most mainstream languages, but may not be accurate enough for a few languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate a Random Sentence",
+      "description": "This API generates a random sentence using a combination of words.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateFutureValue",
+      "description": "Calculates the future value of an investment based on periodic, constant payments and a constant interest rate.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Tournament_Teams",
+      "description": "List of teams participating in a specific tournament.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_attribute(image_patch: ImagePatch, object_name: str, attribute_",
+      "description": "def determine_object_attribute(image_patch: ImagePatch, object_name: str, attribute_options: List[str], attribute_prefix: str, query: str) -> str:\n    '''Determine the attribute of an object by matching the best text from a list of options.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for attribute.\n        attribute_options (List[str]): The list of possible attribute options.\n        attribute_prefix (str): The prefix to use when matching the attribute.\n        query (str): The original query to answer.\n ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "cancel_alarms_before",
+      "description": "Cancel all alarms before a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "mywateriswet/ShuanBot",
+      "description": "ShuanBot is a conversational chatbot model based on the GPT-2 architecture. It can be used for generating human-like responses in a chat context.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_list_similarities_Deprecated",
+      "description": "List similar properties",
+      "params": [
+        "{'name': 'prop_status', 'type': 'STRING'",
+        "{'name': 'property_id', 'type': 'NUMBER'",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "countries",
+      "description": "Retrieve a list of countries, filtering by name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes",
+      "description": "Retrieve quotes from anime shows based on the title of the anime.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fid_entty",
+      "description": "Find all <r, t> that has the relation <input, r, t> from Wikidata. It looks like viewing the main page of the input entity. The result is in json format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Reddit_Comments_By_Username",
+      "description": "Comments By Username",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MapToolkit_Elevation",
+      "description": "Global elevation service.",
+      "params": [
+        "{'name': 'points', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SolarPanelEfficiencyAnalyzer.analyzePerformance",
+      "description": "Analyzes the efficiency of solar panels over a specified time period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Checky_Verify_Phone_Number_GET_Verify",
+      "description": "To use this endpoint, you need to make an HTTP GET request to the API with the phone and country parameters in the query string.",
+      "params": [
+        "{'name': 'phone', 'type': 'STRING', 'des",
+        "{'name': 'country', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_search_recipe_information",
+      "description": "Get information about a recipe.",
+      "params": [
+        "{'name': 'recipe_id', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "unsuccessful_attempts",
+      "description": "Calculates the maximum number of unsuccessful attempts.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "divisible_by_3",
+      "description": "To check if a given integer is divisible by 3 or not.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_modification_guide",
+      "description": "Get the guide and steps for modifying an order",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "KFC_locations_GET_all_KFC_locations_by_state",
+      "description": "Get all KFC locations by state",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'state', 'type': 'string', 'des"
+      ]
+    }
+  ]
+}

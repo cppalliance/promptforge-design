@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_pos_0163",
+  "tools": [
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_temporal_analysis_mcp",
+      "description": "Analyzes the temporal relationship between drug administration and the onset of adverse events. This tool provides insights into the typical time-to-onset for a specific drug-associated adverse event, which can be a critical factor in causality assessment. It helps determine if the timing of the event is consistent with the drug's known pharmacology. Returns: JSON string with temporal patterns and time-to-onset analysis",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "limit"
+      ]
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_search_bottle",
+      "description": "search botlle db. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Model_Analysis_MCP",
+      "name": "Model_Analysis_MCP_process_text_comprehensive_analysis",
+      "description": "Processes only text/code descriptions for comprehensive analysis (no ONNX support). Accepts llms_to_query as a string or a list for compatibility.",
+      "params": [
+        "model_input",
+        "llms_to_query",
+        "analysis_types"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_wbs_diagram",
+      "description": "Generates a Work Breakdown Structure (WBS) Diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_tool_selection",
+      "description": "Handle tool selection from dropdown with separate chat flows",
+      "params": [
+        "tool_name",
+        "current_chat"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_train_schedule",
+      "description": "Retrieves the complete schedule and route details for a specific train using its number. This function makes an API call to fetch comprehensive train schedule information including arrival times, departure times, and station details along the train's route. Returns: A dictionary containing the complete train schedule with the following key information:, Train details (name, type, days of operation), Station-wise schedule (arrival, departure times), Platform information, Distance covered at each stop, Other relevant route details, , If train number is empty or if no data is found for the provided train number, If there is an error in the API response or network connectivity issues, , >>> schedule = get_train_schedule(12345), >>> print(schedule['trainName']), 'Rajdhani Express'",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_directory_contents",
+      "description": "Lists contents of a directory in the sandbox. Useful for exploring sandbox filesystem structure, verifying file operations, debugging file-related issues, and managing sandbox content. Returns: JSON string containing list of directory contents",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_report_source_tool",
+      "description": "MCP Tool: Creates a pie chart of report sources for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_accounts_list",
+      "description": "Get list of current accounts with balances",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_length_consistency_checker",
+      "description": "Evaluates the consistency of lengths across multiple generated outputs. Returns: Statistics on lengths and list of outlier generations.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htr_text",
+      "description": "Extract text from handwritten documents using HTR. returns: str: Extracted text from the image.",
+      "params": [
+        "image_path",
+        "document_type",
+        "custom_settings"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_delete",
+      "description": "Delete user profile. Returns: Dict with operation result",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_query_owid_table_sql",
+      "description": "Executes a read-only SQL query against one or more tables loaded from the OWID catalog.",
+      "params": [
+        "table_references_json",
+        "sql_query",
+        "limit"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_entity_relationship_diagram",
+      "description": "Generates an Entity Relationship (ER) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_ideal_body_weight_mcp",
+      "description": "Calculates a patient's Ideal Body Weight (IBW) using the Devine formula. IBW is used in various clinical contexts, including for calculating the dose of certain medications (e.g., aminophylline, digoxin) and for assessing nutritional status. Returns: JSON string with IBW calculation.",
+      "params": [
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent_",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_get_sui_balance",
+      "description": "Retrieves the SUI balance for a given address using the Sui blockchain.",
+      "params": [
+        "wallet_address"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_exit_chat",
+      "description": "Handles logout logic. Returns completion status and updated roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_feed",
+      "description": "Gets RSS feed content from a given website. Can take a website or RSS feed URL directly, or the name of a website. Will attempt to find RSS feed and return title, summary and link to full article for most recent n items in feed. This function is slow and resource heavy, only call it when the user wants to check a feed for new content, or asks for content from a feed that you have not retrieved yet.",
+      "params": [
+        "website"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_details",
+      "description": "Returns comprehensive metadata about an MCPHawk Inc projects This tool provides detailed information about a specific project, including: - Project start and end dates - Project classification - 'Tier 1 (High budget, long duration, senior involvement)' - 'Tier 2 (Medium budget and duration)', - 'Tier 3 (Low effort, short-term, often POC or pilot-level) - Impact of the project at customer side to understand what it means to customer and evaluate the risk during execution. - Enablement - Optimization - Innovation - Project complexity to understand and mitigate any project risk during execution and values are - Very High - High - Medium - Simple - Technology detail like - cloud environment (AWS, GCP, Azure) - cloud native tool (dbt, Fivetran, HVR etc) - Data Warehouse Tools (snowflake, databricks, Spark etc) - Project Domain line Marketing, Healthcare, Finance to have a better resource deployment for the succes. - Project Cost in USD to understand the size of the project, so revenue mapping can be done. This tool is useful for project managers, resource planners, and leadership to get a snapshot of project details for risk assessment and future planning **Input:** - `project_name` (str): The name of the project to retrieve details for. **Returns:** A dictionary containing: - `project_name`: The queried project\u2019s name - `start_date`: Project start date (YYYY-MM-DD) - `end_date`: Project end date (YYYY-MM-DD) - `classification`: Project classification level (e.g., Tier 1, Tier 2, Tier 3) - `customer_impact`: Level of impact on customers (e.g., Low, Moderate, High, Innovation, Optimization, Enablement) - `complexity`: Project complexity (e.g., Medium, Very High) - `cloud_environment`: Cloud environment used (e.g., AWS, Azure, GCP, None) - `cloud_native_tool`: Cloud-native tool used (e.g., Fivetran, Matillion, None) - `dw_tool`: Data warehouse or processing tool used (e.g., Databricks, Synapse, Apache Spark) - `project_domain`: Domain or industry focus of the project (e.g., Healthcare, Travel & Hospitality) - `total_cost`: Total project cost in INR (float) If the project is not found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"start_date\": \"2025-02-11\", \"end_date\": \"2025-10-08\", \"classification\": \"Tier 1 (High budget, long duration, senior involvement)\", \"customer_impact\": \"Enablement\", \"complexity\": \"Medium\", \"cloud_environment\": \"Azure\", \"cloud_native_tool\": \"Fivetran\", \"dw_tool\": \"Snowflake\", \"project_domain\": \"Healthcare\", \"total_cost\": 1018444.0 }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_greet",
+      "description": "Greets the user with a personalized hello message. Returns: A greeting message addressed to the specified user.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serper_search",
+      "description": "Given a search query, returns the search results from Serper. Returns: The search results from Serper Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_remove_from_cellar",
+      "description": "remove a bottle from the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_analyze_time_series",
+      "description": "Analiza una serie temporal para detectar tendencias, anomal\u00edas, estacionalidad y picos/valles.",
+      "params": [
+        "file",
+        "column_name",
+        "trend_window",
+        "anomaly_method",
+        "forecast_periods"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    }
+  ]
+}

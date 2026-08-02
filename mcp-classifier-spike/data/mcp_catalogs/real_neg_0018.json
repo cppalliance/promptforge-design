@@ -1,0 +1,359 @@
+{
+  "catalog_id": "real_neg_0018",
+  "tools": [
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_model_access",
+      "description": "Check if the user has access to the gated FLUX.1-dev model. This function verifies that the user's HuggingFace token has access to the gated FLUX.1-dev model required for LoRA training. This has to be done before we can deploy the endpoint. Returns: str: Status message indicating access status and next steps, , status = check_model_access(\"hf_abcdef123456\")",
+      "params": [
+        "hf_token"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_data",
+      "description": "Fetch LinkedIn profile data for the given username. Returns: A dictionary containing the profile data",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_pnr_status",
+      "description": "Retrieves the current status of a railway ticket using its PNR (Passenger Name Record) number. Returns: JSON response containing passenger details, train information, boarding point,, destination, booking status, current status, and other journey details., , If PNR number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "pnr_number"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_patients",
+      "description": "Refresh patients table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_update_openai_inputs",
+      "description": "Update base URL and model inputs based on provider selection.",
+      "params": [
+        "provider"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_details",
+      "description": "Returns comprehensive metadata about an MCPHawk Inc projects This tool provides detailed information about a specific project, including: - Project start and end dates - Project classification - 'Tier 1 (High budget, long duration, senior involvement)' - 'Tier 2 (Medium budget and duration)', - 'Tier 3 (Low effort, short-term, often POC or pilot-level) - Impact of the project at customer side to understand what it means to customer and evaluate the risk during execution. - Enablement - Optimization - Innovation - Project complexity to understand and mitigate any project risk during execution and values are - Very High - High - Medium - Simple - Technology detail like - cloud environment (AWS, GCP, Azure) - cloud native tool (dbt, Fivetran, HVR etc) - Data Warehouse Tools (snowflake, databricks, Spark etc) - Project Domain line Marketing, Healthcare, Finance to have a better resource deployment for the succes. - Project Cost in USD to understand the size of the project, so revenue mapping can be done. This tool is useful for project managers, resource planners, and leadership to get a snapshot of project details for risk assessment and future planning **Input:** - `project_name` (str): The name of the project to retrieve details for. **Returns:** A dictionary containing: - `project_name`: The queried project\u2019s name - `start_date`: Project start date (YYYY-MM-DD) - `end_date`: Project end date (YYYY-MM-DD) - `classification`: Project classification level (e.g., Tier 1, Tier 2, Tier 3) - `customer_impact`: Level of impact on customers (e.g., Low, Moderate, High, Innovation, Optimization, Enablement) - `complexity`: Project complexity (e.g., Medium, Very High) - `cloud_environment`: Cloud environment used (e.g., AWS, Azure, GCP, None) - `cloud_native_tool`: Cloud-native tool used (e.g., Fivetran, Matillion, None) - `dw_tool`: Data warehouse or processing tool used (e.g., Databricks, Synapse, Apache Spark) - `project_domain`: Domain or industry focus of the project (e.g., Healthcare, Travel & Hospitality) - `total_cost`: Total project cost in INR (float) If the project is not found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"start_date\": \"2025-02-11\", \"end_date\": \"2025-10-08\", \"classification\": \"Tier 1 (High budget, long duration, senior involvement)\", \"customer_impact\": \"Enablement\", \"complexity\": \"Medium\", \"cloud_environment\": \"Azure\", \"cloud_native_tool\": \"Fivetran\", \"dw_tool\": \"Snowflake\", \"project_domain\": \"Healthcare\", \"total_cost\": 1018444.0 }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_db_infos",
+      "description": "### `get_db_infos()`",
+      "params": []
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_greet",
+      "description": "Greets the user with a personalized hello message. Returns: A greeting message addressed to the specified user.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_leave_game",
+      "description": "Handle player leaving the game: clear state and return updated UI components.",
+      "params": []
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpcreate_hf_dataset",
+      "description": "Create a new HuggingFace dataset for memory storage.",
+      "params": [
+        "dataset_name",
+        "private",
+        "description"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_extract_basic_metrics",
+      "description": "Extracts key metrics from a running activity stored in a GPX file. Returns: A dictionary containing:, distance_km (float): Total distance in kilometers, duration (str): Total time in HH:MM:SS, duration_seconds (int): Duration in seconds, average_pace_min_per_km (float): Average pace in min/km, elevation_gain (int): Total positive elevation gain in meters, average_hr (int or None): Average heart rate, if available, max_hr (int or None): Maximum heart rate, if available",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_lab",
+      "description": "Changes the color of specified objects in an image using the LAB color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the LAB color space. LAB separates luminance (L) from color components (A for green-red, B for blue-yellow), making it more perceptually uniform and closer to how humans perceive color differences. Use this method when: - Precise perceptual color control is needed (e.g., subtle shifts in tone or matching specific brand colors). - Working in lighting-sensitive tasks where separating lightness from chroma improves quality. - You want color transformations that are less influenced by lighting conditions or brightness variations. OpenCV LAB Ranges: - L: 0-255 (lightness) - A: 0-255 (green-red, 128 = neutral) - B: 0-255 (blue-yellow, 128 = neutral) Common LAB color references: - Green: (L=?, A\u224880, B\u2248128) - Red: (L=?, A\u2248180, B\u2248160) - Blue: (L=?, A\u2248128, B\u224880) - Yellow: (L=?, A\u2248120, B\u2248180) - Purple: (L=?, A\u2248180, B\u2248100). Returns: Base64-encoded string, , If user_input format is invalid, a/b values are outside [0, 255] range, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image_",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_interact_with_agent_",
+      "description": "Process user input, interact with the agent, and stream updates to Gradio UI. Each tool call and response will be shown as a separate message.",
+      "params": [
+        "chatbot_history"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_load_settings",
+      "description": "Loads settings for the last active provider and their respective configs.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serper_search",
+      "description": "Given a search query, returns the search results from Serper. Returns: The search results from Serper Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_disproportionality_analysis_mcp",
+      "description": "Performs a disproportionality analysis (also known as signal detection) on adverse event data. This statistical method compares the reporting rate of a specific drug-event combination to the reporting rate of that event for all other drugs in the database. It calculates metrics like Proportional Reporting Ratio (PRR) and Reporting Odds Ratio (ROR) to identify potential safety signals that may warrant further investigation. Returns: JSON string with PRR, ROR, IC values and statistical significance",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "background_limit"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_calculate_direct_distance",
+      "description": "Calculates the distance between two points on the Earth's surface using the Haversine formula. Returns: The distance between the two points in kilometers.",
+      "params": [
+        "lat1",
+        "lon1",
+        "lat2",
+        "lon2",
+        "unit"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_enhanced_batch_generation",
+      "description": "Generate strategic variations for A/B testing",
+      "params": [
+        "prompt",
+        "variation_type",
+        "count",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_embed_text_modal_api",
+      "description": "This function allows you to send a list of text to be embeded by our external model. the format should be the following: [ \"text_to_embed 1\", \"text_to_embed 2\", \"text_to_embed 3\", ... ] the return is the vector embedding corresponding to the text you input or a list of vector in case you gave a list of text. thoses vectors are compatible with the one you can find in the database and can be used to be compared with vectors you'll get by querying the database.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_sales_orders_wrapper",
+      "description": "Recherche des commandes de vente native",
+      "params": [
+        "name",
+        "min_amount",
+        "state",
+        "limit"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_summary",
+      "description": "Returns the conversation summary data.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    }
+  ]
+}

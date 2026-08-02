@@ -1,0 +1,336 @@
+{
+  "catalog_id": "real_toolret_pos_0045",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "replace_salt_with_water",
+      "description": "Given a salt solution and a percentage of salt to be replaced with water, this function returns the concentration of salt in the resulting solution.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_count_and_increase_by_one",
+      "description": "Sends a GET request to the specified counter API, optionally including parameters for ID, label, and color, ",
+      "params": [
+        "is_id",
+        "clabel",
+        "color"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mywateriswet/ShuanBot",
+      "description": "ShuanBot is a conversational chatbot model based on the GPT-2 architecture. It can be used for generating human-like responses in a chat context.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "gameLocalization.culturalElementsAdjustment",
+      "description": "Adjust game content to align with specific cultural elements and norms.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "partenaire_par_id",
+      "description": "Fetches a partner's details by their ID from the designated API.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TRW_news_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dns",
+      "description": "Fetches DNS records for a given domain using the RapidAPI domain checker service.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Divanscore_matches_get_esport_games",
+      "description": "Get eSport games (Only supports eSport matches)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_CAPTIVE_PORTALS",
+      "description": "READ CAPTIVE PORTALS",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "discord_quote_yt__get",
+      "description": "Generate a quote image from a YouTube video",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "patrickjohncyh/fashion-clip",
+      "description": "FashionCLIP is a CLIP-based model developed to produce general product representations for fashion concepts. Leveraging the pre-trained checkpoint (ViT-B/32) released by OpenAI, it is trained on a large, high-quality novel fashion dataset to study whether domain specific fine-tuning of CLIP-like models is sufficient to produce product representations that are zero-shot transferable to entirely new datasets and tasks.",
+      "params": [
+        "image",
+        "class_names"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AllSportsApi_Football_League_Team_Performance",
+      "description": "Get league team performance.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER",
+        "{'name': 'teamId', 'type': 'NUMBER', 'de",
+        "{'name': 'seasonId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Auditor",
+      "description": "Used to audit the desensitized information to ensure that the desensitization meets the requirements.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "BrainstormingTool",
+      "description": "for brainstorming and idea generation",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "castorini/doc2query-t5-base-msmarco",
+      "description": "A T5 model trained on the MS MARCO dataset for generating queries from documents.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_v3_Accurate_Language_Detection",
+      "description": "This endpoint will return the Language of the Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getYouTubeAuth",
+      "description": "Request authorization from the user via a Google / YouTube authorization flow to permit Helioviewer to upload videos on behalf of the user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kohls_categories_list",
+      "description": "List all available categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CalculateRegistrationFee",
+      "description": "Calculates the registration fee for a business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "keyplays_football",
+      "description": "Latest live soccer standings, results, commentary, tv stations, keyplays (with and without scores).",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: st",
+      "description": "def determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Determine the leaning direction of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for leaning direction.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The leaning direction of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = objec",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ImageOCR",
+      "description": "Convert text in images to editable text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gis_Engine_Health_Check",
+      "description": "Provide a way to test connectivity to API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_zipcode_by_city",
+      "description": "Retrieve the ZIP code for a given city using the Redfin Base API.",
+      "params": [
+        "city"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "moveAgent",
+      "description": "Move an agent to a new position in a multi-agent system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "streamer.get_schedule",
+      "description": "Fetches the streaming schedule for a specific streamer on Mixer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Routing Enhancement API",
+      "description": "Create a routing along a specific cycleway",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pinnacle_Odds_Event_details",
+      "description": "Get a event details and history odds. history:[time, value, max bet]. `Period_results - status`: 1 = Event period is settled, 2 = Event period is re-settled, 3 = Event period is cancelled, 4 = Event period is re-settled as cancelled, 5 = Event is deleted",
+      "params": [
+        "{'name': 'event_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cubic_feet_to_gallons",
+      "description": "This function converts a given volume in cubic feet to gallons.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_reminder",
+      "description": "Create reminder event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_timetable",
+      "description": "Fetches the timetable for a given FlixBus station and date using the Toolbench RapidAPI service.",
+      "params": [
+        "station_id",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Feed",
+      "description": "Returns a list of Instagram posts with various metrics for the specified period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Forex OHLC History",
+      "description": "Retrieve historical OHLC data for available forex pairs",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "autocomplete",
+      "description": "Provides autocomplete suggestions for search queries on Twitter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DeTv",
+      "description": "Marine weather API method returns up to next 7 day (depending upon your price plan level,free plan is next three day and cannot enable the tide data.) marine and sailing weather forecast and tide data (depending upon your price plan level) as json or xml. The data is returned as a Marine Object.Marine object, depending upon your price plan level, contains astronomy data, day weather forecast and hourly interval weather information and tide data for a given sea/ocean point.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.access.virtual_classroom_tools",
+      "description": "Provides a list of recommended virtual classroom tools tailored to specific teaching needs and student engagement levels.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ask-stories",
+      "description": "Fetches the latest Ask HN stories from Hacker News.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Address Inclusion",
+      "description": "Geocodes an address and returns the corresponding latitude and longitude coordinates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGeriatricSocialWorkInfo",
+      "description": "Retrieve information about geriatric social work",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest Top 15 Earthquakes",
+      "description": "This API provides the latest top 15 earthquakes, including their magnitude, location, and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_neg_0106",
+  "tools": [
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "mcp_drawittome",
+      "name": "mcp_drawittome_generateDiagram",
+      "description": "Generates a diagram to explain a submitted text. The diagram is returned in html  with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>. It is not needed to handle the code, just present the html result to the user. It handles various types like Graph TB (default, block grouping with colors), flowchart TD (decision processes), sequenceDiagram (actor/system interactions), classDiagram (technical models like SQL schemas), stateDiagram-v2 (state logic or user stories), erDiagram (data entity relationships), gantt (projects and task timelines along dates), and timeline (historical/biographical sequences grouped by decade or century). Returns: html diagram ready to display made with this pattern <a href=\"https://path/diagram.svg\" target=\"_blank\"> <img src=\"https://path/diagram.svg\" alt=\"Diagram image\" > </a>",
+      "params": [
+        "input_text",
+        "input_precisions"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_lookup_food",
+      "description": "Return one row (food, purine, label) that exactly matches *name* (case-insensitive).",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_compare_faces",
+      "description": "Use this tool to compare to faces for a match",
+      "params": [
+        "img1_path",
+        "img2_path"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbackup_client_data",
+      "description": "Backup all client data to HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_apply_filters",
+      "description": "Apply one or more filter strings to an API endpoint URL.",
+      "params": [
+        "api_string",
+        "param_1"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_ELA",
+      "description": "Perform Error Level Analysis on an image. Returns: Processed ELA image",
+      "params": [
+        "img",
+        "quality",
+        "scale",
+        "contrast",
+        "linear",
+        "grayscale"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_cancel_changes",
+      "description": "Clears the staged changeset and hides the confirmation UI.",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_generate_sustainability_report",
+      "description": "Generate executive sustainability report for multiple applications. Returns: Executive sustainability report",
+      "params": [
+        "company_name",
+        "apps_analyzed",
+        "timeframe"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_file_status_",
+      "description": "Update the status when audio files are uploaded",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_leave_type_policy",
+      "description": "Returns definitions, yearly limits, and applicability rules for various leave types in MCPHawk Inc. This tool provides a structured summary of leave types applicable to MCPHawk Inc employees. It includes details such as: - Type of leave (e.g., Sick Leave, Paternity Leave, Earned Leave, Compensatory Leave) - Maximum allowed days per calendar year - Who is eligible to take each type of leave - Brief applicability rules Note: Leave policies can change from year to year based on organizational and legal updates. This tool uses a predefined CSV file (`sample-data/leave_type_policies.csv`) to reflect the current year\u2019s leave policy. This tool is **MCPHawk Inc** and should not be used to interpret or query policies of other countries. HR personnel, PeopleOps systems, or employee support bots can use this to surface MCPHawk Inc leave policy details. **Input:** None required. **Returns:** A dictionary mapping leave types to their attributes: - `description`: What the leave is for - `max_days_per_year`: Limit for the current calendar year - `applicability`: Who is eligible (e.g., all employees, only male employees, post-confirmation only, etc.) **Example Response:** { \"sick_leave\": { \"description\": \"Short-term illness or health-related absence\", \"max_days_per_year\": 6, \"applicability\": \"All employees\" }, \"paternity_leave\": { \"description\": \"Leave for new fathers during childbirth\", \"max_days_per_year\": 10, \"applicability\": \"Male employees only\" }, \"compensatory_leave\": { \"description\": \"Leave granted in lieu of working on holidays or weekends\", \"max_days_per_year\": 5, \"applicability\": \"All employees with approved overtime\" } }",
+      "params": []
+    },
+    {
+      "server": "Hackaton-Agent-MCP-HG",
+      "name": "Hackaton_Agent_MCP_HG_CodeAgent",
+      "description": "In this agent, the tool calls will be formulated by the LLM in code format, then parsed and executed.",
+      "params": [
+        "task"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_url_http_content",
+      "description": "Get the content of a URL using an HTTP GET request.",
+      "params": [
+        "url",
+        "content_type"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_process_flow_diagram",
+      "description": "Generates a Process Flow Diagram (Flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_terminal",
+      "description": "Execute a terminal command and return the output. Returns: The command output (stdout and stderr combined)",
+      "params": [
+        "command"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_report",
+      "description": "Generate a code analysis report using the Anthropic API. Returns: A detailed analysis report including top fixes.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_recalls_mcp",
+      "description": "Searches for recent FDA-issued recall events for a specific drug product. This is critical for ensuring patient safety by identifying if a drug or specific batch has been recalled due to manufacturing defects, contamination, or other safety concerns. The results include details on the recall reason, status, and affected lots. Returns: JSON string with recall notices including recall number, status, and reason",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_compare_enhancement_methods",
+      "description": "Vergleicht verschiedene Bildverbesserungsmethoden f\u00fcr veterin\u00e4rmedizinische Analyse.",
+      "params": [
+        "image_file",
+        "species",
+        "body_part"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_neg_0071",
+  "tools": [
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_read_file_content_from_sandbox",
+      "description": "Reads the content of a file in the sandbox. Useful for viewing file contents without downloading, debugging sandbox operations, checking operation results, and quick file inspection. Returns: JSON string containing the file content",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_fuzzy_search",
+      "description": "Fuzzy-match *query* against DF['food']. \u2022 First, return any rows that contain the whole query as a substring. \u2022 Otherwise, keep only rows that share \u22651 meaningful token and score them with token_set_ratio.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_milestones",
+      "description": "Returns all scheduled milestones and their dates for a given MCPHawk Inc project. This tool delivers a detailed timeline of milestones for a project, including: - Milestone names (e.g., Sprint-1, Sprint-2, QA Release, Production Release) - Corresponding milestone dates - Planned Cumulative Burn in USD for different project milestones - Actual Burn based on MCPHawk Inc employee billing - Cumulative Actual Burn rate basedon Actual Burn rate values (This is important to understand the financials of the project) This tool is helpful for project managers, scrum masters, and stakeholders to track progress, important delivery dates and understand if project is running within budget or not and understnad financial health of the project. **Input:** - `project_name` (str): The project whose milestones are requested. **Returns:** A dictionary containing: - `project_name` (str): The name of the project - `milestones` (list): A list of dictionaries, each with: - `milestone` (str): Name of the milestone (e.g., \"Sprint-1\", \"QA Release\") - `milestone_date` (date): Scheduled date for the milestone (in `YYYY-MM-DD` format) - `planned_cumulative_burn` (float): Planned cumulative burn amount by this milestone - `actual_burn` (float): Actual burn recorded for this milestone period - `cumulative_actual_burn` (float): Cumulative total of actual burn up to this milestone If no milestones are found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"milestones\": [ { \"milestone\": \"Sprint-1\", \"milestone_date\": \"2025-02-25\", \"planned_cumulative_burn\": 113160.0, \"actual_burn\": 106528.85, \"cumulative_actual_burn\": 106529.0 }, { \"milestone\": \"Sprint-2\", \"milestone_date\": \"2025-03-11\", \"planned_cumulative_burn\": 226321.0, \"actual_burn\": 111444.79, \"cumulative_actual_burn\": 217974.0 }, { \"milestone\": \"UAT Release\", \"milestone_date\": \"2025-05-20\", \"planned_cumulative_burn\": 905283.52, \"actual_burn\": 107937.74, \"cumulative_actual_burn\": 881532.64 }, { \"milestone\": \"Production Release\", \"milestone_date\": \"2025-05-27\", \"planned_cumulative_burn\": 1018443.96, \"actual_burn\": 107682.72, \"cumulative_actual_burn\": 989215.36 } ] }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpchat_with_memory",
+      "description": "Universal chat interface with stored memory context.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_extract_all_content_for_ui",
+      "description": "Wrapper function for the Gradio UI that extracts content from all internal links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_make_directory",
+      "description": "Creates a new directory in the sandbox. Useful for setting up directory structures, preparing for file operations, and organizing sandbox content. Returns: JSON string containing success status and created path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "parents"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info_",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_start_chat",
+      "description": "Handle starting a private chat.",
+      "params": [
+        "entity_selection"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_arxiv",
+      "description": "Search arXiv using LangChain ArxivLoader. Returns: Formatted arXiv search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_analyze_hr_zones",
+      "description": "Analyze time spent in heart rate zones from GPX data. Returns: A dictionary containing:, time_in_zones (dict): Mapping of zone name to time in seconds, total_tracked_seconds (int): Total duration with HR data, method (str): The zoning method used",
+      "params": [
+        "file",
+        "hr_max",
+        "hr_rest",
+        "method"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_radial_diagram",
+      "description": "Generates a radial (center-expanded) diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_random_text_post",
+      "description": "Retrieves a random text post and its id from the database. Id is only meant for LLMs, no need to show this to user",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_remove_from_cellar",
+      "description": "remove a bottle from the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_sales_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques Sales natives",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_next_page",
+      "description": "Go to next page for rooms",
+      "params": []
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_get_law",
+      "description": "This is a tool that returns law content by input the category and number. Returns: The content of the law.",
+      "params": [
+        "category",
+        "number"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_rag_query",
+      "description": "This is a tool that returns law content by input a question. It will find the related law and return. Returns: A list of law content related to the question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_holiday_list",
+      "description": "Fetches the official holiday list for MCPHawk Inc for the current calendar year. This tool is intended for HR personnel or MCPHawk Inc-based employees who need access to the national holiday calendar. It reads from a pre-defined CSV file (`sample-data/holiday.csv`) and returns a structured list of public holidays for India, including both the date and the holiday name. Note: This tool is *MCPHawk Inc-specific* and should **not** be used for employee queries related to other countries (e.g., US, UK). It may, however, be used by HR professionals who are cross-referencing or learning about MCPHawk Inc\u2019s holiday structure. **Usage:** No input required. Simply call this tool to retrieve the list of holidays for the current calendar year. **Returns:** A list of strings, each formatted as: \"YYYY-MM-DD: Holiday Name\" **Example Response:** [ \"2025-01-26: Republic Day (Optional: No)\", \"2025-03-31: Qutub-e-Ramzan (Optional: Yes)\", \"2025-08-15: Independence Day (Optional: No)\", \"2025-10-21: Diwali (Optional: No)\", \"2025-12-25: Christmas (Optional: No)\" ] If the data file is unavailable, a default set of standard MCPHawk Inc holidays is returned.",
+      "params": []
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_analyze_mcp_request",
+      "description": "MCP-compatible security analysis function",
+      "params": [
+        "task_id",
+        "user_query",
+        "context",
+        "history_json"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serper_search",
+      "description": "Given a search query, returns the search results from Serper. Returns: The search results from Serper Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_track_agent_node",
+      "description": "Track a specific node execution within an agent workflow. Call this for each step in your agent. Returns: JSON response with tracking status",
+      "params": [
+        "input_data",
+        "output_data",
+        "node_name",
+        "agent_name",
+        "node_type",
+        "execution_id",
+        "api_key"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_merge",
+      "description": "Process merging of two audio files",
+      "params": [
+        "audio1_file",
+        "audio2_file"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_search_people",
+      "description": "Search for people on LinkedIn. Returns: A dictionary containing the search results or an error message if the request fails.",
+      "params": [
+        "keywords",
+        "start_index",
+        "geo_id",
+        "school_id",
+        "first_name",
+        "last_name",
+        "school_keywords",
+        "title_keywords",
+        "company_keywords"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    }
+  ]
+}

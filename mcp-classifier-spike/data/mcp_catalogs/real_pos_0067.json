@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_pos_0067",
+  "tools": [
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_posts",
+      "description": "Fetch LinkedIn profile posts for the given username. Returns: A dictionary containing the profile posts",
+      "params": [
+        "username",
+        "start_index",
+        "pagination_token",
+        "newer_than"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio_from_url",
+      "description": "Transcribe audio/video files from a URL into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Provide a URL to a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_url",
+        "api_key"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_execute_command",
+      "description": "Executes a command in a specified Modal sandbox environment. Useful for running arbitrary commands in isolated environments, testing scripts and programs, executing programs with specific dependencies, debugging environment-specific issues, and running automated tests in isolation. Note: Commands are processed using shlex.split() and executed via subprocess.run(), so shell operators like &&, ||, |, >, < are not supported. Use separate command calls for chaining operations. Returns: JSON string containing stdout, stderr, returncode and execution time",
+      "params": [
+        "sandbox_id",
+        "command",
+        "timeout_seconds"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame_",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_single_file",
+      "description": "Retrieve a single file from GitHub repository. Returns: JSON response with file content and metadata",
+      "params": [
+        "repo_url",
+        "file_path",
+        "branch"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_test_database_connection",
+      "description": "Test database connection and update connection status",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_fill_fog",
+      "description": "Fill the entire map with fog of war.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_pawn_structure",
+      "description": "Analyze pawn\u2010structure features for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_relevance_evaluator",
+      "description": "Evaluate how relevant each generation is to the given query using cosine similarity. Returns: Relevance scores for each generation and average relevance.",
+      "params": [
+        "query",
+        "generations"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_join_game",
+      "description": "Handle player joining the game.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorscreenshot_to_code",
+      "description": "Complete pipeline: analyze image and generate corresponding HTML code.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_hf_datasets",
+      "description": "List available HuggingFace datasets for the current user. Returns: str: JSON string with available datasets",
+      "params": []
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_event_info",
+      "description": "Retrieve information about a specific Formula 1 event.",
+      "params": [
+        "year",
+        "round",
+        "format"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "find_opening_by_name",
+      "description": "Search for a chess opening by its name in the Lichess openings database. Return the ECO code, name, PGN, FEN and sub-variations of a chess opening by its name. The name is matched case-insensitively.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_clear_fields",
+      "description": "Clear the subject and story text fields. Returns: List[str]: Empty strings for the fields to clear",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_test_mcp_tool",
+      "description": "Test the MCP tool directly",
+      "params": [
+        "contract_code",
+        "hf_token",
+        "hf_model"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API filter.",
+      "params": [
+        "filter_name"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask",
+      "description": "Ask the D&D narrative agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement__",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_predict",
+      "description": "Predicts whether an image is AI-generated or real using the SOTA Community Forensics model. Returns: A dictionary containing:, 'Fake Probability' (float): Probability score between 0 and 1 indicating likelihood of being AI-generated, 'Result Description' (str): Human-readable description of the prediction result, , >>> result = predict(\"path/to/image.jpg\"), >>> print(result), 0.002, 'Result Description': 'The image is likely real.'}",
+      "params": [
+        "img"
+      ]
+    },
+    {
+      "server": "ZeroGPU_Agent_Tools",
+      "name": "ZeroGPU_Agent_Tools_ZeroGPU_Agent_Tools",
+      "description": "Returns a list/array of ZeroGPU Gradio spaces as Agent Tools. Each tool is a running ZeroGPU Gradio space. Currently limited to ~20 for demo purposes.",
+      "params": []
+    }
+  ]
+}

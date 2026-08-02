@@ -1,0 +1,111 @@
+eval=real  examples=376  catalogs=392
+  [bm25:bm25:-] 376 records in 0.3s (1101.5/s)
+loading embed sentence-transformers/all-MiniLM-L6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 12581.57it/s]
+  [embed:sentence-transformers/all-MiniLM-L6-v2:-] 376 records in 9.7s (38.7/s)
+loading embed BAAI/bge-small-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 11327.96it/s]
+  [embed:BAAI/bge-small-en-v1.5:-] 376 records in 21.5s (17.5/s)
+loading embed BAAI/bge-base-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 16020.16it/s]
+  [embed:BAAI/bge-base-en-v1.5:-] 376 records in 39.5s (9.5/s)
+loading embed thenlper/gte-small ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 11634.60it/s]
+  [embed:thenlper/gte-small:-] 376 records in 12.3s (30.6/s)
+loading embed intfloat/e5-small-v2 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 19996.32it/s]
+  [embed:intfloat/e5-small-v2:-] 376 records in 21.3s (17.7/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 40784.82it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best] 376 records in 43.0s (8.8/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best_desc ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 39009.71it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best_desc] 376 records in 42.2s (8.9/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 11864.74it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best] 376 records in 22.1s (17.0/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 12226.53it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best_desc] 376 records in 21.3s (17.7/s)
+loading nli MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli config=best ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 12003.83it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli:best] 376 records in 58.0s (6.5/s)
+loading nli MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli config=best_desc ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 11857.24it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli:best_desc] 376 records in 58.0s (6.5/s)
+loading nli facebook/bart-large-mnli config=best ...
+Loading weights:   0%|          | 0/515 [00:00<?, ?it/s]Loading weights: 100%|##########| 515/515 [00:00<00:00, 11858.07it/s]
+  [nli:facebook/bart-large-mnli:best] 376 records in 88.4s (4.3/s)
+loading nli facebook/bart-large-mnli config=best_desc ...
+Loading weights:   0%|          | 0/515 [00:00<?, ?it/s]Loading weights: 100%|##########| 515/515 [00:00<00:00, 12175.91it/s]
+  [nli:facebook/bart-large-mnli:best_desc] 376 records in 91.9s (4.1/s)
+loading nli cross-encoder/nli-deberta-v3-small config=best ...
+Loading weights:   0%|          | 0/106 [00:00<?, ?it/s]Loading weights: 100%|##########| 106/106 [00:00<00:00, 7610.34it/s]
+  [nli:cross-encoder/nli-deberta-v3-small:best] 376 records in 26.7s (14.1/s)
+loading nli cross-encoder/nli-deberta-v3-small config=best_desc ...
+Loading weights:   0%|          | 0/106 [00:00<?, ?it/s]Loading weights: 100%|##########| 106/106 [00:00<00:00, 12135.17it/s]
+  [nli:cross-encoder/nli-deberta-v3-small:best_desc] 376 records in 26.1s (14.4/s)
+loading nli typeform/distilbert-base-uncased-mnli config=best ...
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 12573.00it/s]
+  [nli:typeform/distilbert-base-uncased-mnli:best] 376 records in 13.6s (27.6/s)
+loading nli typeform/distilbert-base-uncased-mnli config=best_desc ...
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 12178.79it/s]
+  [nli:typeform/distilbert-base-uncased-mnli:best_desc] 376 records in 13.5s (27.8/s)
+wrote results\matrix_real.jsonl
+eval=seed  examples=111  catalogs=392
+  [bm25:bm25:-] 111 records in 0.1s (1566.2/s)
+loading embed sentence-transformers/all-MiniLM-L6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 12583.40it/s]
+  [embed:sentence-transformers/all-MiniLM-L6-v2:-] 111 records in 1.5s (73.4/s)
+loading embed BAAI/bge-small-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 12247.85it/s]
+  [embed:BAAI/bge-small-en-v1.5:-] 111 records in 2.0s (54.3/s)
+loading embed BAAI/bge-base-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 18672.63it/s]
+  [embed:BAAI/bge-base-en-v1.5:-] 111 records in 2.3s (48.9/s)
+loading embed thenlper/gte-small ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 11678.23it/s]
+  [embed:thenlper/gte-small:-] 111 records in 2.2s (50.4/s)
+loading embed intfloat/e5-small-v2 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 19814.51it/s]
+  [embed:intfloat/e5-small-v2:-] 111 records in 2.1s (51.9/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 39583.45it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best] 111 records in 1.8s (60.3/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best_desc ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 39192.76it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best_desc] 111 records in 1.5s (71.7/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 8778.24it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best] 111 records in 2.0s (54.6/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 12217.71it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best_desc] 111 records in 1.6s (69.8/s)
+loading nli MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli config=best ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 12060.25it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli:best] 111 records in 2.9s (37.7/s)
+loading nli MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli config=best_desc ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 11891.03it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli:best_desc] 111 records in 3.0s (36.7/s)
+loading nli facebook/bart-large-mnli config=best ...
+Loading weights:   0%|          | 0/515 [00:00<?, ?it/s]Loading weights: 100%|##########| 515/515 [00:00<00:00, 10611.97it/s]
+  [nli:facebook/bart-large-mnli:best] 111 records in 3.2s (34.2/s)
+loading nli facebook/bart-large-mnli config=best_desc ...
+Loading weights:   0%|          | 0/515 [00:00<?, ?it/s]Loading weights: 100%|##########| 515/515 [00:00<00:00, 8802.98it/s]
+  [nli:facebook/bart-large-mnli:best_desc] 111 records in 3.0s (36.6/s)
+loading nli cross-encoder/nli-deberta-v3-small config=best ...
+Loading weights:   0%|          | 0/106 [00:00<?, ?it/s]Loading weights: 100%|##########| 106/106 [00:00<00:00, 10533.46it/s]
+  [nli:cross-encoder/nli-deberta-v3-small:best] 111 records in 1.1s (96.6/s)
+loading nli cross-encoder/nli-deberta-v3-small config=best_desc ...
+Loading weights:   0%|          | 0/106 [00:00<?, ?it/s]Loading weights: 100%|##########| 106/106 [00:00<00:00, 11998.93it/s]
+  [nli:cross-encoder/nli-deberta-v3-small:best_desc] 111 records in 1.1s (101.8/s)
+loading nli typeform/distilbert-base-uncased-mnli config=best ...
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 12695.59it/s]
+  [nli:typeform/distilbert-base-uncased-mnli:best] 111 records in 0.8s (147.8/s)
+loading nli typeform/distilbert-base-uncased-mnli config=best_desc ...
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|##########| 104/104 [00:00<00:00, 13522.46it/s]
+  [nli:typeform/distilbert-base-uncased-mnli:best_desc] 111 records in 0.7s (152.5/s)
+wrote results\matrix_seed.jsonl
+EXIT=0

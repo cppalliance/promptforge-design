@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_pos_0042",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "extract_payroll_tax",
+      "description": "This method takes a dictionary representing a table, and returns the sum of federal income tax, state income tax, and other taxes.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Media Downloader",
+      "description": "Downloads videos, reels, and stories from an Instagram media URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSellers",
+      "description": "Retrieve a list of users who are selling an item.",
+      "params": [
+        "world",
+        "itemID"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Words_of_Wisdom_The_Famous_Quotes_API_authors",
+      "description": "Returns a list of authors",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Comments By Username",
+      "description": "Retrieve the top comments made by a specific Reddit user, filtered by a specified time period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_factorial",
+      "description": "Find the factorial of a given number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPdfInStorageToEpub",
+      "description": "Converts a PDF string stored in a storage to an EPUB string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RoomBooking",
+      "description": "This API books the specified number of rooms in the given hotel for the duration of stay.",
+      "params": [
+        "{'name': 'hotel_name', 'in': 'query', 's",
+        "{'name': 'number_of_rooms', 'in': 'query",
+        "{'name': 'check_in_date', 'in': 'query',",
+        "{'name': 'check_out_date', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Track_credits",
+      "description": "Get track credits",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandLink",
+      "description": "Retrieves information on the original URL from a shortened link.",
+      "params": [
+        "apiKey",
+        "shortUrl"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "myBooky_DEMO_getReservationForUser",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/bart-large-mnli",
+      "description": "This is the checkpoint for bart-large after being trained on the MultiNLI (MNLI) dataset. The model can be used for zero-shot text classification by posing the sequence to be classified as the NLI premise and constructing a hypothesis from each candidate label. The probabilities for entailment and contradiction are then converted to label probabilities.",
+      "params": [
+        "sequence_to_classify",
+        "candidate_labels"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All News",
+      "description": "This endpoint will return back all greek news from all the sources.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_existence_of_other_objects(image_patch: ImagePatch, object_names: List[str",
+      "description": "def check_existence_of_other_objects(image_patch: ImagePatch, object_names: List[str]) -> str:\n    '''Check the existence of any other objects in the scene besides a list of specified objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_names (List[str]): The list of names of the objects to exclude.\n       \n    Returns:\n        str: \"yes\" if there are other objects, \"no\" otherwise.\n    '''\n    total_object_patches = 0\n    for object_name in object_names:\n        object_patches = image_patch.find(object_name)\n        total_object_patches += len(obje",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Date and Time by Location",
+      "description": "Retrieve the current string and time for a specified location based on latitude and longitude coordinates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live Geo v3",
+      "description": "Returns geographical information about the most recent visitors to a website.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "South Africa Songs",
+      "description": "Retrieve the South Africa Songs chart data from Billboard API v2. The chart is weekly based and defaults to the last week if no specific week is provided. If the week string is not Saturday, it will default to the Saturday of that week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FrLiUUE",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LeagueAwayStandings",
+      "description": "Get away standings for a handball unique tournament and season",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "doji",
+      "description": "Fetches a list of stocks having a Doji signal from the specified page using the Toolbench RapidAPI service.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Albums",
+      "description": "Retrieve a list of albums from the music database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fingish",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_uploadMovieToYouTube",
+      "description": "Share an existing user-generated movie to YouTube.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "KVStore_Get_storage_info",
+      "description": "Show the user's storage status and information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Daily Stock Price Information",
+      "description": "Retrieves daily price information for a specified stock, including opening, high, low, and closing prices, as well as trading volume.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "festivalPlanner.createEventSchedule",
+      "description": "Generates a detailed event schedule for a festival including dates, times, and event types.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BestBuyProductData",
+      "description": "It will accept two parameters keyword and page.\nFor Ex:\nkeyword: iphone  (it is the search term and it can be anything for example: iphone, ps5, sony tv etc)\npage: min 1 (max depends on the number of products available)",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v2_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Indicators by Subgroup",
+      "description": "Retrieve a list of indicators for each subgroup based on the provided group ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Best of the Day Predictions",
+      "description": "Retrieve the best betting predictions for the day in the sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Lotto_Draw_Results_Global_Region_List",
+      "description": "List of regions available by country code and name.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "yek_yb_ytivitca_teg",
+      "description": "Find an activity by its key.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumer_phone_search",
+      "description": "Search for people in the Data Axle database based on the provided criteria.",
+      "params": [
+        "limit",
+        "packages",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "GameTool",
+      "description": "Get game-related information and recommend games.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "openai/clip-vit-large-patch14",
+      "description": "The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner.",
+      "params": [
+        "text",
+        "images",
+        "return_tensors",
+        "padding"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTenderDetails",
+      "description": "Get detailed information on individual tenders such as the type of procurement, deadlines, and budget.",
+      "params": [
+        "tenderId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "points_point_forecast",
+      "description": "Fetches weather forecast data for a specific geographic point using the National Weather Service API.",
+      "params": [
+        "point"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PublicAPITestingInbox_logoutUser",
+      "description": "{\"category_name\": \"Advertising\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"PublicAPITestingInbox_logoutUser\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "uk_boundaries_io_Retrieve_UK_Postal_Sector_Outline_Boundaries",
+      "description": "example: Query by \"W41,W42\" sectors.",
+      "params": [
+        "{'name': 'postal-sector', 'type': 'STRIN"
+      ]
+    }
+  ]
+}

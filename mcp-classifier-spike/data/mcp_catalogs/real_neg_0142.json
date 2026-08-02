@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_neg_0142",
+  "tools": [
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_tool_selection",
+      "description": "Handle tool selection from dropdown with separate chat flows",
+      "params": [
+        "tool_name",
+        "current_chat"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_logout",
+      "description": "UI-only function to switch views after logout.",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle_image",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_anthology_search",
+      "description": "Search ACL Anthology papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. In most cases, you need OR and not AND. You can scroll all search results with the \"offset\" parameter. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. The names of authors should be in Latin script. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: abs:\"machine learning\" au:\"del maestro\" au:vaswani AND ti:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Return a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") You can use `json.loads` to deserialize the result and get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_way_anova",
+      "description": "Accepts multiple groups of numeric data as semicolon-separated groups or DataFrame columns and performs a one-way ANOVA (Analysis of Variance). This test determines whether there are statistically significant differences between the means of three or more independent groups. ANOVA tests the null hypothesis that all group means are equal against the alternative that at least one group mean differs from the others. The test calculates an F-statistic by comparing the variance between groups to the variance within groups. A significant result (p-value < alpha) indicates that at least one group differs, but does not identify which specific groups differ (post-hoc tests needed for pairwise comparisons). Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by group membership, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: comparing means across multiple treatment conditions, testing differences between multiple demographic groups, evaluating performance across several experimental conditions.",
+      "params": [
+        "groups_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_get_employee_project_assignment",
+      "description": "Returns the mapping of an employee to their project and role within that project for MCPHawk Inc. This tool provides a simple overview of which project an employee is assigned to and their specific role on that project. This tool is useful for team leads, project managers, and HR systems needing to quickly identify employee assignments and responsibilities. **Input:** - `employee_name` (str): The full name of the employee whose project-role mapping is requested. **Returns:** A dictionary containing: - `project_name`: Name of the project the employee is working on - `role`: The employee\u2019s role within that project (e.g., SDE, Architect, DE) If no mapping is found for the given employee, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Aggregate Innovative Paradigms\", \"role\": \"Architect\" }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_balance_ui",
+      "description": "Gradio wrapper for get balance",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_client_config_by_id",
+      "description": "\u6839\u636eID\u83b7\u53d6\u5355\u4e2a\u5ba2\u6237\u7aef\u914d\u7f6e \u6ce8\u610f\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 \u8fd4\u56de\u683c\u5f0f(\u4e0d\u662f\u5168\u90e8\u53c2\u6570): ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", \"data\": { \"serverAddr\" = \"127.0.0.1\", \"serverPort\" = 25566, } } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u914d\u7f6e - `serverAddr`: \u670d\u52a1\u5668\u5730\u5740 - `serverPort`: \u670d\u52a1\u5668\u7aef. Returns: \u5305\u542b\u8bf7\u6c42\u72b6\u6001\u3001\u6d88\u606f\u548c\u5ba2\u6237\u7aef\u914d\u7f6e\u7684\u5b57\u5178",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "SlideDeck-AI",
+      "name": "SlideDeck_AI_execute_agent_task",
+      "description": "Orchestrates the full tool chain and updates the UI with native audio components.",
+      "params": [
+        "uploaded_files_list",
+        "user_topic_input"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_loyalty_program_info",
+      "description": "Get information about loyalty program, rewards, and member benefits.",
+      "params": [
+        "inquiry_type"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_game_details",
+      "description": "Get detailed information for one or more board games. Returns: Detailed game information including mechanics, categories, ratings, etc.",
+      "params": [
+        "game_ids"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_new_garment",
+      "description": "Run the Virtual Try-On model with provided model image and garment prompt.",
+      "params": [
+        "model_image_path",
+        "garment_prompt",
+        "model_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_find_similar_cases_mcp",
+      "description": "Identifies and retrieves adverse event cases from the FAERS database that are similar to a given reference case. Similarity is calculated based on a combination of patient demographics (age, gender), reported reactions, and concomitant drugs. This tool is useful for contextualizing a specific case and identifying potential case series for further review. Returns: JSON string with similar cases and similarity scores",
+      "params": [
+        "reference_case_id",
+        "similarity_threshold",
+        "limit"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_translate_caption_interface",
+      "description": "Generate multi-language versions of captions",
+      "params": [
+        "base_caption",
+        "selected_languages"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "FinancialRatioCalculator",
+      "name": "FinancialRatioCalculator__build_metric_help",
+      "description": "Returns a tuple (description, json_template) for the chosen ratio.",
+      "params": [
+        "selected_ratio"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_search_suggestions",
+      "description": "Get personalized job search suggestions based on user profile. Returns: Dict with suggested search queries and parameters",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_code_wrapper",
+      "description": "### `generate_code_wrapper(user_request: str)` - **Purpose**: Generate Python code based on user request - **Parameters**: `user_request` - Textual description of the analysis - **Returns**: Generated code and status message - **Use Case**: AI-powered code generation for data analysis",
+      "params": [
+        "user_request"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_validate_api_configuration",
+      "description": "TOOL: Validate and store API configuration for monitoring. PURPOSE: Test an API endpoint and store the configuration if successful. This is STEP 1 of the monitoring setup process. If validation fails, retry with corrected parameters.    If successful, use the returned config_id in activate_monitoring() function. CRITICAL: Even if success=True, you MUST manually check the 'sample_response' field before proceeding to activate_monitoring(). The API call may return success=True but contain error messages (like \"401 Unauthorized\", \"Invalid API key\", etc.) in the sample_response. CRITICAL: Always try to add parameters that will limit the API response to a manageable size. CRITICAL: Be sure to always clearly inform the user of the config_id after a desired validation result. CRITICAL: If you don't have an MCP API KEY given by the user, prompt them to get it here: https://mcp-hackathon.vercel.app/ WORKFLOW: 1. Call this function to validate API configuration 2. If success=False: Fix parameters and retry this function 3. If success=True: MANUALLY INSPECT the 'sample_response' field for errors 4. If sample_response contains error messages: Fix API parameters and retry validation 5. If sample_response looks valid: Use config_id in activate_monitoring() to activate monitoring ARGUMENTS: - mcp_api_key: MCP API key serves as user identifier. - name: User-friendly name for the monitoring task - description: Description of what is being monitored - method: HTTP method (GET, POST, PUT, DELETE) - base_url: The base URL of the API - endpoint: The specific API endpoint - param_keys_values: Parameter key-value pairs, one per line - header_keys_values: Header key-value pairs, one per line - additional_params: Optional JSON string for complex parameters - schedule_interval_minutes: Minutes between calls - stop_after_hours: Hours after which to stop (supports decimals, max 168 = 1 week) - start_at: Optional datetime string for when to start the monitoring. IMPORTANT: Leave as empty string \"\" for immediate start (most common use case, always default to this if no start time provided). Only provide a datetime string (e.g., \"2024-06-15 09:00:00\") if you need to schedule monitoring for a specific future time. Input Examples: 1. Simple GET request to monitor stock price: mcp_api_key: \"your_mcp_key_here\" name: \"NVDA Stock Price\" description: \"Monitor NVIDIA stock price every 30 minutes\" method: \"GET\" base_url: \"https://api.example.com\" endpoint: \"stocks/NVDA\" param_keys_values: \"symbol: NVDA interval: 1min\" header_keys_values: \"Authorization: Bearer your_token\" additional_params: \"{}\" schedule_interval_minutes: 30 stop_after_hours: 1.5 start_at: \"\" 2. Weather monitoring with free API: mcp_api_key: \"\" name: \"Weather Monitor\" description: \"Monitor current weather conditions every 2 hours for one week using Open-Meteo free API\" method: \"GET\" base_url: \"https://api.open-meteo.com\" endpoint: \"v1/forecast\" param_keys_values: \"latitude: 40.7128 longitude: -74.0060 current: temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m timezone: America/New_York\" header_keys_values: \"Content-Type: application/json\" additional_params: \"{}\" schedule_interval_minutes: 120 stop_after_hours: 168 start_at: \"2024-06-15 09:00:00\". Returns: Dictionary with success status, config_id (needed for setup_scheduler), message, and sample_response, , {, True,, 123,, \"API call tested and stored successfully\",, {...},, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:00:00Z\", }, If success=True, call activate_monitoring(config_id, mcp_api_key) to activate monitoring",
+      "params": [
+        "mcp_api_key",
+        "name",
+        "description",
+        "method",
+        "base_url",
+        "endpoint",
+        "param_keys_values",
+        "header_keys_values",
+        "additional_params",
+        "schedule_interval_minutes",
+        "stop_after_hours",
+        "start_at"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_home_buying_tax_calculator_browser_use",
+      "description": "Uses a browser automation agent to navigate the UK government's Stamp Duty Land Tax (SDLT) calculator website and retrieve the total SDLT due based on provided property and purchaser details. This tool is specifically for properties in England or Northern Ireland. Returns: The result from the browser interaction, typically the total SDLT due or an, error message if the process fails.",
+      "params": [
+        "region",
+        "property_type",
+        "day",
+        "month",
+        "year",
+        "purchaser_type",
+        "purchaser_purpose",
+        "more_properties",
+        "replace",
+        "First_time_Buyer",
+        "main_residence",
+        "price"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_sales_orders_wrapper",
+      "description": "Recherche des commandes de vente native",
+      "params": [
+        "name",
+        "min_amount",
+        "state",
+        "limit"
+      ]
+    }
+  ]
+}

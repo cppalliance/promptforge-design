@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_pos_0130",
+  "tools": [
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_download_file",
+      "description": "Handle file download. Returns: Path to the file if it exists, None otherwise, , If the file doesn't exist",
+      "params": []
+    },
+    {
+      "server": "clinical-triage-mcp",
+      "name": "clinical_triage_mcp_triage_response",
+      "description": "Sends a triage prompt to Mistral API and parses the JSON response.",
+      "params": [
+        "symptoms"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_rag_query",
+      "description": "This is a tool that returns law content by input a question. It will find the related law and return. Returns: A list of law content related to the question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_calculate_code_carbon_footprint",
+      "description": "Calculate the carbon footprint of a codebase. Returns: Detailed carbon footprint analysis with recommendations",
+      "params": [
+        "github_url",
+        "deployment_info"
+      ]
+    },
+    {
+      "server": "healthify-me-mcp",
+      "name": "healthify_me_mcp_search_food_products",
+      "description": "Recherche des produits alimentaires dans la base de donn\u00e9es OpenFoodFacts. Cette fonction effectue une recherche intelligente de produits alimentaires en analysant la requ\u00eate utilisateur avec Mistral AI pour extraire le nom du produit et la marque, puis interroge la base DuckDB.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htr_text",
+      "description": "Extract text from handwritten documents using HTR. returns: str: Extracted text from the image.",
+      "params": [
+        "image_path",
+        "document_type",
+        "custom_settings"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_health_status",
+      "description": "Get comprehensive system health status including advanced monitoring features. Retrieves detailed health information about the system including availability of advanced features, system resources, and operational metrics. Returns basic information if advanced monitoring is not available. Returns: A dictionary containing system health status and metrics",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_generate_multiple_tones",
+      "description": "Generate cover letters in multiple tones for comparison. Returns: Dict with multiple cover letters in different tones",
+      "params": [
+        "user_id",
+        "job_description"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_endpoint_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API endpoint.",
+      "params": [
+        "endpoint"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_code_runner_wrapper",
+      "description": "Wrapper for CodeRunnerAgent that uses async execution with warm pool. Ensures a sandbox is spawned if not already present, waits for readiness, and then executes the code. Provides user-friendly error messages. Returns: The execution result or user-friendly error message",
+      "params": [
+        "code_or_obj"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_find_similar_cases_mcp",
+      "description": "Identifies and retrieves adverse event cases from the FAERS database that are similar to a given reference case. Similarity is calculated based on a combination of patient demographics (age, gender), reported reactions, and concomitant drugs. This tool is useful for contextualizing a specific case and identifying potential case series for further review. Returns: JSON string with similar cases and similarity scores",
+      "params": [
+        "reference_case_id",
+        "similarity_threshold",
+        "limit"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_visitors",
+      "description": "\u83b7\u53d6\u6240\u6709\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range from 10-Q filings. Caveat the quarter in the returned dictionary key is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle_image",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_diversity_checker",
+      "description": "Measures how semantically diverse the generated outputs are using cosine similarity. Returns: A report showing pairwise similarities and average similarity.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "kokoro-mcp-marcodsn",
+      "name": "kokoro_mcp_marcodsn_kokoro_tts",
+      "description": "Generate speech audio from text using Kokoro TTS. Returns: Path to the generated WAV audio file.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_interest_calculator",
+      "description": "Calculates the simple interest payable for a given principal amount based on the current Bank of England base rate. Returns: A string detailing the principal, interest payable, and the annual interest rate,, or an error message if the calculation fails.",
+      "params": [
+        "principal"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display_",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_exit_chat",
+      "description": "Handles logout logic. Returns completion status and updated roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_discover_and_analyze_web",
+      "description": "MCP Tool: Discovers relevant URLs based on a search prompt using web search search and then analyzes as Marketing & Content Intelligence Engine assistant. The analysis uses the swarm mode and is useful for finding content related to a specific topic including SEO keywords.",
+      "params": [
+        "search_prompt",
+        "num_urls",
+        "analysis_prompt_override"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_pawn_structure",
+      "description": "Analyze pawn\u2010structure features for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    }
+  ]
+}

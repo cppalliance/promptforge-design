@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0137",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "WordCloud",
+      "description": "Create word cloud images from text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "UK_PostCode_API_addresses_autocomplete",
+      "description": "Suggests address results for a given search term.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NCAA_Final_Four_Third_Place",
+      "description": "Get third place data (only available between 1946 and 1981) for the given year.",
+      "params": [
+        "{'name': 'identifier', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "linearregintercept",
+      "description": "Calculates the linear regression intercept for the specified symbol and interval using the specified parameters and the Twelve Data API.",
+      "params": [
+        "symbol",
+        "interval",
+        "series_type",
+        "time_period",
+        "format",
+        "outputsize"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Archive Events by Sport",
+      "description": "Retrieves a list of archived events for a specific sport, with optional filtering by league ID and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Epoch_Converter_start_end_date_to_time",
+      "description": "Convert datetime to get start timestamp and end timestamp. (year, month, day Hours:Minutes:Seconds) -> 1674864000.0, 1674950399.0",
+      "params": [
+        "{'name': 'figure', 'type': 'STRING', 'de",
+        "{'name': 'data_type', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetSingleVerse",
+      "description": "Retrieves a single verse from the NIV Bible based on the book, chapter, and verse number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Match_APi_Get_all_competitions_information",
+      "description": "Retrieve all competitions information",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getMarketCalendar",
+      "description": "Retrieves market calendar data for a given month and year.",
+      "params": [
+        "month",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ar.create_anchor",
+      "description": "Creates an anchor point in the AR scene based on specified coordinates and time constraints.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Airline Details",
+      "description": "This endpoint returns detailed information about an airline based on its IATA code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseStatsCollector.fetchDailyStats",
+      "description": "Collects and aggregates daily statistics from specified databases, applying filters and returning formatted results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_News_detik_search",
+      "description": "search detik.com news",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mazkooleg/0-9up-hubert-base-ls960-ft",
+      "description": "This model is a fine-tuned version of facebook/hubert-base-ls960 on the None dataset. It achieves an accuracy of 0.9973 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DownloadDocument",
+      "description": "Downloads a document by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_actual_total_weight",
+      "description": "This function calculates the actual total weight of the class of boys after correcting the misread weight.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuestDetails",
+      "description": "Access information on a specific quest, including its objectives and rewards.",
+      "params": [
+        "questId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Wanted Image",
+      "description": "Retrieve a wanted image from a specified URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get World Currencies Prices",
+      "description": "This API returns the current prices of world currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "blake2b_text_hash_with_key",
+      "description": "Hashes the given text using the BLAKE2b algorithm with a provided key via the Toolbench RapidAPI service.",
+      "params": [
+        "datastring",
+        "keystring"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query:",
+      "description": "def discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query: str) -> str:\n    '''Discuss the importance of spending quality time with a specific group of people in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        group_name (str): The name of the group of people to discuss.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The discussion about the importance of spending quality time with the group.\n    '''\n    \n    group_identity = image_patch.simple_query(f\"What is the identity of the {group",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Sentiment Analysis API",
+      "description": "Returns a list of articles related to the input stock and their associated sentiment scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_airport",
+      "description": "Searches for an airport based on the provided query using the TripAdvisor API.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ICC Standings",
+      "description": "Retrieves the ICC standings for a specific match type and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Self_help_Quotes_Get_all_available_self_help_books",
+      "description": "Get a list of all available books in addition to the total count of quotes available from that book",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_units_digit_condition(start, end, condition_func)",
+      "description": "def find_units_digit_condition(start, end, condition_func):\n    \"\"\"\n    Find the units digit of a number in a given range that satisfies a certain condition.\n\n    Parameters:\n    start (int): The start of the range of numbers to check.\n    end (int): The end of the range of numbers to check.\n    condition_func (function): A function that takes in two arguments (the product and sum of the digits of a number) and returns a boolean indicating whether the number satisfies the condition.\n\n    Returns:\n    int: The units digit of the number that satisfies the condition, or None if no such number is ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Track Details (Single)",
+      "description": "Retrieve detailed information about a single Spotify track, including track name, thumbnail, duration, and artist name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CPF_CNPJ_Brasil_Consulta_dados_societ_rios",
+      "description": "**## consulta dados dos s\u00f3cios do cnpj consultado pelo id_socio**",
+      "params": [
+        "{'name': 'ID_SOCIO', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_Validator_email_validator_validate",
+      "description": "Validate email address. Key features:\n1. Checks that an email address has the correct syntax\n1. Gives friendly error messages when validation fails.\n1. Checks deliverability of an email address.\n1. Supports internationalized domain names and \n1. Normalizes email addresses",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "news/get-details",
+      "description": "Retrieve detailed news information from the Schwab tool in the Finance domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Nigeria_API_Facilities_Lookup",
+      "description": "This endpoint allows you to get facilities in Nigeria like hospital, bank, college, etc. by providing optional query parameters for facility type, state and city. It returns a list of facilities that match the query parameters.",
+      "params": [
+        "{'name': 'state', 'type': 'STRING', 'des",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Onboarding_Project_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Compile C++ 14 Code",
+      "description": "Compiles C++ 14 code into an executable",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_New_free_ios_apps",
+      "description": "Get list of new free ios apps",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "companies_profile",
+      "description": "Fetch the profile of a company from the Financial Modeling Prep API.",
+      "params": [
+        "symbol",
+        "apikey"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Currency Options",
+      "description": "Retrieve the currency options for a specific currency pair",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hin_decoder_return_json",
+      "description": "Decodes a Hull Identification Number (HIN) using the Toolbench RapidAPI and returns the decoded data in JSON format.",
+      "params": [
+        "hin"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Quarterly Balance Sheet",
+      "description": "Retrieve the quarterly balance sheet of a company, given its stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getURLInfo",
+      "description": "Retrieve information about a specific URL.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "venueInfo",
+      "description": "Retrieve specific information about a venue",
+      "params": [
+        "venue_id"
+      ]
+    }
+  ]
+}

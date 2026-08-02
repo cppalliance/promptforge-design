@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_toolret_neg_0091",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "LMh",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Travel_Hacking_Tool_Get_Airport_List",
+      "description": "Returns an up to date list of all IATA Airports in our database.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_meta_data",
+      "description": "Get locale meta data of the specific site.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "time_series_endpoint",
+      "description": "Retrieve historical exchange rates for specified date range and currency conversions.",
+      "params": [
+        "start_date",
+        "end_date",
+        "is_from",
+        "to"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_crossing_time",
+      "description": "This method takes three arguments, 'train_length', 'train_speed', and 'man_speed', and returns the time in seconds it takes for the train to cross the man.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLearningProgress",
+      "description": "Retrieve learning progress of a student",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_perimeter",
+      "description": "Calculate the perimeter of a shape",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parse",
+      "description": "Extracts metadata from a given URL using OpenGraph protocol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fixtures List By SeasonId",
+      "description": "The method is used to get a list of football fixtures by the season id.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flag_Status_Get_half_staff_events_for_given_flag",
+      "description": "Get all half-staff events for the provided flag",
+      "params": [
+        "{'name': 'code', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_zipcode_by_city",
+      "description": "Retrieve the ZIP code for a given city using the Redfin Base API.",
+      "params": [
+        "city"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_v3_v3_PlaylistItems",
+      "description": "Returns a collection of playlist items that match the API request parameters. You can retrieve all of the playlist items in a specified playlist or retrieve one or more playlist items by their unique IDs.",
+      "params": [
+        "{'name': 'part', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "symbols/get-chart",
+      "description": "Retrieve historical data for a specific stock symbol to generate a chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResultAnalyzer",
+      "description": "used to analyze the results of experiments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last N Candles",
+      "description": "Returns the latest N number of candles for a given trading symbol and time frame.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "u_k_songs",
+      "description": "Fetches the U.K. Songs chart information for a specific date and range from the Billboard API.",
+      "params": [
+        "date",
+        "range"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "completeQuest",
+      "description": "Mark a quest as completed for a character in a role-playing game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Product",
+      "description": "Search The Product",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des",
+        "{'name': 'act', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "spreadsheet.del_worksheet",
+      "description": "# Deletes a worksheet from a spreadsheet. \nspreadsheet.del_worksheet(worksheet)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Form",
+      "description": "Retrieve the pre-game team form for a specific event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_EventH2HDuel",
+      "description": "Get head-to-head duel information of a specific E-Sports event by providing its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top Coins by Market Capitalization",
+      "description": "Retrieve the top cryptocurrencies by market capitalization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DeFi_Watch_POOLS_GET_POOL_BY_BLOCKCHAIN",
+      "description": "Get full data about pool by blockchain",
+      "params": [
+        "{'name': 'chain', 'type': 'string', 'des",
+        "{'name': 'poolId', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aliexpress_item_search",
+      "description": "Searches for items on AliExpress based on various filters and criteria.",
+      "params": [
+        "brandid",
+        "catid",
+        "q",
+        "page",
+        "loc",
+        "locale",
+        "endprice",
+        "sort"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_market_get_futures",
+      "description": "Get future reports about the market\n* There are response images in encoded base 64 string, you need to decode to get the images yourself",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.Push",
+      "description": "# Push an object. 'object' can only be: ['table', 'food_dessert', 'mop', 'mouse', 'chair', 'button', 'vacuum_cleaner', 'coffee_table', 'soap', 'cat', 'computer', 'filing_cabinet', 'couch', 'faucet', 'drawing', 'remote_control', 'pot', 'desk']. \nAgent.Push(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "deviceRegistration.create",
+      "description": "This API is used to register a new device in the system. It requires the device's unique identifier, type, and the user's email who is registering the device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_Prices_5_Year_Historical_Monthly_Prices",
+      "description": "5 Year monthly historically adjusted Open, High, Low, and Close prices.  Monthly Volume, Dividend, and Split information is also included.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "language_list",
+      "description": "Fetches the list of valid languages for the given country using the Real Time News Data API.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RYJ",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Walmart_v2_Product_reviews",
+      "description": "Get product reviews on Walmart.com by specifying product page url or usItemId.",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/annotation/versions/",
+      "description": "Annotation Versions",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_ia",
+      "description": "Returns current gas price data for Iowa. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "agent_s_active_listings",
+      "description": "Fetches the active listings for a given agent from Zillow's API.",
+      "params": [
+        "zuid",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "count",
+      "description": "Fetches the total number of expired followers from an OnlyFans API endpoint.",
+      "params": [
+        "signstart",
+        "apptoken",
+        "signend",
+        "xbc",
+        "timezone",
+        "useragent",
+        "auth_id",
+        "sess"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getGroupWithContactsPaginated",
+      "description": "Get group and paginated contacts belonging to it",
+      "params": [
+        "{'name': 'groupId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_all_images",
+      "description": "Get all available photos of the title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cnc.piercing_method_selection",
+      "description": "Selects the optimal piercing method for CNC plasma cutting based on material type and thickness.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Season Wins Leaderboard MW 2",
+      "description": "Retrieve the season wins leaderboard for Modern Warfare 2 (MW2) game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "myBooky_DEMO_getUsersForSlot",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "catalog_id": "real_toolret_neg_0200",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Artists",
+      "description": "Provide the Greatest of All Time Artists chart information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Exchange Rates",
+      "description": "Returns the latest exchange rates for a given pair of currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Company Income Statement",
+      "description": "Retrieve a company's income statement, including quarterly or annual financial data, for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Input Test API",
+      "description": "This API allows for input testing and sharing of data with Rachael.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WellnessProgram.enroll",
+      "description": "Enrolls a user in a wellness program tailored to their mental health needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CO2_Offset_List_existing_Compensations",
+      "description": "Returns a list of all existing co2offset certificates linked to account.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hello_World_get_user",
+      "description": "get user by id",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "stack_pop",
+      "description": "This tool takes in a stack and returns the stack with the top element removed.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_a",
+      "description": "def determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_attributes: list, query: str) -> str:\n    '''Determine the attribute of an object from a list of possible attributes.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for attributes.\n        possible_attributes (list): A list of possible attributes.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The best matching attribute if the object exists, otherwise the result of the simple_query.\n    '",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "deleteFromCloud",
+      "description": "Deletes a file from the cloud storage",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Returns_company_info_based_on_the_website_getCompanyByWebsite",
+      "description": "For valid response use valid website domain.  Other values will generate exceptions. Subdomains will be removed.",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDepth",
+      "description": "Returns the trading depth for a specific trading pair.",
+      "params": [
+        "symbol",
+        "depth"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "global_players_statistics",
+      "description": "Fetch global statistics about tennis players based on the given season, category, and surface using the Ultimate Tennis RapidAPI.",
+      "params": [
+        "season",
+        "category",
+        "surface"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_time_based_on_speed(known_distance, known_time, target_distance)",
+      "description": "def calculate_time_based_on_speed(known_distance, known_time, target_distance):\n    \"\"\"\n    Calculate the time it would take to travel a target distance based on a known speed.\n\n    Parameters:\n    known_distance (float): The distance traveled in a known scenario.\n    known_time (float): The time it takes to travel the known distance.\n    target_distance (float): The distance to be traveled in the target scenario.\n\n    Returns:\n    float: The time it would take to travel the target distance based on the known speed.\n    \"\"\"\n    # Calculate the speed in distance units per time unit\n    speed = ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Business Search API",
+      "description": "Search for Yelp businesses by query/keyword and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_verifier",
+      "description": "Verifies the validity of an email address using the Toolbench RapidAPI service.",
+      "params": [
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Lake_B2B_Email_Marketing",
+      "description": "Lake B2B provides best email marketing services and programs across the globe to meet your marketing needs thus helping business to run more efficiently.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TextVectorizer",
+      "description": "Vectorizes the preprocessed text, assigning a unique ID to each word.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get detailed data for all U.S. counties",
+      "description": "Retrieve detailed information about all counties in the United States, including demographics, economy, and other relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "post_likes",
+      "description": "Gets the list of users who liked a specific Instagram post.",
+      "params": [
+        "mediaid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_area_of_one_side",
+      "description": "This function takes the side of a cube as input and returns the area of one side of the cube.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sentiment_Analysis_v12_Text_Analysis",
+      "description": "Analyzes text using  VADER (Valence Aware Dictionary and sEntiment Reasoner)\n\nProvide  a string and the API will output combined, positive, neutral, and negative scores based on the output specified.",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "QuantitativeAnalyzer",
+      "description": "used to analyze quantitative data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "airlines_countries",
+      "description": "Return a list of countries where an airline operates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "New_Client_njajal",
+      "description": "show nearby place from current location",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumer_phone_search",
+      "description": "Search for people in the Data Axle database based on the provided criteria.",
+      "params": [
+        "limit",
+        "packages",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "addInnovation",
+      "description": "Add a new innovation to the database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Keto Recipe",
+      "description": "Searches for keto recipes based on a search term and returns a list of matching recipes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_answer_to_question",
+      "description": "Fetches the answer to a given question from the Question Answered API using the provided RapidAPI key.",
+      "params": [
+        "questionasked"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flow_study_getcodestructure",
+      "description": " ",
+      "params": [
+        "{'name': 'contract_name', 'type': 'STRIN",
+        "{'name': 'contract_address', 'type': 'ST"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SUDOKU_All_Purpose_PRO_VERIFY",
+      "description": "Check any solved (as well as *unsolved!*) Sudoku for authenticity and integrity.",
+      "params": [
+        "{'name': 'verify', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_comprehensive_report",
+      "description": "Create comprehensive analysis report",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_news_get_details",
+      "description": "Get news details",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'sourceId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Funding Rate History",
+      "description": "Retrieve the funding rate history for a specific symbol and time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "serie_a_standings",
+      "description": "Fetches the Serie A football standings for a given season using the provided RapidAPI key.",
+      "params": [
+        "season"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "USPTO_Trademark_v1_databaseStatus",
+      "description": "Returns info about the freshness of the Trademark Search API database.\n\n`last_update_date` holds the date of the newest entry from USPTO filling entries that is synced to the API. \n\n`latest_trademark` array holds 10 random samples from the most recent confirmed registered trademarks, the `keyword`, the `registration_number` and the `registration_date` . Please note the date could be a few days back as not every day are published new registration of trademarks. They publish daily new partial filings and abandoned trademarks.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Winter Terrain Tiles",
+      "description": "Retrieve or generate global terrain tiles with winter colors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EvernoteManager",
+      "description": "A toolkit for managing and organizing notes, documents, and web clippings using Evernote, including creating, reading, updating, deleting, searching, tagging, and sharing notes and notebooks. It also allows users to control the level of sharing of notes with other users.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Social_Media_Data_TT_Music_metadata",
+      "description": "Get music metadata\n\nBasic metadata: number of posts,  direct url to the song(MP3) and etc",
+      "params": [
+        "{'name': 'music', 'type': 'STRING', 'des"
+      ]
+    }
+  ]
+}

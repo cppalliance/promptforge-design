@@ -1,0 +1,344 @@
+{
+  "catalog_id": "real_neg_0010",
+  "tools": [
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_render_musicxml_via_verovio_api",
+      "description": "Render a MusicXML file to an SVG score preview using the Verovio API. Returns: HTML string containing base64-encoded SVG score image, or error message on failure.",
+      "params": [
+        "musicxml_path"
+      ]
+    },
+    {
+      "server": "CyberSec_Intel_Tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_acknowledge_reminder_and_hide",
+      "description": "FIXED: Acknowledge reminder without UI flashing",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_toggle_chat_view_",
+      "description": "Hides/shows the correct chat component and populates it with data.",
+      "params": [
+        "view_choice"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_audio_info",
+      "description": "This component should not be used by agents or automated systems.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_extract_audio",
+      "description": "Extract high-quality audio from video in various formats. Returns: URL to extracted audio or None if failed, , Supports multiple audio formats with appropriate codecs, Maintains original audio quality, Handles various input video formats",
+      "params": [
+        "video_url",
+        "audio_format"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_volume_adjustment",
+      "description": "Apply volume adjustment to an audio file using gain in decibels. This function loads an audio file and applies a volume adjustment by the specified gain amount in decibels. Positive values increase volume, negative values decrease volume. The function also detects potential audio clipping when volume is increased. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, adjusted_audio_data: array), for the volume-adjusted audio result, or None if an error occurred, Second element: A status message string indicating success with gain applied, and clipping warning if detected, or error information, , result, status = apply_volume_adjustment(\"url/to/audio.mp3\", -3.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Gain is specified in decibels (dB): +6dB doubles volume, -6dB halves volume, Positive gain values may cause clipping (distortion) if audio becomes too loud, Function automatically detects and warns about clipping, Preserves original sample rate and audio format, Safe range is typically -20dB to +6dB to avoid quality issues",
+      "params": [
+        "audio_file",
+        "gain_db"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_hsv",
+      "description": "Changes the hue and saturation of specified objects in an image using the HSV color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the HSV color space. HSV separates chromatic content (hue) from intensity (value), making it more intuitive for color manipulation tasks. Use this method when: - You want to change the color of objects based on their hue and saturation. - You want to apply color transformations that are less influenced by lighting conditions or brightness variations. Returns: Base64-encoded string., , If user_input format is invalid, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_add_problem_solving_template",
+      "description": "Adds a problem-solving template to the database that defines a sequence of Modal sandbox tool operations to solve a specific task. Templates provide guidance on tool orchestration, required variables, volumes, and dependencies for common use cases like resume screening, code analysis, data processing etc. For example, a resume screening template would specify: 1. Required volumes for storing resumes and results 2. Python packages needed (e.g., PyPDF2, spacy) 3. Sequence of sandbox operations: - Launch sandbox with specific memory/CPU requirements - Create directories for resumes and results - Push resume files to sandbox - Execute NLP processing commands - Pull results from sandbox - Clean up resources. Returns: JSON string containing:, success (bool): Whether template was added successfully, template_id (str): Unique ID of added template, message (str): Status message",
+      "params": [
+        "name",
+        "description",
+        "required_tools",
+        "required_volumes",
+        "required_packages",
+        "tool_sequence",
+        "resource_requirements",
+        "example_usage"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_list_repository_files",
+      "description": "List all files in a GitHub repository with specified extensions. Returns: JSON response with file list and metadata",
+      "params": [
+        "repo_url",
+        "branch",
+        "extensions"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10q_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range from 10-Q filings. Caveat the quarter in the returned dictionary key is the quarter of when 10-Q is filed to SEC in calendar year system, not the company's fiscal year. Remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_dataset_view",
+      "description": "View comprehensive details about a specific dataset. Returns: Formatted JSON string containing combined dataset information:, metadata: Dataset description, tags, license, creation date, etc., files: List of all files in the dataset with sizes and types, , dataset_view(\"zillow/zecon\") returns complete information about Zillow's economic dataset, , The dataset parameter must include both owner and dataset name separated by a slash",
+      "params": [
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_sandboxes",
+      "description": "Lists all Modal sandboxes for a specific app namespace and their current status. Useful for monitoring active Modal sandbox environments, checking which sandboxes are running, and getting sandbox IDs for further management operations. Returns: JSON string containing list of sandboxes with their IDs and status",
+      "params": [
+        "app_name"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_suggest_move",
+      "description": "Suggest a move for the given FEN position. This function can be used to give a hint to the user about the best move to play. This function takes a FEN string representing the current board state and returns the best move in SAN format. Returns: The best move in SAN format.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpcreate_hf_dataset",
+      "description": "Create a new HuggingFace dataset for memory storage.",
+      "params": [
+        "dataset_name",
+        "private",
+        "description"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_server_stats",
+      "description": "Get server statistics and health information.",
+      "params": []
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_update_session_api_keys",
+      "description": "Update API keys for THIS SESSION ONLY",
+      "params": [
+        "mistral_key",
+        "sambanova_key"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_search",
+      "description": "Search arXiv papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. OR is better in most cases. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. Use Latin script for names. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: all:\"machine learning\" au:\"del maestro\" au:vaswani AND abs:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_apply_color_filter",
+      "description": "Apply professional-grade color filters to video. Returns: URL to processed video or None if failed, , Implements various color transformations, Supports intensity control, Maintains video quality, Preserves original audio",
+      "params": [
+        "video_url",
+        "filter_type",
+        "intensity"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_clear_conversation",
+      "description": "Clear the conversation history (UI + agent), reset state completely, and update UI.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_apply_filters",
+      "description": "Apply one or more filter strings to an API endpoint URL.",
+      "params": [
+        "api_string",
+        "param_1"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_rdap",
+      "description": "Query RDAP to get information about Internet resources. The Registration Data Access Protocol (RDAP) is the successor to WHOIS. Like WHOIS, RDAP provides access to information about Internet resources (domain names, autonomous system numbers, and IP addresses).",
+      "params": [
+        "url_or_ip"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_dad_joke",
+      "description": "Fetches a random dad joke from the icanhazdadjoke.com API. The function makes an HTTP GET request to the <https://icanhazdadjoke.com/> API with appropriate headers to receive JSON response. Returns: A random dad joke if successful, otherwise returns an error message., Success: Returns the joke text, Failure: Returns \"Failed to retrieve a joke.\" if the API request fails, No joke: Returns \"No joke found.\" if the API response doesn't contain a joke, , The requests library must be imported to make HTTP requests",
+      "params": []
+    }
+  ]
+}

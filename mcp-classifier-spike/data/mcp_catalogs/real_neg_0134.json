@@ -1,0 +1,377 @@
+{
+  "catalog_id": "real_neg_0134",
+  "tools": [
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_list_of_column_in_table",
+      "description": "### `get_list_of_column_in_table(schema_name: str, table_name: str)`",
+      "params": [
+        "schema",
+        "table"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpdelete_memory",
+      "description": "Universal memory deletion interface.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_comparison_report",
+      "description": "Get the symbol performance against provided benchmark and return plots and HTML report content.",
+      "params": [
+        "symbol",
+        "benchmark"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_upload_file",
+      "description": "Handle file uploads in the Gradio interface. Returns: Tuple of (status_message, updated_file_uploads_log)",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_process_climate_document",
+      "description": "The function `process_climate_document` extracts climate data from either a file or URL input and returns structured JSON data. :param api_key: The `api_key` parameter is typically a unique identifier or access token that allows you to authenticate and access a specific API or service. It is used in the `process_climate_document` function to authenticate and make requests to the `extract_climate_data` function. You need to provide a valid :param file: The `file` parameter in the `process_climate_document` function is used to pass a file object containing climate document data. If this parameter is provided, the function will extract climate data from the file using the `extract_climate_data` function :param url_input: The `url_input` parameter in the `process_climate_document` function is used to provide a URL input for extracting climate data. This URL should point to a document or webpage containing climate-related information that needs to be analyzed. The function will extract data from this URL if it is provided :return: The function `process_climate_document` returns a JSON object containing the analysis results of a climate document including climate_data, chart_descriptions, and extracted_text.",
+      "params": [
+        "api_key",
+        "file",
+        "url_input"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_advanced_search_sync",
+      "description": "Advanced search for Stack Overflow questions with comprehensive filters. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "excluded_tags",
+        "min_score",
+        "title",
+        "body",
+        "min_answers",
+        "has_accepted_answer",
+        "min_views",
+        "sort_by",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_check_job_status",
+      "description": "Check the current status of a LoRA training job or image generation job. This function queries the Modal API to get the current status of a training job using its unique job ID. It returns detailed information about the job progress. Note that if we are invoking this function with MCP, the user cannot neccecarily see the images in the tool call, so you will have to render them again in the chat. **MCP Client Limitation:** Due to MCP client constraints, we cannot render a gallery of images in the chat. The MCP client should render these URLs as clickable markdown links when possible. Returns: tuple[str, List[Image.Image]]: (status_message, all_images), status_message: Detailed status message containing job information, all_images: List of PIL Image objects if images are available, empty list otherwise, , \"completed\": Job finished successfully, \"running\": Job is still in progress, \"failed\": Job failed due to an error, \"error\": System error occurred, , //modal-app-url-api-job-status.modal.run\")",
+      "params": [
+        "job_id",
+        "job_status_url"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_code_generator",
+      "description": "Wrapper for CodeGeneratorAgent to generate Python code. Returns: A tuple containing the generation result and raw code",
+      "params": [
+        "user_request",
+        "grounded_context"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "classify_opening",
+      "description": "Attempt to classify a chess opening using the Lichess openings database. Return the ECO code, name, moves and main sub-variations of the opening.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_analyze_mcp_request",
+      "description": "MCP-compatible security analysis function",
+      "params": [
+        "task_id",
+        "user_query",
+        "context",
+        "history_json"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_terminate_sandbox",
+      "description": "Terminates a Modal sandbox by its ID. Useful for stopping running sandboxes that are no longer needed, cleaning up resources, forcefully ending long-running or stuck sandboxes, and managing sandbox lifecycle. Returns: JSON string containing success status and termination message",
+      "params": [
+        "sandbox_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__auto_refresh_game_state",
+      "description": "Auto-refresh game state and UI elements with update objects.",
+      "params": [
+        "auto_refresh"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorscreenshot_to_code",
+      "description": "Complete pipeline: analyze image and generate corresponding HTML code.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_retrieve_monitored_data",
+      "description": "TOOL: Retrieve monitored data for a specific API configuration. PURPOSE: Fetch the latest monitored data for a given configuration ID. This is STEP 3 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation, then activate_monitoring() to start monitoring. This function can be called at any time after monitoring activation to retrieve the latest data collected by the monitoring system. ARGUMENTS: - config_id: The ID of the API configuration to retrieve data for (required) - mcp_api_key: User's MCP API key for verification (must match validation step). - mode: Data return mode - \"summary\" (LLM-optimized), \"details\" (full responses, minimal metadata), \"full\" (everything) Input Examples: 1. Retrieve data for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Retrieve data for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\". Returns: Dictionary with monitoring status in one of three formats based on mode parameter, , {, True,, \"Weather Alert Monitor\",, {, \"active\",  // \"active\", \"inactive\", \"good\",    // \"good\", \"degraded\", \"no_data\", 15,, 93.3,, \"2025-06-05T15:20:00\",, \"2025-06-05T15:20:00\", },, [, {, \"2025-06-05T15:20:00\",, true,, null,, \"{'alerts': [{'type': 'tornado'}]}...\"  // truncated to 150 characters, }, // ... up to 5 most recent calls, ],, 15,, {, 20,, false, }, }, , {, True,, \"Weather Alert Monitor\",, \"active\",, 15,, 93.3,, [, {, \"2025-06-05T15:20:00\",, true,, {...},  // full response data, null, }, // ... up to 10 most recent calls with full responses, ], }, , {, True,, \"Weather Alert Monitor\",, \"Monitor severe weather alerts\",, True,, False,, {...},, {...},, [...]  // all historical data, }, , {, False,, \"Invalid config_id or mcp_api_key\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key",
+        "mode"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_enhanced_batch_generation",
+      "description": "Generate strategic variations for A/B testing",
+      "params": [
+        "prompt",
+        "variation_type",
+        "count",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "deepsearch",
+      "name": "deepsearch_process_query",
+      "description": "Process the user query and return research results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_book_recommendations",
+      "description": "Fetches a book recommendation from Google Books API. Returns: Top book recommendation in formatted text.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_analyze_specific_urls",
+      "description": "MCP Tool: Analyzes web content from a specific list of URLs using swarm analysis. Is useful for finding content related to a specific topic and compare the content with other URLs.",
+      "params": [
+        "urls_json",
+        "analysis_prompt"
+      ]
+    }
+  ]
+}

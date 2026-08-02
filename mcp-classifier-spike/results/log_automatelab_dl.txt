@@ -1,0 +1,8 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    964 100    964   0      0   5427      0                              0100    964 100    964   0      0   5414      0                              0
+  0      0   0      0   0      0      0      0                              0100  2.98M 100  2.98M   0      0  2.51M      0   00:01   00:01              0100  2.98M 100  2.98M   0      0  2.50M      0   00:01   00:01              0100  2.98M 100  2.98M   0      0  2.50M      0   00:01   00:01              0
+rows 9922
+cols ['server_name', 'package', 'tool_name', 'tool_description', 'input_schema']
+{'server_name': 'brave-search', 'package': '@modelcontextprotocol/server-brave-search', 'tool_name': 'brave_web_search', 'tool_description': 'Performs a web search using the Brave Search API, ideal for general queries, news, articles, and online content. Use this for broad information gathering, recent events, or when you need diverse web sources. Supports pagination, content filtering, and freshness controls. Maximum 20 results per request, with offset for pagination. ', 'input_schema': '{"type": "object", "properties": {"query": {"type": "string", "description": "Search query (max 400 chars, 50 words)"}, "count": {"type": "number", "description": "Number of results (1-20, default 10)", "default": 10}, "offset": {"type": "number", "description": "Pagination offset (max 9, default 0)", "default": 0}}, "required": ["query"]}'}
+EXIT=0

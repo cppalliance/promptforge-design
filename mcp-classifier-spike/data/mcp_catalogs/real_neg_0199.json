@@ -1,0 +1,385 @@
+{
+  "catalog_id": "real_neg_0199",
+  "tools": [
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_find_similar_cases_mcp",
+      "description": "Identifies and retrieves adverse event cases from the FAERS database that are similar to a given reference case. Similarity is calculated based on a combination of patient demographics (age, gender), reported reactions, and concomitant drugs. This tool is useful for contextualizing a specific case and identifying potential case series for further review. Returns: JSON string with similar cases and similarity scores",
+      "params": [
+        "reference_case_id",
+        "similarity_threshold",
+        "limit"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serper_search",
+      "description": "Given a search query, returns the search results from Serper. Returns: The search results from Serper Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_server_stats",
+      "description": "Get server statistics and health information.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_graph_wrapper",
+      "description": "### `generate_graph_wrapper(graph_type: str, data_json: str)` - **Purpose**: Create visualizations using matplotlib - **Parameters**: `graph_type` - Type of chart (bar, line, pie, scatter) - **Returns**: Image file path and status - **Use Case**: Creating charts and graphs for presentations",
+      "params": [
+        "graph_type",
+        "data_json"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_validate_mcp_endpoint",
+      "description": "Validate that a URL is a working MCP endpoint by checking its schema. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_disproportionality_analysis_mcp",
+      "description": "Performs a disproportionality analysis (also known as signal detection) on adverse event data. This statistical method compares the reporting rate of a specific drug-event combination to the reporting rate of that event for all other drugs in the database. It calculates metrics like Proportional Reporting Ratio (PRR) and Reporting Odds Ratio (ROR) to identify potential safety signals that may warrant further investigation. Returns: JSON string with PRR, ROR, IC values and statistical significance",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "background_limit"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_home_buying_tax_calculator_browser_use",
+      "description": "Uses a browser automation agent to navigate the UK government's Stamp Duty Land Tax (SDLT) calculator website and retrieve the total SDLT due based on provided property and purchaser details. This tool is specifically for properties in England or Northern Ireland. Returns: The result from the browser interaction, typically the total SDLT due or an, error message if the process fails.",
+      "params": [
+        "region",
+        "property_type",
+        "day",
+        "month",
+        "year",
+        "purchaser_type",
+        "purchaser_purpose",
+        "more_properties",
+        "replace",
+        "First_time_Buyer",
+        "main_residence",
+        "price"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_move_item",
+      "description": "Move an item to a new position.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_medical_document_wrapper",
+      "description": "Wrapper function for medical document upload",
+      "params": [
+        "file_path",
+        "document_type"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_generate_file",
+      "description": "Generates a downloadable text file with the specified content. Returns: The file path for downloading.",
+      "params": [
+        "content"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_compare_voices",
+      "description": "Use this tool to compare two voices for a match",
+      "params": [
+        "audio1",
+        "audio2"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_google_book_filtered",
+      "description": "Get a filtered list of books from Google Books API. It can be filtered by title, author, genre, and ISBN. Results are ordered by relevance to the query. Only a subset of the volume info is included. Only 10 results are returned. Returns: list - list of books",
+      "params": [
+        "title",
+        "author",
+        "genre",
+        "isbn"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_add_text_overlay",
+      "description": "Add text overlay to video with precise positioning and timing control. Returns: URL to output video or None if failed",
+      "params": [
+        "video_url",
+        "text",
+        "start_time",
+        "end_time",
+        "font_size",
+        "font_color",
+        "x_pos",
+        "y_pos",
+        "box",
+        "box_color",
+        "box_border_width",
+        "font_file"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_health_topics_gr",
+      "description": "Gradio wrapper for HealthFinder topic retrieval. Parameters ---------- topic : str Health topic slug or phrase. language : str Output language (``\"en\"`` / ``\"es\"``). Returns ------- str JSON\u2011formatted HealthFinder result.",
+      "params": [
+        "topic",
+        "language"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_egfr_mcp",
+      "description": "Calculates the estimated Glomerular Filtration Rate (eGFR) using the CKD-EPI 2021 equation. eGFR is a key indicator of kidney function and is used to diagnose, stage, and manage Chronic Kidney Disease (CKD). This is the preferred method for assessing kidney function in many clinical guidelines. Returns: JSON string with eGFR calculation and CKD stage interpretation",
+      "params": [
+        "age",
+        "serum_creatinine",
+        "is_female",
+        "is_black"
+      ]
+    },
+    {
+      "server": "SafeBox",
+      "name": "SafeBox_code_eval",
+      "description": "Run a python code snippet into a sandbox environment. Returns: , A dictionary containing execution results:, 'stdout', 'stderr', 'returncode', and 'error' (if any)., A string with the image build logs (empty if no dependencies were detected).",
+      "params": [
+        "code_snippet"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serpapi_search",
+      "description": "Given a search query, returns the search results from SerpAPI. Returns: The search results from SerpAPI Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_multi_way_anova",
+      "description": "Accepts multiple categorical factors and performs Multi-Way ANOVA to determine whether there are statistically significant differences between group means when multiple factors are involved simultaneously. Multi-way ANOVA extends the one-way ANOVA framework to handle complex experimental designs with multiple categorical independent variables (factors), each with two or more levels. Unlike one-way ANOVA which tests a single factor, multi-way ANOVA can simultaneously test: (1) main effects of each individual factor, (2) interaction effects between factors, and (3) higher-order interactions. The test uses F-statistics to compare variance between groups to variance within groups for each effect. Eta-squared (\u03b7\u00b2) measures effect size as the proportion of total variance explained by each factor and interaction, with interpretation: \u03b7\u00b2 < 0.01 = negligible, 0.01-0.06 = small, 0.06-0.14 = medium, >0.14 = large (custom thresholds may be used). EXAMPLE USE CASES: 2-way ANOVA for treatment \u00d7 gender effects on blood pressure, 3-way ANOVA for teaching method \u00d7 school type \u00d7 student age on test scores, 4-way ANOVA for drug \u00d7 dose \u00d7 gender \u00d7 age effects on recovery.",
+      "params": [
+        "dependent_var",
+        "factors",
+        "alpha",
+        "effect_thresholds",
+        "include_interactions",
+        "max_interaction_order",
+        "sum_squares_type"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_both_sources",
+      "description": "Search both Wikipedia and arXiv simultaneously. Returns: (wikipedia_results, arxiv_results)",
+      "params": [
+        "query",
+        "wiki_max_docs",
+        "arxiv_max_docs"
+      ]
+    },
+    {
+      "server": "BioMedNorm-MCP-Server",
+      "name": "BioMedNorm_MCP_Server_extract_and_normalize",
+      "description": "Extract entities from a paragraph and normalize them in one operation. Returns: List of best matching standard terms in the same order as the, input terms. An entry may be None if normalization failed.",
+      "params": [
+        "paragraph",
+        "target_entity"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "SitegeistAI",
+      "name": "SitegeistAI_discover_and_analyze_web",
+      "description": "MCP Tool: Discovers relevant URLs based on a search prompt using web search search and then analyzes as Marketing & Content Intelligence Engine assistant. The analysis uses the swarm mode and is useful for finding content related to a specific topic including SEO keywords.",
+      "params": [
+        "search_prompt",
+        "num_urls",
+        "analysis_prompt_override"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_send_request",
+      "description": "Send an HTTP GET request to the specified API endpoint and return the JSON response.",
+      "params": [
+        "api_string"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques CRM natives",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_deploy_for_user",
+      "description": "Deploy a Modal endpoint for a user using their API key. Unless the user has already done this, this must be done before they can train a LoRA. This function deploys a Modal script using the user's Modal API token ID and secret, allowing them to set up their own training endpoint. You can create them at https://modal.com/settings/tokens. Returns: tuple[str, str, str]: (status_message, stdout, stderr), status_message: Human-readable deployment status, stdout: Standard output from the modal deploy command, stderr: Standard error output from the modal deploy command, , status, out, err = deploy_for_user(\"ak-1234567890abcdef\", \"as-secret123...\")",
+      "params": [
+        "token_id",
+        "token_secret"
+      ]
+    }
+  ]
+}

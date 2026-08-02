@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_neg_0138",
+  "tools": [
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_greet",
+      "description": "Greets the user with a personalized hello message. Returns: A greeting message addressed to the specified user.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_generate_and_prepare_download",
+      "description": "Generate SDK and prepare download file",
+      "params": [
+        "spec",
+        "api_type"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_random_recipe",
+      "description": "Fetches a random recipe using the Spoonacular API and returns it in a formatted string. Returns: A formatted string with title, preparation time, ingredients, and cooking steps.",
+      "params": [
+        "tags",
+        "exclude_ingredients"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_next_page",
+      "description": "Go to next page for equipment",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_profile",
+      "description": "Returns the detailed employee profile for a given employee. This tool retrieves the profile details for an individual employee, including role, cloud expertise, data warehouse tools, domain exposure, office location, gender, and other relevant attributes. It queries data from the internal employee master database (`EMPLOYEE_MASTER_DB`) and returns the complete profile as a dictionary. This function is typically used in internal workforce management, reporting dashboards, or talent mapping systems within MCPHawk Inc to retrieve standardized employee data. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended) **Returns:** A dictionary containing: - `employee_name`: Name of the employee - `employee_profile`: A dictionary of profile details, such as: { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.png\" } If the employee is not found, a fallback message is returned instead of the profile. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"employee_profile\": { \"role\": \"Sr. DE\", \"cloud_experties\": \"AWS\", \"cloud_native_experties\": \"dbt\", \"dw_experties\": \"Snowflake\", \"domain_exposure\": \"Banking & Insurance\", \"office_location\": \"Bangalore\", \"date_of_joining\": \"2022-08-14\", \"gender\": \"Male\", \"allocation\": \"Billable\", \"resume\": \"resume_amit_sharma.pdf\" } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame_",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_new_garment",
+      "description": "Run the Virtual Try-On model with provided model image and garment prompt.",
+      "params": [
+        "model_image_path",
+        "garment_prompt",
+        "model_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_privacy_preserve_image",
+      "description": "Obscures specified objects in the input image based on a natural language prompt, using a privacy-preserving blur or distortion effect. This function segments the image to detect objects described in the `input_prompt` and applies a pixelation effect to those regions. It is useful in scenarios where sensitive content (e.g., faces, license plates, logos, personal belongings) needs to be hidden before sharing or publishing images. Returns: Binary image data of the modified image., , input_prompt = \"faces, license plates, logos\"",
+      "params": [
+        "input_img",
+        "input_prompt",
+        "privacy_strength",
+        "threshold"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_book_recommendations",
+      "description": "Fetches a book recommendation from Google Books API. Returns: Top book recommendation in formatted text.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_search_knowledge_base_for_context",
+      "description": "Searches and retrieves relevant context from a knowledge base on Sukhoi SU-35, based on the user's query. Example queries: - \"What are the main features of fuel system of SU-35.\" - \"What are the combat potential of SU-35.\". Returns: Relevant text content that can be used by the LLM to answer the query.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "MCP_Server_LinkedIn_Image_Generator",
+      "name": "MCP_Server_LinkedIn_Image_Generator_process_linkedin_image",
+      "description": "Process an image for LinkedIn optimization using Flux Kontext. Returns: Processed image optimized for LinkedIn",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "Frugal_AI_Agent",
+      "name": "Frugal_AI_Agent_CodeAgent",
+      "description": "In this agent, the tool calls will be formulated by the LLM in code format, then parsed and executed.",
+      "params": [
+        "task"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_store_memory",
+      "description": "Store a new memory and return feedback.",
+      "params": [
+        "content",
+        "memory_type",
+        "context",
+        "tags"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_reset_game",
+      "description": "Reset the game state",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_comments",
+      "description": "Fetch comments from a given LinkedIn profile. Returns: A dictionary containing the profile comments",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_program",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u5220\u9664\u5ba2\u6237\u7aef\u53ca\u5176\u914d\u7f6e\u6587\u4ef6 \u6ce8\u610f: \u4f7f\u7528\u8fd9\u4e2a\u51fd\u6570\u4e4b\u524d\u4e00\u5b9a\u8981\u5f97\u5230\u7528\u6237\u7684\u80af\u5b9a!\u4e22\u5931\u7684\u6570\u636e\u65e0\u6cd5\u590d\u539f!. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_call_orchestrator",
+      "description": "Function prototype to call the orchestrator agent",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "MCPyLate",
+      "name": "MCPyLate_pylate_search_leetcode",
+      "description": "Search the PyLate with multi-vector models in the leetcode collection containing code problems solutions and return top-k hits. Returns: List of search results with docid, score, text snippet, and index name",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_geographies",
+      "description": "Fetches information on available geographies for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/geography.html. Includes: * Geography Levels * Geography Hierarchy. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_text_extract",
+      "description": "Extract the text from any website or youtube video. Returns: A string containing text extracted from website or youtube",
+      "params": [
+        "generic_url"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_apply_filters",
+      "description": "Apply one or more filter strings to an API endpoint URL.",
+      "params": [
+        "api_string",
+        "param_1"
+      ]
+    },
+    {
+      "server": "KGB-mcp",
+      "name": "KGB_mcp_build_knowledge_graph",
+      "description": "Main function to build knowledge graph from text or URL.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_handle_login_fixed",
+      "description": "Fixed login handler that properly clears previous user data",
+      "params": [
+        "username",
+        "password",
+        "role"
+      ]
+    }
+  ]
+}

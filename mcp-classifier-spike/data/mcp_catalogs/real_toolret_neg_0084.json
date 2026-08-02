@@ -1,0 +1,370 @@
+{
+  "catalog_id": "real_toolret_neg_0084",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Anime_Quotes_Get_quotes_by_character_name",
+      "description": "Get quotes by character name",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YT_API_Channel_Featured_Channels",
+      "description": "Get featured channel listing and channel details.\nQuota cost is 1 unit.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Folder Content",
+      "description": "Retrieve the content of a specified folder.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "walletapi_cloud_List_operations_in_wallet_s_ledger",
+      "description": "Obtain a pageable list of operations that were posted to a wallet within a specified time period.",
+      "params": [
+        "{'name': 'projectId', 'type': 'STRING', ",
+        "{'name': 'pageSize', 'type': 'NUMBER', '",
+        "{'name': 'walletId', 'type': 'STRING', '",
+        "{'name': 'from', 'type': 'NUMBER', 'desc",
+        "{'name': 'to', 'type': 'NUMBER', 'descri",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Song Lyrics",
+      "description": "Retrieve the lyrics of a specified song from a database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "transfers_list",
+      "description": "Fetches a list of football player transfers based on various filter criteria.",
+      "params": [
+        "competitionid",
+        "positiongroup",
+        "limit",
+        "maxvalue",
+        "positionid",
+        "clubid",
+        "minvalue",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_dog_image_by_breed",
+      "description": "Returns some random dog images from a breed, e.g. hound.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EmailQualityPlus_Valida_o_de_Email",
+      "description": "Valida\u00e7\u00e3o Simples de Email",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_scene_attribute(image_patch: ImagePatch, attribute_query: str) -> str",
+      "description": "def get_scene_attribute(image_patch: ImagePatch, attribute_query: str) -> str:\n    '''Determine the value of a specific attribute in a given scene.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        attribute_query (str): The query to determine the attribute value.\n       \n    Returns:\n        str: The value of the attribute.\n    '''\n    attribute_value = image_patch.simple_query(attribute_query)\n    return attribute_value",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mocking_Rock_Get_Sample_BusinessProfile",
+      "description": "Use this API to get fake-generated Business Profile sample data.\nBy default, it will generate \"en\"  locale for a single count.\nIf count query is greater than 1 it will randomize the generated profiles \nto a different locale. \nTo set a default locale pass it as the query.List of the locale you can get from locale API.\nIn case of the wrong locale is given it will return the result based on default settings as mentioned above.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPsychologicalWellbeing",
+      "description": "Retrieve psychological wellbeing information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog Day Prediction",
+      "description": "Returns the prediction of whether it will be sunny or cloudy on Groundhog Day based on the weather forecast.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mixer.schedule_speed_adjustment",
+      "description": "Schedule a speed adjustment for a specified industrial mixer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CellPhones_GetPhoneDetails",
+      "description": "Get all phone specifications & photos by phone id, get the phone id from the endpoint GetPhonesByBrandId",
+      "params": [
+        "{'name': 'phoneid', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Lake_B2B_Email_Marketing",
+      "description": "Lake B2B provides best email marketing services and programs across the globe to meet your marketing needs thus helping business to run more efficiently.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getorderbyid",
+      "description": "Fetches the order details from the Petstore API using the provided order ID.",
+      "params": [
+        "orderid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "vintedois-diffusion-v0-1",
+      "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps.",
+      "params": [
+        "prompt",
+        "CFG Scale",
+        "Scheduler",
+        "Steps",
+        "Seed"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_property_exclusivity(image_patch: ImagePatch, object1_name: str, object2_n",
+      "description": "def check_property_exclusivity(image_patch: ImagePatch, object1_name: str, object2_name: str, property_name: str, property_value: str, query: str) -> str:\n    '''Check the exclusivity or shared nature of a property between two objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object1_name (str): The name of the first object.\n        object2_name (str): The name of the second object.\n        property_name (str): The name of the property to check.\n        property_value (str): The value of the property to check.\n        query (str): The original query to",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Apple_App_Store_Scraper_Scrape_AppStore",
+      "description": "Get details of App Store Listing",
+      "params": [
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'appid', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list",
+      "description": "Fetches a full list of expired user details from the OnlyFans API.",
+      "params": [
+        "sort",
+        "signend",
+        "signstart",
+        "apptoken",
+        "xbc",
+        "timezone",
+        "useragent",
+        "field"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "errorNotifier",
+      "description": "This function sends an email notification when an error occurs. It formats the error details and sends it to the specified email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_current_balance",
+      "description": "Check the current balance of a specified account",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 3D Model Information",
+      "description": "Retrieves information about a 3D model from Shapeways",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Complete_Study_Bible_Place_Detail_API",
+      "description": "Used in conjunction with Chapter and Verse API. Whenever a city/region/location is mentioned in a verse, the Chapter and Verse API provides a unique ID for the location that is mentioned. This unique ID is more reliable than searching for a place \"name\", because place names and spellings can change, especially from OT to NT. By using the Place ID's provided with the Chapter and Verse API, you can call the Place API to fetch more detail on each place, which returns a name, location, and data from the Encyclopedia of the Bible (when available).\n\nLat / Longs are included with each place as well, ",
+      "params": [
+        "{'name': 'place-unique-id', 'type': 'NUM"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "codes",
+      "description": "This function searches for information based on the provided code using the Postali API.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_Search_Mix",
+      "description": "Search Mix API",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkDisposableEmail",
+      "description": "REST API to check if an email is disposable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "removeBookFromBookshelf",
+      "description": "Remove a book from a virtual bookshelf.",
+      "params": [
+        "bookshelfId",
+        "bookId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Flight Details",
+      "description": "Retrieve detailed information about a flight based on a unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Metrx_Factory_Match_Metrics",
+      "description": "Returns the metrics of a single match, a specific team or matches within a time span.\n\nThis is the main endpoint for retrieving match related figures such as performance ratios, expected and actual scores, statistically fair and market odds. The indication of projections controls which data should be collected and has direct impact on the payload and billed credits.\n\nIf no parameters are provided then the performance index of competing teams *(TI)*, expected goals *(XG)* and expected moneyline odds *(XM)* along with match details *(MD)* are returned for upcoming matches. The time span covering",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThermoCalc.calculateHeatTransfer",
+      "description": "Calculates the heat transfer between two substances based on their specific heat capacities, masses, and temperature changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "culture.survey_analysis",
+      "description": "Analyze the results of an employee engagement survey.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/annotation/versions/",
+      "description": "Annotation Versions",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alpha Vantage Stock Quote API",
+      "description": "Retrieve stock quote information for a given symbol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finanzoo_API_Fundamentals_API_Index_Wkn",
+      "description": "Determine shareuid\nTo query the fundamental data via our API, you need the Shareuid for the share you are looking for. You can either determine this yourself via the API, or take it from the Excel table.\nIMPORTANT! The currency that is output in the API_Fundamentals results is also included here.\n\nSyntax:\n\nwkn = search shareuid with WKN",
+      "params": [
+        "{'name': 'wkn', 'type': 'STRING', 'descr",
+        "{'name': 'API_Index', 'type': 'BOOLEAN',"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listColorOptions",
+      "description": "Retrieves a list of available color options that can be used in the generateTypingSvg function.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCSSProperty",
+      "description": "Retrieve the value of a CSS property for a given element",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_sentiment_trending_beari",
+      "description": "Search for top 50 trending bearish stocks/crypto symbols on Twitter/StockTwits.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrencies Data Search",
+      "description": "Search for cryptocurrencies data based on search term, time range, and other optional parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "interpretGestures",
+      "description": "Interpret nonverbal gestures and expressions",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

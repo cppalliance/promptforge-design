@@ -1,0 +1,361 @@
+{
+  "catalog_id": "real_pos_0034",
+  "tools": [
+    {
+      "server": "MCP_Server_LinkedIn_Image_Generator",
+      "name": "MCP_Server_LinkedIn_Image_Generator_process_linkedin_image",
+      "description": "Process an image for LinkedIn optimization using Flux Kontext. Returns: Processed image optimized for LinkedIn",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_search_adverse_events_mcp",
+      "description": "Searches the FDA Adverse Event Reporting System (FAERS) database for adverse events associated with a specific drug. This tool is useful for initial investigation into a drug's safety profile by retrieving summaries of reported adverse event cases. It provides a quick overview of potential side effects reported by healthcare professionals and the public. Returns: JSON string with adverse event contexts and metadata",
+      "params": [
+        "drug_name",
+        "limit"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_execute_query",
+      "description": "Execute a custom SQL query on the ERP database. Only SELECT statements are allowed for security reasons. Returns: Query results or error message",
+      "params": [
+        "query",
+        "params"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_milestones",
+      "description": "Returns all scheduled milestones and their dates for a given MCPHawk Inc project. This tool delivers a detailed timeline of milestones for a project, including: - Milestone names (e.g., Sprint-1, Sprint-2, QA Release, Production Release) - Corresponding milestone dates - Planned Cumulative Burn in USD for different project milestones - Actual Burn based on MCPHawk Inc employee billing - Cumulative Actual Burn rate basedon Actual Burn rate values (This is important to understand the financials of the project) This tool is helpful for project managers, scrum masters, and stakeholders to track progress, important delivery dates and understand if project is running within budget or not and understnad financial health of the project. **Input:** - `project_name` (str): The project whose milestones are requested. **Returns:** A dictionary containing: - `project_name` (str): The name of the project - `milestones` (list): A list of dictionaries, each with: - `milestone` (str): Name of the milestone (e.g., \"Sprint-1\", \"QA Release\") - `milestone_date` (date): Scheduled date for the milestone (in `YYYY-MM-DD` format) - `planned_cumulative_burn` (float): Planned cumulative burn amount by this milestone - `actual_burn` (float): Actual burn recorded for this milestone period - `cumulative_actual_burn` (float): Cumulative total of actual burn up to this milestone If no milestones are found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"milestones\": [ { \"milestone\": \"Sprint-1\", \"milestone_date\": \"2025-02-25\", \"planned_cumulative_burn\": 113160.0, \"actual_burn\": 106528.85, \"cumulative_actual_burn\": 106529.0 }, { \"milestone\": \"Sprint-2\", \"milestone_date\": \"2025-03-11\", \"planned_cumulative_burn\": 226321.0, \"actual_burn\": 111444.79, \"cumulative_actual_burn\": 217974.0 }, { \"milestone\": \"UAT Release\", \"milestone_date\": \"2025-05-20\", \"planned_cumulative_burn\": 905283.52, \"actual_burn\": 107937.74, \"cumulative_actual_burn\": 881532.64 }, { \"milestone\": \"Production Release\", \"milestone_date\": \"2025-05-27\", \"planned_cumulative_burn\": 1018443.96, \"actual_burn\": 107682.72, \"cumulative_actual_burn\": 989215.36 } ] }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_order_status",
+      "description": "Get the status of an order by order ID. Returns: Order status information including shipping and destination countries",
+      "params": [
+        "order_id"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_mountain",
+      "description": "Retrieve all climbing routes available for a specific mountain. This function performs a case-insensitive search for all routes associated with a specific mountain. The results include route names and their difficulty levels. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_mountain(\"Mount Elbert\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\"}]'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_download",
+      "description": "Downloads a paper from Arxiv and converts it to text. Use mode = \"html\" by default. Fall back to mode = \"pdf\" if there are any problems with the HTML version. Returns a JSON with a following structure: { \"title\": \"...\", \"abstract\": \"...\", \"toc\": \"...\", \"sections\": [\"...\", ...], \"citations\": [...] } Use `json.loads` to deserialize the result if you want to get specific fields. For example, `abstract = json.loads(arxiv_download(\"2409.06820v1\"))` The \"toc\" key contains Table of Contents, that sometimes has indexing for sections.",
+      "params": [
+        "paper_id",
+        "include_citations",
+        "mode"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_both_sources",
+      "description": "Search both Wikipedia and arXiv simultaneously. Returns: (wikipedia_results, arxiv_results)",
+      "params": [
+        "query",
+        "wiki_max_docs",
+        "arxiv_max_docs"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_get_dad_joke",
+      "description": "Fetches a random dad joke from the icanhazdadjoke.com API. The function makes an HTTP GET request to the <https://icanhazdadjoke.com/> API with appropriate headers to receive JSON response. Returns: A random dad joke if successful, otherwise returns an error message., Success: Returns the joke text, Failure: Returns \"Failed to retrieve a joke.\" if the API request fails, No joke: Returns \"No joke found.\" if the API response doesn't contain a joke, , The requests library must be imported to make HTTP requests",
+      "params": []
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_proxy_by_name",
+      "description": "\u4fee\u6539\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0\uff0c\u9700\u8981\u662f\u5b58\u5728\u7684\u96a7\u9053 - `type`: \u96a7\u9053\u7c7b\u578b\uff0c\u5fc5\u987b\u548c\u539f\u96a7\u9053\u4e00\u6837\uff0c\u4e0d\u652f\u6301\u4fee\u6539 - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_aspect_ratio",
+      "description": "Change video aspect ratio with high-quality processing. Returns: URL to processed video or None if failed, , Supports standard ratios with optimal dimensions, Maintains quality with lanczos scaling, Handles padding with black bars, Preserves original audio, Ensures even dimensions for compatibility",
+      "params": [
+        "video_url",
+        "target_ratio",
+        "method"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_handle_login_fixed",
+      "description": "Fixed login handler that properly clears previous user data",
+      "params": [
+        "username",
+        "password",
+        "role"
+      ]
+    },
+    {
+      "server": "AutoML-MCP",
+      "name": "AutoML_MCP_update_detected_columns_display",
+      "description": "Detects and displays column names from the uploaded file or URL as soon as the input changes, before the main analysis button is pressed.",
+      "params": [
+        "file_data",
+        "url_data"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_help_text",
+      "description": "Get help text with available commands",
+      "params": []
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_s2_citations",
+      "description": "Get all papers that cited a given arXiv paper based on Semantic Scholar info. Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"arxiv_id\", \"external_ids\", \"title\", \"authors\", \"venue\", \"citation_count\", \"publication_date\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "arxiv_id",
+        "offset",
+        "limit"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_upload_profile_picture",
+      "description": "Uploads a profile picture for the authenticated user. The new filename will be based on the user's profile_id. Requires X-Auth-ID header for authentication.",
+      "params": [
+        "image_upload"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_search_by_query_sync",
+      "description": "Search Stack Overflow for questions matching a query. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "min_score",
+        "has_accepted_answer",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "MCP_ClaimVerificationSystem",
+      "name": "MCP_ClaimVerificationSystem_verify_claim",
+      "description": "Use this tool to verify a claim",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "run_my_script",
+      "name": "run_my_script_run_script",
+      "description": "Executes a user-provided self contained Python script inside an isolated virtual environment with automatic dependency management. This function is intended to serve as a backend execution engine in a Model Context Protocol (MCP) server setting, where a language model may submit scripts for evaluation. It creates a secure workspace, detects dependencies, installs them using `uv`, executes the script, captures its output (including stdout and generated files), and returns all relevant results. \u26a0\ufe0f Limitations & Guidance for LLM-based Use: - Scripts should be self-contained, avoid system-level access, and primarily focus on data processing, text generation, visualization, or machine learning tasks. - The code can output logs, JSON, images, CSVs, or any other files, which are returned as artifacts. - Avoid infinite loops or long-running background processes. Timeout support can be added externally. Returns: , logs (str): Full stdout and stderr logs of the executed script., artifacts (Dict[str, str]): A dictionary of output files with their names and summaries or indicators, (e.g., image or CSV placeholders). Includes a \"__workdir__\" key pointing to the working directory., zip_path (str): Path to a ZIP archive containing all output artifacts for download.",
+      "params": [
+        "code",
+        "user_input",
+        "cleanup_enabled",
+        "cleanup_after"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_cache_status",
+      "description": "Get cache status and statistics.",
+      "params": []
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_graph_wrapper",
+      "description": "### `generate_graph_wrapper(graph_type: str, data_json: str)` - **Purpose**: Create visualizations using matplotlib - **Parameters**: `graph_type` - Type of chart (bar, line, pie, scatter) - **Returns**: Image file path and status - **Use Case**: Creating charts and graphs for presentations",
+      "params": [
+        "graph_type",
+        "data_json"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_search_problem_solving_templates",
+      "description": "Performs semantic search across problem-solving templates to find the most relevant ones for a given task. Useful for discovering existing solutions, finding similar use cases, and reusing proven template patterns. The search uses semantic similarity to match task descriptions with template descriptions and requirements. Returns: JSON string containing an array of template matches, each with:, template_id (str): Unique identifier of the template, name (str): Template name, description (str): Template description, similarity_score (float): Semantic similarity score (0-1), required_tools (List[str]): Tools needed by the template, required_packages (List[str]): Dependencies needed, resource_requirements (Dict): CPU/memory/GPU requirements",
+      "params": [
+        "task_description",
+        "top_k"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_report",
+      "description": "Generate a code analysis report using the Anthropic API. Returns: A detailed analysis report including top fixes.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_local_file",
+      "description": "Convert a local document to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "local_file_path",
+        "output_format"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_render_board",
+      "description": "Render the chess board in the specified format. Default is ASCII. Instructions for LLMs: - LLMs should default to ascii rendering mode. Returns: The rendered board as a string in the specified format.",
+      "params": [
+        "fen",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_live_station_update",
+      "description": "Retrieves real-time train information and updates for a specific railway station. This function queries the Indian Railways API to fetch live status updates including arriving/departing trains, expected arrival/departure times, and platform information for a specified time window. Returns: JSON response containing live station information including:, List of trains arriving/departing, Scheduled and expected arrival/departure times, Platform numbers, Current train locations, Delay information if any, Train running status, , If station code is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "station_code",
+        "for_next_hours"
+      ]
+    }
+  ]
+}

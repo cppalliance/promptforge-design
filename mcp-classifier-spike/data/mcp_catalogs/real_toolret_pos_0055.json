@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_toolret_pos_0055",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "getlivemenustreaming",
+      "description": "Fetches live menu streaming data from the specified API.",
+      "params": [
+        "skinname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_new_releases",
+      "description": "Fetch new album releases from Spotify for a specified country.",
+      "params": [
+        "country",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_Media",
+      "description": "Media",
+      "params": [
+        "{'name': 'uniqueTournamentId', 'type': '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetVerses",
+      "description": "Retrieves a range of verses from the Holy Bible.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getGiveawaysByPlatform",
+      "description": "Retrieve a list of game giveaways for a specific platform.",
+      "params": [
+        "platform",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "TripTool",
+      "description": "Offer discounted hotel and accommodation bookings, along with personalized hotel and product searches, travel planning, image editing, and more, helping users easily plan their trips and find accommodation and transportation options.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Team_Engagement_Survey_Tool",
+      "description": "Generates and analyzes engagement surveys to understand team morale and cohesion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "offers",
+      "description": "This function retrieves a list of offers for a product identified by the `is_id` parameter from a price comparison API. Latitude, longitude, country, and the API key can be optionally provided to refine the search.",
+      "params": [
+        "is_id",
+        "latitude",
+        "longitude",
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hourly_weather_forecast",
+      "description": "Obtain hourly weather forecast for a specified location and date range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kanji English Meaning API",
+      "description": "Retrieve the English meaning of Japanese Kanji characters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Diffbot_Article_API",
+      "description": "The Article API is used to extract clean article text from news articles, blog posts, and other text-heavy web pages.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeTable_Lookup_airports_Direct_routes_for_an_airport_by_airline",
+      "description": "Returns a list of direct routes for an airport restricted to an airline",
+      "params": [
+        "{'name': 'airportiatacode', 'type': 'str",
+        "{'name': 'airlineiatacode', 'type': 'str"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Food_Nutrional_Data_Search_a_food_recipe_item_100g_serving",
+      "description": "Search a food item and get all its nutritional information",
+      "params": [
+        "{'name': 'nutrientQuery', 'type': 'strin"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "choose_yellow_pairs",
+      "description": "This function calculates the number of ways Tom can choose two yellow marbles.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "coins_get_overview",
+      "description": "Fetches overview information of a specific cryptocurrency pair from the RapidAPI cryptocurrency market service.",
+      "params": [
+        "pair_id",
+        "time_utc_offset",
+        "lang_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Practice Session Results",
+      "description": "Retrieve information about a specific practice session by passing path parameters for session number, year, and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateJunctionVoltage",
+      "description": "Calculate the voltage across a semiconductor junction",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "schoolCode",
+      "description": "Gets the school code upon input",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "send_email",
+      "description": "Send an email to a specific email address",
+      "params": [
+        "{'name': 'email_address', 'in': 'query',",
+        "{'name': 'content', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Memeados_Pet_Pet",
+      "description": "Generate My Pet Pet meme GIF",
+      "params": [
+        "{'name': 'image', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Goal Distributions",
+      "description": "Retrieve goal distributions for a specific team in a particular tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetTempMail_End",
+      "description": "Endp",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_roster",
+      "description": "Fetches and returns the roster for a specified football team using the RapidAPI service.",
+      "params": [
+        "team"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Quotes_v4_Get_quotes_by_anime_title",
+      "description": "Get quotes by anime title",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkWirelessNetwork",
+      "description": "Check the security status of a wireless network",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Stage Competitor Standings",
+      "description": "Retrieves the competitor standings for a specific Motorsport stage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_written_confirmation",
+      "description": "Request to send written confirmation after changing the appointment",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AmericanFootballApi_LeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER",
+        "{'name': 'seasonId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguelastmatches",
+      "description": "Retrieve the last matches of an American Football league for a given tournament and season.",
+      "params": [
+        "page",
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_list_similarities_Deprecated",
+      "description": "List similar properties",
+      "params": [
+        "{'name': 'prop_status', 'type': 'STRING'",
+        "{'name': 'property_id', 'type': 'NUMBER'",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_Validation_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airportMetar",
+      "description": "Returns the most recent METAR for an airport specified by its ICAO airport code (ident). The response includes a parsed version of the METAR.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get General Game Information",
+      "description": "This API call retrieves general information about a game, including away team, home team, game string, and game start time. The game information is returned in Eastern (ET) time zone. The API requires a gameID as input, which can be obtained from other API calls such as 'getNBAGamesForDate' or 'getNBATeamSchedule'.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Download/Stream Video",
+      "description": "Retrieve information about a YouTube video or Shorts video, allowing users to stream or download the content.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Videos_Without_Watermark_getPostDetails",
+      "description": "Get video details like video, music, image",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Property Policies",
+      "description": "Retrieve detailed policies for a specific property",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Product",
+      "description": "Search The Product",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des",
+        "{'name': 'act', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Career Aptitude Personality Test Questionnaire",
+      "description": "This API provides a list of questions for a career aptitude personality test, which helps users assess their personality traits and match them with potential career paths.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_awesome_product_details",
+      "description": "Fetches detailed information about a product using a given product ID from the Amazon Data Scraper API.",
+      "params": [
+        "productid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_3_month_historical_daily_prices",
+      "description": "Fetches 3 months of historical daily stock prices for the given ticker.",
+      "params": [
+        "ticker"
+      ]
+    }
+  ]
+}

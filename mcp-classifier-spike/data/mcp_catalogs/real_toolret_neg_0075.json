@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_neg_0075",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "generate_train_ticket_booking_link",
+      "description": "Generate official high-speed train ticket booking link",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getMarketCalendar",
+      "description": "Retrieves market calendar data for a given month and year.",
+      "params": [
+        "month",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: L",
+      "description": "def find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: List[str], attribute_query: str) -> str:\n    '''Find the attribute of an object or its alternative in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_names (List[str]): The names of the objects to check.\n        attribute_query (str): The query to find the attribute of the object.\n       \n    Returns:\n        str: The attribute of the object if found, \"Unknown\" otherwise.\n    '''\n    for object_name in object_names:\n        object_patches = image_patch.find(obj",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_movies",
+      "description": "Fetch a list of movies from 2000 to 2019 based on the selected genre and year using the specified RapidAPI key.",
+      "params": [
+        "year",
+        "genre"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_possible_tens_digits",
+      "description": "This method takes two integers representing the tens digits of x and y, and returns a list of possible tens digits for 2(x+y).",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_boxes",
+      "description": "This method takes a list of boxes and returns the number of boxes in the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Read Root",
+      "description": "Verify the connectivity and functionality of the API by sending a simple request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_standings",
+      "description": "Fetches the standings for a given tournament from the League of Legends Esports API.",
+      "params": [
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Poland Songs API",
+      "description": "Retrieves the Poland Songs chart information from the Billboard API",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SimilarWeb_historical_data_api_getCountries",
+      "description": "Returns country shares by months",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPhoneNumberInfo",
+      "description": "Retrieves detailed information about a phone number, including its carrier, region, and type (landline or mobile).",
+      "params": [
+        "phoneNumber",
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSynonymsAndAntonyms",
+      "description": "Retrieve synonyms and antonyms for a given word.",
+      "params": [
+        "word",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_groups_below_threshold_in_stem_leaf(data_frame, stem_col, leaf_col, item_t",
+      "description": "def count_groups_below_threshold_in_stem_leaf(data_frame, stem_col, leaf_col, item_threshold):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a stem-and-leaf plot of groups and a threshold value, and returns the number of groups that have values less than the threshold.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the stem-and-leaf plot of items with columns specified by stem_col and leaf_col.\n    stem_col (str): The column name for the stem values.\n    leaf_col (str): The column name for the leaf values.\n    item_threshold (int): The threshol",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "exhibition.search_exhibitions",
+      "description": "Search for modern art exhibitions based on specific criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Moving Average Convergence Divergence (MACD)",
+      "description": "The Moving Average Convergence Divergence (MACD) indicator is a popular technical indicator used in finance to gauge the strength, momentum, and duration of a trend in a financial market.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentEnricher",
+      "description": "used to enrich text with external information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getorderbyid",
+      "description": "Fetches the order details from the Petstore API using the provided order ID.",
+      "params": [
+        "orderid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_MACD",
+      "description": "Moving Average Convergence Divergence(MACD) is a trend following momentum indicator, which works by subtracting the longer moving average from the shorter one. MACD has an unstable period ~ 100.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hashtag_data_by_name",
+      "description": "Fetches data for a specified TikTok hashtag using the given challenge name.",
+      "params": [
+        "challenge_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Schedule",
+      "description": "Retrieve a specific schedule for a team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Twitter User Details",
+      "description": "Retrieve detailed information about a Twitter user, including their follower count, prostring image, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_symbols_get_analyst_price_target",
+      "description": "Get Wall Street analyst price target for specific symbol",
+      "params": [
+        "{'name': 'ticker_ids', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bible_Search_Get_Chapter_by_BookName",
+      "description": "Returns a chapter of a book in the Bible.",
+      "params": [
+        "{'name': 'bookName', 'type': 'STRING', '",
+        "{'name': 'chapterId', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getIndexList",
+      "description": "Get a list of available indices",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "originals_episodes_get_likes",
+      "description": "Retrieves the number of likes for a specific episode of an original series from Webtoon.",
+      "params": [
+        "titleno",
+        "episodeno",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Patent",
+      "description": "Search patents globally based on a keyword and return a list of patents",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Live_Stream_Api_Match_Embed_Link",
+      "description": "Live Link",
+      "params": [
+        "{'name': 'matchid', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_MatchTvChannelDetails",
+      "description": "Get the details of a specific TV channel broadcasting a specific Football match.",
+      "params": [
+        "{'name': 'channId', 'type': 'NUMBER', 'd",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAntifungalSusceptibility",
+      "description": "Retrieve the antifungal susceptibility of a given fungal species",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_CAPTIVE_PORTALS",
+      "description": "READ CAPTIVE PORTALS",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_travel_routes",
+      "description": "Retrieves optimal travel routes between specified cities on given dates, considering preferred travel modes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PropertyComparator.compareProperties",
+      "description": "Compares two properties based on their features and returns a similarity score.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DNS_Lookup_Reverse",
+      "description": "Get name servers from an IP",
+      "params": [
+        "{'name': 'ip', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataClassifier",
+      "description": "Classify the input data, you need to specify the classification rules.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RugbyAPI2_Match",
+      "description": "Get information of a Rugby match by its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AiNameExpand",
+      "description": "Expands a name to its full form, considering language, script, encoding, style, and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stock Candlestick Data",
+      "description": "Retrieve candlestick data for a specific stock",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_2_Google_Images",
+      "description": "Using this API you can get the JSON data of the image results.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Charts",
+      "description": "The Charts parameters are applicable when making a request with type=charts to retrieve Charts results. The Charts page can be specified using the url parameter. The parameters should be appended as querystring parameters to the Product Data APIGETHTTP request.\n\nCharts results are retrieved from the charts page on Amazon.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tweets from a Twitter List",
+      "description": "This API retrieves a list of tweets from a specified Twitter list.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

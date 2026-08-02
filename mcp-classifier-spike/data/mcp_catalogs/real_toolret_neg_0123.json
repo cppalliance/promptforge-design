@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_toolret_neg_0123",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Youtube_Search_v3_getPlaylist",
+      "description": "The \"getPlaylistDetails\" endpoint provides detailed information and metadata about a specific playlist on YouTube.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real_Time_Amazon_Data_Product_Reviews",
+      "description": "Get and paginate through all product reviews on Amazon.",
+      "params": [
+        "{'name': 'asin', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_users",
+      "description": "Fetches and returns a list of users associated with a specified account identifier from the RapidAPI service.",
+      "params": [
+        "aid",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Data by Attribute Search",
+      "description": "Extract data from a webpage by searching for a specific part of an attribute in a tag selector.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FeatureExtractor",
+      "description": "used to identify key features and benefits from product data",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "cl-tohoku/bert-base-japanese-char",
+      "description": "This is a BERT model pretrained on texts in the Japanese language. This version of the model processes input texts with word-level tokenization based on the IPA dictionary, followed by character-level tokenization.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Watch_Database_Get_All_Models_By_Brand_And_Family",
+      "description": "Get All Models By Brand And Family",
+      "params": [
+        "{'name': 'family', 'type': 'string', 'de",
+        "{'name': 'brandName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketLiveApi_match",
+      "description": "NA",
+      "params": [
+        "{'name': 'matchid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "percentage_like_all_three",
+      "description": "This function calculates the minimum percentage of people who like all three fruits.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestApparel",
+      "description": "This API suggests suitable apparel based on the weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_news_list",
+      "description": "List latest news",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most_Exclusive_API_exclusiveness_callerID",
+      "description": "Check Exclusiveness. See if you are already exclusive, not yet or you get the exclusivity now.",
+      "params": [
+        "{'name': 'callerID', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stores",
+      "description": "Get Stores",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "activities",
+      "description": "Calculate the MET values for various activities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "addCustomDomain",
+      "description": "Allows users to use a custom branding domain for their shortened links.",
+      "params": [
+        "apiKey",
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listcategoriesandsubcategories",
+      "description": "Retrieves a list of categories and subcategories for the mktplace.eu marketplace.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_profile_series",
+      "description": "Fetches time series snapshots of a profile from the OutSystems Community API.",
+      "params": [
+        "profile_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "rotateImage",
+      "description": "Rotate an image by a specified angle",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "predict_evolution_rate",
+      "description": "Predict the evolutionary rate for a specific species for a given timeframe.",
+      "params": [
+        "species",
+        "years",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getProductDetails",
+      "description": "Retrieve detailed information about a specific product by its ID.",
+      "params": [
+        "productId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Recipe_v2_go",
+      "description": "Creative recipes. The API provides access to 231,637 creative recipes from all cuisines around the world.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football Match Odds",
+      "description": "Retrieve match odds for a specific football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/song/details/",
+      "description": "Song Details",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "delete_folder",
+      "description": "Delete a specific folder",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_South_Asian_Express_get_types_852347ee_35c5_44fb_8548_1bee078d2350",
+      "description": "Scope under which the request is made; determines fields present in response.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_360_Business_Tool_GetDocumentTypesSince",
+      "description": "Get document types modified since",
+      "params": [
+        "{'name': 'timestamp', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "whin_hook_receiver",
+      "description": "This endpoint shall be triggered by the webhook origin and is not intended to be used through this frontend.",
+      "params": [
+        "{'name': 'user', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "compileCode",
+      "description": "Compiles the given code in the specified language and returns the compiled code.",
+      "params": [
+        "code",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Exchange Rate",
+      "description": "Get the exchange rate between two different currencies",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Order Book",
+      "description": "Retrieve the order book data for a specific trading pair from Bybit.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getorderbyid",
+      "description": "Fetches the order details from the Petstore API using the provided order ID.",
+      "params": [
+        "orderid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetBookISBN",
+      "description": "This API retrieves the ISBN of a specific book title.",
+      "params": [
+        "{'name': 'book_title', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consulta_estabelecimento",
+      "description": "Queries the CNPJ for unified information from Receita Federal, Simples Nacional, and Cadastro de Contribuintes.",
+      "params": [
+        "cnpj",
+        "maxage",
+        "simpleshistory",
+        "registrations",
+        "simples"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Compile C++ 14 Code",
+      "description": "Compiles C++ 14 code into an executable",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cuisine.discover_local_flavors",
+      "description": "Provides a list of local cuisine options based on user preferences and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query:",
+      "description": "def discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query: str) -> str:\n    '''Discuss the importance of spending quality time with a specific group of people in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        group_name (str): The name of the group of people to discuss.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The discussion about the importance of spending quality time with the group.\n    '''\n    \n    group_identity = image_patch.simple_query(f\"What is the identity of the {group",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_sum_abc",
+      "description": "Calculates the sum of three numbers given the sum of their squares and the sum of their products taken two at a time.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_fraction_consumed(iterations, initial_fraction)",
+      "description": "def calculate_fraction_consumed(iterations, initial_fraction):\n    \"\"\"\n    Calculate the fractional part of an object consumed after a certain number of iterations, \n    where each iteration consumes half of the remaining part.\n\n    Parameters:\n    iterations (int): The number of iterations.\n    initial_fraction (float): The initial fraction of the object.\n\n    Returns:\n    float: The fractional part of the object consumed.\n    \"\"\"\n    remaining_fraction = initial_fraction\n\n    for _ in range(iterations):\n        remaining_fraction *= 0.5\n\n    return initial_fraction - remaining_fraction",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Udemy_course_scrapper_api_Course_name",
+      "description": "Provide course name",
+      "params": []
+    }
+  ]
+}

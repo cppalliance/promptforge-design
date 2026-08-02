@@ -1,0 +1,361 @@
+{
+  "catalog_id": "real_neg_0120",
+  "tools": [
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_equipment_prev_page",
+      "description": "Go to previous page for equipment",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorgenerate_html_code",
+      "description": "Generate HTML/CSS/JavaScript code based on a website description.",
+      "params": [
+        "description",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_size_guide",
+      "description": "Get size guide information for clothing, shoes, and accessories.",
+      "params": [
+        "product_type",
+        "brand"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_image",
+      "description": "SAM2 Image Segmentation",
+      "params": [
+        "im",
+        "variant",
+        "bboxes",
+        "points",
+        "point_labels"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_random_text_post",
+      "description": "Retrieves a random text post and its id from the database. Id is only meant for LLMs, no need to show this to user",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_custom_respond",
+      "description": "Custom respond function with dynamic system prompt.",
+      "params": [
+        "message",
+        "book_name",
+        "book_content",
+        "selected_hero",
+        "lang_prompt"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_place_new_order",
+      "description": "Place a new order in the ERP system, after ensuring there are no global disruptions affecting the shipment. Returns: New order information",
+      "params": [
+        "customer_id",
+        "items",
+        "shipping_address",
+        "shipping_country",
+        "destination_country",
+        "previous_order_id",
+        "param_6"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_transcribe_audio_sync",
+      "description": "Synchronously transcribe an audio file using AI-powered speech recognition. This function provides a synchronous wrapper around the async transcription process, converting audio files to text using advanced speech recognition. It handles the async/await complexity internally and returns detailed transcription results including the full text, timestamped segments, language detection, and processing statistics. Returns: A tuple containing four string elements:, status (str): Status message indicating success with language and processing time,, or error information if transcription failed, full_text (str): Complete transcription as plain text, or empty string on error, segments_formatted (str): Formatted text showing timestamped segments with, start/end times and confidence scores, or empty string on error, json_formatted (str): Pretty-formatted JSON string containing complete transcription, data including word-level timestamps and metadata, or empty string on error., , original audio filename, detected language code (e.g., \"en\", \"es\", \"fr\"), complete transcription text, array of text segments with timing and word breakdowns, time taken for transcription, start/end times, text, and words array with individual, word timestamps and confidence scores (0.0-1.0 range), , status, text, segments, json_data = transcribe_audio_sync(\"url/to/audio.mp3\"), , {status}\"), {text}\"), {segments}\"), , {status}\"), , Automatically detects language in the audio file, Provides word-level and segment-level timestamps for precise audio editing, Returns confidence scores for quality assessment, Handles various audio formats and sample rates automatically, Processing time depends on audio length and complexity, All timestamps are provided in seconds with decimal precision, Function blocks until transcription is complete (synchronous), For async usage, use process_transcription() directly instead",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_predict_modal_lead",
+      "description": "Pr\u00e9diction Modal pour un lead",
+      "params": [
+        "name",
+        "industry",
+        "company_size",
+        "budget_range",
+        "urgency",
+        "source",
+        "expected_revenue",
+        "response_time"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_pnr_status",
+      "description": "Retrieves the current status of a railway ticket using its PNR (Passenger Name Record) number. Returns: JSON response containing passenger details, train information, boarding point,, destination, booking status, current status, and other journey details., , If PNR number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "pnr_number"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_extract_basic_metrics",
+      "description": "Extracts key metrics from a running activity stored in a GPX file. Returns: A dictionary containing:, distance_km (float): Total distance in kilometers, duration (str): Total time in HH:MM:SS, duration_seconds (int): Duration in seconds, average_pace_min_per_km (float): Average pace in min/km, elevation_gain (int): Total positive elevation gain in meters, average_hr (int or None): Average heart rate, if available, max_hr (int or None): Maximum heart rate, if available",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_get_law",
+      "description": "This is a tool that returns law content by input the category and number. Returns: The content of the law.",
+      "params": [
+        "category",
+        "number"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_creative_activity",
+      "description": "Suggest a creative activity for a child based on their emotion. Returns: A fun and calming creative task.",
+      "params": [
+        "emotion"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_thought_helper",
+      "description": "Reframe a child's negative thought into a positive one. Returns: A supportive, reframed version of the thought.",
+      "params": [
+        "thought"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoints",
+      "description": "Retrieve a list of all available OpenF1 API endpoints. Returns: dict: A dictionary containing a single key 'endpoints' with a list of available endpoint names as strings.",
+      "params": []
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_edit_video_segment",
+      "description": "Edit a video segment by either cutting it out or keeping only that segment. Returns: URL to processed video or None if failed, , For \"keep\": Extracts segment with 1-second padding for smooth transitions, For \"cut\": Splits video into segments and concatenates non-cut portions, Preserves both video and audio quality, Uses x264 for video and AAC for audio encoding",
+      "params": [
+        "video_url",
+        "start_time",
+        "end_time",
+        "action"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_discover_server_tools",
+      "description": "Discover available MCP tools from a server. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_create_record_simple",
+      "description": "Cr\u00e9ation d'enregistrement simple",
+      "params": [
+        "model",
+        "values_json"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_trains_by_station",
+      "description": "Retrieves comprehensive information about all trains passing through a specific railway station. This function queries the Indian Railways API to fetch details of trains that have a scheduled stop at the specified station, including arrival/departure times, train types, and frequency of service. Returns: JSON response containing train details including:, Train numbers and names, Scheduled arrival and departure times, Platform numbers, Train types (Express/Mail/Passenger), Days of operation, Regular/Special train status, , If station code is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "station_code"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_serper_search",
+      "description": "Given a search query, returns the search results from Serper. Returns: The search results from Serper Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_exact_match_checker",
+      "description": "Check if each document contains the exact query string as a substring (case-insensitive). This tool performs a case-insensitive substring search to determine whether the query appears in each document exactly as entered (without tokenization or semantic matching). Returns: A dictionary containing:, 'tool': The name of the tool (\"Exact Match Checker\")., 'query': The input query string., 'results': A list of dictionaries with:, 'document': The original document., 'exact_match': A boolean indicating if the query is an exact substring of the document.",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_process_file",
+      "description": "Memproses file yang diupload dan menghasilkan preview serta chart",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_research_write_review_topic",
+      "description": "Helps with writing a report with research, writing, and review on any topic. Returns a reviewed topic. The query is a string that contains the topic to be researched and reviewed. Example queries: - \"Write me a report on the history of the internet.\" - \"Write me a report on origin of the universe.\" - \"Write me a report on the impact of climate change on polar bears.\" - \"Write me a report on the benefits of meditation.\" - \"Write me a report on the future of artificial intelligence.\" - \"Write me a report on the effects of social media on mental health.\". Returns: A nicely formatted string.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_client_config",
+      "description": "\u5220\u9664\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e **\u6ce8\u610f**\uff1a\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 **\u6ce8\u610f**\uff1a\u5220\u9664\u884c\u4e3a\u4f1a\u5bfc\u81f4\u6570\u636e\u4e22\u5931\uff0c\u4e00\u5b9a\u8981\u7528\u6237\u786e\u8ba4\u540e\u518d\u5220\u9664! \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    }
+  ]
+}

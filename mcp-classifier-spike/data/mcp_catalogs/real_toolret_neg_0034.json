@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_neg_0034",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Post Quotes",
+      "description": "Retrieve quotes related to a specific post on Twitter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Channel Description",
+      "description": "Retrieve the description of a Twitch channel using a username or ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Colors",
+      "description": "Returns an array of objects containing information about random colors from the sRGB color space. The color-object contains the color codes in RGB, CMYK, HEX, HSL, and HSV (HSB). In addition, the property \"safe\" specifies whether the color is [web-safe](https://en.wikipedia.org/wiki/Web_colors#Web-safe_colors) or not. If the color has a name that can be used in CSS, the name(s) will also be included. The nearest color(s) will also be included.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider3_live_upcoming",
+      "description": "get upcoming matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "seo_api_News",
+      "description": "Perform Google News Search\n\n Parameters\n----------\nquery : the string query to perform search for Google news. A simple query for `president` will be `q=president`. An example of multiple keyword would be `q=news+about+presdient+trump`. News can also be filtered by country and language. For `US` news and in English the query will be `q=trump&ceid=US:en` for news in Great Britian the query will be `q=trump&ceid=GB:en`\n\nReturns\n-------\njson: {\"feed\": { \"title\" : \"trump\" ...} , \"entites\": [ {\"title\" : \"Trump doubles down on divisive messaging in speech to honor Independence Day - CNN\", \"links\": [",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketAPI_CategoryTournaments",
+      "description": "Get the list of all leagues belonging to a specific basketball category using the category ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_answer_to_question",
+      "description": "Fetches the answer to a given question from the Question Answered API using the provided RapidAPI key.",
+      "params": [
+        "questionasked"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest_Stock_Price_price_all",
+      "description": "Fetch latest stock price",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hello_World_get_user",
+      "description": "get user by id",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "season_list",
+      "description": "To list the F1 seasons currently supported by the API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_length",
+      "description": "This method takes two arguments, 'speed' and 'time', and returns the length of the train in meters.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ModifyTrainTicket",
+      "description": "\"Modify Train Ticket API allows users to modify their train ticket order with specified 'order_number'. The API takes in four parameters - 'new_date', 'new_train_number', 'new_seat_type'. The 'new_date' parameter refers to the new date of the train journey, the 'new_train_number' parameter specifies the new train number, and the 'new_seat_type' parameter specifies the new type of seat.\"",
+      "params": [
+        "{'name': 'order_number', 'in': 'query', ",
+        "{'name': 'new_date', 'in': 'query', 'sch",
+        "{'name': 'new_train_number', 'in': 'quer",
+        "{'name': 'new_seat_type', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_360_Business_Tool_GetDocumentTypesSince",
+      "description": "Get document types modified since",
+      "params": [
+        "{'name': 'timestamp', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Student Messages",
+      "description": "Retrieve messages from a student in the colegiosantaana tool",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Reading_Home_APIs_GetBookDetail",
+      "description": "Get Detail of book by Book ID",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Goverlytics_records",
+      "description": "Fetches records data",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_role_or_attribute(image_patch: ImagePatch, object_context: str, query: ",
+      "description": "def identify_role_or_attribute(image_patch: ImagePatch, object_context: str, query: str) -> str:\n    '''Identify the role or attribute of a specific object in a given context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_context (str): The context of the object to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The role or attribute of the object if it exists, \"No {object_context} found.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_context)\n    if len(object_patches) > 0:\n        o",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "Xinhhd/autotrain-zhongxin-contest-49402119333",
+      "description": "A multi-class classification model trained with AutoTrain to predict carbon emissions based on input features.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ai.generate_neural_network",
+      "description": "Generates a neural network model based on specified architecture and training parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/ddpm-ema-cat-256",
+      "description": "Denoising Diffusion Probabilistic Models (DDPM) is a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. It can generate high-quality images, and supports different noise schedulers such as scheduling_ddpm, scheduling_ddim, and scheduling_pndm. On the unconditional CIFAR10 dataset, it achieves an Inception score of 9.46 and a state-of-the-art FID score of 3.17.",
+      "params": [
+        "model_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketballLeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events in the Basketball League.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Convexity_convert_rgb",
+      "description": "Endpoint to converts RGB color code to other color code like Hex , HSL, CMYK",
+      "params": [
+        "{'name': 'r', 'type': 'NUMBER', 'descrip",
+        "{'name': 'g', 'type': 'NUMBER', 'descrip",
+        "{'name': 'b', 'type': 'NUMBER', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PPOB_Indonesia_Credit_Pricelist",
+      "description": "This Endpoint is for Indonesia only.\nThe Credit & Data Pricelist API is used to display the list of available credit and data prices on PulsaXpress. This information can be used to know the price of the products you want to buy before making a transaction. This price information can be updated according to the current prices and can be used to determine the prices offered on your application.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_teams_list",
+      "description": "List teams",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_roster",
+      "description": "Fetches and returns the roster for a specified football team using the RapidAPI service.",
+      "params": [
+        "team"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Dog Breeds in Ascending Order",
+      "description": "Returns a list of dog breeds in ascending order by name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "userinfo",
+      "description": "Fetch user information from Instagram using the RapidAPI service.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_primary_object(image_patch: ImagePatch, query: str) -> str",
+      "description": "def identify_primary_object(image_patch: ImagePatch, query: str) -> str:\n    '''Identify the primary object in a given scene.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The name of the primary object.\n    '''\n    \n    primary_object = image_patch.simple_query(query)\n    return primary_object",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Week Players",
+      "description": "Retrieve team week players for a given season and round",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ASR_Hub_api_TripDetails_MFRef",
+      "description": "Retrives the TripDetails based on the  MFRef Number\r\n- MFRef",
+      "params": [
+        "{'name': 'MFRef', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateFarmArea",
+      "description": "Update the area of a farm",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Specified_Users_Links",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [{\"name\": \"user\", \"type\": \"STRING\", \"description\": \"specified user\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Geeklist_Get_Specified_Users_Links\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'user', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_annonce",
+      "description": "Fetches advertisement details from the FluxImmo API based on a unique identifier.",
+      "params": [
+        "unique_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFootballScore",
+      "description": "Retrieve the current score of a football match",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Current Weather Data",
+      "description": "Returns the current weather data of a given location, including temperature, humidity, wind speed, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Memes",
+      "description": "Retrieves a list of memes from the Reddit programming community",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_v2_list_similar_homes_Deprecated",
+      "description": "List similar properties for sale\n* This endpoint is deprecating, the official have changed to use .../properties/v2/list.... endpoints to list similar properties.",
+      "params": [
+        "{'name': 'property_id', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Albums",
+      "description": "Retrieve a list of albums from the music database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getReserves",
+      "description": "Retrieve petroleum reserves information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_get_albums",
+      "description": "get-albums",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    }
+  ]
+}

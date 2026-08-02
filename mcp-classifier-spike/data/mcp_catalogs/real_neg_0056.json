@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_neg_0056",
+  "tools": [
+    {
+      "server": "Website_Builder",
+      "name": "Website_Builder_generate_website",
+      "description": "Generates a simple website mockup based on the user's design request. Returns: HTML code for the website mockup.",
+      "params": [
+        "design_request"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image",
+      "description": "Edit a local image using the 'Clarity Upscaler' method. Optionally save result. Useful for stylized upscaling with fractal detail control. Returns: The edited image (PIL.Image) upscaled via AI model.",
+      "params": [
+        "path",
+        "output_path",
+        "scale",
+        "dynamic",
+        "creativity",
+        "resemblance",
+        "tiling_width",
+        "tiling_height",
+        "model",
+        "scheduler",
+        "steps",
+        "seed",
+        "downscale",
+        "downscale_resolution"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_client_config",
+      "description": "\u5220\u9664\u6307\u5b9a\u5ba2\u6237\u7aefID\u7684\u914d\u7f6e **\u6ce8\u610f**\uff1a\u8fd9\u91cc\u4fee\u6539\u7684\u4e0d\u662f\u96a7\u9053(proxy)\u548c\u89c2\u5bdf\u8005(visitor)\u7684\u914d\u7f6e\u4fe1\u606f\uff0cclient_configs\u63a5\u53e3\u4ec5\u5904\u7406client\u4e0eserver\u7684\u8fde\u63a5\u914d\u7f6e\u3002 **\u6ce8\u610f**\uff1a\u5220\u9664\u884c\u4e3a\u4f1a\u5bfc\u81f4\u6570\u636e\u4e22\u5931\uff0c\u4e00\u5b9a\u8981\u7528\u6237\u786e\u8ba4\u540e\u518d\u5220\u9664! \u8fd4\u56de\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u914d\u7f6e\u6210\u529f\", } ``` - `status`: \u8bf7\u6c42\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u8bf7\u6c42\u7ed3\u679c\u7684\u63cf\u8ff0\u4fe1\u606f. Returns: \u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "podcastify",
+      "name": "podcastify_generate_podcast",
+      "description": "Generate a podcast-style conversation from various input types. This function takes content from a document URL, webpage link, or raw text and converts it into a natural-sounding podcast dialogue between two hosts. The conversation is then synthesized into audio using text-to-speech. Returns: Path to the generated audio file (.wav format) containing the synthesized, podcast conversation., , If the input text cannot be extracted or is empty, If conversation extraction fails after maximum retries",
+      "params": [
+        "input_type",
+        "input"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_class_diagram",
+      "description": "Generates a class diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_calculate_hiking_time",
+      "description": "Calculate the estimated hiking time for a specific route based on hiker level. This function calculates the estimated hiking time using the formula: hiking time in hours = (distance / speed) + (elevation in feet / 2000). Returns: JSON string containing hiking time information in the format:, {, str,, str,, str,, float,, int,, float,, str, }, , >>> calculate_hiking_time(\"Mount Elbert\", \"Northeast Ridge\", \"average\"), \"Mount Elbert\", \"route_name\": \"Northeast Ridge\", \"hiker_level\": \"average\", \"distance\": 9.75, \"elevation_gain\": 4500, \"estimated_time_hours\": 4.5, \"estimated_time_formatted\": \"4 hours and 30 minutes\"}'",
+      "params": [
+        "mountain_name",
+        "route_name",
+        "hiker_level"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask",
+      "description": "Ask the D&D narrative agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_coin_flip",
+      "description": "Simulate flipping a coin multiple times.",
+      "params": [
+        "flips"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_search_problem_solving_templates",
+      "description": "Performs semantic search across problem-solving templates to find the most relevant ones for a given task. Useful for discovering existing solutions, finding similar use cases, and reusing proven template patterns. The search uses semantic similarity to match task descriptions with template descriptions and requirements. Returns: JSON string containing an array of template matches, each with:, template_id (str): Unique identifier of the template, name (str): Template name, description (str): Template description, similarity_score (float): Semantic similarity score (0-1), required_tools (List[str]): Tools needed by the template, required_packages (List[str]): Dependencies needed, resource_requirements (Dict): CPU/memory/GPU requirements",
+      "params": [
+        "task_description",
+        "top_k"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_latest_cycle_gr",
+      "description": "Retrieves the most recent WHOOP cycle (recovery data) for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorscreenshot_to_code",
+      "description": "Complete pipeline: analyze image and generate corresponding HTML code.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_silence_trimming",
+      "description": "Trim silence from the beginning and end of an audio file. This function loads an audio file and automatically removes silent or very quiet sections from the beginning and end based on a specified volume threshold. This is useful for cleaning up recordings and removing unwanted quiet sections. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, trimmed_audio_data: array), for the silence-trimmed audio result, or None if an error occurred, Second element: A status message string showing original and new duration, or error information, , result, status = apply_silence_trimming(\"url/to/audio.mp3\", -40.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Threshold is specified in decibels (dB) - more negative values = quieter threshold, Common thresholds: -30dB (conservative), -40dB (moderate), -60dB (aggressive), Only trims from beginning and end, preserves silence within the audio, Useful for removing recording artifacts, room tone, or equipment noise, May significantly reduce file duration depending on original content, Preserves original sample rate and audio quality, Be careful with very low thresholds as they may trim wanted quiet content",
+      "params": [
+        "audio_file",
+        "threshold_db"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_reset_database",
+      "description": "Reset the ERP database by deleting it and recreating it with fresh data. Returns: Result of the database reset operation",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_set_preferred_model",
+      "description": "Stores the selected model for the current endpoint and saves it.",
+      "params": [
+        "model_selection",
+        "current_url"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_posts",
+      "description": "Fetch LinkedIn profile posts for the given username. Returns: A dictionary containing the profile posts",
+      "params": [
+        "username",
+        "start_index",
+        "pagination_token",
+        "newer_than"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_prev_page",
+      "description": "Go to previous page for patients",
+      "params": []
+    },
+    {
+      "server": "MCPyLate",
+      "name": "MCPyLate_pylate_search_leetcode",
+      "description": "Search the PyLate with multi-vector models in the leetcode collection containing code problems solutions and return top-k hits. Returns: List of search results with docid, score, text snippet, and index name",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "MCP_Server_Web2JSON",
+      "name": "MCP_Server_Web2JSON_webpage_to_json_wrapper",
+      "description": "Wrapper function that converts schema input to BaseModel",
+      "params": [
+        "content",
+        "is_url",
+        "schema_input"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_api_endpoints",
+      "description": "Retrieve a list of all available OpenF1 API endpoints. Returns: dict: A dictionary containing a single key 'endpoints' with a list of available endpoint names as strings.",
+      "params": []
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_project_details",
+      "description": "Returns comprehensive metadata about an MCPHawk Inc projects This tool provides detailed information about a specific project, including: - Project start and end dates - Project classification - 'Tier 1 (High budget, long duration, senior involvement)' - 'Tier 2 (Medium budget and duration)', - 'Tier 3 (Low effort, short-term, often POC or pilot-level) - Impact of the project at customer side to understand what it means to customer and evaluate the risk during execution. - Enablement - Optimization - Innovation - Project complexity to understand and mitigate any project risk during execution and values are - Very High - High - Medium - Simple - Technology detail like - cloud environment (AWS, GCP, Azure) - cloud native tool (dbt, Fivetran, HVR etc) - Data Warehouse Tools (snowflake, databricks, Spark etc) - Project Domain line Marketing, Healthcare, Finance to have a better resource deployment for the succes. - Project Cost in USD to understand the size of the project, so revenue mapping can be done. This tool is useful for project managers, resource planners, and leadership to get a snapshot of project details for risk assessment and future planning **Input:** - `project_name` (str): The name of the project to retrieve details for. **Returns:** A dictionary containing: - `project_name`: The queried project\u2019s name - `start_date`: Project start date (YYYY-MM-DD) - `end_date`: Project end date (YYYY-MM-DD) - `classification`: Project classification level (e.g., Tier 1, Tier 2, Tier 3) - `customer_impact`: Level of impact on customers (e.g., Low, Moderate, High, Innovation, Optimization, Enablement) - `complexity`: Project complexity (e.g., Medium, Very High) - `cloud_environment`: Cloud environment used (e.g., AWS, Azure, GCP, None) - `cloud_native_tool`: Cloud-native tool used (e.g., Fivetran, Matillion, None) - `dw_tool`: Data warehouse or processing tool used (e.g., Databricks, Synapse, Apache Spark) - `project_domain`: Domain or industry focus of the project (e.g., Healthcare, Travel & Hospitality) - `total_cost`: Total project cost in INR (float) If the project is not found, returns a message indicating absence of data. **Example Response:** { \"project_name\": \"Grow Efficient Synergies\", \"start_date\": \"2025-02-11\", \"end_date\": \"2025-10-08\", \"classification\": \"Tier 1 (High budget, long duration, senior involvement)\", \"customer_impact\": \"Enablement\", \"complexity\": \"Medium\", \"cloud_environment\": \"Azure\", \"cloud_native_tool\": \"Fivetran\", \"dw_tool\": \"Snowflake\", \"project_domain\": \"Healthcare\", \"total_cost\": 1018444.0 }",
+      "params": [
+        "project_name"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_route_info",
+      "description": "Retrieve detailed information about a specific climbing route. This function performs a case-insensitive search for detailed information about a specific climbing route on a mountain, including its difficulty, roundtrip distance, and elevation gain. Returns: JSON string containing detailed route information in the format:, {, str,, str,, float,, int, }, , >>> get_route_info(\"Mount Elbert\", \"Northeast Ridge\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\", \"Roundtrip_Distance\": 9.0, \"Elevation_Gain\": 4700}'",
+      "params": [
+        "mountain_name",
+        "route_name"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_return_policy",
+      "description": "Get comprehensive return and refund policy information.",
+      "params": [
+        "product_category"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    }
+  ]
+}

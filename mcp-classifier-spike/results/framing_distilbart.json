@@ -1,0 +1,204 @@
+{
+  "model": "valhalla/distilbart-mnli-12-1",
+  "eval": "core",
+  "rows": [
+    {
+      "direction": "tool_premise",
+      "tool_field": "name_desc",
+      "template_i": 1,
+      "template": "This tool can be used to {need}",
+      "top1": 0.9661016949152542,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.9649122807017544,
+      "mean_correct_score": 0.45191722320752187,
+      "mean_neg_top": 0.01628633640292618
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "description",
+      "template_i": 1,
+      "template": "This tool can be used to {need}",
+      "top1": 0.9322033898305084,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.6863636363636364,
+      "mean_correct_score": 0.439766142855991,
+      "mean_neg_top": 0.021957433989478484
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "name_desc",
+      "template_i": 0,
+      "template": "This tool can {need}",
+      "top1": 0.9152542372881356,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.9148148148148149,
+      "mean_correct_score": 0.43594046049164953,
+      "mean_neg_top": 0.019909167248341773
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "name_desc",
+      "template_i": 2,
+      "template": "This is useful to {need}",
+      "top1": 0.9152542372881356,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.9037037037037037,
+      "mean_correct_score": 0.42213322663748704,
+      "mean_neg_top": 0.021210384658641286
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "description",
+      "template_i": 2,
+      "template": "This is useful to {need}",
+      "top1": 0.8983050847457628,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.7515723270440252,
+      "mean_correct_score": 0.4591637312100743,
+      "mean_neg_top": 0.029087437834176753
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "description",
+      "template_i": 0,
+      "template": "This tool can {need}",
+      "top1": 0.8813559322033898,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.7994505494505495,
+      "mean_correct_score": 0.4452317707383862,
+      "mean_neg_top": 0.029027019627392292
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "description",
+      "template_i": 2,
+      "template": "This is a request to {tool}",
+      "top1": 0.8135593220338984,
+      "near_dupe": 1.0,
+      "abstain_auroc": 0.7632575757575758,
+      "mean_correct_score": 0.36117716288814944,
+      "mean_neg_top": 0.03574939486053255
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "description",
+      "template_i": 1,
+      "template": "To do this the user needs a tool that will {tool}",
+      "top1": 0.7457627118644068,
+      "near_dupe": 0.8333333333333334,
+      "abstain_auroc": 0.7772727272727272,
+      "mean_correct_score": 0.3069718119434335,
+      "mean_neg_top": 0.06015971985956033
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "description",
+      "template_i": 0,
+      "template": "This request requires a tool that can {tool}",
+      "top1": 0.711864406779661,
+      "near_dupe": 0.8333333333333334,
+      "abstain_auroc": 0.7521008403361344,
+      "mean_correct_score": 0.28543931157106445,
+      "mean_neg_top": 0.04959839996364382
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name_desc",
+      "template_i": 2,
+      "template": "This is a request to {tool}",
+      "top1": 0.6271186440677966,
+      "near_dupe": 0.8333333333333334,
+      "abstain_auroc": 0.8857493857493858,
+      "mean_correct_score": 0.46040276941415426,
+      "mean_neg_top": 0.09712516185310152
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name",
+      "template_i": 2,
+      "template": "This is a request to {tool}",
+      "top1": 0.6101694915254238,
+      "near_dupe": 0.5,
+      "abstain_auroc": 0.6014492753623188,
+      "mean_correct_score": 0.36343366156021756,
+      "mean_neg_top": 0.031867897448440395
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name_desc",
+      "template_i": 1,
+      "template": "To do this the user needs a tool that will {tool}",
+      "top1": 0.576271186440678,
+      "near_dupe": 0.6666666666666666,
+      "abstain_auroc": 0.8952941176470588,
+      "mean_correct_score": 0.41340941322200436,
+      "mean_neg_top": 0.13566874216000238
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "name",
+      "template_i": 1,
+      "template": "This tool can be used to {need}",
+      "top1": 0.559322033898305,
+      "near_dupe": 0.5,
+      "abstain_auroc": 0.5885780885780886,
+      "mean_correct_score": 0.2682250433347442,
+      "mean_neg_top": 0.04943360460715161
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "name",
+      "template_i": 2,
+      "template": "This is useful to {need}",
+      "top1": 0.559322033898305,
+      "near_dupe": 0.3333333333333333,
+      "abstain_auroc": 0.5198135198135199,
+      "mean_correct_score": 0.23414777648268323,
+      "mean_neg_top": 0.049051903291708894
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name_desc",
+      "template_i": 0,
+      "template": "This request requires a tool that can {tool}",
+      "top1": 0.5254237288135594,
+      "near_dupe": 0.8333333333333334,
+      "abstain_auroc": 0.8721198156682027,
+      "mean_correct_score": 0.4285135266761626,
+      "mean_neg_top": 0.09154380526807573
+    },
+    {
+      "direction": "tool_premise",
+      "tool_field": "name",
+      "template_i": 0,
+      "template": "This tool can {need}",
+      "top1": 0.4576271186440678,
+      "near_dupe": 0.3333333333333333,
+      "abstain_auroc": 0.6261574074074074,
+      "mean_correct_score": 0.25512587927557806,
+      "mean_neg_top": 0.05116503871977329
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name",
+      "template_i": 1,
+      "template": "To do this the user needs a tool that will {tool}",
+      "top1": 0.4406779661016949,
+      "near_dupe": 0.3333333333333333,
+      "abstain_auroc": 0.46153846153846156,
+      "mean_correct_score": 0.17770365740244204,
+      "mean_neg_top": 0.07682347587413257
+    },
+    {
+      "direction": "need_premise",
+      "tool_field": "name",
+      "template_i": 0,
+      "template": "This request requires a tool that can {tool}",
+      "top1": 0.423728813559322,
+      "near_dupe": 0.3333333333333333,
+      "abstain_auroc": 0.5658823529411765,
+      "mean_correct_score": 0.22083574056625366,
+      "mean_neg_top": 0.09794955824812253
+    }
+  ]
+}

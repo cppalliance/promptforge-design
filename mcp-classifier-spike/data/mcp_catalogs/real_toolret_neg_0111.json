@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_neg_0111",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "Generate Image Condition On Pose Image",
+      "description": "useful when you want to generate a new real image from both the user description and a human pose image. like: generate a real image of a human from this human pose image, or generate a new real image of a human from this pose. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "requestVulnerabilityAnalysis",
+      "description": "Request an analysis and report on the vulnerability data.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SendSMS",
+      "description": "Send a single SMS message",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Independence API",
+      "description": "This API provides information about a country's independence string and the country or countries that colonized it.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetEventTrackerInfo",
+      "description": "Retrieves information about sports events or trackers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v4_User_Tweets_Replies",
+      "description": "User Tweets & Replies",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stageTimingAdjuster",
+      "description": "Adjusts the timing for multiple stages of an event based on priority and duration constraints.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballTournamentMeta",
+      "description": "Retrieve metadata about a specific football tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "HTTrack",
+      "description": "website downloader",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAccelerometerData",
+      "description": "Retrieve accelerometer data of the vehicle",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Verse Details by Verse ID",
+      "description": "Retrieves detailed information about a specific verse in the Bhagavad Gita by providing its chapter ID and verse ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_alerts_alertId",
+      "description": "A specific alert by id provided by a search or list. Example: /alerts/NWS-IDP-PROD-2202530-2064731",
+      "params": [
+        "{'name': 'alertId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weekly Baseball Schedule",
+      "description": "Returns a list of baseball games scheduled for the next 7 days, given a specific string or the current string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gameNews.fetchLatestUpdates",
+      "description": "Fetches the latest updates and announcements from major gaming industry events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RecommendAttire",
+      "description": "This API is to recommend attire based on the weather.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trend_and_Strength_API_for_Forex_GOLD_XAUUSD_GET_Latest_Signal",
+      "description": "Get the current trend direction of Forex GOLD",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_area_of_one_side",
+      "description": "This function takes the side of a cube as input and returns the area of one side of the cube.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kohls_stores_list",
+      "description": "List stores near a provided GEO location",
+      "params": [
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getOverallOralHealth",
+      "description": "Retrieve the overall oral health of a geriatric patient",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Email_Cloud_DisposableEmailIsDisposable",
+      "description": " ",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mazkooleg/0-9up-hubert-base-ls960-ft",
+      "description": "This model is a fine-tuned version of facebook/hubert-base-ls960 on the None dataset. It achieves an accuracy of 0.9973 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "vin_decoder_v4_AU_Decode",
+      "description": "AU Decode",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finanzoo_API_Fundamentals_API_Index_Isin",
+      "description": "Determine shareuid\nTo query the fundamental data via our API, you need the Shareuid for the share you are looking for. You can either determine this yourself via the API, or take it from the Excel table.\nIMPORTANT! The currency that is output in the API_Fundamentals results is also included here.\n\nSyntax:\n\nisin = search shareuid with ISIN",
+      "params": [
+        "{'name': 'API_Index', 'type': 'BOOLEAN',",
+        "{'name': 'isin', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calibrateAircraftSensors",
+      "description": "Calibrate the sensors of the aircraft",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Greatest of All Time Top Dance Club Artists",
+      "description": "Retrieve a list of the greatest dance club artists of all time, as ranked by the Billboard chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "My_API_12345_getUserByName",
+      "description": "{\"category_name\": \"Business_Software\", \"required_parameters\": [{\"name\": \"username\", \"type\": \"STRING\", \"description\": \"The name that needs to be fetched. Use user1 for testing. \", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"My_API_12345_getUserByName\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "WordGenerator",
+      "description": "You can generate Word documents based on the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_account",
+      "description": "Create a new user account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicRecommend",
+      "description": "This API is to recommend a song based on the artist, genre and year.",
+      "params": [
+        "{'name': 'artist', 'in': 'query', 'schem",
+        "{'name': 'genre', 'in': 'query', 'schema",
+        "{'name': 'year', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Global_Achievement_Percentages_For_App",
+      "description": "Get the list of all achievements and their percentages success rate",
+      "params": [
+        "{'name': 'appId', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scout_Basic_Phone_Number_Validation",
+      "description": "**Basic Phone Number Validation**\n\n- determine if a phone number is in a valid format \n\n- determine if a phone number is impossible for a particular region\n\n- properly format the number for various scenarios like international or local dialing\n\n- attempts to determine line type\n\n- determines country and country code",
+      "params": [
+        "{'name': 'dialcode', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CPF_CNPJ_Brasil_Consulta_dados_societ_rios",
+      "description": "**## consulta dados dos s\u00f3cios do cnpj consultado pelo id_socio**",
+      "params": [
+        "{'name': 'ID_SOCIO', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "provide_explanation_and_tips(image_patch: ImagePatch, action: str) -> str",
+      "description": "def provide_explanation_and_tips(image_patch: ImagePatch, action: str) -> str:\n    '''Provide an explanation and tips for a specific action or activity.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        action (str): The action or activity to provide an explanation and tips for.\n       \n    Returns:\n        str: The explanation and tips for the action or activity.\n    '''\n    query = f\"How does {action} work, and what are some tips for beginners trying to learn it?\"\n    return image_patch.llm_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Send Email Notification",
+      "description": "Sends an email notification to a specified recipient with a customizable subject.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Card Backs",
+      "description": "Returns a list of all the card backs in Hearthstone.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MikuAPI_getImage",
+      "description": " ",
+      "params": [
+        "{'name': 'fileId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.get_note",
+      "description": "# Get the content of the note located at cell, or the empty string if the cell does not have a note. \nworksheet.get_note(cell)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestNews",
+      "description": "Retrieve the latest news from foreign correspondents",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quality_Porn_Top_10_search_queries",
+      "description": "Get the top 10 search queries",
+      "params": []
+    }
+  ]
+}

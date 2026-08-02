@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_toolret_pos_0005",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "generateJoke",
+      "description": "Generate a random joke",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "JavaAppLifecycle.stopApp",
+      "description": "Stops a specified mobile application in Java environment.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Exchanges API",
+      "description": "Fetches data of top exchanges including names, prices, ranks, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "maclookup",
+      "description": "Looks up the manufacturer information for a given MAC address using the Toolbench RapidAPI service.",
+      "params": [
+        "mac_number"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getcountriesbycontinent",
+      "description": "Fetch data about countries in a specified continent from the RapidAPI world population service.",
+      "params": [
+        "continent",
+        "rank"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MIN",
+      "description": "Retrieve the minimum value of a financial instrument over a specified period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_flickr_photos",
+      "description": "Search for photos on Flickr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/api/TripDetails/{MFRef}",
+      "description": "Retrieves trip details based on the provided MFRef number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWarehouseInformation",
+      "description": "Retrieve information about a warehouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Video Synchronization",
+      "description": "Synchronizes the timing of an existing voiceover or audio file with the visuals of a given video.",
+      "params": [
+        "{'name': 'video', 'in': 'query', 'schema",
+        "{'name': 'audio', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWordMeaning",
+      "description": "Retrieve the meaning of a word",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Near Matches of a Handball Player",
+      "description": "Retrieve near matches of a handball player by ID, including player information and match details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flow_study_getrelevantcode",
+      "description": " ",
+      "params": [
+        "{'name': 'contract_address', 'type': 'ST",
+        "{'name': 'contract_name', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest_Stock_Price_price_all",
+      "description": "Fetch latest stock price",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Handball_Data_Daily_Match_List_Live",
+      "description": "Daily match list including live matches.\n\n**The data will return for only -+7 days period, so endpoint can be tested with date range of today - 7 days.**",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRadioAdPerformance",
+      "description": "Retrieve performance metrics for a specific radio advertisement",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Humor_Jokes_and_Memes_search_gifs",
+      "description": "Search for gifs.\nSee https://humorapi.com/docs/#Search-Gifs for more.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CosmicCalculator.getDistanceToGalaxy",
+      "description": "Estimates the distance from Earth to a specified galaxy using redshift data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TrendAnalyzer",
+      "description": "used to analyze trends",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rugby Match Incidents",
+      "description": "Retrieve match incidents from a rugby match, including penalties, tries, conversions, and other events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "actor_profile.get",
+      "description": "Get detailed profile of an actor including their biography, filmography, and acting techniques used.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historical Exchange Rates",
+      "description": "Retrieve historical exchange rate data for a given string and currency conversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AllScores_Countries",
+      "description": "Get list of countries.",
+      "params": [
+        "{'name': 'langId', 'type': 'NUMBER', 'de",
+        "{'name': 'sportId', 'type': 'NUMBER', 'd",
+        "{'name': 'timezone', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Jokes_Get_animes",
+      "description": "Get all the anime from Anime Jokes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "identity_verification",
+      "description": "Identity Verification Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PreMatchForm",
+      "description": "Get the pre-match form information for a specific Rugby match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Tweet_Replies",
+      "description": "This endpoint returns a list of reply tweets",
+      "params": [
+        "{'name': 'tweet_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Vessel_Data_Get_Vessels_by_Ship_Name",
+      "description": "Return vessels by its name.\nVisit our [demo site](https://core-api.net/vessel/map.html)",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Channel Search Continuation",
+      "description": "This endpoint gets the next list of search results in a given YouTube channel using the channel ID and a continuation token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Get_Time_at_Other_Location",
+      "description": "Find out time at `[to_lat, to_lon]` given `from_time` and `[from_lat, from_lon]`. Daylight saving time are taken care of.",
+      "params": [
+        "{'name': 'to_lat', 'type': 'NUMBER', 'de",
+        "{'name': 'from_lon', 'type': 'NUMBER', '",
+        "{'name': 'from_time', 'type': 'STRING', ",
+        "{'name': 'to_lon', 'type': 'NUMBER', 'de",
+        "{'name': 'from_lat', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coin Ticker",
+      "description": "Retrieve the current ticker information for a specific cryptocurrency",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_location_coordinates",
+      "description": "Query the latitude and longitude coordinates of a specified address",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_getPetById",
+      "description": "Returns a single pet",
+      "params": [
+        "{'name': 'petId', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_review_tracker",
+      "description": "Track user reviews for a specified product ID and time range",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "Dictionary",
+      "description": "description = \"API that takes a 'query' parameter as input and retrieves the definition of that word.\"\ninput_parameters = {\n    'query': {'type': 'str', 'description': 'The word to search the definition for.'},\n}\noutput_parameters = {\n    'definition': {'type': 'str', 'description': 'The definition of the requested word.'},\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kiann_Options_Project_opt_rho",
+      "description": "option lognormal greeks : delta calculates the delta, given where\nS = forward (float), K = strike (float), T = time-to-expiry (float), sigma = implied volatility lognormal (float)\nr = risk-free-rate (float), type_  =call (c) /put (p) (string), ret_= 0 (default) for use in rapidAPI.com",
+      "params": [
+        "{'name': 'type_', 'type': 'STRING', 'des",
+        "{'name': 'ret_', 'type': 'NUMBER', 'desc",
+        "{'name': 'r', 'type': 'NUMBER', 'descrip",
+        "{'name': 'K', 'type': 'NUMBER', 'descrip",
+        "{'name': 'sigma', 'type': 'NUMBER', 'des",
+        "{'name': 'T', 'type': 'NUMBER', 'descrip",
+        "{'name': 'S', 'type': 'NUMBER', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_successful_additional_attempts(initial_attempts, initial_success_percentage",
+      "description": "def find_successful_additional_attempts(initial_attempts, initial_success_percentage, additional_attempts, final_success_percentage):\n    \"\"\"\n    Find the number of successful attempts in the additional attempts based on the change in success percentage.\n\n    Parameters:\n    initial_attempts (int): The number of attempts initially.\n    initial_success_percentage (float): The percentage of successful attempts initially.\n    additional_attempts (int): The number of additional attempts.\n    final_success_percentage (float): The final percentage of successful attempts.\n\n    Returns:\n    int: The n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NAVITIME_Maps_map_image_GET",
+      "description": "Get a static map image of the location, range and zoom value specified in the parameter.",
+      "params": [
+        "{'name': 'width', 'type': 'NUMBER', 'des",
+        "{'name': 'center', 'type': 'STRING', 'de",
+        "{'name': 'zoom', 'type': 'NUMBER', 'desc",
+        "{'name': 'height', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "adolescent.evaluate_sexual_health_education_effectiveness",
+      "description": "Evaluate the effectiveness of a sexual health education session for adolescents.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "extractEntities",
+      "description": "Extract named entities from a given text.",
+      "params": [
+        "text"
+      ]
+    }
+  ]
+}

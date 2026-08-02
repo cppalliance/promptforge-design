@@ -1,0 +1,352 @@
+{
+  "catalog_id": "real_toolret_neg_0011",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_Complete_Recommendation_Trends",
+      "description": "This endpoint returns Recommendation Trends.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindNutritionalInfo",
+      "description": "This API is to find the nutritional information for menu items.",
+      "params": [
+        "{'name': 'MenuItems', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Mexico Zip Codes",
+      "description": "Search for valid zip codes with starting digits in Mexico",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://ai-weather-by-meteosource.p.rapidapi.com/minutely",
+      "description": "Minute-by-minute precipitation forecast for the next 60 minutes. Updated in real-time based on our AI nowcasting models. Define your location using GPS coordinates or place_id from Location endpoints.",
+      "params": [
+        "{'name': 'place_id', 'in': 'optional', '",
+        "{'name': 'lat', 'in': 'optional', 'schem",
+        "{'name': 'lon', 'in': 'optional', 'schem",
+        "{'name': 'timezone', 'in': 'optional', '",
+        "{'name': 'language', 'in': 'optional', '",
+        "{'name': 'units', 'in': 'optional', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "offers",
+      "description": "Retrieve offers for a specific product from various e-commerce platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get News for Title",
+      "description": "Retrieve news articles related to a specific title from IMDb.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "lvwerra/distilbert-imdb",
+      "description": "This model is a fine-tuned version of distilbert-base-uncased on the imdb dataset. It is used for sentiment analysis on movie reviews and achieves an accuracy of 0.928 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realtor_API_for_Real_Estate_Data_RealtorAgentList",
+      "description": "This endpoint will give you the Realtor Agent List with the data as given below, if you provide the city, state_code and page.\nParameters:\ncity: San Jose or New York\nstate_code: CA or NY\npage: min = 1 and max can be depends on the total number of results. \n\n`{\n    \"agent_address\": {\n      \"city\": \"PLEASANTON\",\n      \"country\": \"US\",\n      \"line\": \"\",\n      \"line2\": \"\",\n      \"postal_code\": \"94588\",\n      \"state\": \"\",\n      \"state_code\": \"CA\"\n    },\n    \"agent_bio\": \"Mark Lafferty Office: 925-216-6203 nEmail Me Keller Williams Tri-Valley Realtyn2300 First St. #316nLivermore, CA 94550nnExperienc",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'city', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Meanings",
+      "description": "Retrieve the meaning of a given word in a specific language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SpeedChecker",
+      "description": "used to check the loading speed of websites",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest News on Crypto",
+      "description": "Returns the latest news about crypto from several newspapers and websites, including headlines, summaries, and links to the original articles.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "teams",
+      "description": "Fetches a list of teams that match the given parameters from the API.",
+      "params": [
+        "estimatebill",
+        "competitionstageid",
+        "countryid",
+        "namelike"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LeagueAwayStandings",
+      "description": "Get away standings for a handball unique tournament and season",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "advanced_phone_number_lookup",
+      "description": "Retrieves advanced technical information about a phone number, including validity, approximate location, timezone, carrier, line type, ported status, robocall/spam score, and more.",
+      "params": [
+        "dialcode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Dialog JSON",
+      "description": "Retrieves the dialog JSON for a specified user in the Waifu entertainment platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Innings_cricket",
+      "description": "Get innings (cricket) by event_id",
+      "params": [
+        "{'name': 'event_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "investing_financial_stocks_income_statement",
+      "description": "get income statement  by pair id for some stocks \nnot all",
+      "params": [
+        "{'name': 'pair_id', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fixtures_by_series",
+      "description": "Fetches fixtures and results for a given cricket series using the RapidAPI service.",
+      "params": [
+        "series_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodName2ID",
+      "description": "This API is to convert a food name to a food ID.",
+      "params": [
+        "{'name': 'food_name', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PPT.add_text_image_page",
+      "description": "Add a text page with one image. Image should be a path",
+      "params": [
+        "{'name': 'title', 'type': 'STRING', 'des",
+        "{'name': 'bullet_items', 'type': 'STRING",
+        "{'name': 'image', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Verifications",
+      "description": "Searches for verification results based on the provided status.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "special_foreign_currency_purchase",
+      "description": "A tool for purchasing foreign currency at the current exchange rate, limited to US dollars, Euros, and Australian dollars",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zipwhip_message_read",
+      "description": "Marks the given message as read in Zipwhip's database.",
+      "params": [
+        "{'name': 'messages', 'type': 'STRING', '",
+        "{'name': 'session', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_of_countries",
+      "description": "Fetches information about countries where Booking.com offers hotels.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Search_Country_by_Name",
+      "description": "Get details of the country specified by name, fuzzy search is supported. Up to 10 records for countries with similar name may be returned. Information includes country name, capital, area, population, languages, neighbors, phone code, postal code, and more.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recommendation_trends",
+      "description": "Fetches recommendation trends for a given stock symbol using the Yahoo Finance API on RapidAPI.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DNS_Propagation_and_Domain_Checker_GetCurrentIPAddress",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_EPS_Trend",
+      "description": "This API endpoint returns a breakdown of the estimated historical EPS changes at a given period.\n\nAvailability: Mega plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NBA_Stats_v2_get_per_game_career_regular_season_by_id",
+      "description": "Api to query per game career regular season",
+      "params": [
+        "{'name': 'player_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Free Currency Converter API",
+      "description": "Converts a given amount of currency from one currency to another",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GoogleScholar.get_citation_format",
+      "description": "get MLA citation format by an identification of organic result's id",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Data_Get_Company_Income_Statement",
+      "description": "Get Company Income Statement",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "jokes_Search_for_joke",
+      "description": "Find joke by text",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_per_game_career_regular_season_stats",
+      "description": "Retrieves per-game career regular season statistics for NBA players.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_weight",
+      "description": "This method takes two arguments, 'total_weight' and 'num_students', and returns the average weight of the students.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "company_details",
+      "description": "Fetch details of a company from Indeed's API.",
+      "params": [
+        "company_id",
+        "locality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/user/contributions/transcriptions/",
+      "description": "User Contributions (transcriptions)",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'next_cursor', 'in': 'optional'",
+        "{'name': 'per_page', 'in': 'optional', '",
+        "{'name': 'text_format', 'in': 'optional'",
+        "{'name': 'sort', 'in': 'optional', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zipwhip_group_addmember",
+      "description": "Once a group is created via the group/save call, you then need to populate members.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'group', 'type': 'STRING', 'des",
+        "{'name': 'session', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "health.initiativeMaternalChild",
+      "description": "Gathers data on maternal and child health programs globally, focusing on specific health indicators.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MagicMirror_endpoint",
+      "description": "add endpoint",
+      "params": []
+    }
+  ]
+}

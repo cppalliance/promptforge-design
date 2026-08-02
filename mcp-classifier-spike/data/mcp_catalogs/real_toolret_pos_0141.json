@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_toolret_pos_0141",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "CarYardBard",
+      "description": "AI-Powered Car Sales Ad Generator for Australian Car Dealers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_stock_v2_get_news",
+      "description": "Get news in the News tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forecast_crypto_and_fiat_currency_exchange_rates_Currency_rates_for_1_bank_Histo",
+      "description": "Free subscribe plan available! Check it in pricing and subscribe for tests!\n**S**o it does - get exchange rates for selected bank on chosen date. Timezone is important!!!\n\nExample 1 - get currency rates provided by ECB(European Central Bank) in Berlin:\n`/api/get_all_currencies_values_for_1bank/?country_code=eu&date_yyyy_mm_dd_from=2021-11-15&date_yyyy_mm_dd_till=2021-11-15&bank_id=15&tz=Europe/Berlin`\n\nExample 2, MAIB (private Moldavian bank): `/api/get_all_currencies_values_for_1bank/?country_code=md&date_yyyy_mm_dd_from=2021-11-12&date_yyyy_mm_dd_till=2021-11-12&bank_id=1&tz=Europe/Chisinau`",
+      "params": [
+        "{'name': 'country_code', 'type': 'STRING",
+        "{'name': 'date_yyyy_mm_dd_from', 'type':",
+        "{'name': 'bank_id', 'type': 'STRING', 'd",
+        "{'name': 'date_yyyy_mm_dd_till', 'type':",
+        "{'name': 'tz', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pottery.kiln_firing_schedule",
+      "description": "Creates a firing schedule for pottery items based on material and desired finish.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getForensicBiologyProfile",
+      "description": "Retrieve forensic biology profile for a given sample",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Predictive Spikes by Coin Ticker",
+      "description": "Retrieve predictive social media spikes in the last 24 hours by Coin Ticker. Results will contain Sentiment, Weighted Sentiment, Mentions and Followers spikes both positive and negative. This brings predictive spikes (that went through another machine learning model to predict likelihood of market change within the next 24 hours). These spikes are colored as red and orange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Match Lineups",
+      "description": "Retrieve the lineup information for a specific match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTemperatureSensorData",
+      "description": "Retrieve temperature sensor data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCompetitionById",
+      "description": "Retrieve a specific competition by its ID from the list of televised football matches in Spain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_ManagerImage",
+      "description": "Get the image of a football manager with the given ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recordSurgicalNursingTask",
+      "description": "Record a surgical nursing task",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aircraft.update_service_records",
+      "description": "Updates the service records of an aircraft after maintenance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FetchRiskProstring",
+      "description": "Fetches a risk prostring for a customer",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/tapas-base-finetuned-wikisql-supervised",
+      "description": "TAPAS is a BERT-like transformers model pretrained on a large corpus of English data from Wikipedia in a self-supervised fashion. It was pretrained with two objectives: Masked language modeling (MLM) and Intermediate pre-training. Fine-tuning is done by adding a cell selection head and aggregation head on top of the pre-trained model, and then jointly train these randomly initialized classification heads with the base model on SQA and WikiSQL.",
+      "params": [
+        "question",
+        "table"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Woosmap_addressAutocomplete",
+      "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings.\n",
+      "params": [
+        "{'name': 'input', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_login_records",
+      "description": "Retrieve login records of a specified account within a certain time range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketAPI2_ManagerPlaceholderImage",
+      "description": "Get the manager placeholder image in PNG format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bing Translate API",
+      "description": "Translates text from one language to another using the Bing Translate API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_lottery_result_by_date",
+      "description": "Fetches the lottery results for the given date using the RapidAPI service.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "donateToCause",
+      "description": "Donate to a social justice cause",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_z",
+      "description": "To find the value of z given y",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto_Markets_Order_Book",
+      "description": "Order Book",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Metrics API",
+      "description": "Provides key financial metrics for a single stock company, either annually or quarterly.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Amazon Search results",
+      "description": "Get Amazon Search results",
+      "params": [
+        "{'name': 'searchQuery', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "poetry.event_timeline",
+      "description": "Creates a timeline of poetry events based on a specific era and region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TwttrAPI_Get_Tweet_Conversation",
+      "description": "Get a tweet conversation",
+      "params": [
+        "{'name': 'tweet_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "culturalEvents.fetchEvents",
+      "description": "Fetches upcoming cultural events at museums including workshops, lectures, and special tours.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_v2_Search_Location",
+      "description": "Use this API to get EntityId for the pickup and drop location.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Abuse IP Check Endpoint",
+      "description": "Checks the abuse status of an IP address and returns relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Goofs",
+      "description": "Retrieve goofs (errors or mistakes) in a specific movie or TV title.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_day_average",
+      "description": "This method takes two arguments, 'total_earning' and 'num_days', and returns the average earning per day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ShopeeApi_Product_details",
+      "description": "Get shopee product details",
+      "params": [
+        "{'name': 'region', 'type': 'string', 'de",
+        "{'name': 'path', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_all_platforms",
+      "description": "Fetches a list of platforms from the \"Is This Coin A Scam\" API based on various search criteria.",
+      "params": [
+        "symbol",
+        "limit",
+        "name",
+        "page",
+        "slug"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_prostrings",
+      "description": "Retrieves a list of prostrings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search User",
+      "description": "Search for users on Instagram using a given string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COD_API_2_0_Season_Critical_Damage_Leaderboard_WZ2",
+      "description": "Get season critical damage information for up to 2000 players on the leaderboard.",
+      "params": [
+        "{'name': 'season', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Search_Country_by_Name",
+      "description": "Get details of the country specified by name, fuzzy search is supported. Up to 10 records for countries with similar name may be returned. Information includes country name, capital, area, population, languages, neighbors, phone code, postal code, and more.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QueryBankAccount",
+      "description": "\"A query bank account API that takes two parameters - 'account' and 'token'. The 'account' parameter refers to the bank account number that needs to be queried and the 'token' parameter is used to authenticate the user making the request.\"",
+      "params": [
+        "{'name': 'account', 'in': 'query', 'sche",
+        "{'name': 'token', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hashing_Api_MD5_Text_Hash",
+      "description": "Hash text (as query-string-parameter) using MD5 algorithm.",
+      "params": [
+        "{'name': 'dataString', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "getride",
+      "description": "book a cab for any destination, number of seats and ride type",
+      "params": []
+    }
+  ]
+}

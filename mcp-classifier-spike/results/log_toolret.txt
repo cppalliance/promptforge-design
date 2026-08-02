@@ -1,0 +1,37 @@
+eval=toolret  examples=408  catalogs=800
+  [bm25:bm25:-] 408 records in 0.3s (1338.8/s)
+loading embed sentence-transformers/all-MiniLM-L6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 12768.24it/s]
+  [embed:sentence-transformers/all-MiniLM-L6-v2:-] 408 records in 7.8s (52.0/s)
+loading embed BAAI/bge-small-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 12212.73it/s]
+  [embed:BAAI/bge-small-en-v1.5:-] 408 records in 13.2s (30.9/s)
+loading embed BAAI/bge-base-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 12287.52it/s]
+  [embed:BAAI/bge-base-en-v1.5:-] 408 records in 21.4s (19.0/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 36900.04it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best] 408 records in 34.2s (11.9/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best_desc ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 43860.76it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best_desc] 408 records in 32.6s (12.5/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 13026.99it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best] 408 records in 21.6s (18.8/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 12232.18it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best_desc] 408 records in 23.1s (17.7/s)
+loading nli MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 10952.46it/s]
+  [nli:MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c:best] 408 records in 21.3s (19.2/s)
+loading nli MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 12504.23it/s]
+  [nli:MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c:best_desc] 408 records in 15.1s (27.1/s)
+loading nli MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c config=best ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 12805.94it/s]
+  [nli:MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c:best] 408 records in 64.3s (6.3/s)
+loading nli MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c config=best_desc ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 12905.15it/s]
+  [nli:MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c:best_desc] 408 records in 85.6s (4.8/s)
+wrote results\matrix_toolret.jsonl

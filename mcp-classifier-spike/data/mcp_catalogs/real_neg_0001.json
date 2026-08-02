@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_neg_0001",
+  "tools": [
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_drug_burden_index_mcp",
+      "description": "Calculates the Drug Burden Index (DBI) for a patient's medication list. The DBI is a measure of a person's total exposure to anticholinergic and sedative drugs, which are associated with an increased risk of falls and cognitive impairment, especially in the elderly. This intelligent version automatically detects the route of administration for each medication (e.g., oral, transdermal patches, parenteral injections) and uses the appropriate reference data for each route, making it suitable for complex, real-world medication regimens. Returns: JSON string with DBI calculation results broken down by route and individual drug contributions",
+      "params": [
+        "drug_list"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_optimize_energy_consumption",
+      "description": "Analyze code and suggest energy consumption optimizations. Returns: Optimization suggestions with estimated energy savings",
+      "params": [
+        "code_snippet",
+        "language"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_letter_generate",
+      "description": "MCP Endpoint: letter.generate Calls an LLM to create a short, personalized cover letter in any tone. Saves time and improves response quality.",
+      "params": [
+        "user_id",
+        "job_description",
+        "tone"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpstore_document",
+      "description": "Store document content in memory chunks.",
+      "params": [
+        "content",
+        "doc_type",
+        "client_id"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_soothing_story",
+      "description": "Generate a short calming story for a child. Returns: A safe, gentle short story.",
+      "params": [
+        "theme"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_balance_ui",
+      "description": "Gradio wrapper for get balance",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_return_policy",
+      "description": "Get comprehensive return and refund policy information.",
+      "params": [
+        "product_category"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_citation_formatter",
+      "description": "Wrapper for CitationFormatterAgent to format citations. Returns: Formatted citations result with APA-style references",
+      "params": [
+        "text_block"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htr_text",
+      "description": "Extract text from handwritten documents using HTR. returns: str: Extracted text from the image.",
+      "params": [
+        "image_path",
+        "document_type",
+        "custom_settings"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_user",
+      "description": "Function to lookup user information. Company User Lookup System. Enter a username to get user details. Returns: A formatted string with user details if found, otherwise an error message.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_generate_multiple_tones",
+      "description": "Generate cover letters in multiple tones for comparison. Returns: Dict with multiple cover letters in different tones",
+      "params": [
+        "user_id",
+        "job_description"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_analyze_api",
+      "description": "Safe wrapper for API analysis with user-friendly error handling",
+      "params": [
+        "spec"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_geographies",
+      "description": "Fetches information on available geographies for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/geography.html. Includes: * Geography Levels * Geography Hierarchy. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_fill_fog",
+      "description": "Fill the entire map with fog of war.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_hiking_search",
+      "description": "Discover hiking trails and outdoor activities in a specified location.",
+      "params": [
+        "location",
+        "difficulty",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_process_chat_message",
+      "description": "Processa a mensagem do chat, gera a resposta com SQL e resultado integrados. Retorna a resposta para exibi\u00e7\u00e3o no chatbot no formato correto para type='messages'.",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_similar_profiles",
+      "description": "Fetch similar profiles to the given LinkedIn username. Returns: A dictionary containing similar profiles",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_mountain",
+      "description": "Retrieve all climbing routes available for a specific mountain. This function performs a case-insensitive search for all routes associated with a specific mountain. The results include route names and their difficulty levels. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_mountain(\"Mount Elbert\"), \"Northeast Ridge\", \"Route_Difficulty\": \"Class 1\"}]'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_reset_database",
+      "description": "Reset the ERP database by deleting it and recreating it with fresh data. Returns: Result of the database reset operation",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_loyalty_program_info",
+      "description": "Get information about loyalty program, rewards, and member benefits.",
+      "params": [
+        "inquiry_type"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_interpretation_workflow",
+      "description": "Generates an interpretation of the text based on genre and language settings.",
+      "params": [
+        "text",
+        "genre",
+        "learn_language",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_process_cut_audio",
+      "description": "Process audio cutting to extract a segment from an audio file. This function loads an audio file, validates the time parameters, and cuts out a specific segment between the start and end times. It handles various audio formats and provides detailed error messages for troubleshooting. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, audio_data: array), for the cut audio segment, or None if an error occurred, Second element: A status message string indicating success with details, or error information, , result, status = process_cut_audio(\"/path/to/audio.mp3\", 10.5, 25.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Time parameters are automatically validated and clamped to valid ranges, Start time must be less than end time after validation, Output audio data maintains the original sample rate, Function returns user-friendly status messages for UI display",
+      "params": [
+        "audio_file",
+        "_start_time",
+        "_end_time"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_staff",
+      "description": "Refresh staff table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_convert_and_prepare_download",
+      "description": "Convert API and prepare download file",
+      "params": [
+        "spec",
+        "target_format"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_class_diagram",
+      "description": "Generates a class diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_payment_information",
+      "description": "Get information about accepted payment methods and billing.",
+      "params": [
+        "inquiry_type"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    }
+  ]
+}

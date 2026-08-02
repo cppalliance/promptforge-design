@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_neg_0021",
+  "tools": [
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_bit_plane_extractor",
+      "description": "Extract and visualize a bit plane from a selected channel of the image.",
+      "params": [
+        "image",
+        "channel",
+        "bit",
+        "filter_type"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_analyze_video_context",
+      "description": "This is an AI modal that can analyze the entire video along with timestamps. You can use this to analyze the context of a video. Returns: The response from the GEMINI AI MODEL.",
+      "params": [
+        "video_url",
+        "task"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_print_headers",
+      "description": "Print the headers of the request for debugging purposes.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Model_Analysis_MCP",
+      "name": "Model_Analysis_MCP_process_text_comprehensive_analysis",
+      "description": "Processes only text/code descriptions for comprehensive analysis (no ONNX support). Accepts llms_to_query as a string or a list for compatibility.",
+      "params": [
+        "model_input",
+        "llms_to_query",
+        "analysis_types"
+      ]
+    },
+    {
+      "server": "mcp-brawlstats",
+      "name": "mcp_brawlstats_get_recent_battles",
+      "description": "Retrieve a player's 25 most-recent Brawl Stars battles. Call `save_brawlstars_key` **once** beforehand to cache the API key. Returns: On success \u2013, {, \"#TAG\",, <int>,            # number of battles returned, <list[dict]>      # raw JSON from Supercell, }, On failure \u2013, \"<human-readable message>\" }",
+      "params": [
+        "player_tag"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask_",
+      "description": "Ask the D&D rule agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_memory_stats",
+      "description": "Get aggregated memory statistics with performance comparison in dual mode.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "nationstates-mcp",
+      "name": "nationstates_mcp_address_nation_issues",
+      "description": "Address a specific issue for a nation in NationStates API. Returns: API response text.",
+      "params": [
+        "NATION",
+        "X_PASSWORD",
+        "issue_id",
+        "option_id"
+      ]
+    },
+    {
+      "server": "MCP_Server_Emotion_Detection",
+      "name": "MCP_Server_Emotion_Detection_generate_emotion_response",
+      "description": "Generate an emotion image and response text based on input text",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_search_problem_solving_templates",
+      "description": "Performs semantic search across problem-solving templates to find the most relevant ones for a given task. Useful for discovering existing solutions, finding similar use cases, and reusing proven template patterns. The search uses semantic similarity to match task descriptions with template descriptions and requirements. Returns: JSON string containing an array of template matches, each with:, template_id (str): Unique identifier of the template, name (str): Template name, description (str): Template description, similarity_score (float): Semantic similarity score (0-1), required_tools (List[str]): Tools needed by the template, required_packages (List[str]): Dependencies needed, resource_requirements (Dict): CPU/memory/GPU requirements",
+      "params": [
+        "task_description",
+        "top_k"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_auth_with_spotify",
+      "description": "It auths with the spotify and returns current user info to confirm the success of auth",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_commment_bottle",
+      "description": "ask for the list of comments on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_advanced_caption_interface",
+      "description": "Advanced interface function for caption generation",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_duration_info",
+      "description": "Update the duration info when a new file is uploaded This function is designed for UI purposes only to update Gradio interface elements when a new audio file is uploaded. It should NOT be used by agents or automated systems as it returns Gradio update objects for slider components. Agents should use the underlying audio utility functions directly instead.",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_trains_between_stations",
+      "description": "Searches for trains between two stations on a specific date. Returns: JSON response containing train details including:, Train number, Train name, Source station, Destination station, Departure time, Arrival time, Duration, Available classes, , If any of the parameters are empty., If API request fails or returns non-200 status code.",
+      "params": [
+        "fromStationCode",
+        "toStationCode",
+        "dateOfJourney"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_check_seat_availability",
+      "description": "Retrieves real-time seat availability information for a specific train journey. This function queries the Indian Railways API to check seat availability status based on multiple parameters including class type, stations, quota, and date of journey. It provides detailed information about available seats, waiting list status, and booking possibilities. Returns: JSON response containing availability details including:, Current booking status, Number of available seats, Waiting list numbers if applicable, Chance of confirmation, Alternative availability suggestions, , If required parameters are empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "classType",
+        "fromStationCode",
+        "quota",
+        "toStationCode",
+        "trainNo",
+        "date"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_parse_huggingface_url_with_summary",
+      "description": "Parse URL and return both markdown summary and JSON.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_custom_respond",
+      "description": "Custom respond function with dynamic system prompt.",
+      "params": [
+        "message",
+        "book_name",
+        "book_content",
+        "selected_hero",
+        "lang_prompt"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_pull_file_from_sandbox",
+      "description": "Copies a file from a Modal sandbox to the local filesystem. Useful for retrieving output files, backing up sandbox data, analyzing sandbox-generated content locally, and debugging sandbox operations. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "local_path"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_convert_and_prepare_download",
+      "description": "Convert API and prepare download file",
+      "params": [
+        "spec",
+        "target_format"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_artist_and_track",
+      "description": "Searches for a track and returns artist info and URIs",
+      "params": [
+        "track_name"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_check_single_server_health",
+      "description": "Check health of a single MCP server from any URL format. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_execute_command",
+      "description": "Executes a command in a specified Modal sandbox environment. Useful for running arbitrary commands in isolated environments, testing scripts and programs, executing programs with specific dependencies, debugging environment-specific issues, and running automated tests in isolation. Note: Commands are processed using shlex.split() and executed via subprocess.run(), so shell operators like &&, ||, |, >, < are not supported. Use separate command calls for chaining operations. Returns: JSON string containing stdout, stderr, returncode and execution time",
+      "params": [
+        "sandbox_id",
+        "command",
+        "timeout_seconds"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_handle_mcp_analyze",
+      "description": "Funci\u00f3n auxiliar para interfaz Gradio. Convierte strings JSON a listas y llama mcp_analyze_trends. Par\u00e1metros: - data_str (str): JSON string con array de n\u00fameros - dates_str (str): JSON string con array de fechas (opcional) - window (int): Ventana de tendencias - method (str): M\u00e9todo de detecci\u00f3n de anomal\u00edas Retorna resultado de mcp_analyze_trends o mensaje de error.",
+      "params": [
+        "data_str",
+        "dates_str",
+        "window",
+        "method"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_reset_database",
+      "description": "Reset the ERP database by deleting it and recreating it with fresh data. Returns: Result of the database reset operation",
+      "params": []
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_dataset_view",
+      "description": "View comprehensive details about a specific dataset. Returns: Formatted JSON string containing combined dataset information:, metadata: Dataset description, tags, license, creation date, etc., files: List of all files in the dataset with sizes and types, , dataset_view(\"zillow/zecon\") returns complete information about Zillow's economic dataset, , The dataset parameter must include both owner and dataset name separated by a slash",
+      "params": [
+        "dataset",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    }
+  ]
+}

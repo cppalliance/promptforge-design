@@ -1,0 +1,344 @@
+{
+  "catalog_id": "real_pos_0126",
+  "tools": [
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_pubmed_search_gr",
+      "description": "Gradio wrapper for PubMed literature search. Parameters ---------- query : str PubMed query string. max_results : int Maximum number of articles requested from the backend tool. date_range : str If non\u2011empty, restricts search to the last *N* years. Returns ------- str Pretty\u2011printed JSON with article details.",
+      "params": [
+        "query",
+        "max_results",
+        "date_range"
+      ]
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_get_question_sync",
+      "description": "Get a specific Stack Overflow question by ID. Returns: Formatted question details",
+      "params": [
+        "question_id",
+        "include_comments",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_top_adverse_events_tool",
+      "description": "MCP Tool: Finds the top reported adverse events for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n",
+        "patient_sex",
+        "min_age",
+        "max_age"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_compute_Chai1",
+      "description": "Compute a Chai1 simulation. Returns: DataFrame containing model scores and CIF file paths",
+      "params": [
+        "fasta_file_name",
+        "inference_config_file_name"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_comment_on_text_post",
+      "description": "Adds a text comment to the text post with id post_id. Returns True if successful",
+      "params": [
+        "post_id",
+        "content"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ai_correct",
+      "description": "Corrects the provided text using an AI model.",
+      "params": [
+        "current_text",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_leave_game",
+      "description": "Handle player leaving the game: clear state and return updated UI components.",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_synoptic_chart",
+      "description": "Generates a synoptic chart (horizontal flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_soothing_story",
+      "description": "Generate a short calming story for a child. Returns: A safe, gentle short story.",
+      "params": [
+        "theme"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ocr_workflow_wrapper",
+      "description": "Manages the OCR workflow, processing an uploaded file to extract text.",
+      "params": [
+        "file",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_stop_server",
+      "description": "Stop the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "classify_opening",
+      "description": "Attempt to classify a chess opening using the Lichess openings database. Return the ECO code, name, moves and main sub-variations of the opening.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "CyberSec_Intel_Tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_visualizer",
+      "description": "Visualize HTR results by overlaying text regions and polygons on the original image. Returns: File path to the generated visualization imagegenerated visualization image for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name}), https://gabriel-htrflow-mcp.hf.space/gradio_api/file=/tmp/gradio/34d5c1a8b7d5445469c4f7c638c490e0e3046b3008a0182f89c688b1b42d139b/htr_visualization.png",
+      "params": [
+        "image_path",
+        "htr_document_path",
+        "server_name"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_live_updates",
+      "description": "Fetches and formats the latest data from the backend for both views.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_sandboxes",
+      "description": "Lists all Modal sandboxes for a specific app namespace and their current status. Useful for monitoring active Modal sandbox environments, checking which sandboxes are running, and getting sandbox IDs for further management operations. Returns: JSON string containing list of sandboxes with their IDs and status",
+      "params": [
+        "app_name"
+      ]
+    },
+    {
+      "server": "xhmcp",
+      "name": "xhmcp_generate_claude_config",
+      "description": "Generate Claude Desktop configuration",
+      "params": [
+        "hf_space_url"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcplist_memories",
+      "description": "Universal memory listing interface.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques CRM natives",
+      "params": []
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_breathing_exercise",
+      "description": "Generate a short calming breathing exercise for a child. Returns: A short calming breathing exercise.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_wav_to_musicxml",
+      "description": "Convert a WAV audio file to a MusicXML score using pitch detection. Returns: File path to the generated MusicXML file., , If the MIDI file could not be generated.",
+      "params": [
+        "wav_path"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_points_of_interest",
+      "description": "Find points of interest near given coordinates. Increase radius if not found (10km is default), try with more categories if not found any poi. Returns: Formatted text with POI information",
+      "params": [
+        "lat",
+        "lon",
+        "radius_km",
+        "categories"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_fuzzy_search",
+      "description": "Fuzzy-match *query* against DF['food']. \u2022 First, return any rows that contain the whole query as a substring. \u2022 Otherwise, keep only rows that share \u22651 meaningful token and score them with token_set_ratio.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_analyze_video_context",
+      "description": "This is an AI modal that can analyze the entire video along with timestamps. You can use this to analyze the context of a video. Returns: The response from the GEMINI AI MODEL.",
+      "params": [
+        "video_url",
+        "task"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement__",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_keyword_mcp_search",
+      "description": "Handle keyword-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when you know the specific name or keywords of the MCP Server you're looking for. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"keyword\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_company_details",
+      "description": "Fetch company details for the given LinkedIn username. Returns: A dictionary containing the company details",
+      "params": [
+        "username"
+      ]
+    }
+  ]
+}

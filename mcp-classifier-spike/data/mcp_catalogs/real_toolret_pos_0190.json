@@ -1,0 +1,343 @@
+{
+  "catalog_id": "real_toolret_pos_0190",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "MiDaS",
+      "description": "MiDaS computes relative inverse depth from a single image. The repository provides multiple models that cover different use cases ranging from a small, high-speed model to a very large model that provide the highest accuracy. The models have been trained on 10 distinct datasets using multi-objective optimization to ensure high quality on a wide range of inputs.",
+      "params": [
+        "repo_or_dir",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResultAnalyzer",
+      "description": "used to analyze the results of experiments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coins Index",
+      "description": "Retrieve a list of all coins available on Coinranking, along with their relevant information, for indexing purposes. This endpoint requires the **ultra** plan or higher.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StudentName2ID",
+      "description": "This API converts a student's name to their ID.",
+      "params": [
+        "{'name': 'student_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataStore",
+      "description": "Stores web crawler content and analytics data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMA_Stats_UFC_Fight_Night_Emmett_vs_Topuriar_June_24_2023",
+      "description": "**UFC Fight Night: Emmett vs. Topuria**.                                                          \n Access a range of information about each fighter, including their win-loss record, height, weight, reach, and age. results of a particular fight or a fighter's win-loss record.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "family_activity.find_parks",
+      "description": "Find parks in a specific area suitable for family activities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Services_timezone",
+      "description": "Return timezone",
+      "params": [
+        "{'name': 'city', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pet_rescue_search",
+      "description": "Search for rescue pets available for adoption.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_sentiment_trending_beari",
+      "description": "Search for top 50 trending bearish stocks/crypto symbols on Twitter/StockTwits.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatBreedDB_Breed_Type",
+      "description": "Gives all results by the type of breed.",
+      "params": [
+        "{'name': 'breedType', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Season Kills Leaderboard MW 2",
+      "description": "Retrieves the season kills leaderboard for Modern Warfare 2 (MW 2) game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Review",
+      "description": "Retrieves reviews for a specific recipe",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get list of available modes",
+      "description": "The service provides three options for background removal results:\n* Mask of foreground.\n* Image with foreground object.\n* Image with foreground object with shadow.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TrueWay_Places_FindPlaceByText",
+      "description": "Search for places by text string",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chain49_Get_UTXO_V2",
+      "description": "Returns array of unspent transaction outputs of address or xpub, applicable only for Bitcoin-type coins. By default, the list contains both confirmed and unconfirmed transactions. The query parameter confirmed=true disables return of unconfirmed transactions. The returned utxos are sorted by block height, newest blocks first. For xpubs or output descriptors, the response also contains address and derivation path of the utxo.\n\n\n\nUnconfirmed utxos do not have field height, the field confirmations has value 0 and may contain field lockTime, if not zero.\n\nCoinbase utxos have field coinbase set to ",
+      "params": [
+        "{'name': 'addressOrXpub', 'type': 'STRIN",
+        "{'name': 'blockchain', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OS_Sports_Perform_Team_logo",
+      "description": "Get team logo by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Generate Image Condition On Normal Map",
+      "description": "useful when you want to generate a new real image from both the user description and normal map. like: generate a real image of a object or something from this normal map, or generate a new real image of a object or something from the normal map. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str:\n    '''Describe the appearance of an object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to describe.\n       \n    Returns:\n        str: The description of the object's appearance.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # Assume that there is only one object of the given type in the photo\n    object_patch = object_patches[0]\n    description = object_patch.simple_query(f\"Can you describe the {object_name}'s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IPGeolocation",
+      "description": "This API is to get the location based on the IP address.",
+      "params": [
+        "{'name': 'ip', 'in': 'query', 'schema': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Daily_Influencer_Posts",
+      "description": "Retrieve news and posts from Top Influencers in social media ordered by date\nThis endpoint contains results from all coins. To search for posts on a specific coins check \"Get Daily Influencer Posts by Coin Name\" or \"Get Daily Influencer Posts by Coin Ticker\"\n\n**Output:**\n\n- EventId \n- EventType\n- Event Time\n- Publisher\n- Source\n- Related coins\n- Event Color\n- Number of followers\n- Event text\n\n**Definitions:** \n\n- Publisher: User name of the publisher of the event in social media\n- Source: Social media where the post was published\n- Related coins: Coins mentioned in the post\n- Event Color: Show",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Subcontrols By Control",
+      "description": "This endpoint returns a list of subcontrols (CCIs) owned by a specified control.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Test1_aa",
+      "description": "bb",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Company Income Statement",
+      "description": "Retrieve a company's income statement, including quarterly or annual financial data, for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "XBEzMN",
+      "description": "Return data of the city determined by query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most_Exclusive_API_exclusiveness_callerID",
+      "description": "Check Exclusiveness. See if you are already exclusive, not yet or you get the exclusivity now.",
+      "params": [
+        "{'name': 'callerID', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_kfc_locations_by_state_and_city",
+      "description": "Retrieve KFC locations for a given state and city with pagination support.",
+      "params": [
+        "state",
+        "city",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fibonacci_visualizer.renderChart",
+      "description": "Renders a visual chart of the Fibonacci sequence, with options for customization and date-based filtering.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Suggest",
+      "description": "This endpoint is used to get autocomplete suggestions or query predictions as a user types a search query. The endpoint requires the **keyword** parameter, which represents the partial text entered by the user. You can send a request with the partial text, and the request will generate a JSON response containing a list of relevant autocomplete suggestions for the search query.",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tiktok_Video_Feature_Summary_region_list",
+      "description": "the region list use in video search params",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Password Generator API",
+      "description": "Generates a random password of a specified length.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "marketdata",
+      "description": "Retrieves a regional forecast of the electricity price in Germany.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMotorcycleInsuranceQuote",
+      "description": "Retrieve a motorcycle insurance quote",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSMSCount",
+      "description": "Retrieve the count of SMS sent by a customer",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "yoga_pose_analyzer",
+      "description": "Analyzes yoga poses from images to provide feedback on posture and alignment.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "animation_create_project",
+      "description": "Create a new animation project in Toon Boom Harmony.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "restrictAccess",
+      "description": "Restrict access to a specific section in the library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shazam_songs_list_artist_top_tracks_Deprecated",
+      "description": "List top tracks of specific artist",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COD_API_2_0_Season_Kills_Leaderboard_MW_2",
+      "description": "Get season kills information for up to 2000 players on the MW 2 leaderboard.",
+      "params": [
+        "{'name': 'season', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spectation_Sports_Events_API_Fights",
+      "description": "Fetch fights for upcoming/previous events",
+      "params": []
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_pos_0185",
+  "tools": [
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_live_station_update",
+      "description": "Retrieves real-time train information and updates for a specific railway station. This function queries the Indian Railways API to fetch live status updates including arriving/departing trains, expected arrival/departure times, and platform information for a specified time window. Returns: JSON response containing live station information including:, List of trains arriving/departing, Scheduled and expected arrival/departure times, Platform numbers, Current train locations, Delay information if any, Train running status, , If station code is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "station_code",
+        "for_next_hours"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_fasta_file",
+      "description": "Create a FASTA file from a biomolecule sequence string with a unique name. Returns: Name of the created FASTA file",
+      "params": [
+        "file_content",
+        "name"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_order_status",
+      "description": "Get the status of an order by order ID. Returns: Order status information including shipping and destination countries",
+      "params": [
+        "order_id"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_users_top_artists",
+      "description": "Use this tool to get the top artist of the user. Returns: defaultdict containing genres and artist_name",
+      "params": [
+        "limit_artists",
+        "offset"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_merge_to_pdf",
+      "description": "The function `process_merge_to_pdf` merges Markdown files into a PDF and provides download options for the generated PDF. :return: The `process_merge_to_pdf` function returns a tuple containing four elements:",
+      "params": []
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_analyze_hr_zones",
+      "description": "Analyze time spent in heart rate zones from GPX data. Returns: A dictionary containing:, time_in_zones (dict): Mapping of zone name to time in seconds, total_tracked_seconds (int): Total duration with HR data, method (str): The zoning method used",
+      "params": [
+        "file",
+        "hr_max",
+        "hr_rest",
+        "method"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitors_by_program_id",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_discover_server_tools",
+      "description": "Discover available MCP tools from a server. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_leave_game",
+      "description": "Handle player leaving the game: clear state and return updated UI components.",
+      "params": []
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_handle_login_fixed",
+      "description": "Fixed login handler that properly clears previous user data",
+      "params": [
+        "username",
+        "password",
+        "role"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "get_square_info",
+      "description": "Get information about a specific square in the chess position. This function retrieves the piece on the specified square, as well as the attackers and defenders of that square.",
+      "params": [
+        "fen",
+        "square_name"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_for_ui",
+      "description": "Wrapper function for the Gradio UI that shows all links without limitation.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_summary",
+      "description": "Returns the conversation summary data.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output__",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_query_owid_table_sql",
+      "description": "Executes a read-only SQL query against one or more tables loaded from the OWID catalog.",
+      "params": [
+        "table_references_json",
+        "sql_query",
+        "limit"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpchat_with_memory",
+      "description": "Universal chat interface with stored memory context.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_models_list",
+      "description": "List available models in Kaggle's model hub with filtering options. Returns: Formatted JSON string containing array of model objects with:, slug: Model identifier, title: Model title, subtitle: Brief description, author: Model author/organization, isPrivate: Privacy status, creationDate: When model was published, downloadCount: Number of downloads, voteCount: Community votes, usabilityRating: User rating score, , models_list(sort_by=\"downloadCount\", search=\"bert\", page_size=10), Returns top 10 most downloaded BERT-related models, , Kaggle's model hub contains both official models from organizations and, community-contributed models with various licenses and formats.",
+      "params": [
+        "sort_by",
+        "search",
+        "owner",
+        "page_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_link",
+      "description": "Uses article title to look up direct link to article content webpage.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "Vibe-Jamming-MCP",
+      "name": "Vibe_Jamming_MCP_generate_music_from_hum",
+      "description": "Generate music from a humming audio file and a style prompt using an external MusicGen API. Returns: Path to the generated WAV music file, or error message on failure.",
+      "params": [
+        "melody_file",
+        "prompt"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_suggest_green_alternatives",
+      "description": "Suggest environmentally friendly technology alternatives. Returns: Suggestions for greener technology alternatives",
+      "params": [
+        "current_tech",
+        "use_case"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_naranjo_score_mcp",
+      "description": "Calculates the Naranjo score, a standardized and widely used causality assessment tool to determine the probability that an adverse event is related to a specific drug. The score helps clinicians and researchers classify the likelihood of an adverse drug reaction (ADR) as doubtful, possible, probable, or definite. Sometimes the user might not have provided all the information, so you will need to ask for the missing information (remember to give them the option to say \"unknown\" if they don't know the answer). Returns: JSON string with score, probability category, and detailed breakdown",
+      "params": [
+        "adverse_reaction_after_drug",
+        "reaction_improved_after_stopping",
+        "reaction_reappeared_after_readministration",
+        "alternative_causes_exist",
+        "reaction_when_placebo_given",
+        "drug_detected_in_blood",
+        "reaction_worse_with_higher_dose",
+        "similar_reaction_to_drug_before",
+        "adverse_event_confirmed_objectively",
+        "reaction_appeared_after_suspected_drug_given"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_update_transcription_info",
+      "description": "This should not be used by agents, only for UI updates",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_login_user",
+      "description": "Handles login logic. Returns final username, channel, unformatted history, and roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_order_status",
+      "description": "Get status for a specific order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_auth_with_spotify",
+      "description": "It auths with the spotify and returns current user info to confirm the success of auth",
+      "params": []
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htrflow_file",
+      "description": "Process HTR and return a formatted file for download. Returns: File path for direct download via gr.File (server_name/gradio_api/file=/tmp/gradio/{temp_folder}/{file_name})",
+      "params": [
+        "image_path",
+        "document_type",
+        "output_format",
+        "custom_settings",
+        "server_name"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_process_return",
+      "description": "Process a return request for an order.",
+      "params": [
+        "order_id",
+        "item_ids_str",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_video",
+      "description": "SAM2 Video Segmentation",
+      "params": [
+        "video_path",
+        "variant",
+        "masks",
+        "drop_masks",
+        "ref_frame_idx",
+        "async_frame_load"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_apply_color_filter",
+      "description": "Apply professional-grade color filters to video. Returns: URL to processed video or None if failed, , Implements various color transformations, Supports intensity control, Maintains video quality, Preserves original audio",
+      "params": [
+        "video_url",
+        "filter_type",
+        "intensity"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_list_programs",
+      "description": "\u8fd4\u56defrpc\u5ba2\u6237\u7aef\u5217\u8868 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"id\": 0, \"name\": \"\u793a\u4f8b HK\", \"description\": \"\u8fde\u63a5HK\u7684\u5ba2\u6237\u7aef\", \"status\": \"\u8fd0\u884c\", }, ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `id`: \u5ba2\u6237\u7aef\u552f\u4e00\u6807\u8bc6 - `name`: \u7528\u6237\u7ed9\u5ba2\u6237\u7aef\u5907\u6ce8\u7684\u540d\u5b57 - `description`: \u7528\u6237\u7ed9\u7684\u5ba2\u6237\u7aef\u5907\u6ce8\uff0c\u9009\u586b - `status`: \u5ba2\u6237\u7aef\u72b6\u6001\uff0c\u76ee\u524d\u6709\u4e09\u79cd\uff1a\u8fd0\u884c\u3001\u505c\u6b62\u548c\u4e3a\u8fd0\u884c - `\u8fd0\u884c`: \u5ba2\u6237\u7aef\u6b63\u5728\u8fd0\u884c - `\u505c\u6b62`: \u5ba2\u6237\u7aef\u5df2\u505c\u6b62 - `\u672a\u8fd0\u884c`: \u5ba2\u6237\u7aef\u5728MCP\u670d\u52a1\u5668\u542f\u52a8\u540e\u6ca1\u8fd0\u884c\u8fc7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_event_info",
+      "description": "Retrieve information about a specific Formula 1 event.",
+      "params": [
+        "year",
+        "round",
+        "format"
+      ]
+    },
+    {
+      "server": "universal-file-converter",
+      "name": "universal_file_converter_convert_from_url",
+      "description": "Convert a document from a URL to a different format. Returns: The path to the converted file or an error message.",
+      "params": [
+        "document_url",
+        "output_format"
+      ]
+    }
+  ]
+}

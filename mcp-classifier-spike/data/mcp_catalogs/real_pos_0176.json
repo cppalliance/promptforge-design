@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_pos_0176",
+  "tools": [
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "Stack_Overflow_MCP_Server",
+      "name": "Stack_Overflow_MCP_Server_advanced_search_sync",
+      "description": "Advanced search for Stack Overflow questions with comprehensive filters. Returns: Formatted search results",
+      "params": [
+        "query",
+        "tags",
+        "excluded_tags",
+        "min_score",
+        "title",
+        "body",
+        "min_answers",
+        "has_accepted_answer",
+        "min_views",
+        "sort_by",
+        "limit",
+        "response_format",
+        "api_key"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "purine-ingredients",
+      "name": "purine_ingredients_fuzzy_search",
+      "description": "Fuzzy-match *query* against DF['food']. \u2022 First, return any rows that contain the whole query as a substring. \u2022 Otherwise, keep only rows that share \u22651 meaningful token and score them with token_set_ratio.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_activate_monitoring",
+      "description": "TOOL: Activate periodic monitoring for a validated API configuration. PURPOSE: Start automated recurring API calls based on a previously validated configuration. This is STEP 2 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation. Make sure that the sample_response is what you expect to see before proceeding with this function. WORKFLOW: 1. First call validate_api_configuration() to get config_id 2. If validation successful, call this function with the config_id 3. Monitoring will run automatically according to the validated schedule ARGUMENTS: - config_id: The ID from successful validate_api_configuration() execution (required) - mcp_api_key: User's MCP API key for verification (must match validation step). Input Examples: 1. Activate scheduler for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Activate scheduler for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\" NOTE: The config_id must be obtained from a successful validate_api_configuration() response. The mcp_api_key must match the one used during validation. Returns: Dictionary with success status and scheduling details, , {, True,, \"Scheduler activated for 'NVDA Stock Price'\",, 123,, 20,, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:20:00Z\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_ocr_workflow_wrapper",
+      "description": "Manages the OCR workflow, processing an uploaded file to extract text.",
+      "params": [
+        "file",
+        "mistral_key"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_diversity_checker",
+      "description": "Measures how semantically diverse the generated outputs are using cosine similarity. Returns: A report showing pairwise similarities and average similarity.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_delete",
+      "description": "Delete user profile. Returns: Dict with operation result",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_logout",
+      "description": "UI-only function to switch views after logout.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_embed_text_modal_api",
+      "description": "This function allows you to send a list of text to be embeded by our external model. the format should be the following: [ \"text_to_embed 1\", \"text_to_embed 2\", \"text_to_embed 3\", ... ] the return is the vector embedding corresponding to the text you input or a list of vector in case you gave a list of text. thoses vectors are compatible with the one you can find in the database and can be used to be compared with vectors you'll get by querying the database.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_to_queue_song",
+      "description": "Adds a song to the Spotify queue using its URI",
+      "params": [
+        "uri_of_song"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_student_t_test",
+      "description": "Accepts two groups of numeric data as comma-separated strings or DataFrame columns and performs Student's t-test. This test determines whether two independent groups have significantly different means, assuming populations from which the groups were sampled have equal variances (if this assumption is violated, or if equal population variance cannot be verified, use Welch's t-test instead). The test calculates a t-statistic quantifying the mean difference as a multiple of pooled standard deviation. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, standardized by pooled standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: treatment vs control groups, before/after measurements with different participants, comparing performance between demographic groups.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_helpline_with_state",
+      "description": "Handle helpline with state management",
+      "params": []
+    },
+    {
+      "server": "egg_tart_agent",
+      "name": "egg_tart_agent_ask",
+      "description": "This function serves as the Model Control Panel (MCP) API endpoint for the Egg Tart agent, which is designed to answer questions about Hong Kong using over 1,800 datasets from data.gov.hk. She provides concise, friendly, and markdown-formatted answers to a wide range of queries, including weather, transportation,demographics, public holidays, and economic statistics. Returns: A concise, markdown-formatted answer generated by the agent, including relevant data and citations.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_clear_job_cache",
+      "description": "Clear the job search cache to force fresh results. Returns: Dict with operation result",
+      "params": []
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "CyberSec_Intel_Tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_memory_stats",
+      "description": "Get aggregated memory statistics with performance comparison in dual mode.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_correlation_test",
+      "description": "Accepts two variables as comma-separated strings or DataFrame columns and performs correlation analysis. This test determines the strength and direction of the linear relationship between two continuous variables. Pearson correlation measures linear relationships, Spearman correlation measures monotonic relationships (rank-based), and Kendall's tau is robust to outliers and suitable for small samples. The test calculates a correlation coefficient ranging from -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship. A significant result (p-value < alpha) indicates that the observed correlation is statistically different from zero. Effect size interpretation: |r| < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: examining relationship between height and weight, analyzing correlation between study time and test scores, investigating association between variables in research.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "method",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_bm25_relevance_scorer",
+      "description": "Compute relevance scores between a query and a list of documents using the BM25 algorithm. This tool tokenizes each document and the query using a simple whitespace and punctuation-based tokenizer, then calculates BM25 scores to measure how relevant each document is to the query. Returns: A dictionary containing:, 'tool': The name of the tool (\"BM25 Relevance Scorer\")., 'query': The input query., 'results': A list of dictionaries, each with:, 'document': The original document string., 'score': The BM25 relevance score (higher means more relevant).",
+      "params": [
+        "query",
+        "documents"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_hallucination_detector",
+      "description": "Detects hallucinations by comparing generation sentences to source sentences using cosine similarity. Flags generation sentences with max similarity < 0.75 as hallucinated. Returns: Hallucination flags and their similarity scores.",
+      "params": [
+        "generation",
+        "source_docs"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_get_agency_review",
+      "description": "Retrieves and formats the review information for a given agency name. It first finds the place_id using names by google maps api and then fetches the review data using the place_id. Finally, it constructs a summary of the review data in string format. Returns: A formatted string summarizing the agency's rating and review count,, or an error message if the data cannot be found.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_proxy_by_name",
+      "description": "\u4fee\u6539\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0\uff0c\u9700\u8981\u662f\u5b58\u5728\u7684\u96a7\u9053 - `type`: \u96a7\u9053\u7c7b\u578b\uff0c\u5fc5\u987b\u548c\u539f\u96a7\u9053\u4e00\u6837\uff0c\u4e0d\u652f\u6301\u4fee\u6539 - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "MCP_Server_LinkedIn_Image_Generator",
+      "name": "MCP_Server_LinkedIn_Image_Generator_process_linkedin_image",
+      "description": "Process an image for LinkedIn optimization using Flux Kontext. Returns: Processed image optimized for LinkedIn",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_feed",
+      "description": "Gets RSS feed content from a given website. Can take a website or RSS feed URL directly, or the name of a website. Will attempt to find RSS feed and return title, summary and link to full article for most recent n items in feed. This function is slow and resource heavy, only call it when the user wants to check a feed for new content, or asks for content from a feed that you have not retrieved yet.",
+      "params": [
+        "website"
+      ]
+    }
+  ]
+}

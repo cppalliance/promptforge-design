@@ -1,0 +1,382 @@
+{
+  "catalog_id": "real_pos_0118",
+  "tools": [
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_db_infos",
+      "description": "### `get_db_infos()`",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_ollama_endpoint",
+      "description": "Checks an Ollama endpoint, gets a list of available models with their capabilities, sorts them, and updates the UI accordingly.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_handle_chapter_processing",
+      "description": "Handle chapter processing and update state",
+      "params": [
+        "story_content",
+        "story_title"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_move_item",
+      "description": "Move an item to a new position.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_sales_stats",
+      "description": "R\u00e9cup\u00e8re les statistiques Sales natives",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_performance_metrics",
+      "description": "Get performance metrics and analytics for the MCP Hub system. Collects and returns performance metrics including execution times, success rates, error counts, and resource utilization. Provides basic information if advanced metrics collection is not available. Returns: A dictionary containing performance metrics and statistics",
+      "params": []
+    },
+    {
+      "server": "kokoro-mcp-marcodsn",
+      "name": "kokoro_mcp_marcodsn_kokoro_tts",
+      "description": "Generate speech audio from text using Kokoro TTS. Returns: Path to the generated WAV audio file.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_prev_page",
+      "description": "Go to previous page for staff",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10k_by_year",
+      "description": "Fetch year(s) 10-K financial reports for a list of companies and specified sheets. Caveat the sheets names is likely to differ between companies, years, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, years, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "years",
+        "sheets"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_translate_caption_interface",
+      "description": "Generate multi-language versions of captions",
+      "params": [
+        "base_caption",
+        "selected_languages"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_launch_sandbox",
+      "description": "Launches a new Modal sandbox with specified configuration. Useful for creating isolated Python environments, running code with specific dependencies, testing in clean environments, executing long-running tasks, running GPU-accelerated workloads, training machine learning models, and running inference on large models. Returns: JSON string containing sandbox_id, status, python_version and installed packages",
+      "params": [
+        "app_name",
+        "python_version",
+        "pip_packages",
+        "apt_packages",
+        "timeout_seconds",
+        "cpu",
+        "memory",
+        "secrets",
+        "volumes",
+        "inject_predefined_secrets",
+        "workdir",
+        "gpu_type",
+        "gpu_count"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "calculator-mcp-marcodsn",
+      "name": "calculator_mcp_marcodsn_safe_math_eval",
+      "description": "Enter a math formula using the supported operators and functions. **Supported Operators:** - `+` (addition) - `-` (subtraction) - `*` (multiplication) - `/` (division) - `**` (power) - `%` (modulus) - `<`, `<=`, `==`, `!=`, `>=`, `>` (comparisons) - `&`, `|`, `~` (bitwise and logical operators) **Supported Functions:** - Trigonometric: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `arctan2` - Hyperbolic: `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh` - Logarithmic & Exponential: `log`, `log10`, `log1p`, `exp`, `expm1` - Other: `sqrt`, `abs`, `where`, `complex`, `real`, `imag`, `conj` **Examples:** - `exp(2) + sqrt(9)` - `log(10) / 2` - `where(5 > 2, 10, 0)` - `sin(3.14/2) * 2` - `abs(-7) + 5**2` - `log1p(9)` - `real(complex(3, 4))` - `arctan2(1, 1)` - `tanh(2) > 0.9`. Returns: The result of the evaluation",
+      "params": [
+        "expression"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tukey_test",
+      "description": "this function runs a Tukey's HSD (Honestly Significant Difference) test \u2014 a post-hoc analysis following ANOVA. It tells you which specific pairs of groups differ significantly in their means IT is meant to be used after you run a successful anova and you obtain sgnificant F-satatistics and p-value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', 36 'Coat', 36 'Hat/beanie', 32 ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected the return result is the raw dataframe that correspond to the pair wize categorie that reject the hypothesis of non statistically difference between two group the signature of the dataframe is the following: group1 | group2 | meandiff p-adj | lower | upper | reject (only true)",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_multiple_captions_interface",
+      "description": "Generate multiple caption variations using Meta-Llama-3.2-3B-Instruct",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_image",
+      "description": "SAM2 Image Segmentation",
+      "params": [
+        "im",
+        "variant",
+        "bboxes",
+        "points",
+        "point_labels"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_hf_datasets_search",
+      "description": "Search or filter HF datasets. Examples: List only the datasets in Russian for language modeling: hf_datasets_search(filter=(language:ru\", \"task_ids:language-modeling\")) List all recent datasets with \"text\" in their name hf_datasets_search(query=\"text\", sort_by=\"last_modified\") Returns a JSON object serialized to a string. The structure is: {\"results\": [...]} Every item in the \"results\" has the following fields: (\"id\", \"created_at\", \"last_modified\", \"downloads\", \"likes\", \"tags\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "search_filter",
+        "limit",
+        "sort_by",
+        "sort_order"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_mine_blocks_ui",
+      "description": "Mine blocks UI wrapper",
+      "params": [
+        "num_blocks"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_trigger_evolution",
+      "description": "Manually trigger memory evolution.",
+      "params": []
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_bmi_mcp",
+      "description": "Calculates a person's Body Mass Index (BMI) based on their weight and height. BMI is a widely used screening tool to categorize weight status (e.g., underweight, normal weight, overweight, obese) and identify potential health risks associated with weight. Returns: JSON string with BMI calculation and weight category classification",
+      "params": [
+        "weight_kg",
+        "height_cm"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_search",
+      "description": "Search arXiv papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. OR is better in most cases. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. Use Latin script for names. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: all:\"machine learning\" au:\"del maestro\" au:vaswani AND abs:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_find_data_bottle_image",
+      "description": "find data on bottle. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_info_bottle",
+      "description": "analyse une image de bouteille. Returns: Values to be returned.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_search_audio_from_envato",
+      "description": "Search Envato's audio library for royalty-free sound effects and music. Returns: List of audio items with metadata and preview URLs",
+      "params": [
+        "query",
+        "limit",
+        "category",
+        "length_min",
+        "length_max",
+        "tags",
+        "free_only"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_place_search",
+      "description": "Search for hotels and accommodations in a specified location.",
+      "params": [
+        "query",
+        "max_distance"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_list_repository_files",
+      "description": "List all files in a GitHub repository with specified extensions. Returns: JSON response with file list and metadata",
+      "params": [
+        "repo_url",
+        "branch",
+        "extensions"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_analyze_hr_zones",
+      "description": "Analyze time spent in heart rate zones from GPX data. Returns: A dictionary containing:, time_in_zones (dict): Mapping of zone name to time in seconds, total_tracked_seconds (int): Total duration with HR data, method (str): The zoning method used",
+      "params": [
+        "file",
+        "hr_max",
+        "hr_rest",
+        "method"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_monitor_multiple_servers",
+      "description": "Monitor health and tools of multiple MCP servers simultaneously. Returns: (markdown_summary, json_data)",
+      "params": [
+        "urls_text"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_update_ffmpeg_status",
+      "description": "Creates a colored status message indicating if FFmpeg is installed.",
+      "params": []
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_scrape_website_content",
+      "description": "Scrape a website and return its main content formatted as markdown and a downloadable file path.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "kaggle-mcp-server",
+      "name": "kaggle_mcp_server_search_datasets",
+      "description": "Return brief metadata for up to `max_results` public datasets whose title or description matches `query`.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_commment_bottle_image",
+      "description": "add a comment on a bottle. Returns: Values to be returned.",
+      "params": [
+        "details",
+        "image"
+      ]
+    }
+  ]
+}

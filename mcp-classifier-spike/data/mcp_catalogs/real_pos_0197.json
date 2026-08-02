@@ -1,0 +1,379 @@
+{
+  "catalog_id": "real_pos_0197",
+  "tools": [
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_tactical_patterns",
+      "description": "Analyze immediate tactical patterns from a given FEN string. This function detects: - Potential knight forks and double attacks (refering to next move) - Pins, skewers, discovered attacks and x\u2010ray attacks in the current position.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "KokoroTTS-MCP",
+      "name": "KokoroTTS_MCP_makeaudio",
+      "description": "Function to generate wav audio clip from english text input.",
+      "params": [
+        "text",
+        "voice",
+        "speed"
+      ]
+    },
+    {
+      "server": "SQlord",
+      "name": "SQlord_get_db_table_info",
+      "description": "Obt\u00e9m informa\u00e7\u00f5es detalhadas sobre as tabelas do banco de dados conectado.",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_return_policy",
+      "description": "Get comprehensive return and refund policy information.",
+      "params": [
+        "product_category"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_livertox_summary_mcp",
+      "description": "Queries the NIH LiverTox database to retrieve a summary of a drug's potential for causing liver injury (hepatotoxicity). This tool is valuable for investigating or assessing the risk of drug-induced liver damage, providing information on the mechanism of injury, and clinical management advice. Returns: JSON string with hepatotoxicity data, mechanism of injury, and management information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "TW_LawMCP",
+      "name": "TW_LawMCP_get_law",
+      "description": "This is a tool that returns law content by input the category and number. Returns: The content of the law.",
+      "params": [
+        "category",
+        "number"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_program_controller",
+      "description": "\u6839\u636e\u6307\u5b9a\u64cd\u4f5c\u63a7\u5236FRPC\u5ba2\u6237\u7aef\u7a0b\u5e8f \u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u5305\u62ec\uff1a - \u542f\u52a8(start)\uff1a\u521b\u5efa\u5e76\u8fd0\u884c\u65b0\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u505c\u6b62(stop)\uff1a\u7ec8\u6b62\u6b63\u5728\u8fd0\u884c\u7684\u5ba2\u6237\u7aef\u5b9e\u4f8b - \u91cd\u542f(restart)\uff1a\u5148\u505c\u6b62\u540e\u542f\u52a8\u5ba2\u6237\u7aef - \u70ed\u91cd\u8f7d(reload)\uff1a\u5728\u8fd0\u884c\u65f6\u66f4\u65b0\u914d\u7f6e \u8bf7\u6c42\u53c2\u6570\u793a\u4f8b\uff1a ```json { \"program_id\": \"1\", \"action\": \"start\" } ``` \u8fd4\u56de\u503c\u683c\u5f0f\uff1a ```json { \"status\": \"\u6210\u529f|\u5931\u8d25\", \"message\": \"\u64cd\u4f5c\u63cf\u8ff0\u4fe1\u606f\", } ``` \u5f02\u5e38\u5904\u7406\u903b\u8f91\uff1a 1. \u7a0b\u5e8fID\u4e0d\u5b58\u5728\uff1a\u89e6\u53d1\u6570\u636e\u5e93\u67e5\u8be2\u5931\u8d25 2. \u975e\u6cd5\u64cd\u4f5c\u7c7b\u578b\uff1a\u89e6\u53d1\u4e0d\u652f\u6301\u7684\u64cd\u4f5c\u7c7b\u578b\u9519\u8bef 3. \u6587\u4ef6\u7f3a\u5931\uff1a\u542f\u52a8\u65f6\u68c0\u67e5\u53ef\u6267\u884c\u6587\u4ef6\u548c\u914d\u7f6e\u6587\u4ef6\u5b58\u5728\u6027 4. ID\u683c\u5f0f\u9519\u8bef\uff1a\u5b57\u7b26\u4e32ID\u8f6c\u6570\u5b57\u5931\u8d25\u65f6\u89e6\u53d1. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684JSON\u5bf9\u8c61\uff0c\u683c\u5f0f\u4e3a\uff1a, {, \"\u6210\u529f|\u5931\u8d25\",, \"\u63cf\u8ff0\u64cd\u4f5c\u7ed3\u679c\u7684\u5177\u4f53\u4fe1\u606f\",, }",
+      "params": [
+        "program_id",
+        "action"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_staff_next_page",
+      "description": "Go to next page for staff",
+      "params": []
+    },
+    {
+      "server": "Jobcy-Remote-Job-Search",
+      "name": "Jobcy_Remote_Job_Search_search_jobs_ui",
+      "description": "Search remote jobs from the Jobicy API with optional filters. Returns: A dictionary with a \"jobs\" key containing a list of job dictionaries with:, title: Job title, company: Company name, location: Job location, url: Application or job posting URL, pubDate: Date posted (YYYY-MM-DD), salary: Salary range or 'Not specified', Or an \"error\" key with an error message if the fetch fails.",
+      "params": [
+        "industry",
+        "country",
+        "keyword",
+        "limit"
+      ]
+    },
+    {
+      "server": "Google-Sheets-Assistant",
+      "name": "Google_Sheets_Assistant_upload_csv",
+      "description": "Handle CSV file upload",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_load_settings",
+      "description": "Loads settings for the last active provider and their respective configs.",
+      "params": []
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_create_shape",
+      "description": "Create a shape item with specified properties.",
+      "params": [
+        "width",
+        "height",
+        "x",
+        "y",
+        "shape_type",
+        "fill_color",
+        "stroke_color",
+        "tab_id"
+      ]
+    },
+    {
+      "server": "test_mcp_server",
+      "name": "test_mcp_server_restaurant_search",
+      "description": "Find restaurants and dining options in a specified location.",
+      "params": [
+        "query",
+        "cuisine"
+      ]
+    },
+    {
+      "server": "healthify-me-mcp",
+      "name": "healthify_me_mcp_search_food_products",
+      "description": "Recherche des produits alimentaires dans la base de donn\u00e9es OpenFoodFacts. Cette fonction effectue une recherche intelligente de produits alimentaires en analysant la requ\u00eate utilisateur avec Mistral AI pour extraire le nom du produit et la marque, puis interroge la base DuckDB.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_edit_video_segment",
+      "description": "Edit a video segment by either cutting it out or keeping only that segment. Returns: URL to processed video or None if failed, , For \"keep\": Extracts segment with 1-second padding for smooth transitions, For \"cut\": Splits video into segments and concatenates non-cut portions, Preserves both video and audio quality, Uses x264 for video and AAC for audio encoding",
+      "params": [
+        "video_url",
+        "start_time",
+        "end_time",
+        "action"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_get_visualization_",
+      "description": "Get memory network visualization.",
+      "params": [
+        "focus_node",
+        "depth"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_image",
+      "description": "SAM2 Image Segmentation",
+      "params": [
+        "im",
+        "variant",
+        "bboxes",
+        "points",
+        "point_labels"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_drug_burden_index_mcp",
+      "description": "Calculates the Drug Burden Index (DBI) for a patient's medication list. The DBI is a measure of a person's total exposure to anticholinergic and sedative drugs, which are associated with an increased risk of falls and cognitive impairment, especially in the elderly. This intelligent version automatically detects the route of administration for each medication (e.g., oral, transdermal patches, parenteral injections) and uses the appropriate reference data for each route, making it suitable for complex, real-world medication regimens. Returns: JSON string with DBI calculation results broken down by route and individual drug contributions",
+      "params": [
+        "drug_list"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_scrape",
+      "description": "The function `process_scrape` takes in parameters related to website scraping, performs the scraping operation, and returns a success message or an error message based on the result. :param url: The `url` parameter is the URL of the website that you want to scrape :param site_name: The `site_name` parameter is a string that represents the name of the website being scraped. It is one of the required parameters for the `process_scrape` function :param site_description: The `site_description` parameter in the `process_scrape` function is used to provide a description of the website being scraped. It is a text description that helps in identifying and describing the content or purpose of the website. This information can be used for various purposes such as categorizing the website, :param site_category: The `site_category` parameter in the `process_scrape` function is used to specify the category of the website being scraped. It is one of the inputs required for the scraping process :param max_pages: The `max_pages` parameter in the `process_scrape` function represents the maximum number of pages to scrape on the website. It is an integer value that determines the limit for the number of pages that will be scraped during the process :param max_depth: The `max_depth` parameter in the `process_scrape` function represents the maximum depth of links to follow during the website scraping process. It determines how many levels deep the scraper will navigate through the website's links starting from the initial URL. This parameter helps control the extent of the scraping process and :param delay: The `delay` parameter in the `process_scrape` function represents the time delay (in seconds) between consecutive requests made during the scraping process. This delay is useful for preventing overwhelming the target website with too many requests in a short period, which could lead to being blocked or flagged as suspicious activity :param external_links: The `external_links` parameter in the `process_scrape` function is a boolean flag that determines whether external links should be scraped along with the internal links of the website. If `external_links` is set to `True`, the scraper will also follow and scrape external links found on the website :return: The function `process_scrape` returns a tuple containing a message string, and three `None` values. The message string can vary depending on the outcome of the scraping process. If the scraping is successful, it returns a success message with details such as the number of pages scraped, duration, output directory, and a list of files created. If the scraping fails, it returns an error message indicating",
+      "params": [
+        "url",
+        "site_name",
+        "site_description",
+        "site_category",
+        "max_pages",
+        "max_depth",
+        "delay",
+        "external_links"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_execute_command",
+      "description": "Executes a command in a specified Modal sandbox environment. Useful for running arbitrary commands in isolated environments, testing scripts and programs, executing programs with specific dependencies, debugging environment-specific issues, and running automated tests in isolation. Note: Commands are processed using shlex.split() and executed via subprocess.run(), so shell operators like &&, ||, |, >, < are not supported. Use separate command calls for chaining operations. Returns: JSON string containing stdout, stderr, returncode and execution time",
+      "params": [
+        "sandbox_id",
+        "command",
+        "timeout_seconds"
+      ]
+    },
+    {
+      "server": "concept-to-drawing-points",
+      "name": "concept_to_drawing_points_generate_image_and_points",
+      "description": "Generate an image and points from a concept input",
+      "params": [
+        "concept_input",
+        "nb_points"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "Text-Extractor",
+      "name": "Text_Extractor_text_extract",
+      "description": "Extract the text from any website or youtube video. Returns: A string containing text extracted from website or youtube",
+      "params": [
+        "generic_url"
+      ]
+    },
+    {
+      "server": "PwnGuard",
+      "name": "PwnGuard_analyze_mcp_request",
+      "description": "MCP-compatible security analysis function",
+      "params": [
+        "task_id",
+        "user_query",
+        "context",
+        "history_json"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_inventory",
+      "description": "list the bottles in the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image_preferred",
+      "description": "Edit a local image file using the 'Tile Upscaler' method. This is the preferred upscale method. Optionally save the result. Returns: The upscaled image (PIL.Image) generated using ControlNet + RealESRGAN.",
+      "params": [
+        "path",
+        "output_path",
+        "resolution",
+        "steps",
+        "strength",
+        "hdr",
+        "guidance"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_gradient_processing",
+      "description": "Apply gradient processing to an image. Returns: A PIL image of the gradient.",
+      "params": [
+        "image",
+        "intensity",
+        "blue_mode",
+        "invert",
+        "equalize"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_privacy_preserve_image",
+      "description": "Obscures specified objects in the input image based on a natural language prompt, using a privacy-preserving blur or distortion effect. This function segments the image to detect objects described in the `input_prompt` and applies a pixelation effect to those regions. It is useful in scenarios where sensitive content (e.g., faces, license plates, logos, personal belongings) needs to be hidden before sharing or publishing images. Returns: Binary image data of the modified image., , input_prompt = \"faces, license plates, logos\"",
+      "params": [
+        "input_img",
+        "input_prompt",
+        "privacy_strength",
+        "threshold"
+      ]
+    }
+  ]
+}

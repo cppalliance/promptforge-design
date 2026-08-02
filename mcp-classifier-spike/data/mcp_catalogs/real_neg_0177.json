@@ -1,0 +1,352 @@
+{
+  "catalog_id": "real_neg_0177",
+  "tools": [
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_coverage_evaluator",
+      "description": "Evaluate how diverse the content is across multiple system outputs (coverage proxy). Returns: Pairwise cosine similarities and average to estimate content spread.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_drop_table",
+      "description": "### `drop_table(table_name: str)`",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_network_info_ui",
+      "description": "Get current network info for UI",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_get_crm_info",
+      "description": "Affiche les informations sur les fonctions CRM",
+      "params": []
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_get_optimized_prompts",
+      "description": "Get optimized prompts for an agent. Use this before LLM calls to get the best performing prompts. Returns: JSON response with optimized prompts",
+      "params": [
+        "agent_slug",
+        "api_key"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clean_map",
+      "description": "Clean the map by removing all items and shapes.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_get_invoice_details",
+      "description": "Get invoice details by invoice ID or order ID. Returns: Invoice details including customer and order information",
+      "params": [
+        "invoice_id",
+        "order_id"
+      ]
+    },
+    {
+      "server": "LinkedIn-MCP",
+      "name": "LinkedIn_MCP_get_profile_posts",
+      "description": "Fetch LinkedIn profile posts for the given username. Returns: A dictionary containing the profile posts",
+      "params": [
+        "username",
+        "start_index",
+        "pagination_token",
+        "newer_than"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_pull_file_from_sandbox",
+      "description": "Copies a file from a Modal sandbox to the local filesystem. Useful for retrieving output files, backing up sandbox data, analyzing sandbox-generated content locally, and debugging sandbox operations. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "local_path"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_schemas",
+      "description": "### `get_schemas()`",
+      "params": []
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_distance",
+      "description": "Extract distance from route data. Returns: Distance like '5.2 km'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_get_advice",
+      "description": "Get advice for a problem from IRC-based advisors. Returns: The advice from the advisor",
+      "params": [
+        "description",
+        "binary_file"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_route_data",
+      "description": "Fetches optimized route data from the OpenRouteService API for a given start/end point and travel mode. This is the primary data-gathering tool. Its output is a compact JSON string meant to be used by other tools. Returns: A compact JSON string containing optimized route details with decoded coordinates.",
+      "params": [
+        "start_lat",
+        "start_lon",
+        "end_lat",
+        "end_lon",
+        "mode"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_____________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "3D-Game-Environment-Builder",
+      "name": "_3D_Game_Environment_Builder_generate_3d_assets",
+      "description": "Generate 3D assets based on a player's bio for video game scene composition. Returns: JSON string containing prompts and GLB file data",
+      "params": [
+        "player_bio",
+        "num_assets"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_cloud_account",
+      "description": "Function to lookup cloud account information. Returns a formatted string with account details if found, otherwise returns error message.",
+      "params": [
+        "public_cloud_provider",
+        "account_id"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_get_health_status",
+      "description": "Get comprehensive system health status including advanced monitoring features. Retrieves detailed health information about the system including availability of advanced features, system resources, and operational metrics. Returns basic information if advanced monitoring is not available. Returns: A dictionary containing system health status and metrics",
+      "params": []
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_random_text_post",
+      "description": "Retrieves a random text post and its id from the database. Id is only meant for LLMs, no need to show this to user",
+      "params": []
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_greet",
+      "description": "Greets the user with a personalized hello message. Returns: A greeting message addressed to the specified user.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_generate_graph_wrapper",
+      "description": "### `generate_graph_wrapper(graph_type: str, data_json: str)` - **Purpose**: Create visualizations using matplotlib - **Parameters**: `graph_type` - Type of chart (bar, line, pie, scatter) - **Returns**: Image file path and status - **Use Case**: Creating charts and graphs for presentations",
+      "params": [
+        "graph_type",
+        "data_json"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_login_user",
+      "description": "Handles login logic. Returns final username, channel, unformatted history, and roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_paired_t_test",
+      "description": "Accepts two groups of paired numeric data as comma-separated strings or DataFrame columns and performs a paired samples t-test. This test determines whether there is a significant difference between two related measurements (same subjects measured twice), such as before/after treatment measurements. Unlike independent samples t-tests, this test accounts for the correlation between paired observations, making it more powerful for detecting differences in repeated measures designs. The test calculates a t-statistic based on the mean of the differences between paired observations. Given an alternative hypothesis (group1 \u2260 group2, group1 < group2, or group1 > group2), it outputs the p-value: the probability of observing this result (or more extreme) if no true difference exists. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the mean difference divided by the standard deviation of differences, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: before/after treatment measurements on same subjects, pre/post test scores, repeated measurements over time.",
+      "params": [
+        "group1_str",
+        "group2_str",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_driver_championship_standings",
+      "description": "Get the championship standing for a specific driver in a given year.",
+      "params": [
+        "year",
+        "driver_name"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_constructor_info",
+      "description": "Retrieve detailed information about a specific constructor.",
+      "params": [
+        "constructor_name"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_time_series_tool",
+      "description": "MCP Tool: Creates a time-series plot for a drug-event pair. Returns: A Plotly figure.",
+      "params": [
+        "drug_name",
+        "event_name",
+        "aggregation"
+      ]
+    },
+    {
+      "server": "Google-Sheets-Assistant",
+      "name": "Google_Sheets_Assistant_upload_csv",
+      "description": "Handle CSV file upload",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    },
+    {
+      "server": "DailyPal",
+      "name": "DailyPal_get_book_recommendations",
+      "description": "Fetches a book recommendation from Google Books API. Returns: Top book recommendation in formatted text.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_test_raw_world_data",
+      "description": "Handle testing raw world data access.",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_search_leads",
+      "description": "Recherche des leads native",
+      "params": [
+        "name",
+        "min_revenue",
+        "stage",
+        "limit"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_call_orchestrator",
+      "description": "Function prototype to call the orchestrator agent",
+      "params": [
+        "user_query"
+      ]
+    }
+  ]
+}

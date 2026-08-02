@@ -1,0 +1,383 @@
+{
+  "catalog_id": "real_pos_0069",
+  "tools": [
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__auto_refresh_game_state",
+      "description": "Auto-refresh game state and UI elements with update objects.",
+      "params": [
+        "auto_refresh"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_competition_view",
+      "description": "View detailed information about a specific competition including leaderboard. Returns: Formatted JSON string containing competition leaderboard data, , This function specifically returns leaderboard information. For file listings,, use separate API calls to the competitions files endpoint., , competition_view(\"titanic\") returns leaderboard standings for the Titanic competition",
+      "params": [
+        "competition",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_private_message",
+      "description": "Handle private chat messages.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_get_session_status",
+      "description": "Get current pomodoro session status and detailed progress statistics. This function provides comprehensive information about the current session including: work time elapsed, break status, total accumulated work time, and current activity. Returns: Detailed session status including work time, break duration, and progress info",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_update_profile_answers",
+      "description": "Updates a user's profile based on questionnaire answers. Requires X-Auth-ID header for authentication. Answers_payload_str is expected to be a JSON string.",
+      "params": [
+        "answers_payload_str"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_routes_by_difficulty",
+      "description": "Retrieve all climbing routes of a specific difficulty level. This function performs a case-insensitive search for routes matching the specified difficulty level. The results include mountain names and route names. Returns: JSON string containing route information in the format:, [, {, str,, str, }, ], , >>> get_routes_by_difficulty(\"Class 1\"), \"Mount Elbert\", \"Route_Name\": \"Northeast Ridge\"}]'",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "PII-Image-Masking-mpc-server",
+      "name": "PII_Image_Masking_mpc_server_process_image",
+      "description": "PII Detection & Masking Tool - Mistral Models Process an image with the given parameters. Pass an image URL(starting with http or https) to detect and mask PII based on privacy regulations using custom Mistral model. Available regulations include: GDPR, CCPA, PIPEDA, LGPD, PECR, PDPA, HIPAA. Available masking strategies: blur, single_color, none. The tool supports various Mistral models for image processing. (Available models: pixtral-large-latest, mistral-ocr-latest, mistral-medium-2505). This method returns a tuple containing the output image and a JSON result and mcp.types.ImageContent. Returns: Tuple of (output_image_path, result_json, download_btn_visibility)",
+      "params": [
+        "image",
+        "model_name",
+        "default_strategy",
+        "blur_amount",
+        "color_hex",
+        "gdpr_strategy",
+        "ccpa_strategy",
+        "pipeda_strategy",
+        "lgpd_strategy",
+        "pecr_strategy",
+        "pdpa_strategy",
+        "hipaa_strategy"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_start_server",
+      "description": "Start the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "transcript-generator",
+      "name": "transcript_generator_transcribe_audio",
+      "description": "Transcribe audio/video files into text using Groq's Whisper model. This tool converts spoken content from audio and video files into written text. It supports multiple audio formats and handles files up to 25MB in size. Returns: A text transcript of the spoken content in the audio file., , Upload a podcast episode to get a complete text transcript.",
+      "params": [
+        "audio_file",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Convert-to-Json",
+      "name": "Convert_to_Json_text_to_json_",
+      "description": "Convert plain text to structured JSON using Osmosis Structure model. This function takes unstructured text and optionally a JSON schema, then uses the Osmosis Structure model to convert it into well-formatted JSON. The output will follow the provided schema if one is given, otherwise it will create a logical structure based on the input text. Returns: A JSON string containing the structured data, or an error message if something went wrong., , >>> input_text = \"The conference will be held on June 10-12, 2024 at the Grand Hotel.\", \"object\", \"properties\": {\"event_start_date\": {\"type\": \"string\", \"format\": \"date\"}}}', >>> result = text_to_json(input_text, schema), >>> print(result), {, \"2024-06-10\", }",
+      "params": [
+        "input_text",
+        "schema_text",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_noise_estimation",
+      "description": "Estimate local noise using wavelet blocking. Returns a PIL image of the noise map.",
+      "params": [
+        "image",
+        "blocksize"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_minion_respond_async",
+      "description": "Respond to query using specified configuration with optional MCP tools",
+      "params": [
+        "query",
+        "preset_model",
+        "api_type",
+        "api_key",
+        "base_url",
+        "api_version",
+        "model",
+        "temperature",
+        "max_tokens",
+        "route",
+        "query_type",
+        "check_enabled",
+        "use_tools"
+      ]
+    },
+    {
+      "server": "mcp-sql-query-assistant",
+      "name": "mcp_sql_query_assistant_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement___",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ehottl-take-1",
+      "name": "ehottl_take_1_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "cybersec_intel-tool",
+      "name": "cybersec_intel_tool_get_latest_threats",
+      "description": "Fetches CVEs from the CISA KEV catalog filtered by cutoff date, enriches them with CVSS scores (via CVE-AWG) and CWE data (via CWE scraper). Returns: A dictionary with key 'threats' containing a list of enriched CVE records., Each record includes CVE ID, vulnerability details, CVSS score, CWE name,, CWE consequences, mitigations, and other related fields.",
+      "params": [
+        "cutoff_date"
+      ]
+    },
+    {
+      "server": "nationstates-mcp",
+      "name": "nationstates_mcp_address_nation_issues",
+      "description": "Address a specific issue for a nation in NationStates API. Returns: API response text.",
+      "params": [
+        "NATION",
+        "X_PASSWORD",
+        "issue_id",
+        "option_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_query_and_generate_graph_wrapper",
+      "description": "Executes a SQL query and generates a graph visualization from the results. This function is particularly useful when query results are too large for the context window or when visual representation of data is preferred over tabular format. Returns: A tuple containing:, image_path (str or None): Path to the generated graph image if successful, None if failed, status (str): Status message indicating success or error details",
+      "params": [
+        "query",
+        "graph_type"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_viton",
+      "description": "Run the Virtual Try-On model with provided images path or URLs.",
+      "params": [
+        "model_image_path",
+        "garment_image_path",
+        "model_url",
+        "garment_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "Application-Assistant",
+      "name": "Application_Assistant_extract_information",
+      "description": "Run the extraction pipeline and return output logs + state as a dict.",
+      "params": [
+        "cv_file",
+        "job_description_file",
+        "motivation_file",
+        "examples_file",
+        "max_iterations"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themerconvert_css_to_theme",
+      "description": "Convert CSS styles or style descriptions into standardized theme JSON format using HF hosted LLM.",
+      "params": [
+        "css_input",
+        "theme_name",
+        "user_token",
+        "model_choice"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_tactical_patterns",
+      "description": "Analyze immediate tactical patterns from a given FEN string. This function detects: - Potential knight forks and double attacks (refering to next move) - Pins, skewers, discovered attacks and x\u2010ray attacks in the current position.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_train_classes",
+      "description": "Retrieves available travel class categories for a specific train based on its number. This function queries the Indian Railways API to fetch information about the different classes of accommodation available on the specified train (e.g., Sleeper, AC First Class, AC Second Class, etc.). Returns: JSON response containing available class details including:, Class codes (e.g., SL, 1A, 2A, 3A), , If train number is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_generate_sustainability_report",
+      "description": "Generate executive sustainability report for multiple applications. Returns: Executive sustainability report",
+      "params": [
+        "company_name",
+        "apps_analyzed",
+        "timeframe"
+      ]
+    },
+    {
+      "server": "MedCodeMCP",
+      "name": "MedCodeMCP_update_live_transcription",
+      "description": "Real-time transcription updates.",
+      "params": [
+        "audio"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_abuseipdb",
+      "description": "Query AbuseIP to find if an IP has been reported for abusive behavior.",
+      "params": [
+        "ip_address"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_make_directory",
+      "description": "Creates a new directory in the sandbox. Useful for setting up directory structures, preparing for file operations, and organizing sandbox content. Returns: JSON string containing success status and created path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "parents"
+      ]
+    },
+    {
+      "server": "calculator-mcp-marcodsn",
+      "name": "calculator_mcp_marcodsn_safe_math_eval",
+      "description": "Enter a math formula using the supported operators and functions. **Supported Operators:** - `+` (addition) - `-` (subtraction) - `*` (multiplication) - `/` (division) - `**` (power) - `%` (modulus) - `<`, `<=`, `==`, `!=`, `>=`, `>` (comparisons) - `&`, `|`, `~` (bitwise and logical operators) **Supported Functions:** - Trigonometric: `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, `arctan2` - Hyperbolic: `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh` - Logarithmic & Exponential: `log`, `log10`, `log1p`, `exp`, `expm1` - Other: `sqrt`, `abs`, `where`, `complex`, `real`, `imag`, `conj` **Examples:** - `exp(2) + sqrt(9)` - `log(10) / 2` - `where(5 > 2, 10, 0)` - `sin(3.14/2) * 2` - `abs(-7) + 5**2` - `log1p(9)` - `real(complex(3, 4))` - `arctan2(1, 1)` - `tanh(2) > 0.9`. Returns: The result of the evaluation",
+      "params": [
+        "expression"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_playlist_name_and_id",
+      "description": "Use this tool to get playlist name and id , mostly useful in tasks that needs id of playlist it takes args like limit_playlist which is number of paylist you want to retrieve",
+      "params": [
+        "limit_playlist"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_toolret_pos_0150",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "License Plate Lookup",
+      "description": "Search for vehicle information by license plate number and state.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FeatureExtractor",
+      "description": "used to identify key features and benefits from product data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "scrape_contacts_from_website",
+      "description": "Scrape emails, phone numbers, and social media profiles from the root domain of a given website.",
+      "params": [
+        "query",
+        "match_email_domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_v2_Year_End_Hot_100_Songs",
+      "description": "Year end Hot 100 Songs chart \nis yearly based. \n\nIf `year` is not supplied, will default to last year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Single/Multiple Video Information API",
+      "description": "Retrieve information about a single or multiple videos, including metadata, thumbnails, and renditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Async Content",
+      "description": "Fetches async content using the provided prompt and thread ID. This endpoint is free and allows you to pull content once every 2 seconds.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Earnings Before Interest and Taxes (EBIT)",
+      "description": "Retrieve the Earnings Before Interest and Taxes (EBIT) for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "k_to_use",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dryer.failurePrediction",
+      "description": "Predicts potential failures in industrial dryers using historical operation data and current conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "whatsapp_data_Is_whatsapp_for_business",
+      "description": "Requests to this endpoint will return `true` if the number is a **Whatsapp for Business** account, or `false` if it's not.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_net_profit",
+      "description": "Retrieve net profit data for a specified date",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pairs",
+      "description": "\nQuery different combinations of the trading pairs.\n\nThe most common query is all trading pairs of a decentralised exchange.\n\n`/pairs?chain_slugs=ethereum&exchange-slugs=uniswap-v2`\n\nThe results are always paginated.\n\n## Parameter seralisation\n\nNote that lists are not JSON serialised, but use [OpenAPI query parameter serialization](https://swagger.io/docs/specification/serialization/). I.e. lists are comma separated, no spaces between items.\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "N_meros_a_Letras_NAL_Path",
+      "description": "Convierte un n\u00famero a letras",
+      "params": [
+        "{'name': 'num', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gis_Engine_Health_Check",
+      "description": "Provide a way to test connectivity to API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "news/get-details",
+      "description": "Retrieve detailed news information from the Schwab tool in the Finance domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Shopee Category Tree",
+      "description": "Retrieve the category tree structure from Shopee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reserve_hotel_room",
+      "description": "Reserves a hotel room with the specified details.",
+      "params": [
+        "room_type",
+        "nightly_rate",
+        "checkin_date",
+        "checkout_date",
+        "guest_id",
+        "promo_code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "b_b_availability_check",
+      "description": "B&B Availability Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCalendars",
+      "description": "Retrieves a list of calendars from a storage or a folder.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_ZIP_Code_to_Income_ZIP_code",
+      "description": "ZIP code",
+      "params": [
+        "{'name': 'zip', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto_News_Live_v2_Get_Individual_News_Sources",
+      "description": "Get Crypto News from a Specific Source",
+      "params": [
+        "{'name': 'newspaperId', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Counter",
+      "description": "multi-functional tool, function one is to count the number of occurrences of keywords in the text, function two is to specify the conditions of the data in ascending or descending order of the sort, a call can only be used to a function.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "campaign_effectiveness_tracker",
+      "description": "Tracks and evaluates the effectiveness of various gender equality campaigns over different time periods and regions.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "season_episodes",
+      "description": "Fetch episodes for a given season from the Netflix RapidAPI.",
+      "params": [
+        "ids",
+        "lang",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dcument_struce",
+      "description": "Extracts different sections of a given document with markup content.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Deezer_Infos",
+      "description": "Get the infos about the api in the current country",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "News Details",
+      "description": "Retrieve news details for a specific sport",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forever21_products_list_Deprecated",
+      "description": "List products by category",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'pagesize', 'type': 'STRING', '",
+        "{'name': 'category', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Continents",
+      "description": "Retrieve a list of continents in the world, along with their corresponding codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "findtrains",
+      "description": "find trains to a given destination city",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_exercises",
+      "description": "Fetch up to 10 exercises from the API Ninjas Exercises API that satisfy the given search parameters.",
+      "params": [
+        "offset",
+        "muscle",
+        "type",
+        "difficulty",
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mazkooleg/0-9up-hubert-base-ls960-ft",
+      "description": "This model is a fine-tuned version of facebook/hubert-base-ls960 on the None dataset. It achieves an accuracy of 0.9973 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_UniqueTournaments",
+      "description": "Unique Tournaments",
+      "params": [
+        "{'name': 'teamId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_tax",
+      "description": "This method takes a string representing a tax value in the format \"$ X\" and returns the corresponding float value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mortgage Calculator API",
+      "description": "Calculates mortgage payments based on user-input parameters such as loan amount, interest rate, and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Page Info",
+      "description": "Fetches information about a Facebook page, including followers, likes, and other metrics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BodyFatCalculator",
+      "description": "Calculates the body fat percentage based on the provided gender, age, height, and weight parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "states",
+      "description": "Fetches the list of states for a given country using the Referential DB API.",
+      "params": [
+        "countrycode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BILLBOARD 200",
+      "description": "Provides the Billboard 200 chart information, including album rankings and details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.delete_dimension_group_rows",
+      "description": "# Remove the grouping of a set of rows. \nworksheet.delete_dimension_group_rows(start, end)\n",
+      "params": []
+    }
+  ]
+}

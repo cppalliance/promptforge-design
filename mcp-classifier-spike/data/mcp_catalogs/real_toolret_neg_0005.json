@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_neg_0005",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "solve_b",
+      "description": "Solves for the value of b given the third congruence equation.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLandUse",
+      "description": "Retrieve the land use of a specific area",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Download Uurrooster",
+      "description": "Downloads the Uurrooster schedule for a specific school year and group.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Validate_a_token",
+      "description": "Submit a token (t=token) or a link (t=link) id in order to check if  it is a valid one. To be a valid token it must have a valid signature and not expired.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataAnalyzer",
+      "description": "use the given data to analyze and provide new insights",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Solcast_Simple_Radiation_Forecast",
+      "description": "The simple radiation request returns detailed solar radiation data for the next week based only on your latitude and longitude.",
+      "params": [
+        "{'name': 'latitude', 'type': 'NUMBER', '",
+        "{'name': 'longitude', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "skillGapAnalyzer.identifyNeeds",
+      "description": "Analyzes skill gaps for individuals aiming to enter emerging careers, providing tailored training recommendations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_fare",
+      "description": "Retrieves the fare details for a specified train number and route using the IRCTC RapidAPI service.",
+      "params": [
+        "trainno",
+        "tostationcode",
+        "fromstationcode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v5_Music_Information",
+      "description": "Get Instagram music information by Instagram audio_cluster_id.",
+      "params": [
+        "{'name': 'musicid', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "solve_equation",
+      "description": "This method takes two arguments, 'coefficients' and 'constants', representing the coefficients and constants of a system of linear equations, respectively. It returns a tuple representing the solution of the system.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Vessels by Ship Name",
+      "description": "Return vessels by their name. Visit our [demo site](https://core-api.net/vessel/map.html)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Seasonal_Goal_Analysis_Goal_Conceded_Minutes",
+      "description": "Provides the goal conceded goal statistics of the teams against to other teams in the tournament in the minutes intervals(0-10, 11-20, 21-30...etc.)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "historical_get",
+      "description": "Get historical exchange rate data for a specific date.",
+      "params": [
+        "api_key",
+        "base",
+        "date",
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StopModReposts_Blocklist_HOSTS_TXT",
+      "description": "Hosts file endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getgamecontent",
+      "description": "Fetches the content of a specific NHL game using its game ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "employee.offboarding",
+      "description": "This API is used to offboard an employee from the HR system. It requires the employee's ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ticket_change_confirmation",
+      "description": "Confirm train ticket change and complete payment",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "Helsinki-NLP/opus-mt-fi-en",
+      "description": "Helsinki-NLP/opus-mt-fi-en is a machine translation model for translating Finnish text to English text. It is trained on the OPUS dataset and can be used with the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Server_Time",
+      "description": "Get Bybit server time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProductRating",
+      "description": "This API provides product ratings based on purchase history.",
+      "params": [
+        "{'name': 'purchase_info', 'in': 'query',",
+        "{'name': 'number_of_ratings', 'in': 'que"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_test_app_deepfry_get",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "siteDomain_domain_detail",
+      "description": "get detail by did",
+      "params": [
+        "{'name': 'did', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeneSequenceAnalyzer.identifyMutationPatterns",
+      "description": "Analyzes a DNA sequence to identify potential mutation patterns and their locations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHolidaysByCountry",
+      "description": "Retrieve a list of holidays for a specific country with dates, descriptions, and types.",
+      "params": [
+        "country",
+        "year",
+        "month",
+        "day",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AQOjBJRARR",
+      "description": "Search question others asked on google which relate to the query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "acopaer_FormActionBy_id",
+      "description": "# Description GET Form Action By id\r\n\r\nThis url is to get a Form Action by id is type `GET`, the url is `BASE_URL/form-actions/id` and returns only an object.\r\n\r\nThe param is `id` must type there the id of Form Action to get details about this Form Action.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_an_answer_to_your_question",
+      "description": "Fetches an answer to an Islamic question using the Islam&AI bot from the provided API.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Get_Index_Price_Kline",
+      "description": "Query Index Price Kline",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'category', 'type': 'STRING', '",
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'end', 'type': 'NUMBER', 'descr",
+        "{'name': 'start', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tasks",
+      "description": "Retrieves a list of tasks assigned to a company, team, or specific user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Date_Calculator_edate",
+      "description": "Computes and returns a date on the same day of the month in the future or past. This resource behave exactly as Excel EDATE function.",
+      "params": [
+        "{'name': 'months', 'type': 'NUMBER', 'de",
+        "{'name': 'start_date', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "artist_related",
+      "description": "Fetches related artists information from the Spotify API using a given artist ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_profit_share",
+      "description": "This method takes two arguments, 'investment' and 'profit', and returns the share of profit for a given investment. In this case, it will be used to calculate the share of A in the profit.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getLiveStreams",
+      "description": "Retrieve a list of live streams.",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "lunar_resource_allocation",
+      "description": "Allocates resources for various activities in a lunar colony based on priority and availability.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSleepApneaTestResults",
+      "description": "Retrieve the test results of a sleep apnea test",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team News",
+      "description": "Retrieve a list of news related to a specific team",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market/get-sectors",
+      "description": "Retrieve a list of sectors in the finance domain from Schwab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "cd",
+      "description": "A tool to change the current working directory.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "User's Videos",
+      "description": "Retrieve a list of videos from a user's TikTok account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "trending_tags_from_country",
+      "description": "Fetches trending tags from a specified country using the Hashtag5 API.",
+      "params": [
+        "country_name"
+      ]
+    }
+  ]
+}

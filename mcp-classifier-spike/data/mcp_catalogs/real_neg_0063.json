@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_neg_0063",
+  "tools": [
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_warranty_information",
+      "description": "Get warranty and guarantee information for products.",
+      "params": [
+        "product_category",
+        "purchase_date"
+      ]
+    },
+    {
+      "server": "Router-MCP",
+      "name": "Router_MCP_handle_semantic_mcp_search",
+      "description": "Handle semantic embedding-based search for MCP servers across selected sources. If the client (such as Cursor or Claude) encounters a task it cannot handle, it can use MCP to search for other tools that can. Use this search when your query is more abstract or conceptual, as it can understand the meaning and context of your request. Returns: A dictionary containing the search results with the following keys:, results: List of found MCP servers with their configurations and similarity scores. Each configuration can be added to the MCP Client's config file to register the server., total: Total number of results, search_type: Type of search performed (\"semantic\")",
+      "params": [
+        "query",
+        "hf",
+        "sm",
+        "limit",
+        "os_type"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_analyze_api",
+      "description": "Safe wrapper for API analysis with user-friendly error handling",
+      "params": [
+        "spec"
+      ]
+    },
+    {
+      "server": "ecomind-ai-sustainability",
+      "name": "ecomind_ai_sustainability_generate_sustainability_report",
+      "description": "Generate executive sustainability report for multiple applications. Returns: Executive sustainability report",
+      "params": [
+        "company_name",
+        "apps_analyzed",
+        "timeframe"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_send_message",
+      "description": "Sends a message to a match. Requires X-Auth-ID header for authentication and X-AGENTPAY-API-KEY for payment. Costs $1.00 per message.",
+      "params": [
+        "receiver_profile_id",
+        "content"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_add_songs_to_playlist",
+      "description": "Adds a list of song URIs to the specified playlist. Returns: Success or error message",
+      "params": [
+        "playlist_id",
+        "items",
+        "position"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_abuseipdb",
+      "description": "Query AbuseIP to find if an IP has been reported for abusive behavior.",
+      "params": [
+        "ip_address"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_patients_prev_page",
+      "description": "Go to previous page for patients",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "PomoCat",
+      "name": "PomoCat_pomodoro_manager_",
+      "description": "Manage pomodoro work sessions and provide AI encouragement. This function handles all pomodoro-related commands including starting work sessions, taking breaks, checking status, and providing AI-powered motivational support. It enforces a minimum 20-minute work requirement before allowing breaks. Returns: Response message with session status, encouragement, or command results",
+      "params": [
+        "user_query"
+      ]
+    },
+    {
+      "server": "run_my_script",
+      "name": "run_my_script_run_script",
+      "description": "Executes a user-provided self contained Python script inside an isolated virtual environment with automatic dependency management. This function is intended to serve as a backend execution engine in a Model Context Protocol (MCP) server setting, where a language model may submit scripts for evaluation. It creates a secure workspace, detects dependencies, installs them using `uv`, executes the script, captures its output (including stdout and generated files), and returns all relevant results. \u26a0\ufe0f Limitations & Guidance for LLM-based Use: - Scripts should be self-contained, avoid system-level access, and primarily focus on data processing, text generation, visualization, or machine learning tasks. - The code can output logs, JSON, images, CSVs, or any other files, which are returned as artifacts. - Avoid infinite loops or long-running background processes. Timeout support can be added externally. Returns: , logs (str): Full stdout and stderr logs of the executed script., artifacts (Dict[str, str]): A dictionary of output files with their names and summaries or indicators, (e.g., image or CSV placeholders). Includes a \"__workdir__\" key pointing to the working directory., zip_path (str): Path to a ZIP archive containing all output artifacts for download.",
+      "params": [
+        "code",
+        "user_input",
+        "cleanup_enabled",
+        "cleanup_after"
+      ]
+    },
+    {
+      "server": "MCP-Server-Demo",
+      "name": "MCP_Server_Demo_letter_counter",
+      "description": "Count the number of occurrences of a letter in a word or text.",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "stock-lens",
+      "name": "stock_lens_get_technical_analysis",
+      "description": "Get the technical analysis for the given symbol. Returns: Technical analysis for the symbol/ticker for the given period. Returns a dict containing the analysis.",
+      "params": [
+        "symbol",
+        "exchange",
+        "country",
+        "interval"
+      ]
+    },
+    {
+      "server": "Spotify-mcp",
+      "name": "Spotify_mcp_get_artist_and_track",
+      "description": "Searches for a track and returns artist info and URIs",
+      "params": [
+        "track_name"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_similar_text_post",
+      "description": "Retrieves a text post and its id semantically similar to the query through Vector Similarity. Id is only meant for LLMs, no need to show to user",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_check_single_server_health",
+      "description": "Check health of a single MCP server from any URL format. Returns: (markdown_summary, json_data)",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "uk-property-mcp",
+      "name": "uk_property_mcp_calculate_stamp_duty",
+      "description": "Calculates the Stamp Duty Land Tax (SDLT) for a property purchase in England or Northern Ireland. This function uses predefined tax bands and rates. It considers whether the buyer is a first-time buyer and if the property is an additional property, applying relevant thresholds and surcharges. Returns: A dictionary containing the total stamp duty, property price,, buyer status flags, and a breakdown of the calculation by tax band.",
+      "params": [
+        "property_price",
+        "is_first_time_buyer",
+        "is_additional_property"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_jobs_search",
+      "description": "MCP Endpoint: jobs.search Pulls fresh job posts, ranks them with GPU embeddings, and returns a fit score. Users see the most relevant roles first, no endless scrolling.",
+      "params": [
+        "user_id",
+        "query",
+        "location",
+        "job_type"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_show_available_10k_by_date_range",
+      "description": "Before fetching the actual reports, this function checks and returns the available financial report sheets for a list of companies for a given date range. Returns: A dictionary mapping company identifiers to their available financial report sheets.",
+      "params": [
+        "lookups",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_cellar_reset",
+      "description": "reset the cellar. Returns: Values to be returned.",
+      "params": []
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_search_news_endpoint",
+      "description": "Search news articles, similar to Google News. Returns: News search results as a dictionary",
+      "params": [
+        "q",
+        "num"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_list_mountains",
+      "description": "Retrieve mountains, optionally filtered by elevation range. This function returns mountains, with optional filtering based on their elevation. If no elevation filters are provided, all mountains are returned. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, int,, str, }, ], , >>> get_list_mountains(14000, 14500)  # With elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}]', >>> get_list_mountains()  # Without elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}, ...]'",
+      "params": [
+        "min_elevation",
+        "max_elevation"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "pbc-cell-classifier-mcp",
+      "name": "pbc_cell_classifier_mcp_main_classification_fn",
+      "description": "Main function called by gr.Interface. Expects PIL Image from gr.Image(type=\"pil\") but handles edge cases.",
+      "params": [
+        "image_input_from_gradio"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_generate_video_from_image",
+      "description": "Generate a video from an image and a prompt using the Google Veo-2.0 model. Returns: Path to the generated video file (temporary file used for Gradio display).",
+      "params": [
+        "path",
+        "prompt",
+        "aspect_ratio",
+        "duration",
+        "output_path"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_fetch_event_details_mcp",
+      "description": "Retrieves the complete details of a specific adverse event case from the FDA Adverse Event Reporting System (FAERS) using its unique safety report ID. Use this tool when you need to dive deep into a particular case found via 'search_adverse_events_mcp' to understand the full context, including patient demographics, concomitant medications, and the full narrative of the event. Returns: JSON string with structured case data including drugs, reactions, and full record",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_write_file_content_to_sandbox",
+      "description": "Writes content to a file in a Modal sandbox. Useful for writing code, text, or any other content, rapid prototyping, creating boilerplate code, implementing algorithms, and generating test cases. Returns: JSON string containing success status and written file path",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "content"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_prev_page",
+      "description": "Go to previous page for rooms",
+      "params": []
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp_fips_lookup",
+      "description": "Fetches FIPS code for a given geography hierarchy and name. Also returns FIPS code for any parent geographies. Returns: dictionary representing FIPS code values for provided geography_hierarchy.",
+      "params": [
+        "geography_hierarchy",
+        "name",
+        "required_parent_geographies"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_fare",
+      "description": "Retrieves fare information for a train journey between specified stations. This function queries the Indian Railways API to fetch detailed fare breakdowns for all available travel classes on the specified train route, including base fare, reservation charges, GST, and other applicable fees. Returns: JSON response containing comprehensive fare details including:, Class-wise base fares, Applicable taxes and surcharges, Dynamic/flexi fare if applicable, Concession eligibility, Super-fast charges, Reservation fees, Total fare breakdown, , If any required parameter is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "trainNo",
+        "fromStationCode",
+        "toStationCode"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_register_ai_agent",
+      "description": "Handle AI agent registration.",
+      "params": [
+        "ai_name"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_child_pugh_score_mcp",
+      "description": "Calculates the Child-Pugh score, a well-established tool for assessing the prognosis of chronic liver disease, primarily cirrhosis. The score is used to determine the severity of liver disease and to guide dosage adjustments for drugs that are metabolized by the liver. Returns: JSON string with Child-Pugh score, class, and prognosis information",
+      "params": [
+        "bilirubin",
+        "albumin",
+        "inr",
+        "ascites",
+        "encephalopathy"
+      ]
+    }
+  ]
+}

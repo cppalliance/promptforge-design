@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_neg_0054",
+  "tools": [
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "ThreatRadar",
+      "name": "ThreatRadar_analyze_query_ui",
+      "description": "UI-specific version that returns HTML formatted results.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "image_utilities_mcp",
+      "name": "image_utilities_mcp_gradio_compress_image_",
+      "description": "Compress image for Gradio interface",
+      "params": [
+        "image",
+        "quality"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_update_session_api_keys",
+      "description": "Update API keys for THIS SESSION ONLY",
+      "params": [
+        "mistral_key",
+        "sambanova_key"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_extract_basic_metrics",
+      "description": "Extracts key metrics from a running activity stored in a GPX file. Returns: A dictionary containing:, distance_km (float): Total distance in kilometers, duration (str): Total time in HH:MM:SS, duration_seconds (int): Duration in seconds, average_pace_min_per_km (float): Average pace in min/km, elevation_gain (int): Total positive elevation gain in meters, average_hr (int or None): Average heart rate, if available, max_hr (int or None): Maximum heart rate, if available",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_ELA",
+      "description": "Perform Error Level Analysis on an image. Returns: Processed ELA image",
+      "params": [
+        "img",
+        "quality",
+        "scale",
+        "contrast",
+        "linear",
+        "grayscale"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_get_search_bottle",
+      "description": "search botlle db. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask_",
+      "description": "Ask the D&D rule agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_filter_info",
+      "description": "Retrieve detailed information about a specific OpenF1 API filter.",
+      "params": [
+        "filter_name"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_generate_sitemap_with_limit",
+      "description": "Wrapper function for Gradio UI that allows configurable link limits per domain.",
+      "params": [
+        "url",
+        "max_links_per_domain"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_generate_word_level_subtitles_from_url",
+      "description": "Generate and add word-level subtitles to video from URL. Returns: URL to processed video or error message, , Downloads and validates video, Fetches word-level transcription, Generates SRT subtitles, Applies styling and positioning, Maintains video quality, Handles cleanup of temporary files",
+      "params": [
+        "video_url",
+        "font_size",
+        "font_color",
+        "position",
+        "font_name",
+        "outline_color",
+        "outline_width"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_creatinine_clearance_mcp",
+      "description": "Calculates a patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation. CrCl is an estimate of the glomerular filtration rate (GFR) and is widely used to determine appropriate dose adjustments for drugs that are cleared by the kidneys. This is a standard clinical calculator for renal function assessment. Returns: JSON string with creatinine clearance calculation and interpretation",
+      "params": [
+        "age",
+        "weight_kg",
+        "serum_creatinine",
+        "is_female"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_search_train_name",
+      "description": "Searchs for a train name by its train number. Returns: JSON response containing train details including:, Train name, Train code, Source station, Destination station, Schedule, , If train number is empty or invalid response is received., If API request fails or returns non-200 status code.",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_handle_helpline_with_state",
+      "description": "Handle helpline with state management",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_query_and_generate_graph_wrapper",
+      "description": "Executes a SQL query and generates a graph visualization from the results. This function is particularly useful when query results are too large for the context window or when visual representation of data is preferred over tabular format. Returns: A tuple containing:, image_path (str or None): Path to the generated graph image if successful, None if failed, status (str): Status message indicating success or error details",
+      "params": [
+        "query",
+        "graph_type"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_summary",
+      "description": "Uses article title to retrieve summary of article content.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_search",
+      "description": "Search for board games on BoardGameGeek by title. Returns: A list of dictionaries, each representing a matching game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'year' (str): The year the game was published (or 'Unknown' if not available)., , >>> search_game(\"Catan\"), [, \"13\", \"title\": \"Catan\", \"year\": \"1995\"},, ..., ]",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_update_visitor_by_name",
+      "description": "\u4fee\u6539\u6307\u5b9a\u5ba2\u6237\u7aef ID \u4e0b\u7684\u89c2\u5bdf\u8005\u914d\u7f6e \u4f20\u5165\u53c2\u6570\u793a\u4f8b(\u4e0d\u662f\u5168\u90e8): - program_id: \u5ba2\u6237\u7aef ID\uff0c\u6574\u6570\u6216\u5b57\u7b26\u4e32 - data: \u89c2\u5bdf\u8005\u914d\u7f6e\uff0cJSON \u5b57\u7b26\u4e32\u3002\u5fc5\u987b\u5305\u542b\u4ee5\u4e0b\u5b57\u6bb5\uff1a - name: \u89c2\u5bdf\u8005\u540d\u79f0\uff0c\u548c\u8981\u4fee\u6539\u7684name\u4e00\u81f4 - type: \u89c2\u5bdf\u8005\u7c7b\u578b\uff0c\u548c\u8981\u4fee\u6539\u7684type\u4e00\u81f4 - serverName: \u670d\u52a1\u540d\u79f0 - secretKey: \u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - bindAddr: \u7ed1\u5b9a\u7684\u672c\u5730 IP \u5730\u5740\uff08\u4f8b\u5982 \"127.0.0.1\"\uff09 - bindPort: \u7ed1\u5b9a\u7684\u672c\u5730\u7aef\u53e3\uff08\u6574\u6570, 65535 \u4ee5\u5185\uff09 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u64cd\u4f5c\u7ed3\u679c\uff0c\u683c\u5f0f `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5177\u4f53\u4fe1\u606f\"}`",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "htrflow_mcp",
+      "name": "htrflow_mcp_htr_text",
+      "description": "Extract text from handwritten documents using HTR. returns: str: Extracted text from the image.",
+      "params": [
+        "image_path",
+        "document_type",
+        "custom_settings"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountain_info",
+      "description": "Retrieve detailed information about a specific mountain. This function performs a case-insensitive search for detailed information about a specific mountain, including its rank, altitude, range, county, coordinates, nearby towns, and description. Returns: JSON string containing detailed mountain information in the format:, {, str,, int,, int,, str,, str,, float,, float,, str,, str, }, , >>> get_mountain_info(\"Mount Elbert\"), \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\", \"County\": \"Lake\", \"Latitude\": 39.1178, \"Longitude\": -106.4454, \"Nearby_Towns\": \"Leadville, Twin Lakes\", \"Mountain_Description\": \"Highest peak in Colorado...\"}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_drug_event_stats_tool",
+      "description": "MCP Tool: Gets the total number of reports for a specific drug and adverse event pair. Returns: A formatted string with the total count of reports.",
+      "params": [
+        "drug_name",
+        "event_name"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_all_proxies",
+      "description": "\u83b7\u53d6\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"program_id\": 0, \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `program_id`: \u5ba2\u6237\u7aefID - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": []
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_account_help",
+      "description": "Get help with account-related issues and login problems.",
+      "params": [
+        "issue_type"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_single_image_generation",
+      "description": "Generate a single image with optional style",
+      "params": [
+        "prompt",
+        "num_steps",
+        "style"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_movement_",
+      "description": "Handle player movement with enhanced collision detection.",
+      "params": []
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_scrape_website_content",
+      "description": "Scrape a website and return its main content formatted as markdown and a downloadable file path.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_lookup_user",
+      "description": "Function to lookup user information. Company User Lookup System. Enter a username to get user details. Returns: A formatted string with user details if found, otherwise an error message.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_convert_and_prepare_download",
+      "description": "Convert API and prepare download file",
+      "params": [
+        "spec",
+        "target_format"
+      ]
+    }
+  ]
+}

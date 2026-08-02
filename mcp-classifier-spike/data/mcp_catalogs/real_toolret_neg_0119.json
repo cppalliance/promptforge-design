@@ -1,0 +1,366 @@
+{
+  "catalog_id": "real_toolret_neg_0119",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "get_homestay_id",
+      "description": "Tool for obtaining homestay ID",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRobotHealth",
+      "description": "Retrieve the health status of a robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createJobPosting",
+      "description": "Create a new job posting",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parenting_advice_tool",
+      "description": "Parenting Guidance Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rumors",
+      "description": "Retrieve a list of rumors related to sports, including information about clubs, players, positions, and competitions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AssetReallocationRecommender",
+      "description": "Provides recommendations for asset reallocation within portfolios to optimize performance based on current market conditions and historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ydZofB",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getJudicialRecords",
+      "description": "Retrieve judicial records and public law information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodName2ID",
+      "description": "This API is to convert a food name to a food ID.",
+      "params": [
+        "{'name': 'food_name', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getArttherapyProgress",
+      "description": "Retrieve progress and insights from art therapy sessions",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "googl_reltd_question_earch",
+      "description": "Search question others asked on google which relate to the query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_items_by_query",
+      "description": "Fetch RPG item details based on provided query parameters such as rank, slot, rarity, name, and type from the RPG Items API.",
+      "params": [
+        "rank",
+        "slot",
+        "rarity",
+        "name",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "define_a_word_search",
+      "description": "Fetches the definition of a specific word from the Urban Dictionary API.",
+      "params": [
+        "term"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Jobs_OfferInfo",
+      "description": "get offer data",
+      "params": [
+        "{'name': 'joburl', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "autoclave_door_maintenance_schedule",
+      "description": "Generates a maintenance schedule for autoclave doors based on usage patterns and historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getUser",
+      "description": "Retrieve user information by user ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "REMarketLite_APIs_GetListingsByGeo_Valuation",
+      "description": "API returns property listings by accepting various filters like Zip code, Street, City and State",
+      "params": [
+        "{'name': 'OrderId', 'type': 'STRING', 'd",
+        "{'name': 'State', 'type': 'STRING', 'des",
+        "{'name': 'City', 'type': 'STRING', 'desc",
+        "{'name': 'Zip', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CrazyTimeAPI_History",
+      "description": "Get the last 10 spins Histories and details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Abuse_IP_Check_CHECK_Endpoint",
+      "description": "The check endpoint accepts a single IP address (v4 or v6). Optionally you may set the maxAgeInDays parameter to only return reports within the last x amount of days.\n\nThe desired data is stored in the data property. Here you can inspect details regarding the IP address queried, such as version, country of origin, usage type, ISP, and domain name. And of course, there is the valuable abusive reports.\n\nGeolocation, usage type, ISP, and domain name are sourced from the IP2Location\u2122 IP Address Geolocation Database. If you're looking for a performant IP database for geolocation, then use their prod",
+      "params": [
+        "{'name': 'ipAddress', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.Push",
+      "description": "# Push an object. 'object' can only be: ['table', 'food_dessert', 'mop', 'mouse', 'chair', 'button', 'vacuum_cleaner', 'coffee_table', 'soap', 'cat', 'computer', 'filing_cabinet', 'couch', 'faucet', 'drawing', 'remote_control', 'pot', 'desk']. \nAgent.Push(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "batchGeocode",
+      "description": "Processes multiple addresses at once and returns their corresponding latitude and longitude coordinates.",
+      "params": [
+        "addresses"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchRepositories",
+      "description": "Search for government code repositories based on keywords, languages, and other filters.",
+      "params": [
+        "keywords",
+        "languages",
+        "page",
+        "size"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Details",
+      "description": "This endpoint allows you to retrieve detailed information about a specific state by ID",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SERP_Results_SERP",
+      "description": "SERP",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SearchVideos",
+      "description": "Search for videos on Vimeo.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryDataQuality",
+      "description": "Retrieve the data quality of a library's collection",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "audio.compressorSettings",
+      "description": "Apply dynamic range compression to an audio track to reduce volume differences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_login_records",
+      "description": "Retrieve login records of a specified account within a certain time range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "playerimage",
+      "description": "Fetches the PNG image of an American Football player using their player ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "View All Food Items",
+      "description": "Retrieve a comprehensive list of all available food items. The API allows clients to fetch a list of food items, with an optional parameter to limit the number of items returned.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "us_presidential_election_osay",
+      "description": "Returns JSON block of results for One State, All Years (OSAY), for the specified US Presidential Election year (i.e., Illinois).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "animation_create_project",
+      "description": "Create a new animation project in Toon Boom Harmony.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_device_status",
+      "description": "Fetches the current operational status and metrics of a specified IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "detectRoleBasedEmail",
+      "description": "Identifies email addresses that are associated with a group or a role.",
+      "params": [
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Schedule",
+      "description": "In this method you can get all schedule for the leagues. You can filter multiple leagueId with join %  seperator.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_qr_code",
+      "description": "Creates and returns a static QR code encoded with the provided email address. The QR code can be customized with various design parameters such as background color, eye pattern, error correction level, size, data gradient colors, and data patterns. When scanned, the QR code will prompt the user to send an email to the specified address.",
+      "params": [
+        "address",
+        "background_color",
+        "eye_pattern",
+        "error_correction",
+        "size",
+        "data_gradient_start_color",
+        "data_gradient_style",
+        "data_pattern"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_full",
+      "description": "Get all field and information about tickers",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Elevation_From_Latitude_and_Longitude_Get_Elevation",
+      "description": "Get Elevation",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "languagedetection",
+      "description": "Detect the language of a given text using the specified RapidAPI key and return the detected language code.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v2_Search",
+      "description": "Search Spotify",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    }
+  ]
+}

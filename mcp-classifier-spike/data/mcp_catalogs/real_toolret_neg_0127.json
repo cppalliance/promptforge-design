@@ -1,0 +1,376 @@
+{
+  "catalog_id": "real_toolret_neg_0127",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "aliexpress_item_search",
+      "description": "Searches for items on AliExpress based on various filters and criteria.",
+      "params": [
+        "brandid",
+        "catid",
+        "q",
+        "page",
+        "loc",
+        "locale",
+        "endprice",
+        "sort"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumers_get_reviews",
+      "description": "Retrieve reviews for a specific consumer from the Trustpilot API.",
+      "params": [
+        "is_id",
+        "includereportedreviews",
+        "perpage",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Station Info",
+      "description": "Retrieve information about a weather reporting station.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tasty_recipes_list",
+      "description": "List recipes by option filters or name",
+      "params": [
+        "{'name': 'size', 'type': 'NUMBER', 'desc",
+        "{'name': 'from', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Social_Media_Data_TT_Music_metadata",
+      "description": "Get music metadata\n\nBasic metadata: number of posts,  direct url to the song(MP3) and etc",
+      "params": [
+        "{'name': 'music', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Code Boundary",
+      "description": "Retrieve the boundary information for a given postal code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Event Managers",
+      "description": "Retrieve team managers associated with a specific event",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "searchentries",
+      "description": "Search for entries with various filters in the query.",
+      "params": [
+        "sample",
+        "source",
+        "language",
+        "analyzed",
+        "subcategorization",
+        "polysemous",
+        "pos",
+        "gender"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getactivity_by_key",
+      "description": "Find an activity by its key.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TOTD Tracks by Date",
+      "description": "Get the TOTD tracks by string containing the year and month.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StatRoll API",
+      "description": "Generates character stats by rolling 4d6, dropping the lowest die result, and applying a modifier.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Scheduled Flights Level",
+      "description": "Retrieves weekly India scheduled departing flights level data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateJunctionVoltage",
+      "description": "Calculate the voltage across a semiconductor junction",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_count",
+      "description": "This method takes two arguments, 'count_1' and 'count_2', and returns the total count of results.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Kline/Candlestick Data",
+      "description": "Retrieve kline/candlestick data for a given symbol and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App Downloader API",
+      "description": "Downloads an app from a given link",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Title Releases",
+      "description": "Retrieves release information of a title",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeding_Data_Users",
+      "description": "Get 100 users with en_US locale and gender male",
+      "params": [
+        "{'name': '_quantity', 'type': 'NUMBER', ",
+        "{'name': '_gender', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mSrge",
+      "description": "Merge multiple pdf into single file",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameReviewTimeline.generateReviewTimeline",
+      "description": "Generates a timeline of game reviews for a specific game across different platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Polyglot",
+      "description": "Supports multilingual detection, especially optimized for recognition of non-mainstream languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getVehicleBatteryLevel",
+      "description": "Retrieve the battery level of an autonomous vehicle.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_timeline",
+      "description": "Draw a timeline based on the schedule details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FlashLive_Sports_Event_Details_beta",
+      "description": "Get event details by event ID",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de",
+        "{'name': 'event_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LIVE_TV_API_GET_the_channels_social_accounts_and_contacts",
+      "description": "It has links to different social platforms such as Facebook.....",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider4_live_inplaying",
+      "description": "get inplaying matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeBusinessProcess",
+      "description": "Analyze the existing business process in order to identify areas for improvement",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cardio_routine_generator",
+      "description": "Generates a personalized cardiovascular exercise routine based on user preferences and fitness goals.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wallet_Total_User_Balance",
+      "description": "returns all user balance getting all walets balances",
+      "params": [
+        "{'name': 'userId', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tourism API for Africa",
+      "description": "Returns best tourism locations and categories you can explore in each country in Africa",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Telegram_v2_Telegram_Group_Info",
+      "description": "The endpoint returns realtime information about  public Telegram Group\n\n- Title\n- Photo\n- Description\n- Members\n- On line Memebers",
+      "params": [
+        "{'name': 'group', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "bigwiz83/sapbert-from-pubmedbert-squad2",
+      "description": "This model is a fine-tuned version of cambridgeltl/SapBERT-from-PubMedBERT-fulltext on the squad_v2 dataset.",
+      "params": [
+        "context",
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonal_goal_analysis_scoring_first",
+      "description": "Provides the scoring first goal statistics for a given match within specific minute intervals (0-10, 11-20, 21-30, etc.).",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_battery_life",
+      "description": "Calculate the battery life of a device",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_from_frequency_table(data_frame, frequency_col)",
+      "description": "def calculate_total_from_frequency_table(data_frame, frequency_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a frequency table and returns the total number of items based on the frequencies.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the frequency table with a column specified by frequency_col.\n    frequency_col (str): The column name for the frequencies.\n    \n    Returns:\n    int: The total number of items.\n    \"\"\"\n    # Sum up the values in the frequency column\n    total_items = data_frame[frequency_col].sum()\n    \n    return total_",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CheckFlight",
+      "description": "This API checks the arrival time for a specific flight.",
+      "params": [
+        "{'name': 'flight_number', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Current Stock",
+      "description": "Retrieve the current stock information by stock code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok User Prostring",
+      "description": "Retrieve a TikTok user's prostring information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_TeamLastMatches",
+      "description": "Get the last matches for a specific baseball team by providing its ID and page number.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "echo_get",
+      "description": "Make a HTTP GET request to the echo API with specified content type and code.",
+      "params": [
+        "content_type",
+        "code"
+      ]
+    }
+  ]
+}

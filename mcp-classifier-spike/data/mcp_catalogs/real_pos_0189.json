@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_pos_0189",
+  "tools": [
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Huggingface-Space-Commander",
+      "name": "Huggingface_Space_Commander_handle_cancel_changes",
+      "description": "Clears the staged changeset and hides the confirmation UI.",
+      "params": []
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "caption-creator-pro",
+      "name": "caption_creator_pro_generate_advanced_caption_interface",
+      "description": "Advanced interface function for caption generation",
+      "params": [
+        "uploaded_files",
+        "style",
+        "audience",
+        "custom_prompt"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_retrieve_ioc_from_threatfox",
+      "description": "Retrieves information about a potential IoC from ThreatFox. It may be used to retrieve information of indicators of compromise (IOCs) associated with malware, with the infosec community, AV vendors and cyber threat intelligence providers. Examples: >>> retrieve_ioc_from_threatfox(\"139.180.203.104\") ... { \"query_status\": \"ok\", \"data\": [ { \"id\": \"12\", \"ioc\": \"139.180.203.104:443\", \"threat_type\": \"botnet_cc\", \"threat_type_desc\": \"Indicator that identifies a botnet command&control...\", \"ioc_type\": \"ip:port\", \"ioc_type_desc\": \"ip:port combination that is used for botnet Command&..., \"malware\": \"win.cobalt_strike\", \"malware_printable\": \"Cobalt Strike\", \"malware_alias\": \"Agentemis,BEACON,CobaltStrike\", \"malware_malpedia\": \"https:\\/\\/malpedia.caad.fkie.fraunhofer.de\\/...\", \"confidence_level\": 75, \"first_seen\": \"2020-12-06 09:10:23 UTC\", \"last_seen\": null, \"reference\": null, \"reporter\": \"abuse_ch\", \"tags\": null, \"malware_samples\": [ { \"time_stamp\": \"2021-03-23 08:18:06 UTC\", \"md5_hash\": \"5b7e82e051ade4b14d163eea2a17bf8b\", \"sha256_hash\": \"b325c92fa540edeb89b95dbfd4400c1cb33599c66859....\", \"malware_bazaar\": \"https:\\/\\/bazaar.abuse.ch\\/sample\\/b325c...\\/\" }, ] } ] }",
+      "params": [
+        "potentially_ioc"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial___________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorgenerate_html_code",
+      "description": "Generate HTML/CSS/JavaScript code based on a website description.",
+      "params": [
+        "description",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_search_owid_catalog",
+      "description": "Searches the OWID catalog for datasets/tables.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "healthcare-mcp-public",
+      "name": "healthcare_mcp_public_fda_drug_lookup_gr",
+      "description": "Gradio wrapper for :pyfunc:`fda_drug_lookup`. Parameters ---------- drug_name : str Drug identifier to pass through to :pyfunc:`FDATool.lookup_drug`. search_type : str See :pydata:`search_type` in :pyfunc:`fda_drug_lookup`. Returns ------- str JSON\u2011formatted response suitable for a ``gr.Textbox``.",
+      "params": [
+        "drug_name",
+        "search_type"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_search",
+      "description": "Search arXiv papers with field-specific queries. Fields: all: (all fields), ti: (title), au: (author), abs: (abstract), cat: (category), id: (ID without version) Operators: AND, OR, ANDNOT Please always specify the fields. Search should always be field-specific. You can search for an exact match of an entire phrase by enclosing the phrase in double quotes. If you do not need an exact match of a phrase, use single terms with OR/AND. Boolean operators are strict. OR is better in most cases. Do not include date constraints in the query: use \"start_date\" and \"end_date\" parameters instead. Use Latin script for names. For example, search \"Ilya Gusev\" instead of \"\u0418\u043b\u044c\u044f \u0413\u0443\u0441\u0435\u0432\". Example queries: all:\"machine learning\" au:\"del maestro\" au:vaswani AND abs:\"attention is all\" all:role OR all:playing OR all:\"language model\" (au:vaswani OR au:\"del maestro\") ANDNOT ti:attention Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"index\", \"id\", \"title\", \"authors\", \"abstract\", \"published\", \"updated\", \"categories\", \"comment\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "query",
+        "offset",
+        "limit",
+        "start_date",
+        "end_date",
+        "sort_by",
+        "sort_order",
+        "include_abstracts"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_pregnancy_lactation_mcp",
+      "description": "Retrieves specific sections from the FDA drug label related to use during pregnancy and lactation. This tool is essential for assessing the safety of a medication for patients who are pregnant, planning to become pregnant, or breastfeeding. It provides the official guidance and available data on potential risks. Returns: JSON string with pregnancy text, lactation text, and reproductive potential information",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_similar_text_post",
+      "description": "Retrieves a text post and its id semantically similar to the query through Vector Similarity. Id is only meant for LLMs, no need to show to user",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp_fips_lookup",
+      "description": "Fetches FIPS code for a given geography hierarchy and name. Also returns FIPS code for any parent geographies. Returns: dictionary representing FIPS code values for provided geography_hierarchy.",
+      "params": [
+        "geography_hierarchy",
+        "name",
+        "required_parent_geographies"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_send_message",
+      "description": "Processes the user message and, if necessary, the Gemini response synchronously. Returns the final, complete state to the UI in a single update.",
+      "params": [
+        "channel",
+        "username",
+        "message"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_execute_query",
+      "description": "Execute a custom SQL query on the ERP database. Only SELECT statements are allowed for security reasons. Returns: Query results or error message",
+      "params": [
+        "query",
+        "params"
+      ]
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_update_openai_inputs",
+      "description": "Update base URL and model inputs based on provider selection.",
+      "params": [
+        "provider"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_generate_video_from_image",
+      "description": "Generate a video from an image and a prompt using the Google Veo-2.0 model. Returns: Path to the generated video file (temporary file used for Gradio display).",
+      "params": [
+        "path",
+        "prompt",
+        "aspect_ratio",
+        "duration",
+        "output_path"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_check_on_load",
+      "description": "Wrapper to trigger endpoint check on load if a URL exists, otherwise sets a neutral status. Also sets the dropdown to the preferred model.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Model_Analysis_MCP",
+      "name": "Model_Analysis_MCP_process_text_comprehensive_analysis",
+      "description": "Processes only text/code descriptions for comprehensive analysis (no ONNX support). Accepts llms_to_query as a string or a list for compatibility.",
+      "params": [
+        "model_input",
+        "llms_to_query",
+        "analysis_types"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_research_write_review_topic",
+      "description": "Helps with writing a report with research, writing, and review on any topic. Returns a reviewed topic. The query is a string that contains the topic to be researched and reviewed. Example queries: - \"Write me a report on the history of the internet.\" - \"Write me a report on origin of the universe.\" - \"Write me a report on the impact of climate change on polar bears.\" - \"Write me a report on the benefits of meditation.\" - \"Write me a report on the future of artificial intelligence.\" - \"Write me a report on the effects of social media on mental health.\". Returns: A nicely formatted string.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_enhanced_faers_search_mcp",
+      "description": "Performs an advanced search of the FDA Adverse Event Reporting System (FAERS) database with powerful filtering options. This tool is designed for in-depth pharmacovigilance analysis, allowing users to narrow down adverse event reports by patient age, gender, and the seriousness of the event. It's ideal for identifying trends and patterns in drug safety data. Use this tool particularly if the user asks about a specific adverse event or reaction. Returns: JSON string with enhanced case data including demographics and outcomes",
+      "params": [
+        "drug_name",
+        "adverse_event",
+        "age_range",
+        "gender",
+        "serious_only",
+        "limit"
+      ]
+    },
+    {
+      "server": "web-scraper",
+      "name": "web_scraper_scrape_website_content",
+      "description": "Scrape a website and return its main content formatted as markdown and a downloadable file path.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatorcreate_codesandbox",
+      "description": "Create a CodeSandbox project from HTML code.",
+      "params": [
+        "html_code"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_fades",
+      "description": "Apply fade-in and fade-out effects to an audio file. This function loads an audio file and applies smooth fade-in and/or fade-out effects to eliminate abrupt starts/stops and create professional-sounding transitions. Fade effects gradually increase or decrease volume over the specified time periods. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, faded_audio_data: array), for the fade-processed audio result, or None if an error occurred, Second element: A status message string showing applied fade durations, or error information, , result, status = apply_fades(\"url/to/audio.mp3\", 1000, 2000), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Fade durations are specified in milliseconds (1000ms = 1 second), Set either parameter to 0 to skip that fade effect, Fade-in gradually increases volume from silence at the beginning, Fade-out gradually decreases volume to silence at the end, Typical fade durations: 100-500ms (quick), 1000-3000ms (smooth), Preserves original sample rate and audio format, Fades are applied as smooth linear or exponential curves",
+      "params": [
+        "audio_file",
+        "fade_in_ms",
+        "fade_out_ms"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_semantic_diversity_checker",
+      "description": "Measures how semantically diverse the generated outputs are using cosine similarity. Returns: A report showing pairwise similarities and average similarity.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_pull_file_from_sandbox",
+      "description": "Copies a file from a Modal sandbox to the local filesystem. Useful for retrieving output files, backing up sandbox data, analyzing sandbox-generated content locally, and debugging sandbox operations. Returns: JSON string containing success status, paths and file size",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "local_path"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_game_details",
+      "description": "Get detailed information for one or more board games. Returns: Detailed game information including mechanics, categories, ratings, etc.",
+      "params": [
+        "game_ids"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_generate_ai_prompt",
+      "description": "Generate an optimized prompt using AI",
+      "params": [
+        "user_input",
+        "context",
+        "style",
+        "platform"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_account_help",
+      "description": "Get help with account-related issues and login problems.",
+      "params": [
+        "issue_type"
+      ]
+    },
+    {
+      "server": "MCP_Server_Emotion_Detection",
+      "name": "MCP_Server_Emotion_Detection_generate_emotion_response",
+      "description": "Generate an emotion image and response text based on input text",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_app_code",
+      "description": "Generate complete Gradio application code with integrated theming system.",
+      "params": [
+        "theme_names",
+        "app_title",
+        "include_components"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_build_timeline_prompt",
+      "description": "Generate a user-friendly, chronologically ordered timeline from a list of structured events. Use this tool with keyword arguments: build_timeline_prompt(events=[]). Returns: A sequence of chat messages forming a prompt for an LLM to generate a readable timeline.",
+      "params": [
+        "events"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_clear_workspace",
+      "description": "Nettoie l'espace de travail",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_matches",
+      "description": "Finds potential matches for the authenticated user. Requires X-Auth-ID header for authentication. For P1, this returns up to 3 random profiles, excluding the user's own.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output_",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    }
+  ]
+}

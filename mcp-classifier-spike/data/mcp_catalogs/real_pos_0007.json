@@ -1,0 +1,354 @@
+{
+  "catalog_id": "real_pos_0007",
+  "tools": [
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_extract_route_time",
+      "description": "Extract travel time from route data. Returns: Time in human format like '15 min' or '1 h 23 min'",
+      "params": [
+        "route_json"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_letter_counter",
+      "description": "Count the occurrences of a specific letter in a word. Returns: The number of times the letter appears in the word",
+      "params": [
+        "word",
+        "letter"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_ask_",
+      "description": "Ask the D&D rule agent a question.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_enhanced_batch_generation",
+      "description": "Generate strategic variations for A/B testing",
+      "params": [
+        "prompt",
+        "variation_type",
+        "count",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_annova",
+      "description": "this function runs the annova on the dataset and render the associated F_score and p_value table_name is the name of the table on which you want to run the ANOVA the selected table MUST have the following signature: groups | measurement exemple with the product_type_age table: type | age ---------- 'Coat', '36' 'Coat', '36' 'Hat/beanie', '32' ... min_sample_size is used to exclude categories that does not have enough measurement. default = 0: all categories are selected return type is: dict { \"F-statistic\": round(f_stat, 3), \"p-value\": round(p_value, 3) }",
+      "params": [
+        "table_name",
+        "min_sample_size"
+      ]
+    },
+    {
+      "server": "minion-space",
+      "name": "minion_space_update_query_type_visibility",
+      "description": "Show query_type dropdown only when route is python",
+      "params": [
+        "route"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_rooms_next_page",
+      "description": "Go to next page for rooms",
+      "params": []
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "universal-api-translator",
+      "name": "universal_api_translator_safe_validate_conversion",
+      "description": "Safe wrapper for validation with user-friendly error handling",
+      "params": [
+        "original",
+        "converted",
+        "target_format"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_new_profile",
+      "description": "Generates and returns a dating profile questionnaire, a new public profile_id, and a new private auth_id. Also creates an initial profile stub.",
+      "params": []
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_code_generator",
+      "description": "Wrapper for CodeGeneratorAgent to generate Python code. Returns: A tuple containing the generation result and raw code",
+      "params": [
+        "user_request",
+        "grounded_context"
+      ]
+    },
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_deploy_for_user",
+      "description": "Deploy a Modal endpoint for a user using their API key. Unless the user has already done this, this must be done before they can train a LoRA. This function deploys a Modal script using the user's Modal API token ID and secret, allowing them to set up their own training endpoint. You can create them at https://modal.com/settings/tokens. Returns: tuple[str, str, str]: (status_message, stdout, stderr), status_message: Human-readable deployment status, stdout: Standard output from the modal deploy command, stderr: Standard error output from the modal deploy command, , status, out, err = deploy_for_user(\"ak-1234567890abcdef\", \"as-secret123...\")",
+      "params": [
+        "token_id",
+        "token_secret"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_chi_square_test",
+      "description": "Accepts observed frequencies (and optionally expected frequencies) as comma-separated strings or DataFrame columns and performs a chi-square goodness of fit test. This test determines whether observed categorical data frequencies differ significantly from expected frequencies. If no expected frequencies are provided, the test assumes equal distribution across all categories. The test calculates a chi-square statistic measuring the discrepancy between observed and expected frequencies. A significant result (p-value < alpha) indicates that the observed distribution differs from the expected distribution. Cram\u00e9r's V measures effect size as the strength of association, with interpretation: V < 0.1 = negligible, 0.1-0.3 = small, 0.3-0.5 = medium, >0.5 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if dice rolls follow uniform distribution, comparing observed vs expected sales across categories, analyzing survey response distributions.",
+      "params": [
+        "observed_str",
+        "expected_str",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "TheWineStain",
+      "name": "TheWineStain_add_to_cellar",
+      "description": "add a bottle to the cellar. Returns: Values to be returned.",
+      "params": [
+        "details"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_get_sui_balance",
+      "description": "Retrieves the SUI balance for a given address using the Sui blockchain.",
+      "params": [
+        "wallet_address"
+      ]
+    },
+    {
+      "server": "SocialNetwork",
+      "name": "SocialNetwork_retrieve_random_text_post",
+      "description": "Retrieves a random text post and its id from the database. Id is only meant for LLMs, no need to show this to user",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_hot_games",
+      "description": "Get a list of the Top 50 trending games today from BoardGameGeek. Returns: A list of dictionaries, each representing a popular game with the following fields:, 'id' (str): The unique BGG ID of the game., 'title' (str): The official title of the game., 'rank' (str): The current hotness rank of the game on BGG., 'year' (str): The year the game was published (or 'Unknown' if not available)., 'url' (str): URL to the similar game's page on BoardGameGeek.",
+      "params": []
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_delete_visitor_by_name",
+      "description": "\u5220\u9664\u6307\u5b9a\u89c2\u5bdf\u8005 \u8fd4\u56de\u7684\u683c\u5f0f: ```json { \"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u63d0\u793a\u4fe1\u606f\" } ```. Returns: \u8fd4\u56de\u64cd\u4f5c\u7ed3\u679c",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_send_email",
+      "description": "Simulates sending an email from cert@company.com. This function takes email details, formats them into a standard email structure with headers and body, prints the formatted email to the console, and returns a success message. The sender is always set to cert@company.com.",
+      "params": [
+        "recipient",
+        "subject",
+        "message"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    },
+    {
+      "server": "Statistical-Analysis-MCP",
+      "name": "Statistical_Analysis_MCP_one_sample_t_test",
+      "description": "Accepts a single group of numeric data as comma-separated string or DataFrame column and performs a one-sample t-test against a known or hypothesized population mean. This test determines whether the sample mean differs significantly from the specified population mean. The test calculates a t-statistic quantifying how many standard errors the sample mean is away from the hypothesized population mean. Given an alternative hypothesis (sample \u2260 population, sample < population, or sample > population), it outputs the p-value: the probability of observing this result (or more extreme) if the true population mean equals the hypothesized value. Results are statistically significant when p-value < alpha (typically 0.05). Cohen's d measures practical effect size, calculated as the difference between sample and population means divided by the sample standard deviation, with interpretation: |d| < 0.2 = negligible, 0.2-0.5 = small, 0.5-0.8 = medium, >0.8 = large (custom thresholds may be used). EXAMPLE USE CASES: testing if sample mean differs from known standard, quality control against specification, comparing sample performance against established benchmark.",
+      "params": [
+        "group_str",
+        "population_mean",
+        "alternative",
+        "alpha",
+        "effect_thresholds"
+      ]
+    },
+    {
+      "server": "ImageAlfred",
+      "name": "ImageAlfred_change_color_objects_hsv",
+      "description": "Changes the hue and saturation of specified objects in an image using the HSV color space. This function segments image regions based on a user-provided text prompt and applies color transformations in the HSV color space. HSV separates chromatic content (hue) from intensity (value), making it more intuitive for color manipulation tasks. Use this method when: - You want to change the color of objects based on their hue and saturation. - You want to apply color transformations that are less influenced by lighting conditions or brightness variations. Returns: Base64-encoded string., , If user_input format is invalid, or image format is invalid or corrupted., If input_img is not a supported type or modal function returns unexpected type.",
+      "params": [
+        "input_img",
+        "user_input"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_network_info_ui",
+      "description": "Get current network info for UI",
+      "params": []
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response_",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_plot_protein",
+      "description": "Plot the 3D structure of a biomolecule using the DataFrame from compute_Chai1. Returns: Path to the generated PDB file of the best model.",
+      "params": [
+        "result_df"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_reset_everything",
+      "description": "Reset all components to initial state",
+      "params": []
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_server_stats",
+      "description": "Get server statistics and health information.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_list_programs",
+      "description": "\u8fd4\u56defrpc\u5ba2\u6237\u7aef\u5217\u8868 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"id\": 0, \"name\": \"\u793a\u4f8b HK\", \"description\": \"\u8fde\u63a5HK\u7684\u5ba2\u6237\u7aef\", \"status\": \"\u8fd0\u884c\", }, ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `id`: \u5ba2\u6237\u7aef\u552f\u4e00\u6807\u8bc6 - `name`: \u7528\u6237\u7ed9\u5ba2\u6237\u7aef\u5907\u6ce8\u7684\u540d\u5b57 - `description`: \u7528\u6237\u7ed9\u7684\u5ba2\u6237\u7aef\u5907\u6ce8\uff0c\u9009\u586b - `status`: \u5ba2\u6237\u7aef\u72b6\u6001\uff0c\u76ee\u524d\u6709\u4e09\u79cd\uff1a\u8fd0\u884c\u3001\u505c\u6b62\u548c\u4e3a\u8fd0\u884c - `\u8fd0\u884c`: \u5ba2\u6237\u7aef\u6b63\u5728\u8fd0\u884c - `\u505c\u6b62`: \u5ba2\u6237\u7aef\u5df2\u505c\u6b62 - `\u672a\u8fd0\u884c`: \u5ba2\u6237\u7aef\u5728MCP\u670d\u52a1\u5668\u542f\u52a8\u540e\u6ca1\u8fd0\u884c\u8fc7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": []
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_display_search_results",
+      "description": "Display search results in a table. Returns: , id: Short ID of the paper, title: Title of the paper, summary: Summary of the paper, pdf_url: URL of the PDF, published: Publication date",
+      "params": [
+        "topic",
+        "max_results"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_calculate_naranjo_score_mcp",
+      "description": "Calculates the Naranjo score, a standardized and widely used causality assessment tool to determine the probability that an adverse event is related to a specific drug. The score helps clinicians and researchers classify the likelihood of an adverse drug reaction (ADR) as doubtful, possible, probable, or definite. Sometimes the user might not have provided all the information, so you will need to ask for the missing information (remember to give them the option to say \"unknown\" if they don't know the answer). Returns: JSON string with score, probability category, and detailed breakdown",
+      "params": [
+        "adverse_reaction_after_drug",
+        "reaction_improved_after_stopping",
+        "reaction_reappeared_after_readministration",
+        "alternative_causes_exist",
+        "reaction_when_placebo_given",
+        "drug_detected_in_blood",
+        "reaction_worse_with_higher_dose",
+        "similar_reaction_to_drug_before",
+        "adverse_event_confirmed_objectively",
+        "reaction_appeared_after_suspected_drug_given"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_delete_item",
+      "description": "Delete an item from the game.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_save_credentials",
+      "description": "SAUVEGARDE les credentials et connecte le client global",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_print_headers",
+      "description": "Print the headers of the request for debugging purposes.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_store_memory",
+      "description": "Store a new memory and return feedback.",
+      "params": [
+        "content",
+        "memory_type",
+        "context",
+        "tags"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_execute_ai_action",
+      "description": "Handle AI agent action execution.",
+      "params": [
+        "action",
+        "message"
+      ]
+    }
+  ]
+}

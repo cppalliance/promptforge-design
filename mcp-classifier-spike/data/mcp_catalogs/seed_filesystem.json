@@ -1,0 +1,56 @@
+{
+  "catalog_id": "filesystem",
+  "tools": [
+    {
+      "server": "filesystem",
+      "name": "read_file",
+      "description": "Read the complete contents of a file from the local filesystem",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "write_file",
+      "description": "Create a new file or overwrite an existing file with content",
+      "params": [
+        "path",
+        "content"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "list_directory",
+      "description": "List the files and folders in a directory",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "move_file",
+      "description": "Move or rename a file or directory",
+      "params": [
+        "source",
+        "destination"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "search_files",
+      "description": "Recursively search for files matching a name pattern",
+      "params": [
+        "path",
+        "pattern"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "create_directory",
+      "description": "Create a new directory, including parent directories",
+      "params": [
+        "path"
+      ]
+    }
+  ]
+}

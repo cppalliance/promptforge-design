@@ -1,0 +1,365 @@
+{
+  "catalog_id": "real_toolret_neg_0145",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Team Championships by Count",
+      "description": "Retrieve a list of teams ranked by the total number of championships they have won.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "landform.map_river_paths",
+      "description": "Maps the paths of rivers within a specified region and analyzes their impact on the local geography.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_fraction",
+      "description": "This method takes two arguments, 'numerator' and 'denominator', and returns the result of dividing the numerator by the denominator.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getChatLogs",
+      "description": "Retrieves the chat logs for a specified Twitch channel.",
+      "params": [
+        "channel_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magic_AliExpress_api_bestSales_product_productID_salesHistory",
+      "description": "This resource returns the historic of sales",
+      "params": [
+        "{'name': 'productID', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webchain_Webchain",
+      "description": "WEBCHAIN: A Blockchain for DApps, Secured via Websites",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetAccountInfo",
+      "description": "Retrieve general account information, including the email of the account owner and available credits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Enoch_Calendar_Get_Calendar_Components",
+      "description": "Get the calendar components to build the current Hebrew month calendar from the supplied Hebrew month number, if supplied, or the first Hebrew month and, a supplied year, or this year",
+      "params": [
+        "{'name': 'month', 'type': 'NUMBER', 'des",
+        "{'name': 'year', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDailyForecast",
+      "description": "Retrieve a daily weather forecast for a specific location.",
+      "params": [
+        "latitude",
+        "longitude",
+        "days",
+        "units"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "YituTech/conv-bert-base",
+      "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "currencyExchangeRate.query",
+      "description": "Fetches real-time exchange rates between two specified currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get a Random Word",
+      "description": "Returns a random word from a list of more than 5500+ words. The API allows for filtering and limiting the returned word based on various criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchEntities",
+      "description": "Search for characters, corporations, and alliances by name.",
+      "params": [
+        "searchQuery",
+        "categories"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ModifyBankAccount",
+      "description": "\"Modify bank account API that takes five parameters - 'account', 'password', 'name', 'email' and 'token'. The 'token' parameter is used for user authentication. The 'account' parameter refers to the user's account number and the 'password' parameter is used to authenticate the user. The 'name' parameter refers to the user's name and the 'email' parameter refers to the user's email address.\"",
+      "params": [
+        "{'name': 'account', 'in': 'query', 'sche",
+        "{'name': 'password', 'in': 'query', 'sch",
+        "{'name': 'name', 'in': 'query', 'schema'",
+        "{'name': 'email', 'in': 'query', 'schema",
+        "{'name': 'token', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createSoftwareArchitecture",
+      "description": "Create the architecture design for a software project",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nearby",
+      "description": "Retrieve nearby places sorted by distance from the given origin coordinates in ascending order.",
+      "params": [
+        "lon",
+        "lat",
+        "categories",
+        "radius"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Financial_Modeling_Prep_Companies_Profile",
+      "description": "This API returns companies profile (Price,Beta,Volume Average, Market Capitalisation, Last Dividend, 52 week range, stock price change, stock price change in percentage, Company Name, Exchange, Description, Industry,Sector,CEO,Website and image).",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_action_location(image_patch: ImagePatch, action: str) -> str",
+      "description": "def find_action_location(image_patch: ImagePatch, action: str) -> str:\n    '''Find the location of a specific action happening in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        action (str): The action to find the location of.\n       \n    Returns:\n        str: The location of the action if found, \"Not found\" otherwise.\n    '''\n    \n    action_query = image_patch.find(action)\n    if action_query:\n        location = action_query[0].simple_query(\"Where is this happening?\")\n        return location\n    else:\n        return \"Not found\"",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "cd",
+      "description": "A tool to change the current working directory.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getEmailAttachments",
+      "description": "Retrieves the attachments of a forwarded email.",
+      "params": [
+        "emailId",
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Performance Details",
+      "description": "Retrieves player performance details for a specific player in a given competition and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Get_Date_and_Time_by_City",
+      "description": "Get current date and time for specified city, fuzzy search is supported. **Note**: the fuzzy search of provided city may not be the one you want due to multiple cities may have the same name, the most common one will be used. In this case, use a geocoding service to find the exact geolocation of the city, use `/datetime/bylocation` endpoint instead.",
+      "params": [
+        "{'name': 'city', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sem.adgroup_structure",
+      "description": "Retrieve the structure of a specified ad group in an SEM campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_movie_movie_id_similar",
+      "description": "Get a list of similar movies. This is **not** the same as the \"Recommendation\" system you see on the website.\n\nThese items are assembled by looking at keywords and genres.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "career.get_career_pathways",
+      "description": "Retrieve potential career pathways for a specific job role.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeDentalRecords",
+      "description": "Analyze dental records for forensic purposes",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 52 Week High by Fundamental for Country",
+      "description": "Retrieve the 52-week high stock prices for a specific country, filtered by fundamental data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "absolute_difference",
+      "description": "This function calculates the absolute difference between two numbers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock/key-statistics",
+      "description": "Retrieve key statistics data for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "DCGAN",
+      "description": "DCGAN is a model designed in 2015 by Radford et. al. in the paper Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. It is a GAN architecture both very simple and efficient for low resolution image generation (up to 64x64).",
+      "params": [
+        "pretrained",
+        "useGPU"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Simple_Surf_Forecast_Api_GetTodaysForecast",
+      "description": " ",
+      "params": [
+        "{'name': 'spotId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_Get_the_states",
+      "description": "Get the states.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Instagram Hashtags",
+      "description": "Generate a list of relevant hashtags for a given keyword on Instagram",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHistoricalData",
+      "description": "Retrieve historical data for a specific currency pair.",
+      "params": [
+        "currency_pair",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_multiples",
+      "description": "This method takes three arguments, 'start', 'end', and 'multiple', and returns the number of multiples of 'multiple' between 'start' and 'end' (inclusive).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "count",
+      "description": "Fetches the total number of expired followers from an OnlyFans API endpoint.",
+      "params": [
+        "signstart",
+        "apptoken",
+        "signend",
+        "xbc",
+        "timezone",
+        "useragent",
+        "auth_id",
+        "sess"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pastry/ingredient",
+      "description": "This API endpoint allows users to retrieve a random pastry recipe that contains a specific ingredient. Users can make a GET request to the endpoint with the name of the ingredient as a query parameter, and the API will return a JSON response with the given recipe, including the name, list of ingredients, and instructions.",
+      "params": [
+        "{'name': 'ingredient', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list-ratings",
+      "description": "Get the user's ratings from employment data sources.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSleepApneaTestResults",
+      "description": "Retrieve the test results of a sleep apnea test",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Social Trending Likes",
+      "description": "Retrieve the top 50 tickers trending on social media by likes, filtered by social media platform and optional parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

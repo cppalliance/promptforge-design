@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_neg_0017",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "APIGabin_Base",
+      "description": "uNE BASE",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_v4_Post_Comments",
+      "description": "Get Posts CommentBy \"challenge_name\" or \"challenge_id\",\nand the endpoint will return Posts comments by 'cursor'.",
+      "params": [
+        "{'name': 'item_id', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Artisto",
+      "description": "an artificial intelligence-based image stylization tool that generates images with a specific artistic style, with a medium processing speed that is not suitable for tasks with strict processing time requirements.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "soil_data_by_lat_lng",
+      "description": "Fetches the latest soil data readings for a specified latitude and longitude.",
+      "params": [
+        "lng",
+        "lat",
+        "pollutants",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomWord",
+      "description": "Retrieve a random English word with its meaning and examples of usage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tibia_Items_Get_all_imbuements_Items",
+      "description": "This enpoint will get all imbuement",
+      "params": [
+        "{'name': 'World', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/tapas-small-finetuned-wtq",
+      "description": "TAPAS small model fine-tuned on WikiTable Questions (WTQ). This model was pre-trained on MLM and an additional step which the authors call intermediate pre-training, and then fine-tuned in a chain on SQA, WikiSQL and finally WTQ. It uses relative position embeddings (i.e. resetting the position index at every cell of the table).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Expanded Stock Quote",
+      "description": "Retrieve an expanded stock quote with underlying static, real-time, and expanded information (Sector, Exchange) for a given stock ticker.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v2_Get_Track_Details_Single",
+      "description": "Get track_name, thumbnail, duration & artist_name of any Spotify Track. Album/Podcast/Show not supported.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post by ID",
+      "description": "Returns a post by providing a valid post ID. The post ID can be obtained from the 'Get All Posts' endpoint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_Top_paid_ios_apps",
+      "description": "Get list of the top paid ios apps",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Truecaller_v2_Get_Details",
+      "description": "This end point will display the search details for the number you are looking for.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_match_list_live",
+      "description": "Fetches the list of daily live matches for a specific date within a \u00b17 days period.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_periods_for_entity(df, entity_col, period1_col, per",
+      "description": "def calculate_difference_between_periods_for_entity(df, entity_col, period1_col, period2_col, entity_name):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values over different periods, the name of the entity, and two periods, and returns the difference in values between the two periods for the specified entity.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the values of entities over different periods.\n    entity_col (str): The column name for the entities.\n    period1_col (str): The column name for the first period.\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorcycle Makes",
+      "description": "Retrieve a list of all motorcycle makes from the motorcycle specifications database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "core_js_name",
+      "description": "name=?\n? = javascript",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createQuiz",
+      "description": "Creates a new quiz with specified parameters.",
+      "params": [
+        "apiKey",
+        "name",
+        "category",
+        "questions"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Match_Lineup",
+      "description": "Team lineups, formations and head coaches.\n\n**The data will return for only -+7 days period, so endpoint can be tested with match that its date is in today +- 7 days. You can choose suitable match from Soccer Match List or Fixture endpoints.**",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webtoon_canvas_genres_list",
+      "description": "List genres in canvas category\n*To load images, please check the tutorial at https://rapidapi.com/apidojo/api/webtoon/tutorials/how-to-load-images",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Greatest of All Time Top Dance Club Artists",
+      "description": "Retrieve a list of the greatest dance club artists of all time, as ranked by the Billboard chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Audio Posts",
+      "description": "Retrieve audio posts from Instagram",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weekly Baseball Schedule",
+      "description": "Returns a list of baseball games scheduled for the next 7 days, given a specific string or the current string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "download_airports",
+      "description": "Downloads a list of airports with IATA codes for flight search from the Priceline API.",
+      "params": [
+        "resume_key",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPrices",
+      "description": "Retrieve a list of prices for a given price list ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getStandingsByType",
+      "description": "Retrieve NHL standings by type (e.g., by conference, division, league, etc.)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stageTimingAdjuster",
+      "description": "Adjusts the timing for multiple stages of an event based on priority and duration constraints.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: s",
+      "description": "def infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: str, context: str, query: str) -> str:\n    '''Infer the reason why a certain object is exhibiting a certain behavior in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for behavior.\n        behavior (str): The behavior of the object to infer reason for.\n        context (str): The context in which the behavior is exhibited.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: Th",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Horostory_planetaryoverview",
+      "description": "get the Planetary Overview of the day",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "jokes_categories_get",
+      "description": "Retrieve a list of available categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorsport Unique Stage Image",
+      "description": "Retrieve a unique stage image for a motorsport event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "minecraft",
+      "description": "Check if a given Minecraft username is available using the Toolbench RapidAPI service.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_point_on_line_segment(point_a, point_b, distance_ratio)",
+      "description": "def find_point_on_line_segment(point_a, point_b, distance_ratio):\n    \"\"\"\n    Find the coordinates of a point on a line segment, given the coordinates of the endpoints and a ratio of distances from the point to the endpoints.\n\n    Parameters:\n    point_a (tuple): The coordinates of the first endpoint.\n    point_b (tuple): The coordinates of the second endpoint.\n    distance_ratio (float): The ratio of the distance from the point to the first endpoint to the distance from the point to the second endpoint.\n\n    Returns:\n    tuple: The coordinates of the point.\n    \"\"\"\n    x_a, y_a = point_a\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEmotionalResponse",
+      "description": "Retrieve emotional response information based on environmental factors",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WellnessProgram.enroll",
+      "description": "Enrolls a user in a wellness program tailored to their mental health needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Async Content",
+      "description": "Fetches async content using the provided prompt and thread ID. This endpoint is free and allows you to pull content once every 2 seconds.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "media_info",
+      "description": "Retrieves information about a media item from the Instagram API.",
+      "params": [
+        "media_id",
+        "mediaid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_subscriptions_subscriptionId_channelPrices",
+      "description": " ",
+      "params": [
+        "{'name': 'subscriptionId', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_of_memes",
+      "description": "Fetches a list of memes based on the specified genre and type from the RapidAPI service.",
+      "params": [
+        "genre",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TND_Exchange_Rate_api",
+      "description": "GET the average exchange rate of TND against USD & EUR",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDraftingStandards",
+      "description": "Retrieve drafting standards used in architectural drafting",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_pos_0184",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: s",
+      "description": "def infer_reason_for_behavior(image_patch: ImagePatch, object_name: str, behavior: str, context: str, query: str) -> str:\n    '''Infer the reason why a certain object is exhibiting a certain behavior in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for behavior.\n        behavior (str): The behavior of the object to infer reason for.\n        context (str): The context in which the behavior is exhibited.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: Th",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast_Food_Restaurants_USA_TOP_50_Chains_Get_Restaurant_Logo_by_Chain_Name",
+      "description": "Get Restaurant {Logo} by {Chain} Name",
+      "params": [
+        "{'name': 'restaurantChainName', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sms77io_Get_Webhooks",
+      "description": "Retrieves all existing webhooks.",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/bart-large-mnli",
+      "description": "This is the checkpoint for bart-large after being trained on the MultiNLI (MNLI) dataset. The model can be used for zero-shot text classification by posing the sequence to be classified as the NLI premise and constructing a hypothesis from each candidate label. The probabilities for entailment and contradiction are then converted to label probabilities.",
+      "params": [
+        "sequence_to_classify",
+        "candidate_labels"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chaingateway_io_newAddress",
+      "description": "Generates a new ethereum addresses you can use to send or receive funds. Do not lose the password! We can't restore access to an address if you lose it.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Countries By Sub-Region",
+      "description": "Searches for countries by their sub-region and returns a list of matching countries with optional filtering and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SculptureMaterialAdvisor.selectMaterial",
+      "description": "Selects the appropriate materials for sculpture based on artistic requirements and environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listEnvironments",
+      "description": "Retrieve a list of all available environments within a specified workspace",
+      "params": [
+        "workspaceId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "codes",
+      "description": "This function searches for information based on the provided code using the Postali API.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "conductABTesting",
+      "description": "Conduct A/B testing to compare UX design variations",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PredictEvolutionRate.calculateMutationRate",
+      "description": "Calculates the mutation rate for a given species over a specified time period using a complex evolutionary model. The input data must be structured according to the specified format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query:",
+      "description": "def discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query: str) -> str:\n    '''Discuss the importance of spending quality time with a specific group of people in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        group_name (str): The name of the group of people to discuss.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The discussion about the importance of spending quality time with the group.\n    '''\n    \n    group_identity = image_patch.simple_query(f\"What is the identity of the {group",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarShadowImpact.evaluate",
+      "description": "Evaluates the impact of shadows on solar panel performance for a given location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "arrange_letters",
+      "description": "Calculates the number of ways the letters of a word can be arranged",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "WNBA Team Information",
+      "description": "This endpoint returns detailed information about a specific WNBA team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get-webhook",
+      "description": "Get a webhook endpoint for a specific financial object.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_in",
+      "description": "Returns current gas price data for Indiana. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basic_Amazon_Scraper_GET_Product_Offers",
+      "description": "GET Product Offers: Get all offers available for a product.",
+      "params": [
+        "{'name': 'productId', 'type': 'string', ",
+        "{'name': 'api_key', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_Analysis_Company_Description",
+      "description": "Get company description.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_actiity_by_price_range",
+      "description": "Find an event with a specified price in an inclusively constrained range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dog_faAts",
+      "description": "Returns an object with dog facts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CNPJ_Tempo_Real_Consulta_CEP",
+      "description": "Consulta CEP",
+      "params": [
+        "{'name': 'CEP', 'type': 'string', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Driver Standings",
+      "description": "Retrieves the driver standings for a given Formula 1 season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TrueWay_Places_FindPlaceByText",
+      "description": "Search for places by text string",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Top_property_managers",
+      "description": "Returns the largest property managers",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateFoundationLoad",
+      "description": "Calculate the load on a foundation",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cities_get_information_deprecated",
+      "description": "Fetches information about a specific city based on its ID.",
+      "params": [
+        "is_id",
+        "aqiindex",
+        "timezone",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClearDil_DownloadtheattachedDRIVING_LICENSEfromthedocument",
+      "description": " ",
+      "params": [
+        "{'name': 'customer_a_id', 'type': 'STRIN",
+        "{'name': 'document_a_id', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "confirm_meeting_room_booking",
+      "description": "Confirm the reservation of the specified meeting room",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Search_player",
+      "description": "Search for any player",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seitreporp_tsil",
+      "description": "Query rooms, price, facilities, policities, etc information from many hotels around the world. This API reproduce PUBLIC data and features of related site/brand in real time and on demand.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "advanced_programming_lesson_planner",
+      "description": "A course planning tool for advanced programming learners, providing input parameters such as programming language, total study duration, and study topics",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_UniqueTournaments",
+      "description": "Unique Tournaments",
+      "params": [
+        "{'name': 'teamId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_point_on_line_segment(point_a, point_b, distance_ratio)",
+      "description": "def find_point_on_line_segment(point_a, point_b, distance_ratio):\n    \"\"\"\n    Find the coordinates of a point on a line segment, given the coordinates of the endpoints and a ratio of distances from the point to the endpoints.\n\n    Parameters:\n    point_a (tuple): The coordinates of the first endpoint.\n    point_b (tuple): The coordinates of the second endpoint.\n    distance_ratio (float): The ratio of the distance from the point to the first endpoint to the distance from the point to the second endpoint.\n\n    Returns:\n    tuple: The coordinates of the point.\n    \"\"\"\n    x_a, y_a = point_a\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareOrganismsAnatomy",
+      "description": "Compare the anatomy of two organisms",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Line Detection On Image",
+      "description": "useful when you want to detect the straight line of the image. like: detect the straight lines of this image, or straight line detection on image, or perform straight line detection on this image, or detect the straight line image of this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "balansheet_financials",
+      "description": "Fetches and returns the financial data for a given company symbol using the specified RapidAPI key.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGameReviews",
+      "description": "Retrieve user reviews of a specific open-world game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Seasonal_Goal_Analysis_Goal_Minutes",
+      "description": "Provides the goals statistics of the teams against to the other teams(in tournament) in the minutes intervals(0-10, 11-20, 21-30...etc.)\n\nThe data will return for only -+7 days period, so endpoint can be tested with match that its date is in today +- 7 days. You can choose suitable match from Soccer Match List or Fixture endpoints.",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    }
+  ]
+}

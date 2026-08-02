@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_neg_0189",
+  "tools": [
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_remove_path",
+      "description": "Removes a file or directory from the sandbox. Useful for cleaning up temporary files, removing unwanted content, and managing sandbox storage. Returns: JSON string containing success status and removed path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "recursive"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_query_and_generate_graph_wrapper",
+      "description": "Executes a SQL query and generates a graph visualization from the results. This function is particularly useful when query results are too large for the context window or when visual representation of data is preferred over tabular format. Returns: A tuple containing:, image_path (str or None): Path to the generated graph image if successful, None if failed, status (str): Status message indicating success or error details",
+      "params": [
+        "query",
+        "graph_type"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_product_care_info",
+      "description": "Get care instructions and maintenance information for products.",
+      "params": [
+        "product_category",
+        "material"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "veterinary-dicom-mcp",
+      "name": "veterinary_dicom_mcp_enhance_dicom_image",
+      "description": "Verbessert veterin\u00e4rmedizinische DICOM-Bilder mit verschiedenen Algorithmen.",
+      "params": [
+        "image_file",
+        "species",
+        "enhancement_method",
+        "body_part"
+      ]
+    },
+    {
+      "server": "Website_Generator",
+      "name": "Website_Generatoranalyze_image",
+      "description": "Analyze an uploaded image and provide a detailed description of its content and layout.",
+      "params": [
+        "image",
+        "nebius_api_key"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_apply_color_filter",
+      "description": "Apply professional-grade color filters to video. Returns: URL to processed video or None if failed, , Implements various color transformations, Supports intensity control, Maintains video quality, Preserves original audio",
+      "params": [
+        "video_url",
+        "filter_type",
+        "intensity"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_embed_text_modal_api",
+      "description": "This function allows you to send a list of text to be embeded by our external model. the format should be the following: [ \"text_to_embed 1\", \"text_to_embed 2\", \"text_to_embed 3\", ... ] the return is the vector embedding corresponding to the text you input or a list of vector in case you gave a list of text. thoses vectors are compatible with the one you can find in the database and can be used to be compared with vectors you'll get by querying the database.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "PhoneAFriend",
+      "name": "PhoneAFriend_start_server",
+      "description": "Start the server and update the status.",
+      "params": []
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_do_tsne_embedding",
+      "description": "this tool allow to run a TSNE dimensionality reduction algorythme and a clustering (HDBSCAN) on top of that. the input query, is a sql query that MUST return a table with at least the item id and the corresponding embeddding. FOR COMPUTATIONAL PURPOSE, THE QUERY YOU SEND MUST NOT RETURN A TABLE GREATER THAN 500 OUTPUT ROWS exemple: result = db_connection.read_only_query(query) result shape: article_id | embedding 0125456    | [0.3, 0.5 ...] the return is a dictionnary that has the following format: return { \"ids\": ids, \"x_axis\": tsne_projection_x_list, \"y_axis\": tsne_projection_y_list, \"labels\": labels }",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "evaluate_king_safety",
+      "description": "Evaluate king safety for both White and Black from a given FEN string.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_clear_conversation",
+      "description": "Clear the conversation history (UI + agent), reset state completely, and update UI.",
+      "params": []
+    },
+    {
+      "server": "OnlineSafetyMonitor",
+      "name": "OnlineSafetyMonitor_toxicity_counter",
+      "description": "Count the toxicity score for the comment or phrase. Returns: The score of toxicity ranging from 0 to 1, 0 is lowest and 1 is highest",
+      "params": [
+        "comment"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_new_garment",
+      "description": "Run the Virtual Try-On model with provided model image and garment prompt.",
+      "params": [
+        "model_image_path",
+        "garment_prompt",
+        "model_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_mcp_server_instructions",
+      "description": "Returns comprehensive usage guidelines and documentation for all MCP server functions. Call this function first to understand available tools, workflows, and best practices. This function provides: - Complete function documentation - Recommended workflows - Best practices for MCP clients - Database schema information - Statistical analysis guidelines",
+      "params": []
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_searxng_search",
+      "description": "Given a search query, returns the search results from SearxNG. Returns: The search results from SearxNG Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "searxng_host"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_process_flow_diagram",
+      "description": "Generates a Process Flow Diagram (Flowchart) from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_move_item",
+      "description": "Move an item to a new position.",
+      "params": [
+        "tab_id",
+        "item_id",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_roll_dice",
+      "description": "Simulate rolling dice.",
+      "params": [
+        "faces",
+        "rolls"
+      ]
+    },
+    {
+      "server": "TS_Analysis",
+      "name": "TS_Analysis_mcp_get_analysis_report",
+      "description": "Recupera el reporte textual completo de un an\u00e1lisis previo a partir de su ID. Par\u00e1metros: - analysis_id (str): Identificador \u00fanico del an\u00e1lisis almacenado, obtenido de mcp_analyze_trends. Formato: \"mcp_analysis_YYYYMMDD_HHMMSS\" Retorna: - str: Reporte completo en formato Markdown con: * Estad\u00edsticas b\u00e1sicas (media, desviaci\u00f3n, min/max) * An\u00e1lisis de tendencias (fuerza y direcci\u00f3n) * Detecci\u00f3n de anomal\u00edas (cantidad y porcentaje) * An\u00e1lisis de estacionalidad (patrones detectados) * Picos y valles (conteo de extremos) * Informaci\u00f3n de pron\u00f3stico si est\u00e1 disponible En caso de error o ID no encontrado, devuelve mensaje de error.",
+      "params": [
+        "analysis_id"
+      ]
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_convert_pace",
+      "description": "Converts a running pace between min/km and min/mile. Returns: A dictionary containing:, original_value (float): The original input pace, converted_value (float): The converted pace value, input_unit (str): The original pace unit, output_unit (str): The target pace unit",
+      "params": [
+        "value",
+        "input_unit",
+        "output_unit"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_staff",
+      "description": "Refresh staff table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_mountains_by_range",
+      "description": "Retrieve all mountains in a specific mountain range. This function performs a case-insensitive search for mountains within a specified mountain range. The results include mountain names, altitudes, and counties. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, str, }, ], , >>> get_mountains_by_range(\"Sawatch Range\"), \"Mount Elbert\", \"Altitude\": 14433, \"County\": \"Lake\"}]'",
+      "params": [
+        "mountain_range"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_print_headers",
+      "description": "Print the headers of the request for debugging purposes.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_animate_token_viewport",
+      "description": "Animate the viewport to focus on a specific token.",
+      "params": [
+        "tab_id",
+        "item_id"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_single_file",
+      "description": "Retrieve a single file from GitHub repository. Returns: JSON response with file content and metadata",
+      "params": [
+        "repo_url",
+        "file_path",
+        "branch"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_code_generator",
+      "description": "Wrapper for CodeGeneratorAgent to generate Python code. Returns: A tuple containing the generation result and raw code",
+      "params": [
+        "user_request",
+        "grounded_context"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_create_smart_visualizations",
+      "description": "Creates smart visualizations. Returns: Data type distribution chart, Missing data bar chart, Correlation heatmap, Variable distributions",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_stream_response_with_state",
+      "description": "Stream response and update appropriate chat state",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_generate_pose_data",
+      "description": "Analyze an image and general human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_use_preview_in_chat",
+      "description": "Gunakan isi file preview sebagai prompt untuk chatbot.",
+      "params": [
+        "chat_history"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_scrap_subdomains_for_domain",
+      "description": "Retrieves subdomains associated to a domain if any. The information retrieved from a domain is its subdomains provided they are the top 1000 subdomain prefixes as indicated by https://github.com/rbsec/dnscan/tree/master Importantly, it finds subdomains only if their prefixes are along the top 1000 most common. Hence, it may not yield all the subdomains associated to the domain. Example: >>> scrap_subdomains_for_domain(\"github.com\") ... ['www.github.com', 'smtp.github.com', 'ns1.github.com', 'ns2.github.com','autodiscover.github.com', 'test.github.com', 'blog.github.com', 'admin.github.com', 'support.github.com', 'docs.github.com', 'shop.github.com', 'wiki.github.com', 'api.github.com', 'live.github.com', 'help.github.com', 'jobs.github.com', 'services.github.com', 'de.github.com', 'cs.github.com', 'fr.github.com', 'ssh.github.com', 'partner.github.com', 'community.github.com', 'mailer.github.com', 'training.github.com', ...]",
+      "params": [
+        "domain_name"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcprestore_client_data",
+      "description": "Restore client data from HuggingFace dataset.",
+      "params": [
+        "client_id"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_track_package",
+      "description": "Track package delivery status for an order.",
+      "params": [
+        "order_id",
+        "customer_id"
+      ]
+    }
+  ]
+}

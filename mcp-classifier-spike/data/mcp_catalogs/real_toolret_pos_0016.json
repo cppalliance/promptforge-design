@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_pos_0016",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "check_user_exists",
+      "description": "Checks if a user exists on the Waifu service by user ID using the Toolbench RapidAPI key.",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Book2Author",
+      "description": "This API is used to convert a book title to an author name.",
+      "params": [
+        "{'name': 'book_title', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asia",
+      "description": "Fetches a list of Asian cities sorted by a specified criterion with pagination support.",
+      "params": [
+        "sort",
+        "sort_by",
+        "size",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DesignSpecEditor",
+      "description": "used to define UI and UX design specifications",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email",
+      "description": "This API will validate email with domain name, it is use to filter out invalid email and invalid domain, to perfact match delivery rate and minimum email bounce",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "glpn-kitti-finetuned-diode",
+      "description": "This model is a fine-tuned version of vinvino02/glpn-kitti on the diode-subset dataset.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetMarkets",
+      "description": "Retrieves a list of markets on Kalshi, allowing for filtering and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Payment Card by Card Number",
+      "description": "Retrieve a specific payment card by its card number, including card information such as card number, holder name, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ice_Hockey_Data_Daily_Match_List_Scheduled",
+      "description": "Daily match list including scheduled matches.\n\n**The data will return for only -+7 days period, so endpoint can be tested with date range of today - 7 days.**",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live Giveaways by Platform",
+      "description": "Retrieve a list of live giveaways by platform, including details such as game title, platform, and giveaway end string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Get_company_Basic_data",
+      "description": "The Get company details endpoint will return all basic company data on B2BHint.",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'internationalNumber', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_sentiment_change_bullish",
+      "description": "Search for top 50 trending stocks or crypto symbols on social media with the greatest change in bullish or bearish sentiment on Twitter/StockTwits.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Moving Average Convergence Divergence (MACD)",
+      "description": "The Moving Average Convergence Divergence (MACD) indicator is a popular technical indicator used in finance to gauge the strength, momentum, and duration of a trend in a financial market.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Reddit_Comments_By_Username",
+      "description": "Comments By Username",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Order",
+      "description": "Retrieves a specific order by its unique identifier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "color_recognition_tool",
+      "description": "Color recognition tool that can identify the main color tone in an image based on the input image and color type",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "side_dish_ingredient",
+      "description": "Fetches a random side dish recipe containing a specific ingredient using the Toolbench RapidAPI.",
+      "params": [
+        "ingredient"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange rates",
+      "description": "Get currency exchange rates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_passwordgenerator",
+      "description": "Generates a random password string adhering to the specified parameters using the API Ninjas Password Generator API.",
+      "params": [
+        "exclude_special_chars",
+        "exclude_numbers",
+        "length"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "driveRobot",
+      "description": "Control the movement of an automotive robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_calendar_event_reminder",
+      "description": "Set calendar event reminder",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pygmalion-1.3b",
+      "description": "Pygmalion 1.3B is a proof-of-concept dialogue model based on EleutherAI's pythia-1.3b-deduped. It is designed for generating conversational responses and can be used with a specific input format that includes character persona, dialogue history, and user input message.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_Staff_Profile",
+      "description": "Get staff (coaches) profile by IDs",
+      "params": [
+        "{'name': 'staff_id', 'type': 'NUMBER', '",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTigerLineGeodatabases",
+      "description": "Retrieve TIGER/Line File Geodatabases for a specified geographic area and year",
+      "params": [
+        "area",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FactorExtractor",
+      "description": "Identifies factors that influence the sentiment of a post.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getLiveStreams",
+      "description": "Retrieve a list of live streams.",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "domain_detail",
+      "description": "Fetches the domain detail for a given domain ID using the RapidAPI service.",
+      "params": [
+        "did"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDataSources",
+      "description": "Returns a hierarchical list of available data sources for the Education domain, used by the Helioviewer v1 tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kalshi_Trading_API_GetSeries",
+      "description": "Endpoint for getting data about a series by its ticker.",
+      "params": [
+        "{'name': 'series_ticker', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Flight_Data_United_Kingdom_Scheduled_Flights_Growth",
+      "description": "Get weekly United Kingdom scheduled departing flights growth.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Info_getUserVideos",
+      "description": "Get all the videos of an user. By default the **limit** has been set to 10. You can customize it.",
+      "params": [
+        "{'name': 'getUserVideos', 'type': 'strin"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listFontTypes",
+      "description": "Retrieves a list of available font types that can be used in the generateTypingSvg function.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimeMarketData",
+      "description": "Retrieve real-time market data for multiple exchanges around the world.",
+      "params": [
+        "symbols",
+        "exchange",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "All_In_One_Crypto_Swiss_Knife_Tokens_Balances",
+      "description": "get balance of any address.\nsupportedChains: eth, bsc, matic, avax, okt, hmy, heco, klay, op, arb, ftm, xdai, cro, mobm, celo, aurora, fuse, evmos, cfx, kava",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'chain', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Economy_News",
+      "description": "This endpoint provides the economy news",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "ModifyRegistration",
+      "description": "description = \"Modify Registration API that takes two parameters - 'registration_number' and 'new_appointment_time'. The 'registration_number' parameter refers to the identification number of the registration to be updated, and the 'new_appointment_time' parameter specifies the new time for the updated registration appointment.\" \n\ninput_parameters = {\n  'registration_number': {'type': 'str', 'description': 'The identification number of the registration to be updated.'},\n  'new_appointment_time': {'type': 'datetime', 'description': 'The new time for the updated registration appointment. Format:",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Web Scraper API",
+      "description": "Fetch and parse HTML content from a given URL, optionally filtering by a specific selector.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_monthly",
+      "description": "This API returns monthly time series (last trading day of each month, monthly open, monthly high, monthly low, monthly close, monthly volume) of the global equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Pinterest",
+      "description": "a social media platform that allows users to create and share visual content.",
+      "params": []
+    }
+  ]
+}

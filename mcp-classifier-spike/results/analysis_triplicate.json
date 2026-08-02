@@ -1,0 +1,440 @@
+{
+  "analysis": {
+    "nli|valhalla/distilbart-mnli-12-1|best": {
+      "method": "nli",
+      "model": "valhalla/distilbart-mnli-12-1",
+      "template": "best",
+      "n_positives": 59,
+      "n_negatives": 9,
+      "top1_acc": 0.9661016949152542,
+      "top1_acc_ci": [
+        0.9152542372881356,
+        1.0
+      ],
+      "top3_acc": 0.9830508474576272,
+      "score_auroc": 0.9649122807017544,
+      "near_dupe_acc": 1.0,
+      "best_thr_at_fb5": {
+        "thr": 0.0264,
+        "coverage": 0.9661016949152542,
+        "acc_on_accepted": 0.9649122807017544,
+        "false_bind": 0.0,
+        "_score": 0.9322033898305084
+      },
+      "sweep": [
+        {
+          "thr": 0.008,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.8888888888888888
+        },
+        {
+          "thr": 0.0085,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.7777777777777778
+        },
+        {
+          "thr": 0.0106,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.6666666666666666
+        },
+        {
+          "thr": 0.0124,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.6666666666666666
+        },
+        {
+          "thr": 0.0152,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.5555555555555556
+        },
+        {
+          "thr": 0.0167,
+          "coverage": 1.0,
+          "acc_on_accepted": 0.9661016949152542,
+          "false_bind": 0.4444444444444444
+        },
+        {
+          "thr": 0.0209,
+          "coverage": 0.9830508474576272,
+          "acc_on_accepted": 0.9655172413793104,
+          "false_bind": 0.3333333333333333
+        },
+        {
+          "thr": 0.0214,
+          "coverage": 0.9661016949152542,
+          "acc_on_accepted": 0.9649122807017544,
+          "false_bind": 0.3333333333333333
+        },
+        {
+          "thr": 0.023,
+          "coverage": 0.9661016949152542,
+          "acc_on_accepted": 0.9649122807017544,
+          "false_bind": 0.3333333333333333
+        },
+        {
+          "thr": 0.0258,
+          "coverage": 0.9661016949152542,
+          "acc_on_accepted": 0.9649122807017544,
+          "false_bind": 0.2222222222222222
+        },
+        {
+          "thr": 0.0264,
+          "coverage": 0.9661016949152542,
+          "acc_on_accepted": 0.9649122807017544,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0282,
+          "coverage": 0.9491525423728814,
+          "acc_on_accepted": 0.9821428571428571,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0347,
+          "coverage": 0.9491525423728814,
+          "acc_on_accepted": 0.9821428571428571,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.035,
+          "coverage": 0.9322033898305084,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0487,
+          "coverage": 0.8983050847457628,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0503,
+          "coverage": 0.8813559322033898,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.057,
+          "coverage": 0.8813559322033898,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0582,
+          "coverage": 0.864406779661017,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.0849,
+          "coverage": 0.847457627118644,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.1205,
+          "coverage": 0.8305084745762712,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.1357,
+          "coverage": 0.8135593220338984,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.1627,
+          "coverage": 0.7966101694915254,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.1664,
+          "coverage": 0.7627118644067796,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.1982,
+          "coverage": 0.7627118644067796,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.201,
+          "coverage": 0.7457627118644068,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.2361,
+          "coverage": 0.7288135593220338,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.25,
+          "coverage": 0.6949152542372882,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.2559,
+          "coverage": 0.6779661016949152,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.2642,
+          "coverage": 0.6610169491525424,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.285,
+          "coverage": 0.6610169491525424,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3154,
+          "coverage": 0.6440677966101694,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3208,
+          "coverage": 0.6271186440677966,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.331,
+          "coverage": 0.6101694915254238,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3329,
+          "coverage": 0.576271186440678,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3534,
+          "coverage": 0.576271186440678,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3621,
+          "coverage": 0.559322033898305,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3874,
+          "coverage": 0.5254237288135594,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3944,
+          "coverage": 0.5084745762711864,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.3952,
+          "coverage": 0.4915254237288136,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.4136,
+          "coverage": 0.4745762711864407,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.4222,
+          "coverage": 0.4745762711864407,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.4275,
+          "coverage": 0.4576271186440678,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.4737,
+          "coverage": 0.4406779661016949,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.4989,
+          "coverage": 0.423728813559322,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.5114,
+          "coverage": 0.3898305084745763,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.5199,
+          "coverage": 0.3728813559322034,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.5247,
+          "coverage": 0.3559322033898305,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.6048,
+          "coverage": 0.3389830508474576,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.6233,
+          "coverage": 0.3220338983050847,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.6329,
+          "coverage": 0.3050847457627119,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.6447,
+          "coverage": 0.3050847457627119,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.6911,
+          "coverage": 0.2711864406779661,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7019,
+          "coverage": 0.2711864406779661,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7331,
+          "coverage": 0.2542372881355932,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7419,
+          "coverage": 0.22033898305084745,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7463,
+          "coverage": 0.2033898305084746,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7527,
+          "coverage": 0.2033898305084746,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7608,
+          "coverage": 0.1864406779661017,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.7678,
+          "coverage": 0.15254237288135594,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8055,
+          "coverage": 0.15254237288135594,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.808,
+          "coverage": 0.11864406779661017,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8556,
+          "coverage": 0.11864406779661017,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8567,
+          "coverage": 0.0847457627118644,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8579,
+          "coverage": 0.0847457627118644,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.859,
+          "coverage": 0.05084745762711865,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8847,
+          "coverage": 0.03389830508474576,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8968,
+          "coverage": 0.03389830508474576,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        },
+        {
+          "thr": 0.8974,
+          "coverage": 0.01694915254237288,
+          "acc_on_accepted": 1.0,
+          "false_bind": 0.0
+        }
+      ]
+    }
+  },
+  "determinism": {
+    "pairs_with_repeats": 68,
+    "max_top1_score_delta": 0.0
+  }
+}

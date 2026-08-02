@@ -1,0 +1,330 @@
+{
+  "catalog_id": "real_toolret_pos_0037",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Dog_breeds_Get_All_Dog_Breeds",
+      "description": "This endpoint will return back all available dog breeds that are available",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "retention",
+      "description": "Get retention data for the specified video, providing information on how long viewers spend watching the video and at what point they lose interest.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Cash4Life QuickPick",
+      "description": "Generate a quick pick number for the Cash4Life drawing.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "generate_largest_number",
+      "description": "This method takes one argument, 'num_digits', and returns the largest number possible with that many digits.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Terabox_Downloader_Get_Download_Link",
+      "description": "Get Download Link",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "History",
+      "description": "Retrieve historical currency conversion rates for a specific string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_location_by_name_or_zip_code",
+      "description": "Search for a location by name or ZIP code and retrieve the key for the weather forecast.",
+      "params": [
+        "zipcode",
+        "lang",
+        "city"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most_Exclusive_API_exclusiveness_callerID",
+      "description": "Check Exclusiveness. See if you are already exclusive, not yet or you get the exclusivity now.",
+      "params": [
+        "{'name': 'callerID', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kitten",
+      "description": "Generates a random kitten image with the specified width and height.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getControllerOutput",
+      "description": "Retrieve the output of the controller",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_blog_post",
+      "description": "Create a new blog post with specified title and content",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_columns_for_specific_row(data_frame, key_col, value",
+      "description": "def calculate_difference_between_columns_for_specific_row(data_frame, key_col, value_col1, value_col2, key_value):\n    \"\"\"\n    This function takes in a pandas DataFrame, a key column, two value columns, and a key value, and returns the difference between the values of the two value columns for the row with the specified key value.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the data.\n    key_col (str): The column name for the key values.\n    value_col1 (str): The column name for the first value column.\n    value_col2 (str): The column name for the second value c",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.delete_dimension_group_rows",
+      "description": "# Remove the grouping of a set of rows. \nworksheet.delete_dimension_group_rows(start, end)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Videos_Without_Watermark_getPostDetails",
+      "description": "Get video details like video, music, image",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeneralTalker_on_general",
+      "description": "\u3044\u308d\u3044\u308d\u306a\u30dc\u30c3\u30c8\u3067\u3054\u5229\u7528\u3044\u305f\u3060\u3051\u308b\u96d1\u8ac7API\u3067\u3059\u3002\n\n\u4ee5\u4e0b\u306fon_general\u306e\u30ec\u30b9\u30dd\u30f3\u30b9\u4f8b\u3068\u3001\u305d\u306e\u610f\u5473\u3067\u3059\u3002\n```\n{\n\"response\":{\n    \"res\":\"\u304a\u306f\u3088\u30fc\u3054\u3056\u3044\u307e\u3059\"         # \u751f\u6210\u3055\u308c\u305f\u8fd4\u7b54\n    \"user_score\":-2.8724350929260254   # \u30e6\u30fc\u30b6\u30fc\u306e\u767a\u8a71\u306e\u30b9\u30b3\u30a2\n    \"lm\":0.7096909880638123            # \u6587\u7ae0\u306e\u59a5\u5f53\u6027\u30b9\u30b3\u30a2\n    \"mc\":-1.5187406539916992           # \u8fd4\u7b54\u3068\u3057\u3066\u306e\u59a5\u5f53\u6027\u30b9\u30b3\u30a2\n    \"score\":-0.3534274697303772        # \u7dcf\u5408\u30b9\u30b3\u30a2\n    \"history_text\":\"<speaker2>Hello\"   # \u767a\u8a71\u306e\u751f\u6210\u306b\u4f7f\u308f\u308c\u305f\u767a\u8a71\u5c65\u6b74\n    \"res_score_list\":[                 # \u63a1\u7528\u3057\u306a\u304b\u3063\u305f\u8fd4\u7b54\u306e\u30ea\u30b9\u30c8\n        0:[\n            0:\"\u304a\u306f\u3088\u30fc\u3054\u3056\u3044\u307e\u3059\"       # \u8fd4\u7b54\u306e\u5185\u5bb9\n            1:[                          # \u30b9\u30b3\u30a2\uff08\u6587\u7ae0\u306e\u59a5\u5f53\u6027,\u8fd4\u7b54\u3068\u3057\u3066\u306e\u59a5\u5f53\u6027,\u7dcf\u5408\u30b9\u30b3\u30a2\uff09\n                0:0.7096909880638123\n        ",
+      "params": [
+        "{'name': 'user_name', 'type': 'STRING', ",
+        "{'name': 'user_msg_text', 'type': 'STRIN",
+        "{'name': 'bot_name', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEmployeeAttendance",
+      "description": "Retrieve the attendance record of an employee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Avito_Scraper_SingleOffer",
+      "description": "API  that get info for a single offer",
+      "params": [
+        "{'name': 'singleav', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "scanURL",
+      "description": "Scan a URL for viruses.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "morning_time_range",
+      "description": "Determine the specific time range for the morning period",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customShortLink",
+      "description": "Generates a custom short link based on specific user preferences, such as domain type, length, and more.",
+      "params": [
+        "url",
+        "domain",
+        "slug",
+        "title"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Climate Change News",
+      "description": "This endpoint will return back all news about Climate Change from all over the world.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_points_point_forecast",
+      "description": "Forecast data for a point. The DWML format is a temporary format to aid transition and will be sunset at a later date. This response is derrived from the /gridpoints endpoint and is intentionally less structured. If more structure is required, developers should use the /gridpoints endpoint directly. Example: /points/39.0693,-94.6716/forecast",
+      "params": [
+        "{'name': 'point', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kohls_categories_list",
+      "description": "List all available categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "shared_calendar",
+      "description": "Create and share calendar events",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Taobao_Tmall_Product_Detail_Get_1688_product_detail",
+      "description": "Get 1688 product detail",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageSoundAnnotations",
+      "description": "Retrieve sound annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ls",
+      "description": "a tool for getting the contents of a file in a Linux environment",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "legal.caseSummary",
+      "description": "Retrieve a summary of a legal case including basic information and involved parties.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GUID_Generator_Tool_Single_GUID",
+      "description": "Endpoint to retrieve a single GUID, returned as a simple string.\nNo parameters required.\nGET only query.\nReturn content-type is text/plain.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_repair_provider",
+      "description": "Search for repair service providers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Sub Regions",
+      "description": "Retrieve a list of sub-regions for a given region",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "healthData.updateMedicalHistory",
+      "description": "Updates the medical history of a patient in a specified healthcare database. This API allows updating patient data using a unique patient ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "choose_seats_in_each_row",
+      "description": "Chooses the number of seats in each row of a bus from a given list of options",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Subcontrols By Control",
+      "description": "This endpoint returns a list of subcontrols (CCIs) owned by a specified control.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Supported Languages for Image Processing",
+      "description": "This API returns a list of all supported languages for image processing, including their corresponding language codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Tableau",
+      "description": "Used to display visualization charts.",
+      "params": []
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "video_highlight",
+      "description": "Explore, research, and interact with YouTube videos and personal videos.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_168predict_VIP_Football_Predictions_Tomorrow_Sure_VIP_Over_1_5_Goals",
+      "description": "This endpiont delivers tomorrow sure and precise over 1.5 goal forecasts. All of the forecasts have been carefully selected. Visit www.168predict.site for more information.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webtoon_canvas_titles_get_info",
+      "description": "Get comic information\n*To load images, please check the tutorial at https://rapidapi.com/apidojo/api/webtoon/tutorials/how-to-load-images",
+      "params": [
+        "{'name': 'titleNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Song Search",
+      "description": "Searches for a song from popular song platforms. The API will search YouTube for the item by default. Prepend *scsearch:* to the search term to specify a search from SoundCloud, *spsearch:* for Spotify, or *bcsearch:* for BandCamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

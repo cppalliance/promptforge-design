@@ -1,0 +1,102 @@
+{
+  "catalog_id": "seed_near_dupe",
+  "tools": [
+    {
+      "server": "brave_search",
+      "name": "brave_web_search",
+      "description": "Search the web and return relevant results with snippets",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "brave_search",
+      "name": "brave_local_search",
+      "description": "Search for local businesses and places",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "fetch",
+      "name": "fetch",
+      "description": "Fetch a URL and return its content converted to markdown",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "read_file",
+      "description": "Read the complete contents of a file from the local filesystem",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "write_file",
+      "description": "Create a new file or overwrite an existing file with content",
+      "params": [
+        "path",
+        "content"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "get_file_contents",
+      "description": "Read the contents of a file from a GitHub repository",
+      "params": [
+        "owner",
+        "repo",
+        "path"
+      ]
+    },
+    {
+      "server": "postgres",
+      "name": "query",
+      "description": "Run a read-only SQL query against the connected PostgreSQL database",
+      "params": [
+        "sql"
+      ]
+    },
+    {
+      "server": "postgres",
+      "name": "list_tables",
+      "description": "List the tables in the database schema",
+      "params": []
+    },
+    {
+      "server": "postgres",
+      "name": "describe_table",
+      "description": "Show the columns and types of a database table",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "read_query",
+      "description": "Execute a SELECT query on the SQLite database",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "write_query",
+      "description": "Execute an INSERT, UPDATE, or DELETE query",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "list_tables",
+      "description": "List all tables in the SQLite database",
+      "params": []
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "catalog_id": "real_toolret_neg_0071",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Author Ticker Counts",
+      "description": "Retrieve the ticker counts of an author based on their slug",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimeTrades",
+      "description": "Retrieves real-time trade data for a specific security",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flixster_news_list",
+      "description": "List latest news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodName2ID",
+      "description": "This API is to convert a food name to a food ID.",
+      "params": [
+        "{'name': 'food_name', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_possible_values",
+      "description": "This function takes an integer as input and returns a list of all possible values of x that satisfy the equation x^2 = input integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_States_Get_metadata",
+      "description": "Get value lists for common fields.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "VideoEffects.applyEffect",
+      "description": "Adds a visual effect to a video clip over a specified time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "simple_interest",
+      "description": "Calculates the simple interest based on the given principal, rate and time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CheapShark_Game_Deals_List_of_Games",
+      "description": "Get a list of games that contain a given title or matches steamAppID. Response includes the cheapest current deal for each game.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock/get_200day_moving_avg",
+      "description": "Returns the 200-day moving average of a stock's price",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_distance_on_given_gallons",
+      "description": "Calculates the distance that a car can travel on given gallons of gas",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ShopeeApi_Product_details",
+      "description": "Get shopee product details",
+      "params": [
+        "{'name': 'region', 'type': 'string', 'de",
+        "{'name': 'path', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWastewaterTreatmentCapacity",
+      "description": "Retrieve the wastewater treatment capacity of a facility",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IceHockeyApi_MatchStatistics",
+      "description": "This operation returns statistics for a specific ice hockey match, including player statistics and other relevant data.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "uniswap_v2_api_token_id",
+      "description": "Return the info of the Token by the address",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DogBreedDB_Paginated",
+      "description": "Get all dog breed results in a set of 10 per page.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "familyEducation.scheduleTutoring",
+      "description": "Schedule tutoring sessions for family members based on their educational needs and availability.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_colors_on_object(image_patch: ImagePatch, object_name: str, query: str)",
+      "description": "def identify_colors_on_object(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify the colors present on a specific object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for colors.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The colors present on the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        # If no object is found, query the image directly with simple_query instead of r",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "KFC_locations_GET_all_KFC_locations_by_state",
+      "description": "Get all KFC locations by state",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'state', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_QR_Code_Generate_QR_Code",
+      "description": "Generate a beautiful QR Codes with custom logo, colors, gradient effects and styles with ease.",
+      "params": [
+        "{'name': 'format', 'type': 'ENUM', 'desc",
+        "{'name': 'data', 'type': 'STRING', 'desc",
+        "{'name': 'size', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.stemWorkshops",
+      "description": "Fetches a list of available STEM workshops for a specified date and grade level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "problem_resolution_plan",
+      "description": "Create a resolution plan for a specific problem.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Newscatcher_v1_search",
+      "description": "Highly customizable search through our database. All filters and sorting options are allowed.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Hibapress",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0647\u0628\u0629 \u0628\u0631\u064a\u0633",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPolicyDetails",
+      "description": "Retrieve detailed information on a specific government policy measure related to Covid-19.",
+      "params": [
+        "policyId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "accommodation_search",
+      "description": "Search for accommodation options based on destination",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get United States Continued Claims Count",
+      "description": "Retrieve the weekly count of continued claims in the United States, combining Regular, PUA, and PEUC claims.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Estimated Earnings Announces API",
+      "description": "Get estimated earnings announces for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "geneticAlgorithm",
+      "description": "Run a genetic algorithm to optimize a given problem",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Pizzas",
+      "description": "This API returns a list of all pizzas available in the system, along with their details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Funding Rate History",
+      "description": "Retrieve the funding rate history for a specific symbol and time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "dpt-large-redesign",
+      "description": "A depth estimation model based on the DPT architecture.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Continents",
+      "description": "Retrieve a list of continents in the world, along with their corresponding codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "forex_trend_analysis",
+      "description": "Analyzes and predicts future trends for a specified currency pair using historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Onboarding_Project_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_test_app_deepfry_get",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_soccer_team_names_First_25_teams",
+      "description": "You'll get only the first 25 team names and their short names if you have basic plan.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "COVID_19_Economic_Impact_United_States_Small_Businesses_Revenue",
+      "description": "Get daily United States 7 day moving average percentage change of small businesses revenue seasonally adjusted relative to January 4 - 31, 2020.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTenderDetails",
+      "description": "Get detailed information on individual tenders such as the type of procurement, deadlines, and budget.",
+      "params": [
+        "tenderId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Financial_Modeling_Prep_Companies_Profile",
+      "description": "This API returns companies profile (Price,Beta,Volume Average, Market Capitalisation, Last Dividend, 52 week range, stock price change, stock price change in percentage, Company Name, Exchange, Description, Industry,Sector,CEO,Website and image).",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    }
+  ]
+}

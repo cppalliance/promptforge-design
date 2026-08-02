@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_pos_0016",
+  "tools": [
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_process_prescription_upload",
+      "description": "COMPLETELY FIXED prescription processing with proper grouping",
+      "params": [
+        "image_file",
+        "llama_endpoint"
+      ]
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themergenerate_theme",
+      "description": "Generate a complete theme JSON configuration with intelligent color harmonies.",
+      "params": [
+        "theme_name",
+        "primary_color",
+        "theme_style",
+        "accent_color"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_get_virus_total_url_info",
+      "description": "Get URL Info from VirusTotal URL Scanner. Scan URL is not available.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpsearch_memory",
+      "description": "Universal memory search interface with performance comparison in dual mode.",
+      "params": [
+        "query",
+        "client_id",
+        "memory_name",
+        "top_k"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_list_directory_contents",
+      "description": "Lists contents of a directory in the sandbox. Useful for exploring sandbox filesystem structure, verifying file operations, debugging file-related issues, and managing sandbox content. Returns: JSON string containing list of directory contents",
+      "params": [
+        "sandbox_id",
+        "path"
+      ]
+    },
+    {
+      "server": "gradio-eth-mcp",
+      "name": "gradio_eth_mcp_get_tx_info_ui",
+      "description": "Gradio wrapper for transaction info",
+      "params": [
+        "tx_hash"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getLastFrame",
+      "description": "Extracts the very last frame from a video file using a precise method with ffprobe and ffmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_create_table_from_query",
+      "description": "### `create_table_from_query(table_name: str, source_query: str)`",
+      "params": [
+        "table_name",
+        "source_query"
+      ]
+    },
+    {
+      "server": "11ku7-ai-mcpcoder",
+      "name": "_11ku7_ai_mcpcoder_update_openai_inputs",
+      "description": "Update base URL and model inputs based on provider selection.",
+      "params": [
+        "provider"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "SmartEnterpriseMCPAgents",
+      "name": "SmartEnterpriseMCPAgents_mcphawk_get_employee_leave_balance",
+      "description": "Returns the current leave balances for a given employee (India-specific). This tool retrieves leave balance details for an individual employee based in India for the current calendar year. The data includes available days across different leave types (e.g., sick leave, earned leave, paternity leave), and is loaded from the predefined CSV file `sample-data/employee_leave_balances.csv`. Note: This tool is intended only for *India-based employees*. It should not be used for employees located in other countries. HR teams managing India operations or evaluating India leave data can use this to view an employee's current leave status. **Input:** - `employee_name` (str): Full name of the employee (case-insensitive matching recommended when implementing full system) **Returns:** A dictionary containing: - `employee_name`: The name of the employee - `year`: The current year - `leave_balances`: A dictionary of leave types and their available days, e.g.: { \"sick_leave\": {\"available_days\": 4, \"note\": \"Refer to policy for applicability.\"}, \"paternity_leave\": {\"available_days\": 10, \"note\": \"Refer to policy for applicability.\"} } If the employee is not found, a fallback message is returned in place of `leave_balances`. **Example Response:** { \"employee_name\": \"Amit Sharma\", \"year\": 2025, \"leave_balances\": { \"sick_leave\": {\"available_days\": 6, \"note\": \"Refer to policy for applicability.\"}, \"earned_leave\": {\"available_days\": 12, \"note\": \"Refer to policy for applicability.\"} } }",
+      "params": [
+        "employee_name"
+      ]
+    },
+    {
+      "server": "AI-Marketing-Content-Creator",
+      "name": "AI_Marketing_Content_Creator_social_media_generation",
+      "description": "Generate images for multiple social media platforms with correct resolutions",
+      "params": [
+        "prompt",
+        "platforms",
+        "num_steps"
+      ]
+    },
+    {
+      "server": "db-mcp",
+      "name": "db_mcp_save_database_url",
+      "description": "Save the database URL to state",
+      "params": [
+        "db_url"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_shipping_info",
+      "description": "Get shipping options, costs, and delivery timeframes.",
+      "params": [
+        "destination_country",
+        "order_value"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_today_date",
+      "description": "MCP function to get today's date Returns today's date in YYYY-MM-DD format",
+      "params": []
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "AgenticClaimVerificationSystem",
+      "name": "AgenticClaimVerificationSystem_verify_claim",
+      "description": "Use this tool to verify a claim",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "daggerheart-card-reflavor-generator",
+      "name": "daggerheart_card_reflavor_generator_generate_daggerheart_card",
+      "description": "Generate a full Daggerheart domain card image with illustration and layout. Returns: Path to the generated card image.",
+      "params": [
+        "card_title",
+        "image_description"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_search_news_interface",
+      "description": "Search for recent news articles based on provided keywords. Returns: A JSON-formatted string containing the total number of results and a list of matched articles.",
+      "params": [
+        "keywords",
+        "limit",
+        "date_from_input"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_play_chess",
+      "description": "Play a move in a chess game. Instructions for LLMs: Prerequisites: - User must be asked if they want to play as white or black. - If user chooses black, pass an empty string in the first move (for the engine to play as white). - If the user chooses white, LLMs must ask the user for a move and pass it in the first move (for the engine to play as black). - User must be asked if they want a board drawn. - If they do, pass `draw_board=True` to this function. - If they do not, pass `draw_board=False`. - If a move is provided, it must be in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\"). To start a new game: - Pass empty string for fen. - Pass empty string for engine to play as white. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play as black. To coninue a game: - Pass the FEN string representing the board state prior to the user's last move. - Pass a move in long algebraic notation (e.g., \"e4\", \"Nf3\", \"Bb5\") for engine to play the next move. About rendering: - LLMs must use ascii as render_mode unless otherwise specified by user. While rendering ascii, LLMs must use monospaced font. - LLMs must explicitly pass render_mode = \"ascii\" to this function if they want to render the board in ASCII format. Returns: The best move played by the engine, the updated board state in FEN notation, and  a board representation if draw_board is True else None.",
+      "params": [
+        "move",
+        "fen",
+        "draw_board",
+        "render_mode"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_edit_image_with_gemini",
+      "description": "Edits an image using Gemini 2.0 Flash Preview Image Generation by applying a prompt to a reference image. This is typically used to generate a background scene behind a subject (e.g., a person or object with background removed), in preparation for video generation. The prompt should clearly describe the desired environment or context **without altering the subject itself**. For example: \"Place this car in the desert of Mars, but do not change the car.\". Returns: Path to the generated image (temporary file used for Gradio display or further processing).",
+      "params": [
+        "path",
+        "prompt",
+        "output_path"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_calculate",
+      "description": "Performs basic arithmetic operations between two numbers. This function takes two numbers and an operator as input and returns the result of the arithmetic operation. Supported operations are addition (+), subtraction (-), multiplication (*), and division (/). For division, checks for division by zero. Returns: Result of the arithmetic operation if valid, \"Error\" if invalid operation (like division by zero), , >>> calculate(10, \"+\", 5), 15, >>> calculate(10, \"/\", 0), \"Error\"",
+      "params": [
+        "n1",
+        "op",
+        "n2"
+      ]
+    },
+    {
+      "server": "SmartLedger",
+      "name": "SmartLedger_process_dual_upload",
+      "description": "Process both image and CSV files and reconcile transactions",
+      "params": [
+        "image_file",
+        "csv_file"
+      ]
+    },
+    {
+      "server": "novel-heroes",
+      "name": "novel_heroes_get_book_content",
+      "description": "Get the content of a book. Returns: The content of the book, or an error message if the book is not found.",
+      "params": [
+        "book_name",
+        "max_length"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_process_story_generation",
+      "description": "Process the story generation request from the UI.",
+      "params": [
+        "story_type",
+        "tone",
+        "kid_interests",
+        "subject",
+        "kid_age",
+        "kid_language",
+        "reading_time",
+        "pdf_file",
+        "model_selector"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_remove_background_image",
+      "description": "Edit a local image file using the 'Remove Background' method. Optionally save result. Returns: The edited image (PIL.Image) with background removed.",
+      "params": [
+        "path",
+        "output_path"
+      ]
+    },
+    {
+      "server": "ai-image-video-mcp-server",
+      "name": "ai_image_video_mcp_server_upscale_image_preferred",
+      "description": "Edit a local image file using the 'Tile Upscaler' method. This is the preferred upscale method. Optionally save the result. Returns: The upscaled image (PIL.Image) generated using ControlNet + RealESRGAN.",
+      "params": [
+        "path",
+        "output_path",
+        "resolution",
+        "steps",
+        "strength",
+        "hdr",
+        "guidance"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_refresh_patients",
+      "description": "Refresh patients table with latest data for given page",
+      "params": []
+    },
+    {
+      "server": "T2I",
+      "name": "T2I_text_to_images_and_base64_generator",
+      "description": "Converts text into images, returning both PIL objects for UI preview and base64 strings for an API/MCP client, with customizable options.",
+      "params": [
+        "text_content",
+        "style",
+        "font_size",
+        "bg_color_name",
+        "aspect_ratio_str",
+        "font_choice"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_list_mountains",
+      "description": "Retrieve mountains, optionally filtered by elevation range. This function returns mountains, with optional filtering based on their elevation. If no elevation filters are provided, all mountains are returned. Returns: JSON string containing mountain information in the format:, [, {, str,, int,, int,, str, }, ], , >>> get_list_mountains(14000, 14500)  # With elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}]', >>> get_list_mountains()  # Without elevation filters, \"Mount Elbert\", \"Rank\": 1, \"Altitude\": 14433, \"Mountain_Range\": \"Sawatch Range\"}, ...]'",
+      "params": [
+        "min_elevation",
+        "max_elevation"
+      ]
+    },
+    {
+      "server": "rss-mcp-server",
+      "name": "rss_mcp_server_get_feed",
+      "description": "Gets RSS feed content from a given website. Can take a website or RSS feed URL directly, or the name of a website. Will attempt to find RSS feed and return title, summary and link to full article for most recent n items in feed. This function is slow and resource heavy, only call it when the user wants to check a feed for new content, or asks for content from a feed that you have not retrieved yet.",
+      "params": [
+        "website"
+      ]
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_check_model_status_session",
+      "description": "Check and display current model availability for specific session",
+      "params": []
+    },
+    {
+      "server": "gradio-themer",
+      "name": "gradio_themersetup_package",
+      "description": "Install and verify the gradio-themer package is available and working. Returns: Dict[str, Any]: Status information about package installation",
+      "params": []
+    },
+    {
+      "server": "Quantaliz-MCP-MicroPayments",
+      "name": "Quantaliz_MCP_MicroPayments_get_sui_balance",
+      "description": "Retrieves the SUI balance for a given address using the Sui blockchain.",
+      "params": [
+        "wallet_address"
+      ]
+    },
+    {
+      "server": "MatchMaiker",
+      "name": "MatchMaiker_get_profile",
+      "description": "Gets a user's full profile. Requires X-Auth-ID header for authentication. Access is free for viewing one's own profile. Accessing another user's profile costs $0.10 and requires X-AGENTPAY-API-KEY.",
+      "params": [
+        "profile_id_to_get"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_s2_citations",
+      "description": "Get all papers that cited a given arXiv paper based on Semantic Scholar info. Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"arxiv_id\", \"external_ids\", \"title\", \"authors\", \"venue\", \"citation_count\", \"publication_date\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "arxiv_id",
+        "offset",
+        "limit"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_get_product_care_info",
+      "description": "Get care instructions and maintenance information for products.",
+      "params": [
+        "product_category",
+        "material"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_neg_0120",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Random_Word_by_API_Ninjas_v1_randomword",
+      "description": "API Ninjas Random Word API endpoint. Returns a random word.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Golf_Course_Finder_Get_Courses",
+      "description": "This endpoint will return courses within a mile radius of the passed latitude and longitude",
+      "params": [
+        "{'name': 'lng', 'type': 'STRING', 'descr",
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lat', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "WordGenerator",
+      "description": "You can generate Word documents based on the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chartbeat_Live_Top_Pages_v3",
+      "description": "Returns a list of pages, ordered by which ones have most visitors right now. This call returns real-time data.",
+      "params": [
+        "{'name': 'host', 'type': 'STRING', 'desc",
+        "{'name': 'jsonp', 'type': 'STRING', 'des",
+        "{'name': 'limit', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reserve_flight_ticket",
+      "description": "Reserve a flight ticket and select options that allow free cancellation or changes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cat Facts",
+      "description": "Get a random fact about cats",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submit_password_change",
+      "description": "Submit password change request",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Matrix API",
+      "description": "Computes the duration of the fastest route between all pairs of supplied coordinates. Returns the durations or distances or both between the coordinate pairs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ask_t_user",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Minecraft_UUID_Converter_UUID_to_Name",
+      "description": "Convert your Mineccraft UUID to a Name",
+      "params": [
+        "{'name': 'uuid', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Search",
+      "description": "This endpoint allows you to search for specific states by name. It returns a list of states that match the specified search query. You can also set country code or country name to search states in that country only.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_further_contents",
+      "description": "Get detailed results from retrievaled URL.",
+      "params": [
+        "{'name': 'request_url', 'schema': {'type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "livescores",
+      "description": "Retrieve a list of current soccer live scores",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVenueTips",
+      "description": "Retrieve tips and recommendations for a specific venue.",
+      "params": [
+        "venueId",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scienceCommunication.effectivePresentation",
+      "description": "Provides guidelines and templates for creating effective scientific presentations based on the audience type and presentation context.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_Tuesday_Friday",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the cups sold on Tuesday and Friday.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Student Messages",
+      "description": "Retrieve messages from a student in the colegiosantaana tool",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "historical_get",
+      "description": "Get historical exchange rate data for a specific date.",
+      "params": [
+        "api_key",
+        "base",
+        "date",
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pottery.kiln_firing_schedule",
+      "description": "Creates a firing schedule for pottery items based on material and desired finish.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getStationCategories",
+      "description": "Retrieve information about station categories.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Search_company_by_Name",
+      "description": "Search for a company by parameters will return a list of companies that match your query",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getEmailAttachments",
+      "description": "Retrieves the attachments of a forwarded email.",
+      "params": [
+        "emailId",
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_absolute_difference_between_two_entities(df, entity_col, value_col, en",
+      "description": "def calculate_absolute_difference_between_two_entities(df, entity_col, value_col, entity1, entity2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values, and returns the absolute difference in values between two specified entities.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing entities and their values.\n    entity_col (str): The column name for the entities.\n    value_col (str): The column name for the values.\n    entity1 (str): The name of the first entity.\n    entity2 (str): The name of the second entity.\n    \n    Retu",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "exact_url_non_english",
+      "description": "Retrieves the backlinks of a specific non-English URL using the RapidAPI service.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageSoundAnnotations",
+      "description": "Retrieve sound annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "export_transactions",
+      "description": "Export bank account transactions within a specified time range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_symbol_search_endpoint",
+      "description": "The Search Endpoint returns the best-matching symbols and market information based on keywords of your choice.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getdomaintech",
+      "description": "Retrieves technology information for a given domain using the Runs Tech API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chess_Puzzles_v2_range",
+      "description": "Get random puzzles within a specified rating range",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "MemoryOptimizer",
+      "description": "manages virtual memory settings.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football League Overall Top Team",
+      "description": "Retrieve the top teams of a specific football league for a given tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_type_price_get_fee_level",
+      "description": "Get fee level as displayed in the Price tab",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc",
+        "{'name': 'securityId', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_possible_values",
+      "description": "This function takes an integer as input and returns a list of all possible values of x that satisfy the equation x^2 = input integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Local_Rank_Tracker_Calculate_Grid_Coordinate_Points",
+      "description": "Get all grid coordinate points based on a center geocoordinate point and distance arguments.",
+      "params": [
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lng', 'type': 'STRING', 'descr",
+        "{'name': 'grid_size', 'type': 'STRING', ",
+        "{'name': 'lat', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2)",
+      "description": "def calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2):\n    \"\"\"\n    This function takes in a pandas DataFrame, a row identifier, and two column names, and returns the difference in values between the two columns for the specified row.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing various data.\n    id_col (str): The column name for the row identifiers.\n    row_id (str): The identifier for the row.\n    col1 (str): The name of the first column.\n    col2 (str): The name of the second column.\n    \n    Returns:\n    int: The difference in values between",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Car_Utils_Estimate_Market_Value",
+      "description": "Estimate market value of the car with specified VIN.",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCSRInfo",
+      "description": "Retrieve information about a company's corporate social responsibility efforts",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SongMeanings_comments_get",
+      "description": "Get comments from our database for a specific song.",
+      "params": [
+        "{'name': 'artist_name', 'type': 'STRING'",
+        "{'name': 'lyric_title', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "QuantitativeAnalyzer",
+      "description": "used to analyze quantitative data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "current_Neather",
+      "description": "Current weather or realtime weather API method allows a user to get up to date current weather information in json and xml. The data is returned as a Current Object which contains current or realtime weather information for the given city",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

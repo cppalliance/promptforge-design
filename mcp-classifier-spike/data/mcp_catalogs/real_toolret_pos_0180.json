@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_toolret_pos_0180",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Restaurant Locations",
+      "description": "Retrieve a list of restaurant locations near a given location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Daily Match List",
+      "description": "Retrieve a list of daily matches including scheduled, live, and finished matches. The API returns data for a specified string range within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEC_Filings_Income",
+      "description": "Returns a company's most recent income statement detailing what they earn for providing their goods and services OR a statement of loss explaining where lost income occurred",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "qr_code_v8_QR_Code",
+      "description": "For example:\nhttp://owatheowais.pythonanywhere.com//qr?url=https://www.google.com",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_alerts_alertId_notifications",
+      "description": "Get notifications of all users by alert id.",
+      "params": [
+        "{'name': 'alertId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_PlayerStatisticsSeasons",
+      "description": "Get the statistics seasons for a specific baseball player using the player ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hot Latin Songs API",
+      "description": "Provide the Greatest of All Time Hot Latin Songs chart information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_CAPTIVE_PORTALS",
+      "description": "READ CAPTIVE PORTALS",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/user/contributions/",
+      "description": "User Contributions (all)",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'next_cursor', 'in': 'optional'",
+        "{'name': 'per_page', 'in': 'optional', '",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Crypto Asset by ID",
+      "description": "Retrieve a random fake crypto asset by its unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Custom Blacklisted IPs",
+      "description": "Retrieve a list of custom blacklisted IPs from ClickMeter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Advanced_SERP_Operators_find_competition_mentions",
+      "description": "Find PR opportunities by finding competitor mentions",
+      "params": [
+        "{'name': 'keywords', 'type': 'STRING', '",
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_TeamofTheWeek",
+      "description": "Team of The Week",
+      "params": [
+        "{'name': 'uniqueTournamentId', 'type': '",
+        "{'name': 'seasonId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_object_perspective(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def get_object_perspective(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the perspective from which an object is viewed.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for perspective.\n       \n    Returns:\n        str: The perspective from which the object is viewed.\n    '''\n    perspective_query = f\"From what perspective are we viewing the {object_name}?\"\n    perspective = image_patch.simple_query(perspective_query)\n    return perspective",
+      "params": []
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Instruct Image Using Text",
+      "description": "useful when you want to the style of the image to be like the text. like: make it look like a painting. or make it like a robot. The input to this tool should be a comma separated string of two, representing the image_path and the text.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_search_enterprise",
+      "description": "Perform a highly customizable search through the enterprise database with various filters and sorting options.",
+      "params": [
+        "q",
+        "link_begins_with",
+        "sort_by",
+        "topic",
+        "to",
+        "to_rank",
+        "from_rank",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "maya.modify_material_properties",
+      "description": "Modifies the properties of a material in Autodesk Maya.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Quotes_v4_Get_quotes_by_anime_title",
+      "description": "Get quotes by anime title",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "League Cup Trees",
+      "description": "This API retrieves cup trees for a specific league in a given season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_by_postcode",
+      "description": "Fetch addresses for a given UK postcode using the \"Find By PostCode\" API.",
+      "params": [
+        "postcode"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sheldonxxxx/OFA_model_weights",
+      "description": "This is an unoffical mirror of the model weights for use with https://github.com/OFA-Sys/OFA. The original link is too slow when downloading from outside of China.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Codes",
+      "description": "Returns a list of language codes in ISO 639-1 format, which can be used for language detection and translation purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Exchanges",
+      "description": "Retrieve a list of cryptocurrency exchanges",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCityPopulation",
+      "description": "This API is to get the population of a specific city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "algebra.matrixOperations",
+      "description": "Performs specified operations on matrices, such as addition, multiplication, or inversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Auction Listings",
+      "description": "This API returns a list of auction listings from the Database domain, called by the gsaauction tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "jokes_categories_get",
+      "description": "Retrieve a list of available categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airbnb_v2_Search_Property_By_GEO_Co_Ordinates_Deprecated",
+      "description": "-",
+      "params": [
+        "{'name': 'neLng', 'type': 'NUMBER', 'des",
+        "{'name': 'neLat', 'type': 'NUMBER', 'des",
+        "{'name': 'swLng', 'type': 'NUMBER', 'des",
+        "{'name': 'swLat', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_verifier",
+      "description": "Verifies the validity of an email address using the Toolbench RapidAPI service.",
+      "params": [
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GitHub Username Checker",
+      "description": "Check if a username is available on GitHub",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "JavaScript Jobs API",
+      "description": "Retrieve a list of job openings related to JavaScript programming in the USA.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stations",
+      "description": "Retrieve the nearest electric vehicle charging stations within a specified distance.",
+      "params": [
+        "distance",
+        "longitude",
+        "latitude"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_Liked_Posts",
+      "description": "Liked Posts API",
+      "params": [
+        "{'name': 'userId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "languageLearning.findPartner",
+      "description": "Connects users with language learning partners based on language interest and proficiency level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "news/get-details",
+      "description": "Retrieve detailed news information from the Schwab tool in the Finance domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kick_com_API_Kick_API_Get_Channel_Emotes",
+      "description": "Get Channel Emotes",
+      "params": [
+        "{'name': 'channel_name', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_emotional_state(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def determine_emotional_state(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the emotional state of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for emotional state.\n       \n    Returns:\n        str: The emotional state of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # If no object is found, raise an error\n    if len(object_patches) == 0:\n        raise ValueError(f\"{object_name} not found in image.\")\n    object_patch = o",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TrueWay_Places_FindPlaceByText",
+      "description": "Search for places by text string",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pizzaallapala_Get_Producto_Promo",
+      "description": "Adsa",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ICON Balance",
+      "description": "This endpoint returns the ICON balance of a specified address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

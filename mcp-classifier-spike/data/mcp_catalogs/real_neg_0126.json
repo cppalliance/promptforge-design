@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_neg_0126",
+  "tools": [
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_class_diagram",
+      "description": "Generates a class diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_handle_video_upload",
+      "description": "Validates an uploaded MP4 file, saves it to a temporary directory, and controls the visibility of UI components based on validation success.",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpset_storage_mode",
+      "description": "Set storage mode for runtime configuration.",
+      "params": [
+        "mode",
+        "client_id"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "CafChem-Vibrations",
+      "name": "CafChem_Vibrations_calc_vibrations",
+      "description": "Calculate the vibrational frequencies of a molecule using the META UMA MLIP, starting from a SMILES string. Returns: The vibrational frequencies of the molecule in cm-1, the low, frequency motions (typically corresponding to translation or, rotation), and the number of imaginary frequencies in a text string",
+      "params": [
+        "smile",
+        "struct_type"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn_file",
+      "description": "Annotate a chess game from a PGN file. This function takes a PGN file and annotates the chess game using an engine. Instructions for LLMs: - LLMs must not use this function. Use the string-based `annotate_pgn` instead.",
+      "params": [
+        "file",
+        "depth_level",
+        "style"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_reverse",
+      "description": "Reverse the playback direction of an audio file. This function loads an audio file and reverses the audio data so that it plays backwards. This creates a reverse playback effect commonly used for artistic purposes, sound design, or audio analysis. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, reversed_audio_data: array), for the reversed audio result, or None if an error occurred, Second element: A status message string indicating successful reversal, or error information, , result, status = apply_reverse(\"url/to/audio.mp3\"), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Reverses the entire audio file from end to beginning, Preserves original sample rate, duration, and audio quality, Commonly used for creative effects, sound design, or subliminal messaging detection, The reversed audio will have the same duration as the original, All audio characteristics (pitch, timbre) are preserved but played backwards, Works with both mono and stereo audio files",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_qa_reply",
+      "description": "MCP Endpoint: qa.reply Drafts concise answers to client questions like \"Why should we hire you?\" Speeds up Upwork, Fiverr, or LinkedIn chats.",
+      "params": [
+        "user_id",
+        "question",
+        "context"
+      ]
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_getFirstFrame_",
+      "description": "Extracts the first frame from an MP4 video file using FFmpeg. Returns: The path to the extracted JPEG image frame, or an error message string.",
+      "params": [
+        "video_path"
+      ]
+    },
+    {
+      "server": "NewsShots",
+      "name": "NewsShots_text_to_audio_interface",
+      "description": "Convert a short piece of text to speech using an AI text-to-audio model. Provide all the news in one call instead of making multiple separate calls. This helps improve the quality and flow of the speech output. Returns: , str: A JSON-formatted string with metadata about the generated audio., str | None: Filepath to the generated audio file (MP3), or None if generation failed.",
+      "params": [
+        "text",
+        "use_music",
+        "auto_play"
+      ]
+    },
+    {
+      "server": "magical-tales",
+      "name": "magical_tales_process_story_generation",
+      "description": "Process the story generation request from the UI.",
+      "params": [
+        "story_type",
+        "tone",
+        "kid_interests",
+        "subject",
+        "kid_age",
+        "kid_language",
+        "reading_time",
+        "pdf_file",
+        "model_selector"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_format_all_views_from_state_",
+      "description": "UI-only function to formats histories for visual components.",
+      "params": []
+    },
+    {
+      "server": "Travel_Documentation_MCP",
+      "name": "Travel_Documentation_MCP_get_requirements",
+      "description": "Analyze the documentation requirment for user's travel plan. Returns: Contains the comprehensive documentation requires and suggestions based on the user input",
+      "params": [
+        "from_country",
+        "to_country",
+        "trip_duration",
+        "trip_purpose"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_minmax_process",
+      "description": "Analyzes local pixel value deviations in an image to detect potential manipulation by comparing each pixel with its neighbors. This forensic technique helps identify areas where pixel values deviate significantly from their local context, which can indicate digital tampering or editing. Returns: The processed image showing minmax deviations., , If the input image is invalid or channel/radius parameters are out of valid range.",
+      "params": [
+        "image",
+        "channel",
+        "radius"
+      ]
+    },
+    {
+      "server": "smolSWE",
+      "name": "smolSWE__update_space_id_and_agents",
+      "description": "Handles space_id change, cleans up old temp dir, creates new, and re-initializes agents.",
+      "params": [
+        "new_space_id"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_game_details",
+      "description": "Get detailed information for one or more board games. Returns: Detailed game information including mechanics, categories, ratings, etc.",
+      "params": [
+        "game_ids"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "consilium_mcp",
+      "name": "consilium_mcp_update_session_api_keys",
+      "description": "Update API keys for THIS SESSION ONLY",
+      "params": [
+        "mistral_key",
+        "sambanova_key"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_clear_fog",
+      "description": "Clear the fog of war from the entire map.",
+      "params": [
+        "tab_id"
+      ]
+    },
+    {
+      "server": "14ers-mcp",
+      "name": "_14ers_mcp_get_weather_data",
+      "description": "Get weather data for a specific mountain using the National Weather Service API. This function retrieves current conditions and forecast data for a mountain using its latitude and longitude coordinates. The data is fetched from the National Weather Service API and includes temperature, wind conditions, and detailed forecasts. Returns: JSON string containing weather data in the format:, {, {, int,, str,, str,, str,, str, },, [, {, str,, int,, str,, str,, str,, str, }, ], }, , If there's an error fetching data from the API, For any other errors during data processing, , >>> get_weather_data(\"Mount Elbert\"), {\"temperature\": 45, \"wind_speed\": \"10 mph\", \"wind_direction\": \"NW\", \"short_forecast\": \"Sunny\", \"detailed_forecast\": \"Clear skies\"}, \"forecast\": [{\"name\": \"Tonight\", \"temperature\": 35, \"wind_speed\": \"5 mph\", \"wind_direction\": \"W\", \"short_forecast\": \"Clear\", \"detailed_forecast\": \"Clear skies\"}]}'",
+      "params": [
+        "mountain_name"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_use_preview_in_chat",
+      "description": "Gunakan isi file preview sebagai prompt untuk chatbot.",
+      "params": [
+        "chat_history"
+      ]
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_update_file_explorer_2",
+      "description": "Don't need to be used by LLMs, but useful for the interface to update the file explorer",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "GPXRunnerTools",
+      "name": "GPXRunnerTools_mcp_detect_intervals",
+      "description": "Detects effort and recovery intervals using pace-based z-score logic. Returns: A dictionary containing:, intervals (list): List of detected intervals (type, start, end, duration, avg pace), method (str): Detection method used, baseline_pace_min_per_km (float): Median baseline pace used, total_effort_blocks (int): Number of detected effort intervals, total_blocks (int): Total intervals (effort + recovery), expected_repetitions (int): Provided expected number, if any, match_expectation (bool): Whether the number of efforts matches the expected count",
+      "params": [
+        "file",
+        "mode",
+        "threshold_ratio",
+        "min_effort",
+        "min_recovery",
+        "window",
+        "expected_reps"
+      ]
+    },
+    {
+      "server": "synapse-mcp-memory-server",
+      "name": "synapse_mcp_memory_server_search_memory",
+      "description": "Search memories and return results.",
+      "params": [
+        "query",
+        "memory_type",
+        "limit"
+      ]
+    },
+    {
+      "server": "ShallowCodeResearch",
+      "name": "ShallowCodeResearch_agent_llm_processor",
+      "description": "Wrapper for LLMProcessorAgent to process text with LLM. Returns: LLM processing result with output and metadata",
+      "params": [
+        "text_input",
+        "task",
+        "context"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpcreate_hf_dataset",
+      "description": "Create a new HuggingFace dataset for memory storage.",
+      "params": [
+        "dataset_name",
+        "private",
+        "description"
+      ]
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_flights",
+      "description": "Search for flights using Google Flights API via SerpAPI. This function retrieves flight information including prices, schedules, and airport details for a given route and date range. Returns: A dictionary containing flight search results including:, Price insights, Best flight options, Airport information, Flight schedules",
+      "params": [
+        "departure_id",
+        "arrival_id",
+        "outbound_date",
+        "return_date",
+        "currency"
+      ]
+    },
+    {
+      "server": "self-improving-ai-mcp-server",
+      "name": "self_improving_ai_mcp_server_end_agent_tracing",
+      "description": "End tracing an AI agent execution. Call this at the end of any agent workflow. Returns: JSON response with completion status",
+      "params": [
+        "execution_id",
+        "agent_name",
+        "api_key"
+      ]
+    },
+    {
+      "server": "ThinkSquare",
+      "name": "ThinkSquare_annotate_pgn",
+      "description": "Annotate a chess game with engine analysis. This function takes a chess game (PGN) in string format. Instructions for LLMs: - Do not send the file name or file path as an arument. - LLMs must send the chess game in PGN format as a string. - If the user provides a file, read the file and extract the PGN content. - LLMs should display the annotated game in a Markdown code block with the label \"Annotated PGN\". Returns: The annotated game in PGN format as a string.",
+      "params": [
+        "pgn_input",
+        "analysis_time_per_move",
+        "style"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpget_storage_info",
+      "description": "Get storage handler information and connection status. Returns: str: JSON string with storage information",
+      "params": []
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_sentiment_analysis",
+      "description": "Analyze the sentiment of the given text using TextBlob.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "mindbody-mcp-server",
+      "name": "mindbody_mcp_server_get_training_types",
+      "description": "Fetch human-readable list of class description names.",
+      "params": [
+        "location_id"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_recommend_dosing_weight_mcp",
+      "description": "Recommends the most appropriate weight to use for medication dosing calculations (i.e., actual, ideal, or adjusted body weight) based on the patient's actual weight and height. This is crucial for obese or underweight patients, as using the wrong weight can lead to sub-therapeutic or toxic drug levels for certain medications. Returns: JSON string with dosing weight recommendation and rationale",
+      "params": [
+        "actual_weight",
+        "height_cm",
+        "is_male"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_login_user",
+      "description": "Handles login logic. Returns final username, channel, unformatted history, and roundtable state.",
+      "params": [
+        "channel",
+        "username"
+      ]
+    },
+    {
+      "server": "hermes",
+      "name": "hermes_activate_monitoring",
+      "description": "TOOL: Activate periodic monitoring for a validated API configuration. PURPOSE: Start automated recurring API calls based on a previously validated configuration. This is STEP 2 of the monitoring setup process. PREREQUISITE: Must call validate_api_configuration() first and obtain a config_id from successful validation. Make sure that the sample_response is what you expect to see before proceeding with this function. WORKFLOW: 1. First call validate_api_configuration() to get config_id 2. If validation successful, call this function with the config_id 3. Monitoring will run automatically according to the validated schedule ARGUMENTS: - config_id: The ID from successful validate_api_configuration() execution (required) - mcp_api_key: User's MCP API key for verification (must match validation step). Input Examples: 1. Activate scheduler for stock monitoring: config_id: 123456789 mcp_api_key: \"your_mcp_key_here\" 2. Activate scheduler for weather alerts: config_id: 987654321 mcp_api_key: \"your_mcp_key_here\" NOTE: The config_id must be obtained from a successful validate_api_configuration() response. The mcp_api_key must match the one used during validation. Returns: Dictionary with success status and scheduling details, , {, True,, \"Scheduler activated for 'NVDA Stock Price'\",, 123,, 20,, \"2025-06-11T12:00:00Z\",, \"2025-06-04T12:20:00Z\", }, If config_id not found or invalid, returns success=False with error message",
+      "params": [
+        "config_id",
+        "mcp_api_key"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dhc_semantic_search",
+      "description": "Perform a semantic search on the 2020 Census Demographic and Housing Characteristics File (DHC) housed at https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/demographic-and-housing-characteristics-file-and-demographic-profile/2020census-demographic-and-housing-characteristics-file-and-demographic-profile-techdoc.pdf. Returns: The semantically related documents",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_load_saved_credentials",
+      "description": "Charge les credentials sauvegard\u00e9s",
+      "params": []
+    },
+    {
+      "server": "CafChem-ADME",
+      "name": "CafChem_ADME_calc_adme",
+      "description": "Calculate the ADME properties of a molecule from a SMILES string. These properties, covering absorption, distribution, metabolism, and excretion, describe how a drug is transported and is processed by the body. They should follow Lipinkski's rule of 5 for a viable drug. Returns: The qualitative estimate of drug-likeness (QED), the molecular weight, the, distribution coefficient (aLogP), the number of hydrogen bond donors,, the number of hydrogen bond acceptors, the polar surface area,the number, of rotatable bonds, the number of aromatic rings, and the number of undesireable, moieties all in a text string., An image of the molecule.",
+      "params": [
+        "smile"
+      ]
+    }
+  ]
+}

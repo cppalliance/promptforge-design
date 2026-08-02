@@ -1,0 +1,344 @@
+{
+  "catalog_id": "real_toolret_pos_0049",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "generate_signature",
+      "description": "Generates a signature for a given TikTok API URL using the specified RapidAPI key.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DepositRiskAssessment.performAssessment",
+      "description": "Performs a risk assessment on a series of bank deposits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "CorpusCollector",
+      "description": "for collecting a corpus of texts",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_stock_v2_key_stats_get_financial_health",
+      "description": "Get key stats financial health in the Valuation tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Logo",
+      "description": "Returns logo of the company.\n\nAvailability: Basic plan\nData weighting: 1 API credit per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DetermineTemperatureType",
+      "description": "This API is to determine the type of temperature (Hot, Mild, Cold) based on the current temperature.",
+      "params": [
+        "{'name': 'temperature', 'in': 'query', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Plant Information",
+      "description": "Retrieve detailed information about a specific plant type, including its characteristics, growth habits, and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "result_statistics",
+      "description": "Retrieves the result statistics of a specific match, including overall, home, and away filters, for the last 20 matches between the two teams.",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchMatches",
+      "description": "Search for Premier League matches based on team names, date range, or match status.",
+      "params": [
+        "teamName",
+        "startDate",
+        "endDate",
+        "matchStatus"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "match_play_by_play",
+      "description": "Retrieves live match events and scores for a given basketball match ID within a -+7 days period.",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "menudetails",
+      "description": "Fetches menu details for a given venue from the RapidAPI endpoint.",
+      "params": [
+        "lang",
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Locations",
+      "description": "Search for locations on Instagram based on a keyword",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMAAPI_HeadToHeadEvents",
+      "description": "Get information about head-to-head tennis events for a specific event.",
+      "params": [
+        "{'name': 'customId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "extractEntities",
+      "description": "Extract named entities from a given text.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVideoRelated",
+      "description": "Retrieves related videos for a specific video on Dailymotion's platform.",
+      "params": [
+        "video_id",
+        "limit",
+        "fields"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get County Boundaries by Name and State",
+      "description": "Retrieves the boundaries of a county by its name and state in GeoJSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getColonizationProgress",
+      "description": "Retrieve the current progress of space colonization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Youtube_V2_Video_Details",
+      "description": "Get all publicly available details about a Youtube Video",
+      "params": [
+        "{'name': 'video_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "generate_arithmetic_progression",
+      "description": "This method takes three arguments, 'a', 'd', and 'n', where 'a' is the first term, 'd' is the common difference, and 'n' is the number of terms to be generated. It returns a list containing the first 'n' terms of the arithmetic progression.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.delete_columns",
+      "description": "# Deletes multiple columns from the worksheet at the specified index. \nworksheet.delete_columns(start_index, end_index=None)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football League Details",
+      "description": "Get detailed information about a specific football league, including its name, teams, schedule, and standings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "t5-efficient-large-nl36_fine_tune_sum_V2",
+      "description": "A T5-based summarization model trained on the Samsum dataset. This model can be used for text-to-text generation tasks such as summarization without adding 'summarize' to the start of the input string. It has been fine-tuned for 10K steps with a batch size of 10.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN Decoder",
+      "description": "Decodes Vehicle Identification Numbers. The result will include a list of specifications in the specs property and a list of all possible trims matching the VIN in the trims property.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_perimeter",
+      "description": "Calculate the perimeter of a shape",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Complete_Study_Bible_Search_All_Words_API",
+      "description": "Returns KJV verses containing all of the supplied words, in any order. Words are separated by '%20' i.e., spaces. Words are not case-sensitive.",
+      "params": [
+        "{'name': 'words', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getQRCode",
+      "description": "Generates a QR code for a given phone ID and returns the QR code image.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Records API",
+      "description": "Searches for records in the Science domain using the TLE tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ticker_changes",
+      "description": "Fetches ticker values and price changes for a specified market and symbol using the RapidAPI service.",
+      "params": [
+        "market",
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "form",
+      "description": "Allows you to create AI-Powered Forms, Surveys, Quizzes, or Questionnaires on Yay! Forms.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomDuckWithColor",
+      "description": "Retrieve a random picture of a duck with a specific background color",
+      "params": [
+        "color"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pokemon_TCG_Card_Prices_Get_Many_Sets",
+      "description": "Returns many sets based on query parameters.\n\nA set is a grouping of cards that are periodically released together. Every card has a set. Every set is part of a series.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getNewTenderNotifications",
+      "description": "Receive notifications of new tenders that match specific criteria.",
+      "params": [
+        "keyword",
+        "region",
+        "category",
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MongoDB_Wix_Get_Vault_By_Name",
+      "description": "Get Vault by name",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COD_API_2_0_Season_Kills_Leaderboard_MW_2",
+      "description": "Get season kills information for up to 2000 players on the MW 2 leaderboard.",
+      "params": [
+        "{'name': 'season', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fid_entty",
+      "description": "Find all <r, t> that has the relation <input, r, t> from Wikidata. It looks like viewing the main page of the input entity. The result is in json format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cancel_alarms_before",
+      "description": "Cancel all alarms before a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Measurement_Unit_Converter_Measure_units",
+      "description": "GET enum array of all units of the given type.",
+      "params": [
+        "{'name': 'measure', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "textMining.extract_keywords",
+      "description": "Extract keywords from a given text.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MagicMirror_endpoint",
+      "description": "add endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Translate_v2_translate",
+      "description": "https://cloud.google.com/translate/docs/languages",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc",
+        "{'name': 'target_lang', 'type': 'STRING'"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "catalog_id": "real_toolret_pos_0116",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "Recognize Face",
+      "description": "useful when you only want to recognize faces in the picture. like: recognize who appears in the photo. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Marvel_Heroic_API_Unlock_the_MCU_Legendary_Characters_getCharacterByName",
+      "description": "Get specific Character by name",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CROSSWORD_Solver_CROSS",
+      "description": "**Using this API is easy! An example?**\n\nSearch string:\n- must contain letters (a-z) AND at least one _ (underscore) for unknown letters.\n- must have a minimum length of 3 and a maximum lenght of 65 characters.\n- is a required parameter.\n\nExample request:   `word=u_b_l_e_a_l_`\n\nLanguage:\n- en, es, de (English, Spanish, German)\n- is a optional parameter. If not set /en/ is used. \n\nExample request:   `lang=en`\n\n**This is fun!**",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_for_joke",
+      "description": "Fetch a joke based on the provided search text.",
+      "params": [
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get World Currencies Prices",
+      "description": "This API returns the current prices of world currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Quotes By Specific Category",
+      "description": "Retrieve a collection of quotes filtered by a specific category, with optional pagination and limit control.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mapilion_Vector_and_Raster_Map_Tiles_Get_Fonts",
+      "description": "Returns Fonts for vector tiles. This endpoint is typically used in your style.json.",
+      "params": [
+        "{'name': 'range', 'type': 'string', 'des",
+        "{'name': 'fontstack', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCompetitionById",
+      "description": "Retrieve a specific competition by its ID from the list of televised football matches in Spain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLandscapeDesign",
+      "description": "Retrieve landscape design information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRailwaySlope",
+      "description": "Retrieve the slope of a railway track",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Date and Time by Location",
+      "description": "Retrieve the current string and time for a specified location based on latitude and longitude coordinates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dudu_Command",
+      "description": "Please check http://dudu.com/docs/api/command/list for the proper parameter and method combinations",
+      "params": [
+        "{'name': 'json', 'type': 'STRING', 'desc",
+        "{'name': 'mask', 'type': 'STRING', 'desc",
+        "{'name': 'application_id', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "errorNotifier",
+      "description": "This function sends an email notification when an error occurs. It formats the error details and sends it to the specified email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_search",
+      "description": "Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks\nthat match a keyword string.<br />\n**Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.**\n",
+      "params": [
+        "{'in': 'query', 'name': 'q', 'required':",
+        "{'explode': 'false', 'in': 'query', 'nam",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi",
+        "{'in': 'query', 'name': 'include_externa"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HelloRold_ttt",
+      "description": "tt",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Global Indices",
+      "description": "Retrieve information about global stock market indices, including their current values, changes, and other relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Verifications",
+      "description": "Searches for verification results based on the provided status.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "officeV_tmo_GpZdf",
+      "description": "Office document to pdf conversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkDatabaseAccess",
+      "description": "Check if a database can be accessed by the current user",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicFinancesData",
+      "description": "Obtain information on public finances, debt, and government expenditure.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "WebsiteCrawler",
+      "description": "Crawling data from a specific website.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "advance",
+      "description": "This function makes a GET request to the cleantalk1.p.rapidapi.com service with specified parameters and returns the response.",
+      "params": [
+        "fill_char",
+        "text",
+        "add"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_likes_by_userid",
+      "description": "Fetches all likes of a user from Twitter using the provided user ID.",
+      "params": [
+        "userid",
+        "cursor",
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Patent",
+      "description": "Search patents globally based on a keyword and return a list of patents",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_New_build_developments",
+      "description": "New build developments",
+      "params": [
+        "{'name': 'search_area', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Evictions_Suits_Liens_and_Judgments_GetArchiveReport",
+      "description": " ",
+      "params": [
+        "{'name': 'AppId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Home Team Events",
+      "description": "Retrieve the last 5 matches for a specific basketball league's home team in a given tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_present_students",
+      "description": "This method takes two arguments, 'total_students' and 'absent_percentage', and returns the number of students present in the class.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "airportInfo",
+      "description": "Returns detailed airport information for airports identified by the provided identifiers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_all_images",
+      "description": "Get all available photos of the title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_alerts_alertId_annotations",
+      "description": "Get annotations of an alert by id.",
+      "params": [
+        "{'name': 'alertId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Stock_Market_API_Data_Get_52_Weel_High_by_performance_with_respecto_to_Co",
+      "description": "Get 52 Weel High by performance with respecto to Country",
+      "params": [
+        "{'name': 'countryCode', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_Complete_Summary_Detail",
+      "description": "This endpoint returns full detail of any public stock",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "runARSimulation",
+      "description": "Run a simulation of an augmented reality scene",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Jet_Set_Radio_API_Songs",
+      "description": "Returns a list of all Songs from JSR/JSRF",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Transportistas_de_Argentina_offices_search_service_stateIsoCode_keyword",
+      "description": "List of offices for iso state and postcode.",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd",
+        "{'name': 'service', 'type': 'STRING', 'd",
+        "{'name': 'stateIsoCode', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_lottery_result_by_date",
+      "description": "Fetches the lottery results for the given date using the RapidAPI service.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Get_Date_and_Time_by_Location",
+      "description": "Get date and time for specified location.",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lon', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Instagram Prostring",
+      "description": "Retrieve basic prostring information from Instagram for a given username",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v2_Get_User_Orders",
+      "description": " ",
+      "params": []
+    }
+  ]
+}

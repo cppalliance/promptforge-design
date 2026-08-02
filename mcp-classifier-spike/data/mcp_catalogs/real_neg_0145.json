@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_neg_0145",
+  "tools": [
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_test_connection_only",
+      "description": "TESTE uniquement la connexion sans sauvegarder",
+      "params": [
+        "url",
+        "database",
+        "username",
+        "password"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "MCP-Hackathon-Deepfake-Watchdog",
+      "name": "MCP_Hackathon_Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "code-analysis-mcp",
+      "name": "code_analysis_mcp_code_analysis_score",
+      "description": "Analyzes the provided code string using multiple AI providers and returns an averaged score across vulnerability, style, and quality. Returns: A dictionary containing the averaged vulnerability, style, and quality scores,, or an error message if all providers fail.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp",
+      "description": "Fetches demographic profile data from the U.S. Census Bureau API. Returns: Parsed response with column headers and row data as dictionaries.",
+      "params": [
+        "get_variables",
+        "for_clauses",
+        "in_clauses"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_start_chat",
+      "description": "Handle starting a private chat.",
+      "params": [
+        "entity_selection"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_chatbot_response",
+      "description": "Menangani respons chatbot",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_binary_tree_diagram",
+      "description": "Generates a binary tree diagram from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_upload_file",
+      "description": "Handle file uploads in the Gradio interface. Returns: Tuple of (status_message, updated_file_uploads_log)",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "Deepfake-Watchdog",
+      "name": "Deepfake_Watchdog_scan_video",
+      "description": "Use this tool to scan a video for deepfake face swaps",
+      "params": [
+        "video_file",
+        "ref_img",
+        "youtube_url"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_prime_factors",
+      "description": "Compute the prime factorization of a positive integer.",
+      "params": [
+        "n"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_calculate_direct_distance",
+      "description": "Calculates the distance between two points on the Earth's surface using the Haversine formula. Returns: The distance between the two points in kilometers.",
+      "params": [
+        "lat1",
+        "lon1",
+        "lat2",
+        "lon2",
+        "unit"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_download",
+      "description": "Downloads a paper from Arxiv and converts it to text. Use mode = \"html\" by default. Fall back to mode = \"pdf\" if there are any problems with the HTML version. Returns a JSON with a following structure: { \"title\": \"...\", \"abstract\": \"...\", \"toc\": \"...\", \"sections\": [\"...\", ...], \"citations\": [...] } Use `json.loads` to deserialize the result if you want to get specific fields. For example, `abstract = json.loads(arxiv_download(\"2409.06820v1\"))` The \"toc\" key contains Table of Contents, that sometimes has indexing for sections.",
+      "params": [
+        "paper_id",
+        "include_citations",
+        "mode"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_visitor_by_name",
+      "description": "\u83b7\u53d6\u6307\u5b9a\u5ba2\u6237\u7aefID\u4e0b\u7684\u6307\u5b9aname\u7684\u89c2\u5bdf\u8005\u914d\u7f6e\u6587\u4ef6 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u89c2\u5bdf\u8005\u6210\u529f\", \"data\": [ { \"name\": \"stcp1-visitor\", \"type\": \"stcp\", \"serverName\": \"stcp\", \"secretKey\": \"key\", \"bindAddr\" = \"127.0.0.1\", \"bindPort\" = 6000 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u89c2\u5bdf\u8005\u540d\u79f0 - `type`: \u89c2\u5bdf\u8005\u7c7b\u578b - `serverName`: \u670d\u52a1\u540d\u79f0 - `secretKey`: \u89c2\u5bdf\u8005\u7684\u8ba4\u8bc1\u5bc6\u94a5\uff0c\u7528\u4e8e\u5b89\u5168\u901a\u4fe1 - `bindAddr`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684IP - `bindPort`: \u7ed1\u5b9a\u5230\u672c\u5730\u7684\u7aef\u53e3\u53f7. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNone}`",
+      "params": [
+        "program_id",
+        "visitor_name"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_embed_text_modal_api",
+      "description": "This function allows you to send a list of text to be embeded by our external model. the format should be the following: [ \"text_to_embed 1\", \"text_to_embed 2\", \"text_to_embed 3\", ... ] the return is the vector embedding corresponding to the text you input or a list of vector in case you gave a list of text. thoses vectors are compatible with the one you can find in the database and can be used to be compared with vectors you'll get by querying the database.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "MCP-Server-Odoo-ERP",
+      "name": "MCP_Server_Odoo_ERP_analyze_leads",
+      "description": "Analyse avanc\u00e9e des leads native",
+      "params": [
+        "domain_filter",
+        "limit"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "analyze_tactical_patterns",
+      "description": "Analyze immediate tactical patterns from a given FEN string. This function detects: - Potential knight forks and double attacks (refering to next move) - Pins, skewers, discovered attacks and x\u2010ray attacks in the current position.",
+      "params": [
+        "fen"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_update_ui_after_login",
+      "description": "UI-only function to switch views and update components after login.",
+      "params": [
+        "final_username",
+        "final_channel"
+      ]
+    },
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_volume_adjustment",
+      "description": "Apply volume adjustment to an audio file using gain in decibels. This function loads an audio file and applies a volume adjustment by the specified gain amount in decibels. Positive values increase volume, negative values decrease volume. The function also detects potential audio clipping when volume is increased. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, adjusted_audio_data: array), for the volume-adjusted audio result, or None if an error occurred, Second element: A status message string indicating success with gain applied, and clipping warning if detected, or error information, , result, status = apply_volume_adjustment(\"url/to/audio.mp3\", -3.0), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Gain is specified in decibels (dB): +6dB doubles volume, -6dB halves volume, Positive gain values may cause clipping (distortion) if audio becomes too loud, Function automatically detects and warns about clipping, Preserves original sample rate and audio format, Safe range is typically -20dB to +6dB to avoid quality issues",
+      "params": [
+        "audio_file",
+        "gain_db"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_parse_huggingface_url_with_summary",
+      "description": "Parse URL and return both markdown summary and JSON.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "LogosAI",
+      "name": "LogosAI_translation_workflow",
+      "description": "Translates the provided text to the target language.",
+      "params": [
+        "text",
+        "target_language",
+        "gemini_key"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_get_cover_letter_template",
+      "description": "Get a basic cover letter template for the specified tone. Returns: Dict with template structure and guidelines",
+      "params": [
+        "tone"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "mcp-research-paper-explainer",
+      "name": "mcp_research_paper_explainer_get_full_text",
+      "description": "Retrieve full text of a paper given its ID. Returns: String containing the full text of the paper",
+      "params": [
+        "paper_id"
+      ]
+    },
+    {
+      "server": "board-game-mcp",
+      "name": "board_game_mcp_get_similar_games_v2",
+      "description": "Retrieves a list of games similar to a specified board game from the RecommendGames API. Returns: A list of dictionaries, each representing a similar game with the following fields:, 'id' (str): The unique BGG ID of the similar game., 'title' (str): The official title of the similar game., 'year' (str): The year the similar game was published (or 'Unknown' if not available)., 'description' (str): A brief description of the similar game., 'url' (str): URL to the similar game's page on BoardGameGeek., Returns an empty list if there are any errors during the API request or data processing.",
+      "params": [
+        "game_id"
+      ]
+    },
+    {
+      "server": "LLM-GameMaster-MPC-Server",
+      "name": "LLM_GameMaster_MPC_Server_insert_map",
+      "description": "Insert a map into the game. The available maps are: - FOREST: A forest with multiple paths and trees. - VILLAGE: A small village with 3 houses and a well in the middle. - LONELY_CABIN: A lonely cabin in the middle of a plain. - CABIN: The interior of a cabin. - BATTLE_ARENA: A roman battle arena with a central platform and walls around it.",
+      "params": [
+        "tab_id",
+        "map_type"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_import_dec2020_dp_variables",
+      "description": "Fetches information on available variables for the the U.S. Census Bureau 2020 decennial census demographic profile API housed at https://api.census.gov/data/2020/dec/dp/variables.html. * \"Name\" -- used to access variable during API calls * \"Label\" -- description of variable. Returns: The information in markdown format",
+      "params": []
+    },
+    {
+      "server": "Basic-Gradio-FFMPEG-MCP-Agent",
+      "name": "Basic_Gradio_FFMPEG_MCP_Agent_dispatch_video_prompt",
+      "description": "Dispatches the video prompt to the appropriate LLM provider and returns all necessary outputs for the UI.",
+      "params": [
+        "llm_provider",
+        "prompt",
+        "ollama_url"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_remove_path",
+      "description": "Removes a file or directory from the sandbox. Useful for cleaning up temporary files, removing unwanted content, and managing sandbox storage. Returns: JSON string containing success status and removed path",
+      "params": [
+        "sandbox_id",
+        "path",
+        "recursive"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpbuild_memory_video",
+      "description": "Build a memory video from stored chunks using memvid.",
+      "params": [
+        "client_id",
+        "memory_name"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "Link2Doc",
+      "name": "Link2Doc_process_scrape",
+      "description": "The function `process_scrape` takes in parameters related to website scraping, performs the scraping operation, and returns a success message or an error message based on the result. :param url: The `url` parameter is the URL of the website that you want to scrape :param site_name: The `site_name` parameter is a string that represents the name of the website being scraped. It is one of the required parameters for the `process_scrape` function :param site_description: The `site_description` parameter in the `process_scrape` function is used to provide a description of the website being scraped. It is a text description that helps in identifying and describing the content or purpose of the website. This information can be used for various purposes such as categorizing the website, :param site_category: The `site_category` parameter in the `process_scrape` function is used to specify the category of the website being scraped. It is one of the inputs required for the scraping process :param max_pages: The `max_pages` parameter in the `process_scrape` function represents the maximum number of pages to scrape on the website. It is an integer value that determines the limit for the number of pages that will be scraped during the process :param max_depth: The `max_depth` parameter in the `process_scrape` function represents the maximum depth of links to follow during the website scraping process. It determines how many levels deep the scraper will navigate through the website's links starting from the initial URL. This parameter helps control the extent of the scraping process and :param delay: The `delay` parameter in the `process_scrape` function represents the time delay (in seconds) between consecutive requests made during the scraping process. This delay is useful for preventing overwhelming the target website with too many requests in a short period, which could lead to being blocked or flagged as suspicious activity :param external_links: The `external_links` parameter in the `process_scrape` function is a boolean flag that determines whether external links should be scraped along with the internal links of the website. If `external_links` is set to `True`, the scraper will also follow and scrape external links found on the website :return: The function `process_scrape` returns a tuple containing a message string, and three `None` values. The message string can vary depending on the outcome of the scraping process. If the scraping is successful, it returns a success message with details such as the number of pages scraped, duration, output directory, and a list of files created. If the scraping fails, it returns an error message indicating",
+      "params": [
+        "url",
+        "site_name",
+        "site_description",
+        "site_category",
+        "max_pages",
+        "max_depth",
+        "delay",
+        "external_links"
+      ]
+    },
+    {
+      "server": "etheroi",
+      "name": "etheroi_update_modal_components_visibility",
+      "description": "Update visibility of Modal-dependent components",
+      "params": [
+        "use_modal"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_action",
+      "description": "Handle special action button.",
+      "params": []
+    },
+    {
+      "server": "owid-catalog-mcp",
+      "name": "owid_catalog_mcp_describe_owid_table_schema",
+      "description": "Describes the schema of a table loaded from the OWID catalog.",
+      "params": [
+        "table_path"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_clear_job_cache",
+      "description": "Clear the job search cache to force fresh results. Returns: Dict with operation result",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial_________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "MCP_Chai1_Modal",
+      "name": "MCP_Chai1_Modal_create_json_config",
+      "description": "Create a JSON configuration file from the Gradio interface inputs. Returns: Name of the created JSON file",
+      "params": [
+        "num_diffn_timesteps",
+        "num_trunk_recycles",
+        "seed",
+        "options",
+        "name"
+      ]
+    }
+  ]
+}

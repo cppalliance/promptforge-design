@@ -1,0 +1,42 @@
+{
+  "catalog_id": "google_maps",
+  "tools": [
+    {
+      "server": "google_maps",
+      "name": "maps_geocode",
+      "description": "Convert an address into geographic coordinates",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_directions",
+      "description": "Get travel directions between two locations",
+      "params": [
+        "origin",
+        "destination",
+        "mode"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_place_search",
+      "description": "Search for places near a location",
+      "params": [
+        "query",
+        "location",
+        "radius"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_distance_matrix",
+      "description": "Compute travel distance and time for a matrix of origins and destinations",
+      "params": [
+        "origins",
+        "destinations"
+      ]
+    }
+  ]
+}

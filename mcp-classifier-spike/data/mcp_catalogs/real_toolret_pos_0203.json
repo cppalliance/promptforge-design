@@ -1,0 +1,324 @@
+{
+  "catalog_id": "real_toolret_pos_0203",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Mboum_Finance_market_aggressive_small_caps",
+      "description": "Small cap stocks with earnings growth rates better than 25%.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RugbyAPI2_MatchIncidents",
+      "description": "Get incidents for a specific Rugby match.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Sudoku",
+      "description": "This is a sudoku game. You use voice or text to play.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SevenTraderAPI_Get_Countries",
+      "description": "Get all countries in API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "youtube_topviews_artist_nationality",
+      "description": "Fetches the top viewed music video by artists of the given nationality from YouTube.",
+      "params": [
+        "nationality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Exchange Rate",
+      "description": "Get the exchange rate between two different currencies",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "RootExplorer",
+      "description": "A tool for accessing and managing system catalogs.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProjectScheduler.allocateResources",
+      "description": "Allocates resources to different tasks within a construction project, ensuring optimal utilization based on task priority and resource availability.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FinHost_fee_payment",
+      "description": "Calculates transfer payment according to the fee plan",
+      "params": [
+        "{'name': 'amount', 'type': 'NUMBER', 'de",
+        "{'name': 'account', 'type': 'STRING', 'd",
+        "{'name': 'action', 'type': 'STRING', 'de",
+        "{'name': 'actionType', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_location(image_patch: ImagePatch, object_name: str, possible_lo",
+      "description": "def determine_object_location(image_patch: ImagePatch, object_name: str, possible_locations: List[str]) -> str:\n    '''Determine the location of an object based on a list of possible locations.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for location.\n        possible_locations (List[str]): The list of possible locations.\n       \n    Returns:\n        str: The location of the object if found, \"unknown\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gearbest_get_shipping",
+      "description": " ",
+      "params": [
+        "{'name': 'country_code', 'type': 'STRING",
+        "{'name': 'product_url', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMAAPI_HeadToHeadEvents",
+      "description": "Get information about head-to-head tennis events for a specific event.",
+      "params": [
+        "{'name': 'customId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "tags",
+      "description": "Will return all tags",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getBridgeLoadCapacity",
+      "description": "Retrieve the load capacity of a bridge",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_repayment_schedule",
+      "description": "Calculates the repayment schedule for a loan using specified parameters.",
+      "params": [
+        "installmentcount",
+        "principalamount",
+        "annualinterestrate",
+        "startdate",
+        "repaymentinterval"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pinterest_APIs_Get_User_Pins",
+      "description": "Get User Pins by user name",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "infographicDesign001.create",
+      "description": "Creates an infographic based on the provided data and design preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "apimail10_getNewEmail10",
+      "description": "get New Email 10",
+      "params": []
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Predict Depth On Image",
+      "description": "useful when you want to detect depth of the image. like: generate the depth from this image, or detect the depth map on this image, or predict the depth for this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Manga_Scrapper_Webtoons_list_paginated",
+      "description": "Make request to fetch webtoon's series collection from a specific provider.",
+      "params": [
+        "{'name': 'provider', 'type': 'STRING', '",
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_units_digit_sum",
+      "description": "This method takes a list of integers and returns the units digit of their sum.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NCAA_Champions_Get_NCAA_Men_2000_2021",
+      "description": "This endpoint retrieves NCAA championship data from 2000 until 2021",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Website_Categorization_Webiste_Categorization_v1",
+      "description": "Define website category at once (v1)",
+      "params": [
+        "{'name': 'domainName', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_List_of_Foods",
+      "description": "This endpoint responds with a list of mexican foods that includes their names and images, as well as their IDs, which must be provided in the \"Detailed Food Recipe by ID\" endpoint to receive the detailed recipe.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sports_Live_Scores_Futsal_Match_Statistics",
+      "description": "Returns Statistics about a given match_id. The match does not have to be necessarily live but also finished. You can retrieve Match IDs from the Futsal Live Matches endpoint.",
+      "params": [
+        "{'name': 'match_id', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VideoAnalyzer",
+      "description": "used to analyze video and identify people, objects and actions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_current_balance",
+      "description": "Check the current balance of a specified account",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_characters",
+      "description": "Retrieve a list of characters from the API, including both publicly available characters and those created by the user.",
+      "params": [
+        "page_size",
+        "page",
+        "private"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAssessmentResults",
+      "description": "Retrieve the results of a completed assessment, including the user's personality traits and scores",
+      "params": [
+        "assessmentId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Tasks_Cloud_GetResource",
+      "description": " ",
+      "params": [
+        "{'name': 'resourceUid', 'type': 'NUMBER'",
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Tags_Count",
+      "description": "Get a count of the tags. You can use the same filters of \"/tags\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "vin_decoder_v4_ZA_Decode",
+      "description": "ZA Decode",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Time Zones",
+      "description": "Get Time Zone list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Seasonal_Statistics_Quarter_Analysis",
+      "description": "Provides the seasonal quater analysis and statistics of the team in the tournament.",
+      "params": [
+        "{'name': 'teamId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "images",
+      "description": "Fetches the URLs for a specified number of random WikiHow images.",
+      "params": [
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketAPI_MatchBestPlayers",
+      "description": "Get best players information for a specific basketball match.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LeagueAwayStandings",
+      "description": "Get away standings for a handball unique tournament and season",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_monthly",
+      "description": "This API returns monthly time series (last trading day of each month, monthly open, monthly high, monthly low, monthly close, monthly volume) of the global equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Elevation_From_Latitude_and_Longitude_Get_Elevation",
+      "description": "Get Elevation",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Growth Estimate",
+      "description": "Estimates the growth of a stock based on its historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

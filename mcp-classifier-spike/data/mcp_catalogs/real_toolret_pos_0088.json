@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0088",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Daily_Match_List_Scheduled",
+      "description": "Daily match list including scheduled matches.\n\n**The data will return for only -+7 days period, so endpoint can be tested with date range of today - 7 days.**",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Top_Artists_Duo_Group",
+      "description": "Provide the YEAR-END Top Artists - Duo/Group chart information\n\nIf `year` is not supplied, will default to last year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_kfc_locations_by_state_and_city",
+      "description": "Retrieve KFC locations for a given state and city with pagination support.",
+      "params": [
+        "state",
+        "city",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Redbubble Items API",
+      "description": "Retrieve items from Redbubble e-commerce platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Inernational_Markets",
+      "description": "Get International Markets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockTwits_watchlists_index",
+      "description": "Returns a list of private watch lists for the authenticating user.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "/api/TripDetails/{MFRef}",
+      "description": "Retrieves trip details based on the provided MFRef number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate League Of Legends Champion",
+      "description": "Generates a new League of Legends champion along with its passive and standard abilities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "searchEmployeeByName",
+      "description": "Search for an employee by their name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_zeros",
+      "description": "Counts the number of zeros at the end of a number obtained by multiplying a range of numbers",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_liked_both",
+      "description": "To find the number of students who liked both desserts",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "division",
+      "description": "This function takes two numbers as input and returns their division.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "matches_v2_list_live",
+      "description": "Fetches a list of available live matches for a given sports category.",
+      "params": [
+        "category",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageSquigglyAnnotations",
+      "description": "Retrieves squiggly annotations from a specific page in a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_actors_get_all_news",
+      "description": "Get all news of actor or actress",
+      "params": [
+        "{'name': 'nconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IHerb_Product_Data_Api_Get_Product_By_Brand_Name",
+      "description": "Lists all products by brand, and allows you to filter in all ways!",
+      "params": [
+        "{'name': 'brandName', 'type': 'string', ",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mymappi_Distance_matrix",
+      "description": "This services takes as input a list of coordinates and computes in a matrix format the fastest travel time among all possible pair combinations among all the provided coordinates. If sources/destinations params are provided, those indicate a semi-colon separated list of indices that specify which of the provided coordinates should be included as sources or destinations.",
+      "params": [
+        "{'name': 'profile', 'type': 'string', 'd",
+        "{'name': 'coordinates', 'type': 'string'",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rivet_SMS_Sent_Message_Status",
+      "description": "Get the sent message status of the message using the message id.",
+      "params": [
+        "{'name': 'ClientId', 'type': 'STRING', '",
+        "{'name': 'ApiKey', 'type': 'STRING', 'de",
+        "{'name': 'MessageId', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Currencies List",
+      "description": "Retrieve a list of all available currencies for cost of living comparison in different cities",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCreature",
+      "description": "Obtain information about a specific magical creature that populates the Wizarding World.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "setu4993/LaBSE",
+      "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval.",
+      "params": [
+        "english_sentences",
+        "italian_sentences",
+        "japanese_sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_v2_Get_Followings_by_pk",
+      "description": "Get lists of any public Instagram account followings via pk",
+      "params": [
+        "{'name': 'pk', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Addressr_addresses",
+      "description": "returns a list of addresses matching the search string\n",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CPP_Code_Compiler_C_Versions",
+      "description": "C++ Versions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMAAPI_TeamNextEvents",
+      "description": "Get information about the next events for a specific team.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_written_confirmation",
+      "description": "Request to send written confirmation after changing the appointment",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "emailverification",
+      "description": "Verifies an email address using the Fast Email Verifier API.",
+      "params": [
+        "emailsimple"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Keyword Extractor",
+      "description": "Extracts the most important keywords and phrases from a given text.",
+      "params": [
+        "{'name': 'text', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider3_live_upcoming",
+      "description": "get upcoming matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Genres for a Movie",
+      "description": "Retrieve the genres associated with a movie title",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DiscoveryTool",
+      "description": "for identifying user needs and pain points",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_logoutUser",
+      "description": "{\"category_name\": \"Video_Images\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"tes_logoutUser\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fund Holders",
+      "description": "Returns the amount of the company's available stock owned by mutual fund holders. This API provides information on the fund holders' ownership of the company's stock, including the amount of stock held and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "News Sentiment Analysis",
+      "description": "Analyze the sentiment of a news article",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "color_recognition_tool",
+      "description": "Color recognition tool that can identify the main color tone in an image based on the input image and color type",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ethnography.collect_data",
+      "description": "Collects and organizes ethnographic data from field studies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_v3_v3_PlaylistItems",
+      "description": "Returns a collection of playlist items that match the API request parameters. You can retrieve all of the playlist items in a specified playlist or retrieve one or more playlist items by their unique IDs.",
+      "params": [
+        "{'name': 'part', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Goal_Analysis_Goal_Minutes_in_Between",
+      "description": "Provides the goals statistics of the teams between in the minutes intervals(0-10, 11-20, 21-30...etc.)\n\nThe data will return for only -+7 days period, so endpoint can be tested with match that its date is in today +- 7 days. You can choose suitable match from Soccer Match List or Fixture endpoints.",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Advisories By Vendor",
+      "description": "This endpoint returns advisories by vendor, providing timely information about current security issues, vulnerabilities, and exploits from CISA.gov.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_comments_v2_list",
+      "description": "List all comments relating to a post or article or news. This endpoint only returns site map structure of comments relating to a post. You need to use along with .../comments/get-contents endpoint to get the contents.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    }
+  ]
+}

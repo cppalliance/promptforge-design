@@ -1,0 +1,328 @@
+{
+  "catalog_id": "real_toolret_pos_0148",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Soccerway_Feed_Match_data",
+      "description": "Get match data by match uuid. Ex.: season, competition, area, form, h2h, table, lineup, commentaries, teams stats",
+      "params": [
+        "{'name': 'match_uuid', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchDucks",
+      "description": "Search for ducks based on a query string",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Air Quality by City",
+      "description": "Retrieve the latest air quality data for a specified city",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market_most_actives",
+      "description": "Fetches the most active stocks ordered by intraday trade volume using the Yahoo Finance API.",
+      "params": [
+        "start"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sapling_Intelligence_Private_Endpoint",
+      "description": "https://api.sapling.ai/",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getThrust",
+      "description": "Retrieve the thrust produced by a spacecraft propulsion system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Annual Average Dividend Yield",
+      "description": "Retrieve the annual average dividend yield of a stock.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ResultAnalyzer",
+      "description": "used to analyze the results of experiments",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_wearing(image_patch: ImagePatch, object_name: str, query: str) -> str",
+      "description": "def identify_wearing(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify what a specific object is wearing in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The clothes the object is wearing.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        # If no object is found, query the image directly with simple_query instead of returning a lo",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GenerateOrderSummary",
+      "description": "This API is to generate a summary of the order using the order_id.",
+      "params": [
+        "{'name': 'order_id', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Information for a Movie",
+      "description": "Retrieve business (Box Office) information for a movie",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_title",
+      "description": "Searches for books by a given title using the Open Library API.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Deep_Image_rest_api_deep_image_result_jobHash",
+      "description": " ",
+      "params": [
+        "{'name': 'jobHash', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoAPI_Get_Country_Details",
+      "description": "Get details of country from its name and prefix.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "buymovietickets",
+      "description": "buy movie tickets for a particular show",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Accounts_API_GetTransactionById",
+      "description": "To get transaction by unique id.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historic Events By Year",
+      "description": "Retrieve a list of historical events that occurred in a specific year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "restrictAccess",
+      "description": "Restrict access to a specific section in the library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_South_Asian_Express_get_types_852347ee_35c5_44fb_8548_1bee078d2350",
+      "description": "Scope under which the request is made; determines fields present in response.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google Places Nearby API",
+      "description": "Returns a random place nearby, given a latitude and longitude.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Metrics API",
+      "description": "Provides key financial metrics for a single stock company, either annually or quarterly.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hryvna_Today_v1_rates_landing",
+      "description": "Notice: this method is temporary return rates for USD and EUR currencies only.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "sms77io_Get_Webhooks",
+      "description": "Retrieves all existing webhooks.",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "True Range Indicator",
+      "description": "Retrieve the true range indicator for a given market, symbol, and exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "googl_reltd_question_earch",
+      "description": "Search question others asked on google which relate to the query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Video_Comments",
+      "description": "Video Comments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMerchantAddress",
+      "description": "Retrieves the address of a merchant by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mocking_Rock_Get_Locales_List",
+      "description": "You can use this API to get the list of available locales \nWhich can be used to generate profile APIs response.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrency_Markets_Top_Losers",
+      "description": "Cryptocurrencies with the most losses today.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_actual_total_weight",
+      "description": "This function calculates the actual total weight of the class of boys after correcting the misread weight.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Match Lineups",
+      "description": "Retrieve the lineup information for a specific match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_vessel_photo",
+      "description": "Fetch the image of a vessel using its ship ID from the Vessel Data API.",
+      "params": [
+        "shipid"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "convertDocxToPdf",
+      "description": "Converts a Microsoft Word document (docx) to a PDF file.",
+      "params": [
+        "docxFile"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "replace_salt_with_water",
+      "description": "Given a salt solution and a percentage of salt to be replaced with water, this function returns the concentration of salt in the resulting solution.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getdomaintech",
+      "description": "Retrieves technology information for a given domain using the Runs Tech API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Metrx_Factory_Competition_Performance_Indices",
+      "description": "Returns a snapshot of global competition performance indices sorted by rank in ascending order.\nSeparate index lists are maintained for club/national team and domestic/international competitions.\n\nIf no parameters are provided then the latest club team competitions ranking is returned in absolute index format. For details about index calculation and factors refer to the documentation.\n\nFor free subscriptions the following limits apply:\n\n`Max. requests per hour: 20`\n`Min. time between requests: 1 minute`\n`Max. performances returned: 5`",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Booking_com_Rental_terms",
+      "description": "Rental terms and conditions by pick up location_id",
+      "params": [
+        "{'name': 'from_country', 'type': 'STRING",
+        "{'name': 'pick_up_location_id', 'type': ",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Qvantana_Chaikin_Money_Flow_CMF",
+      "description": "Chaikin Money Flow (CMF) indicator",
+      "params": [
+        "{'name': 'exchange', 'type': 'STRING', '",
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'market', 'type': 'STRING', 'de",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_season_season_number_credits",
+      "description": "Get the credits for TV season.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Smile_get_webhook",
+      "description": "Get a webhook endpoint.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    }
+  ]
+}

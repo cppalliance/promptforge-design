@@ -1,0 +1,362 @@
+{
+  "catalog_id": "real_toolret_neg_0164",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_recommendations",
+      "description": "Get the list of TV show recommendations for this item.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "currency_news",
+      "description": "Fetch the latest news related to a specific currency, forex, or cryptocurrency pair.",
+      "params": [
+        "from_symbol",
+        "to_symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Webhooks",
+      "description": "Retrieves a list of all existing webhooks for the SMS service provided by sms77io.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v2_v2_Users_By_Rest_IDs",
+      "description": "Users By Rest IDs",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "uploadVideo",
+      "description": "Uploads a video to Dailymotion's platform.",
+      "params": [
+        "file",
+        "title",
+        "description",
+        "tags",
+        "channel",
+        "published"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSellers",
+      "description": "Retrieve a list of users who are selling an item.",
+      "params": [
+        "world",
+        "itemID"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Unique_tournament_logo",
+      "description": "Get unique tournament logo by unique tournament id",
+      "params": [
+        "{'name': 'unique_tournament_id', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get topic",
+      "description": "Returns a single topic area with the given ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "batting_average",
+      "description": "Calculates the batting average of a baseball player based on the number of hits and at-bats.",
+      "params": [
+        "num_hits",
+        "num_at_bats",
+        "precision"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Baseball_DataFeeds_by_Rolling_Insights_Player_Season_Statistics",
+      "description": "Returns Player Season Statistics",
+      "params": [
+        "{'name': 'sport', 'type': 'string', 'des",
+        "{'name': 'date', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 23andMe Drug Responses",
+      "description": "Retrieve the analysis of how a 23andMe prostring responds to various drugs, including the status of reduced, typical, or increased response, as well as whether the drug is not applicable to the individual or has not been analyzed.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMilkProduction",
+      "description": "Retrieve milk production information for a specific dairy farm",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_pineapple_count",
+      "description": "This method takes two arguments, 'total_amount' and 'pineapple_price', and returns the number of pineapples that can be purchased with the given amount.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ItemPrice",
+      "description": "This API provides the price of an item.",
+      "params": [
+        "{'name': 'item_id', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProteinIsoformDetector.detectIsoforms",
+      "description": "Identifies potential isoforms in a protein sample using mass spectrometry data and a reference database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_v2_Results",
+      "description": "Get all the results from a championship.",
+      "params": [
+        "{'name': 'championship', 'type': 'string"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "AssignmentTool",
+      "description": "Used to assign issues to the appropriate support personnel",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchDucks",
+      "description": "Search for ducks based on a query string",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RestaurantLocation",
+      "description": "This API is to get the location of a renowned restaurant in a city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_gas_cost(start_odometer, end_odometer, miles_per_gallon, price_per_gal",
+      "description": "def calculate_gas_cost(start_odometer, end_odometer, miles_per_gallon, price_per_gallon):\n    \"\"\"\n    Calculate the cost of gas used for a certain distance driven.\n\n    Parameters:\n    start_odometer (int): The initial reading on the odometer.\n    end_odometer (int): The final reading on the odometer.\n    miles_per_gallon (float): The car's fuel efficiency in miles per gallon.\n    price_per_gallon (float): The price of one gallon of gas.\n\n    Returns:\n    float: The cost of the gas used, rounded to the nearest cent.\n    \"\"\"\n    # Calculate the total distance driven\n    distance = end_odometer ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Similar Users",
+      "description": "Retrieve a list of similar users on Instagram based on a given user ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Text Messages",
+      "description": "The SMS API allows you to search, send, and manage text messaging triggers for all capable numbers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Hotels Filter",
+      "description": "Retrieve a list of hotels filtered by check-in and check-out strings, and a specific location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tags",
+      "description": "Retrieve a paginated list of tags related to icons or packs from Flaticon, with optional filtering and pagination parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tweet Replies",
+      "description": "This endpoint returns a list of reply tweets for a given tweet ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "filter_cook_time_in_minutes",
+      "description": "Fetches keto recipes within a specified range of cooking times using the provided API key.",
+      "params": [
+        "cook_time_in_minutes_tg",
+        "cook_time_in_minutes_lt"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/textless_sm_ro_en",
+      "description": "A speech-to-speech translation model for Romanian to English developed by Facebook AI",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Plants",
+      "description": "This endpoint retrieves a list of all plants in the database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pokemon_TCG_Card_Prices_Get_One_Set_By_Id",
+      "description": "Returns information about a single set, retrieved using the ID for that set.",
+      "params": [
+        "{'name': 'setId', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v4_v1_1_User_Followers_IDs",
+      "description": "v1.1 / User Followers IDs",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Property By GEO",
+      "description": "Search for properties by geographic coordinates and filters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "data_ml.model_training",
+      "description": "Train machine learning models based on provided datasets and model specifications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gameMarketing.createTrailerSchedule",
+      "description": "Schedule the release of game trailers over multiple platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DocumentaryFinder.searchByTopic",
+      "description": "Searches for documentaries based on a specified topic and filters results by given criteria including time periods and ratings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "measure_units",
+      "description": "Fetches an array of all units associated with a specific measurement type using the Measurement Unit Converter API.",
+      "params": [
+        "measure"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ar.create_anchor",
+      "description": "Creates an anchor point in the AR scene based on specified coordinates and time constraints.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LinkedIn Email Finder",
+      "description": "This API endpoint generates or retrieves the most likely email address from a LinkedIn URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "userCheckin",
+      "description": "Retrieve information about a user's check-in at a specific venue",
+      "params": [
+        "user_id",
+        "venue_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Career Pitching Stats",
+      "description": "Retrieve a player's career pitching stats for a given game type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_qualified_repair_service",
+      "description": "Online search and selection of qualified repair service providers",
+      "params": []
+    }
+  ]
+}

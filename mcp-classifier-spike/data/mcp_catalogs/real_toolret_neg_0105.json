@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_toolret_neg_0105",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "driiIvers",
+      "description": "Get the list of available drivers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mymappi_Distance_matrix",
+      "description": "This services takes as input a list of coordinates and computes in a matrix format the fastest travel time among all possible pair combinations among all the provided coordinates. If sources/destinations params are provided, those indicate a semi-colon separated list of indices that specify which of the provided coordinates should be included as sources or destinations.",
+      "params": [
+        "{'name': 'profile', 'type': 'string', 'd",
+        "{'name': 'coordinates', 'type': 'string'",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "view_sms_history",
+      "description": "Retrieves all received SMS messages for a given phone number and country ID.",
+      "params": [
+        "number",
+        "countryid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Stock_Market_API_Data_Get_Trending_Stocks_by_price_with_respecto_to_Count",
+      "description": "Get Trending Stocks by price with respecto to Country",
+      "params": [
+        "{'name': 'countryCode', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Direct_Debit_Managed_Service_Rapidata_Services",
+      "description": "Direct Debit Managed Service API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "medicine.internal_medicine.appointment_scheduler",
+      "description": "Schedule and manage appointments for patients in an internal medicine practice.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Seasonal_Market_Statistics_Points",
+      "description": "Provides the seasonal market points statistics of the team in the tournament.",
+      "params": [
+        "{'name': 'teamId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Cat Picture",
+      "description": "Fetches a random cat picture from the Reward domain, called by the kitten_placeholder tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mortgage/check-equity-rates",
+      "description": "Calculate mortgage equity rates based on various parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "divide_numbers",
+      "description": "This method takes two arguments, 'numerator' and 'denominator', and returns the result of dividing the numerator by the denominator.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Giphy_STICKER_Translate",
+      "description": "Using the same alogirithm as the GIF translate endpoint, the sticker translate endpoint turns words into stickers.",
+      "params": [
+        "{'name': 's', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List_Movies_Limit",
+      "description": "The limit of results per page that has been set",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "predictive_modeling_service",
+      "description": "Creates predictive models based on historical data inputs and specified parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leagueshotactionsareasregularseason",
+      "description": "Retrieve the shot actions areas for a specific basketball league tournament during the regular season.",
+      "params": [
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Face_Recognition_View_DB",
+      "description": "Read / view all face uids in your DB as \"faces_list\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getExerciseRoutine",
+      "description": "Retrieve a bodybuilding exercise routine",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "etablissements_d_une_entreprise",
+      "description": "Fetch the establishments of a company in New Caledonia using the RID provided.",
+      "params": [
+        "rid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cheapest_tickets",
+      "description": "Brings back the list of prices found by users during the most recent 48 hours according to the filters used.",
+      "params": [
+        "{'name': 'origin', 'schema': {'type': 's",
+        "{'name': 'destination', 'schema': {'type",
+        "{'name': 'period_type', 'schema': {'type",
+        "{'name': 'beginning_of_period', 'schema'",
+        "{'name': 'one_way', 'schema': {'type': '",
+        "{'name': 'sorting', 'schema': {'type': '",
+        "{'name': 'page', 'schema': {'type': 'str",
+        "{'name': 'limit', 'schema': {'type': 'st"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_possible_tens_digits",
+      "description": "This method takes two integers representing the tens digits of x and y, and returns a list of possible tens digits for 2(x+y).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Hotel Children Policy",
+      "description": "Retrieve the hotel children policy for a specific hotel, including information on the maximum number of children allowed, child age restrictions, and any additional fees or policies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listoforders",
+      "description": "Executes an HTTP GET request to the Ecombr marketplace API for seller orders with the provided parameters and returns the response.",
+      "params": [
+        "token",
+        "cache_control",
+        "e_mail",
+        "content_type",
+        "secret",
+        "status",
+        "action"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_4D_Results_Get_Past_Results_1_year",
+      "description": "Return all company 4D Results within a specific date range.\n(Up to 1 year data and only available for ULTRA PLAN subscriber)",
+      "params": [
+        "{'name': 'start', 'type': 'DATE (YYYY-MM",
+        "{'name': 'end', 'type': 'DATE (YYYY-MM-D"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FirewallInstaller",
+      "description": "Installs the firewall.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Goal Analysis: Goal Minutes in Between",
+      "description": "Provides the goals statistics of the teams between in the minutes intervals (0-10, 11-20, 21-30, etc.) for a given match. The data returns for only a 7-day period, so the endpoint can be tested with matches that have strings within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_half_yearly_interest",
+      "description": "This method takes four arguments, 'principal' (the initial investment), 'rate' (the annual interest rate), 'time' (the time period in years), and 'compounding_periods' (the number of times interest is compounded in a year). It returns the amount received at the end of the time period, with interest compounded half-yearly.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "availability",
+      "description": "Checks if a given URL is archived and currently accessible in the Wayback Machine.",
+      "params": [
+        "url",
+        "timestamp",
+        "callback"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CamRest676_bookRestaurant",
+      "description": "Returns the restaurants the user is looking for",
+      "params": [
+        "{'name': 'pricerange', 'type': 'STRING',",
+        "{'name': 'area', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "stabilityai/stable-diffusion-2",
+      "description": "Stable Diffusion v2 is a diffusion-based text-to-image generation model that can generate and modify images based on text prompts. It uses a fixed, pretrained text encoder (OpenCLIP-ViT/H) and is primarily intended for research purposes, such as safe deployment of models with potential to generate harmful content, understanding limitations and biases of generative models, and generation of artworks for design and artistic processes.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Most Popular News",
+      "description": "Returns a list of the most popular news articles from the Finance domain, as determined by readers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_duration",
+      "description": "Calculate the duration between two dates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Filter Games by Multiple Tags",
+      "description": "Search for games by multiple tags, allowing for personalized results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-arabic",
+      "description": "Fine-tuned XLSR-53 large model for speech recognition in Arabic. Fine-tuned facebook/wav2vec2-large-xlsr-53 on Arabic using the train and validation splits of Common Voice 6.1 and Arabic Speech Corpus.",
+      "params": [
+        "audio_paths"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Quotes by Tag",
+      "description": "Retrieve a list of quotes by a given tag from the Social domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "readSensorData",
+      "description": "Read sensor data from the embedded device",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAnimalBloodParameters",
+      "description": "Retrieve the blood parameters of a laboratory animal",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "senior_welfare.get_programs",
+      "description": "Retrieve available welfare programs for senior citizens based on their location and specific needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v6_GetSuggestedUser",
+      "description": "get suggested user by user id",
+      "params": [
+        "{'name': 'user_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "delivery_time_prediction",
+      "description": "Predict the delivery time of an order based on the current delivery status and average delivery time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_PERCENT_B",
+      "description": "%B Indicator(PERCENT_B) measures the position of an asset price relative to upper and lower Bollinger Bands.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    }
+  ]
+}

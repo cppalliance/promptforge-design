@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_pos_0007",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "improvePublicSpeaking",
+      "description": "Provides tips and techniques to improve public speaking skills",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "SymptomSearch",
+      "description": "description = \"An API that searches for medical conditions based on symptom descriptions.\"\ninput_parameters = {\n    'symptom_description': {'type': 'str', 'description': 'A description of the symptoms being experienced.'}\n}\noutput_parameters = {\n    'medical_conditions': {'type': 'list', 'description': 'A list of medical conditions that match the given symptom description.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRevenuePerAvailableRoom",
+      "description": "Retrieve the revenue per available room (RevPAR) of a hotel",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "wellness.track_employee_engagement",
+      "description": "Track and analyze employee engagement in various wellness programs offered at the workplace.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_stock_v2_key_stats_get_financial_health",
+      "description": "Get key stats financial health in the Valuation tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v3_Top_200_songs_by_country_global",
+      "description": "Information obtained from https://charts.spotify.com/",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "kotak7_Artis_info",
+      "description": "Artis info",
+      "params": [
+        "{'name': 'num', 'type': 'NUMBER', 'descr",
+        "{'name': 'lang', 'type': 'STRING', 'desc",
+        "{'name': 'index', 'type': 'NUMBER', 'des",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify ICMAI Request",
+      "description": "Verifies the ICMAI request using the provided request ID and returns the result.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EveryEarthquake_Significant_Earthquakes_Past_Hour",
+      "description": "Significant Earthquakes, Past Hour",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "uk_boundaries_io_Retrieve_UK_Postal_District_Outline_Boundaries",
+      "description": "example: Query by \"TW12\" district",
+      "params": [
+        "{'name': 'postal-district', 'type': 'STR"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_places",
+      "description": "Fetches a list of places (either countries, cities, or administrative divisions) that match a query and can be filtered by various properties.",
+      "params": [
+        "type",
+        "language",
+        "skip",
+        "country",
+        "limit",
+        "admindivision1",
+        "admindivision2",
+        "accuracyradiuskm"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NCAA_Final_Four_Third_Place",
+      "description": "Get third place data (only available between 1946 and 1981) for the given year.",
+      "params": [
+        "{'name': 'identifier', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_House_prices_for_detail",
+      "description": "House-prices for detail",
+      "params": [
+        "{'name': 'uprn', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BookSummary",
+      "description": "This API is to get a summary of a particular book.",
+      "params": [
+        "{'name': 'book_name', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recitations_by_chapter_number",
+      "description": "Fetches a list of ayah recitations for a specific Surah (chapter) based on the given chapter number and recitation ID.",
+      "params": [
+        "chapter_number",
+        "recitation_id"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "BookTool",
+      "description": "AI-powered personalized book recommendations, access to free children's picture books, and the ability to search and create books on Wikidocs.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AugustSmartLock",
+      "description": "Used for controlling and managing the August Smart Lock, specifically installed on the front door of the user's residence. It provides tools to lock and unlock the door, check the lock status, add and delete guests, grant and revoke access for guests, generate and revoke access codes, and view access history.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchJobPostings",
+      "description": "Search job postings based on various criteria such as location, job title, and keywords.",
+      "params": [
+        "location",
+        "jobTitle",
+        "keywords",
+        "company",
+        "jobType",
+        "jobCategory",
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "bigwiz83/sapbert-from-pubmedbert-squad2",
+      "description": "This model is a fine-tuned version of cambridgeltl/SapBERT-from-PubMedBERT-fulltext on the squad_v2 dataset.",
+      "params": [
+        "context",
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Filter Games by Multiple Tags",
+      "description": "Search for games by multiple tags, allowing for personalized results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search-related-sites",
+      "description": "Searches for websites related to a specified URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetDailyCalorieIntake",
+      "description": "This API is to find the appropriate daily calorie intake for someone of a specific age.",
+      "params": [
+        "{'name': 'age', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generatequiz",
+      "description": "Generates a quiz based on the specified topic using the Quizy API.",
+      "params": [
+        "topic"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCountdown",
+      "description": "Calculate and return the number of days, hours, minutes, and seconds remaining until the next MCU film release.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hearthstone_Card_Set",
+      "description": "Returns all cards in a set. Example values: Blackrock Mountain, Classic.",
+      "params": [
+        "{'name': 'set', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Metrx_Factory_Competition_Performance_Indices",
+      "description": "Returns a snapshot of global competition performance indices sorted by rank in ascending order.\nSeparate index lists are maintained for club/national team and domestic/international competitions.\n\nIf no parameters are provided then the latest club team competitions ranking is returned in absolute index format. For details about index calculation and factors refer to the documentation.\n\nFor free subscriptions the following limits apply:\n\n`Max. requests per hour: 20`\n`Min. time between requests: 1 minute`\n`Max. performances returned: 5`",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Solutions_General_Trending",
+      "description": "**Trending videos** General",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Scraper_List_Top_Tracks",
+      "description": "This endpoint lists weekly or daily top tracks at any time and in any country.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DocumentaryFinder.searchByTopic",
+      "description": "Searches for documentaries based on a specified topic and filters results by given criteria including time periods and ratings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Timeline Data API",
+      "description": "Provides timeline data for COVID-19 cases in India, starting from January 30th, 2020.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_futured_playlists",
+      "description": "Fetch featured playlists for a specific country and timestamp from Spotify.",
+      "params": [
+        "timestamp",
+        "country",
+        "offset",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Word_of_the_day_Word_of_the_day_from_pm",
+      "description": "Get word of the day from pm",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sshleifer/distilbart-cnn-12-6",
+      "description": "DistilBART is a distilled version of BART, a model for text summarization. This specific checkpoint, 'sshleifer/distilbart-cnn-12-6', is trained on the cnn_dailymail dataset and provides a fast and effective way to generate summaries of text. The model can be loaded using the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Coin_Historical_Metrics_By_Name",
+      "description": "Retrieve  coin\u00b4s historical social media metrics by Coin Name\nIn the case you want to retrieve real time data check \"Get Coin Metrics by Name\" or \"Get Coin Metrics by Ticker\"\n\n**Input:** \n-  Date (MM/DD/YYYY HH:HH AM/PM) (Required)\n- Security Name: Coin Name (Required)\n- TimeFrame: 1d, 1h, 8h (Optional)\n\n**Output:**\n\n- Sentiment\n- Sentiment change\n- Weighted Sentiment\n- Weighted sentiment change\n- Followers\n- Followers change\n- Mentions\n- Mentions change\n- Security ticker\n- Security Name\n- TimeFrame\n- DataTimeStamp\n\n**Definitions:**\n\n\u2022\tMentions - Number of posts related to the coin in tracked ",
+      "params": [
+        "{'name': 'securityName', 'type': 'STRING",
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CurrencyConversion",
+      "description": "The CurrencyConversion API allows developers to convert currencies in real-time. It provides accurate and up-to-string exchange rates, enabling users to make informed financial decisions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historic Events By Year",
+      "description": "Retrieve a list of historical events that occurred in a specific year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Halsey_Lyric_Snippets_album_by_id",
+      "description": "returns album information when searched by {id}",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Blake2B Text Hash",
+      "description": "Hash text using the Blake2B algorithm and return the resulting hash.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v3_Get_Product",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fortune_Cookie_category_list",
+      "description": "List of fortune categories",
+      "params": []
+    }
+  ]
+}

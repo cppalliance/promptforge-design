@@ -1,0 +1,46 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 35146.52it/s]
+need_premise  description t0 top1=0.712 nd=0.833 auroc=0.752 mc=0.29 mn=0.05  | This request requires a tool that can {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 34593.12it/s]
+need_premise  description t1 top1=0.746 nd=0.833 auroc=0.777 mc=0.31 mn=0.06  | To do this the user needs a tool that will {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 36949.29it/s]
+need_premise  description t2 top1=0.814 nd=1.000 auroc=0.763 mc=0.36 mn=0.04  | This is a request to {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 38013.35it/s]
+need_premise  name_desc   t0 top1=0.525 nd=0.833 auroc=0.872 mc=0.43 mn=0.09  | This request requires a tool that can {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 32910.47it/s]
+need_premise  name_desc   t1 top1=0.576 nd=0.667 auroc=0.895 mc=0.41 mn=0.14  | To do this the user needs a tool that will {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 32914.94it/s]
+need_premise  name_desc   t2 top1=0.627 nd=0.833 auroc=0.886 mc=0.46 mn=0.10  | This is a request to {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 35964.52it/s]
+need_premise  name        t0 top1=0.424 nd=0.333 auroc=0.566 mc=0.22 mn=0.10  | This request requires a tool that can {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 33888.92it/s]
+need_premise  name        t1 top1=0.441 nd=0.333 auroc=0.462 mc=0.18 mn=0.08  | To do this the user needs a tool that will {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 38599.43it/s]
+need_premise  name        t2 top1=0.610 nd=0.500 auroc=0.601 mc=0.36 mn=0.03  | This is a request to {tool}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 32957.49it/s]
+tool_premise  description t0 top1=0.881 nd=1.000 auroc=0.799 mc=0.45 mn=0.03  | This tool can {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 32557.69it/s]
+tool_premise  description t1 top1=0.932 nd=1.000 auroc=0.686 mc=0.44 mn=0.02  | This tool can be used to {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 33093.70it/s]
+tool_premise  description t2 top1=0.898 nd=1.000 auroc=0.752 mc=0.46 mn=0.03  | This is useful to {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 32451.91it/s]
+tool_premise  name_desc   t0 top1=0.915 nd=1.000 auroc=0.915 mc=0.44 mn=0.02  | This tool can {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 35765.38it/s]
+tool_premise  name_desc   t1 top1=0.966 nd=1.000 auroc=0.965 mc=0.45 mn=0.02  | This tool can be used to {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 35657.45it/s]
+tool_premise  name_desc   t2 top1=0.915 nd=1.000 auroc=0.904 mc=0.42 mn=0.02  | This is useful to {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 35507.17it/s]
+tool_premise  name        t0 top1=0.458 nd=0.333 auroc=0.626 mc=0.26 mn=0.05  | This tool can {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 34895.88it/s]
+tool_premise  name        t1 top1=0.559 nd=0.500 auroc=0.589 mc=0.27 mn=0.05  | This tool can be used to {need}
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 38943.86it/s]
+tool_premise  name        t2 top1=0.559 nd=0.333 auroc=0.520 mc=0.23 mn=0.05  | This is useful to {need}
+
+TOP 5 framings by top1:
+  top1=0.966 tool_premise/name_desc/t1: This tool can be used to {need}
+  top1=0.932 tool_premise/description/t1: This tool can be used to {need}
+  top1=0.915 tool_premise/name_desc/t0: This tool can {need}
+  top1=0.915 tool_premise/name_desc/t2: This is useful to {need}
+  top1=0.898 tool_premise/description/t2: This is useful to {need}
+wrote C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\results\framing_distilbart.json
+EXIT=0

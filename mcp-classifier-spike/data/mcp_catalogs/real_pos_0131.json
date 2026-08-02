@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_pos_0131",
+  "tools": [
+    {
+      "server": "AudioEditor",
+      "name": "AudioEditor_apply_reverse",
+      "description": "Reverse the playback direction of an audio file. This function loads an audio file and reverses the audio data so that it plays backwards. This creates a reverse playback effect commonly used for artistic purposes, sound design, or audio analysis. Returns: A tuple containing:, First element: Either a tuple of (sample_rate: int, reversed_audio_data: array), for the reversed audio result, or None if an error occurred, Second element: A status message string indicating successful reversal, or error information, , result, status = apply_reverse(\"url/to/audio.mp3\"), , sample_rate, audio_data = result, {status}\"), , {status}\"), , Reverses the entire audio file from end to beginning, Preserves original sample rate, duration, and audio quality, Commonly used for creative effects, sound design, or subliminal messaging detection, The reversed audio will have the same duration as the original, All audio characteristics (pitch, timbre) are preserved but played backwards, Works with both mono and stereo audio files",
+      "params": [
+        "audio_file"
+      ]
+    },
+    {
+      "server": "mcp-data-analyst",
+      "name": "mcp_data_analyst_generate_and_run_sql",
+      "description": "This function is used to give an answer to a user question related to a database or file source. Returns: -------, str, The given response of the user question, , -----, Requires a connected `source` (via `connect_to_file` or `connect_to_database`)., Uses a language agent to interpret the prompt and generate an appropriate SQL query or explanation.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "f1-mcp-server",
+      "name": "f1_mcp_server_get_season_calendar",
+      "description": "Get the complete race calendar for a specific F1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpcreate_hf_dataset",
+      "description": "Create a new HuggingFace dataset for memory storage.",
+      "params": [
+        "dataset_name",
+        "private",
+        "description"
+      ]
+    },
+    {
+      "server": "podcastify",
+      "name": "podcastify_generate_podcast",
+      "description": "Generate a podcast-style conversation from various input types. This function takes content from a document URL, webpage link, or raw text and converts it into a natural-sounding podcast dialogue between two hosts. The conversation is then synthesized into audio using text-to-speech. Returns: Path to the generated audio file (.wav format) containing the synthesized, podcast conversation., , If the input text cannot be extracted or is empty, If conversation extraction fails after maximum retries",
+      "params": [
+        "input_type",
+        "input"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_get_proxy_by_program_id",
+      "description": "\u6839\u636e\u5ba2\u6237\u7aefID\u83b7\u53d6\u8be5\u5ba2\u6237\u7aef\u4e0b\u7684\u6240\u6709\u96a7\u9053 \u8fd4\u56de\u7684\u683c\u5f0f\u4e3a\uff1a ```json { \"status\": \"\u6210\u529f\", \"message\": \"\u83b7\u53d6\u5ba2\u6237\u7aef\u5217\u8868\u6210\u529f\", \"data\": [ { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ] } ``` - `status`: \u64cd\u4f5c\u72b6\u6001\uff0c\u6210\u529f\u6216\u5931\u8d25 - `message`: \u64cd\u4f5c\u4fe1\u606f - `data`: \u5ba2\u6237\u7aef\u5217\u8868\uff0c\u683c\u5f0f\u4e3ajson\u6570\u7ec4\uff0c\u6bcf\u4e2a\u5143\u7d20\u5305\u542b\u4ee5\u4e0b - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u5305\u542b\u72b6\u6001\u548c\u4fe1\u606f\u7684json, \u683c\u5f0f\u4e3a`{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u6d88\u606f\", \"data\": \u6570\u636e, json\u683c\u5f0f, \u5982\u5931\u8d25data\u4e3aNano}`",
+      "params": [
+        "program_id"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_generate_route_image",
+      "description": "Extract route image from JSON data and optionally add custom title. Returns: The generated route image",
+      "params": [
+        "route_json",
+        "custom_title"
+      ]
+    },
+    {
+      "server": "factchecker-tools-mcp",
+      "name": "factchecker_tools_mcp_search_wikipedia",
+      "description": "Search Wikipedia using LangChain WikipediaLoader. Returns: Formatted Wikipedia search results",
+      "params": [
+        "query",
+        "max_docs"
+      ]
+    },
+    {
+      "server": "MistyClimateServer",
+      "name": "MistyClimateServer_analyze_image",
+      "description": "The function `analyze_image` takes an image, analyzes it using a chat model, and returns JSON output with information about the image content. :param api_key: The `api_key` parameter is a string that represents the API key required for authentication to access the chat API service. This key is used to initialize the client for making requests to the service :param image: The `analyze_image` function you provided seems to be a Python function that takes an API key and an image as input parameters. The function is designed to analyze the image using a chat completion model and provide a JSON output with specific fields related to the image content :return: The `analyze_image` function returns a JSON string containing information about the analyzed image. The JSON output includes fields such as image_type, climate_feature, location, date_captured, cloud_density, temperature_anomaly, and description. If the image analysis is successful, the function returns the analyzed results in JSON format. If there is an error during processing, it returns an error message with default values for",
+      "params": [
+        "api_key",
+        "image"
+      ]
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_arxiv_download",
+      "description": "Downloads a paper from Arxiv and converts it to text. Use mode = \"html\" by default. Fall back to mode = \"pdf\" if there are any problems with the HTML version. Returns a JSON with a following structure: { \"title\": \"...\", \"abstract\": \"...\", \"toc\": \"...\", \"sections\": [\"...\", ...], \"citations\": [...] } Use `json.loads` to deserialize the result if you want to get specific fields. For example, `abstract = json.loads(arxiv_download(\"2409.06820v1\"))` The \"toc\" key contains Table of Contents, that sometimes has indexing for sections.",
+      "params": [
+        "paper_id",
+        "include_citations",
+        "mode"
+      ]
+    },
+    {
+      "server": "hackathon-census-mcp-server",
+      "name": "hackathon_census_mcp_server_dec2020_dp_fips_lookup",
+      "description": "Fetches FIPS code for a given geography hierarchy and name. Also returns FIPS code for any parent geographies. Returns: dictionary representing FIPS code values for provided geography_hierarchy.",
+      "params": [
+        "geography_hierarchy",
+        "name",
+        "required_parent_geographies"
+      ]
+    },
+    {
+      "server": "soccer-mcp-server",
+      "name": "soccer_mcp_server_get_competition_info",
+      "description": "Get competition information by competition name. Competition name could be cup name, league name, etc. Returns: Competition information including name, type, current season, and previous seasons, or error message if competition is not supported",
+      "params": [
+        "competition_name"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_get_available_docs_repo",
+      "description": "List the available docs of repositories - should be called first to list out all the available repo docs to chat with. Returns: Updated dropdown with available repositories",
+      "params": []
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_monitor_multiple_servers",
+      "description": "Monitor health and tools of multiple MCP servers simultaneously. Returns: (markdown_summary, json_data)",
+      "params": [
+        "urls_text"
+      ]
+    },
+    {
+      "server": "MCP_Server_Emotion_Detection",
+      "name": "MCP_Server_Emotion_Detection_generate_emotion_response",
+      "description": "Generate an emotion image and response text based on input text",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_brave_search",
+      "description": "Given a search query, returns the search results from Brave. Returns: The search results from Brave Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "api_key",
+        "max_results"
+      ]
+    },
+    {
+      "server": "memvid-mcp",
+      "name": "memvid_mcpload_from_hf_dataset",
+      "description": "Load client memory data from a specific HuggingFace dataset.",
+      "params": [
+        "client_id",
+        "dataset_name"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_change_speed",
+      "description": "Change video playback speed while maintaining audio quality. Returns: URL to processed video or None if failed, , Handles audio speed limits (0.5-2.0) by chaining atempo filters, Maintains video and audio synchronization, Preserves original quality",
+      "params": [
+        "video_url",
+        "speed_factor"
+      ]
+    },
+    {
+      "server": "jobsearch-mcp-server",
+      "name": "jobsearch_mcp_server_profile_upsert",
+      "description": "MCP Endpoint: profile.upsert Stores the user r\u00e9sum\u00e9, skills, salary expectations, and career goals. Keeps personal context so every later call is tailored.",
+      "params": [
+        "user_id",
+        "profile_data"
+      ]
+    },
+    {
+      "server": "ADE-Explorer-MCP",
+      "name": "ADE_Explorer_MCP_serious_outcomes_tool",
+      "description": "MCP Tool: Finds the top reported serious outcomes for a given drug. Returns: A Plotly figure, a Pandas DataFrame, and a summary string.",
+      "params": [
+        "drug_name",
+        "top_n"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_clear_output____",
+      "description": "Clears a Gradio output component.",
+      "params": []
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_coverage_evaluator",
+      "description": "Evaluate how diverse the content is across multiple system outputs (coverage proxy). Returns: Pairwise cosine similarities and average to estimate content spread.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "MMORPG_AI_NPC_MCP_CLIENT_SERVER",
+      "name": "MMORPG_AI_NPC_MCP_CLIENT_SERVER__handle_chat_message_",
+      "description": "Handle public chat messages with state context.",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "Graphify",
+      "name": "Graphify_generate_concept_map",
+      "description": "Generates a concept map from JSON input. Returns: The filepath to the generated image file.",
+      "params": [
+        "json_input",
+        "output_format"
+      ]
+    },
+    {
+      "server": "Medicare_Medicaid_LEIE",
+      "name": "Medicare_Medicaid_LEIE_generate_states",
+      "description": "Function to aggregate the Medicare and Medicaid Entity Exclusions by City and State. System examines the most recent Office of Inspector General (OIG) List of Excluded Individuals and Entities (LEIE) which legally excludes an entity from receiving any Federal Medicare or Medicaid funds. System aggregates the information by city and state, and generates a list ordered by prevalence. Example use case: \"Which city and state have the most medicare and medicaid entity exclusions?\". Original Data can be found here: https://oig.hhs.gov/exclusions/downloadables/UPDATED.csv",
+      "params": [
+        "limit20"
+      ]
+    },
+    {
+      "server": "RAGEval-Studio",
+      "name": "RAGEval_Studio_repetition_checker",
+      "description": "Detects repetitive phrases or n-grams in generated text outputs. Returns: A report on detected repetitions per generation.",
+      "params": [
+        "_",
+        "generations"
+      ]
+    },
+    {
+      "server": "TrackMate-AI-MCP-Server",
+      "name": "TrackMate_AI_MCP_Server_reset_database",
+      "description": "Reset the ERP database by deleting it and recreating it with fresh data. Returns: Result of the database reset operation",
+      "params": []
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_query_and_generate_graph_wrapper",
+      "description": "Executes a SQL query and generates a graph visualization from the results. This function is particularly useful when query results are too large for the context window or when visual representation of data is preferred over tabular format. Returns: A tuple containing:, image_path (str or None): Path to the generated graph image if successful, None if failed, status (str): Status message indicating success or error details",
+      "params": [
+        "query",
+        "graph_type"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "mcp-deepfake-forensics",
+      "name": "mcp_deepfake_forensics_full_prediction",
+      "description": "Full prediction run, with a team of ensembles and agents. Returns: A dictionary containing the model details, classification scores, and label.",
+      "params": [
+        "img",
+        "confidence_threshold",
+        "rotate_degrees",
+        "noise_level",
+        "sharpen_strength"
+      ]
+    },
+    {
+      "server": "whoop-mcp-server",
+      "name": "whoop_mcp_server_get_sleeps_gr",
+      "description": "Fetches recent sleep records for the authenticated user.",
+      "params": []
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_upload_medical_document_wrapper",
+      "description": "Wrapper function for medical document upload",
+      "params": [
+        "file_path",
+        "document_type"
+      ]
+    },
+    {
+      "server": "chess-mcp-server",
+      "name": "find_opening_by_name",
+      "description": "Search for a chess opening by its name in the Lichess openings database. Return the ECO code, name, PGN, FEN and sub-variations of a chess opening by its name. The name is matched case-insensitively.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "emotional-mcp-server",
+      "name": "emotional_mcp_server_music_suggestion",
+      "description": "Return relaxing message and recommend music based on emotion. Returns: Message with YouTube search suggestion.",
+      "params": [
+        "feeling"
+      ]
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "AnyCrawl",
+      "name": "AnyCrawl_scrape_website",
+      "description": "Scrape website using AnyCrawl API API Key can be obtained from: https://anycrawl.dev",
+      "params": [
+        "url",
+        "engine",
+        "api_key"
+      ]
+    }
+  ]
+}

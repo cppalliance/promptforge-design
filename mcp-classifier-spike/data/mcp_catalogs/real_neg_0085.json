@@ -1,0 +1,374 @@
+{
+  "catalog_id": "real_neg_0085",
+  "tools": [
+    {
+      "server": "FluxFoundry",
+      "name": "FluxFoundry_generate_images",
+      "description": "Generate images using a trained LoRA model. This function sends a request to generate images using a previously trained LoRA model. It takes a list of prompts and generates images for each one. Returns: tuple[str, str]: (status_message, job_id), status_message: Human-readable status with generation details or error message, job_id: Unique identifier for the generation job, empty string if failed, , status, job_id = generate_images(, prompts_json='[\"a photo of a dog\", \"a photo of a cat\"]',, lora_repo=\"myuser/my-dog-lora\",, hf_token=\"hf_abcdef123456\",, //modal-app-url-api-generate-images.modal.run\", )",
+      "params": [
+        "prompts_json",
+        "lora_repo",
+        "hf_token",
+        "generate_images_url"
+      ]
+    },
+    {
+      "server": "modal_sandbox_mcp",
+      "name": "modal_sandbox_mcp_write_file_content_to_sandbox",
+      "description": "Writes content to a file in a Modal sandbox. Useful for writing code, text, or any other content, rapid prototyping, creating boilerplate code, implementing algorithms, and generating test cases. Returns: JSON string containing success status and written file path",
+      "params": [
+        "sandbox_id",
+        "sandbox_path",
+        "content"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_get_train_classes",
+      "description": "Retrieves available travel class categories for a specific train based on its number. This function queries the Indian Railways API to fetch information about the different classes of accommodation available on the specified train (e.g., Sleeper, AC First Class, AC Second Class, etc.). Returns: JSON response containing available class details including:, Class codes (e.g., SL, 1A, 2A, 3A), , If train number is empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "train_number"
+      ]
+    },
+    {
+      "server": "video_editing_genie_mcp_server",
+      "name": "video_editing_genie_mcp_server_merge_videos",
+      "description": "Merge multiple videos into a single video. Returns: URL to merged video or None if failed, , Handles various input formats, Maintains original quality, Preserves audio from all videos, Gracefully handles failed downloads",
+      "params": [
+        "video_urls"
+      ]
+    },
+    {
+      "server": "AutoEDA",
+      "name": "AutoEDA_generate_data_profiling",
+      "description": "Generates detailed data profiling report. Returns: Missing data analysis, Numeric statistics, Categorical statistics",
+      "params": [
+        "file_obj"
+      ]
+    },
+    {
+      "server": "dmagent",
+      "name": "dmagent_handle_player_input",
+      "description": "Handle player input and return DM response",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "web-search-mcp",
+      "name": "web_search_mcp_duckduckgo_search",
+      "description": "Given a search query, returns the search results from DuckDuckGo. Returns: The search results from DuckDuckGo Search Engine. Fields:, The headers of the columns in the search results. Contains \"title\", \"link\", \"body\"., The data in the search results. Each row contains the title, link, and body of the search result.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "SrikanthNagelli",
+      "name": "SrikanthNagelli_web_search",
+      "description": "Search the web for information with intelligent category matching.",
+      "params": [
+        "query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "TinyCodeAgent",
+      "name": "TinyCodeAgent_log_user_message_",
+      "description": "Process user message, add files, and update chatbot history. This now ONLY prepares the input and adds the user message to the chat. It disables the send button while processing. Returns: Tuple of (processed_message, initial_chatbot_state, disable_send_button)",
+      "params": [
+        "message"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial______",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "academia_mcp_gradio",
+      "name": "academia_mcp_gradio_s2_citations",
+      "description": "Get all papers that cited a given arXiv paper based on Semantic Scholar info. Returns a JSON object serialized to a string. The structure is: {\"total_count\": ..., \"returned_count\": ..., \"offset\": ..., \"results\": [...]} Every item in the \"results\" has the following fields: (\"arxiv_id\", \"external_ids\", \"title\", \"authors\", \"venue\", \"citation_count\", \"publication_date\") Use `json.loads` to deserialize the result if you want to get specific fields.",
+      "params": [
+        "arxiv_id",
+        "offset",
+        "limit"
+      ]
+    },
+    {
+      "server": "mcp-indian-railways",
+      "name": "mcp_indian_railways_check_seat_availability",
+      "description": "Retrieves real-time seat availability information for a specific train journey. This function queries the Indian Railways API to check seat availability status based on multiple parameters including class type, stations, quota, and date of journey. It provides detailed information about available seats, waiting list status, and booking possibilities. Returns: JSON response containing availability details including:, Current booking status, Number of available seats, Waiting list numbers if applicable, Chance of confirmation, Alternative availability suggestions, , If required parameters are empty or invalid response is received, If API request fails or returns non-200 status code",
+      "params": [
+        "classType",
+        "fromStationCode",
+        "quota",
+        "toStationCode",
+        "trainNo",
+        "date"
+      ]
+    },
+    {
+      "server": "sec-edgar-mcp",
+      "name": "sec_edgar_mcp_get_company_10q_by_quarter",
+      "description": "Fetch financial reports for company(s) within given calendar quarter(s) and specified sheets from 10-Q filings. Caveat the sheets names is likely to differ between companies, quarters, and filings, so it's important to check available sheets first. And batch fetch sheets only if you are sure the sheets names are the same across companies, quarters, and filings. When applicable, remember to use the report date to align with financial reports from other companies. Returns: A dictionary mapping company identifiers to their financial reports.",
+      "params": [
+        "lookups",
+        "quarters",
+        "sheets"
+      ]
+    },
+    {
+      "server": "geocalc-mcp",
+      "name": "geocalc_mcp_get_coords_from_address",
+      "description": "Converts a street address into latitude and longitude coordinates. Returns: A formatted string with the coordinates \"Lat: XX.XXXX, Lon: YY.YYYY\", or an error message if the address is not found.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "pharmacy-mcp",
+      "name": "pharmacy_mcp_drug_label_warnings_mcp",
+      "description": "Fetches critical safety information from the official FDA drug label. This includes boxed warnings (the most serious type), contraindications (situations where the drug should not be used), and known drug interactions. This is a primary tool for assessing a drug's major safety risks before prescribing or dispensing. Returns: JSON string with boxed warnings, contraindications, and interaction data",
+      "params": [
+        "drug_name"
+      ]
+    },
+    {
+      "server": "simple-calculator",
+      "name": "simple_calculator_generate_image2",
+      "description": "Generates an image based on a text prompt using the Flux model running on Modal serverless infrastructure. Returns: The URL of the generated image.",
+      "params": [
+        "prompt"
+      ]
+    },
+    {
+      "server": "travel-planner-mcp",
+      "name": "travel_planner_mcp_search_hotels",
+      "description": "Uses Google Hotels API via SerpAPI to search for hotels and returns property information. Returns: A dictionary containing hotel properties with their details including, prices, ratings, amenities, and location information.",
+      "params": [
+        "query",
+        "check_in_date",
+        "check_out_date",
+        "num_adults",
+        "currency",
+        "sort_by",
+        "min_price",
+        "max_price",
+        "rating"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_build_timeline_prompt",
+      "description": "Generate a user-friendly, chronologically ordered timeline from a list of structured events. Use this tool with keyword arguments: build_timeline_prompt(events=[]). Returns: A sequence of chat messages forming a prompt for an LLM to generate a readable timeline.",
+      "params": [
+        "events"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_get_mcp_server_instructions",
+      "description": "Returns comprehensive usage guidelines and documentation for all MCP server functions. Call this function first to understand available tools, workflows, and best practices. This function provides: - Complete function documentation - Recommended workflows - Best practices for MCP clients - Database schema information - Statistical analysis guidelines",
+      "params": []
+    },
+    {
+      "server": "AIRecruiterAgent",
+      "name": "AIRecruiterAgent_evaluate_applicants",
+      "description": "Evaluate applicants' CVs against the job description. Parameters ---------- cv_files: List[str] List of CV file paths to evaluate. job_description: str The job description text to evaluate against. Returns ------- pd.DataFrame: DataFrame containing evaluation results with match scores and reasoning.",
+      "params": [
+        "cv_files",
+        "job_description"
+      ]
+    },
+    {
+      "server": "viton-mcp-server",
+      "name": "viton_mcp_server_run_new_garment",
+      "description": "Run the Virtual Try-On model with provided model image and garment prompt.",
+      "params": [
+        "model_image_path",
+        "garment_prompt",
+        "model_url",
+        "n_steps",
+        "image_scale",
+        "seed"
+      ]
+    },
+    {
+      "server": "MCP-Server-Finder-Monitor",
+      "name": "MCP_Server_Finder_Monitor_parse_huggingface_url_with_summary",
+      "description": "Parse URL and return both markdown summary and JSON.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "HuggingFaceDoc",
+      "name": "HuggingFaceDoc_partial__________________",
+      "description": "partial(func, *args, **keywords) - new function with partial application of the given arguments and keywords.",
+      "params": []
+    },
+    {
+      "server": "WebSearch",
+      "name": "WebSearch_search",
+      "description": "Perform a web search using DuckDuckGo. Returns: A list of dictionaries, each containing \"snippet\", \"title\", and \"link\" keys.",
+      "params": [
+        "input_query",
+        "max_results"
+      ]
+    },
+    {
+      "server": "sam2",
+      "name": "sam2_process_video",
+      "description": "SAM2 Video Segmentation",
+      "params": [
+        "video_path",
+        "variant",
+        "masks",
+        "drop_masks",
+        "ref_frame_idx",
+        "async_frame_load"
+      ]
+    },
+    {
+      "server": "frpc-centralized-panel-mcp",
+      "name": "frpc_centralized_panel_mcp_new_proxy",
+      "description": "\u65b0\u5efa\u96a7\u9053 \u6570\u636e(data\u53c2\u6570)\u7684\u683c\u5f0f\uff1a ```json { \"name\": \"ssh-t4\", \"type\": \"tcp\", \"localIp\": \"10.0.0.1\", \"localPort\": 22, \"remotePort\": 1022 } ``` - `name`: \u96a7\u9053\u540d\u79f0 - `type`: \u96a7\u9053\u7c7b\u578b - `localIp`: \u672c\u5730IP\u5730\u5740 - `localPort`: \u672c\u5730\u7aef\u53e3 - `remotePort`: \u8fdc\u7a0b\u7aef\u53e3. Returns: \u683c\u5f0f\u4e3a `{\"status\": \"\u6210\u529f\"|\"\u5931\u8d25\", \"message\": \"\u5185\u5bb9\"}` \u7684\u5b57\u5178",
+      "params": [
+        "program_id",
+        "data"
+      ]
+    },
+    {
+      "server": "doc-mcp",
+      "name": "doc_mcp_make_query",
+      "description": "Retrieve relevant documentation context for a given query using specified retrieval mode. This function is designed to support Retrieval-Augmented Generation (RAG) by extracting the most relevant context chunks from indexed documentation sources. Returns: Tuple of (response_text, source_nodes_json)",
+      "params": [
+        "repo",
+        "mode",
+        "query"
+      ]
+    },
+    {
+      "server": "TDAgentTools",
+      "name": "TDAgentTools_query_abuseipdb",
+      "description": "Query AbuseIP to find if an IP has been reported for abusive behavior.",
+      "params": [
+        "ip_address"
+      ]
+    },
+    {
+      "server": "yolo-v11-pose-lab",
+      "name": "yolo_v11_pose_lab_annotate_image",
+      "description": "Annotate an image with human pose information.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_search_knowledge_base_for_context",
+      "description": "Searches and retrieves relevant context from a knowledge base on Sukhoi SU-35, based on the user's query. Example queries: - \"What are the main features of fuel system of SU-35.\" - \"What are the combat potential of SU-35.\". Returns: Relevant text content that can be used by the LLM to answer the query.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "timeline_mcp_hackathon",
+      "name": "timeline_mcp_hackathon_extract_key_info_prompt",
+      "description": "Generate a perfect prompt for extraction of key information from text and formatting of the output as JSON that will enable building a timeline of events. Use this tool with keyword arguments: extract_key_info_prompt(text=\"...\"). Returns: Array of chat messages to be sent to a language model for information extraction.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "mcp-rag-workflow",
+      "name": "mcp_rag_workflow_research_write_review_topic",
+      "description": "Helps with writing a report with research, writing, and review on any topic. Returns a reviewed topic. The query is a string that contains the topic to be researched and reviewed. Example queries: - \"Write me a report on the history of the internet.\" - \"Write me a report on origin of the universe.\" - \"Write me a report on the impact of climate change on polar bears.\" - \"Write me a report on the benefits of meditation.\" - \"Write me a report on the future of artificial intelligence.\" - \"Write me a report on the effects of social media on mental health.\". Returns: A nicely formatted string.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "health-ai-hospital-aid",
+      "name": "health_ai_hospital_aid_stream_response_with_state_",
+      "description": "Stream response and update appropriate chat state",
+      "params": [
+        "message",
+        "history"
+      ]
+    },
+    {
+      "server": "Enneagora",
+      "name": "Enneagora_cancel_order",
+      "description": "Cancel an order.",
+      "params": [
+        "order_id",
+        "reason",
+        "customer_id"
+      ]
+    },
+    {
+      "server": "carebuddy-app",
+      "name": "carebuddy_app_process_prescription_upload",
+      "description": "COMPLETELY FIXED prescription processing with proper grouping",
+      "params": [
+        "image_file",
+        "llama_endpoint"
+      ]
+    },
+    {
+      "server": "kaggle-mcp",
+      "name": "kaggle_mcp_datasets_list",
+      "description": "List Kaggle datasets with comprehensive filtering options. Returns: Formatted JSON string containing list of datasets with metadata, , datasets_list(search=\"covid\", file_type=\"csv\", sort_by=\"hottest\", max_size=10), Returns top 10 hottest COVID-related CSV datasets",
+      "params": [
+        "sort_by",
+        "max_size_in_bytes",
+        "min_size_in_bytes",
+        "file_type",
+        "license_name",
+        "tag_ids",
+        "search",
+        "user",
+        "page",
+        "max_size",
+        "kaggle_user",
+        "kaggle_key"
+      ]
+    },
+    {
+      "server": "uplink-mcp",
+      "name": "uplink_mcp_scrape_endpoint",
+      "description": "Scrape the content of a given URL, and return it as a nice markdown formatted dictionary. Returns: Scraped markdown as a dictionary",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "multi-agent-chat",
+      "name": "multi_agent_chat_get_opinion",
+      "description": "Returns the opinion data generated by LLM.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "FinFLow",
+      "name": "FinFLow_process_file",
+      "description": "Memproses file yang diupload dan menghasilkan preview serta chart",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "E-commerce_analyst_MCP",
+      "name": "E_commerce_analyst_MCP_run_read_only_query",
+      "description": "### `run_read_only_query(query: str)`",
+      "params": [
+        "query"
+      ]
+    }
+  ]
+}

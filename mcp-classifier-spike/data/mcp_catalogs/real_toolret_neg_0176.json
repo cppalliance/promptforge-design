@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_neg_0176",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "EventHead-to-Head(H2H)",
+      "description": "Retrieves event head-to-head data for a specific event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_constant_of_proportionality_between_two_variables(data_frame, variable",
+      "description": "def calculate_constant_of_proportionality_between_two_variables(data_frame, variable1_col, variable2_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of two variables and returns the constant of proportionality between them.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing two variables with columns specified by variable1_col and variable2_col.\n    variable1_col (str): The column name for the first variable.\n    variable2_col (str): The column name for the second variable.\n    \n    Returns:\n    float: The constant of proportionality be",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Future Market Reports",
+      "description": "Retrieve future market reports from Schwab, including encoded base64 images that need to be decoded by the caller.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_reminder",
+      "description": "Create reminder event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "convert_from_one_unit_to_another",
+      "description": "Converts a given quantity from one unit to another using the RapidAPI measurement unit converter.",
+      "params": [
+        "to",
+        "is_from",
+        "value",
+        "measure"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "view_profile_picture",
+      "description": "Retrieve the full HD profile picture of a specified Instagram user by their username.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Daily Forex Data",
+      "description": "Retrieve daily forex data for a given currency pair, including string, open, high, low, close, and volume.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_points_point_forecast",
+      "description": "Forecast data for a point. The DWML format is a temporary format to aid transition and will be sunset at a later date. This response is derrived from the /gridpoints endpoint and is intentionally less structured. If more structure is required, developers should use the /gridpoints endpoint directly. Example: /points/39.0693,-94.6716/forecast",
+      "params": [
+        "{'name': 'point', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sports",
+      "description": "Get listing of all upcoming sports events for football, cricket and golf in json(regarless of the query).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: st",
+      "description": "def determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Determine the leaning direction of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for leaning direction.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The leaning direction of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = objec",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magic_AliExpress_api_bestSales_product_productID_salesHistory",
+      "description": "This resource returns the historic of sales",
+      "params": [
+        "{'name': 'productID', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "realTimeDataSync",
+      "description": "This API synchronizes data changes in real-time between the client and a database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketLiveApi_match",
+      "description": "NA",
+      "params": [
+        "{'name': 'matchid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "cd",
+      "description": "A tool to change the current working directory.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Retrospective",
+      "description": "Returns the history of Instagram statistics for the selected period, including subscribers, posts, interactions, likes, comments, reposts, and engagement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Match Streaks",
+      "description": "Retrieve the streaks of American Football matches.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_NETWORKS",
+      "description": "READ NETWORKS",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "blake2b_text_hash_with_key",
+      "description": "Hashes the given text using the BLAKE2b algorithm with a provided key via the Toolbench RapidAPI service.",
+      "params": [
+        "datastring",
+        "keystring"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fodase_Get_users",
+      "description": "sdfsdfsdf",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MostRecentShortVolume",
+      "description": "Retrieves the most recent short volume data for a given stock ticker.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Shopee Category Tree",
+      "description": "Retrieve the category tree structure from Shopee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getArttherapyProgress",
+      "description": "Retrieve progress and insights from art therapy sessions",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "wuy",
+      "description": "Search question others asked on google which relate to the query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_Player_Information",
+      "description": "Call this to get general information on each player (name, team, experience, birthday, college, etc).\n\nYou can call with their playerID, if you know it.  playerID calls will always be quicker as it acts on the key of the table.  \n\nYou can also call with playerName.  This call will return a list of players who have that name.  If you want to include spaces in the search name, then use underscore.  So if you want to find LeBron, you can use lebron_james and it will bring him back.  Or try with playerName=smith and it will return a list of guys with smith in their name.\n\n/getNBAPlayerInfo?playerI",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Random Skin API",
+      "description": "Retrieve information about a random Counter-Strike skin, including name, price, icon, class, and weapon for the field-tested condition.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_ZIP_Code_to_Income_ZIP_code",
+      "description": "ZIP code",
+      "params": [
+        "{'name': 'zip', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gun_Laws_Get_laws_for_one_state",
+      "description": "This endpoint provides links to gun law documentation for any particular state.",
+      "params": [
+        "{'name': 'stateName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gettopsportmenu",
+      "description": "Fetches the top sport menu from the specified sportsbook API using provided skin name and RapidAPI key.",
+      "params": [
+        "skinname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Plants by Common Name",
+      "description": "Returns a list of plant species by their common name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Search",
+      "description": "This endpoint allows you to search for specific states by name. It returns a list of states that match the specified search query. You can also set country code or country name to search states in that country only.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Movie Render Status",
+      "description": "Retrieve the status of movie renders, including the current step of the rendering process and a link to the resulting video once it's finished.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DateClock_Convert_to_Islamic_Hijri_Hijriah",
+      "description": "Convert date to Islamic or (Hijri) (Hijriah)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Date and Time by City",
+      "description": "Retrieve the current string and time for a specified city, supporting fuzzy search. Note that if multiple cities have the same name, the most common one will be used. For more accurate results, consider using the `/string/bylocation` endpoint with a geocoding service.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TDAmeritrade",
+      "description": "A comprehensive toolkit for an online self-directed stock broker, which allows Users to buy and sell stocks.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetClothing",
+      "description": "This API suggests clothing based on the current weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scout_index",
+      "description": "Root endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_device_status",
+      "description": "Fetches the current operational status and metrics of a specified IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_manga_and_Novels_Api_Get_Novel_By_Id",
+      "description": "Get Novel By Id.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disposable Email Checker",
+      "description": "Checks if an email address is disposable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "postStatusUpdate",
+      "description": "Post a status update to a user's social network feed",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

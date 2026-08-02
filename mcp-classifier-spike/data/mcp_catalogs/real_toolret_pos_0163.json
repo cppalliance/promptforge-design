@@ -1,0 +1,332 @@
+{
+  "catalog_id": "real_toolret_pos_0163",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "find_nearby_gas_stations",
+      "description": "Find nearby gas stations",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hydration_tracker.update",
+      "description": "Update and track hydration levels during gym sessions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_popular_watchlists",
+      "description": "Get popular watchlists in the market. In terms of Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getfscore",
+      "description": "Fetches the Piotroski F-Score for a given stock ticker using the RapidAPI service.",
+      "params": [
+        "ticker"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FCN",
+      "description": "Deep learning image segmentation tool, high accuracy, suitable for complex scenes, but the effect of the detail region processing is general, need a lot of training data.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHighScores",
+      "description": "Retrieve high scores for a player.",
+      "params": [
+        "player",
+        "mode"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_day_when_quantity_doubles(starting_quantity, target_quantity)",
+      "description": "def find_day_when_quantity_doubles(starting_quantity, target_quantity):\n    \"\"\"\n    Find the first day on which a quantity, which doubles every day, exceeds a given target.\n\n    Parameters:\n    starting_quantity (float): The quantity at the start.\n    target_quantity (float): The target quantity.\n\n    Returns:\n    int: The first day on which the quantity exceeds the target.\n    \"\"\"\n    current_quantity = starting_quantity\n    day = 0\n\n    while current_quantity <= target_quantity:\n        current_quantity *= 2\n        day += 1\n\n    return day",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetChannelVideos",
+      "description": "Get a list of the videos in a channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEO_Fast_Audit_Analysis",
+      "description": "Analyse the content from URL",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "community.get_fair_trade_impact",
+      "description": "Fetches detailed impact data of fair trade practices on a specified community over a range of years.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List_Movies_Limit",
+      "description": "The limit of results per page that has been set",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SMS_v3_send",
+      "description": "use this to send the sms.",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '",
+        "{'name': 'message', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getwebsite",
+      "description": "Fetch the website URL for a given company name using RapidAPI.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submitTicket",
+      "description": "Submit a support ticket to IT department",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Greatest of All Time Top R&B/Hip-Hop Albums",
+      "description": "Returns a list of the greatest R&B/Hip-Hop albums of all time, as ranked by Billboard.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Commodity_Rates_API_Supported_Symbols",
+      "description": "Check all the available symbols for your queries. This endpoint retrieves all the supported commodities and currencies as well.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AllSportsApi_Rugby_League_Media",
+      "description": "Get league media.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "absolute_difference",
+      "description": "This function calculates the absolute difference between two numbers.",
+      "params": []
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "buymovietickets",
+      "description": "buy movie tickets for a particular show",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Yahoo_Finance_finance_analytics",
+      "description": "This API endpoint also returns **AI recommendation**\nFinancial analysis refers to an assessment of the viability, stability, and profitability of a business, sub-business or project. It is performed by professionals who prepare reports using ratios and other techniques, that make use of information taken from financial statements and other reports.",
+      "params": [
+        "{'name': 'symb', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "games_per_team",
+      "description": "Calculates the total number of games each team plays in a season",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "asset_checkout_approval",
+      "description": "Asset checkout approval process tool for taking company assets off company premises",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Send Message",
+      "description": "This API is used to send a message to an open group.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_wage",
+      "description": "This method takes three arguments, 'male_wage', 'female_wage', and 'child_wage', and returns the average wage per day paid by the contractor.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/annotation/versions/",
+      "description": "Annotation Versions",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hls_to_mp4_converter",
+      "description": "Converts HLS video format to MP4 format for Instagram V3",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicSpending",
+      "description": "Retrieves data on public spending in Italy for the specified year",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_v3_FindCuisine",
+      "description": " ",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'sort', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Quote by Tag",
+      "description": "Retrieve a random quote from the self-help quotes database, filtered by a specific tag.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getServiceById",
+      "description": "Retrieves information about a specific public service by its ID.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_constant_of_proportionality_between_two_variables(data_frame, variable",
+      "description": "def calculate_constant_of_proportionality_between_two_variables(data_frame, variable1_col, variable2_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of two variables and returns the constant of proportionality between them.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing two variables with columns specified by variable1_col and variable2_col.\n    variable1_col (str): The column name for the first variable.\n    variable2_col (str): The column name for the second variable.\n    \n    Returns:\n    float: The constant of proportionality be",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Phone Brands",
+      "description": "Retrieve a list of all available phone brands from the mobile phone specifications database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YT_Data_API_v2_avaliableCountry",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Get_tracks",
+      "description": "Get one or more tracks",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "USA_Jobs_for_IT_NodeJs_Jobs",
+      "description": "NodeJs Jobs Api",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_device_status",
+      "description": "Fetches the current operational status and metrics of a specified IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Recipe",
+      "description": "Uses AI to generate a unique recipe based on a provided name and a list of ingredients",
+      "params": [
+        "{'name': 'ingredients', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "pygmalion-1.3b",
+      "description": "Pygmalion 1.3B is a proof-of-concept dialogue model based on EleutherAI's pythia-1.3b-deduped. It is designed for generating conversational responses and can be used with a specific input format that includes character persona, dialogue history, and user input message.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disposable Email Checker",
+      "description": "Checks if an email address is disposable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v13_User_Profile_Picture",
+      "description": "Get instagram user profile picture by username.",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    }
+  ]
+}

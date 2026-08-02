@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_toolret_pos_0186",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Basketball Team Details",
+      "description": "Get detailed information about a basketball team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recipes/list-similarities",
+      "description": "Retrieve a list of recipes that are similar to a specific recipe, given its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Email Messages",
+      "description": "Retrieve email messages from a temporary email account.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Detection",
+      "description": "useful when you want to detect all objects of the image, but not detect a certain object according to the text. like: detect all the objects in this image, or detect this image. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_transaction_deletion",
+      "description": "Create a request to delete erroneous transactions",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_carrots_chopped",
+      "description": "This method takes three arguments, 'machines', 'time', and 'carrots_per_machine', and returns the total number of carrots chopped by the given number of machines in the given time.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Summarizer",
+      "description": "summarizes the content of the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Financial Statements",
+      "description": "Retrieve financial statements for a given stock symbol, including income, balance, and cash statements, for a specified frequency and region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "film.get_movement_info",
+      "description": "Fetches detailed information about a specific international film movement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "masterAudioFile",
+      "description": "Automatically master the uploaded audio file.",
+      "params": [
+        "uploadId",
+        "genre",
+        "style"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Text_to_Speech_TTS_Engine_go",
+      "description": "Convert textual content to .mp3",
+      "params": [
+        "{'name': 't', 'type': 'STRING', 'descrip",
+        "{'name': 'l', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest_Stock_Price_price",
+      "description": "Fetch latest stock price based on indices",
+      "params": [
+        "{'name': 'Indices', 'type': 'ENUM', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchColor",
+      "description": "Searches for a color based on an input value.",
+      "params": [
+        "searchValue"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "family_activity.find_parks",
+      "description": "Find parks in a specific area suitable for family activities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Historical TVL of a Chain",
+      "description": "Retrieve the historical total value locked (TVL) of a specific blockchain chain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock/upgrade-downgrade-history",
+      "description": "Retrieve the upgrade and downgrade history of a specific stock symbol from Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Get_trends_near_a_location_Beta",
+      "description": "Returns the top 50 trending topics for a specific id (woeid), if trending information is available for it.",
+      "params": [
+        "{'name': 'woeid', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_advance_notification",
+      "description": "Set advance notification for a specified event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_Clock_JSONP",
+      "description": "Get current timezone (JSONP)",
+      "params": [
+        "{'name': 'time_zone', 'type': 'STRING', ",
+        "{'name': 'callback', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Tasks_Cloud_GetResource",
+      "description": " ",
+      "params": [
+        "{'name': 'resourceUid', 'type': 'NUMBER'",
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getfscore",
+      "description": "Fetches the Piotroski F-Score for a given stock ticker using the RapidAPI service.",
+      "params": [
+        "ticker"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_pizzas_made",
+      "description": "This method takes a dictionary representing a table, and returns a list containing the number of pizzas made each day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Also Bought",
+      "description": "Retrieves also bought details for a single product on Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Webcams by Continent",
+      "description": "Returns a list of webcams according to the specified continents. Multiple continents can be specified, separated by commas.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_earnings",
+      "description": "Retrieve earnings information for a particular stock symbol using the Yahoo Finance API.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_object_perspective(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def get_object_perspective(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the perspective from which an object is viewed.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for perspective.\n       \n    Returns:\n        str: The perspective from which the object is viewed.\n    '''\n    perspective_query = f\"From what perspective are we viewing the {object_name}?\"\n    perspective = image_patch.simple_query(perspective_query)\n    return perspective",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Product Questions API",
+      "description": "Retrieves customer questions and answers for a single product on Amazon.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getColonizationProgress",
+      "description": "Retrieve the current progress of space colonization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto Exchange Ticker Price",
+      "description": "Retrieve the current ticker price for a specific cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NtmGFn",
+      "description": "Find a random activity with a given type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetUserDietaryRestrictions",
+      "description": "This API returns the user's dietary restrictions.",
+      "params": [
+        "{'name': 'user_name', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Artist Related Artists",
+      "description": "Retrieve a list of artists related to a given artist by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pipeline Management",
+      "description": "The Pipeline Management API allows users to manage business processes, specifically pipelines, within the Streak CRM for Gmail tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Real-Time Stock Information",
+      "description": "Retrieve real-time stock information for a given stock name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "QuantitativeAnalyzer",
+      "description": "used to analyze quantitative data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BoldSign_GetUser",
+      "description": " ",
+      "params": [
+        "{'name': 'userId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Supported Languages for Image Processing",
+      "description": "This API returns a list of all supported languages for image processing, including their corresponding language codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "qualifying_results",
+      "description": "Retrieve the qualifying results for a specific Formula 1 race based on the given year and location.",
+      "params": [
+        "year",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ICC Standings",
+      "description": "Retrieves the ICC standings for a specific match type and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

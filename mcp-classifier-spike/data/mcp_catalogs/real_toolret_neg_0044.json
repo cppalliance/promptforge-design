@@ -1,0 +1,354 @@
+{
+  "catalog_id": "real_toolret_neg_0044",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_stations_stationId_observations_recordId",
+      "description": "Data for a specific observation.  NOTE! See note in /stations/{stationId}/observations for important details on observation data.  Example: /stations/KMKC/observations/2017-01-04T18:54:00+00:00",
+      "params": [
+        "{'name': 'stationId', 'type': 'STRING', ",
+        "{'name': 'recordId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryDataQuality",
+      "description": "Retrieve the data quality of a library's collection",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_South_Africa_Songs",
+      "description": "Provide the South Africa Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ca_boundaries_io_Query_for_LDU_Boundary_by_Location_and_Resolution",
+      "description": "Query for LDU H3 Boundary by Location and Resolution",
+      "params": [
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_man_speed",
+      "description": "This method takes two arguments, 'upstream_speed' and 'stream_speed', and returns the speed of the man.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "gwyo_twitch_Get_Stream_Number_of_Viewers",
+      "description": "Get Stream Number of Viewers (using username or id)\n( return an empty JSON object if not currently LIVE )",
+      "params": [
+        "{'name': 'userId', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SuperchargeMyEV",
+      "description": "Find superchargers for non-Tesla vehicles for a specific location.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Information",
+      "description": "Retrieve business (Box Office) information of a movie title from the online movie database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getWeaponDetails",
+      "description": "Get details on a specific weapon, including its stats and upgrade tree.",
+      "params": [
+        "weaponId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hanime_python_api_getComment",
+      "description": "Get Hanime Video Info",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Store_API_DLC_details",
+      "description": "Returns details of the selected DLC.",
+      "params": [
+        "{'name': 'appId', 'type': 'NUMBER', 'des",
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_type_analysis_get_archived",
+      "description": "Get Morningstar's analysis archived related to an ETF or FUND",
+      "params": [
+        "{'name': 'securityId', 'type': 'STRING',",
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "All Desserts Data",
+      "description": "This will return s all the desserts data",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTigerLineShapefiles",
+      "description": "Retrieve TIGER/Line Shapefiles for a specified geographic area and year",
+      "params": [
+        "area",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FastYTAPI_Channel_s_videos_streams_shorts_ids_w_pagination",
+      "description": "Returns the list of videos/streams(a.k.a. lives)/shorts ids with some basic information for each.\n\nPagination is possible, which allows to retrieve all videos/streams/shorts of a channel with several subsequent requests. For this, provide the `pagination` received in the previous request to this endpoint.\n\nResults are returned ordered by upload date, from latest to oldest.",
+      "params": [
+        "{'name': 'videosType', 'type': 'STRING',",
+        "{'name': 'channelId', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "research.collaborate",
+      "description": "Facilitates collaboration among research team members by scheduling meetings and assigning tasks.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_homestay_id",
+      "description": "Tool for obtaining homestay ID",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DeFi_Watch_WALLETS_TRANSFERS_BY_CHAIN",
+      "description": "Get wallet transfers by chain",
+      "params": [
+        "{'name': 'address', 'type': 'string', 'd",
+        "{'name': 'chain', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWarehouseInformation",
+      "description": "Retrieve information about a warehouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_value_from_category_and_item(data_frame, category_col, item_col, item_name)",
+      "description": "def get_value_from_category_and_item(data_frame, category_col, item_col, item_name):\n    \"\"\"\n    This function takes in a pandas DataFrame, a category column, an item column, and an item name, and returns the value in the category column for the specified item.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing various categories and items.\n    category_col (str): The column name for the categories.\n    item_col (str): The column name for the items.\n    item_name (str): The name of the item.\n    \n    Returns:\n    float: The value in the category column for the specifie",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_Image_Search_Search",
+      "description": "Webit Image Search API provides you a powerful endpoint to search billions of images from the world wide web featuring rating, reverse search by image and multi-lingual capabilities.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Reading_Home_APIs_GetBookDetail",
+      "description": "Get Detail of book by Book ID",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_monthly",
+      "description": "This API returns monthly time series (last trading day of each month, monthly open, monthly high, monthly low, monthly close, monthly volume) of the global equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetChannelVideos",
+      "description": "Get a list of the videos in a channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_sentiment_trending_beari",
+      "description": "Search for top 50 trending bearish stocks/crypto symbols on Twitter/StockTwits.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_news_v2_list_trending",
+      "description": "List trending news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SurveyMethods_Responses_Summary",
+      "description": "Using this API call you can retrieve information such as custom field labels & values, date on which  a response was started and when was it completed, the survey response method (email/web), the  email address of the respondent in case of an email response, IP address and the response code  for each individual response of your survey.",
+      "params": [
+        "{'name': 'login_id', 'type': 'STRING', '",
+        "{'name': 'api_key', 'type': 'STRING', 'd",
+        "{'name': 'survey_code', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SymptomSearch",
+      "description": "\"An API that searches for medical conditions based on symptom descriptions.\"",
+      "params": [
+        "{'name': 'symptom_description', 'in': 'q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "weightmanagement.activity_tracker",
+      "description": "Track user's activities and calculate calories burned based on user's weight and activity details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rugby Match Votes",
+      "description": "Retrieve match votes for a specific rugby match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Career Aptitude Personality Test Questionnaire",
+      "description": "This API provides a list of questions for a career aptitude personality test, which helps users assess their personality traits and match them with potential career paths.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Philippines_Driving_License_OCR_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Climate Change News from Individual News Source",
+      "description": "Retrieve news articles about climate change from a specific news source.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Codes",
+      "description": "Returns a list of language codes in ISO 639-1 format, which can be used for language detection and translation purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Alert Overview",
+      "description": "Retrieve detailed information about a specific alert.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeSignatureDetector.detectTimeSignature",
+      "description": "Detects the time signature of a given piece of music based on its rhythmic pattern.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unicode Codepoint Search",
+      "description": "Search for Unicode codepoints based on various criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pet_rescue_search",
+      "description": "Search for rescue pets available for adoption.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "RepoTool",
+      "description": "Discover GitHub projects tailored to your needs, explore their structures with insightful summaries, and get quick coding solutions with curated snippets. Elevate your coding journey with RepoTool, your go-to companion for GitHub project exploration and code mastery.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tennis League Rounds Events",
+      "description": "Retrieve league round events for a specific tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

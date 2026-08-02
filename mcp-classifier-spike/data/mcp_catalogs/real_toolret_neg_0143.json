@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0143",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "GET_search_random_recipes",
+      "description": "Find random (popular) recipes.",
+      "params": [
+        "{'name': 'tags', 'in': 'query', 'schema'",
+        "{'name': 'number', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_price_chart",
+      "description": "Get related data to draw price chart",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "difference_calendar",
+      "description": "This endpoint calculates the difference between two strings, considering the specified time zones.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto_Gem_Finder_Trending",
+      "description": "get trending coins",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Coronavirus News API",
+      "description": "Retrieve the latest news related to the COVID-19 pandemic.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create File",
+      "description": "Creates a new string for translation. File uploads are limited to 100Mb in size. Each string may be attached to only one resource after creation.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FastYTAPI_Search_channel",
+      "description": "Returns list of channel when searching YouTube for the provided query.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "butter_to_ingredients",
+      "description": "Given the ratio of butter to sugar, this function calculates the total cups of ingredients used.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Nigeria_API_Facilities_Lookup",
+      "description": "This endpoint allows you to get facilities in Nigeria like hospital, bank, college, etc. by providing optional query parameters for facility type, state and city. It returns a list of facilities that match the query parameters.",
+      "params": [
+        "{'name': 'state', 'type': 'STRING', 'des",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_Daily_Schedule",
+      "description": "Get basic information on which games are being played during a day.  \ncall is like this:\n/getNBAGamesForDate?gameDate=20220310\nThe above call will return all of the games from March 10th, 2022.  Date must be in that format.  \nFor March 10th, there were two games. They come back in a list format within the body of the response.",
+      "params": [
+        "{'name': 'gameDate', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_youtube_24h_type",
+      "description": "Youtube most viewed music video by content language type: (English, Spanish, Asian or Other)",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Jet_Set_Radio_API_Songs",
+      "description": "Returns a list of all Songs from JSR/JSRF",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "data_driven_cultures.get_leadership_score",
+      "description": "Retrieve the leadership score of a specific individual in a data-driven organization.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fresh_LinkedIn_Profile_Data_Get_Search_Results",
+      "description": "Get search results. Please make sure the search is \"done\" before calling this endpoint.",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NOAA_Tides_Get_station_information",
+      "description": "Get information about the provided station ID.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get United States Continued Claims Count",
+      "description": "Retrieve the weekly count of continued claims in the United States, combining Regular, PUA, and PEUC claims.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Popular Articles by Market",
+      "description": "Retrieve popular articles by market, with optional language and market ID filtering.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "genderify_v3",
+      "description": "Predict and detect the gender (male or female) based on the given name or email address using the Genderify API. Names are supported in over 160 countries.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BMI Categorization API",
+      "description": "This API categorizes a person's weight based on their BMI, taking into account whether they are Asian or not. The categories include Underweight, Normal weight, Overweight, Obesity Class I, Obesity Class II, and Obesity Class III.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SignNow_Get_field_and_field_invite_id",
+      "description": "The endpoint returns field and field invite ids.",
+      "params": [
+        "{'name': 'document_id', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_screeners_list",
+      "description": "List all screeners (Top Rated Stocks, Top Quant Dividend Stocks,  Top Yield Monsters, etc...)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_DomainSearch",
+      "description": "You can use this endpoint to show different browser icons to your users. The code argument receives the browser code as it appears in your user /account/sessions endpoint. Use width, height and quality arguments to change the output settings.",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "clinical_trial_radar",
+      "description": "Discover current info on global clinical trials, organizations, diseases, and biomarkers from public & private studies.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "square.calculate_perimeter",
+      "description": "Calculate the perimeter of a square based on the length of its sides.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gettopsportmenu",
+      "description": "Fetches the top sport menu from the specified sportsbook API using provided skin name and RapidAPI key.",
+      "params": [
+        "skinname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Market Movers - Stocks",
+      "description": "Get the list of top gaining or losing stocks today. Top gainers are ordered by the highest rate of price increase since the previous day's close. Top losers are ordered by the highest percentage of price decrease since the last day.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_mortgage_check_equity_rates",
+      "description": "Check mortgage equity rates",
+      "params": [
+        "{'name': 'creditScore', 'type': 'STRING'",
+        "{'name': 'zip', 'type': 'STRING', 'descr",
+        "{'name': 'loanAmount', 'type': 'NUMBER',",
+        "{'name': 'propertyValue', 'type': 'STRIN",
+        "{'name': 'loanProduct', 'type': 'STRING'",
+        "{'name': 'mortgageBalance', 'type': 'NUM",
+        "{'name': 'state', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_condition(image_patch: ImagePatch, object_name: str, query: str) ->",
+      "description": "def check_object_condition(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Check the condition of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check the condition of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The condition of the object if it exists, \"No {object_name} found.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return f\"No {object_name} fo",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_Scraper_dashboard_pro_access",
+      "description": "Call this endpoint (or click 'Test Endpoint') to get access to the dashboard with all features.",
+      "params": [
+        "{'name': 'get_dash_url', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_condition_based_on_object(image_patch: ImagePatch, object_name: str, condi",
+      "description": "def infer_condition_based_on_object(image_patch: ImagePatch, object_name: str, condition: str, query: str) -> str:\n    '''Infer a condition based on the presence of a certain object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for presence.\n        condition (str): The condition to infer if the object is present.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The inferred condition if the object is present, or the result of the original query if the object is not pres",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "moveAgent",
+      "description": "Move an agent to a new position in a multi-agent system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVideoData",
+      "description": "Retrieve video data related to weather or astronomy for a specific location and date.",
+      "params": [
+        "location",
+        "date",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Sudoku",
+      "description": "This is a sudoku game. You use voice or text to play.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IceHockeyApi_MatchStatistics",
+      "description": "This operation returns statistics for a specific ice hockey match, including player statistics and other relevant data.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "irrigateCrop",
+      "description": "Irrigate a specific crop",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Player Summary",
+      "description": "Retrieve a player's summary, including general information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDatabaseInfo",
+      "description": "Retrieve information about a database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cnc_lathes.speed_optimization",
+      "description": "Optimize the cutting speed for CNC lathes based on the material and tool parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createVRApp",
+      "description": "Create a virtual reality application",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v5_User_Info_by_User_ID",
+      "description": "Get Instagram user information by Instagram user id.",
+      "params": [
+        "{'name': 'userid', 'type': 'string', 'de"
+      ]
+    }
+  ]
+}

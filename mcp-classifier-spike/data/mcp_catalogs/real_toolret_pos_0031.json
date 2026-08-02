@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_pos_0031",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "sshleifer/distilbart-cnn-12-6",
+      "description": "DistilBART is a distilled version of BART, a model for text summarization. This specific checkpoint, 'sshleifer/distilbart-cnn-12-6', is trained on the cnn_dailymail dataset and provides a fast and effective way to generate summaries of text. The model can be loaded using the Hugging Face Transformers library.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Webhook Test Payload for Bounce Recipient",
+      "description": "Returns a test webhook payload for a bounced recipient in a mail testing context.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_spotify_artist_artistID",
+      "description": "Get specific Spotify artist details. \nAdd \"_info\" or leave blank for general information, \"_songs\" for all songs, \"_albums\" for all albums",
+      "params": [
+        "{'name': 'artistID', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tweets from a Twitter List",
+      "description": "This API retrieves a list of tweets from a specified Twitter list.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_finance_rates",
+      "description": "Get finance rates",
+      "params": [
+        "{'name': 'loc', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pet_rescue_search",
+      "description": "Search for rescue pets available for adoption.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "caseOutcomePredictor",
+      "description": "Predicts the outcome of legal cases based on historical data and case specifics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_function_and_operation(image_patch: ImagePatch, object_name: str) -> st",
+      "description": "def identify_function_and_operation(image_patch: ImagePatch, object_name: str) -> str:\n    '''Identify the function and operation of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to identify.\n       \n    Returns:\n        str: The function and operation of the object.\n    '''\n    \n    function_query = \"What is the function of a {}?\".format(object_name)\n    how_works_query = \"How does a {} work?\".format(object_name)\n    function_answer = image_patch.llm_query(function_query)\n    how_works_answer = imag",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestByEdinetCode",
+      "description": "Return the latest securities report data of a company specified with an EDINET code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "`get_word_value`",
+      "description": "Given a word, returns the sum of its numeric values based on the given pattern.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "latest_contracts_for_symbol",
+      "description": "Retrieves the latest futures contracts for a given symbol for the next twelve months, with an optional parameter to specify a particular month.",
+      "params": [
+        "symbol",
+        "month"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestEmail",
+      "description": "Retrieve the latest email(s) from a set of inboxes, either all inboxes or a specific set of inbox IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fixtures List By SeasonId",
+      "description": "The method is used to get a list of football fixtures by the season id.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ShoppingAssistant",
+      "description": "This API locates the nearest store where the recommended outfit can be purchased.",
+      "params": [
+        "{'name': 'outfit', 'in': 'query', 'schem",
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FastYTAPI_Channel_s_videos_streams_shorts_ids_w_pagination",
+      "description": "Returns the list of videos/streams(a.k.a. lives)/shorts ids with some basic information for each.\n\nPagination is possible, which allows to retrieve all videos/streams/shorts of a channel with several subsequent requests. For this, provide the `pagination` received in the previous request to this endpoint.\n\nResults are returned ordered by upload date, from latest to oldest.",
+      "params": [
+        "{'name': 'videosType', 'type': 'STRING',",
+        "{'name': 'channelId', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "South Africa Songs",
+      "description": "Retrieve the South Africa Songs chart data from Billboard API v2. The chart is weekly based and defaults to the last week if no specific week is provided. If the week string is not Saturday, it will default to the Saturday of that week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Service Version",
+      "description": "Returns the version of the Visual Recognition service.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Token Splitter",
+      "description": "Splits input text into tokens using a specified delimiter, with optional parameters for maximum token size and inclusion of variations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "CarYardBard",
+      "description": "AI-Powered Car Sales Ad Generator for Australian Car Dealers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_repayment_schedule",
+      "description": "Calculates the repayment schedule for a loan using specified parameters.",
+      "params": [
+        "installmentcount",
+        "principalamount",
+        "annualinterestrate",
+        "startdate",
+        "repaymentinterval"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Roulette Statistics",
+      "description": "Retrieves statistics about wheel results, including count, percentage, last occurrence time, and hot frequency percentage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Track Details (Single)",
+      "description": "Retrieve detailed information about a single Spotify track, including track name, thumbnail, duration, and artist name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok Video Details",
+      "description": "Retrieve detailed information about a TikTok video, including the video content without a watermark, cover, music, and other metadata.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "GetUserToken",
+      "description": "description = \"Get user token API that takes two parameters - 'username' and 'password'. The 'username' parameter is used to identify the user and the 'password' parameter is used to authenticate the user's identity.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the user.'},\n    'password': {'type': 'str', 'description': 'The password of the user.'}\n}\noutput_parameters = {\n    'token': {'type': 'str', 'description': 'The token generated upon successful authentication.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_Sports_Competitions_Details",
+      "description": "Get competition details by competition ID",
+      "params": [
+        "{'name': 'timezone', 'type': 'NUMBER', '",
+        "{'name': 'competition_id', 'type': 'NUMB",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tournament List",
+      "description": "List of tournaments in your data coverage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getQRCode",
+      "description": "Generates a QR code for a given phone ID and returns the QR code image.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "politicians",
+      "description": "fetch a list of politicians data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_deleted_transaction_time",
+      "description": "Get the time of the deleted transaction",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Coinranking_Get_markets",
+      "description": "Get a list of markets. Markets are ranked by their volume over the last 24 hours. Use our filters to get a subset of the markets.\nThis endpoint requires the **ultra** plan or higher.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v5_Music_Information",
+      "description": "Get Instagram music information by Instagram audio_cluster_id.",
+      "params": [
+        "{'name': 'musicid', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "difficulty",
+      "description": "Fetches weed strain information based on the difficulty of growing (easy, medium, or difficult).",
+      "params": [
+        "difficulty"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get News",
+      "description": "All Latest news from India Today Platform",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballTournamentMeta",
+      "description": "Retrieve metadata about a specific football tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Heck_Yes_Markdown_Get_Markdown",
+      "description": "Enter a url or some HTML code to convert the page to Markdown. One parameter between \"u\" and \"html\" must be submitted with the request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_Search_v1_Image_Search",
+      "description": "v1 / Image Search",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Comparison_Cloud_GetFileVersions",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Data Breach Checker API",
+      "description": "The Data Breach Checker API provides a simple endpoint for users to check if their email has been compromised in any known data breaches.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ReserveMeeting.get_room_status",
+      "description": "get the room booking status",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "recommendation_trends",
+      "description": "Fetches recommendation trends for a given stock symbol using the Yahoo Finance API on RapidAPI.",
+      "params": [
+        "symbol"
+      ]
+    }
+  ]
+}

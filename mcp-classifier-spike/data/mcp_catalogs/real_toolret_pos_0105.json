@@ -1,0 +1,335 @@
+{
+  "catalog_id": "real_toolret_pos_0105",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "businessplan",
+      "description": "Generates a business plan for the given idea using the Business Starter API.",
+      "params": [
+        "idea"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "glpn-nyu-finetuned-diode-221122-030603",
+      "description": "This model is a fine-tuned version of vinvino02/glpn-nyu on the diode-subset dataset.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "taboo_api_Get_Stored_Word_From_Any_Category",
+      "description": "Get a random result which will contain the main phrase and the taboo words, result may come from any of the stored categories.\n\nOptionally pass a parameter which will control the amount of taboo words to be returned, \"forbiddenWordLimit\" defaults to 4 and has a max of 10",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_transaction_status",
+      "description": "Check transaction status",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Maytapi_WhatsApp_getScreen",
+      "description": "Returns the screenshot of the screen in the current session",
+      "params": [
+        "{'name': 'phone_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "video_conference_tool",
+      "description": "Video conference tool that allows setting meeting time, participants, and whether a password is required",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AI_Content_Detector_v2_chat_gpt_detector",
+      "description": "detector",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "filterDocuments",
+      "description": "Filters documents published in the Federal Register by date range, publication type, or agency.",
+      "params": [
+        "dateRange",
+        "publicationType",
+        "agency"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Auto_Complete",
+      "description": "Auto Complete",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Expanded Stock Quote",
+      "description": "Retrieve an expanded stock quote with underlying static, real-time, and expanded information (Sector, Exchange) for a given stock ticker.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ZswOQtRKu",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_quotes_by_keyword",
+      "description": "Retrieve quotes related to a specific keyword.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create Group",
+      "description": "Create a new group with the provided name and optional textline routing information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COD_API_2_0_Season_Critical_Damage_Leaderboard_WZ2",
+      "description": "Get season critical damage information for up to 2000 players on the leaderboard.",
+      "params": [
+        "{'name': 'season', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Countries By Continent",
+      "description": "Search countries by their continent.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Artist Related Artists",
+      "description": "Retrieve a list of artists related to a given artist by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/quotes/postcode/correo_argentino/GetShippingQuotes",
+      "description": "Retrieve shipping quotes for a specific postcode in Correo Argentino.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_following",
+      "description": "Get the current user's followed artists.\n",
+      "params": [
+        "{'in': 'query', 'name': 'type', 'require",
+        "{'in': 'query', 'name': 'after', 'requir",
+        "{'in': 'query', 'name': 'limit', 'requir"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateWorkDone",
+      "description": "Calculate the work done in a thermodynamic process",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_sepia_image_sepia_get",
+      "description": " ",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List User Comments",
+      "description": "Retrieve a list of comments made by a specific user on the SoundCloud platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getSentDeliveryStatusesBySentId",
+      "description": "Get all sent email delivery statuses",
+      "params": [
+        "{'name': 'sentId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sms77io_Outbound",
+      "description": "Retrieves outbound messages history.",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_youtube_24h_type",
+      "description": "Youtube most viewed music video by content language type: (English, Spanish, Asian or Other)",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMusicInfluence",
+      "description": "Retrieve the influence of a music track on society",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scheduleSocialMediaPost",
+      "description": "Schedule a post on a social media platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_advance_notification",
+      "description": "Set advance notification for a specified event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get_emails_from_url_Get_emails",
+      "description": "Get emails by URL.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Supported Languages for Image Processing",
+      "description": "This API returns a list of all supported languages for image processing, including their corresponding language codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instant_Cameroon_News_Home_page",
+      "description": "Home and Welcome page that introduces the API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "maclookup",
+      "description": "Looks up the manufacturer information for a given MAC address using the Toolbench RapidAPI service.",
+      "params": [
+        "mac_number"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "telecom.network_upgrade_planner",
+      "description": "Plan and schedule upgrades for mobile network infrastructure based on current technology and future needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_gcd_multiple",
+      "description": "This function takes a list of numbers as input and returns their greatest common divisor (GCD).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "myBooky_DEMO_getReservationForUser",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shapeways_GET_materials_v1",
+      "description": "{\"category_name\": \"Other\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": \"{\\\"List\\\": {\\\"title\\\": \\\"str\\\", \\\"httpMethod\\\": \\\"str\\\", \\\"description\\\": \\\"str\\\", \\\"version\\\": \\\"str\\\", \\\"revision\\\": \\\"str\\\", \\\"preferred\\\": \\\"bool\\\", \\\"path\\\": \\\"str\\\", \\\"discoveryRestUrl\\\": \\\"str\\\", \\\"discoveryLink\\\": \\\"str\\\", \\\"discoveryRootUrl\\\": \\\"str\\\", \\\"documentationLin",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "EmailVerification",
+      "description": "Verifies an email address using the fast_email_verifier tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DevelopmentTool",
+      "description": "used to develop functionality and perform unit testing",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_points_point_forecast",
+      "description": "Forecast data for a point. The DWML format is a temporary format to aid transition and will be sunset at a later date. This response is derrived from the /gridpoints endpoint and is intentionally less structured. If more structure is required, developers should use the /gridpoints endpoint directly. Example: /points/39.0693,-94.6716/forecast",
+      "params": [
+        "{'name': 'point', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ISBNToBookName",
+      "description": "This API is used to convert the ISBN of a book to its name.",
+      "params": [
+        "{'name': 'ISBN', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Palmy_Investing_API_quote_list",
+      "description": "This endpoint provides stock quotes with time critical information, such as price and trading volume",
+      "params": []
+    }
+  ]
+}

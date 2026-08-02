@@ -1,0 +1,335 @@
+{
+  "catalog_id": "real_toolret_neg_0066",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "cl-tohoku/bert-base-japanese",
+      "description": "This is a BERT model pretrained on texts in the Japanese language. This version of the model processes input texts with word-level tokenization based on the IPA dictionary, followed by the WordPiece subword tokenization.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Flight_Data_Hong_Kong_Scheduled_Flights_Level",
+      "description": "Get weekly Hong Kong scheduled departing flights level.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto Exchanges",
+      "description": "This API returns a list of cryptocurrency exchanges available at Twelve Data API, which is daily upstringd.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_sale",
+      "description": "This method takes a list of sales values as integers and returns the total sale.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "EnvironmentManager",
+      "description": "Manage environment variables of Windows system.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Webcams by Continent",
+      "description": "Returns a list of webcams according to the specified continents. Multiple continents can be specified, separated by commas.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fake_Data_Generator_random_profile_by_id",
+      "description": "Retrieve fake profiles by id.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatBreedDB_All_Cats",
+      "description": "Get a list of all Cats with their basic meta data.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataStore",
+      "description": "Stores web crawler content and analytics data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bulk WHOIS",
+      "description": "Performs a bulk WHOIS query for a list of domains or IP addresses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_analysis_get_details_Deprecating",
+      "description": "Get analysis detail by id\n* This endpoint is deprecating. Use .../analysis/v2/get-details instead",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_market_v2_get_quotes_Deprecated",
+      "description": "Query one or multiple quotes at once.\n* This endpoint is deprecated, use .../stock/v2/get-realtime-data endpoint instead",
+      "params": [
+        "{'name': 'performanceIds', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_wearing(image_patch: ImagePatch, object_name: str, query: str) -> str",
+      "description": "def identify_wearing(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify what a specific object is wearing in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The clothes the object is wearing.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        # If no object is found, query the image directly with simple_query instead of returning a lo",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_v2_VenueDetails",
+      "description": "Venue Details",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'lang', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/equity/dividends",
+      "description": "Returns the dividend history data for a given security.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Whois_Lookup_v3_Check_Similarity",
+      "description": "This endpoint Helps to check if two domains are similar.\n\nParemeters:\n> domain1 \n>domain2",
+      "params": [
+        "{'name': 'domain1', 'type': 'STRING', 'd",
+        "{'name': 'domain2', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IBAN_validation_Validate_IBAN",
+      "description": "Validate IBAN",
+      "params": [
+        "{'name': 'iban', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BBC_Good_Food_API_Search_for_recipes",
+      "description": "Search for recipes by keyword or full phrase",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weekly Baseball Schedule",
+      "description": "Returns a list of baseball games scheduled for the next 7 days, given a specific string or the current string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Missing_Player_List",
+      "description": "List of injured and suspended players for the matches in a specific date.\n\n**The data will return for only -+7 days period, so endpoint can be tested with date range of today +- 7 days.**",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "courtCase.searchByDateRange",
+      "description": "Search and retrieve court cases within a specified date range and jurisdiction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hashing_Api_Blake2B_Text_Hash",
+      "description": "Hash text (as query-string-parameter) using blake2b algorithm.",
+      "params": [
+        "{'name': 'dataString', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zipwhip_group_addmember",
+      "description": "Once a group is created via the group/save call, you then need to populate members.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'group', 'type': 'STRING', 'des",
+        "{'name': 'session', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_Language_Supported_Languages",
+      "description": "Supported Languages",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_Tuesday_Wednesday",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the tickets sold on Tuesday and Wednesday.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Today Super Sure VIP Draw Matches",
+      "description": "This API returns daily super sure and precise Draw matches for football predictions. The API delivers carefully selected forecasts from www.168predict.site.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createImage",
+      "description": "This function creates a new image with the specified dimensions and visual elements.",
+      "params": [
+        "width",
+        "height",
+        "elements"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "isSongAvailable",
+      "description": "Determine if a song is available in your country or region.",
+      "params": [
+        "songUrl",
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "North Carolina Gas Prices",
+      "description": "Returns current and historical gas price data for North Carolina.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listportfolios",
+      "description": "Fetches a list of portfolios from the Trader Wagon API based on the given parameters.",
+      "params": [
+        "limit",
+        "portfoliotype",
+        "available"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weather_5_day_Forecast",
+      "description": "3 hour interval - 5 day forecast for a given lat/lon",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lon', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_category",
+      "description": "Fetches a specific category from the hashtag5 API using the specified category ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pokemon_TCG_Card_Prices_Get_One_Set_By_Id",
+      "description": "Returns information about a single set, retrieved using the ID for that set.",
+      "params": [
+        "{'name': 'setId', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auto Complete",
+      "description": "Gets airport and city IDs for the air product related to words in a passed string through the getAutoComplete endpoint",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_to_square_meters",
+      "description": "This method takes two arguments, 'length' and 'unit', where 'unit' is a string representing the unit of length (e.g. \"m\", \"ft\", \"in\"). It converts the length to meters and returns the result.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wyoming Gas Prices API",
+      "description": "Returns current gas price data for Wyoming. Historical data starting from 2023-06-01 can be queried by adding the `string` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FontTool",
+      "description": "for selecting fonts",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_v2_Get_Config",
+      "description": "This API endpoint is responsible for providing  some of the parameters require for most of the API's.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Owned NFTs",
+      "description": "Fetch the list of owned NFTs by the wallet, along with their metadata",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top_Instagram_Hashtag_GET_Hashtag",
+      "description": "Get detail hashtag",
+      "params": [
+        "{'name': 'tag', 'type': 'string', 'descr"
+      ]
+    }
+  ]
+}

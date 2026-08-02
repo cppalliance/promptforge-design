@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_toolret_pos_0113",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "listLinks",
+      "description": "Lists all shortened links created by the user.",
+      "params": [
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest Symbol Information",
+      "description": "Retrieves the latest information about a specific symbol on the Bybit exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pipeline Management",
+      "description": "The Pipeline Management API allows users to manage business processes, specifically pipelines, within the Streak CRM for Gmail tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_social_trending_posts",
+      "description": "Search the top 50 tickers trending on social media by posts.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_v2_list_similar_homes_Deprecated",
+      "description": "List similar properties for sale\n* This endpoint is deprecating, the official have changed to use .../properties/v2/list.... endpoints to list similar properties.",
+      "params": [
+        "{'name': 'property_id', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ChurchApp_Search_Contacts",
+      "description": "Get a contact by name",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchAddress",
+      "description": "Search for a specific address in Singapore and retrieve its geospatial information.",
+      "params": [
+        "searchVal",
+        "returnGeom",
+        "getAddrDetails",
+        "pageNum"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Championships by Count",
+      "description": "Retrieve a list of teams ranked by the total number of championships they have won.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_balance_sheet",
+      "description": "Fetches the balance sheet data of a company identified by the given ticker symbol.",
+      "params": [
+        "symbol",
+        "formstyle",
+        "freq"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_proximity_between_objects(image_patch: ImagePatch, object_name: str, refer",
+      "description": "def check_proximity_between_objects(image_patch: ImagePatch, object_name: str, reference_object_name: str, proximity_ratio: float, query: str) -> str:\n    '''Check the proximity of one object to another.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for proximity.\n        reference_object_name (str): The name of the reference object.\n        proximity_ratio (float): The ratio of the reference object's height that defines the proximity threshold.\n        query (str): The original query to answer.\n       \n   ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandURL",
+      "description": "Expand a Bitly link into its original long URL.",
+      "params": [
+        "short_url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Send Message",
+      "description": "This API is used to send a message to an open group.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "product_inventory_search",
+      "description": "Product Inventory Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Revision",
+      "description": "Retrieve a specific revision of a post",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "eBay_products_search_scraper_GET_Search_Products_Data",
+      "description": "GET Search Products Data",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'Item_Location', 'type': 'STRIN",
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get SQL Versions",
+      "description": "Retrieve a list of supported SQL versions by the sql_code_compiler tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Data_User_metadata_information",
+      "description": "Get user metadata. Number of followers, followings , avatar url, description and more",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Silero Voice Activity Detector",
+      "description": "Silero VAD is a pre-trained enterprise-grade Voice Activity Detector (VAD) that aims to provide a high-quality and modern alternative to the WebRTC Voice Activity Detector. The model is optimized for performance on 1 CPU thread and is quantized.",
+      "params": [
+        "repo_or_dir",
+        "model",
+        "force_reload"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_top_type",
+      "description": "Get the current user's top artists or tracks based on calculated affinity.\n",
+      "params": [
+        "{'in': 'path', 'name': 'type', 'required",
+        "{'in': 'query', 'name': 'time_range', 'r",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Trending TV Shows",
+      "description": "Returns a list of trending TV shows with their titles, IDs, and release years.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cnc_lathes.speed_optimization",
+      "description": "Optimize the cutting speed for CNC lathes based on the material and tool parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_match_list_live",
+      "description": "Fetches the list of daily live matches for a specific date within a \u00b17 days period.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ASIN_Data_Category",
+      "description": "The Category Parameters are applicable when making a request with `type=category` to retrieve category results for an Amazon category. Categories can be specified either via passing an Amazon category URL in to the url parameter, or by passing a Category ID in the `category_id` and an Amazon domain in the `amazon_domain` parameter. The parameters should be appended as querystring parameters to the Product Data API GET HTTP request.\n\nCategory results are retrieved from the category listing page on Amazon.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Amazon Search Results",
+      "description": "Retrieve search results from Amazon based on a given search query",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Malaysia Songs Chart API",
+      "description": "Retrieves the Malaysia Songs chart information for a specific string range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Manga_Scrapper_Webtoons_list_paginated",
+      "description": "Make request to fetch webtoon's series collection from a specific provider.",
+      "params": [
+        "{'name': 'provider', 'type': 'STRING', '",
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlayerRegularSeasonStatistics",
+      "description": "This endpoint retrieves regular season statistics for a specific player in a given tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "create_system",
+      "description": "This method takes two arguments, 'total_coins' and 'total_amount', and returns a tuple representing the system of linear equations that can be used to solve the problem.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_1977_2022_NBA_Team_Rosters_and_Schedules_Get_Specific_NBA_Franchise_Data",
+      "description": "Grabs all NBA Data for a Franchise from 1977(if applicable)-2022",
+      "params": [
+        "{'name': 'franchise', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_train_ticket_booking_link",
+      "description": "Generate official high-speed train ticket booking link",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "send_verification_code",
+      "description": "Send a verification code to the user's reserved mobile number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "marketdata",
+      "description": "Retrieves a regional forecast of the electricity price in Germany.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SleepOptimizer.configureRoom",
+      "description": "Configures the sleep environment by adjusting various room parameters to optimize sleep quality.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Season_Hitting_Stats",
+      "description": "Retrieve a players hitting stats for a given season.",
+      "params": [
+        "{'name': 'league_list_id', 'type': 'STRI",
+        "{'name': 'game_type', 'type': 'STRING', ",
+        "{'name': 'season', 'type': 'STRING', 'de",
+        "{'name': 'player_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Get_conversion_by_id",
+      "description": "Get conversion by id",
+      "params": [
+        "{'name': 'conversion_id', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_23andMe_profile_picture",
+      "description": "{\"category_name\": \"Medical\", \"required_parameters\": [{\"name\": \"profile_id\", \"type\": \"STRING\", \"description\": \"profile_id as returned from /user/\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"get_23andMe_profile_picture\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'profile_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Meats_Futures_Prices",
+      "description": "page source: https://www.investing.com/commodities/meats",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_cube_surface",
+      "description": "This method takes one argument, 'side', and returns the surface area of a cube with the given side length.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_petstore_loginUser",
+      "description": "Logs user into the system",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Teams_Player_statistics",
+      "description": "Get overall player statistics by team ID, unique tournament ID, season ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd",
+        "{'name': 'unique_tournament_id', 'type':",
+        "{'name': 'season_id', 'type': 'NUMBER', "
+      ]
+    }
+  ]
+}

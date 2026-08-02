@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_pos_0106",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Evosis_s_Game_Database_getPlatformList",
+      "description": "Returns the id and names of the platforms as Json.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPhoneNumberInfo",
+      "description": "Retrieves detailed information about a phone number, including its carrier, region, and type (landline or mobile).",
+      "params": [
+        "phoneNumber",
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Extractor",
+      "description": "Extracts the specified information from the input data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TrueWay_Places_FindPlaceByText",
+      "description": "Search for places by text string",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "prime_divisors",
+      "description": "This function takes an integer as input and returns the number of prime positive divisors of the integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "valhalla/distilbart-mnli-12-1",
+      "description": "distilbart-mnli is the distilled version of bart-large-mnli created using the No Teacher Distillation technique proposed for BART summarisation by Huggingface. It is designed for zero-shot classification tasks.",
+      "params": [
+        "model_name_or_path"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getProductId",
+      "description": "Retrieve the unique identifier of a product based on its name or UPC code.",
+      "params": [
+        "productName",
+        "upcCode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Discord User Data",
+      "description": "Fetches user data by their ID from Discord. Automatically handles rate limits and bypasses them, and it parses their creation string automatically.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DELETE_me_tracks",
+      "description": "Remove one or more tracks from the current user's 'Your Music' library.\n",
+      "params": [
+        "{'in': 'query', 'name': 'ids', 'required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Convexity_convert_hex",
+      "description": "Endpoint to converts hex color code to other color code like RGB , HSL, CMYK",
+      "params": [
+        "{'name': 'hex', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "convertToRGB",
+      "description": "Convert a color code to its RGB representation",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consulta_dados_societ_rios",
+      "description": "Fetches the data of a partner (socio) associated with the given socioeconomic ID (id_socio).",
+      "params": [
+        "id_socio"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_recommendations",
+      "description": "Get the list of TV show recommendations for this item.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "PUT_me_player_volume",
+      "description": "Set the volume for the user\u2019s current playback device.\n",
+      "params": [
+        "{'in': 'query', 'name': 'volume_percent'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Manga_Scrapper_Webtoons_list_paginated",
+      "description": "Make request to fetch webtoon's series collection from a specific provider.",
+      "params": [
+        "{'name': 'provider', 'type': 'STRING', '",
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_Complete_Summary_Detail",
+      "description": "This endpoint returns full detail of any public stock",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "API.set_num_garages",
+      "description": "# To set the number of garage(s)\nAPI.set_num_garages(value: int)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "list-ratings",
+      "description": "Get the user's ratings from employment data sources.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "historicalEventSearch",
+      "description": "Searches for historical events based on keywords and optional date filters.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDataVisualization",
+      "description": "Generate a data visualization based on a specific dataset and visualization type.",
+      "params": [
+        "datasetId",
+        "visualizationType",
+        "fields",
+        "filters",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/user/contributions/suggestions/",
+      "description": "User Contributions (suggestions)",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'next_cursor', 'in': 'optional'",
+        "{'name': 'per_page', 'in': 'optional', '",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "contact_IT_for_network_stability",
+      "description": "Contact IT department to confirm the network connectivity stability of a designated meeting room at a specific time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Events",
+      "description": "Retrieve a list of events owned or accessible by the current token holder",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Captcha_v2_getErrors",
+      "description": "This endpoint is used to get a list of available error codes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Deutsche_Bahn_Autocomplete",
+      "description": "Search for train and public transport stations in Germany and across Europe",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "historical_get",
+      "description": "Get historical exchange rate data for a specific date.",
+      "params": [
+        "api_key",
+        "base",
+        "date",
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_logoutUser",
+      "description": "{\"category_name\": \"Video_Images\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"tes_logoutUser\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ODAM_tsv2",
+      "description": "Get all values of a data subset\n",
+      "params": [
+        "{'name': 'subset', 'type': 'STRING', 'de",
+        "{'name': 'dataset', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_divisible_by_9",
+      "description": "This method takes one argument, 'num', and returns a boolean indicating whether 'num' is divisible by 9 or not.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getChildVaccinationStatus",
+      "description": "Retrieve the vaccination status of a child",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EmailVerification",
+      "description": "Verifies an email address using the fast_email_verifier tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reputation.get_influencers",
+      "description": "Retrieve the influencers who have significant impact on the online reputation of a specified company.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Validate_a_token",
+      "description": "Submit a token (t=token) or a link (t=link) id in order to check if  it is a valid one. To be a valid token it must have a valid signature and not expired.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_spotify_artist_artistID",
+      "description": "Get specific Spotify artist details. \nAdd \"_info\" or leave blank for general information, \"_songs\" for all songs, \"_albums\" for all albums",
+      "params": [
+        "{'name': 'artistID', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "whin_hook_receiver",
+      "description": "This endpoint shall be triggered by the webhook origin and is not intended to be used through this frontend.",
+      "params": [
+        "{'name': 'user', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Video_No_Watermark_v2_Comment_list",
+      "description": "Comment list",
+      "params": [
+        "{'name': 'aweme_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forecast_RapidApiGetObservationHistoryByCoordinates",
+      "description": "Get an Observation object with historical information.",
+      "params": [
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getupdates",
+      "description": "Fetch updates about newly received messages from the server, starting from a given message ID and optionally waiting for incoming messages for a specified time.",
+      "params": [
+        "start_id",
+        "time_out"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Tableau",
+      "description": "Used to display visualization charts.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_alerts_alertId_notifications",
+      "description": "Get notifications of all users by alert id.",
+      "params": [
+        "{'name': 'alertId', 'type': 'STRING', 'd"
+      ]
+    }
+  ]
+}

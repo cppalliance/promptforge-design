@@ -1,0 +1,361 @@
+{
+  "catalog_id": "real_toolret_neg_0133",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getHolidaysByCountry",
+      "description": "Retrieve a list of holidays for a specific country with dates, descriptions, and types.",
+      "params": [
+        "country",
+        "year",
+        "month",
+        "day",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_transaction_deletion",
+      "description": "Create a request to delete erroneous transactions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_get_albums",
+      "description": "get-albums",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "applyDataMiningAlgorithm",
+      "description": "Apply a specific data mining algorithm to input data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSecurity",
+      "description": "Retrieve all associated information for a specific security, including all related identifiers.",
+      "params": [
+        "idType",
+        "idValue"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Goal Distributions",
+      "description": "Retrieve goal distributions for a specific team in a particular tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currency_Ex_Currency_List",
+      "description": "List of available currency in JSON format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Pageant Contests",
+      "description": "Retrieve a list of all pageant contests from the database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LeagueEventsByRound",
+      "description": "Retrieves matches by round for a handball unique tournament season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quran_Com_recitations_by_page_number",
+      "description": "Get list of ayah recitations for a Madani Mushaf page.",
+      "params": [
+        "{'name': 'recitation_id', 'type': 'NUMBE",
+        "{'name': 'page_number', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Technical Information of Cryptocurrency",
+      "description": "Retrieve technical information of a specific cryptocurrency",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live Whois Lookup",
+      "description": "Retrieves detailed Whois information for a given domain name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sports_odds_BetApi_Data_Tournaments_All",
+      "description": "Data Tournaments All Sports & All Countries",
+      "params": [
+        "{'name': 'TypeParams', 'type': 'STRING',",
+        "{'name': 'SportId', 'type': 'STRING', 'd",
+        "{'name': 'LangOdds', 'type': 'STRING', '",
+        "{'name': 'CountryId', 'type': 'NUMBER', ",
+        "{'name': 'TypeOdds', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forecast_RapidApiGetObservationHistoryByCoordinates",
+      "description": "Get an Observation object with historical information.",
+      "params": [
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chain49_Blockchain_Info_Summary",
+      "description": "Get basic summary of info relating to the currently selected blockchain",
+      "params": [
+        "{'name': 'blockchain', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ID_Game_Checker_GET_username_Point_Blank",
+      "description": "Enter your Point Blank ID  in the required parameters",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Video Descriptions",
+      "description": "Retrieve video descriptions from YouTube videos",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "city_data",
+      "description": "Fetches a list of cities using the Toolbench RapidAPI.",
+      "params": [
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodMenuQuery",
+      "description": "This API is used to find out the food menu of a specific restaurant.",
+      "params": [
+        "{'name': 'restaurant', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDamHeight",
+      "description": "Retrieve the height information of a dam",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str,",
+      "description": "def check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str, reference_object_name: str, distance_threshold: int, query: str) -> str:\n    '''Check the existence of an object near another object and if so, perform a specific query on one of the objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        reference_object_name (str): The name of the reference object.\n        distance_threshold (int): The maximum distance between the two objects for them to be considere",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_news_v2_list_trending",
+      "description": "List trending news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_DataFeeds_by_Rolling_Insights_Team_Depth_Charts",
+      "description": "Returns player depth charts for a team",
+      "params": [
+        "{'name': 'sport', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "profile_image",
+      "description": "Generates a profile image URL based on the provided user name and retrieves the image information from the RapidAPI image service.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyze_species_distribution",
+      "description": "Analyzes and visualizes the distribution of different species across various geographical regions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Career Pitching Stats",
+      "description": "Retrieve a player's career pitching stats for a given game type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customShortLink",
+      "description": "Generates a custom short link based on specific user preferences, such as domain type, length, and more.",
+      "params": [
+        "url",
+        "domain",
+        "slug",
+        "title"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stream Tags",
+      "description": "Retrieves the stream tags for a specified Twitch channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_schedule_manager",
+      "description": "Schedule Management Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Blockchain Info Summary",
+      "description": "Retrieve a summary of information related to the specified blockchain, including its basic details and statistics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Channel Chatroom",
+      "description": "Retrieve the chatroom information for a specified channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Economy_News",
+      "description": "This endpoint provides the economy news",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuestDetails",
+      "description": "Access information on a specific quest, including its objectives and rewards.",
+      "params": [
+        "questId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WellnessProgram.enroll",
+      "description": "Enrolls a user in a wellness program tailored to their mental health needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Abuse IP Check Endpoint",
+      "description": "Checks the abuse status of an IP address and returns relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Newsletter Generator",
+      "description": "Generate a compelling newsletter from a given text",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentCalendarCreator",
+      "description": "for creating content calendars",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: s",
+      "description": "def compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: str, interaction_object_name: str, query: str) -> str:\n    '''Compare the interactions of two objects with a third object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object1_name (str): The name of the first object.\n        object2_name (str): The name of the second object.\n        interaction_object_name (str): The name of the object with which the interactions are being compared.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"The sa",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_exercises",
+      "description": "Fetch up to 10 exercises from the API Ninjas Exercises API that satisfy the given search parameters.",
+      "params": [
+        "offset",
+        "muscle",
+        "type",
+        "difficulty",
+        "name"
+      ]
+    }
+  ]
+}

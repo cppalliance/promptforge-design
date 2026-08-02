@@ -1,0 +1,343 @@
+{
+  "catalog_id": "real_toolret_pos_0004",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get topic",
+      "description": "Returns a single topic area with the given ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_Market_value_of_players",
+      "description": "Get market value of players",
+      "params": [
+        "{'name': 'sort_by', 'type': 'STRING', 'd",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_Get_the_timezones",
+      "description": "Get the timezones.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "/get_products_from_category",
+      "description": "Retrieves a list of products from a specific category on Gearbest.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_MLB_Live_In_Game_Real_Time_Statistics_Get_MLB_Betting_Odds",
+      "description": "This grabs MLB betting/gambling lines and odds from some of the most popular online sportsbooks (fanduel, betrivers, betmgm, caesars, pointsbet, etc). \n\nYou can call this for specific game or a specific date.  Check out the example responses here for the type of data you can expect back.   Some of the sportsbooks do not offer live betting, so data from those sportsbooks will not be returned after the game starts.  \n\n\nEither gameDate or gameID is required.\nExamples of what the calls can look like:\n/getMLBBettingLines?gameDate=20230410\n/getMLBBettingLines?gameID=20230410_HOU@PIT",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "gogoanime_data_api_GetSinglePageInfo",
+      "description": "GetInfoFrom SingleAnime Pages",
+      "params": [
+        "{'name': 'link', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market_auto_complete",
+      "description": "Fetch auto-complete suggestions for stock market queries.",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "archive_file_tool",
+      "description": "File Archiving Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailCheck_Domain",
+      "description": "Check if a domain is disposable",
+      "params": [
+        "{'name': 'domain', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Haber API",
+      "description": "Retrieves the latest news headlines from ntv.com.tr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "All_In_One_Crypto_Swiss_Knife_Top_coins_by_market_cap",
+      "description": "Get top coins by mCap",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "resizeImage",
+      "description": "Resizes an image to the specified dimensions.",
+      "params": [
+        "image_url",
+        "width",
+        "height"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fid_entty",
+      "description": "Find all <r, t> that has the relation <input, r, t> from Wikidata. It looks like viewing the main page of the input entity. The result is in json format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_balance_sheet",
+      "description": "Fetches the balance sheet data of a company identified by the given ticker symbol.",
+      "params": [
+        "symbol",
+        "formstyle",
+        "freq"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkFeasibility",
+      "description": "Check the feasibility of space colonization at a given location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "MiDaS",
+      "description": "MiDaS computes relative inverse depth from a single image. The repository provides multiple models that cover different use cases ranging from a small, high-speed model to a very large model that provide the highest accuracy. The models have been trained on 10 distinct datasets using multi-objective optimization to ensure high quality on a wide range of inputs.",
+      "params": [
+        "repo_or_dir",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/dragon-plus-context-encoder",
+      "description": "DRAGON+ is a BERT-base sized dense retriever initialized from RetroMAE and further trained on the data augmented from MS MARCO corpus, following the approach described in How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval. The associated GitHub repository is available here https://github.com/facebookresearch/dpr-scale/tree/main/dragon. We use asymmetric dual encoder, with two distinctly parameterized encoders.",
+      "params": [
+        "pretrained"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_arrangement(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def determine_arrangement(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the arrangement of a group of objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for arrangement.\n       \n    Returns:\n        str: \"scattered\" if the objects are scattered, \"lined up\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) < 1:\n        return f\"There are no {object_name}.\"\n    # Defining the threshold for determining whether the objects are scatter",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Latest_Information_for_Symbol",
+      "description": "Get the latest information for symbol.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_Validation_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_users_paged_by_hundreds",
+      "description": "Fetches a list of users from a specified page, with each page containing up to one hundred users, using the provided RapidAPI key.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post by ID",
+      "description": "Returns a post by providing a valid post ID. The post ID can be obtained from the 'Get All Posts' endpoint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wyoming Gas Prices API",
+      "description": "Returns current gas price data for Wyoming. Historical data starting from 2023-06-01 can be queried by adding the `string` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https_i_imgur_com_JM9TESV_jpg_https_i_imgur_com_JM9TESV_jpg",
+      "description": "https://i.imgur.com/JM9TESV.jpg/",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetEventTrackerInfo",
+      "description": "Retrieves information about sports events or trackers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_2Factor_Authentication_India_Verify_SMS_OTP_Input",
+      "description": "This endpoint is useful in verifying user entered OTP with sent OTP",
+      "params": [
+        "{'name': 'otp_input', 'type': 'STRING', ",
+        "{'name': 'session_id', 'type': 'STRING',",
+        "{'name': 'api_key', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataAnalyzer",
+      "description": "use the given data to analyze and provide new insights",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBookList",
+      "description": "Fetches the list of books in the Dune series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Consumer Sentiment Index",
+      "description": "Retrieve the Consumer Sentiment Index, a monthly indicator of consumer confidence, to gain insights into the overall health of the economy.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "ModifyRegistration",
+      "description": "description = \"Modify Registration API that takes two parameters - 'registration_number' and 'new_appointment_time'. The 'registration_number' parameter refers to the identification number of the registration to be updated, and the 'new_appointment_time' parameter specifies the new time for the updated registration appointment.\" \n\ninput_parameters = {\n  'registration_number': {'type': 'str', 'description': 'The identification number of the registration to be updated.'},\n  'new_appointment_time': {'type': 'datetime', 'description': 'The new time for the updated registration appointment. Format:",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DELETE_me_tracks",
+      "description": "Remove one or more tracks from the current user's 'Your Music' library.\n",
+      "params": [
+        "{'in': 'query', 'name': 'ids', 'required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Dog Breeds in Ascending Order",
+      "description": "Returns a list of dog breeds in ascending order by name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Flight Details",
+      "description": "Retrieve detailed information about a flight based on a unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translation API",
+      "description": "This API translates text from one language to another using the Ginger translation tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "quotsy_get_qoutes_by_page",
+      "description": "return quotes for the page no",
+      "params": [
+        "{'name': 'page_no', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "survival.get_water_sources",
+      "description": "Identifies potential water sources in a specified radius around the user's current location for wilderness survival scenarios.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_schedule_manager",
+      "description": "Schedule Management Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fixture Result",
+      "description": "Retrieve the result of a specific football fixture by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Account Balance",
+      "description": "Retrieve the current account balance of a user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Article_Extractor_GET_article_parse",
+      "description": "Extract main article and meta data from a news entry or blog post.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    }
+  ]
+}

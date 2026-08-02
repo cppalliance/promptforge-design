@@ -1,0 +1,335 @@
+{
+  "catalog_id": "real_toolret_neg_0015",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Customized Workout Plan",
+      "description": "Generate a personalized workout plan based on user preferences, fitness goals, and current fitness level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nft_news",
+      "description": "Fetches up-to-date NFT news from the specified API.",
+      "params": [
+        "nftnews"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Sentiment Analysis API",
+      "description": "Returns a list of articles related to the input stock and their associated sentiment scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFertilityWindow",
+      "description": "Retrieve the fertility window",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chain49_Blockchain_Info_Summary",
+      "description": "Get basic summary of info relating to the currently selected blockchain",
+      "params": [
+        "{'name': 'blockchain', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ask-stories",
+      "description": "Fetches the latest Ask HN stories from Hacker News.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Total Goals by Tournament",
+      "description": "Retrieve total goals statistics of teams in a tournament, ordered by tournament standings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hanime_python_api_getComment",
+      "description": "Get Hanime Video Info",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DELETE_me_tracks",
+      "description": "Remove one or more tracks from the current user's 'Your Music' library.\n",
+      "params": [
+        "{'in': 'query', 'name': 'ids', 'required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_teams_teamId_memberships",
+      "description": " ",
+      "params": [
+        "{'name': 'teamId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TimeManager",
+      "description": "managing time and effort",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "filterDocuments",
+      "description": "Filters documents published in the Federal Register by date range, publication type, or agency.",
+      "params": [
+        "dateRange",
+        "publicationType",
+        "agency"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str,",
+      "description": "def check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str, reference_object_name: str, distance_threshold: int, query: str) -> str:\n    '''Check the existence of an object near another object and if so, perform a specific query on one of the objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        reference_object_name (str): The name of the reference object.\n        distance_threshold (int): The maximum distance between the two objects for them to be considere",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Teams_Player_statistics",
+      "description": "Get overall player statistics by team ID, unique tournament ID, season ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd",
+        "{'name': 'unique_tournament_id', 'type':",
+        "{'name': 'season_id', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Balance",
+      "description": "Retrieve the current balance of the user's SMS credits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "headline_news_search",
+      "description": "Headline News Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Pizzas",
+      "description": "This API returns a list of all pizzas available in the system, along with their details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify_PAN_Aadhaar_link_v2_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon_India_Scraper_v3_Product_Reviews",
+      "description": "Get The Product's Reviews",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pairs",
+      "description": "\nQuery different combinations of the trading pairs.\n\nThe most common query is all trading pairs of a decentralised exchange.\n\n`/pairs?chain_slugs=ethereum&exchange-slugs=uniswap-v2`\n\nThe results are always paginated.\n\n## Parameter seralisation\n\nNote that lists are not JSON serialised, but use [OpenAPI query parameter serialization](https://swagger.io/docs/specification/serialization/). I.e. lists are comma separated, no spaces between items.\n",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "audio-spectrogram-transformer",
+      "description": "One custom ast model for testing of HF repos",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_unique_feature(image_patch: ImagePatch, object_name: str, query: str) -",
+      "description": "def identify_unique_feature(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify a unique feature about an object's appearance.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for a unique feature.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The unique feature of the object if it exists, \"Object not found in the image.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if object_patches:\n        object_patch = obje",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ASCII Art by ID",
+      "description": "Retrieve a previously generated ASCII art image by its unique identifier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorsport Team Image",
+      "description": "Retrieve the logo or image of a motorsport team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "livescores",
+      "description": "Retrieve a list of current soccer live scores",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Growth_Estimates",
+      "description": "This API endpoint returns consensus analyst estimates over the company's growth rates for various periods.\n\nAvailability: Mega plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Searcher",
+      "description": "used to search for relevant information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Author Information by Id",
+      "description": "Retrieves detailed information about an author, including their name, biography, and book list.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IBAN_validation_Validate_IBAN",
+      "description": "Validate IBAN",
+      "params": [
+        "{'name': 'iban', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_ManagerLastMatches",
+      "description": "Get the list of the last matches played by a football manager, paginated by the given page number.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Meats_Futures_Prices",
+      "description": "page source: https://www.investing.com/commodities/meats",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Read_a_Link_or_Token_by_its_id",
+      "description": "Read a link or token by its id. It is used to see the content (t=link or t=token), but cannot validate the signature.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_Stats_and_Live_Data_getDivisions",
+      "description": "This only retrieves active divisions. For inactive divisions, use `/divisions/{id}`.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "Tacotron 2",
+      "description": "The Tacotron 2 model generates mel spectrograms from input text using an encoder-decoder architecture, and it is designed for generating natural-sounding speech from raw transcripts without any additional prosody information. This implementation uses Dropout instead of Zoneout to regularize the LSTM layers. The WaveGlow model (also available via torch.hub) is a flow-based model that consumes the mel spectrograms to generate speech.",
+      "params": [
+        "model_math"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alt_Bichinhos_Get_Portuguese_Alt_Text",
+      "description": "This endpoint will return back a pet image with **Brazilian Portuguese** alt text.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getFoodDetails",
+      "description": "Retrieve nutrient and ingredient information for a specific food.",
+      "params": [
+        "foodId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance/rates",
+      "description": "Get finance rates for a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "book_restaurant",
+      "description": "Restaurant Reservation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballLeagueAwayTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for away events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ohlc_history",
+      "description": "Fetches the OHLC (Open, High, Low, Close) history data for a specified currency pair.",
+      "params": [
+        "symbol"
+      ]
+    }
+  ]
+}

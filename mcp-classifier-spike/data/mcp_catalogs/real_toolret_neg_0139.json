@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_neg_0139",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "response_by_quizid",
+      "description": "Fetch all responses for a given quiz ID from the MoodRing API.",
+      "params": [
+        "quizid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/song/details/",
+      "description": "Song Details",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Zapier",
+      "description": "Interact with over 5,000+ apps like Google Sheets, Gmail, HubSpot, Salesforce, and thousands more.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "billboard_hot_100",
+      "description": "Fetch the Billboard Hot 100 chart data for a given date and range.",
+      "params": [
+        "date",
+        "range"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_team_details",
+      "description": "You'll get all details to a specific team by its id.",
+      "params": [
+        "{'name': 'teamId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Metrx_Factory_Competition_Performance_Indices",
+      "description": "Returns a snapshot of global competition performance indices sorted by rank in ascending order.\nSeparate index lists are maintained for club/national team and domestic/international competitions.\n\nIf no parameters are provided then the latest club team competitions ranking is returned in absolute index format. For details about index calculation and factors refer to the documentation.\n\nFor free subscriptions the following limits apply:\n\n`Max. requests per hour: 20`\n`Min. time between requests: 1 minute`\n`Max. performances returned: 5`",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getgames",
+      "description": "Retrieves Diablo 4 game data from the specified page using RapidAPI.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Users",
+      "description": "Retrieves a list of users associated with a specific team within an organization.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "channel-videos",
+      "description": "Retrieves videos from a YouTube channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tweets from a Twitter List",
+      "description": "This API retrieves a list of tweets from a specified Twitter list.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TrainingTool",
+      "description": "used to train customer service staff and create a knowledge base",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Auditor",
+      "description": "Used to audit the desensitized information to ensure that the desensitization meets the requirements.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "HeyWatch_Video_Encoding_GetVideo",
+      "description": "Get Information about a specific video",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Employee Information by Payment Card",
+      "description": "This endpoint retrieves employee information associated with a specific payment card number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BPS_Code_postal_par_code",
+      "description": "Fournit les informations \u00e0 partir d'un code postal connu en Nouvelle Cal\u00e9donie.",
+      "params": [
+        "{'name': 'code', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_value_from_category_and_item(data_frame, category_col, item_col, item_name)",
+      "description": "def get_value_from_category_and_item(data_frame, category_col, item_col, item_name):\n    \"\"\"\n    This function takes in a pandas DataFrame, a category column, an item column, and an item name, and returns the value in the category column for the specified item.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing various categories and items.\n    category_col (str): The column name for the categories.\n    item_col (str): The column name for the items.\n    item_name (str): The name of the item.\n    \n    Returns:\n    float: The value in the category column for the specifie",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "leagueshotactionsareasregularseason",
+      "description": "Retrieve the shot actions areas for a specific basketball league tournament during the regular season.",
+      "params": [
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Plants by Common Name",
+      "description": "Returns a list of plant species by their common name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_wasted_image_wasted_get",
+      "description": " ",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballTournamentMeta",
+      "description": "Retrieve metadata about a specific football tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CheckFlight",
+      "description": "This API checks the arrival time for a specific flight.",
+      "params": [
+        "{'name': 'flight_number', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "symbols/get-chart",
+      "description": "Retrieve historical data for a specific stock symbol to generate a chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_bacteria",
+      "description": "Calculates the number of bacteria at the end of a given day",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bible_Memory_Verse_Flashcard_Get_Chapter",
+      "description": "Takes parameters and returns one chapter for chosen bookname",
+      "params": [
+        "{'name': 'book_name', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetDocumentTables",
+      "description": "This API retrieves tables from a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "laliga_standings",
+      "description": "Fetches the standings for LaLiga for a given season.",
+      "params": [
+        "season"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_Image_Search_Search",
+      "description": "Webit Image Search API provides you a powerful endpoint to search billions of images from the world wide web featuring rating, reverse search by image and multi-lingual capabilities.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "core_js_name",
+      "description": "name=?\n? = javascript",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "addUser",
+      "description": "Add a new user to Metabase.",
+      "params": [
+        "email",
+        "password",
+        "firstName",
+        "lastName",
+        "groupId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vintageCollector.evaluateItem",
+      "description": "Evaluate the authenticity and value of a vintage item based on provided details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricket PreMatch Form",
+      "description": "Get pre-match form for a cricket match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.enroll_students",
+      "description": "Enrolls students into specified online courses with enrollment options.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cars Information",
+      "description": "This API returns a list of cars information based on the provided parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_combined_rate",
+      "description": "This method takes three arguments, 'rate_1', 'rate_2', and 'rate_3', and returns the combined rate at which the three pipes can fill the tank in units per hour.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "InvestmentSuggestion",
+      "description": "This API suggests where to invest considering the prices of cryptocurrency and stock.",
+      "params": [
+        "{'name': 'cryptoPrice', 'in': 'query', '",
+        "{'name': 'stockPrice', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Youtube_V2_Video_Details",
+      "description": "Get all publicly available details about a Youtube Video",
+      "params": [
+        "{'name': 'video_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education_equity.compare_student_groups",
+      "description": "Compares academic achievements between different student groups within a region to highlight educational inequalities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "clearbit_integration",
+      "description": "Access Clearbit Enrichment, Prospecting, Reveal APIs and website visitors data to access information about companies.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "vin_decoder_v4_AU_Decode",
+      "description": "AU Decode",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mailCheck",
+      "description": "\u2611 Filter domain\n\u2611 Not start with a special character and must begin with a letter, \ndigit, or certain special characters like +, _, ., -.\n\u2611 Followed by the @ symbol to separate the username part and the domain part of the email address.\n\u2611 Domain part does not start or end with a dot or hyphen and only contains alphanumeric characters or dots.\n\u2611 Email string ends after the domain part and there are no additional characters.",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des"
+      ]
+    }
+  ]
+}

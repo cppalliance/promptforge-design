@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_pos_0006",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Abuse_IP_Check_CHECK_Endpoint",
+      "description": "The check endpoint accepts a single IP address (v4 or v6). Optionally you may set the maxAgeInDays parameter to only return reports within the last x amount of days.\n\nThe desired data is stored in the data property. Here you can inspect details regarding the IP address queried, such as version, country of origin, usage type, ISP, and domain name. And of course, there is the valuable abusive reports.\n\nGeolocation, usage type, ISP, and domain name are sourced from the IP2Location\u2122 IP Address Geolocation Database. If you're looking for a performant IP database for geolocation, then use their prod",
+      "params": [
+        "{'name': 'ipAddress', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Line Score - Real Time",
+      "description": "This endpoint provides the basic \"line score\" for a game, whether completed earlier this season, or currently happening now, in real time. A baseball line score consists of the basic R/H/E, plus the scores by inning and any pitching scoring decisions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_day_average",
+      "description": "This method takes two arguments, 'total_earning' and 'num_days', and returns the average earning per day.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_wallet",
+      "description": "Generate a new cryptocurrency wallet for a specified blockchain.",
+      "params": [
+        "chain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Youtube_Videos_mp4",
+      "description": "Returns a list of MP4 files with different qualities and other details.",
+      "params": [
+        "{'name': 'videoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_transaction_history",
+      "description": "Retrieve account transaction history",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_cancellation_policy",
+      "description": "Inquire about cancellation policy",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotes_API_get_random_quote",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataReorganizer",
+      "description": "used to reorganize visualization results",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "gt_profile",
+      "description": "Get ticker's profile. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WeatherCheck",
+      "description": "This API checks the weather of a specific location.",
+      "params": [
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatalogAPI_View",
+      "description": "Returns the current address and items in the cart.",
+      "params": [
+        "{'name': 'external_user_id', 'type': 'ST",
+        "{'name': 'creds_datetime', 'type': 'STRI",
+        "{'name': 'creds_uuid', 'type': 'STRING',",
+        "{'name': 'creds_checksum', 'type': 'STRI",
+        "{'name': 'socket_id', 'type': 'STRING', ",
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "remoteWork.setupVirtualOffice",
+      "description": "Configure a virtual office environment for remote workers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMerchantAddress",
+      "description": "Retrieves the address of a merchant by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard U.S. Afrobeats Songs",
+      "description": "Retrieve the Billboard U.S. Afrobeats Songs chart for a given week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Autcomplete",
+      "description": "When making a request with the type parameter set to type=autocomplete Rainforest API will return autocomplete suggestions for the search term specified in the search_term parameter, on the Amazon domain specified in the amazon_domain parameter.\nYou may scope your autocomplete request to an Amazon autocomplete alias (synonymous with a product area or top-level category) by specifying the alias using the autocomplete_alias parameter. The available autocomplete_alias values vary depending on the amazon_domain used. You can find a full list of all autocomplete aliaes, per Amazon-domain, in the au",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'",
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'amazon_domain', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorcycle_Specs_Database_Specifications_by_Make_Model",
+      "description": "Get Specifications by {Make} / {Model}\n[MakeModelGetCompleteSpecification]",
+      "params": [
+        "{'name': 'make', 'type': 'string', 'desc",
+        "{'name': 'model', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arbitrage & Low Hold",
+      "description": "This returns the bets that have arbitrage and all bets that have low holds. It may be a bit confusing at the moment so if you have questions feel free to ask. Just as a basic overview, all of the lines for each side of the bet are shown in \"outcomes\", in \"alt_low_hold\" it shows the combinations of 2 sites that make up low hold bets from those outcomes, in \"alt_arb\" it likewise shows the combinations that are arbitrage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dog_API_GetRandom",
+      "description": "DISPLAY SINGLE RANDOM IMAGE FROM ALL DOGS COLLECTION",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "searchZoonoticDiseases",
+      "description": "Search for zoonotic diseases that can be transmitted between animals and humans",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Snap to Road",
+      "description": "Given a geographical coordinate, this API retrieves the snapped coordinate which is found by calculating the intersection between the longitudinal axis of the nearest road segment and the perpendicular line between the provided coordinate and this longitudinal axis.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gis_Engine_Health_Check",
+      "description": "Provide a way to test connectivity to API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_series_get_venues",
+      "description": "Get venues by series",
+      "params": [
+        "{'name': 'seriesId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Search_company_by_Name",
+      "description": "Search for a company by parameters will return a list of companies that match your query",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAppDownloads",
+      "description": "Retrieve the number of app downloads",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok Video Downloader",
+      "description": "Downloads a TikTok video without watermarks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sms77io_Get_Webhooks",
+      "description": "Retrieves all existing webhooks.",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Hashtags_Get_country_s_hashtags",
+      "description": "Get hashtags based on country",
+      "params": [
+        "{'name': 'country', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random TV Show",
+      "description": "Returns a random TV show from a database of TV shows.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scheduleSocialMediaPost",
+      "description": "Schedule a post on a social media platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "AnalysisTool",
+      "description": "to analyze the impact of CSR on corporate reputation and financial performance",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "book_online_meeting_room",
+      "description": "Book online meeting room",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realtor_API_for_Real_Estate_Data_RealtorAgentList",
+      "description": "This endpoint will give you the Realtor Agent List with the data as given below, if you provide the city, state_code and page.\nParameters:\ncity: San Jose or New York\nstate_code: CA or NY\npage: min = 1 and max can be depends on the total number of results. \n\n`{\n    \"agent_address\": {\n      \"city\": \"PLEASANTON\",\n      \"country\": \"US\",\n      \"line\": \"\",\n      \"line2\": \"\",\n      \"postal_code\": \"94588\",\n      \"state\": \"\",\n      \"state_code\": \"CA\"\n    },\n    \"agent_bio\": \"Mark Lafferty Office: 925-216-6203 nEmail Me Keller Williams Tri-Valley Realtyn2300 First St. #316nLivermore, CA 94550nnExperienc",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'city', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "GetUserToken",
+      "description": "description = \"Get user token API that takes two parameters - 'username' and 'password'. The 'username' parameter is used to identify the user and the 'password' parameter is used to authenticate the user's identity.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the user.'},\n    'password': {'type': 'str', 'description': 'The password of the user.'}\n}\noutput_parameters = {\n    'token': {'type': 'str', 'description': 'The token generated upon successful authentication.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "solve_equation",
+      "description": "This method takes two arguments, 'coefficients' and 'constants', representing the coefficients and constants of a system of linear equations, respectively. It returns a tuple representing the solution of the system.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Free Apps",
+      "description": "Retrieves a list of top free apps for a specific region and language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "movieReviewAnalyzer",
+      "description": "Analyzes and categorizes movie reviews based on sentiment and specific content tags.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_post_likes",
+      "description": "Fetches the likes for a specific post on Twitter using the given post ID.",
+      "params": [
+        "count",
+        "pid",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Wanted Image",
+      "description": "Retrieve a wanted image from a specified URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_coupons_endpoint",
+      "description": "Fetches daily AI-analyzed betting coupons with a high win rate from the specified endpoint.",
+      "params": [
+        "content_type",
+        "connection",
+        "sort"
+      ]
+    }
+  ]
+}

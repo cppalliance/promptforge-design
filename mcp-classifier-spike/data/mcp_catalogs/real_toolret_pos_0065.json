@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_toolret_pos_0065",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "employee",
+      "description": "Retrieve an employee's information by their ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leagueseasons",
+      "description": "Fetches the seasons of a handball tournament given its unique tournament ID.",
+      "params": [
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Routing Enhancement API",
+      "description": "Create a routing along a specific cycleway",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "company_search",
+      "description": "Search for companies by name using the Indeed API.",
+      "params": [
+        "company_name",
+        "locality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most_Exclusive_API_exclusiveness_callerID",
+      "description": "Check Exclusiveness. See if you are already exclusive, not yet or you get the exclusivity now.",
+      "params": [
+        "{'name': 'callerID', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "RepoTool",
+      "description": "Discover GitHub projects tailored to your needs, explore their structures with insightful summaries, and get quick coding solutions with curated snippets. Elevate your coding journey with RepoTool, your go-to companion for GitHub project exploration and code mastery.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "count",
+      "description": "Count how many cats",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zillow_v2_Agent_details_by_username",
+      "description": "Get agent's details by username(contact infos, active listings and reviews etc).\nPS : username is the profile link \nExample : \nusername :  Pardee-Properties\nfor https://www.zillow.com/profile/Pardee-Properties/",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Hitting_Leaders",
+      "description": "Retrieve n leaders for a given hitting statistic.  This endpoint is best used alongside col_in/col_ex to prune response data. Without, it returns entire player objects.  For best results, include the player\u2019s name, id, and the stat as a starting point.  See: Using col_in & col_ex",
+      "params": [
+        "{'name': 'game_type', 'type': 'STRING', ",
+        "{'name': 'results', 'type': 'STRING', 'd",
+        "{'name': 'sort_column', 'type': 'STRING'",
+        "{'name': 'sports_code', 'type': 'STRING'",
+        "{'name': 'season', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fitness_Calculator_Food_Names_And_Ids",
+      "description": "Find food table ids for a sub-table in the food database.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPollutantConcentration",
+      "description": "Retrieve the concentration of a pollutant in a given environment",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "auto-complete",
+      "description": "Get auto complete suggestion by term or phrase",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_qualified_repair_service",
+      "description": "Online search and selection of qualified repair service providers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Music Track Search API",
+      "description": "Searches for music tracks based on various parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Channels by Country",
+      "description": "Retrieve a list of channels by country for the Sports domain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parse",
+      "description": "Extracts metadata from a given URL using OpenGraph protocol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_type_risk_get_risk_return_analysis",
+      "description": "Get risk return analysis in the Risk tab",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc",
+        "{'name': 'securityId', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Songs API",
+      "description": "Provides information about India Songs chart, including the top songs and artists for a given week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Market Movers - Stocks",
+      "description": "Get the list of top gaining or losing stocks today. Top gainers are ordered by the highest rate of price increase since the previous day's close. Top losers are ordered by the highest percentage of price decrease since the last day.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon_Product_Price_Data_product",
+      "description": "Get Amazon product price information by locale.\n\nASINs provided will be searched by the locale provided, e.g. if `B005YQZ1KE,B074R8RQQ2` were provided and `US` as a locale were provided, it will provide metadata from only `amazon.com`.\n\nPlease note that price data may be up to 30 minutes out of date.\n\nCurrently supported locales:\n\nUS (amazon.com)\nUK (amazon.co.uk)\nCA (amazon.ca)\nIN (amazon.in)\nFR (amazon.fr)\n\nMore coming soon!",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de",
+        "{'name': 'asins', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cat_facts",
+      "description": "Returns a list of facts of cats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkEthicalConduct",
+      "description": "Check if a specific conduct is ethically acceptable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "repost",
+      "description": "Reposts an article to the Telegraph platform using the Telegraph API.",
+      "params": [
+        "article_url",
+        "title",
+        "author_url",
+        "author_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPdfInStorageToEpub",
+      "description": "Converts a PDF string stored in a storage to an EPUB string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asset_checkout_approval",
+      "description": "Asset checkout approval process tool for taking company assets off company premises",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FormCollector",
+      "description": "Used to collect form data and store it in the database.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Riddle by Difficulty Level",
+      "description": "Retrieves a random riddle based on the specified difficulty level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "echo_get",
+      "description": "Make a HTTP GET request to the echo API with specified content type and code.",
+      "params": [
+        "content_type",
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "curl -X GET 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}",
+      "description": "# Get the current weather data in location with latitude={lat}, longitude={lon}\ncurl -X GET 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}{optional_params}'\n\nParameters:\nlat, lon: (required) Geographical coordinates (latitude, longitude).\nappid: (required) Your unique API key.\nunits: (optional) Units of measurement. 'standard' (default), 'metric' and 'imperial' units are available.\nmode: (optional) Response format. 'JSON' format is used by default. To get data in 'XML' format use mode=xml.\nlang: (optional) You can use the lang parameter to get the output i",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_Profile_GET_Comments",
+      "description": "Detail post likers information",
+      "params": [
+        "{'name': 'media_id', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_in_category_between_entities(data_frame, entity_col, catego",
+      "description": "def calculate_difference_in_category_between_entities(data_frame, entity_col, category_col, entity1, entity2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and categories, two entity names, and a category name, and returns the difference in amounts for the category between the two entities.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing entities and categories.\n    entity_col (str): The column name for the entities.\n    category_col (str): The column name for the category.\n    entity1 (str): The name of the first entity.\n  ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_EventH2HDuel",
+      "description": "Get head-to-head duel information of a specific E-Sports event by providing its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disposable Email Checker",
+      "description": "Checks if an email address is disposable or not",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_market_v2_auto_complete",
+      "description": "Get auto suggestion by word or phase",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fashion.saleAlert",
+      "description": "Alerts users about sales on their favorite brands or items based on their past shopping history and preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "game.run_qa",
+      "description": "Run quality assurance tests on the game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Data Breach Checker API",
+      "description": "The Data Breach Checker API provides a simple endpoint for users to check if their email has been compromised in any known data breaches.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Private_List_User_Followings",
+      "description": "User Followings List",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd",
+        "{'name': 'sec_uid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "choose_second_digit",
+      "description": "This function takes in a list of digits and a chosen first digit, and returns the number of ways to choose the second digit from the remaining digits in the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "uploadVideo",
+      "description": "Uploads a video to Dailymotion's platform.",
+      "params": [
+        "file",
+        "title",
+        "description",
+        "tags",
+        "channel",
+        "published"
+      ]
+    }
+  ]
+}

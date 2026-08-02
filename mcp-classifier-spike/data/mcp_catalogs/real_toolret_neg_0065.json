@@ -1,0 +1,329 @@
+{
+  "catalog_id": "real_toolret_neg_0065",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Cash4Life_All_Drawings",
+      "description": "All Cash4Life drawings",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFarmLoan",
+      "description": "Retrieve farm loan information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_NBA_Injury_List_History",
+      "description": "This table currently has injury history from the years 2020, 2021, 2022, and 2023 for players who played an NBA game in the 21-22 season and afterwards.  Consider this table as \"beta\" at this point, as we are still collecting previous seasons' data and working through some challenges. \n\nparameters:\n(All dates must be in format YYYYMMDD)\nplayerID - Use this if you only want to pull back injury history from a specific player.\ninjDate - Use this is to pull back injury history for only a specific date.\nThe next two are used to pull back a range of dates.  You can use one or the other. Or none. \nbe",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MoviesDatabase_titles_episode_id",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "socialsearch",
+      "description": "The Social Search provides access to tweets, users, followers, images, media and more.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cities by Country",
+      "description": "This endpoint retrieves a list of cities in a given country, along with their cost of living and average prices.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EveryEarthquake_M4_5_Earthquakes_Past_Hour",
+      "description": "Magnitude 4.5+ Earthquakes, Past Hour",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "seo_api_Images",
+      "description": "Perform Google Image Search\n\nParameters\n----------\nquery : the string query to perform search. supports advance queries.\n\nReturns\n-------\njson: a list of results with the link, description, title, and image thumbnail for each result",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flixster_news_list",
+      "description": "List latest news",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pyannote/brouhaha",
+      "description": "Brouhaha is a joint voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation model. It is based on the PyTorch framework and uses the pyannote.audio library.",
+      "params": [
+        "audio.wav"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "multipleImages",
+      "description": "Generates multiple images of a specific breed.",
+      "params": [
+        "breed",
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_com_Shopping_API_product_fulfillment",
+      "description": "Returns product fulfillment information.",
+      "params": [
+        "{'name': 'tcin', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DocumentaryTimeline.getTimelineEvents",
+      "description": "Retrieves historical events and notable releases in the documentary genre within a specified time frame.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBookList",
+      "description": "Fetches the list of books in the Dune series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarPanelOptimizer.configurePanel",
+      "description": "Configures solar panels for optimal energy output based on environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_constant_for_inverse(func, inverse_func, constant)",
+      "description": "def find_constant_for_inverse(func, inverse_func, constant):\n    \"\"\"\n    Find the constant that makes the inverse function of a given function equal to a specified expression.\n\n    Parameters:\n    func (function): The original function.\n    inverse_func (function): The given expression for the inverse function.\n    constant (symbol): The symbol for the constant in the original function.\n\n    Returns:\n    float: The constant value that makes the inverse function equal to the given expression.\n    \"\"\"\n\n    x, y = symbols('x y')\n\n    # Find the inverse function of the original function by swappin",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "xyz_map_tiles_for_ocean_conditions",
+      "description": "Fetches ocean condition tiles based on the specified variable and datetime using Wavebase API.",
+      "params": [
+        "variable",
+        "datetime"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ethical_Leadership_Development_Program",
+      "description": "A training program designed to enhance ethical leadership qualities among senior management, including modules on decision-making, corporate governance, and stakeholder engagement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_MLB_Live_In_Game_Real_Time_Statistics_Get_MLB_Betting_Odds",
+      "description": "This grabs MLB betting/gambling lines and odds from some of the most popular online sportsbooks (fanduel, betrivers, betmgm, caesars, pointsbet, etc). \n\nYou can call this for specific game or a specific date.  Check out the example responses here for the type of data you can expect back.   Some of the sportsbooks do not offer live betting, so data from those sportsbooks will not be returned after the game starts.  \n\n\nEither gameDate or gameID is required.\nExamples of what the calls can look like:\n/getMLBBettingLines?gameDate=20230410\n/getMLBBettingLines?gameID=20230410_HOU@PIT",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "rapidapigethourlyforecastbylocationname",
+      "description": "Fetches the hourly weather forecast for a given location using the RapidAPI service.",
+      "params": [
+        "locationname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entities Search",
+      "description": "Search for entities and places based on a given query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search WikiHow API",
+      "description": "Searches for how-to articles on WikiHow and returns a summary of the methods and steps.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India_Bankruptcy_Verification_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_future_value",
+      "description": "Calculates the future value of an investment given the initial amount, interest rate and number of years",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ASIN_Data_Category",
+      "description": "The Category Parameters are applicable when making a request with `type=category` to retrieve category results for an Amazon category. Categories can be specified either via passing an Amazon category URL in to the url parameter, or by passing a Category ID in the `category_id` and an Amazon domain in the `amazon_domain` parameter. The parameters should be appended as querystring parameters to the Product Data API GET HTTP request.\n\nCategory results are retrieved from the category listing page on Amazon.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonendconstructorstanding",
+      "description": "Fetches the Constructor Standings at the end of the specified Formula 1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLovePercentage",
+      "description": "Calculates the love percentage between two individuals based on their names.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football Category Schedules",
+      "description": "Retrieves schedules of a specific football category for a given string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Learning_Engine_memre_api_v1_users_user_id_learning_stats",
+      "description": "Get the most effective times of day for a user to study.\n",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YourVinylStore_Your_Vinyl_Store_copy",
+      "description": "Best vinyl records in your collection",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SearchWebRequest",
+      "description": "Retrieve web search results for a specified keyword",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "make_reservation",
+      "description": "Make a reservation at a restaurant",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Waifu_Check_server_status",
+      "description": "Check server status",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_weather_change_alert",
+      "description": "Set weather condition change alert tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Device Asset by Identifier",
+      "description": "Retrieve detailed information about a device asset by its unique identifier.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetEventTrackerInfo",
+      "description": "Retrieves information about sports events or trackers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getProjectData",
+      "description": "Retrieve data on World Bank projects.",
+      "params": [
+        "projectId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IRCTC_SearchTrain",
+      "description": " ",
+      "params": [
+        "{'name': 'query', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_whois",
+      "description": "Fetches the WHOIS information for a given domain using the API Ninjas Whois API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magic_AliExpress_api_bestSales_product_productID_salesHistory",
+      "description": "This resource returns the historic of sales",
+      "params": [
+        "{'name': 'productID', 'type': 'NUMBER', "
+      ]
+    }
+  ]
+}

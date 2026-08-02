@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_pos_0171",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "regions",
+      "description": "The endpoint to retrieve a list of supported regions for Google Trends",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_reminder",
+      "description": "Create a reminder for a specific date and time",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_news",
+      "description": "Fetches the latest news related to a specific stock symbol/ticker.",
+      "params": [
+        "symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPositions",
+      "description": "Retrieve the open positions for the authenticated user.",
+      "params": [
+        "accessToken"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RestaurantLocation",
+      "description": "This API is to get the location of a renowned restaurant in a city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataiku.dataset_audit",
+      "description": "Performs an audit on a dataset to ensure compliance with data governance policies.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Microsoft_Edge_Text_to_Speech_GetVoicesList",
+      "description": "Voices list for the param \"voice_name\" of the function \"GetDownloadUrl\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameSchedule",
+      "description": "This API provides a schedule for the team's games based on the team information.",
+      "params": [
+        "{'name': 'team_info', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Customer Survey Response",
+      "description": "Retrieve a detailed response from a customer survey, including sentiment analysis for the third answer (a3), given a survey ID (sid).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_Stats_and_Live_Data_getGameDiff",
+      "description": "You can use this to return a small subset of data relating to game.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'startTimeCode', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPrices",
+      "description": "Retrieve a list of prices for a given price list ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Daily Match List-Results",
+      "description": "Retrieve a list of daily basketball matches, including finished matches, for a specified string range within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "swin2SR-lightweight-x2-64",
+      "description": "Swin2SR model that upscales images x2. It was introduced in the paper Swin2SR: SwinV2 Transformer for Compressed Image Super-Resolution and Restoration by Conde et al. and first released in this repository. This model is intended for lightweight image super resolution.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ingredient_search",
+      "description": "Search for simple whole foods (e.g. fruits, vegetables, nuts, grains, meat, fish, dairy etc.).",
+      "params": [
+        "{'name': 'query', 'schema': {'type': 'st",
+        "{'name': 'addChildren', 'schema': {'type",
+        "{'name': 'minProteinPercent', 'schema': ",
+        "{'name': 'maxProteinPercent', 'schema': ",
+        "{'name': 'minFatPercent', 'schema': {'ty",
+        "{'name': 'maxFatPercent', 'schema': {'ty",
+        "{'name': 'minCarbsPercent', 'schema': {'",
+        "{'name': 'maxCarbsPercent', 'schema': {'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bing_Video_Search_Trending",
+      "description": "Get currently trending videos.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seller Prostring API",
+      "description": "Retrieves seller prostring details for a single seller on Amazon.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "buyeventtickets",
+      "description": "buy tickets for a cultural event and date in a given city",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bucket_List_by_API_Ninjas_v1_bucketlist",
+      "description": "Returns a random bucket list idea.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Author Ticker Counts",
+      "description": "Retrieve the ticker counts of an author based on their slug",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Search",
+      "description": "This endpoint allows you to search for specific states by name. It returns a list of states that match the specified search query. You can also set country code or country name to search states in that country only.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shapeways_GET_materials_v1",
+      "description": "{\"category_name\": \"Other\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": \"{\\\"List\\\": {\\\"title\\\": \\\"str\\\", \\\"httpMethod\\\": \\\"str\\\", \\\"description\\\": \\\"str\\\", \\\"version\\\": \\\"str\\\", \\\"revision\\\": \\\"str\\\", \\\"preferred\\\": \\\"bool\\\", \\\"path\\\": \\\"str\\\", \\\"discoveryRestUrl\\\": \\\"str\\\", \\\"discoveryLink\\\": \\\"str\\\", \\\"discoveryRootUrl\\\": \\\"str\\\", \\\"documentationLin",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Exporter",
+      "description": "Exports data to a specified file or format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unit_Measurement_Conversion_Convert_a_Unit",
+      "description": "GET the Unit and Value you want to convert, and get a object with the result and abbreviation (if available).",
+      "params": [
+        "{'name': 'fromValue', 'type': 'STRING', ",
+        "{'name': 'toUnit', 'type': 'STRING', 'de",
+        "{'name': 'fromUnit', 'type': 'STRING', '",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_in",
+      "description": "Returns current gas price data for Indiana. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Returns",
+      "description": "Retrieve returns data for an ETF or FUND in the Performance tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_daily_prices",
+      "description": "Get the stock price of an entity in the stock market.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "xlm-roberta-large",
+      "description": "XLM-RoBERTa is a multilingual version of RoBERTa pre-trained on 2.5TB of filtered CommonCrawl data containing 100 languages. It is designed for masked language modeling and can be fine-tuned on downstream tasks such as sequence classification, token classification, or question answering.",
+      "params": [
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get IP Information",
+      "description": "Retrieve information about a given IP address, including its location, ISP, and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fighting_game.get_character_stats",
+      "description": "Retrieve the statistics of a specific character in a fighting game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DiscoveryTool",
+      "description": "for identifying user needs and pain points",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarPanelOptimizer.configurePanel",
+      "description": "Configures solar panels for optimal energy output based on environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "travel_camera_recommender",
+      "description": "Travel Camera Recommendation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PrivatePublicAPI_getOrderById",
+      "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+      "params": [
+        "{'name': 'orderId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "serie_a_standings",
+      "description": "Fetches the Serie A football standings for a given season using the provided RapidAPI key.",
+      "params": [
+        "season"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_v3_Profile",
+      "description": "get profile information by username",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPassengerID",
+      "description": "This API returns the id of a passenger.",
+      "params": [
+        "{'name': 'name', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "director.scene_setup",
+      "description": "Configure the settings for a specific scene including actors' positions and camera angles.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Playlist/Album Metadata",
+      "description": "Fetches metadata information about a playlist or album on SoundCloud, including track IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YvI",
+      "description": "Get the list of available competitions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Seller_Profile",
+      "description": "The Seller Profile Parameters are applicable when making a request with type=seller_profile to retrieve seller profile details for a single seller on Amazon - the seller is specified using either the seller_id and amazon_domain parameters or the url parameter (where the url parameter contains a link to an Amazon seller profile page). The parameters should be appended as querystring parameters to the Product Data APIGETHTTP request.\n\nSeller profile details are retrieved from the seller profile page for a single seller on Amazon. You can retrieve the seller_id value for a given seller from other",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    }
+  ]
+}

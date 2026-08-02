@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0018",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "YouTube Video Converter",
+      "description": "Convert YouTube videos to other formats",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFootballScore",
+      "description": "Retrieve the current score of a football match",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Astro_Gallery_Get_Astro_Photo_Info_randomly",
+      "description": "Return one of the photo info selected randomly by system, including paths (image_hd and image) which use to download photo in **Download Astro Photo** method.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Numbers",
+      "description": "The numbers API allows you to search, purchase, and manage settings on each tracking number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "current_air_quality",
+      "description": "Fetches the current air quality conditions for a given location specified by its longitude and latitude.",
+      "params": [
+        "lon",
+        "lat"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Channel_Videos",
+      "description": "Channel Videos",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "crn",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wordle_Answers_Solutions_Today",
+      "description": "Calling this endpoint you will todays solution.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_summary_document",
+      "description": "Create and save a summary document containing all service information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Alternative Titles",
+      "description": "Retrieve alternative titles for a movie based on its IMDB ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StreamlineWatch_Streaming_Guide_shows",
+      "description": "Returns the basic metadata for all shows available for playback in a specific region. The results are ordered by popularity or alphabetical order. You may get additional information about each show using its ID.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Global Indices",
+      "description": "Retrieve information about global stock market indices, including their current values, changes, and other relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_nth_term_inverse_proportional(first_term, second_term, term_number)",
+      "description": "def find_nth_term_inverse_proportional(first_term, second_term, term_number):\n    \"\"\"\n    Find the nth term of a sequence where each term, after the first term, is inversely proportional to the term preceding it.\n\n    Parameters:\n    first_term (float): The first term of the sequence.\n    second_term (float): The second term of the sequence.\n    term_number (int): The term number to find.\n\n    Returns:\n    float: The nth term of the sequence.\n    \"\"\"\n    # Calculate the constant of proportionality\n    constant = first_term * second_term\n\n    # If term_number is even, the nth term is the same a",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "images",
+      "description": "Fetches the URLs for a specified number of random WikiHow images.",
+      "params": [
+        "count"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "laliga_standings",
+      "description": "Fetches the standings for LaLiga for a given season.",
+      "params": [
+        "season"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Team_logo",
+      "description": "Get team logo by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeTable_Lookup_airports_Country_IATA_codes",
+      "description": "Returns a list of country IATA codes",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "GetUserToken",
+      "description": "description = \"Get user token API that takes two parameters - 'username' and 'password'. The 'username' parameter is used to identify the user and the 'password' parameter is used to authenticate the user's identity.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the user.'},\n    'password': {'type': 'str', 'description': 'The password of the user.'}\n}\noutput_parameters = {\n    'token': {'type': 'str', 'description': 'The token generated upon successful authentication.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "query",
+      "description": "Queries information about an IP address using the NetDetective API.",
+      "params": [
+        "ipaddress"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dudu_Command",
+      "description": "Please check http://dudu.com/docs/api/command/list for the proper parameter and method combinations",
+      "params": [
+        "{'name': 'json', 'type': 'STRING', 'desc",
+        "{'name': 'mask', 'type': 'STRING', 'desc",
+        "{'name': 'application_id', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_competition_outcome(image_patch: ImagePatch, person_name: str, competition",
+      "description": "def infer_competition_outcome(image_patch: ImagePatch, person_name: str, competition_type: str, action: str, possession: str, query: str) -> str:\n    '''Infer whether a person could have won a competition based on their actions, possessions, or other relevant factors.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        person_name (str): The name of the person to check.\n        competition_type (str): The type of competition.\n        action (str): The action that the person is performing.\n        possession (str): The possession that the person has.\n        query",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SleepOptimizer.configureRoom",
+      "description": "Configures the sleep environment by adjusting various room parameters to optimize sleep quality.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Current Weather",
+      "description": "Retrieve the current weather estimate for a given location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "waterQualityAnalysis.checkPollutionLevels",
+      "description": "Analyzes water samples to determine the concentration of various pollutants and assess compliance with environmental standards.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "adaptive_learning.get_student_performance",
+      "description": "Retrieve the performance data of a specific student in an adaptive learning platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ZRwQYnsZF",
+      "description": "Returns all members of the collective (core contributors, contributors, backers, sponsors).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Emails",
+      "description": "Search the web for emails using a query and email domain and get a list of email addresses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock General Tables",
+      "description": "Retrieve general tables for stocks, including financial information and stock details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_South_Asian_Express_get_types_852347ee_35c5_44fb_8548_1bee078d2350",
+      "description": "Scope under which the request is made; determines fields present in response.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Contract Information",
+      "description": "Retrieves detailed information about a specific contract asset.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AssetReallocationRecommender",
+      "description": "Provides recommendations for asset reallocation within portfolios to optimize performance based on current market conditions and historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "medicine.internal_medicine.appointment_scheduler",
+      "description": "Schedule and manage appointments for patients in an internal medicine practice.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entity_Risk_Indicator_Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_uploadMovieToYouTube",
+      "description": "Share an existing user-generated movie to YouTube.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_caught_bass",
+      "description": "This method takes two arguments, 'total_bass' and 'catch_rate', and returns the number of bass caught.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "time_to_fill_tank",
+      "description": "Calculates the time required to fill the tank",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMobileInfo",
+      "description": "Retrieves information about a mobile number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Greip_validatePhone",
+      "description": "This method can be used as an extra-layer of your system for validating phone numbers.",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'phone', 'type': 'STRING', 'des",
+        "{'name': 'key', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "UserResearch",
+      "description": "A user research tool that collects data on user behavior and preferences.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gunsky_Anjing",
+      "description": "Wkwkwland",
+      "params": []
+    }
+  ]
+}

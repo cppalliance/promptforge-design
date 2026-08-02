@@ -1,0 +1,367 @@
+{
+  "catalog_id": "real_toolret_pos_0122",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Organization Surveys",
+      "description": "Retrieves a list of customer survey responses for a given organization, identified by its organization ID (oid).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_nearby_gas_stations",
+      "description": "Find nearby gas stations",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Price Probability",
+      "description": "Predicts the probability of the price of a stock being above or below its current price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "RecipeGenerator",
+      "description": "Can generate recipes based on given dietary restrictions and taste preferences.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "researcher.query_citations",
+      "description": "Query citation metrics for a researcher's publications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flightera_Flight_Data_flightInfo",
+      "description": "Returns the info for a flight on a specified date, or the current flight if date is omitted. Will return a 400 if the date requested is outside the subscription level",
+      "params": [
+        "{'name': 'flnr', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_lower_elem_students",
+      "description": "This method takes a dictionary representing a table, a sandwich name, and returns the number of lower elementary students who voted for that sandwich.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_by_type_and_region",
+      "description": "Fetch records from the API based on the given type, limit, and region.",
+      "params": [
+        "type",
+        "limit",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aviation_Weather_Center_Station_Info",
+      "description": "Information about a weather reporting station.",
+      "params": [
+        "{'name': 'datasource', 'type': 'STRING',",
+        "{'name': 'stationString', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "shredder_material_processing",
+      "description": "Process various materials through a specified industrial shredder and get the output metrics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard 200 Albums (Greatest of All Time)",
+      "description": "Provides the Greatest of All Time Billboard 200 Albums chart information, including album titles, artists, and relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India_Bankruptcy_Verification_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Booking.com Property Description",
+      "description": "Retrieve the meta properties description of a booking.com property",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "taboo_api_Get_Taboo_Words_From_Word",
+      "description": "Provide your own word and get the taboo words back.\n\nOptionally pass a parameter which will control the amount of taboo words to be returned, \"forbiddenWordLimit\" defaults to 4 and has a max of 10",
+      "params": [
+        "{'name': 'word', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchCatImages",
+      "description": "Search for cat images using specific keywords, tags, or categories.",
+      "params": [
+        "keywords",
+        "tags",
+        "categories",
+        "limit",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Hibapress",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0647\u0628\u0629 \u0628\u0631\u064a\u0633",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pharma_Industry_Data_Collection_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iOS_Store_Get_app_reviews",
+      "description": "This endpoint allows us to fetch app reviews given app Id",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'appId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Shows",
+      "description": "Retrieve a list of all currently available TV shows from the Entertainment domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "course_schedule_optimizer",
+      "description": "Optimizes a student's course schedule based on preferred subjects, available times, and desired skill outcomes. Aims to maximize learning efficiency and satisfaction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Qfinish",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_playlists",
+      "description": "Get a list of the playlists owned or followed by the current Spotify\nuser.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Driver_Standings",
+      "description": "To list the driver standings in F1 races.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Articles List",
+      "description": "Retrieve a list of articles by category from Seeking Alpha",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DocumentaryTimeline.getTimelineEvents",
+      "description": "Retrieves historical events and notable releases in the documentary genre within a specified time frame.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getURLInfo",
+      "description": "Retrieve information about a specific URL.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Decimals",
+      "description": "Retrieves the decimal places used by an ERC-20 token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_post",
+      "description": "Fetches the details of a TikTok post using the given `aweme_id` via the RapidAPI service.",
+      "params": [
+        "aweme_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Artist Related Artists",
+      "description": "Retrieve a list of artists related to a given artist by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mboum_Finance_stock_history_stock_interval",
+      "description": "Historic data for stocks, ETFs, mutuals funds, etc...",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webull_market_get_ipo_center",
+      "description": "Get IPO center information of specific region",
+      "params": [
+        "{'name': 'regionId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "landform.map_river_paths",
+      "description": "Maps the paths of rivers within a specified region and analyzes their impact on the local geography.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fighting_game.get_character_stats",
+      "description": "Retrieve the statistics of a specific character in a fighting game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_user_profile",
+      "description": "Retrieve the profile of a user",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webit_Blockchain_Get_Balance",
+      "description": "Get balance from any wallet on different blockchains, including Ethereum, Polygon, Binance, Solana mainnets, including Ropsten, Rinkey, Goerly, Kovan, Mumbai testnets.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Premier_League_Upcoming_Matches_clubs",
+      "description": "This API will supply client info about all clubs that are playing the First Premier League Competition",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_List_of_Foods",
+      "description": "This endpoint responds with a list of mexican foods that includes their names and images, as well as their IDs, which must be provided in the \"Detailed Food Recipe by ID\" endpoint to receive the detailed recipe.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "autocomplete",
+      "description": "Provides autocomplete suggestions for search queries on Twitter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Terabox_Downloader_Get_Download_Link",
+      "description": "Get Download Link",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Food Reports",
+      "description": "Retrieve a list of food reports from other diners for a specific restaurant",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

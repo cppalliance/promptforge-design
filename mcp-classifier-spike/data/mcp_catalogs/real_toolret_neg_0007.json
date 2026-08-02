@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0007",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "flame",
+      "description": "Calculates the FLAMES relationship compatibility score for two given names using the Flames Love Calculator API.",
+      "params": [
+        "sname",
+        "fname"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "generateBadge",
+      "description": "Generates a badge showing the user's GitHub statistics.",
+      "params": [
+        "username",
+        "style",
+        "label",
+        "logo",
+        "logo_color",
+        "color",
+        "cache_seconds"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "query_cultural_significance(llm_query: Callable, object_or_concept: str, long_an",
+      "description": "def query_cultural_significance(llm_query: Callable, object_or_concept: str, long_answer: bool = True) -> str:\n    '''Query the cultural significance or role of a certain object or concept.\n    \n    Args:\n        llm_query (Callable): The language model query function.\n        object_or_concept (str): The object or concept to query about.\n        long_answer (bool): Whether to return a long answer. Default is True.\n       \n    Returns:\n        str: The answer to the query.\n    '''\n    query = f\"What roles does {object_or_concept} usually play in celebrations?\"\n    return llm_query(query, long_",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wayfair_products_list",
+      "description": "List products with filters and options",
+      "params": [
+        "{'name': 'categoryId', 'type': 'NUMBER',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tiktok_download_video_search_user",
+      "description": "get user list by keywords",
+      "params": [
+        "{'name': 'cursor', 'type': 'STRING', 'de",
+        "{'name': 'keywords', 'type': 'STRING', '",
+        "{'name': 'count', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TND_Exchange_Rate_api",
+      "description": "GET the average exchange rate of TND against USD & EUR",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "geocode",
+      "description": "Converts an address into latitude and longitude coordinates.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_condition(image_patch: ImagePatch, object_name: str, query: str) ->",
+      "description": "def check_object_condition(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Check the condition of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check the condition of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The condition of the object if it exists, \"No {object_name} found.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return f\"No {object_name} fo",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Commodities News",
+      "description": "Retrieve the latest commodity market news and developments in the futures markets.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_recipe_information",
+      "description": "Use a recipe id to get full information about a recipe, such as ingredients, nutrition, diet and allergen information, etc.",
+      "params": [
+        "{'name': 'id', 'schema': {'type': 'strin",
+        "{'name': 'includeNutrition', 'schema': {",
+        "{'name': 'apiKey', 'schema': {'type': 's"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_expense",
+      "description": "This method takes four arguments, 'transportation_expense', 'nontransportation_expense', 'transportation_increase', and 'nontransportation_increase', and returns the total expense for the coming year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PPOB_Indonesia_Credit_Pricelist",
+      "description": "This Endpoint is for Indonesia only.\nThe Credit & Data Pricelist API is used to display the list of available credit and data prices on PulsaXpress. This information can be used to know the price of the products you want to buy before making a transaction. This price information can be updated according to the current prices and can be used to determine the prices offered on your application.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "odd_integers_count",
+      "description": "To count the number of odd integers between 4000 and 7000 that have four different digits.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "percentage",
+      "description": "Calculates the percentage of a given number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Greatest of All Time Top Dance Club Artists",
+      "description": "Retrieve a list of the greatest dance club artists of all time, as ranked by the Billboard chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_cashew_price",
+      "description": "This method takes a dictionary representing a table, and returns the price of cashews.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "insert_info_to_document",
+      "description": "Insert information into a specified document",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_time",
+      "description": "Calculates the average time taken by two runners to run a leg of the course",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "machine.monitor_film_usage",
+      "description": "Monitor and report the usage statistics of film in an industrial wrapping machine.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetUniqueTournaments",
+      "description": "Retrieve a list of unique tournaments for a given team",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeTable_Lookup_airports_Direct_routes_for_an_airport_by_airline",
+      "description": "Returns a list of direct routes for an airport restricted to an airline",
+      "params": [
+        "{'name': 'airportiatacode', 'type': 'str",
+        "{'name': 'airlineiatacode', 'type': 'str"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Information",
+      "description": "Retrieve detailed information about a player, including their name, education, country of origin, and attributes such as height, weight, and age.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reviewAnalytics.extractSentiment",
+      "description": "Extracts sentiment scores from user reviews on social shopping platforms.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "api_video_GET_analytics_videos_videoId",
+      "description": " ",
+      "params": [
+        "{'name': 'videoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_key_statistics_stock",
+      "description": "Fetches key statistics data for a given stock symbol from the MBOUM Finance API.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get a Random Anime Quote",
+      "description": "Retrieve a random quote from an anime source",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getWebhookResultsUnseenErrorCount",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "top_posts_by_subreddit",
+      "description": "Fetches the top posts from a specific subreddit within a given time frame using the Reddit API.",
+      "params": [
+        "time",
+        "subreddit",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSimilarImages",
+      "description": "This function allows users to retrieve a list of images that are similar to a specified image.",
+      "params": [
+        "image_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Employee",
+      "description": "Retrieve a specific employee's employment details by ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "acquireCustomers",
+      "description": "Acquire new customers for marketing purposes",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Accounts_API_GetTransactionById",
+      "description": "To get transaction by unique id.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dgsub_breed",
+      "description": "Returns an array of all the sub-breeds from a breed.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MarketCI Price Forecast API",
+      "description": "This API provides an AI-generated price forecast for a specified stock symbol over the next 3 months.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exhibition.search_exhibitions",
+      "description": "Search for modern art exhibitions based on specific criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aliexpress_item_search",
+      "description": "Searches for items on AliExpress based on various filters and criteria.",
+      "params": [
+        "brandid",
+        "catid",
+        "q",
+        "page",
+        "loc",
+        "locale",
+        "endprice",
+        "sort"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Earnings Per Share (EPS) Trend",
+      "description": "This API endpoint returns a breakdown of the estimated historical EPS changes at a given period, including the trend and analysis of the EPS changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN_decoder_US_License_Plate_to_VIN",
+      "description": "Get the vin by license plate number.",
+      "params": [
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'license_plate', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top NFT Sales by Collection this Week",
+      "description": "Retrieve the top NFT sales data for a specific week, categorized by collections.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_stickers_for_range",
+      "description": "This method takes two arguments, 'start' and 'end', and returns the total number of stickers needed to label each butterfly in the given range.",
+      "params": []
+    }
+  ]
+}

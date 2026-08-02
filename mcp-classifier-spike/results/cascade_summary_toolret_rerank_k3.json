@@ -1,0 +1,14 @@
+{
+  "eval": "toolret",
+  "stage1": "BAAI/bge-small-en-v1.5",
+  "stage2": "rerank",
+  "stage2_model": "BAAI/bge-reranker-v2-m3",
+  "k": 3,
+  "n_positives": 204,
+  "n_negatives": 204,
+  "recall_at_k": 0.8921568627450981,
+  "stage1_top1": 0.803921568627451,
+  "cascade_top1": 0.8186274509803921,
+  "stage2_pick_acc_given_present": 0.9175824175824175,
+  "false_bind_rate": null
+}

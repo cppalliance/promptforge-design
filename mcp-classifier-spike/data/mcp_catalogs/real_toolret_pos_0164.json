@@ -1,0 +1,377 @@
+{
+  "catalog_id": "real_toolret_pos_0164",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Cocktails_Search_by_ingredient",
+      "description": "Get cocktails by its ingredients",
+      "params": [
+        "{'name': 'ingredient', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SupplyChainAnalysis.performVendorAnalysis",
+      "description": "Performs an analysis of vendors to identify the most reliable and cost-effective suppliers for retail chains. This tool uses vendor performance data to rank and suggest optimal suppliers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get County Boundaries by Name and State",
+      "description": "Retrieves the boundaries of a county by its name and state in GeoJSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Load Shedding Schedule",
+      "description": "Returns the load shedding schedule for a specific town",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football League Cup Trees",
+      "description": "Retrieve the league cup trees for a specific season and tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "quotsy_get_qoutes_by_page",
+      "description": "return quotes for the page no",
+      "params": [
+        "{'name': 'page_no', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCalendar",
+      "description": "Retrieves a calendar of upcoming matches for a specific video game and region",
+      "params": [
+        "video_game",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TVCountries",
+      "description": "Get a list of countries and their respective TV channels broadcasting a specific Football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CountCompanies",
+      "description": "GET the total number of companies created",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchJobPostings",
+      "description": "Search job postings based on various criteria such as location, job title, and keywords.",
+      "params": [
+        "location",
+        "jobTitle",
+        "keywords",
+        "company",
+        "jobType",
+        "jobCategory",
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stays_properties_detail_photos",
+      "description": "Fetch detailed photos of a specific property from the stays/properties/detail/photos endpoint using the Booking.com RapidAPI.",
+      "params": [
+        "language_code",
+        "id_detail"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGreenhouseTemperature",
+      "description": "Retrieve the current temperature inside a greenhouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "provide_explanation_and_tips(image_patch: ImagePatch, action: str) -> str",
+      "description": "def provide_explanation_and_tips(image_patch: ImagePatch, action: str) -> str:\n    '''Provide an explanation and tips for a specific action or activity.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        action (str): The action or activity to provide an explanation and tips for.\n       \n    Returns:\n        str: The explanation and tips for the action or activity.\n    '''\n    query = f\"How does {action} work, and what are some tips for beginners trying to learn it?\"\n    return image_patch.llm_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MapReflex_placesSearchInRadius",
+      "description": "Get Places boundaries in circle with given radius (in GeoJSON format). For a quick view, copy and paste results: http://geojsonlint.com",
+      "params": [
+        "{'name': 'latitude', 'type': 'NUMBER', '",
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'radius', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "United States COVID-19 Case Count",
+      "description": "Retrieves the cumulative United States COVID-19 case count daily.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "German_Company_Data_v2_companies_id_jobs",
+      "description": "This endpoint returns the latest job postings about the company with the given identifier since the given timestamp. This timestamp is optional and is specified via a query parameter. Job postings come with a title, a text (the content of the posting), a source, and a timestamp.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Code Boundary",
+      "description": "Retrieve the boundary information for a given postal code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hanging Man Stocks",
+      "description": "Retrieve a list of stocks that have a Hanging Man signal, along with relevant financial information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "inviteFriend",
+      "description": "Invite a friend to play a social media game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_teams_list",
+      "description": "List teams",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatalogAPI_View",
+      "description": "Returns the current address and items in the cart.",
+      "params": [
+        "{'name': 'external_user_id', 'type': 'ST",
+        "{'name': 'creds_datetime', 'type': 'STRI",
+        "{'name': 'creds_uuid', 'type': 'STRING',",
+        "{'name': 'creds_checksum', 'type': 'STRI",
+        "{'name': 'socket_id', 'type': 'STRING', ",
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Survey Details",
+      "description": "Retrieve the details of a customer survey by its unique identifier (sid)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "getcarsavailable",
+      "description": "discover cars available for rent in a certain location and period",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_page_number",
+      "description": "This method takes no arguments. It iterates over all possible page numbers and checks if the sum of the page numbers up to and including that page number is equal to THREE less than the sum of the page numbers following that page number. If a match is found, it returns the page number.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_quotes_by_keyword",
+      "description": "Retrieve quotes related to a specific keyword.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VFXNodeManager.createNode",
+      "description": "Creates a new node in the Nuke VFX software, allowing for detailed configuration of node properties and connections.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Team_Engagement_Survey_Tool",
+      "description": "Generates and analyzes engagement surveys to understand team morale and cohesion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Market_Data",
+      "description": "Get Market Data",
+      "params": [
+        "{'name': 'marketID', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto_Gem_Finder_Trending",
+      "description": "get trending coins",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_News_tirto_detail",
+      "description": "detail tirto news",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlayerRegularSeasonStatistics",
+      "description": "This endpoint retrieves regular season statistics for a specific player in a given tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v5_User_Search",
+      "description": "Get Instagram users by keyword.",
+      "params": [
+        "{'name': 'keyword', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Club Transfers",
+      "description": "Retrieve a list of transfers for a specific club and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fitnessTracker.compareFeatures",
+      "description": "Compares features of multiple fitness tracker models.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSeedInfo",
+      "description": "Retrieve information about a specific seed",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retention",
+      "description": "Get retention data for the specified video, providing information on how long viewers spend watching the video and at what point they lose interest.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mapilion_Vector_and_Raster_Map_Tiles_Get_Fonts",
+      "description": "Returns Fonts for vector tiles. This endpoint is typically used in your style.json.",
+      "params": [
+        "{'name': 'range', 'type': 'string', 'des",
+        "{'name': 'fontstack', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hashing_Api_SHA_Text_Hash",
+      "description": "Hash text (as query-string-parameter) using SHA1, SHA256, SHA384 or SHA512 algorithm according to selected mode path-parameter [1, 256, 384, 512].",
+      "params": [
+        "{'name': 'dataString', 'type': 'STRING',",
+        "{'name': 'mode', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "convnextv2_huge.fcmae_ft_in1k",
+      "description": "A ConvNeXt-V2 image classification model. Pretrained with a fully convolutional masked autoencoder framework (FCMAE) and fine-tuned on ImageNet-1k.",
+      "params": [
+        "pretrained"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ULTOSC",
+      "description": "Calculates the Ultimate Oscillator (ULTOSC) for a given symbol and interval, providing overbought and oversold signals.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

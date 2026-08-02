@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_toolret_neg_0033",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Liquidation Report",
+      "description": "Get the latest liquidation data from Binance, Bybit, and OKX exchange. Data is limited to 1000 rows.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Current Stock",
+      "description": "Retrieve the current stock information by stock code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAccountInfo",
+      "description": "Provide account information.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_todo",
+      "description": "Create a new to-do item",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "generateBadge",
+      "description": "Generates a badge showing the user's GitHub statistics.",
+      "params": [
+        "username",
+        "style",
+        "label",
+        "logo",
+        "logo_color",
+        "color",
+        "cache_seconds"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Business Slogan Generator",
+      "description": "Generate a unique and catchy slogan for a business based on its name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_individual_articles",
+      "description": "Retrieves individual articles from a specified newspaper using the RapidAPI service.",
+      "params": [
+        "newspaperid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tournament List",
+      "description": "List of tournaments in your data coverage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get World Currencies Prices",
+      "description": "This API returns the current prices of world currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Mark Price Kline",
+      "description": "Retrieve the mark price kline data for a specific symbol and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Odds",
+      "description": "Latest Odds by Betmaster.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_recommendations",
+      "description": "Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks. If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.\n\nFor artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'seed_artists', ",
+        "{'in': 'query', 'name': 'seed_genres', '",
+        "{'in': 'query', 'name': 'seed_tracks', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scienceCommunication.effectivePresentation",
+      "description": "Provides guidelines and templates for creating effective scientific presentations based on the audience type and presentation context.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Top_property_managers",
+      "description": "Returns the largest property managers",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RiskAnalyzer.analyzeInvestmentRisk",
+      "description": "Analyzes the risk of a specific investment based on historical data and future projections. The analysis includes a risk score and a detailed risk report.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "share_agenda",
+      "description": "Share Agenda",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "District_Capitals_In_Ghana_Get_District_Capital_By_ID",
+      "description": "This endpoint gets a particular district capital by ID",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NextEvents",
+      "description": "Retrieve upcoming events for a specific team in the sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SpamDetector",
+      "description": "detects spam in text.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_quarterly_interest",
+      "description": "This method takes two arguments, 'principal' and 'rate', and returns the amount of interest earned in a quarter year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getforecastweather",
+      "description": "Fetches weather forecast data for a specified city using the OpenWeatherMap API.",
+      "params": [
+        "q",
+        "cnt",
+        "units",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimeTrades",
+      "description": "Retrieves real-time trade data for a specific security",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Sub Regions",
+      "description": "Retrieve a list of sub-regions for a given region",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDroneLocation",
+      "description": "Retrieve the current location of a drone",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "google_trends_search",
+      "description": "Scrape results from the Google Trends search page.",
+      "params": [
+        "{'name': 'query', 'schema': {'type': 'st",
+        "{'name': 'geo', 'schema': {'type': 'stri",
+        "{'name': 'region', 'schema': {'type': 's",
+        "{'name': 'data_type', 'schema': {'type':",
+        "{'name': 'tz', 'schema': {'type': 'strin",
+        "{'name': 'cat', 'schema': {'type': 'stri",
+        "{'name': 'gprop', 'schema': {'type': 'st",
+        "{'name': 'date', 'schema': {'type': 'str"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VisionHealth.evaluateMacularDegeneration",
+      "description": "Evaluates the risk of Age-related Macular Degeneration (AMD) using genetic markers and lifestyle factors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> st",
+      "description": "def check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> str:\n    '''Determine the best match from a list of possible attributes of an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        attributes (List[str]): The list of possible attributes to check for.\n       \n    Returns:\n        str: The best match attribute from the list.\n    '''\n    return image_patch.best_text_match(attributes)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Quarterly Income Statement",
+      "description": "Retrieves the quarterly income statement of a publicly traded company",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "view_user_list",
+      "description": "Retrieves the list of favorite libraries for a given user based on their user ID.",
+      "params": [
+        "userid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_crime_rates_by_zip",
+      "description": "Retrieve crime statistics for a given ZIP code using the Crime Data by Zipcode API.",
+      "params": [
+        "zip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Waze_Alerts_and_Jams",
+      "description": "Get real-time alerts and jams from Waze in a geographic rectangular area defined by bottom-left and top-right latitude, longitude pairs.",
+      "params": [
+        "{'name': 'top_right', 'type': 'STRING', ",
+        "{'name': 'bottom_left', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEO_Fast_Audit_Analysis",
+      "description": "Analyse the content from URL",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MongoDB_Wix_Get_Vault_By_Name",
+      "description": "Get Vault by name",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "clearbit_integration",
+      "description": "Access Clearbit Enrichment, Prospecting, Reveal APIs and website visitors data to access information about companies.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_Detailed_Food_Recipe_by_ID",
+      "description": "Mexican Food Recipe by ID",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguepowerrankingrounds",
+      "description": "Fetches the power ranking rounds for the specified tournament and season in a football league.",
+      "params": [
+        "tournamentid",
+        "seasonid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getSmsMessagesPaginated",
+      "description": "By default returns all SMS messages across all phone numbers sorted by ascending created at date. Responses are paginated. You can restrict results to a list of phone number IDs. You can also filter out read messages",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "valhalla/distilbart-mnli-12-1",
+      "description": "distilbart-mnli is the distilled version of bart-large-mnli created using the No Teacher Distillation technique proposed for BART summarisation by Huggingface. It is designed for zero-shot classification tasks.",
+      "params": [
+        "model_name_or_path"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_threads_with_preview",
+      "description": "A list of threads and their preview replies from a specified index page.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_com",
+      "description": "Check a .com domain",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    }
+  ]
+}

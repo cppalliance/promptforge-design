@@ -1,0 +1,68 @@
+{"need": "file a bug report in our GitHub repo", "catalog_id": "seed_everything", "gold": "github::create_issue", "tags": ["positive", "everything"]}
+{"need": "open a new issue on GitHub to track a task", "catalog_id": "seed_everything", "gold": "github::create_issue", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "report a problem by creating a GitHub issue", "catalog_id": "seed_everything", "gold": "github::create_issue", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "open a pull request for my feature branch", "catalog_id": "seed_everything", "gold": "github::create_pull_request", "tags": ["positive", "everything"]}
+{"need": "submit my changes for review as a PR", "catalog_id": "seed_everything", "gold": "github::create_pull_request", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "find where a function is defined across our GitHub code", "catalog_id": "seed_everything", "gold": "github::search_code", "tags": ["positive", "everything"]}
+{"need": "search our source code on GitHub for a string", "catalog_id": "seed_everything", "gold": "github::search_code", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "read a specific file from a GitHub repository", "catalog_id": "seed_everything", "gold": "github::get_file_contents", "tags": ["positive", "everything"]}
+{"need": "fetch the contents of a file stored on GitHub", "catalog_id": "seed_everything", "gold": "github::get_file_contents", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "see the recent commits on a GitHub branch", "catalog_id": "seed_everything", "gold": "github::list_commits", "tags": ["positive", "everything"]}
+{"need": "merge an approved pull request on GitHub", "catalog_id": "seed_everything", "gold": "github::merge_pull_request", "tags": ["positive", "everything"]}
+{"need": "read a local text file from disk", "catalog_id": "seed_everything", "gold": "filesystem::read_file", "tags": ["positive", "everything"]}
+{"need": "open a file on the local filesystem and get its contents", "catalog_id": "seed_everything", "gold": "filesystem::read_file", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "save some text to a file on disk", "catalog_id": "seed_everything", "gold": "filesystem::write_file", "tags": ["positive", "everything"]}
+{"need": "create a new local file with content", "catalog_id": "seed_everything", "gold": "filesystem::write_file", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "see what files are in a local folder", "catalog_id": "seed_everything", "gold": "filesystem::list_directory", "tags": ["positive", "everything"]}
+{"need": "rename a file on disk", "catalog_id": "seed_everything", "gold": "filesystem::move_file", "tags": ["positive", "everything"]}
+{"need": "find local files matching a name pattern", "catalog_id": "seed_everything", "gold": "filesystem::search_files", "tags": ["positive", "everything"]}
+{"need": "make a new folder on disk", "catalog_id": "seed_everything", "gold": "filesystem::create_directory", "tags": ["positive", "everything"]}
+{"need": "check which files changed in my local git checkout", "catalog_id": "seed_everything", "gold": "git::git_status", "tags": ["positive", "everything"]}
+{"need": "see the diff of my uncommitted changes", "catalog_id": "seed_everything", "gold": "git::git_diff", "tags": ["positive", "everything"]}
+{"need": "commit my staged changes with a message", "catalog_id": "seed_everything", "gold": "git::git_commit", "tags": ["positive", "everything"]}
+{"need": "look at the commit history of this repo", "catalog_id": "seed_everything", "gold": "git::git_log", "tags": ["positive", "everything"]}
+{"need": "create a new git branch to work on", "catalog_id": "seed_everything", "gold": "git::git_create_branch", "tags": ["positive", "everything"]}
+{"need": "send a message to a Slack channel", "catalog_id": "seed_everything", "gold": "slack::post_message", "tags": ["positive", "everything"]}
+{"need": "post an announcement in Slack", "catalog_id": "seed_everything", "gold": "slack::post_message", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "list the channels in our Slack workspace", "catalog_id": "seed_everything", "gold": "slack::list_channels", "tags": ["positive", "everything"]}
+{"need": "read the recent messages from a Slack channel", "catalog_id": "seed_everything", "gold": "slack::get_channel_history", "tags": ["positive", "everything"]}
+{"need": "react to a Slack message with an emoji", "catalog_id": "seed_everything", "gold": "slack::add_reaction", "tags": ["positive", "everything"]}
+{"need": "search the web for current information", "catalog_id": "seed_everything", "gold": "brave_search::brave_web_search", "tags": ["positive", "everything"]}
+{"need": "look something up on the internet", "catalog_id": "seed_everything", "gold": "brave_search::brave_web_search", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "find restaurants near me", "catalog_id": "seed_everything", "gold": "brave_search::brave_local_search", "tags": ["positive", "everything"]}
+{"need": "turn a street address into latitude and longitude", "catalog_id": "seed_everything", "gold": "google_maps::maps_geocode", "tags": ["positive", "everything"]}
+{"need": "get driving directions from one place to another", "catalog_id": "seed_everything", "gold": "google_maps::maps_directions", "tags": ["positive", "everything"]}
+{"need": "find coffee shops near a location", "catalog_id": "seed_everything", "gold": "google_maps::maps_place_search", "tags": ["positive", "everything"]}
+{"need": "compute travel times between several locations", "catalog_id": "seed_everything", "gold": "google_maps::maps_distance_matrix", "tags": ["positive", "everything"]}
+{"need": "run a SQL query against our Postgres database", "catalog_id": "seed_everything", "gold": "postgres::query", "tags": ["positive", "everything"]}
+{"need": "see what tables exist in the Postgres database", "catalog_id": "seed_everything", "gold": "postgres::list_tables", "tags": ["positive", "everything"]}
+{"need": "show the columns of a database table", "catalog_id": "seed_everything", "gold": "postgres::describe_table", "tags": ["positive", "everything"]}
+{"need": "open a web page in a headless browser", "catalog_id": "seed_everything", "gold": "puppeteer::puppeteer_navigate", "tags": ["positive", "everything"]}
+{"need": "take a screenshot of a web page", "catalog_id": "seed_everything", "gold": "puppeteer::puppeteer_screenshot", "tags": ["positive", "everything"]}
+{"need": "click a button on a web page automatically", "catalog_id": "seed_everything", "gold": "puppeteer::puppeteer_click", "tags": ["positive", "everything"]}
+{"need": "fill in a form field on a web page", "catalog_id": "seed_everything", "gold": "puppeteer::puppeteer_fill", "tags": ["positive", "everything"]}
+{"need": "download a web page and convert it to markdown", "catalog_id": "seed_everything", "gold": "fetch::fetch", "tags": ["positive", "everything"]}
+{"need": "retrieve the text content of a URL", "catalog_id": "seed_everything", "gold": "fetch::fetch", "tags": ["positive", "everything", "paraphrase"]}
+{"need": "store facts in the knowledge graph", "catalog_id": "seed_everything", "gold": "memory::create_entities", "tags": ["positive", "everything"]}
+{"need": "search my knowledge graph memory", "catalog_id": "seed_everything", "gold": "memory::search_nodes", "tags": ["positive", "everything"]}
+{"need": "dump the entire knowledge graph", "catalog_id": "seed_everything", "gold": "memory::read_graph", "tags": ["positive", "everything"]}
+{"need": "what time is it in Tokyo right now", "catalog_id": "seed_everything", "gold": "time::get_current_time", "tags": ["positive", "everything"]}
+{"need": "convert 3pm New York time to London time", "catalog_id": "seed_everything", "gold": "time::convert_time", "tags": ["positive", "everything"]}
+{"need": "select rows from the SQLite database", "catalog_id": "seed_everything", "gold": "sqlite::read_query", "tags": ["positive", "everything"]}
+{"need": "insert a record into the SQLite database", "catalog_id": "seed_everything", "gold": "sqlite::write_query", "tags": ["positive", "everything"]}
+{"need": "list the tables in the SQLite file", "catalog_id": "seed_everything", "gold": "sqlite::list_tables", "tags": ["positive", "everything"]}
+{"need": "search the public web for news", "catalog_id": "seed_near_dupe", "gold": "brave_search::brave_web_search", "tags": ["near_duplicate", "positive"]}
+{"need": "read a file from my local disk", "catalog_id": "seed_near_dupe", "gold": "filesystem::read_file", "tags": ["near_duplicate", "positive"]}
+{"need": "read a file stored in a GitHub repo", "catalog_id": "seed_near_dupe", "gold": "github::get_file_contents", "tags": ["near_duplicate", "positive"]}
+{"need": "query the postgres database with SQL", "catalog_id": "seed_near_dupe", "gold": "postgres::query", "tags": ["near_duplicate", "positive"]}
+{"need": "run a select against the sqlite database", "catalog_id": "seed_near_dupe", "gold": "sqlite::read_query", "tags": ["near_duplicate", "positive"]}
+{"need": "download the html of a web page as markdown", "catalog_id": "seed_near_dupe", "gold": "fetch::fetch", "tags": ["near_duplicate", "positive"]}
+{"need": "send an email to a customer", "catalog_id": "local_dev", "gold": null, "tags": ["hard_negative"]}
+{"need": "charge a credit card", "catalog_id": "local_dev", "gold": null, "tags": ["hard_negative"]}
+{"need": "translate this paragraph into French", "catalog_id": "local_dev", "gold": null, "tags": ["hard_negative"]}
+{"need": "generate an image of a cat", "catalog_id": "local_dev", "gold": null, "tags": ["hard_negative"]}
+{"need": "book a flight to Paris", "catalog_id": "local_dev", "gold": null, "tags": ["hard_negative"]}
+{"need": "commit my code changes", "catalog_id": "web_stack", "gold": null, "tags": ["hard_negative"]}
+{"need": "run a SQL query on the database", "catalog_id": "web_stack", "gold": null, "tags": ["hard_negative"]}
+{"need": "post a message to Slack", "catalog_id": "web_stack", "gold": null, "tags": ["hard_negative"]}
+{"need": "encrypt a file with a password", "catalog_id": "web_stack", "gold": null, "tags": ["hard_negative"]}

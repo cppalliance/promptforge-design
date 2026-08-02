@@ -1,0 +1,365 @@
+{
+  "catalog_id": "real_toolret_neg_0003",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "get_country_population",
+      "description": "Fetch the population data for a given country using the Toolbench RapidAPI service.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "julien-c/skops-digits",
+      "description": "A tabular classification model using the Scikit-learn framework and Joblib functionality. The model is trained with various hyperparameters and can be used for classification tasks.",
+      "params": [
+        "activation",
+        "alpha",
+        "batch_size",
+        "beta_1",
+        "beta_2",
+        "early_stopping",
+        "epsilon",
+        "hidden_layer_sizes"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Place Boundaries by Name and State",
+      "description": "Returns the boundaries of a place by its name and state in GeoJSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Cryptocurrencies",
+      "description": "Retrieve a list of all available cryptocurrencies",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chaingateway_io_newAddress",
+      "description": "Generates a new ethereum addresses you can use to send or receive funds. Do not lose the password! We can't restore access to an address if you lose it.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historical Traffic Series",
+      "description": "Returns a series of traffic sources and/or page load time with a default time span of 5 minutes. This API is used to provide a more granular picture of traffic data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseConverterAPI_getAlphabets",
+      "description": "This endpoint is used for getting all the alphabets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getComputerArchitecture",
+      "description": "Retrieve computer architecture information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://ai-weather-by-meteosource.p.rapidapi.com/minutely",
+      "description": "Minute-by-minute precipitation forecast for the next 60 minutes. Updated in real-time based on our AI nowcasting models. Define your location using GPS coordinates or place_id from Location endpoints.",
+      "params": [
+        "{'name': 'place_id', 'in': 'optional', '",
+        "{'name': 'lat', 'in': 'optional', 'schem",
+        "{'name': 'lon', 'in': 'optional', 'schem",
+        "{'name': 'timezone', 'in': 'optional', '",
+        "{'name': 'language', 'in': 'optional', '",
+        "{'name': 'units', 'in': 'optional', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listBins",
+      "description": "Retrieves a list of all JSON bins associated with the user's account.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getride",
+      "description": "book a cab for any destination, number of seats and ride type",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ShopeeApi_Product_details",
+      "description": "Get shopee product details",
+      "params": [
+        "{'name': 'region', 'type': 'string', 'de",
+        "{'name': 'path', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandLink",
+      "description": "Retrieves information on the original URL from a shortened link.",
+      "params": [
+        "apiKey",
+        "shortUrl"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMerchantAddress",
+      "description": "Retrieves the address of a merchant by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pokemon_TCG_Card_Prices_Get_Many_Sets",
+      "description": "Returns many sets based on query parameters.\n\nA set is a grouping of cards that are periodically released together. Every card has a set. Every set is part of a series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "festival.get_festival_details",
+      "description": "Retrieve detailed information about a specific music festival, including ticket options and accommodation.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_Sweden_Songs",
+      "description": "Provide the Sweden Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_v3_Web_Search",
+      "description": "This endpoint is used for web searches",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Checky_Verify_Phone_Number_GET_Verify",
+      "description": "To use this endpoint, you need to make an HTTP GET request to the API with the phone and country parameters in the query string.",
+      "params": [
+        "{'name': 'phone', 'type': 'STRING', 'des",
+        "{'name': 'country', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_List_of_clubs",
+      "description": "Get a list of clubs",
+      "params": [
+        "{'name': 'competition_id', 'type': 'STRI",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuotes",
+      "description": "Get quotes for precious metals and cryptocurrencies.",
+      "params": [
+        "symbols"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Stats",
+      "description": "Retrieve team statistics based on the provided parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FavoriteName2ID",
+      "description": "This API is to convert favorite name to favorite ID.",
+      "params": [
+        "{'name': 'favorite_name', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RelationshipAdvisor.findCompatiblePartners",
+      "description": "Analyzes user preferences and historical relationship data to suggest compatible partners.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "rent_zestimate_and_comparable_properties",
+      "description": "Returns a property's rent zestimate and its comparable properties in the same area.",
+      "params": [
+        "address",
+        "bedrooms",
+        "pets",
+        "amenities",
+        "laundry",
+        "propertytypes",
+        "activetypes",
+        "deactivateddays"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "menudetails",
+      "description": "Fetches menu details for a given venue from the RapidAPI endpoint.",
+      "params": [
+        "lang",
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Company Income Statement",
+      "description": "Retrieve a company's income statement, including quarterly or annual financial data, for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get My Jobs",
+      "description": "Returns a list of jobs that a user has manage_recruiting access to, allowing filtering and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kitten",
+      "description": "Generates a random kitten image with the specified width and height.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tokens",
+      "description": "Retrieve a list of tokens and their corresponding contracts based on a specific network parameter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageFreeTextAnnotations",
+      "description": "Retrieves free text annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_competition_outcome(image_patch: ImagePatch, person_name: str, competition",
+      "description": "def infer_competition_outcome(image_patch: ImagePatch, person_name: str, competition_type: str, action: str, possession: str, query: str) -> str:\n    '''Infer whether a person could have won a competition based on their actions, possessions, or other relevant factors.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        person_name (str): The name of the person to check.\n        competition_type (str): The type of competition.\n        action (str): The action that the person is performing.\n        possession (str): The possession that the person has.\n        query",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "feeds",
+      "description": "Fetch recent TikTok feeds for a given user.",
+      "params": [
+        "schematype",
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Channel Broadcaster Type",
+      "description": "Retrieve the broadcaster type of a Twitch channel using the channel's username or ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_season_season_number_episode_episode_number_credits",
+      "description": "Get the credits (cast, crew and guest stars) for a TV episode.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Domain_Emails_And_Contacts_Emails_And_Contacts",
+      "description": "Allows finding email addresses, social links, and phones from domains.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "listcategoriesandsubcategories",
+      "description": "Retrieves a list of categories and subcategories for the mktplace.eu marketplace.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_sale",
+      "description": "This method takes a list of sales values as integers and returns the total sale.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonendconstructorstanding",
+      "description": "Fetches the Constructor Standings at the end of the specified Formula 1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ca_boundaries_io_Query_for_City_names_by_province_territory_name",
+      "description": "Query for City names by province/territory name",
+      "params": [
+        "{'name': 'province', 'type': 'STRING', '"
+      ]
+    }
+  ]
+}

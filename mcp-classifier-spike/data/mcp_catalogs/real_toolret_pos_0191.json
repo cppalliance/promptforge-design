@@ -1,0 +1,329 @@
+{
+  "catalog_id": "real_toolret_pos_0191",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "create_summary_document",
+      "description": "Create and save a summary document containing all service information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeneSequenceAnalyzer.identifyMutationPatterns",
+      "description": "Analyzes a DNA sequence to identify potential mutation patterns and their locations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Option Theta Calculator",
+      "description": "Calculates the theta (time decay) of an option given the option's details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RoomBooking",
+      "description": "This API books the specified number of rooms in the given hotel for the duration of stay.",
+      "params": [
+        "{'name': 'hotel_name', 'in': 'query', 's",
+        "{'name': 'number_of_rooms', 'in': 'query",
+        "{'name': 'check_in_date', 'in': 'query',",
+        "{'name': 'check_out_date', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "donateToCause",
+      "description": "Donate to a social justice cause",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClickMeter_Tags_Count",
+      "description": "Get a count of the tags. You can use the same filters of \"/tags\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "New_Client_njajal",
+      "description": "show nearby place from current location",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_season_season_number",
+      "description": "Get the TV season details by id.\n\nSupports `append_to_response`. Read more about this [here](#docTextSection:JdZq8ctmcxNqyLQjp).",
+      "params": []
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Text Detection On Image",
+      "description": "useful when you want to detect the text in the image. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrency_News_The_Guardian",
+      "description": "Get the top latest news from The Guardian.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Tasks_Cloud_GetRiskAnalysisReport",
+      "description": " ",
+      "params": [
+        "{'name': 'taskUid', 'type': 'NUMBER', 'd",
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Tweets by IDs",
+      "description": "Retrieves tweets by a list of tweet IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: st",
+      "description": "def determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Determine the leaning direction of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for leaning direction.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The leaning direction of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = objec",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Single/Multiple Video Information API",
+      "description": "Retrieve information about a single or multiple videos, including metadata, thumbnails, and renditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Revdl_App_downloader",
+      "description": "Ity ny api  *mi-downloader*an'le `apps`",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pygmalion-350m",
+      "description": "This is a proof-of-concept fine-tune of Facebook's OPT-350M model optimized for dialogue, to be used as a stepping stone to higher parameter models. Disclaimer: NSFW data was included in the fine-tuning of this model. Although SFW inputs will usually result in SFW outputs, you are advised to chat at your own risk. This model is not suitable for use by minors.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuizQuestions",
+      "description": "Retrieves a set of quiz questions based on specified parameters.",
+      "params": [
+        "apiKey",
+        "category",
+        "difficulty",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_stock_v2_get_realtime_data",
+      "description": "Get detail information of stock, market,index, etc...",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getExerciseRoutine",
+      "description": "Retrieve a bodybuilding exercise routine",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_players_get_career",
+      "description": "Get player career",
+      "params": [
+        "{'name': 'playerId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Store_Apps_Top_Free_Apps",
+      "description": "Top free apps chart.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gis_Engine_Health_Check",
+      "description": "Provide a way to test connectivity to API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailCheck_Domain",
+      "description": "Check if a domain is disposable",
+      "params": [
+        "{'name': 'domain', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeDentalRecords",
+      "description": "Analyze dental records for forensic purposes",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime Wallpapers API",
+      "description": "Retrieve anime wallpapers related to the family, filtered by sensitivity and pagination, with optional quality parameter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OpenBlur_Retrieve_Bids",
+      "description": "Retrieve All Blur Bids",
+      "params": [
+        "{'name': 'contractAddress', 'type': 'STR"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Russian_Premier_League_Standings_Russian_Premier_League_Standings",
+      "description": "Russian Premier League Standings",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "collibra_get_data_dictionary",
+      "description": "Retrieve the data dictionary of a specific domain in Collibra.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_meeting_minutes",
+      "description": "Create meeting minutes document",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ranigs_driver",
+      "description": "Get the drivers rankings for a season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Also Bought",
+      "description": "Retrieves also bought details for a single product on Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vin_decoder_v4_ZA_Decode",
+      "description": "ZA Decode",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "xlm-roberta-large",
+      "description": "XLM-RoBERTa is a multilingual version of RoBERTa pre-trained on 2.5TB of filtered CommonCrawl data containing 100 languages. It is designed for masked language modeling and can be fine-tuned on downstream tasks such as sequence classification, token classification, or question answering.",
+      "params": [
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLawsuitStatus",
+      "description": "Retrieve the status of a lawsuit",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Yummly_feeds_search",
+      "description": "Search for recipes by name and option filters",
+      "params": [
+        "{'name': 'start', 'type': 'NUMBER', 'des",
+        "{'name': 'maxResult', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "East_China_News_Filter_Japan_news_by_newspaper_company",
+      "description": "^^",
+      "params": [
+        "{'name': 'newspaperId', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scraper_s_Proxy_JavaScript_Rendered_Page_GET",
+      "description": "Render html using a real browser. Useful for if content is loaded asynchronously or generated dynamically in the browser. JavaScript rendering is usually required to scrape websites that use React, Angular or Vue. For websites that do not need javascript rendering use [Standard GET](//rapidapi.com/scapers-proxy-scapers-proxy-default/api/scrapers-proxy2) instead for better performance and reliability.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_Dribbble",
+      "description": "Check username on dribble",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Classification_Cloud_GetSupportedFileFormats",
+      "description": " ",
+      "params": []
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_pos_0082",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "intersection_point",
+      "description": "Calculates the intersection point of two lines",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "mental_health_program_enrollment",
+      "description": "Enroll an employee in a mental health support program.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "blog_entry_comments",
+      "description": "Returns a list of comments to the specified blog entry in the Codeforces Website.",
+      "params": [
+        "{'name': 'blog_entry_id', 'schema': {'ty"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weather_5_day_Forecast",
+      "description": "3 hour interval - 5 day forecast for a given lat/lon",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lon', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_teams_teamId_memberships",
+      "description": " ",
+      "params": [
+        "{'name': 'teamId', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Members",
+      "description": "Retrieve a list of members associated with a given team",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_one_face_colored_cubes",
+      "description": "Calculates the number of small cubes that have only one face colored",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_establishment(image_patch: ImagePatch, sign_name: str) -> str",
+      "description": "def identify_establishment(image_patch: ImagePatch, sign_name: str) -> str:\n    '''Identify the type of establishment represented by a given sign.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        sign_name (str): The name of the sign to identify the establishment.\n       \n    Returns:\n        str: The type of establishment if the sign is detected, \"no {sign_name} sign detected\" otherwise.\n    '''\n    sign_patches = image_patch.find(sign_name)\n    if sign_patches: \n        establishment = sign_patches[0].simple_query(f\"What kind of establishment is this?\")\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "grantAccess",
+      "description": "Grant access to a user for the specified database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Subcontrols By Control",
+      "description": "This endpoint returns a list of subcontrols (CCIs) owned by a specified control.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Code Boundary",
+      "description": "Retrieve the boundary information for a given postal code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BooksByAuthor",
+      "description": "This API is to find the books written by the author.",
+      "params": [
+        "{'name': 'author_id', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "bert-base-chinese",
+      "description": "This model has been pre-trained for Chinese, training and random input masking has been applied independently to word pieces (as in the original BERT paper). It can be used for masked language modeling.",
+      "params": [
+        "pretrained_model_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "car_rental_query",
+      "description": "Car Rental Query Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tickers_list",
+      "description": "A list response of all stock tickers with their IDs, that are possible to trade",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_box_height",
+      "description": "This method takes two arguments, 'length' and 'width', and returns the height of the box after squares are cut off from each corner.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "uk_boundaries_io_Retrieve_UK_Postal_District_Outline_Boundaries",
+      "description": "example: Query by \"TW12\" district",
+      "params": [
+        "{'name': 'postal-district', 'type': 'STR"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FancyOptions_S_P_500_Verticals",
+      "description": "This endpoint returns the call and put spreads from the S&P 500 with the highest credits. The verticals that are returned have a 70% chance of being out of the money at time of expirations. This endpoint is updated hourly.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last SMS Campaign",
+      "description": "Retrieve the details of the most recently sent SMS campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "artist_related",
+      "description": "Fetches related artists information from the Spotify API using a given artist ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Booking_com_v2_stays_properties_detail_policies",
+      "description": "Get detail policies",
+      "params": [
+        "{'name': 'id_detail', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_philosopher_by_name",
+      "description": "Searches for a philosopher by their name using the specified API key and returns the result.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TDAmeritrade",
+      "description": "A comprehensive toolkit for an online self-directed stock broker, which allows Users to buy and sell stocks.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "sendGift",
+      "description": "Send a gift to a friend in a social media game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_Top_paid_ios_apps",
+      "description": "Get list of the top paid ios apps",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bus/Trolley Locations",
+      "description": "Retrieves the current locations of buses and trolleys in the SEPTA network.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sephora_products_search_by_barcode_Deprecated",
+      "description": "Search product by barcode (UPC)",
+      "params": [
+        "{'name': 'upccode', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Class Details",
+      "description": "Retrieves detailed information about a specific class in Dungeons and Dragons 5th Edition, including its proficiencies, abilities, and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Upcall_fetchCallsForCampaign",
+      "description": "Get all calls for a campaign",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Screeners",
+      "description": "Retrieve a list of available screeners for technical analysis in the finance domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/marks/women/{points}",
+      "description": "This API retrieves the women's marks for the point value given as a parameter (0-1400).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tailoring.get_fabric_suggestions",
+      "description": "Retrieve fabric suggestions based on customer's preferences and the season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_property_detail",
+      "description": "property/detail",
+      "params": [
+        "{'name': 'listing_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dad Jokes Health Check",
+      "description": "Returns the health status of the Dad Jokes API, including the current UTC time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone Number Carrier Lookup",
+      "description": "This API provides information about the carrier associated with a given phone number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Truecaller_v2_Get_Details",
+      "description": "This end point will display the search details for the number you are looking for.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Lost_Ark_get_a_specific_item",
+      "description": "Endpoint to get a specific item",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "validate_password",
+      "description": "Validate if a password meets the security requirements",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_wine_description",
+      "description": "Get a simple description of a certain wine, e.g. malbec, riesling or merlot.",
+      "params": [
+        "{'name': 'wine', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyze_stock_portfolio",
+      "description": "Analyze the performance of a stock portfolio",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

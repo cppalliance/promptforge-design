@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_toolret_neg_0076",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_germination_rate",
+      "description": "This method takes two arguments, 'seeds_1' and 'seeds_2', which are the number of seeds planted in the first and second plots respectively, and 'germination_rate_1' and 'germination_rate_2', which are the germination rates for the two plots respectively. It returns the total germination rate as a percentage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iRail_Stations_list",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"iRail_Stations_list\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_limit_check_daily_check",
+      "description": "daily limit check",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Details",
+      "description": "This endpoint allows you to retrieve detailed information about a specific state by ID",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Unique_tournament_logo",
+      "description": "Get unique tournament logo by unique tournament id",
+      "params": [
+        "{'name': 'unique_tournament_id', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "course.schedule_broadcast",
+      "description": "Schedule a live broadcast for an online course, specifying the time and content details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_held_object(image_patch: ImagePatch, object_name: str, query: str) -> s",
+      "description": "def identify_held_object(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify the object that a given object is holding.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for holding an object.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The name of the object being held, if any.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        # If no object is found, query the image directly with simple_q",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cricbuzz_Cricket_matches_get_leanback",
+      "description": "Get match leanback",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_content_ideas",
+      "description": "Generate content ideas for digital media based on the given keywords and target audience.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_best_players_in_playoffs_if_exist",
+      "description": "Works the same like regular season just for the playoffs.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'STRING', '",
+        "{'name': 'competitionId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Automatic Speech Recognition",
+      "description": "Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio to text. It has many applications, such as voice user interfaces.",
+      "params": [
+        "{'name': 'audio', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Exporter",
+      "description": "Exports data to a specified file or format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YearToDate",
+      "description": "Retrieve year-to-string price data for a specified period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_places",
+      "description": "Fetches a list of places (either countries, cities, or administrative divisions) that match a query and can be filtered by various properties.",
+      "params": [
+        "type",
+        "language",
+        "skip",
+        "country",
+        "limit",
+        "admindivision1",
+        "admindivision2",
+        "accuracyradiuskm"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "rdVAmYVoe",
+      "description": "This function returns the flight information between two cities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disney Anime List API",
+      "description": "Retrieve a list of current Disney animes released today",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchPublicFacilitiesData",
+      "description": "Search for public facilities data based on a keyword or location.",
+      "params": [
+        "keyword",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "t5-efficient-large-nl36_fine_tune_sum_V2",
+      "description": "A T5-based summarization model trained on the Samsum dataset. This model can be used for text-to-text generation tasks such as summarization without adding 'summarize' to the start of the input string. It has been fine-tuned for 10K steps with a batch size of 10.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageRadioButtonFields",
+      "description": "Retrieves radio button fields from a specific page in a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get New Girl Characters",
+      "description": "This API retrieves a list of characters from the TV show New Girl, along with a brief description of each character.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calibrateAircraftSensors",
+      "description": "Calibrate the sensors of the aircraft",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Location User Stories",
+      "description": "Retrieve location user stories by providing a list of location IDs. The location IDs can be found using the /location/search endpoint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fibonacci_visualizer.renderChart",
+      "description": "Renders a visual chart of the Fibonacci sequence, with options for customization and date-based filtering.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Trailing Total Returns",
+      "description": "Retrieve the trailing total returns for a given performance ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Mactool2",
+      "description": "Upgrade the kernel version.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "poker.calculate_odds",
+      "description": "Calculates the odds of winning for a given poker hand against specified opponents' hands.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ethnography.collect_data",
+      "description": "Collects and organizes ethnographic data from field studies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Goal_Analysis_Goal_Minutes_in_Between",
+      "description": "Provides the goals statistics of the teams between in the minutes intervals(0-10, 11-20, 21-30...etc.)\n\nThe data will return for only -+7 days period, so endpoint can be tested with match that its date is in today +- 7 days. You can choose suitable match from Soccer Match List or Fixture endpoints.",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_coin_metrics_by_ticker",
+      "description": "Retrieve real-time social media metrics for a cryptocurrency by its ticker symbol.",
+      "params": [
+        "securityticker"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AllScores_Countries",
+      "description": "Get list of countries.",
+      "params": [
+        "{'name': 'langId', 'type': 'NUMBER', 'de",
+        "{'name': 'sportId', 'type': 'NUMBER', 'd",
+        "{'name': 'timezone', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "League_Of_Legends_Esports_Get_Live",
+      "description": "In this method you can get all live events score",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getEmailAttachments",
+      "description": "Retrieves the attachments of a forwarded email.",
+      "params": [
+        "emailId",
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Simple_Surf_Forecast_Api_GetSurfbreaksByName",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listTransactions",
+      "description": "Retrieve a list of transactions for a specific location and date range.",
+      "params": [
+        "locationId",
+        "startDate",
+        "endDate",
+        "limit",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WHOIS Lookup v2",
+      "description": "Perform a WHOIS lookup in JSON or XML format, version 2",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "public_health.get_disease_statistics",
+      "description": "Retrieve the statistics of a specified disease in a specified area.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "researcher.query_citations",
+      "description": "Query citation metrics for a researcher's publications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RestaurantPriceRange",
+      "description": "This API is to get the price range of a restaurant in a certain city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'",
+        "{'name': 'restaurant', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mzansi_Loadshedding_Api_town",
+      "description": "Returns the schedule for the specific requested town",
+      "params": [
+        "{'name': 'town', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rich Menu ID of User",
+      "description": "Retrieves the rich menu ID associated with a specified user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

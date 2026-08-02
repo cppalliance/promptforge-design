@@ -1,0 +1,69 @@
+{
+  "catalog_id": "web_stack",
+  "tools": [
+    {
+      "server": "brave_search",
+      "name": "brave_web_search",
+      "description": "Search the web and return relevant results with snippets",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "brave_search",
+      "name": "brave_local_search",
+      "description": "Search for local businesses and places",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_geocode",
+      "description": "Convert an address into geographic coordinates",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_directions",
+      "description": "Get travel directions between two locations",
+      "params": [
+        "origin",
+        "destination",
+        "mode"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_place_search",
+      "description": "Search for places near a location",
+      "params": [
+        "query",
+        "location",
+        "radius"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_distance_matrix",
+      "description": "Compute travel distance and time for a matrix of origins and destinations",
+      "params": [
+        "origins",
+        "destinations"
+      ]
+    },
+    {
+      "server": "fetch",
+      "name": "fetch",
+      "description": "Fetch a URL and return its content converted to markdown",
+      "params": [
+        "url",
+        "max_length"
+      ]
+    }
+  ]
+}

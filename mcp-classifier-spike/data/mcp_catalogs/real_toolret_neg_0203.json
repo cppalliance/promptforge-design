@@ -1,0 +1,325 @@
+{
+  "catalog_id": "real_toolret_neg_0203",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "analyze_impact(object: str, environment: str) -> str",
+      "description": "def analyze_impact(object: str, environment: str) -> str:\n    '''Analyze the impact of an object in a specific environment on the atmosphere and public perception.\n    \n    Args:\n        object (str): The object to analyze.\n        environment (str): The environment where the object is located.\n       \n    Returns:\n        str: The answer to the query.\n    '''\n    external_knowledge_query = f\"How does the presence of a {object} in a {environment} affect the atmosphere and public perception?\"\n    return llm_query(external_knowledge_query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Supported Sports",
+      "description": "Retrieves a list of sports supported in the global coverage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RoboticsCommunication.sendMessage",
+      "description": "Sends a message from the given autonomous robot to a specified receiver using a specialized communication node. The robot, receiver, and message must be valid JSON strings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "culture.survey_analysis",
+      "description": "Analyze the results of an employee engagement survey.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Uncovered_Treasure_random",
+      "description": "Get random treasure",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ChangeNOW_crypto_exchange_API_V2_Minimal_exchange_amount",
+      "description": "The API endpoint returns minimal payment amount required to make an exchange. If you try to exchange less, the transaction will most likely fail.\n\n<p>You can find <b>examples of errors</b> in the Example request block (use the drop-down list).</p>\n\n<h3>Request Parameters:</h3>",
+      "params": [
+        "{'name': 'flow', 'type': 'STRING', 'desc",
+        "{'name': 'toCurrency', 'type': 'STRING',",
+        "{'name': 'fromCurrency', 'type': 'STRING",
+        "{'name': 'fromNetwork', 'type': 'STRING'",
+        "{'name': 'toNetwork', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Image Downloader",
+      "description": "Downloads an image from a given URL.",
+      "params": [
+        "{'name': 'url', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_speed_for_same_distance(speed1, time1, time2)",
+      "description": "def find_speed_for_same_distance(speed1, time1, time2):\n    \"\"\"\n    Find the average speed needed for a person to travel the same distance as another person in a given time.\n\n    Parameters:\n    speed1 (float): The average speed of the first person, in miles per hour.\n    time1 (float): The time the first person traveled, in hours.\n    time2 (float): The time the second person has to travel, in hours.\n\n    Returns:\n    float: The average speed needed for the second person to travel the same distance as the first person, in miles per hour.\n    \"\"\"\n    # Calculate the distance traveled by the fi",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "League_Of_Legends_Champion_Informaion_Get_Champion_Abilities_as_Text",
+      "description": "Accepts a comma delimited list of champion names/nicknames and returns a text list of champions as well as their passive and standard abilities.",
+      "params": [
+        "{'name': 'champion', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wisdom_Quotes_Get_Wisdom_Quote_By_ID",
+      "description": "Returns a single wisdom quote by a given ID. The highest is 27753.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Jokes_Get_anime_by_ID",
+      "description": "Search anime using ID",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_resume",
+      "description": "Create a resume based on the provided personal information and experience",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "data_cleansing_remove_duplicates",
+      "description": "Remove duplicate entries from a dataset based on specified columns.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_address_by_id",
+      "description": "Retrieve a fake address based on a given ID using the RapidAPI service.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create User Account",
+      "description": "Creates a new user account in the communication platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Autcomplete",
+      "description": "When making a request with the type parameter set to type=autocomplete Rainforest API will return autocomplete suggestions for the search term specified in the search_term parameter, on the Amazon domain specified in the amazon_domain parameter.\nYou may scope your autocomplete request to an Amazon autocomplete alias (synonymous with a product area or top-level category) by specifying the alias using the autocomplete_alias parameter. The available autocomplete_alias values vary depending on the amazon_domain used. You can find a full list of all autocomplete aliaes, per Amazon-domain, in the au",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'",
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'amazon_domain', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Performance Details",
+      "description": "Retrieves player performance details for a specific player in a given competition and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "count",
+      "description": "Count how many cats",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_topic_benefits_or_drawbacks(query: str, topic: str, aspect: str) -> str",
+      "description": "def discuss_topic_benefits_or_drawbacks(query: str, topic: str, aspect: str) -> str:\n    '''Discuss the benefits or drawbacks of a specific topic.\n    \n    Args:\n        query (str): The original query to answer.\n        topic (str): The topic to discuss.\n        aspect (str): The aspect to discuss about the topic. Options: [\"benefits\", \"drawbacks\"].\n       \n    Returns:\n        str: The discussion result.\n    '''\n    \n    assert aspect in [\"benefits\", \"drawbacks\"]\n    query = f\"Discuss the {aspect} of {topic}.\"\n    return llm_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Tournament_Info",
+      "description": "Current season, stage structure(divisions,conferences etc.), country and many more information about a tournament.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Summarizer",
+      "description": "summarizes the content of the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Metadata_Cloud_ObjectExists",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_SMA",
+      "description": "Simple Moving Average(SMA) is an arithmetic moving average calculated by adding the latest closing prices and then dividing them by the number of time periods.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Chat Messages",
+      "description": "Retrieve chat messages for a specific chat code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TF-IDF",
+      "description": "A statistical-based keyword extraction tool that balances high-frequency and redundant keywords, but with low implementation efficiency and relatively complex operation.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "configure_email_reminder",
+      "description": "A tool to configure email reminders to be sent at specific times",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Minecraft_Forge_Optifine_optifineVersionList",
+      "description": "Get Optifine version list.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getThreatDetails",
+      "description": "Retrieve detailed results on any threats detected.",
+      "params": [
+        "threatId"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_arithmetic_sequence",
+      "description": "This method takes three arguments, 'first_term', 'common_difference', and 'n', and returns the nth term of the arithmetic sequence.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "show_image",
+      "description": "Fetch and return the image data of a flower from the API using the given flower ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "curl -X POST 'https://api.thecatapi.com/v1/favourites' --data '{\"image_id\":\"{ima",
+      "description": "# Add the image with id {image_id} to the list of favorites\ncurl -X POST 'https://api.thecatapi.com/v1/favourites' --data '{\"image_id\":\"{image_id}\"}'\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_list_similarities_Deprecated",
+      "description": "List similar properties",
+      "params": [
+        "{'name': 'prop_status', 'type': 'STRING'",
+        "{'name': 'property_id', 'type': 'NUMBER'",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fake_Identity_Generator_GenerateRandomIdentity",
+      "description": "Use this endpoint to generate a random fake identity, click the test button and enjoy the informations generated!",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "news_list_top",
+      "description": "Fetches the top news from all supported areas.",
+      "params": [
+        "symbol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tennis League Rounds Events",
+      "description": "Retrieve league round events for a specific tournament and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RefereeStatistics",
+      "description": "Get the statistics of a specific Football referee.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_asset",
+      "description": "Retrieve information about a specific NFT from the Blur API.",
+      "params": [
+        "contractaddress",
+        "tokenid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Similar_Web_get_analysis",
+      "description": "Get website traffic, key metrics, including engagement rate, traffic ranking, keyword ranking and traffic source.",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Words_of_Wisdom_The_Famous_Quotes_API_authors",
+      "description": "Returns a list of authors",
+      "params": []
+    }
+  ]
+}

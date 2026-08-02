@@ -1,0 +1,23 @@
+{
+  "catalog_id": "time",
+  "tools": [
+    {
+      "server": "time",
+      "name": "get_current_time",
+      "description": "Get the current time in a specific timezone",
+      "params": [
+        "timezone"
+      ]
+    },
+    {
+      "server": "time",
+      "name": "convert_time",
+      "description": "Convert a time between two timezones",
+      "params": [
+        "source_timezone",
+        "time",
+        "target_timezone"
+      ]
+    }
+  ]
+}

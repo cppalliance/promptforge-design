@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0166",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "SpeechNoted_Get_Voices",
+      "description": "Get available voice",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wordle_Answers_Solutions_Today",
+      "description": "Calling this endpoint you will todays solution.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchEntities",
+      "description": "Search for characters, corporations, and alliances by name.",
+      "params": [
+        "searchQuery",
+        "categories"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Air_Quality_By_Coordinates",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Waifu_Check_server_status",
+      "description": "Check server status",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "system_file_upload",
+      "description": "Used for logging into the system and uploading files, if the file at the target path already exists, then replace its content",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "custom_dice",
+      "description": "Roll a specified number of dice with a specified number of sides using the RapidAPI Dice Roll Simulator.",
+      "params": [
+        "dice",
+        "sides"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alternative Fuel Stations API",
+      "description": "Returns a list of alternative fuel stations that match the given query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quality_Porn_Supported_sites",
+      "description": "Get all available pages with the possible qualities and filters.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v2_v2_Users_By_Rest_IDs",
+      "description": "Users By Rest IDs",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_v2_house_prices_get_sales_history",
+      "description": "Get sales history",
+      "params": [
+        "{'name': 'property_id', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tournament List API",
+      "description": "Provides a list of soccer tournaments, including their details and schedules.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Article_Extractor_GET_article_parse",
+      "description": "Extract main article and meta data from a news entry or blog post.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "streams/investor_relations",
+      "description": "Returns the most recent 30 messages posted by verified Investor Relations customers on StockTwits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generateComponent",
+      "description": "Generate a new component in a frontend technology library/framework",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Growth_Estimates",
+      "description": "This API endpoint returns consensus analyst estimates over the company's growth rates for various periods.\n\nAvailability: Mega plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Document Status Summary",
+      "description": "Retrieves a summary of a user's document status within the business software domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_groups_below_threshold_in_stem_leaf(data_frame, stem_col, leaf_col, item_t",
+      "description": "def count_groups_below_threshold_in_stem_leaf(data_frame, stem_col, leaf_col, item_threshold):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a stem-and-leaf plot of groups and a threshold value, and returns the number of groups that have values less than the threshold.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the stem-and-leaf plot of items with columns specified by stem_col and leaf_col.\n    stem_col (str): The column name for the stem values.\n    leaf_col (str): The column name for the leaf values.\n    item_threshold (int): The threshol",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "/search/image",
+      "description": "This endpoint is used to perform image search using the Google Search JSON API. You can send a request with parameters like **q** (search query), **num** (desired number of images), **start** (starting index of results), and others. The request will generate a JSON response containing information about images that match the search query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_account",
+      "description": "Create a new user account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fed Policy Rates",
+      "description": "Retrieve daily interest rates paid by the Federal Reserve System on reserves.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Tacotron 2",
+      "description": "The Tacotron 2 model generates mel spectrograms from input text using an encoder-decoder architecture, and it is designed for generating natural-sounding speech from raw transcripts without any additional prosody information. This implementation uses Dropout instead of Zoneout to regularize the LSTM layers. The WaveGlow model (also available via torch.hub) is a flow-based model that consumes the mel spectrograms to generate speech.",
+      "params": [
+        "model_math"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "apps_related_searches",
+      "description": "Obtain information about the queried application or related applications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "select_shirt",
+      "description": "This function takes the number of shirts as input and returns the number of ways the boy can select one shirt.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "KVStore_Get_storage_info",
+      "description": "Show the user's storage status and information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Word_Ladder_Builder_Build_Word_Ladders",
+      "description": "Create Word Ladders between two words. By default it uses 2019 edition of Collins Dictionary.",
+      "params": [
+        "{'name': 'EndWord', 'type': 'STRING', 'd",
+        "{'name': 'StartWord', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getBookList",
+      "description": "Fetches the list of books in the Dune series.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Custom Blacklisted IPs",
+      "description": "Retrieve a list of custom blacklisted IPs from ClickMeter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Local_Rank_Tracker_Full_Grid_Search",
+      "description": "Make a full grid search and get the ranking of a specific business in every coordinate point in the grid. The grid cells / entires in the results are ordered left-to-right then top-down.",
+      "params": [
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lat', 'type': 'STRING', 'descr",
+        "{'name': 'grid_size', 'type': 'STRING', ",
+        "{'name': 'place_id', 'type': 'STRING', '",
+        "{'name': 'query', 'type': 'STRING', 'des",
+        "{'name': 'lng', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stations",
+      "description": "Retrieve the nearest electric vehicle charging stations within a specified distance.",
+      "params": [
+        "distance",
+        "longitude",
+        "latitude"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Signature_Cloud_DownloadFile",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_3D_Services_thumbnail",
+      "description": " ",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "rsi_overbought",
+      "description": "Fetches a list of stocks that have the RSI (Relative Strength Index) Overbought signal using the BarPatterns RapidAPI.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrencies Data Search",
+      "description": "Search for cryptocurrencies data based on search term, time range, and other optional parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "delete_folder",
+      "description": "Delete a specific folder",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Service Version",
+      "description": "Returns the version of the Visual Recognition service.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ratings_by_restaurant",
+      "description": "Fetch the Food Hygiene Rating for a given restaurant using the Wyre Data API.",
+      "params": [
+        "restaurant"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicGame",
+      "description": "Access a public game played on the platform and pull the game data.",
+      "params": [
+        "gameId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Dance Club Artists",
+      "description": "Provides information about the Greatest of All Time Top Dance Club Artists chart",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "kafka.topic_configuration",
+      "description": "Configure and retrieve settings for a specific Kafka topic.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

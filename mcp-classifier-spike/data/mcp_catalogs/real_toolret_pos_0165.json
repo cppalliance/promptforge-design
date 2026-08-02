@@ -1,0 +1,319 @@
+{
+  "catalog_id": "real_toolret_pos_0165",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "image-frame-interpolation",
+      "description": "This model generates intermediate frames between two input frames using a deep learning approach. It is useful for video frame rate up-conversion and slow motion generation.",
+      "params": [
+        "inputs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "maclookup",
+      "description": "Looks up the manufacturer information for a given MAC address using the Toolbench RapidAPI service.",
+      "params": [
+        "mac_number"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mboum_Finance_market_aggressive_small_caps",
+      "description": "Small cap stocks with earnings growth rates better than 25%.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetAppointment",
+      "description": "This API is to get an appointment with a specific doctor on a certain date.",
+      "params": [
+        "{'name': 'doctor_id', 'in': 'query', 'sc",
+        "{'name': 'date', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataCalculator",
+      "description": "Multi-functional tool to calculate the input data, function one for the sum, function two for the average, a call can only use a function.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_event_reminder",
+      "description": "Create event reminder",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.delete_dimension_group_rows",
+      "description": "# Remove the grouping of a set of rows. \nworksheet.delete_dimension_group_rows(start, end)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "rsi_overbought",
+      "description": "Fetches a list of stocks that have the RSI (Relative Strength Index) Overbought signal using the BarPatterns RapidAPI.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SpecReviewer",
+      "description": "review and validation of product specification sheets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_Complete_Stock_Price",
+      "description": "This endpoint retrieves a price with details for any public stock.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Go_Code_Compiler_Go_Versions",
+      "description": "Go Versions",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FileOperator",
+      "description": "Performs operations on files and folders, such as deleting, moving or copying.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Own Test Result",
+      "description": "Retrieves an individual test result for a specific test instance for the calling user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ascii_by_id",
+      "description": "Retrieves a previously generated ASCII image using its unique identifier.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MotorsportApi_MatchTvChannelDetails",
+      "description": "Get the details of a specific TV channel broadcasting a specific Football match.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'channId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hummingbird_v1_Anime",
+      "description": "{\"category_name\": \"Entertainment\", \"required_parameters\": [{\"name\": \"id\", \"type\": \"STRING\", \"description\": \"Anime ID\", \"default\": \"steins-gate\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Hummingbird_v1_Anime\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_existence_of_specific_object(image_patch: ImagePatch, object_name: str) ->",
+      "description": "def check_existence_of_specific_object(image_patch: ImagePatch, object_name: str) -> str:\n    '''Check the existence of a specific object in the image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n       \n    Returns:\n        str: \"yes\" if the object exists, \"no\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return \"no\"\n    return \"yes\"",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getKeyFinancialData",
+      "description": "Obtain key financial data, such as revenue, net income, and earnings per share, for a given company.",
+      "params": [
+        "symbol",
+        "period"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "codes",
+      "description": "This function searches for information based on the provided code using the Postali API.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getgamelevel",
+      "description": "Fetches a game level from the Roomtek Music Trivia API.",
+      "params": [
+        "level",
+        "output"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rich Menu ID of User",
+      "description": "Retrieves the rich menu ID associated with a specified user.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Manager Career History",
+      "description": "Retrieve the career history of a manager in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "getcarsavailable",
+      "description": "discover cars available for rent in a certain location and period",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LemurBot_Get_A_Bot_Category_Group",
+      "description": "Get a specific bot category group by it's id and view it's details",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Joke By Category",
+      "description": "Retrieve a random joke from a collection of most rated and most popular jokes, filtered by a specified category.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_vinlookup",
+      "description": "Retrieves key vehicle information including manufacturer, country of origin, and model year for a given VIN using the API Ninjas VIN Lookup API.",
+      "params": [
+        "vin"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_poppies",
+      "description": "This method takes two arguments, 'num_vases' and 'poppies_per_vase', and returns the total number of poppies.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ScrapTik_List_Comments_Replies",
+      "description": "Get replies of a comment.",
+      "params": [
+        "{'name': 'aweme_id', 'type': 'STRING', '",
+        "{'name': 'comment_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Azure_GetFutureEventsByTopic",
+      "description": "Get future Azure events by topic.",
+      "params": [
+        "{'name': 'topic', 'type': 'string', 'des",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicFinancesData",
+      "description": "Obtain information on public finances, debt, and government expenditure.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSecurity",
+      "description": "Retrieve all associated information for a specific security, including all related identifiers.",
+      "params": [
+        "idType",
+        "idValue"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tmail_Get_Messages",
+      "description": "Get all the messages received by email\nUse the token received from email as authorization header.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YC_Hacker_news_official_top_stories",
+      "description": "Returns the current top 100 stories.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_price_chart",
+      "description": "Get related data to draw price chart",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VideoValidator",
+      "description": "Used to verify the accuracy and completeness of video summaries.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Booking_com_v2_stays_properties_detail_policies",
+      "description": "Get detail policies",
+      "params": [
+        "{'name': 'id_detail', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "researcher.query_citations",
+      "description": "Query citation metrics for a researcher's publications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Staffs by Competition",
+      "description": "Retrieve a list of staffs related to a specific competition or league.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "population_info_search",
+      "description": "Population Information Query Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "circuits",
+      "description": "Get the list of available circuits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

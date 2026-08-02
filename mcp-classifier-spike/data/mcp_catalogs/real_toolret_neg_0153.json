@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_neg_0153",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "List of Countries",
+      "description": "Retrieve a list of countries, optionally with language support.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ratings_by_restaurant",
+      "description": "Fetch the Food Hygiene Rating for a given restaurant using the Wyre Data API.",
+      "params": [
+        "restaurant"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Dexi.io",
+      "description": "a web data collection tool that supports web crawling, data extraction and export.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stateusaprice",
+      "description": "Fetches gas prices for a given state in the United States using the Toolbench RapidAPI.",
+      "params": [
+        "state"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Product Questions API",
+      "description": "Retrieves customer questions and answers for a single product on Amazon.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "submitEnergyAudit",
+      "description": "Submit an energy audit for analysis",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "medicine.internal_medicine.appointment_scheduler",
+      "description": "Schedule and manage appointments for patients in an internal medicine practice.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_pay_after_taxes",
+      "description": "This method takes two arguments, 'total_earnings' and 'total_taxes', and returns the pay after taxes.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createDatabase",
+      "description": "Create a new database instance with a specified name.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Article_Extractor_and_Summarizer_extract",
+      "description": "Extract an article body and markdown version of the body.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGreenhouseTemperature",
+      "description": "Retrieve the current temperature inside a greenhouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Evosis_s_Game_Database_getPlatformList",
+      "description": "Returns the id and names of the platforms as Json.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "robotics.vision.object_recognition",
+      "description": "Identifies objects within a given image frame using robot vision systems.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AgroFitData_GetPestsByCrop",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "cubic_units_in_larger_unit(conversion_factor)",
+      "description": "def cubic_units_in_larger_unit(conversion_factor):\n    \"\"\"\n    Calculate the number of cubic units in a larger cubic unit.\n\n    Parameters:\n    conversion_factor (int): The conversion factor from the smaller unit to the larger unit.\n\n    Returns:\n    int: The number of cubic smaller units in one cubic larger unit.\n    \"\"\"\n    # The number of cubic smaller units in one cubic larger unit is equal to the conversion factor cubed\n    cubic_units = conversion_factor**3\n    \n    return cubic_units",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_API_NHL_Standings",
+      "description": "This API endpoint will return the standings for the NHL.\n\nParameters:\n->year\n-> group  //acceptable group names: 'league', 'conference', 'division'. if not described, default: 'league'",
+      "params": [
+        "{'name': 'year', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "U.K. Songs API",
+      "description": "Retrieve the UK Songs chart information for a given string or range of strings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone_area_code",
+      "description": "Get the International Country Calling Code and the Local Area Code information",
+      "params": [
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'region', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Temporary Email Domains",
+      "description": "Retrieve a list of available domains for temporary email creation",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Conversion_Cloud_GetFilesList",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Self_help_Quotes_Get_all_available_self_help_books",
+      "description": "Get a list of all available books in addition to the total count of quotes available from that book",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tripadvisor_Search_Cruises",
+      "description": "-",
+      "params": [
+        "{'name': 'order', 'type': 'ENUM', 'descr",
+        "{'name': 'destinationId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_2Factor_Authentication_India_Sending_SMS_OTP_Custom_OTP_Custom_Template",
+      "description": "This endpoint is used to send SMS OTP to India",
+      "params": [
+        "{'name': 'otp', 'type': 'STRING', 'descr",
+        "{'name': 'phone_number', 'type': 'STRING",
+        "{'name': 'template_name', 'type': 'STRIN",
+        "{'name': 'api_key', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_alerts",
+      "description": "Search for alert notifications that identify changes in trading (price & volume), financial, & company news/announcement activities for a given stock or cryptocurrency.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 52 Week Low by Country",
+      "description": "Retrieve the 52-week low stock prices for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cities by Country",
+      "description": "This endpoint retrieves a list of cities in a given country, along with their cost of living and average prices.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dna2protein_DNA2AminoAcid",
+      "description": "Transform a DNA sequence into a sequence of Amino Acids",
+      "params": [
+        "{'name': 'dna', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_loan_interest_rate",
+      "description": "Retrieve loan interest rate information for a specified bank",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_two_columns_for_specific_row(table_df, row_name_col",
+      "description": "def calculate_difference_between_two_columns_for_specific_row(table_df, row_name_col, row_name, column1, column2):\n    \"\"\"\n    This function takes in a pandas DataFrame, a row name, and two column names, and returns the difference between the values of the two columns for the specified row.\n    \n    Args:\n    table_df (pd.DataFrame): A pandas DataFrame containing various rows and columns.\n    row_name_col (str): The column name for the row names.\n    row_name (str): The name of the row to calculate the difference for.\n    column1 (str): The name of the first column.\n    column2 (str): The name",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_2_stockdetails",
+      "description": "Fetch detailed information about a specific stock using the StockYAPI Exchange API.",
+      "params": [
+        "keyword"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airlines/get-logos",
+      "description": "This API retrieves the logos of various airlines.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "analyze_impact(object: str, environment: str) -> str",
+      "description": "def analyze_impact(object: str, environment: str) -> str:\n    '''Analyze the impact of an object in a specific environment on the atmosphere and public perception.\n    \n    Args:\n        object (str): The object to analyze.\n        environment (str): The environment where the object is located.\n       \n    Returns:\n        str: The answer to the query.\n    '''\n    external_knowledge_query = f\"How does the presence of a {object} in a {environment} affect the atmosphere and public perception?\"\n    return llm_query(external_knowledge_query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Server Metadata",
+      "description": "Retrieves the server's version metadata, including the version number, build string, and other relevant information.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Uniblock_Get_User_Collections",
+      "description": "Gets all NFT collections of a specific user.",
+      "params": [
+        "{'name': 'chainId', 'type': 'NUMBER', 'd",
+        "{'name': 'walletAddress', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wayback Machine Availability Checker",
+      "description": "This API checks if a given URL is archived and currently accessible in the Wayback Machine. It can be used to provide a 404 or other error handler that checks Wayback for an archived copy ready to display.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_restaurant_locations",
+      "description": "Fetches a list of restaurant locations from the RapidAPI service.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FundingTimelineAnalyzer.analyzeFundingTrends",
+      "description": "Analyzes historical funding data to predict future trends and optimal investment times for startups.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulateUserInteraction",
+      "description": "This API simulates user interactions on a web UI, such as clicking buttons or entering text, based on a sequence of actions provided. It is useful for automated testing and UI interaction scripting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bulk_Whatsapp_Validator_Validate_WA_number_free",
+      "description": "You need a **valid token** to use this endpoint, learn how to get it on this [video](https://youtu.be/TcaAwKpAkl8). \nThe response is `true` if the phone is registered on whatsapp.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des",
+        "{'name': 'token', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "API.set_num_garages",
+      "description": "# To set the number of garage(s)\nAPI.set_num_garages(value: int)\n",
+      "params": []
+    }
+  ]
+}

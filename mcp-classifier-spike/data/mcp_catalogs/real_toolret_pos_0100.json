@@ -1,0 +1,354 @@
+{
+  "catalog_id": "real_toolret_pos_0100",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Races by Team",
+      "description": "Retrieve motorsport races by team ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Club Header Information",
+      "description": "Retrieves the header information of a specific club from the Transfermarkt API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FavoriteName2ID",
+      "description": "This API is to convert favorite name to favorite ID.",
+      "params": [
+        "{'name': 'favorite_name', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scoring_Tables_API_marks_women",
+      "description": "This retrieves all women's marks from the World Athletics Scoring Tables.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_v2_get_price_fair_value",
+      "description": "Fetches the price vs fair value data for a given stock.",
+      "params": [
+        "performanceid"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getNamedayByDate",
+      "description": "Retrieve the nameday for a specific day and country.",
+      "params": [
+        "date",
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indeed_Search",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [{\"name\": \"v\", \"type\": \"STRING\", \"description\": \"Version. Which version of the API you wish to use. All publishers should be using version 2. Currently available versions are 1 and 2. This parameter is required.\", \"default\": \"2\"}, {\"name\": \"format\", \"type\": \"STRING\", \"description\": \"Format. Which output format of the API you wish to use. The opt",
+      "params": [
+        "{'name': 'v', 'type': 'STRING', 'descrip",
+        "{'name': 'format', 'type': 'STRING', 'de",
+        "{'name': 'callback', 'type': 'STRING', '",
+        "{'name': 'q', 'type': 'STRING', 'descrip",
+        "{'name': 'l', 'type': 'STRING', 'descrip",
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'st', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Realtime Quotes",
+      "description": "Retrieve real-time quotes for a list of stock IDs",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Historical Data",
+      "description": "Provides access to daily historical company pricing data over a given period of time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_current_balance",
+      "description": "Check the current balance of a specified account",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_products",
+      "description": "Fetches a list of products from an external API with optional query parameters for limiting and skipping items in the response.",
+      "params": [
+        "limit",
+        "skip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "algebra.matrixOperations",
+      "description": "Performs specified operations on matrices, such as addition, multiplication, or inversion.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FirewallInstaller",
+      "description": "Installs the firewall.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All dcps_project Data",
+      "description": "Retrieves all data related to the dcps_project in the Education domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumers_get_reviews",
+      "description": "Retrieve reviews for a specific consumer from the Trustpilot API.",
+      "params": [
+        "is_id",
+        "includereportedreviews",
+        "perpage",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Meats_Futures_Prices",
+      "description": "page source: https://www.investing.com/commodities/meats",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "C99_Code_Compiler_C99_Versions",
+      "description": "C99 Versions",
+      "params": []
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "facebook/blenderbot-400M-distill",
+      "description": "BlenderBot-400M-distill is a distilled version of the BlenderBot model, trained on the Blended Skill Talk dataset. It is designed for open-domain chatbot tasks and can generate text-to-text responses in a conversational manner. The model is based on the Transformers library and can be used with PyTorch, TensorFlow, and JAX.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dog_breeds_Get_All_Dog_Breeds",
+      "description": "This endpoint will return back all available dog breeds that are available",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "League_of_Legends_Champion_Meta_Gets_all_the_Meta_Data_from_all_Champions_based_",
+      "description": "Fetches all the Meta Data in a provided rank.\nPossible parameters are:\n- placements\n- iron\n- bronze\n- silver\n- gold\n- platinum\n- diamond\n- master\n- grandmaster\n- challenger\nThey also can be combined with a 'comma-sign': e.g. challenger**,**master",
+      "params": [
+        "{'name': 'rankname', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Waze_Alerts_and_Jams",
+      "description": "Get real-time alerts and jams from Waze in a geographic rectangular area defined by bottom-left and top-right latitude, longitude pairs.",
+      "params": [
+        "{'name': 'top_right', 'type': 'STRING', ",
+        "{'name': 'bottom_left', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_object_perspective(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def get_object_perspective(image_patch: ImagePatch, object_name: str) -> str:\n    '''Determine the perspective from which an object is viewed.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for perspective.\n       \n    Returns:\n        str: The perspective from which the object is viewed.\n    '''\n    perspective_query = f\"From what perspective are we viewing the {object_name}?\"\n    perspective = image_patch.simple_query(perspective_query)\n    return perspective",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unofficial_Trust_Pilot_consumers_get_web_links",
+      "description": "Get web links to a consumer",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "slovakia_songs",
+      "description": "Fetches Slovakia Songs chart information for a given date range.",
+      "params": [
+        "range",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball Player Near Matches",
+      "description": "Retrieve a list of basketball players who have played near matches with a specified player.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Words_of_Wisdom_The_Famous_Quotes_API_authors",
+      "description": "Returns a list of authors",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Timeline Data API",
+      "description": "Provides timeline data for COVID-19 cases in India, starting from January 30th, 2020.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "measure_units",
+      "description": "Fetches an array of all units associated with a specific measurement type using the Measurement Unit Converter API.",
+      "params": [
+        "measure"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Shopee Category Tree",
+      "description": "Retrieve the category tree structure from Shopee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "choice_endpoint",
+      "description": "Sends a GET request to the Rock-Paper-Scissors API with the user's choice and returns the API's response.",
+      "params": [
+        "choice"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Terabox_Downloader_Get_Download_Link",
+      "description": "Get Download Link",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mathematical_Symbolic_Expression_Manipulator_SimplifyBasic",
+      "description": " ",
+      "params": [
+        "{'name': 'expression', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Overview",
+      "description": "Retrieve a detailed overview of a stock by type and slug, including financial metrics and company information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "kotak7_Artis_info",
+      "description": "Artis info",
+      "params": [
+        "{'name': 'num', 'type': 'NUMBER', 'descr",
+        "{'name': 'lang', 'type': 'STRING', 'desc",
+        "{'name': 'index', 'type': 'NUMBER', 'des",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetBySearch",
+      "description": "Searches through all house plants and returns the closest results matching 'Latin name', 'Family', 'Other names', 'Common name', 'Common name (fr.)', 'Description', 'Categories', 'Origin' in order by highest most likely. This route is case insensitive and uses fuzzy search",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Makes",
+      "description": "Retrieve a list of car makes from the car database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Stage Competitor Standings",
+      "description": "Retrieves the competitor standings for a specific Motorsport stage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlanOutdoorActivities",
+      "description": "This API plans outdoor activities based on the weather forecast and local events.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche",
+        "{'name': 'events', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Roulette Statistics",
+      "description": "Retrieves statistics about wheel results, including count, percentage, last occurrence time, and hot frequency percentage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestApparel",
+      "description": "This API suggests suitable apparel based on the weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    }
+  ]
+}

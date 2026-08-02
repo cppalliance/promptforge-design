@@ -1,0 +1,339 @@
+{
+  "catalog_id": "real_toolret_pos_0093",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Article_Extractor_and_Summarizer_extract",
+      "description": "Extract an article body and markdown version of the body.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Tacotron 2",
+      "description": "The Tacotron 2 model generates mel spectrograms from input text using an encoder-decoder architecture, and it is designed for generating natural-sounding speech from raw transcripts without any additional prosody information. This implementation uses Dropout instead of Zoneout to regularize the LSTM layers. The WaveGlow model (also available via torch.hub) is a flow-based model that consumes the mel spectrograms to generate speech.",
+      "params": [
+        "model_math"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_book",
+      "description": "Search for books and return whether they are in stock",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Stock_Market_API_Data_Get_52_week_high_by_Fundamental_with_respecto_to_Co",
+      "description": "Get 52 week high by Fundamental with respecto to Country",
+      "params": [
+        "{'name': 'countryCode', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_Language_Supported_Languages",
+      "description": "Supported Languages",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CaseOutcomeAnalysis.predictOutcome",
+      "description": "Predicts the outcome of a Supreme Court case based on historical data and provided case attributes.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StringTransformer",
+      "description": "Transforms a given string according to a specified action, such as converting to upper-case, lower-case, title-case, or mirroring.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "create_system",
+      "description": "This method takes two arguments, 'total_coins' and 'total_amount', and returns a tuple representing the system of linear equations that can be used to solve the problem.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alpha_Vantage_Busca_por_simbolo",
+      "description": "buscar dados pelo simbolo",
+      "params": [
+        "{'name': 'function', 'type': 'STRING', '",
+        "{'name': 'apikey', 'type': 'STRING', 'de",
+        "{'name': 'outputsize', 'type': 'STRING',",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EU VAT Number Checker",
+      "description": "Check the validity of a European Union VAT number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Greatest of All Time Adult Alternative Songs",
+      "description": "Retrieve the Greatest of All Time Adult Alternative Songs chart from Billboard.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WeatherCheck",
+      "description": "This API checks the weather of a specific location.",
+      "params": [
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Auditor Information",
+      "description": "Retrieve information about auditors from the Business Software domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "totd_tracks_by_date",
+      "description": "Retrieves the Track of the Day (TOTD) tracks for a given month and year from the Trackmania API.",
+      "params": [
+        "month",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Information",
+      "description": "Retrieve postal information, such as addresses or shipping rates, for a business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_day_when_quantity_doubles(starting_quantity, target_quantity)",
+      "description": "def find_day_when_quantity_doubles(starting_quantity, target_quantity):\n    \"\"\"\n    Find the first day on which a quantity, which doubles every day, exceeds a given target.\n\n    Parameters:\n    starting_quantity (float): The quantity at the start.\n    target_quantity (float): The target quantity.\n\n    Returns:\n    int: The first day on which the quantity exceeds the target.\n    \"\"\"\n    current_quantity = starting_quantity\n    day = 0\n\n    while current_quantity <= target_quantity:\n        current_quantity *= 2\n        day += 1\n\n    return day",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BooksByAuthor",
+      "description": "This API is to find the books written by the author.",
+      "params": [
+        "{'name': 'author_id', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "unsuccessful_attempts",
+      "description": "Calculates the maximum number of unsuccessful attempts.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "I18nRegions",
+      "description": "Returns a list of content regions that the YouTube website supports.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTravelConsultancy",
+      "description": "Retrieve travel consultancy information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Quarterly Balance Sheet",
+      "description": "Retrieve the quarterly balance sheet of a company, given its stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "eyeContactMetrics.generateReport",
+      "description": "Generates a detailed report on eye contact metrics during a specific event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_market_get_futures",
+      "description": "Get future reports about the market\n* There are response images in encoded base 64 string, you need to decode to get the images yourself",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_final_milk_quantity",
+      "description": "This method takes two arguments, 'initial_milk_quantity' and 'water_quantity', and returns the quantity of pure milk in the final solution after the given amount of water is added and removed.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "schoolCode",
+      "description": "Gets the school code upon input",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "partenaire_par_id",
+      "description": "Fetches a partner's details by their ID from the designated API.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Basketball",
+      "description": "i will use this only for live feeds",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "audio.setup_microphone_array",
+      "description": "Configure and optimize a microphone array setup for live sound reinforcement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockTwits_streams_home",
+      "description": "Returns the most recent 30 messages posted to the authenticating user's home stream, which is made up of the users and stocks they follow.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "chat_with_workspace",
+      "description": "Chat with your Notion workspace.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_active_loans_offers",
+      "description": "Retrieves the active loan offer levels for a specified collection.",
+      "params": [
+        "collection"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Salesforce Versions",
+      "description": "Retrieves a list of Salesforce versions, including version number, label, and a link to each version's root.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Memeados_Google_Fake_Autocomplete",
+      "description": "Generate Fake google autocomplete",
+      "params": [
+        "{'name': 'text1', 'type': 'STRING', 'des",
+        "{'name': 'text3', 'type': 'STRING', 'des",
+        "{'name': 'text2', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "tejas23/autotrain-amx2-1702259728",
+      "description": "A multi-class classification model trained using AutoTrain to predict CO2 emissions based on tabular data.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "video_post_metadata",
+      "description": "Fetch metadata for a single TikTok video post.",
+      "params": [
+        "video",
+        "fresh"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindNearbyRestaurant",
+      "description": "This API finds a nearby restaurant based on the user's current location.",
+      "params": [
+        "{'name': 'user_location', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HealthTips.getExerciseTips",
+      "description": "Provides exercise tips based on user's age, gender and fitness level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGravatarUrlForEmailAddress",
+      "description": "Retrieve the Gravatar URL for a given email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_getJP2Header",
+      "description": "Get the XML header embedded in a JPEG2000 image. Includes the FITS header as well as a section of Helioviewer-specific metadata.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_smallest_prime",
+      "description": "This method takes no arguments and returns the smallest prime number.",
+      "params": []
+    }
+  ]
+}

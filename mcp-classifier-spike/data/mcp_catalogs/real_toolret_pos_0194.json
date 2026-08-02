@@ -1,0 +1,333 @@
+{
+  "catalog_id": "real_toolret_pos_0194",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Project Jobs",
+      "description": "Returns a collection of jobs for a project in the Business domain, as requested by the textking_translation tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "taobao_search_by_keyword",
+      "description": "Search for products on Taobao using a specified keyword and return the search results.",
+      "params": [
+        "page",
+        "keyword"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Humor_Jokes_and_Memes_search_gifs",
+      "description": "Search for gifs.\nSee https://humorapi.com/docs/#Search-Gifs for more.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mass Conversion",
+      "description": "Converts a mass value from one unit to another.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unofficial_Trust_Pilot_business_units_detail",
+      "description": "Get detailed information of a business unit",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ticket_cancellation_time",
+      "description": "Get the latest cancellation time for each train ticket option",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET Attributes",
+      "description": "Get Attributes you can use to filter exercises",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "cities_get_information_deprecated",
+      "description": "Fetches information about a specific city based on its ID.",
+      "params": [
+        "is_id",
+        "aqiindex",
+        "timezone",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AssertivenessEvaluator.evaluateScenario",
+      "description": "Analyzes a given communication scenario to assess assertiveness levels and provides feedback.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getGroupWithContactsPaginated",
+      "description": "Get group and paginated contacts belonging to it",
+      "params": [
+        "{'name': 'groupId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disney Anime List API",
+      "description": "Retrieve a list of current Disney animes released today",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_initial_fee(cost1, nights1, cost2, nights2)",
+      "description": "def find_initial_fee(cost1, nights1, cost2, nights2):\n    \"\"\"\n    Find the initial fee based on the total cost of two different durations.\n\n    Parameters:\n    cost1 (float): The total cost of the first duration.\n    nights1 (int): The number of units of the first duration.\n    cost2 (float): The total cost of the second duration.\n    nights2 (int): The number of units of the second duration.\n\n    Returns:\n    float: The initial fee.\n    \"\"\"\n    # Calculate the cost per unit after the first unit\n    cost_per_unit = (cost2 - cost1) / (nights2 - nights1)\n\n    # Calculate the initial fee\n    init",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_mode_from_dataframe_column(data_frame, number_col)",
+      "description": "def calculate_mode_from_dataframe_column(data_frame, number_col):\n    \"\"\"\n    This function takes in a pandas DataFrame and a column name containing numbers, and returns the mode of the numbers in that column.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing a column with numbers.\n    number_col (str): The column name for the numbers.\n    \n    Returns:\n    int: The mode of the numbers in the specified column.\n    \"\"\"\n    # Extract the numbers from the specified column\n    numbers = data_frame[number_col].tolist()\n    \n    # Calculate the frequency of each number\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_account_functionality",
+      "description": "Verify the functionality of the account to confirm login status",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "scheduleSocialMediaPost",
+      "description": "Schedule a post on a social media platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "notify_user",
+      "description": "Send notifications through the user's preferred communication method",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BIN_IIN_Lookup_BIN_IIN_Lookup",
+      "description": "This API for Lookup, check, or search Issuer card information using card BIN.\nInput first 6 digits number of the Credit/Debit Card",
+      "params": [
+        "{'name': 'bin', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ShoppingAssistant",
+      "description": "This API locates the nearest store where the recommended outfit can be purchased.",
+      "params": [
+        "{'name': 'outfit', 'in': 'query', 'schem",
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_removed_score",
+      "description": "Calculates the removed score given the sum of scores, one of the removed scores",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCSSProperty",
+      "description": "Retrieve the value of a CSS property for a given element",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataSegmentationAndClustering",
+      "description": "This function segments time-based data into clusters based on similarity.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Results",
+      "description": "Retrieves team results for a given team ID, with optional pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "points_point_forecast",
+      "description": "Fetches weather forecast data for a specific geographic point using the National Weather Service API.",
+      "params": [
+        "point"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentCalendarCreator",
+      "description": "for creating content calendars",
+      "params": []
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Instruct Image Using Text",
+      "description": "useful when you want to the style of the image to be like the text. like: make it look like a painting. or make it like a robot. The input to this tool should be a comma separated string of two, representing the image_path and the text.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+      "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CreditCards",
+      "description": "Retrieves credit card information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Country Location API",
+      "description": "The Country Location API is a RESTful API that allows developers to retrieve location data for any country in the world. Using a GET request with a country parameter, the API retrieves information about the specified country, such as its name, capital city, region, subregion, population, languages, and currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stores",
+      "description": "Get Stores",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Meats_Futures_Prices",
+      "description": "page source: https://www.investing.com/commodities/meats",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "accommodation_search",
+      "description": "Search for accommodation options based on destination",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kalshi_Trading_API_GetSeries",
+      "description": "Endpoint for getting data about a series by its ticker.",
+      "params": [
+        "{'name': 'series_ticker', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_List_Comments",
+      "description": "List Comments API",
+      "params": [
+        "{'name': 'photoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dTJM",
+      "description": "Find an activity with a specified price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Health_Calculator_API_BodyFat",
+      "description": "This endpoint calculates the body fat percentage based on the provided gender, age, height, and weight parameters.",
+      "params": [
+        "{'name': 'height', 'type': 'NUMBER', 'de",
+        "{'name': 'weight', 'type': 'NUMBER', 'de",
+        "{'name': 'gender', 'type': 'STRING', 'de",
+        "{'name': 'age', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_Get_the_states",
+      "description": "Get the states.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Election 2020 FAQs",
+      "description": "Retrieve frequently asked questions related to the 2020 US presidential election.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandURL",
+      "description": "Expand a Bitly link into its original long URL.",
+      "params": [
+        "short_url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Emoji",
+      "description": "Retrieve an emoji by its name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Helsinki-NLP/opus-mt-en-de",
+      "description": "The Helsinki-NLP/opus-mt-en-de model is a translation model developed by the Language Technology Research Group at the University of Helsinki. It translates English text to German using the Hugging Face Transformers library. The model is trained on the OPUS dataset and has a BLEU score of 45.2 on the newstest2018-ende.en.de dataset.",
+      "params": [
+        "pretrained_model_name_or_path"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "catalog_id": "real_toolret_neg_0118",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Web Scraper API",
+      "description": "Fetch and parse HTML content from a given URL, optionally filtering by a specific selector.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock General Tables",
+      "description": "Retrieve general tables for stocks, including financial information and stock details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_downstream_speed",
+      "description": "This method takes two arguments, 'speed_still_water' and 'speed_stream', and returns the speed in downstream.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Calendar_Converter_Convert_Date",
+      "description": "# Converts a date to a specified calendar.",
+      "params": [
+        "{'name': 'to', 'type': 'ENUM', 'descript"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance/rates",
+      "description": "Get finance rates for a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetSquigglyAnnotation",
+      "description": "Retrieve a squiggly annotation from a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Get_Index_Price_Kline",
+      "description": "Query Index Price Kline",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'category', 'type': 'STRING', '",
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'end', 'type': 'NUMBER', 'descr",
+        "{'name': 'start', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PetVaccinationScheduler.scheduleAppointment",
+      "description": "Schedules a vaccination appointment for a pet, allowing the user to specify the pet details and preferred appointment time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bet_at_Home_Odds",
+      "description": "Latest Odds by Bet-at-Home",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_problems",
+      "description": "This method takes two arguments, 'start' and 'end', representing the range of problems to be solved, and returns the number of problems in that range.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fluximmo_get_annonce_by_urls",
+      "description": " ",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/pix2struct-textcaps-base",
+      "description": "Pix2Struct is an image encoder - text decoder model that is trained on image-text pairs for various tasks, including image captioning and visual question answering. It is pretrained by learning to parse masked screenshots of web pages into simplified HTML. The web, with its richness of visual elements cleanly reflected in the HTML structure, provides a large source of pretraining data well suited to the diversity of downstream tasks.",
+      "params": [
+        "images",
+        "text",
+        "return_tensors",
+        "max_patches"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_all_restaurant_locations",
+      "description": "Fetches a list of restaurant locations from the RapidAPI service.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Talkface_IELTS_Prep",
+      "description": "Use the latest IELTS Speaking exam questions to prep your IELTS speaking with Talkface.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v4_User_Likes",
+      "description": "User Likes",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Global Indices",
+      "description": "Retrieve information about global stock market indices, including their current values, changes, and other relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "drama.track_performance_dates",
+      "description": "Track and retrieve performance dates for specific plays across various theaters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Commodities",
+      "description": "Retrieve a list of commodities from the Commerce domain using the argaam_data_apis_free tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auth_getCatalogTenant",
+      "description": "Get tenant information. Internal endpoint only available to other services.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Yummly_feeds_search",
+      "description": "Search for recipes by name and option filters",
+      "params": [
+        "{'name': 'start', 'type': 'NUMBER', 'des",
+        "{'name': 'maxResult', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Xinhhd/autotrain-zhongxin-contest-49402119333",
+      "description": "A multi-class classification model trained with AutoTrain to predict carbon emissions based on input features.",
+      "params": [
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Active Stocks by Price with Respect to Country",
+      "description": "Retrieve a list of active stocks by price with respect to a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_news_v2_list",
+      "description": "List latest news relating to all sports at once",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LemurBot_Get_A_Bot_Category_Group",
+      "description": "Get a specific bot category group by it's id and view it's details",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ufc_287_pereira_vs_adesanya_2_april_08_2023",
+      "description": "Fetches the details of UFC 287: Pereira vs. Adesanya 2 held on April 08, 2023, including a range of information about each fighter.",
+      "params": [
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Smile_get_webhook",
+      "description": "Get a webhook endpoint.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_artist_appears_on",
+      "description": "artist-appears-on",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Trending TV Shows",
+      "description": "Returns a list of trending TV shows with their titles, IDs, and release years.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Vampirism Imbuements",
+      "description": "This API retrieves a list of imbuements related to Vampirism (Life steal) in the Tibia Items tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ice Hockey Tournaments",
+      "description": "Retrieve a list of ice hockey tournaments covered by the data provider.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hourlyWeather",
+      "description": "This endpoint returns the historical weather data on an hourly level for a given day and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_resume",
+      "description": "Create a resume based on the provided personal information and experience",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "EcoInteractions.HabitatDiversityAnalysis",
+      "description": "Analyzes the diversity of habitats within a given ecosystem, providing insights into species richness and ecosystem health.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_financials",
+      "description": "Get Income Statement data in Financials section. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok Video Downloader",
+      "description": "Downloads a TikTok video without watermarks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Baseball_teams_roster_teamIds",
+      "description": "Query baseball team roster by ID",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Credit Card Fraud Detection API",
+      "description": "Detects credit card fraud by analyzing various parameters related to the transaction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_news_get_details",
+      "description": "Get news details",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'sourceId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_TVCountries",
+      "description": "Get a list of countries and their respective TV channels broadcasting a specific Football match.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Text Styler API",
+      "description": "This API is used to style and format text using various fonts, colors, and effects.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

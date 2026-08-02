@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_toolret_neg_0035",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "get_subcontrol_by_control",
+      "description": "Fetches all subcontrols or CCIs associated with a specified control.",
+      "params": [
+        "control"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Property Types",
+      "description": "Retrieves a list of property types from Priceline.com",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iOS_Store_Get_app_reviews",
+      "description": "This endpoint allows us to fetch app reviews given app Id",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'appId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "GoalTool",
+      "description": "Used to define goals and key performance indicators for the sales team",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Greip_IPLookup",
+      "description": "Returns the geolocation data of a specific IP Address.",
+      "params": [
+        "{'name': 'ip', 'type': 'STRING', 'descri",
+        "{'name': 'key', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Working_days_1_3_define_custom_period",
+      "description": "Defining a custom period (typically days of vacations of an employee or days of annual closure of a company) can be done from the working days websites user interface but can also be done programmatically from the API. A typical use case would be to retrieve the vacations of the workers out of the human ressources software and insert them into a custom calendar, then being able to query available working days.",
+      "params": [
+        "{'name': 'description', 'type': 'STRING'",
+        "{'name': 'profile_id', 'type': 'STRING',",
+        "{'name': 'start_date', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Counter_Get_Current_Count",
+      "description": "get count and and don't increase",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rocket_League_Stat",
+      "description": "Check a player's stat:\n`rocket-league1.p.rapidapi.com/stat/:player/:stat`",
+      "params": [
+        "{'name': 'player', 'type': 'string', 'de",
+        "{'name': 'stat', 'type': 'ENUM', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bet365_prematch_odds",
+      "description": "Fetches prematch odds from the Bet365 API using the provided fixture ID.",
+      "params": [
+        "fi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List source languages",
+      "description": "Returns a collection of all source languages supported by TEXTKING.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_recent_login_activities",
+      "description": "Check the account's recent login activities",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Text Styler API",
+      "description": "This API is used to style and format text using various fonts, colors, and effects.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_dishwasher_wage",
+      "description": "This method takes one argument, 'manager_wage', and returns the hourly wage of a dishwasher, which is half of the manager's wage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FIA_Formula_1_Championship_Statistics_Race_Results",
+      "description": "Use this endpoint to retrieve race results data about a specific F1 championship by specifying a year. If you ommit the ***year*** query parameter, a default value will be set to current year. The response data will contain information about the Grand Prix, Date, Winner, Car (Team), Laps & overall time of each driver in the form of a collection.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "legal_regulation_search",
+      "description": "Legal Regulation Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_cigar_average_length",
+      "description": "Fetches the average length of cigars based on specified filters.",
+      "params": [
+        "wrapper",
+        "name",
+        "filler",
+        "country",
+        "color",
+        "strength",
+        "brandid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_fraction_to_decimal",
+      "description": "This method takes a string representing a fraction in the format 'a b/c' and returns the corresponding decimal value.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Holistic_Finance_Stock_Data_Forex_quotes",
+      "description": "Provides real-time forex data.",
+      "params": [
+        "{'name': 'source', 'type': 'STRING', 'de",
+        "{'name': 'target', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_quarters",
+      "description": "This method takes two arguments, 'numerator' and 'denominator', representing an improper fraction, and returns the number of 1/4s in it.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_categories_list_Deprecated",
+      "description": "List all root and sub categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetFoodRecipe",
+      "description": "Retrieve a food recipe based on the provided ingredients and cooking method.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Shotmap",
+      "description": "Get shotmap by event_id",
+      "params": [
+        "{'name': 'event_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Specified Users Activity",
+      "description": "Retrieve the activity feed of a specified user on the social platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "notify_user",
+      "description": "Send notifications through the user's preferred communication method",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAssetsList",
+      "description": "Retrieve a list of available assets for forecasting in the Artificial Intelligence and Machine Learning domain using the Apophis tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EveryEarthquake_M2_5_Earthquakes_Past_30_Days",
+      "description": "Magnitude 2.5+ Earthquakes, Past Thirty Days",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fixture Result",
+      "description": "Retrieve the result of a specific football fixture by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sim_based_Location_Tracking_NumberList",
+      "description": "\n<p>All  of <b>last updated locations</b> of provided concents phone numbers can be fetched through this endpoint,</p>\n\n<h2 id=\"output\">OUTPUT</h2>\n<p>\n<h4>Invalid user credentials</h4>\n</p>\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper language-undefined\"><code class=\"is-highlighted language-undefined\">{\n    \"errors\": \"Invalid username/password.\"\n}\n</code></pre>\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN Decoder",
+      "description": "Decodes Vehicle Identification Numbers. The result will include a list of specifications in the specs property and a list of all possible trims matching the VIN in the trims property.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Artist Related Artists",
+      "description": "Retrieve a list of artists related to a given artist by their ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "predict_insulin_dosage",
+      "description": "Predicts the optimal insulin dosage for Type 1 Diabetes patients based on their recent blood glucose levels and physical activity.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAPIUpdates",
+      "description": "This function returns a list of all the updates that have been made to a specific API since a specified date.",
+      "params": [
+        "name",
+        "since"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exact_url_non_english",
+      "description": "Retrieves the backlinks of a specific non-English URL using the RapidAPI service.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "philosophy.get_movement_info",
+      "description": "Retrieve detailed information about a specific philosophical movement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reserve_hotel_room",
+      "description": "Reserves a hotel room with the specified details.",
+      "params": [
+        "room_type",
+        "nightly_rate",
+        "checkin_date",
+        "checkout_date",
+        "guest_id",
+        "promo_code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gearbest_get_shipping",
+      "description": " ",
+      "params": [
+        "{'name': 'country_code', 'type': 'STRING",
+        "{'name': 'product_url', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IsWaterCoordinate",
+      "description": "Given a latitude and longitude, returns whether the corresponding coordinate on Earth is water or not.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "heeHPwE",
+      "description": "Find an activity with a specified price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Diagnosis2Treatment",
+      "description": "This API is to convert a disease name to its treatment plan.",
+      "params": [
+        "{'name': 'disease', 'in': 'query', 'sche"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0165",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "A_I_Smartable_GetTopics",
+      "description": "Get artificial intelligence topics.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.unhide_rows",
+      "description": "# Explicitly unhide the given row index range. Index start from 0. \nworksheet.unhide_rows(start, end)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dataset Info",
+      "description": "Retrieves information about a dataset",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "translateKoreanToEnglish",
+      "description": "Translate a Korean phrase into English",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getThreatDetails",
+      "description": "Retrieve detailed results on any threats detected.",
+      "params": [
+        "threatId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Pitching_Leaders",
+      "description": "Retrieve n leaders for a given hitting statistic.  This endpoint is best used alongside col_in/col_ex to prune response data. Without, it returns entire player objects.  For best results, include the player\u2019s name, id, and the stat as a starting point.  See: Using col_in & col_ex",
+      "params": [
+        "{'name': 'results', 'type': 'STRING', 'd",
+        "{'name': 'sort_column', 'type': 'STRING'",
+        "{'name': 'season', 'type': 'STRING', 'de",
+        "{'name': 'sports_code', 'type': 'STRING'",
+        "{'name': 'game_type', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "auto-complete",
+      "description": "Get auto complete suggestion by term or phrase",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ls",
+      "description": "a tool for getting the contents of a file in a Linux environment",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_return_flights",
+      "description": "Retrieve all return flights for a given contract/return bundle from FlightDepartures using the getFlightReturns endpoint.",
+      "params": [
+        "sid",
+        "ppn_bundle",
+        "convert_currency"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Movie Render Status",
+      "description": "Retrieve the status of movie renders, including the current step of the rendering process and a link to the resulting video once it's finished.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "denemeapisi_testbook",
+      "description": "123455",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Face_Compare_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CalculateMortgagePayment",
+      "description": "This API is to calculate the monthly mortgage payment based on the house price and interest rate.",
+      "params": [
+        "{'name': 'housePrice', 'in': 'query', 's",
+        "{'name': 'interestRate', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_proximity_between_objects(image_patch: ImagePatch, object_name: str, refer",
+      "description": "def check_proximity_between_objects(image_patch: ImagePatch, object_name: str, reference_object_name: str, proximity_ratio: float, query: str) -> str:\n    '''Check the proximity of one object to another.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for proximity.\n        reference_object_name (str): The name of the reference object.\n        proximity_ratio (float): The ratio of the reference object's height that defines the proximity threshold.\n        query (str): The original query to answer.\n       \n   ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dockerBuild",
+      "description": "Builds a Docker image for a specified application",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Target_products_search_by_barcode",
+      "description": "Search product by barcode",
+      "params": [
+        "{'name': 'store_id', 'type': 'STRING', '",
+        "{'name': 'barcode', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "latest_contracts_for_symbol",
+      "description": "Retrieves the latest futures contracts for a given symbol for the next twelve months, with an optional parameter to specify a particular month.",
+      "params": [
+        "symbol",
+        "month"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Parse Ether",
+      "description": "Converts a value in wei to a string representation in ether.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Commodity_Rates_API_Supported_Symbols",
+      "description": "Check all the available symbols for your queries. This endpoint retrieves all the supported commodities and currencies as well.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_follower",
+      "description": "Retrieves the followers of a specified TikTok user using the provided API key.",
+      "params": [
+        "user_id",
+        "count",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetBySearch",
+      "description": "Searches through all house plants and returns the closest results matching 'Latin name', 'Family', 'Other names', 'Common name', 'Common name (fr.)', 'Description', 'Categories', 'Origin' in order by highest most likely. This route is case insensitive and uses fuzzy search",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TwttrAPI_Get_Tweet_Conversation",
+      "description": "Get a tweet conversation",
+      "params": [
+        "{'name': 'tweet_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Slovakia Songs",
+      "description": "Retrieve the top songs in Slovakia, based on the weekly chart. If no week is specified, the API will default to the last week. If the week string is not a Saturday, the API will default to the Saturday of that week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "machine.set_film_tension",
+      "description": "Adjust the tension of the film in an industrial wrapping machine to optimize wrapping quality.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sum_over_axis",
+      "description": "it takes a list representing the shape of the matrix, and the dimension of the axis that is to be sum up. It returns the shape of the resulting matrix.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "British_Airways_Flight_Info_Search_departures_by_flight",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [{\"name\": \"flightnumber-scheduleddeparturedate-scheduleddeparturedate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"\"}, {\"name\": \"flightNumber\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"011\"}, {\"name\": \"scheduledDepartureDate\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"2014-06-01\"}], \"optional_parameters\": [], \"method\": \"GET\", ",
+      "params": [
+        "{'name': 'flightnumber-scheduleddepartur",
+        "{'name': 'flightNumber', 'type': 'STRING",
+        "{'name': 'scheduledDepartureDate', 'type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_South_Africa_Songs",
+      "description": "Provide the South Africa Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPhysicalLiteracyLevel",
+      "description": "Retrieve the physical literacy level of an individual",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "attachClickHandler",
+      "description": "Attaches a click event listener to a specified element and triggers a callback function.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FlashLive_Sports_Event_Throw_throw_darts",
+      "description": "Get throw by throw (darts) by event ID",
+      "params": [
+        "{'name': 'event_id', 'type': 'STRING', '",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_result_from_category",
+      "description": "Fetches a random result from a specified category, including a main phrase and taboo words. You can control the number of taboo words returned using the `forbiddenwordlimit` parameter.",
+      "params": [
+        "category",
+        "forbiddenwordlimit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forecast_RapidApiGetForecastHourlyByCoordinates",
+      "description": "Get forecast hourly information.",
+      "params": [
+        "{'name': 'latitude', 'type': 'NUMBER', '",
+        "{'name': 'longitude', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_get_manager_placeholder",
+      "description": "Get the manager placeholder image in PNG format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarShadowImpact.evaluate",
+      "description": "Evaluates the impact of shadows on solar panel performance for a given location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_Data_User_Stories",
+      "description": "Retrieve active user stories\n\n**NOTE:** By using **user_id** instead of the username your request will be executed much faster",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PetVaccinationScheduler.scheduleAppointment",
+      "description": "Schedules a vaccination appointment for a pet, allowing the user to specify the pet details and preferred appointment time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_fraction_consumed(iterations, initial_fraction)",
+      "description": "def calculate_fraction_consumed(iterations, initial_fraction):\n    \"\"\"\n    Calculate the fractional part of an object consumed after a certain number of iterations, \n    where each iteration consumes half of the remaining part.\n\n    Parameters:\n    iterations (int): The number of iterations.\n    initial_fraction (float): The initial fraction of the object.\n\n    Returns:\n    float: The fractional part of the object consumed.\n    \"\"\"\n    remaining_fraction = initial_fraction\n\n    for _ in range(iterations):\n        remaining_fraction *= 0.5\n\n    return initial_fraction - remaining_fraction",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "directory",
+      "description": "Retrieves all the Local Area Codes from a given country.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Recognize Face",
+      "description": "useful when you only want to recognize faces in the picture. like: recognize who appears in the photo. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_trader_by_nickname",
+      "description": "Search for a trader by their nickname in the Binance Futures Leaderboard",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

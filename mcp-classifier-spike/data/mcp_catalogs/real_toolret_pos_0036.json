@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_pos_0036",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "CopyFile",
+      "description": "Copy the file.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "kanji_stroke_number",
+      "description": "Fetches Kanji characters using an advanced search based on stroke number.",
+      "params": [
+        "ks"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/timesformer-hr-finetuned-k400",
+      "description": "TimeSformer model pre-trained on Kinetics-400 for video classification into one of the 400 possible Kinetics-400 labels. Introduced in the paper TimeSformer: Is Space-Time Attention All You Need for Video Understanding? by Tong et al.",
+      "params": [
+        "images",
+        "return_tensors"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.Drop",
+      "description": "# Drop an object. 'object' can only be: ['cup', 'fork', 'phone', 'shoes', 'mail', 'spectacles', 'check', 'cloth_napkin', 'spoon', 'food_chicken', 'food_food', 'novel', 'bookmark', 'dry_pasta', 'basket_for_clothes', 'clothes_dress', 'remote_control', 'plate', 'ground_coffee', 'coffee_filter']. \nAgent.Drop(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "water_supply.update_availability",
+      "description": "Updates the availability status of clean water sources in a disaster-affected area.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v6_SearchFollowers",
+      "description": "search someone's followers",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd",
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Database Endpoint",
+      "description": "Retrieves data from the database for analysis or reporting purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sim_based_Location_Tracking_NumberList",
+      "description": "\n<p>All  of <b>last updated locations</b> of provided concents phone numbers can be fetched through this endpoint,</p>\n\n<h2 id=\"output\">OUTPUT</h2>\n<p>\n<h4>Invalid user credentials</h4>\n</p>\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper language-undefined\"><code class=\"is-highlighted language-undefined\">{\n    \"errors\": \"Invalid username/password.\"\n}\n</code></pre>\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getupdates",
+      "description": "Fetch updates about newly received messages from the server, starting from a given message ID and optionally waiting for incoming messages for a specified time.",
+      "params": [
+        "start_id",
+        "time_out"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LMh",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "WebsiteTool",
+      "description": "Quickly create and deploy websites, and publish content on them.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "video_conference_tool",
+      "description": "Video conference tool that allows setting meeting time, participants, and whether a password is required",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone Number Validator",
+      "description": "Valistring a phone number in E164 format, specifically for the USA.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomWord",
+      "description": "Retrieve a random English word with its meaning and examples of usage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_News_Net_Get_details_of_a_news_item",
+      "description": "Get the details of each news item, such as the title, an image and the body of the news item, in addition to other properties",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 'title', 'type': 'string', 'des",
+        "{'name': 'date', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_best_players_in_playoffs_if_exist",
+      "description": "Works the same like regular season just for the playoffs.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'STRING', '",
+        "{'name': 'competitionId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Website_Contacts_Website_Contacts_v1",
+      "description": "Get full contact information from page, domain or web (v1)",
+      "params": [
+        "{'name': 'domainName', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "spawnEnemy",
+      "description": "Spawn an enemy in a game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stays_properties_detail_photos",
+      "description": "Fetch detailed photos of a specific property from the stays/properties/detail/photos endpoint using the Booking.com RapidAPI.",
+      "params": [
+        "language_code",
+        "id_detail"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ratings_by_restaurant",
+      "description": "Fetch the Food Hygiene Rating for a given restaurant using the Wyre Data API.",
+      "params": [
+        "restaurant"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "WordCloud",
+      "description": "Create word cloud images from text.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SEOTool",
+      "description": "Tool that provides users with SEO analytics content.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CNPJ_Tempo_Real_Gera_Mapa_dos_Arredores",
+      "description": "Gera Mapa dos Arredores",
+      "params": [
+        "{'name': 'CNPJ', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Z",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Food Ingredients",
+      "description": "This API returns a list of all available food ingredients.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_liked_both",
+      "description": "To find the number of students who liked both desserts",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "poetry.event_timeline",
+      "description": "Creates a timeline of poetry events based on a specific era and region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Parse Ether",
+      "description": "Converts a value in wei to a string representation in ether.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageFreeTextAnnotations",
+      "description": "Retrieves free text annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Property_Report_GetArchiveReport",
+      "description": " ",
+      "params": [
+        "{'name': 'AppId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "configTester.validateSetup",
+      "description": "Validates the system configuration against predefined rules and generates a detailed report.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "email_verifier",
+      "description": "Verifies the validity of an email address using the Toolbench RapidAPI service.",
+      "params": [
+        "email"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parenting_advice_tool",
+      "description": "Parenting Guidance Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock/key-statistics",
+      "description": "Retrieve key statistics data for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_correct_weight",
+      "description": "This method takes two arguments, 'num_students' and 'correct_total_weight', and returns the correct weight of a single student.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get API Current Version",
+      "description": "Get information for the current version of a specified API, including the `id`, `name`, and `status`.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatchLoc_Group_Management_API_access_for_removing_group_information",
+      "description": "API access to remove location object's group information.\n\nrequired parameter : api (api.common.group.set.delete)",
+      "params": [
+        "{'name': 'api', 'type': 'STRING', 'descr",
+        "{'name': 'api_key', 'type': 'STRING', 'd",
+        "{'name': 'cert_key', 'type': 'STRING', '",
+        "{'name': 'group_key', 'type': 'STRING', ",
+        "{'name': 'timestamp', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "satellite.orbit_adjustment",
+      "description": "Calculates the required adjustments for a satellite's orbit based on its current trajectory and target position.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Customer Survey Response",
+      "description": "Retrieve a detailed response from a customer survey, including sentiment analysis for the third answer (a3), given a survey ID (sid).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "artist-discovered-on",
+      "description": "Retrieve information about an artist's discovery on Spotify",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "catalog_id": "real_toolret_pos_0072",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Download Uurrooster",
+      "description": "Downloads the Uurrooster schedule for a specific school year and group.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "time_management",
+      "description": "Manage schedules and time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "predict_insulin_dosage",
+      "description": "Predicts the optimal insulin dosage for Type 1 Diabetes patients based on their recent blood glucose levels and physical activity.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET Attributes",
+      "description": "Get Attributes you can use to filter exercises",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_fraction_to_decimal",
+      "description": "This method takes a string representing a fraction in the format 'a b/c' and returns the corresponding decimal value.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dictionary_synonyms_temporarily_unavailable",
+      "description": "Fetches synonyms from a dictionary API for a given word in the specified language.",
+      "params": [
+        "language",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog_Day_API_spec",
+      "description": "Gets the schema for the JSON API as a yaml file.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_greater_number_from_sum_and_difference(sum_of_numbers, difference_of_number",
+      "description": "def find_greater_number_from_sum_and_difference(sum_of_numbers, difference_of_numbers):\n    \"\"\"\n    Find the greater of two numbers given their sum and difference.\n\n    Parameters:\n    sum_of_numbers (float): The sum of the two numbers.\n    difference_of_numbers (float): The difference between the two numbers.\n\n    Returns:\n    float: The greater of the two numbers.\n    \"\"\"\n    # Let x be one number and y be the other number\n    x, y = symbols('x y')\n\n    # Define the equations based on the given conditions\n    equation1 = Eq(x + y, sum_of_numbers)\n    equation2 = Eq(x - y, difference_of_numbe",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Holiday_Calendar",
+      "description": "This endpoint provides information about the holiday calendar.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VideoAnalyzer",
+      "description": "used to analyze video and identify people, objects and actions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "egami_god_modnar",
+      "description": "Display single random image from all dogs collection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "BaptisteDoyen/camembert-base-xnli",
+      "description": "Camembert-base model fine-tuned on french part of XNLI dataset. One of the few Zero-Shot classification models working on French.",
+      "params": [
+        "sequence",
+        "candidate_labels",
+        "hypothesis_template"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query:",
+      "description": "def discuss_quality_time_with_group(image_patch: ImagePatch, group_name: str, query: str) -> str:\n    '''Discuss the importance of spending quality time with a specific group of people in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        group_name (str): The name of the group of people to discuss.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The discussion about the importance of spending quality time with the group.\n    '''\n    \n    group_identity = image_patch.simple_query(f\"What is the identity of the {group",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_units_digit_condition(start, end, condition_func)",
+      "description": "def find_units_digit_condition(start, end, condition_func):\n    \"\"\"\n    Find the units digit of a number in a given range that satisfies a certain condition.\n\n    Parameters:\n    start (int): The start of the range of numbers to check.\n    end (int): The end of the range of numbers to check.\n    condition_func (function): A function that takes in two arguments (the product and sum of the digits of a number) and returns a boolean indicating whether the number satisfies the condition.\n\n    Returns:\n    int: The units digit of the number that satisfies the condition, or None if no such number is ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "backorders",
+      "description": "Get the latest expiring domain names in our pool",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "jonatasgrosman/wav2vec2-large-xlsr-53-arabic",
+      "description": "Fine-tuned XLSR-53 large model for speech recognition in Arabic. Fine-tuned facebook/wav2vec2-large-xlsr-53 on Arabic using the train and validation splits of Common Voice 6.1 and Arabic Speech Corpus.",
+      "params": [
+        "audio_paths"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PageantDB_Single_contest",
+      "description": "Get details of a single pageant contest by its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockTwits_streams_home",
+      "description": "Returns the most recent 30 messages posted to the authenticating user's home stream, which is made up of the users and stocks they follow.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "VALUE_SERP_Google_Search",
+      "description": "The Google Search Parameters are applicable when making a request to the Search API to retrieve Google search results for a given search term. The search term is specified in the q parameter. The location your search is run from is determined by the location parameter, which can be populated with a full_name value from the Locations API.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_dividend",
+      "description": "This method takes two arguments, 'amount' and 'percentage', and returns the dividend amount.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "kafka.topic_configuration",
+      "description": "Configure and retrieve settings for a specific Kafka topic.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Qvantana_3_Black_Crows",
+      "description": "3 Black Crows indicator",
+      "params": [
+        "{'name': 'exchange', 'type': 'STRING', '",
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'market', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_API_Get_Fake_Email_Address",
+      "description": "Get a fake business email address and job title",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Contact VCard",
+      "description": "Retrieves the vCard of a contact by ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Artis",
+      "description": "Retrieve a list of music artists",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Free Currency Converter API",
+      "description": "Converts a given amount of currency from one currency to another",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Clusterer",
+      "description": "Clustering of data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dashboard_free_access",
+      "description": "Grants free access to the dashboard for the email_scraper tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_php",
+      "description": "Search for geocoding information using the specified Geokeo Forward Geocoding API.",
+      "params": [
+        "api",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_other_customers_average_income",
+      "description": "This method takes three arguments, 'total_customers', 'average_income', and 'wealthiest_customers_average_income', and returns the average income of the other customers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Validate_a_token",
+      "description": "Submit a token (t=token) or a link (t=link) id in order to check if  it is a valid one. To be a valid token it must have a valid signature and not expired.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fresh_LinkedIn_Profile_Data_Get_Company_Data_by_LinkedIn_URL",
+      "description": "Given a company\u2019s LinkedIn URL, the API will return valuable data points in JSON format. **1 credit per call.**",
+      "params": [
+        "{'name': 'linkedin_url', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YT_API_Channel_Shorts",
+      "description": "Get shorts listing along with channel details\nQuota cost is 1 unit.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "promptcap-coco-vqa",
+      "description": "PromptCap is a captioning model that can be controlled by natural language instruction. The instruction may contain a question that the user is interested in. It achieves SOTA performance on COCO captioning (150 CIDEr) and knowledge-based VQA tasks when paired with GPT-3 (60.4% on OK-VQA and 59.6% on A-OKVQA).",
+      "params": [
+        "prompt",
+        "image"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_live_streams_livestreamid",
+      "description": "Retrieves live stream details using the given livestream ID from the RapidAPI service.",
+      "params": [
+        "livestreamid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Season Statistics",
+      "description": "Returns Player Season Statistics for a specified season or player/team",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "title_title",
+      "description": "Fetches all poems from Poetry DB that match the specified title.",
+      "params": [
+        "title"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quadro_de_s_cios_CPF_CNPJ_CPF",
+      "description": "Buscar pelo CPF do s\u00f3cio ou administrador",
+      "params": [
+        "{'name': 'cpf', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "random_prostrings",
+      "description": "This endpoint generates a list of fake user prostrings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

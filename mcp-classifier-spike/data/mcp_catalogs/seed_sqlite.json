@@ -1,0 +1,27 @@
+{
+  "catalog_id": "sqlite",
+  "tools": [
+    {
+      "server": "sqlite",
+      "name": "read_query",
+      "description": "Execute a SELECT query on the SQLite database",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "write_query",
+      "description": "Execute an INSERT, UPDATE, or DELETE query",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "list_tables",
+      "description": "List all tables in the SQLite database",
+      "params": []
+    }
+  ]
+}

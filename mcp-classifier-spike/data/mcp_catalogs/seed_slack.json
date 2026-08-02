@@ -1,0 +1,41 @@
+{
+  "catalog_id": "slack",
+  "tools": [
+    {
+      "server": "slack",
+      "name": "post_message",
+      "description": "Send a message to a Slack channel",
+      "params": [
+        "channel_id",
+        "text"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "list_channels",
+      "description": "List the public channels in the Slack workspace",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "get_channel_history",
+      "description": "Fetch recent messages from a Slack channel",
+      "params": [
+        "channel_id",
+        "limit"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "add_reaction",
+      "description": "Add an emoji reaction to a message",
+      "params": [
+        "channel_id",
+        "timestamp",
+        "reaction"
+      ]
+    }
+  ]
+}

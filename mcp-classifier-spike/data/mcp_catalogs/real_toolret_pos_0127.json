@@ -1,0 +1,341 @@
+{
+  "catalog_id": "real_toolret_pos_0127",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "YTS_am_Torrent_User_Details_XML",
+      "description": "Get the user details",
+      "params": [
+        "{'name': 'user_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_3D_Services_thumbnail",
+      "description": " ",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cryptoWalletService.getWalletInfo",
+      "description": "Retrieves detailed information about a cryptocurrency wallet, including balances and recent transactions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cnc.piercing_method_selection",
+      "description": "Selects the optimal piercing method for CNC plasma cutting based on material type and thickness.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SPAC Summary",
+      "description": "Retrieve SPAC summary including important strings, status, and target names.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_news_v2_list_trending",
+      "description": "List trending news",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_atmosphere(image_patch: ImagePatch, location: str) -> str",
+      "description": "def determine_atmosphere(image_patch: ImagePatch, location: str) -> str:\n    '''Determine the overall atmosphere of a given location.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        location (str): The location to determine the atmosphere of.\n       \n    Returns:\n        str: The overall atmosphere of the location.\n    '''\n    query = f\"What is the overall atmosphere of the {location}?\"\n    return image_patch.simple_query(query)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "JavaAppLifecycle.stopApp",
+      "description": "Stops a specified mobile application in Java environment.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DNS_Propagation_and_Domain_Checker_GetCurrentIPAddress",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_v2_Test_API",
+      "description": "This API is to test if server is up and running",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_vinlookup",
+      "description": "Retrieves key vehicle information including manufacturer, country of origin, and model year for a given VIN using the API Ninjas VIN Lookup API.",
+      "params": [
+        "vin"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weee_grocery_API_sayweee_com_browsing_searching_details_product_details_zipcode_",
+      "description": "provide detailed product information based on the product id and user's zipcode\nproduct_id should come from the product search endpoint\nresponse also contains detailed price and availability information",
+      "params": [
+        "{'name': 'zipcode', 'type': 'STRING', 'd",
+        "{'name': 'product_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_social_moving_averages_1",
+      "description": "Search for a ticker and capture the moving average of posts, comments, likes, and impressions within a specified timeframe. The recorded social moving average is grouped by monthly intervals.",
+      "params": [
+        "{'name': 'tickers', 'type': 'STRING', 'd",
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football Search API",
+      "description": "Search for football-related data, including players, teams, and tournaments.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flag_Status_Get_half_staff_events_for_given_flag",
+      "description": "Get all half-staff events for the provided flag",
+      "params": [
+        "{'name': 'code', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stays_properties_detail_photos",
+      "description": "Fetch detailed photos of a specific property from the stays/properties/detail/photos endpoint using the Booking.com RapidAPI.",
+      "params": [
+        "language_code",
+        "id_detail"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Video_Info_Info",
+      "description": "Get all the Information of an YouTube Video, including Audio and Video Streams",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "profile_image",
+      "description": "Generates a profile image URL based on the provided user name and retrieves the image information from the RapidAPI image service.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_player_currently_playing",
+      "description": "Get the track currently being played on the user's Spotify account.\n",
+      "params": [
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'additional_type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorsport Unique Stage Image",
+      "description": "Retrieve a unique stage image for a motorsport event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_person_details",
+      "description": "Get details of a person",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indian_Stock_Exchange_API_StockPrice",
+      "description": "Enter the SYMBOL such as TATAMOTORS, M&M etc as a parameter at the endpoint and it will give your the Live Price updates from exchange.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "runas",
+      "description": "A tool in the Windows environment for running programs as a specified user.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Option Chains",
+      "description": "Retrieve option chains for a specific stock symbol on a specific expiration string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BetSports_getTaxRulesV2",
+      "description": "getTaxRulesV2 data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Data Engineer Jobs API",
+      "description": "Fetches data engineer job listings from USA Jobs for IT",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Alert Overview",
+      "description": "Retrieve detailed information about a specific alert.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_currency",
+      "description": "return get currency",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Deals",
+      "description": "Get a list of Amazon deals filtered by category, country, and language. The response includes a list of deals and a list of available categories.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEmotionalResponse",
+      "description": "Retrieve emotional response information based on environmental factors",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_absolute_difference_between_two_entities(df, entity_col, value_col, en",
+      "description": "def calculate_absolute_difference_between_two_entities(df, entity_col, value_col, entity1, entity2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values, and returns the absolute difference in values between two specified entities.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing entities and their values.\n    entity_col (str): The column name for the entities.\n    value_col (str): The column name for the values.\n    entity1 (str): The name of the first entity.\n    entity2 (str): The name of the second entity.\n    \n    Retu",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_History_Timeline_Random_Historic_Event",
+      "description": "Returns a Random World Historic Event with the year and the event",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicGame",
+      "description": "Access a public game played on the platform and pull the game data.",
+      "params": [
+        "gameId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_CategoryTournaments",
+      "description": "Get tournaments by category.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGravatarUrlForEmailAddress",
+      "description": "Retrieve the Gravatar URL for a given email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trend_and_Strength_API_for_Forex_GOLD_XAUUSD_GET_Latest_Signal",
+      "description": "Get the current trend direction of Forex GOLD",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube Video Converter",
+      "description": "Convert YouTube videos to other formats",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_location_by_name_or_zip_code",
+      "description": "Search for a location by name or ZIP code and retrieve the key for the weather forecast.",
+      "params": [
+        "zipcode",
+        "lang",
+        "city"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Performance Details",
+      "description": "Retrieves player performance details for a specific player in a given competition and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_config_line",
+      "description": "Find a specific configuration line in the configuration file.",
+      "params": []
+    }
+  ]
+}

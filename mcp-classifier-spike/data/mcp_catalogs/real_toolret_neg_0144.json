@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_neg_0144",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "getAverageWaitTime",
+      "description": "Retrieve the average wait time for health services",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRobotHealth",
+      "description": "Retrieve the health status of a robot",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "ckiplab/bert-base-chinese-ws",
+      "description": "This project provides traditional Chinese transformers models (including ALBERT, BERT, GPT2) and NLP tools (including word segmentation, part-of-speech tagging, named entity recognition).",
+      "params": [
+        "pretrained_model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "deleteFromCloud",
+      "description": "Deletes a file from the cloud storage",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ski Weather API",
+      "description": "Provides a 7-day weather forecast for ski resorts and mountains worldwide.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_info",
+      "description": "Retrieve TikTok user information by username using the Toolbench RapidAPI.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "compileCode",
+      "description": "Compiles the given code in the specified language and returns the compiled code.",
+      "params": [
+        "code",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "playerdetails",
+      "description": "Fetches the details of a specific E-Sports player by their player ID using the provided API key.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list-ratings",
+      "description": "Get the user's ratings from employment data sources.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_winning_time",
+      "description": "This method takes a dictionary representing a table and a year, and returns the corresponding winning time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_active_loans_offers",
+      "description": "Retrieves the active loan offer levels for a specified collection.",
+      "params": [
+        "collection"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_Brewery_DB_Autocomplete",
+      "description": "{\"category_name\": \"Data\", \"required_parameters\": [{\"name\": \"query\", \"type\": \"STRING\", \"description\": \"Autocomplete a query\", \"default\": \"dog\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"id\": \"str\", \"name\": \"str\"}, \"name\": \"Open_Brewery_DB_Autocomplete\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Company Details",
+      "description": "Fetch Company Details by company name",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FileZipper",
+      "description": "Compresses the contents of a folder into a zip file.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "vulnerability_search",
+      "description": "Search for known vulnerabilities of specific phone models and system versions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_type_portfolio_get_exposure",
+      "description": "Get exposure as displayed in the Portfolio tab",
+      "params": [
+        "{'name': 'securityId', 'type': 'STRING',",
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_mode_of_column(data_frame, column_name)",
+      "description": "def calculate_mode_of_column(data_frame, column_name):\n    \"\"\"\n    This function takes in a pandas DataFrame and a column name, and returns the mode of the specified column.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the data.\n    column_name (str): The name of the column for which the mode should be calculated.\n    \n    Returns:\n    int: The mode of the specified column.\n    \"\"\"\n    # Extract the specified column from the DataFrame\n    column_data = data_frame[column_name]\n    \n    # Use the Counter class from the collections module to count the frequency of e",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Parent Summary",
+      "description": "Retrieves summary information for a specified security type (ETF or Fund) and returns it in a JSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) ->",
+      "description": "def infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) -> str:\n    '''Infer the purpose of an object in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to infer the purpose of.\n        context (str): The context in which the object is placed.\n       \n    Returns:\n        str: The inferred purpose of the object.\n    '''\n    object_patches = image_patch.find(object_name)\n    # Question assumes single patch\n    object_patch = object_patches[0]\n    return object_patch.llm_quer",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "createDataPipeline",
+      "description": "Create a data pipeline for processing and transforming data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "activism.volunteer_signup",
+      "description": "Sign up volunteers for specific roles in a grassroots activism campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ishan_Retrievethelistofapplications",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bucket_List_by_API_Ninjas_v1_bucketlist",
+      "description": "Returns a random bucket list idea.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_max_pieces",
+      "description": "This method takes two arguments, 'cake_length' and 'piece_length', and returns the maximum number of pieces of the given length that can be cut from the cake.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Comments By Username",
+      "description": "Retrieve the top comments made by a specific Reddit user, filtered by a specified time period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Movie Poster",
+      "description": "Retrieves a movie poster by title and release year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkHealthAndSafety",
+      "description": "Check the health and safety compliance of a hospitality establishment",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_correct_weight",
+      "description": "This method takes two arguments, 'num_students' and 'correct_total_weight', and returns the correct weight of a single student.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_information_from_image(image_patch: ImagePatch, question: str) -> str",
+      "description": "def infer_information_from_image(image_patch: ImagePatch, question: str) -> str:\n    '''Infer information about a specific topic from an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to infer information from.\n        question (str): The question about the topic to infer information about.\n       \n    Returns:\n        str: The inferred information.\n    '''\n    # Use logical reasoning to infer information about the topic\n    inference = image_patch.llm_query(question)\n    return inference",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "venueSearch",
+      "description": "Search for venues based on a query string and location",
+      "params": [
+        "q",
+        "lat",
+        "lng"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetDailyCalorieIntake",
+      "description": "This API is to find the appropriate daily calorie intake for someone of a specific age.",
+      "params": [
+        "{'name': 'age', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_symbols_get_splits",
+      "description": "Get splits",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nationalism.track_movement_events",
+      "description": "Tracks major events and milestones within a nationalism movement during a specified time frame.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Hed Detection On Image",
+      "description": "useful when you want to detect the soft hed boundary of the image. like: detect the soft hed boundary of this image, or hed boundary detection on image, or perform hed boundary detection on this image, or detect soft hed boundary image of this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "uploadVideo",
+      "description": "Uploads a video to Dailymotion's platform.",
+      "params": [
+        "file",
+        "title",
+        "description",
+        "tags",
+        "channel",
+        "published"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Players Statistics Seasons",
+      "description": "Retrieve player statistics seasons for a handball team by ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get General Game Information",
+      "description": "This API call retrieves general information about a game, including away team, home team, game string, and game start time. The game information is returned in Eastern (ET) time zone. The API requires a gameID as input, which can be obtained from other API calls such as 'getNBAGamesForDate' or 'getNBATeamSchedule'.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "locations",
+      "description": "Retrieves hierarchical geographical locations related to flights for a given locale.",
+      "params": [
+        "locale"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta de Boleto",
+      "description": "Recebe como par\u00e2metro de busca, a linha digit\u00e1vel do boleto e devolve as informa\u00e7\u00f5es do mesmo.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BodyFatCalculator",
+      "description": "Calculates the body fat percentage based on the provided gender, age, height, and weight parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "catalog_id": "seed_everything",
+  "tools": [
+    {
+      "server": "github",
+      "name": "create_issue",
+      "description": "Create a new issue in a GitHub repository",
+      "params": [
+        "owner",
+        "repo",
+        "title",
+        "body"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "create_pull_request",
+      "description": "Open a new pull request from a branch",
+      "params": [
+        "owner",
+        "repo",
+        "head",
+        "base",
+        "title"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "search_code",
+      "description": "Search for code across GitHub repositories",
+      "params": [
+        "q",
+        "sort",
+        "order"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "get_file_contents",
+      "description": "Read the contents of a file from a GitHub repository",
+      "params": [
+        "owner",
+        "repo",
+        "path",
+        "ref"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "list_commits",
+      "description": "List commits on a branch of a repository",
+      "params": [
+        "owner",
+        "repo",
+        "sha"
+      ]
+    },
+    {
+      "server": "github",
+      "name": "merge_pull_request",
+      "description": "Merge an open pull request",
+      "params": [
+        "owner",
+        "repo",
+        "pull_number"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "read_file",
+      "description": "Read the complete contents of a file from the local filesystem",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "write_file",
+      "description": "Create a new file or overwrite an existing file with content",
+      "params": [
+        "path",
+        "content"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "list_directory",
+      "description": "List the files and folders in a directory",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "move_file",
+      "description": "Move or rename a file or directory",
+      "params": [
+        "source",
+        "destination"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "search_files",
+      "description": "Recursively search for files matching a name pattern",
+      "params": [
+        "path",
+        "pattern"
+      ]
+    },
+    {
+      "server": "filesystem",
+      "name": "create_directory",
+      "description": "Create a new directory, including parent directories",
+      "params": [
+        "path"
+      ]
+    },
+    {
+      "server": "git",
+      "name": "git_status",
+      "description": "Show the working tree status of a git repository",
+      "params": [
+        "repo_path"
+      ]
+    },
+    {
+      "server": "git",
+      "name": "git_diff",
+      "description": "Show changes between commits or the working tree",
+      "params": [
+        "repo_path",
+        "target"
+      ]
+    },
+    {
+      "server": "git",
+      "name": "git_commit",
+      "description": "Record staged changes to the repository with a message",
+      "params": [
+        "repo_path",
+        "message"
+      ]
+    },
+    {
+      "server": "git",
+      "name": "git_log",
+      "description": "Show the commit history of a repository",
+      "params": [
+        "repo_path",
+        "max_count"
+      ]
+    },
+    {
+      "server": "git",
+      "name": "git_create_branch",
+      "description": "Create a new git branch",
+      "params": [
+        "repo_path",
+        "branch_name"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "post_message",
+      "description": "Send a message to a Slack channel",
+      "params": [
+        "channel_id",
+        "text"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "list_channels",
+      "description": "List the public channels in the Slack workspace",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "get_channel_history",
+      "description": "Fetch recent messages from a Slack channel",
+      "params": [
+        "channel_id",
+        "limit"
+      ]
+    },
+    {
+      "server": "slack",
+      "name": "add_reaction",
+      "description": "Add an emoji reaction to a message",
+      "params": [
+        "channel_id",
+        "timestamp",
+        "reaction"
+      ]
+    },
+    {
+      "server": "brave_search",
+      "name": "brave_web_search",
+      "description": "Search the web and return relevant results with snippets",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "brave_search",
+      "name": "brave_local_search",
+      "description": "Search for local businesses and places",
+      "params": [
+        "query",
+        "count"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_geocode",
+      "description": "Convert an address into geographic coordinates",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_directions",
+      "description": "Get travel directions between two locations",
+      "params": [
+        "origin",
+        "destination",
+        "mode"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_place_search",
+      "description": "Search for places near a location",
+      "params": [
+        "query",
+        "location",
+        "radius"
+      ]
+    },
+    {
+      "server": "google_maps",
+      "name": "maps_distance_matrix",
+      "description": "Compute travel distance and time for a matrix of origins and destinations",
+      "params": [
+        "origins",
+        "destinations"
+      ]
+    },
+    {
+      "server": "postgres",
+      "name": "query",
+      "description": "Run a read-only SQL query against the connected PostgreSQL database",
+      "params": [
+        "sql"
+      ]
+    },
+    {
+      "server": "postgres",
+      "name": "list_tables",
+      "description": "List the tables in the database schema",
+      "params": []
+    },
+    {
+      "server": "postgres",
+      "name": "describe_table",
+      "description": "Show the columns and types of a database table",
+      "params": [
+        "table_name"
+      ]
+    },
+    {
+      "server": "puppeteer",
+      "name": "puppeteer_navigate",
+      "description": "Navigate a headless browser to a URL",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "puppeteer",
+      "name": "puppeteer_screenshot",
+      "description": "Take a screenshot of the current browser page",
+      "params": [
+        "name",
+        "selector"
+      ]
+    },
+    {
+      "server": "puppeteer",
+      "name": "puppeteer_click",
+      "description": "Click an element on the page by CSS selector",
+      "params": [
+        "selector"
+      ]
+    },
+    {
+      "server": "puppeteer",
+      "name": "puppeteer_fill",
+      "description": "Type text into an input field on the page",
+      "params": [
+        "selector",
+        "value"
+      ]
+    },
+    {
+      "server": "fetch",
+      "name": "fetch",
+      "description": "Fetch a URL and return its content converted to markdown",
+      "params": [
+        "url",
+        "max_length"
+      ]
+    },
+    {
+      "server": "memory",
+      "name": "create_entities",
+      "description": "Create entities in the knowledge graph memory",
+      "params": [
+        "entities"
+      ]
+    },
+    {
+      "server": "memory",
+      "name": "search_nodes",
+      "description": "Search for nodes in the knowledge graph by query",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "memory",
+      "name": "read_graph",
+      "description": "Read the entire knowledge graph",
+      "params": []
+    },
+    {
+      "server": "time",
+      "name": "get_current_time",
+      "description": "Get the current time in a specific timezone",
+      "params": [
+        "timezone"
+      ]
+    },
+    {
+      "server": "time",
+      "name": "convert_time",
+      "description": "Convert a time between two timezones",
+      "params": [
+        "source_timezone",
+        "time",
+        "target_timezone"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "read_query",
+      "description": "Execute a SELECT query on the SQLite database",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "write_query",
+      "description": "Execute an INSERT, UPDATE, or DELETE query",
+      "params": [
+        "query"
+      ]
+    },
+    {
+      "server": "sqlite",
+      "name": "list_tables",
+      "description": "List all tables in the SQLite database",
+      "params": []
+    }
+  ]
+}

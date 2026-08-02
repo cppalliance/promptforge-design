@@ -1,0 +1,336 @@
+{
+  "catalog_id": "real_toolret_pos_0129",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: st",
+      "description": "def determine_leaning_direction(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Determine the leaning direction of a given object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for leaning direction.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The leaning direction of the object.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = objec",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LINEARREG",
+      "description": "Linear Regression(LINEARREG) is used to determine trend direction by a straight line.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_top_type",
+      "description": "Get the current user's top artists or tracks based on calculated affinity.\n",
+      "params": [
+        "{'in': 'path', 'name': 'type', 'required",
+        "{'in': 'query', 'name': 'time_range', 'r",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Perf_monitor_metrics_Performance_monitor_metrics",
+      "description": "- Retrieve real-time CPU usage in percentage (%).\n- Monitor memory utilization and get the percentage of memory in use.\n- Track network latency to assess network performance.\n- Access system bottlenecks information to identify performance constraints.\n- Easy integration into your application or system using the RESTful API.\n- Accelerate troubleshooting and performance optimization of TI systems.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Product",
+      "description": "Search The Product",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des",
+        "{'name': 'act', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Retrospective",
+      "description": "Returns the history of Instagram statistics for the selected period, including subscribers, posts, interactions, likes, comments, reposts, and engagement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Credit_Card_BIN_Checker_Validator_Bin",
+      "description": "User's query (BIN) entry.",
+      "params": [
+        "{'name': 'bin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "updateWorkItem",
+      "description": "Updates an existing work item in Azure DevOps.",
+      "params": [
+        "ID",
+        "Title",
+        "Description",
+        "AssignedTo",
+        "AreaPath",
+        "IterationPath"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Aircraft Information by Hex",
+      "description": "Retrieve aircraft information by providing a hex identifier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NWL20",
+      "description": "Searches for words using the NASPA Word List 2020 edition, \u00a9 2020 North American Word Game Players Association.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "choose_seats_in_each_row",
+      "description": "Chooses the number of seats in each row of a bus from a given list of options",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulateUserInteraction",
+      "description": "This API simulates user interactions on a web UI, such as clicking buttons or entering text, based on a sequence of actions provided. It is useful for automated testing and UI interaction scripting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getArrivalPredictions",
+      "description": "Retrieve real-time arrival predictions for a specified transit agency and stop.",
+      "params": [
+        "agencyId",
+        "stopId"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_x_values",
+      "description": "Given an equation |20x-10| = 90, this function finds the values of x.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get News by Symbol",
+      "description": "Retrieve news articles related to a specific stock symbol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCustomerAddresses",
+      "description": "Retrieves a list of addresses associated with a customer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "convnextv2_huge.fcmae_ft_in1k",
+      "description": "A ConvNeXt-V2 image classification model. Pretrained with a fully convolutional masked autoencoder framework (FCMAE) and fine-tuned on ImageNet-1k.",
+      "params": [
+        "pretrained"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dryer.failurePrediction",
+      "description": "Predicts potential failures in industrial dryers using historical operation data and current conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLandUse",
+      "description": "Retrieve the land use of a specific area",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PPOB_Indonesia_Credit_Pricelist",
+      "description": "This Endpoint is for Indonesia only.\nThe Credit & Data Pricelist API is used to display the list of available credit and data prices on PulsaXpress. This information can be used to know the price of the products you want to buy before making a transaction. This price information can be updated according to the current prices and can be used to determine the prices offered on your application.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "New_York_Lottery_Get_Draw_Results",
+      "description": "Return all draw results for all games.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "reserve_flight_ticket",
+      "description": "Reserve a flight ticket and select options that allow free cancellation or changes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "timer",
+      "description": "Set a timer for a specified duration",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "expandURL",
+      "description": "Expand a Bitly link into its original long URL.",
+      "params": [
+        "short_url"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "inquire_benefits_of_activity(activity: str, group: str) -> str",
+      "description": "def inquire_benefits_of_activity(activity: str, group: str) -> str:\n    '''Inquire about the benefits of a certain activity involving a certain group of people.\n    \n    Args:\n        activity (str): The activity to inquire about.\n        group (str): The group of people involved in the activity.\n       \n    Returns:\n        str: The benefits of the activity involving the group of people.\n    '''\n    return llm_query(f\"What benefits can {activity} with {group} have?\")",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tvl_protocol",
+      "description": "Fetch the Total Value Locked (TVL) for a specified DeFi protocol from the RapidAPI Toolbench.",
+      "params": [
+        "protocol"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Datamo_specs_v1_getMakes",
+      "description": "This endpoint will return all the vehicle makes available, as an array of strings.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_asset",
+      "description": "Retrieve information about a specific NFT from the Blur API.",
+      "params": [
+        "contractaddress",
+        "tokenid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "b4c6577cb2msh7c15fca215f2c30p1f1717jsn998498c6865e_ff",
+      "description": "fff",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_work_done",
+      "description": "Calculates the work done by the man",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_instances_of_object_or_activity(image_patch: ImagePatch, object_or_activit",
+      "description": "def count_instances_of_object_or_activity(image_patch: ImagePatch, object_or_activity: str) -> int:\n    '''Count the number of instances of a specific object or activity in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_or_activity (str): The name of the object or activity to count.\n       \n    Returns:\n        int: The number of instances of the object or activity.\n    '''\n    object_or_activity_patches = image_patch.find(object_or_activity)\n    return len(object_or_activity_patches)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Elevation_From_Latitude_and_Longitude_Get_Elevation",
+      "description": "Get Elevation",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sephora_stores_list_Deprecated",
+      "description": "List nearest stores around a GEO location",
+      "params": [
+        "{'name': 'latitude', 'type': 'NUMBER', '",
+        "{'name': 'longitude', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sem.adgroup_structure",
+      "description": "Retrieve the structure of a specified ad group in an SEM campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Returns",
+      "description": "Retrieve returns data for an ETF or FUND in the Performance tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_average_adult_age",
+      "description": "Calculates the average age of the adults",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fan.installation_schedule",
+      "description": "Retrieve the installation schedule for industrial fans at a specified site.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_switched_digits_divisible_by_3",
+      "description": "This method takes two arguments, 'start' and 'end', and returns the number of integers between 'start' and 'end' (exclusive) that are divisible by 3 when the ones digit and the tens digit are switched.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataClassifier",
+      "description": "Classify the input data, you need to specify the classification rules.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "JavaDebugger.startDebugSession",
+      "description": "Starts a debug session for a Java application.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

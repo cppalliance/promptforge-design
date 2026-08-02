@@ -1,0 +1,13 @@
+eval=seed  examples=111  catalogs=16
+loading nli valhalla/distilbart-mnli-12-1 config=best ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 31708.48it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best] 111 records in 103.0s (1.1/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best_desc ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 15320.02it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best_desc] 111 records in 94.1s (1.2/s)
+loading nli valhalla/distilbart-mnli-12-1 config=naive ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 16358.55it/s]
+  [nli:valhalla/distilbart-mnli-12-1:naive] 111 records in 118.9s (0.9/s)
+wrote results\seed_distilbart.jsonl
+EXIT=0

@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0148",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.delete_columns",
+      "description": "# Deletes multiple columns from the worksheet at the specified index. \nworksheet.delete_columns(start_index, end_index=None)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "deleteFromCloud",
+      "description": "Deletes a file from the cloud storage",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SignNow_Get_field_and_field_invite_id",
+      "description": "The endpoint returns field and field invite ids.",
+      "params": [
+        "{'name': 'document_id', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "lllyasviel/control_v11p_sd15_normalbae",
+      "description": "ControlNet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on normalbae images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5.",
+      "params": [
+        "checkpoint",
+        "torch_dtype"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_social_trending_posts",
+      "description": "Search the top 50 tickers trending on social media by posts.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "responses_from_a_question",
+      "description": "Fetch all responses for a given question using the Moodring API.",
+      "params": [
+        "questionid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getfscore",
+      "description": "Fetches the Piotroski F-Score for a given stock ticker using the RapidAPI service.",
+      "params": [
+        "ticker"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_location(image_patch: ImagePatch, object_name: str, possible_lo",
+      "description": "def determine_object_location(image_patch: ImagePatch, object_name: str, possible_locations: List[str]) -> str:\n    '''Determine the location of an object based on a list of possible locations.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for location.\n        possible_locations (List[str]): The list of possible locations.\n       \n    Returns:\n        str: The location of the object if found, \"unknown\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "quotsy_get_qoutes_by_page",
+      "description": "return quotes for the page no",
+      "params": [
+        "{'name': 'page_no', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_days",
+      "description": "Calculates the total number of days required to complete the work",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Expanded Stock Quote",
+      "description": "Retrieve an expanded stock quote with underlying static, real-time, and expanded information (Sector, Exchange) for a given stock ticker.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "senior_welfare.get_programs",
+      "description": "Retrieve available welfare programs for senior citizens based on their location and specific needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quality_Porn_Top_10_search_queries",
+      "description": "Get the top 10 search queries",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange Currency and Show Countries",
+      "description": "This API converts a specific currency to another and returns a list of countries where the converted currency is used.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Gearbest_search",
+      "description": " ",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Photos",
+      "description": "Retrieve photos of a specific business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ethereum Price in Uniswap v2",
+      "description": "Retrieve the current Ethereum price in Uniswap v2",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_arithmetic_sequence",
+      "description": "This method takes three arguments, 'first_term', 'common_difference', and 'n', and returns the nth term of the arithmetic sequence.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "social_event_suggestion",
+      "description": "Generates personalized social event suggestions based on user's mental wellness needs and preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SongMeanings_comments_get",
+      "description": "Get comments from our database for a specific song.",
+      "params": [
+        "{'name': 'artist_name', 'type': 'STRING'",
+        "{'name': 'lyric_title', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "insert_daily_trend_analysis",
+      "description": "Insert daily trend analysis into the report document",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "apps_related_searches",
+      "description": "Obtain information about the queried application or related applications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRadioAdPerformance",
+      "description": "Retrieve performance metrics for a specific radio advertisement",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geography_Search_Countries_TimeZone",
+      "description": "Search Countries where provided TimeZone is used by the country",
+      "params": [
+        "{'name': 'timeZone', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Uniblock_Get_Token_Price_History_between_Blocks",
+      "description": "Gets the price chart of a token between two blocks in USD",
+      "params": [
+        "{'name': 'chainId', 'type': 'NUMBER', 'd",
+        "{'name': 'endBlock', 'type': 'NUMBER', '",
+        "{'name': 'startBlock', 'type': 'NUMBER',",
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tags Count",
+      "description": "Get the count of tags for a specific campaign or project in ClickMeter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_Search_v1_Image_Search",
+      "description": "v1 / Image Search",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Card Backs",
+      "description": "Returns a list of all the card backs in Hearthstone.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fluximmo_get_webhook_sample",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Users by IDs",
+      "description": "Retrieve information about Twitter users by their IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GREEN_API_GetQRcode",
+      "description": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f [QR](https://green-api.com/docs/api/account/QR/)",
+      "params": [
+        "{'name': 'waInstanceidInstance', 'type':",
+        "{'name': 'apiTokenInstance', 'type': 'ST"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mortgage/check-equity-rates",
+      "description": "Calculate mortgage equity rates based on various parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fashion.saleAlert",
+      "description": "Alerts users about sales on their favorite brands or items based on their past shopping history and preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_Story_by_Id",
+      "description": "Gets a story by Id",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Match Incidents",
+      "description": "Get match incidents for a specific American Football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "countiessearchinboundingbox",
+      "description": "Fetch county boundaries within a specified bounding box in GeoJSON format.",
+      "params": [
+        "northeast",
+        "southwest",
+        "intersect"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_two_columns_for_specific_row(table_df, row_name_col",
+      "description": "def calculate_difference_between_two_columns_for_specific_row(table_df, row_name_col, row_name, column1, column2):\n    \"\"\"\n    This function takes in a pandas DataFrame, a row name, and two column names, and returns the difference between the values of the two columns for the specified row.\n    \n    Args:\n    table_df (pd.DataFrame): A pandas DataFrame containing various rows and columns.\n    row_name_col (str): The column name for the row names.\n    row_name (str): The name of the row to calculate the difference for.\n    column1 (str): The name of the first column.\n    column2 (str): The name",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDepartures",
+      "description": "Retrieves real-time information about departures from a specific stop or station.",
+      "params": [
+        "stop_id",
+        "transport_mode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fortune_Cookie_category_list",
+      "description": "List of fortune categories",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateEventDate",
+      "description": "Update the date of an experiential marketing event",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

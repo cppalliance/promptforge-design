@@ -1,0 +1,344 @@
+{
+  "catalog_id": "real_toolret_pos_0173",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "SNNMLP",
+      "description": "SNNMLP incorporates the mechanism of LIF neurons into the MLP models, to achieve better accuracy without extra FLOPs. We propose a full-precision LIF operation to communicate between patches, including horizontal LIF and vertical LIF in different directions. We also propose to use group LIF to extract better local features. With LIF modules, our SNNMLP model achieves 81.9%, 83.3% and 83.6% top-1 accuracy on ImageNet dataset with only 4.4G, 8.5G and 15.2G FLOPs, respectively.",
+      "params": [
+        "{'name': 'snnmlp_b', 'type': 'str', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "items",
+      "description": "Fetches item details from the Codester API using the specified item ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market_most_actives",
+      "description": "Fetches the most active stocks ordered by intraday trade volume using the Yahoo Finance API.",
+      "params": [
+        "start"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Growth_Estimates",
+      "description": "This API endpoint returns consensus analyst estimates over the company's growth rates for various periods.\n\nAvailability: Mega plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "effluentQualityControl.checkParameters",
+      "description": "Checks and validates the quality of effluent based on regulatory standards.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YC_Hacker_news_official_top_stories",
+      "description": "Returns the current top 100 stories.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate QR Code Image",
+      "description": "Generate a QR code image with customizable parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "predict_evolution_rate",
+      "description": "Predict the evolutionary rate for a specific species for a given timeframe.",
+      "params": [
+        "species",
+        "years",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "enterprise_credit_assessment",
+      "description": "Enterprise Credit Assessment Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest Metals Prices and Rates",
+      "description": "The Latest Metals Prices and Rates API provides real-time exchange rate data for various metals and currencies, upstringd every 60 seconds.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetDailyCalorieIntake",
+      "description": "This API is to find the appropriate daily calorie intake for someone of a specific age.",
+      "params": [
+        "{'name': 'age', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_API_Get_Fake_Email_Address",
+      "description": "Get a fake business email address and job title",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider3_live_upcoming",
+      "description": "get upcoming matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "T3MA",
+      "description": "Calculates the Triple Exponential Moving Average (T3MA) for a given financial instrument.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_volume",
+      "description": "This method takes three arguments, 'edge1', 'edge2', and 'edge3', and returns the total volume of the three cubes combined.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPdfInStorageToEpub",
+      "description": "Converts a PDF string stored in a storage to an EPUB string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ASIN_Data_Category",
+      "description": "The Category Parameters are applicable when making a request with `type=category` to retrieve category results for an Amazon category. Categories can be specified either via passing an Amazon category URL in to the url parameter, or by passing a Category ID in the `category_id` and an Amazon domain in the `amazon_domain` parameter. The parameters should be appended as querystring parameters to the Product Data API GET HTTP request.\n\nCategory results are retrieved from the category listing page on Amazon.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Predict Depth On Image",
+      "description": "useful when you want to detect depth of the image. like: generate the depth from this image, or detect the depth map on this image, or predict the depth for this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSedimentComposition",
+      "description": "Retrieve the composition of sediments in a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateEventDate",
+      "description": "Update the date of an experiential marketing event",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_news_for_topic",
+      "description": "Get the news for a specific topic",
+      "params": [
+        "{'name': 'topic', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Define Custom Period",
+      "description": "Define a custom period for a calendar, typically used for vacations or annual closures.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_last_stem_leaf",
+      "description": "This method takes a dictionary representing a stem-and-leaf plot, and returns a tuple containing the last stem and leaf.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Domain_DA_PA_Check_URL_Metrics",
+      "description": "- Title\n- Domain Authority Score\n- Page Authority Score\n- Equity\n- Links\n- Moz Rank",
+      "params": [
+        "{'name': 'target', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getEmailsPaginated",
+      "description": "By default returns all emails across all inboxes sorted by ascending created at date. Responses are paginated. You can restrict results to a list of inbox IDs. You can also filter out read messages",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "home_improvement.get_contractor_availability",
+      "description": "Retrieve the availability of contractors for a specific home improvement project.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CalculateSavings",
+      "description": "This API calculates the possible savings based on the spending report of a user.",
+      "params": [
+        "{'name': 'SpendingReport', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VerticalResponse_Contacts_List",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"VerticalResponse_Contacts_List\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Detailed Cocktail Recipe by ID",
+      "description": "Retrieve a detailed cocktail recipe by its unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_profile_series",
+      "description": "Fetches time series snapshots of a profile from the OutSystems Community API.",
+      "params": [
+        "profile_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_Sports_Competitions_Standings_revs",
+      "description": "Get competition standings (table) by competition ID.  LTT_CODE: All(1),Home(2),Away 3",
+      "params": [
+        "{'name': 'timezone', 'type': 'NUMBER', '",
+        "{'name': 'locale', 'type': 'STRING', 'de",
+        "{'name': 'country_slug', 'type': 'STRING",
+        "{'name': 'stage_slug', 'type': 'STRING',",
+        "{'name': 'sport', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "READ - AUTH REQUESTS 1",
+      "description": "Retrieve a list of authentication requests or a specific authentication request by ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "News_Network_Get_News",
+      "description": "Return list of news by selected region and category.\nVisit our [demo site](https://core-api.net/news/news.html)",
+      "params": [
+        "{'name': 'category', 'type': 'ENUM', 'de",
+        "{'name': 'region', 'type': 'ENUM', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Sub Regions",
+      "description": "Retrieve a list of sub-regions for a given region",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "landform.map_river_paths",
+      "description": "Maps the paths of rivers within a specified region and analyzes their impact on the local geography.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "blog_entry_comments",
+      "description": "Returns a list of comments to the specified blog entry in the Codeforces Website.",
+      "params": [
+        "{'name': 'blog_entry_id', 'schema': {'ty"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_required_run_rate",
+      "description": "This method takes two arguments, 'remaining_runs' and 'remaining_overs', and returns the required run rate to reach the target.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Clubs",
+      "description": "Retrieve a list of clubs from the transfermarkt database, filtered by competition and locale.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listBinVersions",
+      "description": "Retrieves a list of all versions of a specific JSON bin.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "artists",
+      "description": "Returns a list of music artists who contributed to JSR/JSRF.",
+      "params": [
+        "limit",
+        "sortby",
+        "orderby"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "catalog_id": "real_toolret_neg_0026",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Search Plants by Common Name",
+      "description": "Returns a list of plant species by their common name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/flan-t5-xl",
+      "description": "FLAN-T5 XL is a large-scale language model fine-tuned on more than 1000 tasks covering multiple languages. It achieves state-of-the-art performance on several benchmarks and is designed for research on zero-shot and few-shot NLP tasks, such as reasoning, question answering, and understanding the limitations of current large language models.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MoviesDatabase_titles_x_upcoming",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRandomWord",
+      "description": "Returns a random word based on the specified type and count.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_holdings",
+      "description": "Get data in Holdings tab (it must be Mutual fun stock to have this tab displayed). In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_primary_object(image_patch: ImagePatch, query: str) -> str",
+      "description": "def identify_primary_object(image_patch: ImagePatch, query: str) -> str:\n    '''Identify the primary object in a given scene.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The name of the primary object.\n    '''\n    \n    primary_object = image_patch.simple_query(query)\n    return primary_object",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "RiskIdentifier",
+      "description": "Identifies potential risk factors in the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Custom Ticker",
+      "description": "This API generates a custom index for a specific cryptocurrency in a chosen currency, allowing users to include or exclude specific exchanges.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_season_season_number",
+      "description": "Get the TV season details by id.\n\nSupports `append_to_response`. Read more about this [here](#docTextSection:JdZq8ctmcxNqyLQjp).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Stories",
+      "description": "Returns the current top 100 stories from Hacker News, filtered by the Business domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getIndexList",
+      "description": "Get a list of available indices",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Matrix API",
+      "description": "Computes the duration of the fastest route between all pairs of supplied coordinates. Returns the durations or distances or both between the coordinate pairs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IRCTC_GetTrainClasses",
+      "description": " ",
+      "params": [
+        "{'name': 'trainNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockPrice",
+      "description": "Retrieve the current stock price of a specified stock symbol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Halsey_Lyric_Snippets_all_songs_from_a_specified_artist_and_specified_album",
+      "description": "This endpoint retrieves all songs from the specified album by the specified artist and returns them in the response.",
+      "params": [
+        "{'name': 'artist', 'type': 'string', 'de",
+        "{'name': 'album', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Jobs",
+      "description": "Retrieve the latest job postings about a company with the given identifier since the given timestamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PackageBooking",
+      "description": "This API is to book a package including train and hotel for a specific number of people.",
+      "params": [
+        "{'name': 'trainDetails', 'in': 'query', ",
+        "{'name': 'hotelDetails', 'in': 'query', ",
+        "{'name': 'num_of_people', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Japan News Filter API",
+      "description": "Filters Japan news from various news sources and returns a list of relevant news articles",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "USA_Jobs_for_IT_React_Jobs",
+      "description": "React Jobs API",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Image_Search_Image_Search",
+      "description": "Image Search",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createRiskProfile",
+      "description": "Create a risk profile for a particular project or activity",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sim_based_Location_Tracking_NumberList",
+      "description": "\n<p>All  of <b>last updated locations</b> of provided concents phone numbers can be fetched through this endpoint,</p>\n\n<h2 id=\"output\">OUTPUT</h2>\n<p>\n<h4>Invalid user credentials</h4>\n</p>\n<pre class=\"click-to-expand-wrapper is-snippet-wrapper language-undefined\"><code class=\"is-highlighted language-undefined\">{\n    \"errors\": \"Invalid username/password.\"\n}\n</code></pre>\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NCAA_Final_Four_Third_Place",
+      "description": "Get third place data (only available between 1946 and 1981) for the given year.",
+      "params": [
+        "{'name': 'identifier', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "home_improvement.get_contractor_availability",
+      "description": "Retrieve the availability of contractors for a specific home improvement project.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest_Stock_Price_price_all",
+      "description": "Fetch latest stock price",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entities Search",
+      "description": "Search for entities and places based on a given query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Helsinki-NLP/opus-mt-en-de",
+      "description": "The Helsinki-NLP/opus-mt-en-de model is a translation model developed by the Language Technology Research Group at the University of Helsinki. It translates English text to German using the Hugging Face Transformers library. The model is trained on the OPUS dataset and has a BLEU score of 45.2 on the newstest2018-ende.en.de dataset.",
+      "params": [
+        "pretrained_model_name_or_path"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ginger_Translation",
+      "description": "-",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc",
+        "{'name': 'toLanguage', 'type': 'STRING',",
+        "{'name': 'fromLanguage', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sundayfinance_Get_the_next_dividend_payout_date",
+      "description": "Feed in the ticke and get the next dividend payout date.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Sandbox_SAND_Past_1_Month",
+      "description": "Get price data for the past month. (~30 days)\n\n~hourly data points.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_To_Work_Remote_API_Search_Jobs",
+      "description": "# Open To Work Remote - API\n\n## Search Jobs:\n\nThis endpoint allows you to search for jobs.\n\nYou can search for jobs by filtering by title, tags, salary, location, and company name. All the information comes paginated.\n\n*[Click 3 Dots Button To View More Details About All Params]*\n\n### Parameters and Filters:\n\n**page:** Select the page.\n**perPage:** Quantity of jobs shown per page.\n**title:** Allows search jobs by title/role.\n**tag:** Allows search jobs by tags/categories.\n**location:** Allows search jobs by location.\n**company:** Allows search jobs by the company name.\n**salaryMin:** Allows se",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Conversions",
+      "description": "Retrieve a list of conversions from Clickmeter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Team_logo",
+      "description": "Get team logo by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Travel_Hacking_Tool_Get_Airline_List",
+      "description": "This endpoint returns a full list of airlines with their IATA code and full name.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_transaction_deletion",
+      "description": "Create a request to delete erroneous transactions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSupplyChainStatus",
+      "description": "Retrieve the current status of the humanitarian supply chain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock/upgrade-downgrade-history",
+      "description": "Retrieve the upgrade and downgrade history of a specific stock symbol from Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RouteOptimizer.findOptimalPath",
+      "description": "Calculates the most efficient route for multiple stops considering real-time traffic data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast_Recaptcha_V2_Solver_Get_Response",
+      "description": "Get response based on the input received from create request\nOnly numeric values are accepted.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestOutfit",
+      "description": "This API suggests an outfit based on the current weather.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche"
+      ]
+    }
+  ]
+}

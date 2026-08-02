@@ -1,0 +1,367 @@
+{
+  "catalog_id": "real_toolret_neg_0129",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "deviceRegistration.create",
+      "description": "This API is used to register a new device in the system. It requires the device's unique identifier, type, and the user's email who is registering the device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_recommendations",
+      "description": "Get the list of TV show recommendations for this item.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hashtag_feed_video_posts_v2",
+      "description": "Fetches video posts related to a specific hashtag from a social media platform, providing metadata such as direct URLs, statistics, and more.",
+      "params": [
+        "name",
+        "limit",
+        "max_cursor"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Auditor",
+      "description": "Used to audit the desensitized information to ensure that the desensitization meets the requirements.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Climate Change News from Source",
+      "description": "Retrieve news articles about climate change from a specific news source",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Live Match Table",
+      "description": "Retrieve the live table for a specific match in the Sports domain, called by the Transfermarkt tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Random Username Generate",
+      "description": "Generate a random username based on the provided parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Details",
+      "description": "Retrieve detailed information about a specific post on Reddit.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ecology.genetic_diversity",
+      "description": "Calculate the genetic diversity of a population based on genetic data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Transportistas_de_Argentina_cities_postcode_stateIsoCode_postCode",
+      "description": "List of city for iso state and postcode.",
+      "params": [
+        "{'name': 'stateIsoCode', 'type': 'STRING",
+        "{'name': 'postCode', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_modification_guide",
+      "description": "Get the guide and steps for modifying an order",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ideal_body_weight",
+      "description": "Calculates the ideal body weight based on height, body frame size, gender, and optional formula.",
+      "params": [
+        "body_frame",
+        "height",
+        "gender",
+        "formula"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Address Inclusion",
+      "description": "Geocodes an address and returns the corresponding latitude and longitude coordinates.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCSSProperty",
+      "description": "Retrieve the value of a CSS property for a given element",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "parse_marks",
+      "description": "This method takes a string representing marks in the format \"X out of 100\" and returns the corresponding integer value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "rsi_overbought",
+      "description": "Fetches a list of stocks that have the RSI (Relative Strength Index) Overbought signal using the BarPatterns RapidAPI.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_in",
+      "description": "Returns current gas price data for Indiana. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fighting_game.get_character_stats",
+      "description": "Retrieve the statistics of a specific character in a fighting game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stormglass_Complete_Get_Tide_Sea_level_Data",
+      "description": "**Stormglass Tide Sea-level Data**\n\nRetrieve the sea level given in meters hour by hour for a single coordinate. If nothing is specified the returned values will be in relative to Mean Sea Level - MSL.",
+      "params": [
+        "{'name': 'params', 'type': 'string', 'de",
+        "{'name': 'apiKey', 'type': 'string', 'de",
+        "{'name': 'lat', 'type': 'string', 'descr",
+        "{'name': 'lng', 'type': 'string', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stock Price",
+      "description": "Returns the current stock price information for the specified symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WhatsMyIP",
+      "description": "Fetches the user's public IP address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DevelopmentTool",
+      "description": "used to develop functionality and perform unit testing",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LeagueEventsByRound",
+      "description": "Retrieves matches by round for a handball unique tournament season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Youtube_V2_Video_Details",
+      "description": "Get all publicly available details about a Youtube Video",
+      "params": [
+        "{'name': 'video_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "userCheckin",
+      "description": "Retrieve information about a user's check-in at a specific venue",
+      "params": [
+        "user_id",
+        "venue_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Reel by Media ID",
+      "description": "Retrieve information about a specific reel on Instagram by its media ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Ephemeral Proxies Service Status",
+      "description": "This API returns the current status of the ephemeral proxies service, including the total number of datacenter proxies available and grouped by country.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Realtime Crypto Prices",
+      "description": "Returns the current price of a specified cryptocurrency in real-time",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
+      "description": "A CLIP ViT L/14 model trained with the LAION-2B English subset of LAION-5B using OpenCLIP. Intended for research purposes and exploring zero-shot, arbitrary image classification. Can be used for interdisciplinary studies of the potential impact of such model.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BlockIt_BlockIt",
+      "description": "BlockIt is detect IP Address a Proxy, Tor, Hosting, Cloud, Bogon and etc.",
+      "params": [
+        "{'name': 'ip', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Truecaller_v2_Get_Details",
+      "description": "This end point will display the search details for the number you are looking for.",
+      "params": [
+        "{'name': 'phone', 'type': 'NUMBER', 'des",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN Decoder",
+      "description": "Decodes Vehicle Identification Numbers. The result will include a list of specifications in the specs property and a list of all possible trims matching the VIN in the trims property.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "mbti",
+      "description": "For administering an MBTI test. You can get a list of questions and calculate your MBTI type.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareSurvivalGroups",
+      "description": "Compare survival between two or more groups based on survival analysis",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_user_followers",
+      "description": "user-followers",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "walletapi_cloud_List_operations_in_wallet_s_ledger",
+      "description": "Obtain a pageable list of operations that were posted to a wallet within a specified time period.",
+      "params": [
+        "{'name': 'projectId', 'type': 'STRING', ",
+        "{'name': 'pageSize', 'type': 'NUMBER', '",
+        "{'name': 'walletId', 'type': 'STRING', '",
+        "{'name': 'from', 'type': 'NUMBER', 'desc",
+        "{'name': 'to', 'type': 'NUMBER', 'descri",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Divanscore_matches_get_esport_games",
+      "description": "Get eSport games (Only supports eSport matches)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getInsectSpecies",
+      "description": "Retrieve information about insect species",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHistoricPrice",
+      "description": "Retrieve the historic price of a specified cryptocurrency at a specific date and time.",
+      "params": [
+        "cryptoCurrency",
+        "fiatCurrency",
+        "timestamp"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorsport Unique Stage Image",
+      "description": "Retrieve a unique stage image for a motorsport event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

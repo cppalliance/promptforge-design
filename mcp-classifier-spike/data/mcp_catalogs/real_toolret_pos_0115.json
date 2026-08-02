@@ -1,0 +1,365 @@
+{
+  "catalog_id": "real_toolret_pos_0115",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Chartbeat_Historical_Traffic_Stats",
+      "description": "Returns traffic sources and/or page load time summarized over the given timespan. You should use this call if you want to discover broad information about your data where we already did the work providing the max or min.",
+      "params": [
+        "{'name': 'jsonp', 'type': 'STRING', 'des",
+        "{'name': 'human', 'type': 'STRING', 'des",
+        "{'name': 'start', 'type': 'STRING', 'des",
+        "{'name': 'end', 'type': 'STRING', 'descr",
+        "{'name': 'properties', 'type': 'STRING',",
+        "{'name': 'fields', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sanitizeInput",
+      "description": "Sanitize user input to prevent common security vulnerabilities",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_v3_FindOneUserLocation",
+      "description": " FindOne UserLocation",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "last_call_record",
+      "description": "Retrieve the last call record for a specified phone number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMobileInfo",
+      "description": "Retrieves information about a mobile number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gwyo_twitch_Get_Stream_Number_of_Viewers",
+      "description": "Get Stream Number of Viewers (using username or id)\n( return an empty JSON object if not currently LIVE )",
+      "params": [
+        "{'name': 'userId', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cmyk-to-hex",
+      "description": "Converts CMYK color code to HEX color code",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateJunctionVoltage",
+      "description": "Calculate the voltage across a semiconductor junction",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Article Summarizer",
+      "description": "Summarizes an article from a specified URL, with optional parameters for language translation, HTML formatting, and summary length.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchMods",
+      "description": "Search for mods based on specified criteria.",
+      "params": [
+        "query",
+        "tags",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP_ECHO_json",
+      "description": "Response your real IP with json format",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Coin_Historical_Metrics_By_Name",
+      "description": "Retrieve  coin\u00b4s historical social media metrics by Coin Name\nIn the case you want to retrieve real time data check \"Get Coin Metrics by Name\" or \"Get Coin Metrics by Ticker\"\n\n**Input:** \n-  Date (MM/DD/YYYY HH:HH AM/PM) (Required)\n- Security Name: Coin Name (Required)\n- TimeFrame: 1d, 1h, 8h (Optional)\n\n**Output:**\n\n- Sentiment\n- Sentiment change\n- Weighted Sentiment\n- Weighted sentiment change\n- Followers\n- Followers change\n- Mentions\n- Mentions change\n- Security ticker\n- Security Name\n- TimeFrame\n- DataTimeStamp\n\n**Definitions:**\n\n\u2022\tMentions - Number of posts related to the coin in tracked ",
+      "params": [
+        "{'name': 'securityName', 'type': 'STRING",
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_daily_schedule",
+      "description": "Generate a daily schedule based on the user's tasks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Details",
+      "description": "Returns detailed information about a language with the given ISO 639 language code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesian_National_Identity_Card_Validator_data",
+      "description": "Check validation and get details of indonesian national identity card such as day, month, year, gender and location",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PurchaseProduct",
+      "description": "This API executes a product purchase for a particular customer with a specific quantity.",
+      "params": [
+        "{'name': 'customer_ID', 'in': 'query', '",
+        "{'name': 'product_ID', 'in': 'query', 's",
+        "{'name': 'quantity', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Motorsport Unique Stage Image",
+      "description": "Retrieve a unique stage image for a motorsport event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_player_currently_playing",
+      "description": "Get the track currently being played on the user's Spotify account.\n",
+      "params": [
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'additional_type"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllLocations",
+      "description": "Access information about all locations featured in the show, like their name, dimension, and description.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wilaya_Informations",
+      "description": "Retrieve a list of provinces in Algeria",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Holistic_Finance_Stock_Data_Historical_crypto_price",
+      "description": "Provides historical crypto currency data.",
+      "params": [
+        "{'name': 'source', 'type': 'STRING', 'de",
+        "{'name': 'target', 'type': 'STRING', 'de",
+        "{'name': 'interval', 'type': 'ENUM', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List source languages",
+      "description": "Returns a collection of all source languages supported by TEXTKING.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_new_note",
+      "description": "Create a new note",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Artist_related",
+      "description": "Artist related",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mzansi_Loadshedding_Api_town",
+      "description": "Returns the schedule for the specific requested town",
+      "params": [
+        "{'name': 'town', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Items",
+      "description": "Search items in Rakuten's marketplace",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asia",
+      "description": "Fetches a list of Asian cities sorted by a specified criterion with pagination support.",
+      "params": [
+        "sort",
+        "sort_by",
+        "size",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Master_Dictionary_Word_infos",
+      "description": "Get word infos",
+      "params": [
+        "{'name': 'word', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asdfadsf_Get_Product",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nft_news",
+      "description": "Fetches up-to-date NFT news from the specified API.",
+      "params": [
+        "nftnews"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Global Trending Hashtags",
+      "description": "Retrieve a list of currently trending hashtags on social media platforms",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "marketAnalysis.getVolatilityMetrics",
+      "description": "Provides volatility metrics for a selected financial instrument within a specified time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recordSurgicalNursingTask",
+      "description": "Record a surgical nursing task",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_by_API_Ninjas_v1_city",
+      "description": "API Ninjas City API endpoint.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Taxonomies",
+      "description": "Retrieve a list of taxonomies from the South Asian Express tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QR_Decoder_QRDecoder",
+      "description": "Returns the QRCode message from an image or PDF file with embeded QR codes.\n\nFiles must be publicly accessible via the web and the src input parm expects a direct link to the file.  Html pages with embeded images or pdfs are not valid and will return empty.",
+      "params": [
+        "{'name': 'src', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BestBuy_Product_Data_API_BestBuyProductData",
+      "description": "It will accept two parameters keyword and page.\nFor Ex:\nkeyword: iphone  (it is the search term and it can be anything for example: iphone, ps5, sony tv etc)\npage: min 1 (max depends on the number of products available)",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_api_Stock_GetLatestStock",
+      "description": "Get the latest stock information.",
+      "params": [
+        "{'name': 'tickerId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/xm_transformer_sm_all-en",
+      "description": "A speech-to-speech translation model that can be loaded on the Inference API on-demand.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Simple_Surf_Forecast_Api_GetSurfbreaksByName",
+      "description": " ",
+      "params": []
+    }
+  ]
+}

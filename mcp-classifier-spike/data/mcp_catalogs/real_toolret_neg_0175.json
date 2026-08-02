@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_neg_0175",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str:\n    '''Describe the appearance of an object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to describe.\n       \n    Returns:\n        str: The description of the object's appearance.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # Assume that there is only one object of the given type in the photo\n    object_patch = object_patches[0]\n    description = object_patch.simple_query(f\"Can you describe the {object_name}'s",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listSubdomains",
+      "description": "Retrieve a list of subdomains for a specified domain.",
+      "params": [
+        "domain",
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flight_Radar_airports_list",
+      "description": "List all airports around the world",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "listcategoriesandsubcategories",
+      "description": "Retrieves a list of categories and subcategories for the mktplace.eu marketplace.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Artists - Duo/Group",
+      "description": "Retrieve the top artists in the duo/group category for a specific year, as per the Billboard charts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BitcoinAverage_crypto_ticker_and_historical_price_Cryptocurrency_Index_Ticker_pr",
+      "description": "Get the latest Ticker price for thousands of cryptocurrencies.\nOur Ticker data includes the latest price, bid, ask, 24h volume, moving average and price changes.",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'symbol_set', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iale_results",
+      "description": "To list the results for F1 races.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All News",
+      "description": "This endpoint will return back all greek news from all the sources.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_length",
+      "description": "This method takes two arguments, 'speed' and 'time', and returns the length of the train in meters.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ImpactEstimator",
+      "description": "assessing the impact of texts",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_a",
+      "description": "def determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_attributes: list, query: str) -> str:\n    '''Determine the attribute of an object from a list of possible attributes.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for attributes.\n        possible_attributes (list): A list of possible attributes.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The best matching attribute if the object exists, otherwise the result of the simple_query.\n    '",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pricelist API",
+      "description": "The Pricelist API is used to retrieve the list of available Pulsa and Data products along with their details such as code, name, nominal, and price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flight_Integration_Flight_Integration",
+      "description": "FlightsLogic provides Flight API, Airline Consolidator, Flight Aggregator to the travel agents, tour operators and travel companies worldwide.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ResponseTemplateGenerator.generate",
+      "description": "Generates a response template based on the type of negative review, incorporating business policies and tone guidelines.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LemurBot_Get_A_Bot_Property",
+      "description": "Get a specific bot property by it's id and view it's details",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Data_User_metadata_information",
+      "description": "Get user metadata. Number of followers, followings , avatar url, description and more",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTopCountries",
+      "description": "Find top countries with the highest numbers of confirmed cases, deaths, or recoveries.",
+      "params": [
+        "sortBy",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarShadowImpact.evaluate",
+      "description": "Evaluates the impact of shadows on solar panel performance for a given location and time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_9GAG_API_Detailed_Get_Pages",
+      "description": "Returns pages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fixtures By Date",
+      "description": "Returns rugby fixtures and results by string. When string is not present, defaults to today.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram User Downloader",
+      "description": "Downloads user information from Instagram",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Testing_v2_VenueDetails",
+      "description": "Venue Details",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri",
+        "{'name': 'lang', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consulta_estabelecimento",
+      "description": "Queries the CNPJ for unified information from Receita Federal, Simples Nacional, and Cadastro de Contribuintes.",
+      "params": [
+        "cnpj",
+        "maxage",
+        "simpleshistory",
+        "registrations",
+        "simples"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "uk_boundaries_io_Retrieve_UK_Postal_Sector_Outline_Boundaries",
+      "description": "example: Query by \"W41,W42\" sectors.",
+      "params": [
+        "{'name': 'postal-sector', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetClothing",
+      "description": "This API suggests clothing based on the current weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "swin2SR-lightweight-x2-64",
+      "description": "Swin2SR model that upscales images x2. It was introduced in the paper Swin2SR: SwinV2 Transformer for Compressed Image Super-Resolution and Restoration by Conde et al. and first released in this repository. This model is intended for lightweight image super resolution.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "CarYardBard",
+      "description": "AI-Powered Car Sales Ad Generator for Australian Car Dealers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_screeners_list",
+      "description": "List all screeners (Top Rated Stocks, Top Quant Dividend Stocks,  Top Yield Monsters, etc...)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Articles List",
+      "description": "Retrieve a list of articles by category from Seeking Alpha",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mocking_Rock_Get_Sample_UserProfile",
+      "description": "Use this API to get fake-generated user Profile sample data.\nBy default, it will generate \"en\"  locale for a single count.\nIf count query is greater than 1 it will randomize the generated profiles \nto a different locale. \nTo set a default locale pass it as the query.List of the locale you can get from locale API.\nIn case of the wrong locale is given it will return the result based on default settings as mentioned above.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entities Search",
+      "description": "Search for entities and places based on a given query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "effluentQualityControl.checkParameters",
+      "description": "Checks and validates the quality of effluent based on regulatory standards.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_hillshading_tile",
+      "description": "Fetches a hillshading raster tile as a PNG.",
+      "params": [
+        "x",
+        "version",
+        "z",
+        "y"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "teams",
+      "description": "Fetches a list of teams that match the given parameters from the API.",
+      "params": [
+        "estimatebill",
+        "competitionstageid",
+        "countryid",
+        "namelike"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "setLoadForecast",
+      "description": "Set load forecast for a specific area",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Kline",
+      "description": "Retrieve historical kline data for a specific symbol and time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aircraft.update_service_records",
+      "description": "Updates the service records of an aircraft after maintenance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Math Fact",
+      "description": "Retrieve a mathematical property about a given number",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_UK_new_homes_for_sale",
+      "description": "UK new homes for sale",
+      "params": [
+        "{'name': 'search_area', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Throne_of_Glass_API_2_Get_Character_by_ID",
+      "description": "Get an Individual Character",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    }
+  ]
+}

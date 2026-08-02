@@ -1,0 +1,362 @@
+{
+  "catalog_id": "real_toolret_pos_0196",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "CheckTimeConflict",
+      "description": "\"Check time conflict API that takes two parameters - 'content' and 'time'. The 'content' parameter refers to the description of the event and the 'time' parameter specifies the time at which the event is scheduled. This API checks whether there is a time conflict with existing events.\"",
+      "params": [
+        "{'name': 'content', 'in': 'query', 'sche",
+        "{'name': 'time', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "novels",
+      "description": "Fetches information about novels from the RapidAPI service.",
+      "params": [
+        "pagesize",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryTechnologyFramework",
+      "description": "Retrieve the technology framework for effective library technology governance",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market/small_cap_gainers",
+      "description": "Retrieve a list of small-cap stocks with a 1-day price change of 5.0% or more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_post",
+      "description": "Create a new post on a social media platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Whois_Lookup_v3_Check_Similarity",
+      "description": "This endpoint Helps to check if two domains are similar.\n\nParemeters:\n> domain1 \n>domain2",
+      "params": [
+        "{'name': 'domain1', 'type': 'STRING', 'd",
+        "{'name': 'domain2', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/timesformer-hr-finetuned-k400",
+      "description": "TimeSformer model pre-trained on Kinetics-400 for video classification into one of the 400 possible Kinetics-400 labels. Introduced in the paper TimeSformer: Is Space-Time Attention All You Need for Video Understanding? by Tong et al.",
+      "params": [
+        "images",
+        "return_tensors"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rugby Match Incidents",
+      "description": "Retrieve match incidents from a rugby match, including penalties, tries, conversions, and other events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WebSocketInitializer",
+      "description": "This function initializes a WebSocket connection with specified server settings and optional protocols.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/api/TripDetails/{MFRef}",
+      "description": "Retrieves trip details based on the provided MFRef number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_germination_rate",
+      "description": "This method takes two arguments, 'seeds_1' and 'seeds_2', which are the number of seeds planted in the first and second plots respectively, and 'germination_rate_1' and 'germination_rate_2', which are the germination rates for the two plots respectively. It returns the total germination rate as a percentage.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_loan_payment",
+      "description": "Calculates the loan payment based on the loan amount, compounding factor, and annual interest rate",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_playlist_videos",
+      "description": "This function lists available videos of a given YouTube playlist. It supports pagination to retrieve multiple pages of results and ensures thumbnails are not blurred by age restrictions.",
+      "params": [
+        "nexttoken",
+        "playlistid",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v3_Top_200_songs_by_country_global",
+      "description": "Information obtained from https://charts.spotify.com/",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Holistic_Finance_Stock_Data_Historical_crypto_price",
+      "description": "Provides historical crypto currency data.",
+      "params": [
+        "{'name': 'source', 'type': 'STRING', 'de",
+        "{'name': 'target', 'type': 'STRING', 'de",
+        "{'name': 'interval', 'type': 'ENUM', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cnc_lathes.speed_optimization",
+      "description": "Optimize the cutting speed for CNC lathes based on the material and tool parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Keto Recipe",
+      "description": "Searches for keto recipes based on a search term and returns a list of matching recipes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Upstring Cart Item Quantity",
+      "description": "Upstrings the quantity of an item in the cart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Generate Image Condition On Pose Image",
+      "description": "useful when you want to generate a new real image from both the user description and a human pose image. like: generate a real image of a human from this human pose image, or generate a new real image of a human from this pose. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Commodity_Rates_API_Supported_Symbols",
+      "description": "Check all the available symbols for your queries. This endpoint retrieves all the supported commodities and currencies as well.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_coupons_endpoint",
+      "description": "Fetches daily AI-analyzed betting coupons with a high win rate from the specified endpoint.",
+      "params": [
+        "content_type",
+        "connection",
+        "sort"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flow_study_getcodestructure",
+      "description": " ",
+      "params": [
+        "{'name': 'contract_name', 'type': 'STRIN",
+        "{'name': 'contract_address', 'type': 'ST"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "radical_stroke_number",
+      "description": "Fetches advanced search results from the Kanji Alive API based on the radical stroke number.",
+      "params": [
+        "rs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Latest Stock Prices",
+      "description": "Fetch the latest stock prices for given stock indices and identifiers",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_EPS_Trend",
+      "description": "This API endpoint returns a breakdown of the estimated historical EPS changes at a given period.\n\nAvailability: Mega plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "performEnergyAudit",
+      "description": "Perform an energy audit to assess the energy usage and efficiency of a building or facility",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Flight_Data_Hong_Kong_Scheduled_Flights_Level",
+      "description": "Get weekly Hong Kong scheduled departing flights level.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_South_Korea_Songs",
+      "description": "Provide the South Korea Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThermoCalc.calculateHeatTransfer",
+      "description": "Calculates the heat transfer between two substances based on their specific heat capacities, masses, and temperature changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retirement.annuityEstimator",
+      "description": "Estimates the monthly annuity payment based on the principal amount, retirement age, and expected retirement duration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Video without Watermark",
+      "description": "Fetch a video from TikTok without a watermark.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IEAdAFJ",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "spacHero_SPAC_Database_SPAC_Summary",
+      "description": "Retrieve SPAC summary including important dates, status and target names.",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTechnicalIndicator",
+      "description": "Analyze a specific technical indicator for a given stock, cryptocurrency, or forex data.",
+      "params": [
+        "symbol",
+        "indicator",
+        "interval",
+        "parameters"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Zapier",
+      "description": "Interact with over 5,000+ apps like Google Sheets, Gmail, HubSpot, Salesforce, and thousands more.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Seller_Profile",
+      "description": "The Seller Profile Parameters are applicable when making a request with type=seller_profile to retrieve seller profile details for a single seller on Amazon - the seller is specified using either the seller_id and amazon_domain parameters or the url parameter (where the url parameter contains a link to an Amazon seller profile page). The parameters should be appended as querystring parameters to the Product Data APIGETHTTP request.\n\nSeller profile details are retrieved from the seller profile page for a single seller on Amazon. You can retrieve the seller_id value for a given seller from other",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player Search",
+      "description": "Search for active and historic/inactive players by name. The active_sw parameter should be set depending on whether you want to search for active or inactive players. You can omit this parameter, though you will notice a slower response time as the search is done across all (active and inactive) players.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IoTDataAnalyzer.analyzeSensorData",
+      "description": "Processes and analyzes data from multiple IoT sensors to identify patterns and anomalies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesian_National_Identity_Card_Validator_data",
+      "description": "Check validation and get details of indonesian national identity card such as day, month, year, gender and location",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Python_Libraries_tst_View_User_List",
+      "description": "Gets a user\u2019s list of favorite libraries.",
+      "params": [
+        "{'name': 'userId', 'type': 'string', 'de"
+      ]
+    }
+  ]
+}

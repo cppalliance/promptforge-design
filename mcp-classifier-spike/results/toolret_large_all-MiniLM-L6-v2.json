@@ -1,0 +1,172 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "n_queries": 7460,
+  "pool": 44453,
+  "distractors": 39,
+  "top1": 0.7896782841823057,
+  "recall@3": 0.8809651474530831,
+  "per_config_top1": {
+    "apibank": 0.7326732673267327,
+    "apigen": 0.963,
+    "appbench": 0.9375,
+    "autotools-food": 0.9090909090909091,
+    "autotools-music": 0.875,
+    "autotools-weather": 0.9090909090909091,
+    "craft-math-algebra": 0.8964285714285715,
+    "craft-tabmwp": 0.40804597701149425,
+    "craft-vqa": 0.48,
+    "gorilla-huggingface": 0.618,
+    "gorilla-pytorch": 0.4883720930232558,
+    "gorilla-tensor": 0.7272727272727273,
+    "gpt4tools": 0.71875,
+    "gta": 0.5,
+    "metatool": 0.735,
+    "mnms": 1.0,
+    "restgpt-spotify": 0.925,
+    "restgpt-tmdb": 0.8703703703703703,
+    "reversechain": 0.98,
+    "rotbench": 0.33454545454545453,
+    "t-eval-dialog": 0.62,
+    "t-eval-step": 0.9,
+    "taskbench-daily": 0.9,
+    "taskbench-huggingface": 0.9130434782608695,
+    "taskbench-multimedia": 1.0,
+    "tool-be-honest": 0.9342857142857143,
+    "toolace": 0.926,
+    "toolalpaca": 0.8723404255319149,
+    "toolbench": 0.8981818181818182,
+    "toolbench-sam": 0.37055837563451777,
+    "toolemu": 0.47368421052631576,
+    "tooleyes": 0.5578947368421052,
+    "toolink": 0.937625754527163,
+    "toollens": 0.6337579617834395
+  },
+  "sweep": [
+    {
+      "thr": 0.068,
+      "coverage": 1.0,
+      "acc_on_accepted": 0.7896782841823057,
+      "false_bind": 0.9990616621983914
+    },
+    {
+      "thr": 0.13,
+      "coverage": 0.9883378016085791,
+      "acc_on_accepted": 0.7966906279669063,
+      "false_bind": 0.9540214477211796
+    },
+    {
+      "thr": 0.169,
+      "coverage": 0.9662198391420912,
+      "acc_on_accepted": 0.8091009988901221,
+      "false_bind": 0.8490616621983914
+    },
+    {
+      "thr": 0.206,
+      "coverage": 0.9264075067024129,
+      "acc_on_accepted": 0.8315728548690493,
+      "false_bind": 0.6971849865951742
+    },
+    {
+      "thr": 0.243,
+      "coverage": 0.87171581769437,
+      "acc_on_accepted": 0.8609872366600031,
+      "false_bind": 0.5203753351206434
+    },
+    {
+      "thr": 0.28,
+      "coverage": 0.8079088471849866,
+      "acc_on_accepted": 0.8898291023726563,
+      "false_bind": 0.35227882037533514
+    },
+    {
+      "thr": 0.317,
+      "coverage": 0.7396782841823056,
+      "acc_on_accepted": 0.920985864443639,
+      "false_bind": 0.2242627345844504
+    },
+    {
+      "thr": 0.354,
+      "coverage": 0.6734584450402145,
+      "acc_on_accepted": 0.941281847133758,
+      "false_bind": 0.1371313672922252
+    },
+    {
+      "thr": 0.391,
+      "coverage": 0.6018766756032171,
+      "acc_on_accepted": 0.9601336302895322,
+      "false_bind": 0.07828418230563003
+    },
+    {
+      "thr": 0.428,
+      "coverage": 0.5337801608579088,
+      "acc_on_accepted": 0.9741336012054244,
+      "false_bind": 0.043431635388739946
+    },
+    {
+      "thr": 0.465,
+      "coverage": 0.46126005361930295,
+      "acc_on_accepted": 0.980528916012787,
+      "false_bind": 0.019571045576407507
+    },
+    {
+      "thr": 0.502,
+      "coverage": 0.38766756032171584,
+      "acc_on_accepted": 0.9837482710926694,
+      "false_bind": 0.010857908847184987
+    },
+    {
+      "thr": 0.539,
+      "coverage": 0.31219839142091155,
+      "acc_on_accepted": 0.987118935165307,
+      "false_bind": 0.005898123324396783
+    },
+    {
+      "thr": 0.576,
+      "coverage": 0.24436997319034853,
+      "acc_on_accepted": 0.9912232583653319,
+      "false_bind": 0.003485254691689008
+    },
+    {
+      "thr": 0.613,
+      "coverage": 0.1824396782841823,
+      "acc_on_accepted": 0.9926524614254225,
+      "false_bind": 0.0014745308310991957
+    },
+    {
+      "thr": 0.65,
+      "coverage": 0.1339142091152815,
+      "acc_on_accepted": 0.993993993993994,
+      "false_bind": 0.00026809651474530834
+    },
+    {
+      "thr": 0.687,
+      "coverage": 0.08739946380697051,
+      "acc_on_accepted": 0.995398773006135,
+      "false_bind": 0.00013404825737265417
+    },
+    {
+      "thr": 0.724,
+      "coverage": 0.05268096514745308,
+      "acc_on_accepted": 0.9949109414758269,
+      "false_bind": 0.0
+    },
+    {
+      "thr": 0.761,
+      "coverage": 0.028284182305630026,
+      "acc_on_accepted": 0.995260663507109,
+      "false_bind": 0.0
+    },
+    {
+      "thr": 0.798,
+      "coverage": 0.01260053619302949,
+      "acc_on_accepted": 1.0,
+      "false_bind": 0.0
+    },
+    {
+      "thr": 0.846,
+      "coverage": 0.004021447721179625,
+      "acc_on_accepted": 1.0,
+      "false_bind": 0.0
+    }
+  ]
+}

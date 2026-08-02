@@ -1,0 +1,361 @@
+{
+  "catalog_id": "real_toolret_pos_0008",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Basketball Team Details",
+      "description": "Get detailed information about a basketball team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumer_phone_search",
+      "description": "Search for people in the Data Axle database based on the provided criteria.",
+      "params": [
+        "limit",
+        "packages",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone_verification_Get_Processing_Status_of_File",
+      "description": "This endpoint gives you status of file uploaded for verification.",
+      "params": [
+        "{'name': 'fileName', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trulia_Real_Estate_Scraper_Search_for_SOLD",
+      "description": "To download data from SALE, you must first generate a Token with Get search token and set search_type=Sold. Then you need to use this generated token by setting the search_token value in this endpoint. Or just use one of our developer libraries. Everything is already implemented there.",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'search_token', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auth_getCatalogTenant",
+      "description": "Get tenant information. Internal endpoint only available to other services.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MailSlurp_Email_Testing_getComplaints",
+      "description": "SMTP complaints made against your account",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto Exchange Ticker Price",
+      "description": "Retrieve the current ticker price for a specific cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "suivi_colis_Latest",
+      "description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+      "params": [
+        "{'name': 'colisId', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historic Events By Year",
+      "description": "Retrieve a list of historical events that occurred in a specific year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stcudorPepacsdnal",
+      "description": "This function returns the scenic spot information given a destination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "screenshot_endpoint",
+      "description": "Takes a screenshot of a specified webpage URL with given dimensions.",
+      "params": [
+        "height",
+        "url",
+        "width",
+        "fullscreen"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "pyannote/brouhaha",
+      "description": "Brouhaha is a joint voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation model. It is based on the PyTorch framework and uses the pyannote.audio library.",
+      "params": [
+        "audio.wav"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "insect_identification",
+      "description": "Identify the species of a given insect based on its characteristics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "parseHtmlToJson",
+      "description": "Parses HTML content and returns data in JSON format.",
+      "params": [
+        "html",
+        "selectors"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPhilosophyOfMathematics",
+      "description": "Retrieve the philosophy behind mathematics",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAllWebhooks",
+      "description": "Retrieve a list of webhooks associated with the mailslurp email testing tool, allowing for pagination, filtering, and sorting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "generate_arithmetic_progression",
+      "description": "This method takes three arguments, 'a', 'd', and 'n', where 'a' is the first term, 'd' is the common difference, and 'n' is the number of terms to be generated. It returns a list containing the first 'n' terms of the arithmetic progression.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNPJ Company Data",
+      "description": "Retrieve company data by CNPJ",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "trailSnack.generateSnackList",
+      "description": "Generates a list of snack ideas based on the hiking duration and preferred snack types.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Hebrew Date",
+      "description": "Get Hebrew Date for supplied string string or today's string; as well as current holyday if any",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spellout_SpellOut",
+      "description": "Spell out number in given language using provided rule set",
+      "params": [
+        "{'name': 'data', 'type': 'NUMBER', 'desc",
+        "{'name': 'lang', 'type': 'STRING', 'desc",
+        "{'name': 'ruleset', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iiot.get_sensor_data",
+      "description": "Retrieve the sensor data from a specific industrial IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Clusterer",
+      "description": "Clustering of data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dna2protein_DNA2AminoAcid",
+      "description": "Transform a DNA sequence into a sequence of Amino Acids",
+      "params": [
+        "{'name': 'dna', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "chat_with_workspace",
+      "description": "Chat with your Notion workspace.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GuestFeedbackCollector.collectFeedback",
+      "description": "Collects feedback from guests regarding their hotel stay experience.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createQuiz",
+      "description": "Creates a new quiz with specified parameters.",
+      "params": [
+        "apiKey",
+        "name",
+        "category",
+        "questions"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Scraper_List_Top_Tracks",
+      "description": "This endpoint lists weekly or daily top tracks at any time and in any country.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_LeagueTotalTeamEvents",
+      "description": "Get last 5 events for a specific E-Sports league by providing the tournament ID and season ID.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_room_price",
+      "description": "Query the price of each room type in a specified hotel during a specific period",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_PERCENT_B",
+      "description": "%B Indicator(PERCENT_B) measures the position of an asset price relative to upper and lower Bollinger Bands.",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "GetUserToken",
+      "description": "description = \"Get user token API that takes two parameters - 'username' and 'password'. The 'username' parameter is used to identify the user and the 'password' parameter is used to authenticate the user's identity.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the user.'},\n    'password': {'type': 'str', 'description': 'The password of the user.'}\n}\noutput_parameters = {\n    'token': {'type': 'str', 'description': 'The token generated upon successful authentication.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Price to Cash Flow Ratio API",
+      "description": "This API provides the price-cash-flow ratio (P/C ratio) for a given share over a specified period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Club Transfers",
+      "description": "Retrieve a list of transfers for a specific club and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguelogoimage",
+      "description": "Fetch the logo image for a specific Rugby league in PNG format using the given tournament ID and RapidAPI key.",
+      "params": [
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Search_company_by_Name",
+      "description": "Search for a company by parameters will return a list of companies that match your query",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get PAN Card OCR Result",
+      "description": "Fetch the result of a PAN card OCR process using the provided request ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulation_game.update_difficulty",
+      "description": "Updates the difficulty settings for a specific simulation game scenario.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "loan_approval_check",
+      "description": "Determines eligibility for a consumer loan based on regulatory compliance and consumer data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "student_progress_tracker",
+      "description": "Tracks and reports the progress of students in an e-learning course, including time spent, modules completed, and current scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_toolret_neg_0201",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "SportifyAPI_EventsMetadata",
+      "description": "Events Meta data",
+      "params": [
+        "{'name': 'eventId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 4D Results",
+      "description": "Retrieve 4D results for a specific string and company, including 4D and jackpot results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProductLookup",
+      "description": "This API is to query the product details given a product_id.",
+      "params": [
+        "{'name': 'product_id', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Download Verification Results",
+      "description": "This endpoint returns the result string to be downloaded. Pass the name of the string to be downloaded as a path parameter. The result string name is always in the format {stringname}_output.xlsx, replacing {stringname} with the name returned from the upload string call.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "keyword_search_at_coordinates",
+      "description": "Performs a keyword search at specific geographic coordinates for businesses using the Google Local Rank Tracker API.",
+      "params": [
+        "query",
+        "lng",
+        "lat",
+        "zoom"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Get_Time_at_Other_Location",
+      "description": "Find out time at `[to_lat, to_lon]` given `from_time` and `[from_lat, from_lon]`. Daylight saving time are taken care of.",
+      "params": [
+        "{'name': 'to_lat', 'type': 'NUMBER', 'de",
+        "{'name': 'from_lon', 'type': 'NUMBER', '",
+        "{'name': 'from_time', 'type': 'STRING', ",
+        "{'name': 'to_lon', 'type': 'NUMBER', 'de",
+        "{'name': 'from_lat', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "China Scheduled Flights Growth API",
+      "description": "Retrieve weekly China scheduled departing flights growth data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Woosmap_localitiesAutocomplete",
+      "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings. You can therefore send queries as the user types, to provide on-the-fly city names, postal codes or suburb name suggestions.\n",
+      "params": [
+        "{'name': 'input', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllCards",
+      "description": "Retrieve a list of all available cards and their corresponding data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ranigs_driver",
+      "description": "Get the drivers rankings for a season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Piercing Line Stocks",
+      "description": "Returns a list of stocks that have a Piercing Line signal.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTreeAge",
+      "description": "Retrieve the age of a tree",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_DomainStatus",
+      "description": "Returns domain status if is webmail or disposable.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Verifications",
+      "description": "Searches for verification results based on the provided status.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "xlm-roberta-large",
+      "description": "XLM-RoBERTa is a multilingual version of RoBERTa pre-trained on 2.5TB of filtered CommonCrawl data containing 100 languages. It is designed for masked language modeling and can be fine-tuned on downstream tasks such as sequence classification, token classification, or question answering.",
+      "params": [
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TeamStandingsSeasons",
+      "description": "Get the standing seasons for a cricket team by specifying the team ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "insect_identification",
+      "description": "Identify the species of a given insect based on its characteristics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "colegiosantaana_Evaluaciones_1",
+      "description": "Evaluaciones alumno 1",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "kanji_stroke_number",
+      "description": "Fetches Kanji characters using an advanced search based on stroke number.",
+      "params": [
+        "ks"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Valuebets API",
+      "description": "Retrieve positive EV-bets for sports betting, including risk and advantage information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ingredient_substitutes_by_id",
+      "description": "Search for substitutes for a given ingredient.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entities Search",
+      "description": "Search for entities and places based on a given query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_login_records",
+      "description": "Retrieve login records of a specified account within a certain time range",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "read_user",
+      "description": "Fetch user details from the IronWifi API using the provided user ID.",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_duration",
+      "description": "Calculate the duration between two dates",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "api_v2_facts_today_get",
+      "description": "Get today's useless fact",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ice Hockey Team Last Matches",
+      "description": "Retrieve the last matches of an ice hockey team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_emails",
+      "description": "Retrieve emails from a given URL using the Toolbench RapidAPI service.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fingish",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DogBreedDB_Paginated",
+      "description": "Get all dog breed results in a set of 10 per page.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BetSports_getTaxRulesV2",
+      "description": "getTaxRulesV2 data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Free Apps",
+      "description": "Retrieves a list of top free apps for a specific region and language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Keyword Extractor",
+      "description": "Extracts the most important keywords and phrases from a given text.",
+      "params": [
+        "{'name': 'text', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_time_based_on_speed(known_distance, known_time, target_distance)",
+      "description": "def calculate_time_based_on_speed(known_distance, known_time, target_distance):\n    \"\"\"\n    Calculate the time it would take to travel a target distance based on a known speed.\n\n    Parameters:\n    known_distance (float): The distance traveled in a known scenario.\n    known_time (float): The time it takes to travel the known distance.\n    target_distance (float): The distance to be traveled in the target scenario.\n\n    Returns:\n    float: The time it would take to travel the target distance based on the known speed.\n    \"\"\"\n    # Calculate the speed in distance units per time unit\n    speed = ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Magic_AliExpress_api_product_productId_historic_prices",
+      "description": "This endpoint returns the prices historic of product loaded by a client",
+      "params": [
+        "{'name': 'productId', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_loan",
+      "description": "Calculate the loan amount based on interest rate and monthly payment",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "runas",
+      "description": "A tool in the Windows environment for running programs as a specified user.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "dictionary_synonyms_temporarily_unavailable",
+      "description": "Fetches synonyms from a dictionary API for a given word in the specified language.",
+      "params": [
+        "language",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCharacterById",
+      "description": "Retrieve detailed information about a specific Marvel character by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "view_login_records",
+      "description": "View and retrieve login records of a specified account within a specified time range",
+      "params": []
+    }
+  ]
+}

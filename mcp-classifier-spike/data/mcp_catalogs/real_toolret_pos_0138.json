@@ -1,0 +1,349 @@
+{
+  "catalog_id": "real_toolret_pos_0138",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_val",
+      "description": "def get_cell_value_by_row_and_column_criteria(data_frame, row_col, col_name, row_value, col_value):\n    \"\"\"\n    This function takes in a pandas DataFrame, row and column criteria, and returns the value of the cell that matches the criteria.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing data with columns specified by row_col and col_name.\n    row_col (str): The column name for the row criteria.\n    col_name (str): The column name for the column criteria.\n    row_value (str): The value of the row criteria.\n    col_value (str): The value of the column criteria.\n    \n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "userinfo",
+      "description": "Fetch user information from Instagram using the RapidAPI service.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_Prices_10_Year_Historical_Monthly_Prices",
+      "description": "10 Year monthly historically adjusted Open, High, Low, and Close prices.  Monthly Volume, Dividend, and Split information is also included.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StringTransformer",
+      "description": "Transforms a given string according to a specified action, such as converting to upper-case, lower-case, title-case, or mirroring.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Corona_virus_World_and_India_data_India_Timeline_data_starting_from_30th_Jan_202",
+      "description": "India timeline data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Alternative Titles",
+      "description": "Retrieve alternative titles for a movie based on its IMDB ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestOutfit",
+      "description": "This API suggests an outfit based on the current weather.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NegotiationSessionSimulator.simulate",
+      "description": "Simulates a negotiation session using virtual agents to test different negotiation strategies and their outcomes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getUserPastes",
+      "description": "Retrieve a list of pastes created by a specific user.",
+      "params": [
+        "userKey",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BMI Categorization API",
+      "description": "This API categorizes a person's weight based on their BMI, taking into account whether they are Asian or not. The categories include Underweight, Normal weight, Overweight, Obesity Class I, Obesity Class II, and Obesity Class III.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SMSAPI_com_subusers_id",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_DataFeeds_by_Rolling_Insights_Team_Depth_Charts",
+      "description": "Returns player depth charts for a team",
+      "params": [
+        "{'name': 'sport', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "compileFpgaDesign",
+      "description": "Compile and synthesize FPGA design",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scoring_Tables_API_marks_women",
+      "description": "This retrieves all women's marks from the World Athletics Scoring Tables.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_360_Business_Tool_GetDocumentTypesSince",
+      "description": "Get document types modified since",
+      "params": [
+        "{'name': 'timestamp', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mughal Empire API",
+      "description": "Retrieve detailed information about the Mughal Empire in JSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getSupportedLanguages",
+      "description": "Retrieve a list of supported languages for insults.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "latest_news",
+      "description": "Fetches the latest news and stories from different sources.",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kick_com_API_Kick_API_Get_Channel_Emotes",
+      "description": "Get Channel Emotes",
+      "params": [
+        "{'name': 'channel_name', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_search",
+      "description": "Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks\nthat match a keyword string.<br />\n**Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.**\n",
+      "params": [
+        "{'in': 'query', 'name': 'q', 'required':",
+        "{'explode': 'false', 'in': 'query', 'nam",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi",
+        "{'in': 'query', 'name': 'include_externa"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Glue",
+      "description": "Provides data integration and ETL capabilities.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_v2_Year_End_Billboard_Global_200",
+      "description": "Year end Billboard Global 200chart \nis yearly based. \n\nIf `year` is not supplied, will default to last year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "User's Videos",
+      "description": "Retrieve a list of videos from a user's TikTok account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Project_Gutenberg_API_Extract_Info",
+      "description": "Get all the informations about a book using it's ID\nInformations : \n- title.\n- authors.\n- language.\n- download links.\n- download count.\nand much more ...",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getInGamePurchases",
+      "description": "Retrieve information about in-game purchases",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "generateBadge",
+      "description": "Generates a badge showing the user's GitHub statistics.",
+      "params": [
+        "username",
+        "style",
+        "label",
+        "logo",
+        "logo_color",
+        "color",
+        "cache_seconds"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IHerb_Product_Data_Api_Get_All_Brands",
+      "description": "Lists all available brands",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Weather by Geographic Coordinates",
+      "description": "Retrieve weather information by providing geographic coordinates (latitude and longitude).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareSurvivalGroups",
+      "description": "Compare survival between two or more groups based on survival analysis",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto_News_v11_Get_all_Ethereum_news",
+      "description": "This endpoint will return news articles from over 70 different websites about Ethereum",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_variable_value(equation, variable, disallowed_solutions)",
+      "description": "def find_variable_value(equation, variable, disallowed_solutions):\n    \"\"\"\n    Find the value of a variable that satisfies a given equation, excluding any disallowed solutions.\n\n    Parameters:\n    equation (sympy.Eq): The equation to be solved.\n    variable (sympy.Symbol): The variable to be solved for.\n    disallowed_solutions (list): A list of solutions that are not allowed.\n\n    Returns:\n    float: The value of the variable that satisfies the equation.\n    \"\"\"\n    # Solve the equation for the variable\n    solution = solve(equation, variable)\n    \n    # Filter out any disallowed solutions\n ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "risk",
+      "description": "Fetches core metrics to measure the risk of investing in a mutual fund from the specified API.",
+      "params": [
+        "symbol",
+        "dp",
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes with Pagination",
+      "description": "Retrieve a list of popular anime quotes with pagination support. The API returns a list of quotes along with their corresponding anime name, character name, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "View All Food Items",
+      "description": "Retrieve a comprehensive list of all available food items. The API allows clients to fetch a list of food items, with an optional parameter to limit the number of items returned.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CookingTimer.setTimers",
+      "description": "Sets multiple cooking timers for different dishes to help manage kitchen tasks efficiently.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dummyData_overview",
+      "description": "Overview of all entry points and usage",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_profit_share",
+      "description": "This method takes two arguments, 'investment' and 'profit', and returns the share of profit for a given investment. In this case, it will be used to calculate the share of A in the profit.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "podcast.upload_episode",
+      "description": "Uploads a new podcast episode to a specified hosting platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Interest Expense for Stock",
+      "description": "Returns the interest expense for a specified stock",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Divanscore_matches_get_esport_games",
+      "description": "Get eSport games (Only supports eSport matches)",
+      "params": [
+        "{'name': 'matchId', 'type': 'NUMBER', 'd"
+      ]
+    }
+  ]
+}

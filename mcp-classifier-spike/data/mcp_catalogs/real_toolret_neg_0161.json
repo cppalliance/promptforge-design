@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_neg_0161",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "ViperScore_Get_all_competitions",
+      "description": "With \"Get all competitions\" you'll receive a list with top competitions (like NFL, Premier League, ...) and all competitions from every sport.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "APIGabin_Base",
+      "description": "uNE BASE",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "spawnEnemy",
+      "description": "Spawn an enemy in a game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "us_fl",
+      "description": "Fetches current or historical gas price data for Florida.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_Daily_Schedule",
+      "description": "Get basic information on which games are being played during a day.  \ncall is like this:\n/getNBAGamesForDate?gameDate=20220310\nThe above call will return all of the games from March 10th, 2022.  Date must be in that format.  \nFor March 10th, there were two games. They come back in a list format within the body of the response.",
+      "params": [
+        "{'name': 'gameDate', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "createARObject",
+      "description": "Create a new Augmented Reality object",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_area_of_one_side",
+      "description": "This function takes the side of a cube as input and returns the area of one side of the cube.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "inch_to_feet",
+      "description": "Converts a given length in inches to feet using a given scale factor.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RentMovie",
+      "description": "This API rents a movie for a particular user on a specified date.",
+      "params": [
+        "{'name': 'user_ID', 'in': 'query', 'sche",
+        "{'name': 'movie_ID', 'in': 'query', 'sch",
+        "{'name': 'date', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_entity_type(entity_name: str, entity_category: str) -> str",
+      "description": "def identify_entity_type(entity_name: str, entity_category: str) -> str:\n    '''Identify the type of an entity based on its name.\n    \n    Args:\n        entity_name (str): The name of the entity.\n        entity_category (str): The category of the entity (e.g., \"restaurant\", \"book\", \"movie\").\n       \n    Returns:\n        str: The type of the entity.\n    '''\n    external_knowledge_query = \"What type of {} is {}?\".format(entity_category, entity_name)\n    entity_type = llm_query(external_knowledge_query, long_answer=False)\n    return entity_type",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trackmania_Player_Summary",
+      "description": "Get the summary of a player containing general information.",
+      "params": [
+        "{'name': 'player_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/search/image",
+      "description": "This endpoint is used to perform image search using the Google Search JSON API. You can send a request with parameters like **q** (search query), **num** (desired number of images), **start** (starting index of results), and others. The request will generate a JSON response containing information about images that match the search query.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Match Lineups",
+      "description": "Retrieve the lineup information for a specific match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestApparel",
+      "description": "This API suggests suitable apparel based on the weather status.",
+      "params": [
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "prime_factors",
+      "description": "This function takes an integer as input and returns a list of its prime factors.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getUserByName",
+      "description": "Retrieves user information by username from the Advertising domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_AUTH_REQUESTS_2",
+      "description": "READ - AUTH REQUESTS 2",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_API_Locales",
+      "description": "You can use the `/locales` endpoint to retrieve the locales that we support to translate your content. The names of the locales returned are in the native language associated with the locale.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "inquire_benefits_of_activity(activity: str, group: str) -> str",
+      "description": "def inquire_benefits_of_activity(activity: str, group: str) -> str:\n    '''Inquire about the benefits of a certain activity involving a certain group of people.\n    \n    Args:\n        activity (str): The activity to inquire about.\n        group (str): The group of people involved in the activity.\n       \n    Returns:\n        str: The benefits of the activity involving the group of people.\n    '''\n    return llm_query(f\"What benefits can {activity} with {group} have?\")",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GuestFeedbackCollector.collectFeedback",
+      "description": "Collects feedback from guests regarding their hotel stay experience.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "protein_folding_prediction",
+      "description": "Predict the 3D structure of a protein based on its amino acid sequence.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "played",
+      "description": "Fetches the most recently played CS:GO matches from the RapidAPI service.",
+      "params": [
+        "content_type",
+        "limit",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Article Summarizer",
+      "description": "Summarizes an article from a specified URL, with optional parameters for language translation, HTML formatting, and summary length.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Team_shirts",
+      "description": "Get team shirts by event_id",
+      "params": [
+        "{'name': 'team', 'type': 'STRING', 'desc",
+        "{'name': 'event_id', 'type': 'NUMBER', '",
+        "{'name': 'team_player', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PropertyComparator.compareProperties",
+      "description": "Compares two properties based on their features and returns a similarity score.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BrandReputationMonitor.trackSentiment",
+      "description": "Monitors and analyzes public sentiment towards a brand across various social media platforms to gauge brand reputation.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetHighlights",
+      "description": "Retrieve highlights from a sports event or player",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "hf-tiny-model-private/tiny-random-ViltForQuestionAnswering",
+      "description": "A tiny random model for Visual Question Answering using the VILT framework.",
+      "params": [
+        "image",
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "addTrackToPlaylist",
+      "description": "Add a track to an existing playlist",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "request_transaction_deletion",
+      "description": "Create a request to delete erroneous transactions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRandomColor",
+      "description": "Get a random color.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "F1_Live_Motorsport_Data_Session",
+      "description": "Provides session details for a given `session id` found in the Races endpoint. Contains information on drivers times, session weather, speed traps, and session status. Updated throughout each session.",
+      "params": [
+        "{'name': 'session_id', 'type': 'NUMBER',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dictionary_Data_API_GetDefinition",
+      "description": "This is used to retrieve definition, pronunciation and example usages of any word",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAdvertisingBudget",
+      "description": "Retrieve the advertising budget for a specific campaign",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_reminder",
+      "description": "Create a reminder for a specific date and time",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nationalize",
+      "description": "Fetches the nationality of the provided name using the Genderize-Nationalize API.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "/get_products_from_category",
+      "description": "Retrieves a list of products from a specific category on Gearbest.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_api_Stock_GetLatestStock",
+      "description": "Get the latest stock information.",
+      "params": [
+        "{'name': 'tickerId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HoG_18_1_App_Config",
+      "description": "\u53d6\u5f97\u7cfb\u7d71\u53c3\u6578",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "QueryHistoryToday",
+      "description": "\"QueryHistoryToday API takes one parameter 'date'. The parameter 'date' refers to the date for which historical events are to be queried.\"",
+      "params": [
+        "{'name': 'date', 'in': 'query', 'schema'"
+      ]
+    }
+  ]
+}

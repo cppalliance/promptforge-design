@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0159",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getEstimatedCarbonIntensity",
+      "description": "This function allows users to retrieve the estimated carbon intensity of the UK grid for any given time in the future.",
+      "params": [
+        "from",
+        "to"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "login_to_ticket_platform",
+      "description": "Login tool for train ticket booking platform",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFurnitureAssemblyInstructions",
+      "description": "Retrieve assembly instructions for a specific furniture item",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getLatestWallpapers",
+      "description": "Retrieve a list of the latest wallpapers.",
+      "params": [
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SuggestUse_Detail_info",
+      "description": "Get detail info by application name",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "MusicGenerator",
+      "description": "music generator, can generate music according to the conditions provided.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Wallet Transfers by Chain",
+      "description": "Retrieve a list of transfers for a specific wallet address on a chosen blockchain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ItemPrice",
+      "description": "This API provides the price of an item.",
+      "params": [
+        "{'name': 'item_id', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate QR Code - Base64",
+      "description": "Generates a QR code as base64 with limited settings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_v2_get_price_fair_value",
+      "description": "Fetches the price vs fair value data for a given stock.",
+      "params": [
+        "performanceid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Goal Analysis: Goal Minutes in Between",
+      "description": "Provides the goals statistics of the teams between in the minutes intervals (0-10, 11-20, 21-30, etc.) for a given match. The data returns for only a 7-day period, so the endpoint can be tested with matches that have strings within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomWord",
+      "description": "Retrieve a random English word with its meaning and examples of usage.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "image-frame-interpolation",
+      "description": "This model generates intermediate frames between two input frames using a deep learning approach. It is useful for video frame rate up-conversion and slow motion generation.",
+      "params": [
+        "inputs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Redfin_Base_Get_location_infomation_by_zipcode",
+      "description": "Get location infomation by zipcode",
+      "params": [
+        "{'name': 'zipcode', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airbnb_Search_Search_Property_By_GEO",
+      "description": "Search Property By GEO",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de",
+        "{'name': 'swLat', 'type': 'NUMBER', 'des",
+        "{'name': 'neLng', 'type': 'NUMBER', 'des",
+        "{'name': 'neLat', 'type': 'NUMBER', 'des",
+        "{'name': 'swLng', 'type': 'NUMBER', 'des",
+        "{'name': 'currency', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "findmovies",
+      "description": "explore movies online based on your preferences",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sportsbook_Odds_Game_Odds_Tiered_Schedule",
+      "description": "This is a schedule that is tiered and separated with qualitative information. It is used for the website BookBreakers.us to create accordion tables of bet data.\n\nThe Tiers:\n1. Bet Type and Game Period (Eg. P3^0 is 3 Pointers Full Game in Basketball)\n2. Player (Eg. Jayson Tatum) (NOTE: If this is not a prop this tier will not exists)\n3. Lines Available (Eg. 2.5, 3.5)\n4. Outcomes for Those Lines (Eg. O, U for Over and Under)\n5. Sites (Eg. Fanduel, DraftKings, ETC.)",
+      "params": [
+        "{'name': 'event_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CatBreedDB_Breed_Type",
+      "description": "Gives all results by the type of breed.",
+      "params": [
+        "{'name': 'breedType', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HealthTips.getExerciseTips",
+      "description": "Provides exercise tips based on user's age, gender and fitness level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "solarPanelOptimizer.configurePanel",
+      "description": "Configures solar panels for optimal energy output based on environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_other_customers_average_income",
+      "description": "This method takes three arguments, 'total_customers', 'average_income', and 'wealthiest_customers_average_income', and returns the average income of the other customers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Winter Terrain Tiles",
+      "description": "Retrieve or generate global terrain tiles with winter colors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "StringModifier",
+      "description": "used to modify the string, such as adding prefixes.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Counter_Get_Current_Count",
+      "description": "get count and and don't increase",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_season_season_number_episode_episode_number_credits",
+      "description": "Get the credits (cast, crew and guest stars) for a TV episode.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Annual Average Dividend Yield",
+      "description": "Retrieve the annual average dividend yield of a stock.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_limit_check_daily_check",
+      "description": "daily limit check",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "plantEvolutionAnalyzer.analyzeGeneticDiversity",
+      "description": "Analyzes the genetic diversity within a specified plant population using DNA sequence data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Mactool2",
+      "description": "Upgrade the kernel version.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chain49_Get_UTXO_V2",
+      "description": "Returns array of unspent transaction outputs of address or xpub, applicable only for Bitcoin-type coins. By default, the list contains both confirmed and unconfirmed transactions. The query parameter confirmed=true disables return of unconfirmed transactions. The returned utxos are sorted by block height, newest blocks first. For xpubs or output descriptors, the response also contains address and derivation path of the utxo.\n\n\n\nUnconfirmed utxos do not have field height, the field confirmations has value 0 and may contain field lockTime, if not zero.\n\nCoinbase utxos have field coinbase set to ",
+      "params": [
+        "{'name': 'addressOrXpub', 'type': 'STRIN",
+        "{'name': 'blockchain', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Finish",
+      "description": "Used to end the task.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_final_weight",
+      "description": "This method takes no arguments and returns the final weight of the statue after the three weeks of carving.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "yoga.retreat_bookings",
+      "description": "Book yoga retreats with options for customization and additional services.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Define Custom Period",
+      "description": "Define a custom period for a calendar, typically used for vacations or annual closures.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_flickr_photos",
+      "description": "Search for photos on Flickr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetSquigglyAnnotation",
+      "description": "Retrieve a squiggly annotation from a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coins Index",
+      "description": "Retrieve a list of all coins available on Coinranking, along with their relevant information, for indexing purposes. This endpoint requires the **ultra** plan or higher.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Product API",
+      "description": "Retrieves product details from Amazon based on provided parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.RunTo",
+      "description": "# Run to a room or object. 'object' can only be: ['table', 'laptop', 'water', 'chair', 'cup', 'dining_room', 'toilet', 'sink', 'home_office', 'washing_machine', 'bathroom', 'bedroom']. \nAgent.RunTo(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllEquipment",
+      "description": "Returns a list of all available equipment along with their details.",
+      "params": []
+    }
+  ]
+}

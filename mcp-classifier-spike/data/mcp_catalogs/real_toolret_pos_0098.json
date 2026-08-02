@@ -1,0 +1,364 @@
+{
+  "catalog_id": "real_toolret_pos_0098",
+  "tools": [
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "microsoft/tapex-base",
+      "description": "TAPEX (Table Pre-training via Execution) is a conceptually simple and empirically powerful pre-training approach to empower existing models with table reasoning skills. TAPEX realizes table pre-training by learning a neural SQL executor over a synthetic corpus, which is obtained by automatically synthesizing executable SQL queries.",
+      "params": [
+        "table",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indian_Stock_Exchange_API_StockPrice",
+      "description": "Enter the SYMBOL such as TATAMOTORS, M&M etc as a parameter at the endpoint and it will give your the Live Price updates from exchange.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "display_account_balance",
+      "description": "Display account balance information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aviator Latest Results API",
+      "description": "Retrieves the latest results from Aviator at Vai de Bob. The API returns the most recent results first, followed by the oldest results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetFoodRecipe",
+      "description": "Retrieve a food recipe based on the provided ingredients and cooking method.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "factorialComputation",
+      "description": "Calculates the factorial of a given number and provides detailed computation steps if requested.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoAPI_Get_Country_Details",
+      "description": "Get details of country from its name and prefix.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Also Bought",
+      "description": "Retrieves also bought details for a single product on Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Routing Enhancement API",
+      "description": "Create a routing along a specific cycleway",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "airflow.create_dag",
+      "description": "Create a new Directed Acyclic Graph (DAG) in Apache Airflow to manage workflow orchestration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Poland Songs API",
+      "description": "Retrieves the Poland Songs chart information from the Billboard API",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MapTiles_getStandardMapTile",
+      "description": "Standard tiles with labels in local language for a place (untranslated and untransliterated) as known from OpenStreetMap",
+      "params": [
+        "{'name': 'y', 'type': 'NUMBER', 'descrip",
+        "{'name': 'x', 'type': 'NUMBER', 'descrip",
+        "{'name': 'z', 'type': 'NUMBER', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketballLeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events in the Basketball League.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_News_Net_Get_details_of_a_news_item",
+      "description": "Get the details of each news item, such as the title, an image and the body of the news item, in addition to other properties",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 'title', 'type': 'string', 'des",
+        "{'name': 'date', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "clip-vit-base-patch32-ko",
+      "description": "Korean CLIP model trained by Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation. It is a zero-shot image classification model that can be used to classify images without any training data.",
+      "params": [
+        "images",
+        "candidate_labels",
+        "hypothesis_template"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.access.virtual_classroom_tools",
+      "description": "Provides a list of recommended virtual classroom tools tailored to specific teaching needs and student engagement levels.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wayback Query",
+      "description": "Query the Wayback Machine for archived domain information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PrintQualityOptimizer.optimizeSettings",
+      "description": "Optimizes the print settings based on the media type and desired quality, adjusting various parameters to achieve the best print results.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Clusterer",
+      "description": "Clustering of data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetAvailableLabels",
+      "description": "Retrieves a list of available labels for object detection in video images.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGlacierSize",
+      "description": "Retrieve the size of a glacier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "updateShipmentDetails",
+      "description": "Update the details of a shipment in the logistics management software",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_Clock_Coordinated_Universal_Time",
+      "description": "Gets the coordinated universal time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_AUTH_REQUESTS_2",
+      "description": "READ - AUTH REQUESTS 2",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listBanks",
+      "description": "Retrieve a list of all supported banks and their unique codes.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "estimate_ownership_cost",
+      "description": "Estimates the ownership cost for a vehicle over the next 5 years based on the vehicle's VIN, annual mileage, and starting mileage.",
+      "params": [
+        "vin",
+        "mileage_year",
+        "mileage_start"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cards by Type",
+      "description": "Returns a list of Hearthstone cards filtered by various parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NIV_Bible_GetSingleVerse",
+      "description": "Get a single verse based on the book, chapter and verse number.",
+      "params": [
+        "{'name': 'Verse', 'type': 'NUMBER', 'des",
+        "{'name': 'Chapter', 'type': 'NUMBER', 'd",
+        "{'name': 'Book', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_x_values",
+      "description": "Given an equation |20x-10| = 90, this function finds the values of x.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Location User Stories",
+      "description": "Retrieve location user stories by providing a list of location IDs. The location IDs can be found using the /location/search endpoint.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Undervalued Growth Stocks",
+      "description": "Retrieve a list of undervalued growth stocks from Yahoo Finance, with the option to specify a start index.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Specified_Users_Links",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [{\"name\": \"user\", \"type\": \"STRING\", \"description\": \"specified user\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Geeklist_Get_Specified_Users_Links\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'user', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AiNameExpand",
+      "description": "Expands a name to its full form, considering language, script, encoding, style, and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Text_Translator_v2_getLanguages",
+      "description": "This endpoint is used to get a list of available language codes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "WeatherCheck",
+      "description": "This API checks the weather of a specific location.",
+      "params": [
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Positions for Celestial Bodies",
+      "description": "Returns the positions of celestial bodies for a given string range in tabular format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ownership",
+      "description": "Retrieve ownership information for a given performance ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search By Keyword Filters",
+      "description": "Complimentary to the \"Search By Keyword\" endpoint. Obtain a list of filters available based on a keyword.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_13_getAccountById",
+      "description": "Retrieves an account",
+      "params": [
+        "{'name': 'accountID', 'type': 'STRING', "
+      ]
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_pos_0076",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Dad Jokes API",
+      "description": "The Dad Jokes API returns a collection of random dad jokes, allowing developers to integrate humor into their applications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CCI",
+      "description": "Retrieve Commodity Channel Index (CCI) data for a given symbol and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMicroprocessorDetails",
+      "description": "Retrieve details of a specific microprocessor",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Exchange_Rate_Provider_Get_Foreign_Exchange_Rates_for_other_major_currencies",
+      "description": "Get Foreign Exchange Rates for other major currencies. At the moment only GBP and USD are available. More will be added with future updates.\n\nSo as `currencyId` please **use only** `/gbp` or `/usd`.",
+      "params": [
+        "{'name': 'currencyId', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Download Verification Results",
+      "description": "This endpoint returns the result string to be downloaded. Pass the name of the string to be downloaded as a path parameter. The result string name is always in the format {stringname}_output.xlsx, replacing {stringname} with the name returned from the upload string call.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Active_listings",
+      "description": "Returns active rentals",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '",
+        "{'name': 'start_year', 'type': 'NUMBER',",
+        "{'name': 'start_month', 'type': 'NUMBER'",
+        "{'name': 'number_of_months', 'type': 'NU"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_mode_from_dataframe_column(data_frame, number_col)",
+      "description": "def calculate_mode_from_dataframe_column(data_frame, number_col):\n    \"\"\"\n    This function takes in a pandas DataFrame and a column name containing numbers, and returns the mode of the numbers in that column.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing a column with numbers.\n    number_col (str): The column name for the numbers.\n    \n    Returns:\n    int: The mode of the numbers in the specified column.\n    \"\"\"\n    # Extract the numbers from the specified column\n    numbers = data_frame[number_col].tolist()\n    \n    # Calculate the frequency of each number\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "makepayment",
+      "description": "send money to your friends",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_location_coordinates",
+      "description": "Query the latitude and longitude coordinates of a specified address",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kitten",
+      "description": "Generates a random kitten image with the specified width and height.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDatabaseInfo",
+      "description": "Retrieve information about a database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unit_Measurement_Conversion_Convert_a_Unit",
+      "description": "GET the Unit and Value you want to convert, and get a object with the result and abbreviation (if available).",
+      "params": [
+        "{'name': 'fromValue', 'type': 'STRING', ",
+        "{'name': 'toUnit', 'type': 'STRING', 'de",
+        "{'name': 'fromUnit', 'type': 'STRING', '",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindProductId",
+      "description": "This API returns the id of a product.",
+      "params": [
+        "{'name': 'product_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getThrust",
+      "description": "Retrieve the thrust produced by a spacecraft propulsion system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ethereum Price in Uniswap v2",
+      "description": "Retrieve the current Ethereum price in Uniswap v2",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "news_v2_list_trending",
+      "description": "Fetches a list of trending news from the Seeking Alpha API.",
+      "params": [
+        "size",
+        "since",
+        "until"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Formula_1_Standings_Driver_Standings",
+      "description": "Will return the current F1 season driver standings.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "firstAPI_v2_getOrderById",
+      "description": "for testing purpose only",
+      "params": [
+        "{'name': 'orderid', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nationalize",
+      "description": "Fetches the nationality of the provided name using the Genderize-Nationalize API.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_max_subarray_sum",
+      "description": "Finds the maximum sum of a contiguous subarray within a list of integers.",
+      "params": [
+        "nums"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PageantDB_Single_Country",
+      "description": "Get all details of a country by its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Manager Image",
+      "description": "Retrieve the image for a specific Ice Hockey manager in PNG format by providing the manager ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "parse_marks",
+      "description": "This method takes a string representing marks in the format \"X out of 100\" and returns the corresponding integer value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateFutureValue",
+      "description": "Calculates the future value of an investment based on periodic, constant payments and a constant interest rate.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asia",
+      "description": "Fetches a list of Asian cities sorted by a specified criterion with pagination support.",
+      "params": [
+        "sort",
+        "sort_by",
+        "size",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "isSongAvailable",
+      "description": "Determine if a song is available in your country or region.",
+      "params": [
+        "songUrl",
+        "countryCode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicAPI_public_search_introspection",
+      "description": "Allows you to fetch all different enums needed for sending API requests",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_files",
+      "description": "Finds all files with a specific extension in a directory and its subdirectories.",
+      "params": [
+        "directory",
+        "extension"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Codes",
+      "description": "Returns a list of language codes in ISO 639-1 format, which can be used for language detection and translation purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "transaction_confirmation_query",
+      "description": "Query and obtain confirmation information for a specified transaction",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyzeProteins",
+      "description": "Analyze a protein sequence and provide information about its structure and function",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Smile_list_documents",
+      "description": "Get the user's documents from employment data sources.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_fuel_needed",
+      "description": "This method takes two arguments, 'fuel_rate' and 'distance', and returns the amount of fuel needed to fly the given distance.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listBinVersions",
+      "description": "Retrieves a list of all versions of a specific JSON bin.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "musicPlaylist.addSong",
+      "description": "Adds a song to the specified playlist. The song is identified by its unique song ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "albert-base-v2",
+      "description": "ALBERT Base v2 is a transformers model pretrained on a large corpus of English data in a self-supervised fashion using a masked language modeling (MLM) objective. It was introduced in this paper and first released in this repository. This model, as all ALBERT models, is uncased: it does not make a difference between english and English.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Client Folder List",
+      "description": "Retrieves a list of client folders.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Decimals",
+      "description": "Retrieves the decimal places used by an ERC-20 token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_x_values",
+      "description": "Given an equation |20x-10| = 90, this function finds the values of x.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "get_unit_digit",
+      "description": "This method takes an integer and returns its unit digit.",
+      "params": []
+    }
+  ]
+}

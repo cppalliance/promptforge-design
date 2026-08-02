@@ -1,0 +1,358 @@
+{
+  "catalog_id": "real_toolret_neg_0108",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Send SMS Command",
+      "description": "Send a command to the bulksmsapi to send a message to a specific recipient.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "xyz_map_tiles_for_ocean_conditions",
+      "description": "Fetches ocean condition tiles based on the specified variable and datetime using Wavebase API.",
+      "params": [
+        "variable",
+        "datetime"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OPA_test_User_summary",
+      "description": "Returns the user's document status summary",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "filter_rental_service_with_car_plate",
+      "description": "Filter the list of rental services to find companies that offer cars with a specific license plate number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ThermoCalc.calculateHeatTransfer",
+      "description": "Calculates the heat transfer between two substances based on their specific heat capacities, masses, and temperature changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Class Details",
+      "description": "Retrieves detailed information about a specific class in Dungeons and Dragons 5th Edition, including its proficiencies, abilities, and other relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Clusterer",
+      "description": "Clustering of data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "OneLike_Social_Media_News_in_Greek",
+      "description": "Get social media news in Greek",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trader_Wagon_getTraderPositions",
+      "description": "Get trader positions of a given portfolio id",
+      "params": [
+        "{'name': 'portfolioId', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Car_API_Engines",
+      "description": "To include additional information about the returned body (such as year, make, model and trim) request with the query parameter as verbose=yes.\n\nFor complex queries you may use the json field to send an array of URL encoded JSON conditions, example:\n\n`[{\"field\": \"horsepower_hp\", \"op\": \">=\", \"val\": 100}, {\"field\": \"horsepower_hp\", \"op\": \"<=\", \"val\": 300}]`\n\nSee /api/vehicle-attributes for a complete list of vehicle attributes.\n\nAllowed operators are: `>`, `<`, `>=`, `<=`, `in`, `not in`, `like`, `not like`, `is null` and `not null`.\n\nAllowed json search fields are: year, make, model, trim, fuel",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top 100 Cryptocurrencies",
+      "description": "This API endpoint returns the list of the top 100 cryptocurrencies, along with their relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_recipes",
+      "description": "Search through thousands of recipes using advanced filtering and ranking. NOTE: This method combines searching by query, by ingredients, and by nutrients into one endpoint.",
+      "params": [
+        "{'name': 'query', 'schema': {'type': 'st",
+        "{'name': 'cuisine', 'schema': {'type': '",
+        "{'name': 'excludeCuisine', 'schema': {'t",
+        "{'name': 'diet', 'schema': {'type': 'str",
+        "{'name': 'intolerances', 'schema': {'typ",
+        "{'name': 'equipment', 'schema': {'type':",
+        "{'name': 'includeIngredients', 'schema':",
+        "{'name': 'excludeIngredients', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_leagues_list_Deprecated",
+      "description": "List all leagues by category (football, cricket, basketball, tennis, hockey)",
+      "params": [
+        "{'name': 'category', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetServerTime",
+      "description": "Returns the current server time in the Finance domain, as called by the bybit_leaderboard tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Social_Sentiment_For_Twitter_and_StockTwits_get_social_trending_posts",
+      "description": "Search the top 50 tickers trending on social media by posts.",
+      "params": [
+        "{'name': 'social', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_carrots_chopped",
+      "description": "This method takes three arguments, 'machines', 'time', and 'carrots_per_machine', and returns the total number of carrots chopped by the given number of machines in the given time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getForestLoss",
+      "description": "Retrieve forest loss information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.bootcamp_details",
+      "description": "Fetches detailed information about a specific data science bootcamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataIntegration.syncSchedule",
+      "description": "Schedules synchronization tasks between data lakes and data warehouses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last SMS Campaign",
+      "description": "Retrieve the details of the most recently sent SMS campaign.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CCI",
+      "description": "Retrieve Commodity Channel Index (CCI) data for a given symbol and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hourlyWeather",
+      "description": "This endpoint returns the historical weather data on an hourly level for a given day and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Top_Charts_2022_Spotify_Music",
+      "description": "Spotify top chart songs 2022",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_news",
+      "description": "Search for news articles using a specified keyword and language.",
+      "params": [
+        "keyword",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get County Boundaries by Name and State",
+      "description": "Retrieves the boundaries of a county by its name and state in GeoJSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schedule",
+      "description": "Retrieve the schedule of NBA games, including past and upcoming games, and possibly provide additional statistics for the games.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTemplates",
+      "description": "Retrieve a list of email templates for the mailslurp_email_testing tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_API_Get_new_releases",
+      "description": "Get new releases albums from one of the countrys :\nAD, AE, AG, AL, AM, AO, AR, AT, AU, AZ, \nBA, BB, BD, BE, BF, BG, BH, BI, BJ, BN, \nBO, BR, BS, BT, BW, BZ, CA, CD, CG, CH, \nCI, CL, CM, CO, CR, CV, CW, CY, CZ, DE, \nDJ, DK, DM, DO, DZ, EC, EE, EG, ES, ET, \nFI, FJ, FM, FR, GA, GB, GD, GE, GH, GM, \nGN, GQ, GR, GT, GW, GY, HK, HN, HR, HT, \nHU, ID, IE, IL, IN, IQ, IS, IT, JM, JO, \nJP, KE, KG, KH, KI, KM, KN, KR, KW, KZ, \nLA, LB, LC, LI, LK, LR, LS, LT, LU, LV, \nLY, MA, MC, MD, ME, MG, MH, MK, ML, MN, \nMO, MR, MT, MU, MV, MW, MX, MY, MZ, NA, \nNE, NG, NI, NL, NO, NP, NR, NZ, OM, PA, \nPE, PG, PH, PK, ",
+      "params": [
+        "{'name': 'country', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Related Prostrings by user_id",
+      "description": "Retrieve a list of Instagram user prostrings related to a given user ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LiveMatches",
+      "description": "Get live handball matches.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Locations_Languages_Countries_German_Cities_Filter_German_Cities",
+      "description": "Filter all German citities by name or postal code",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "AcousticPressureSimulator.simulatePressureWave",
+      "description": "Simulates the propagation of a pressure wave in a medium based on initial conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pinterest_APIs_Get_User_Pins",
+      "description": "Get User Pins by user name",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getGender",
+      "description": "Determines the gender of a person based on their name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leadership.conflict_resolution_outcomes",
+      "description": "Record and analyze outcomes of conflict resolution attempts led by senior leaders.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "course.schedule_broadcast",
+      "description": "Schedule a live broadcast for an online course, specifying the time and content details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "extract_temperatures",
+      "description": "This method takes a dictionary representing a table, and returns a list containing the temperature values.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Webcams by Category",
+      "description": "Returns a list of webcams according to the specified categories. Multiple categories must be separated by commas. Required: at least one category.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHistoricPrice",
+      "description": "Retrieve the historic price of a specified cryptocurrency at a specific date and time.",
+      "params": [
+        "cryptoCurrency",
+        "fiatCurrency",
+        "timestamp"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "China Scheduled Flights Growth API",
+      "description": "Retrieve weekly China scheduled departing flights growth data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

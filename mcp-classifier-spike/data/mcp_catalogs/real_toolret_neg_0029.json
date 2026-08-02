@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_neg_0029",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "sheldonxxxx/OFA_model_weights",
+      "description": "This is an unoffical mirror of the model weights for use with https://github.com/OFA-Sys/OFA. The original link is too slow when downloading from outside of China.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IEAdAFJ",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Allbet_Online_Casino_in_Singapore_Allbet_Casino_Singapore",
+      "description": "[Allbet ](https://allbetsg.com/\n)is so much more than just an online Allbet Casino Singapore.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Movie Showtimes",
+      "description": "Retrieve the showtimes for a specific movie based on its IMDb ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Overview",
+      "description": "Returns overview stats (ADR, OCC ,Revenue ..) of a location rental data",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "take_screenshot",
+      "description": "Take a screenshot of a webpage with various customizable options and return the URL of the saved image.",
+      "params": [
+        "targeturl",
+        "islandscape",
+        "proxycountry",
+        "isfullyloaded",
+        "clickcount",
+        "fullpage",
+        "clickselector",
+        "hastouch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sports_Live_Scores_Futsal_Match_Statistics",
+      "description": "Returns Statistics about a given match_id. The match does not have to be necessarily live but also finished. You can retrieve Match IDs from the Futsal Live Matches endpoint.",
+      "params": [
+        "{'name': 'match_id', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Image Downloader",
+      "description": "Downloads an image from a given URL.",
+      "params": [
+        "{'name': 'url', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "yiwugo_product_data_search_products",
+      "description": "search products\nThe source of the data can be controlled through the 'lan' field (en: English website, cn: Chinese website)",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "packages_v2_track",
+      "description": "Retrieves tracking information for a specific package using the TrackingMore API.",
+      "params": [
+        "trackingnumber"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "inch_to_feet",
+      "description": "Converts a given length in inches to feet using a given scale factor.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonal_goal_analysis_scoring_first",
+      "description": "Provides the scoring first goal statistics for a given match within specific minute intervals (0-10, 11-20, 21-30, etc.).",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ScrapeMaster_Get_data_by_tag",
+      "description": "This endpoint will return all data from a specific tag.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr",
+        "{'name': 'tag', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SearchMovieMusic",
+      "description": "\"Search for movies or music API that takes three parameters - 'keyword', 'type', and 'year'. The 'keyword' parameter refers to the search term for either movies or music. The 'type' parameter specifies whether the API should search for movies or music, and the 'year' parameter filters the results by the year.\"",
+      "params": [
+        "{'name': 'keyword', 'in': 'query', 'sche",
+        "{'name': 'type', 'in': 'query', 'schema'",
+        "{'name': 'year', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pairs",
+      "description": "\nQuery different combinations of the trading pairs.\n\nThe most common query is all trading pairs of a decentralised exchange.\n\n`/pairs?chain_slugs=ethereum&exchange-slugs=uniswap-v2`\n\nThe results are always paginated.\n\n## Parameter seralisation\n\nNote that lists are not JSON serialised, but use [OpenAPI query parameter serialization](https://swagger.io/docs/specification/serialization/). I.e. lists are comma separated, no spaces between items.\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tanzania_API_Measure_Distance",
+      "description": "This endpoint calculates the distance between two locations based on their latitude and longitude coordinates, while allowing the user to specify the unit of measurement.\n\nBelow Example: **Distance from Arusha to Dar es Salaam**",
+      "params": [
+        "{'name': 'lon1', 'type': 'NUMBER', 'desc",
+        "{'name': 'lon2', 'type': 'NUMBER', 'desc",
+        "{'name': 'lat2', 'type': 'NUMBER', 'desc",
+        "{'name': 'lat1', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "student_progress_tracker",
+      "description": "Tracks and reports the progress of students in an e-learning course, including time spent, modules completed, and current scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_periods_for_entity(df, entity_col, period1_col, per",
+      "description": "def calculate_difference_between_periods_for_entity(df, entity_col, period1_col, period2_col, entity_name):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values over different periods, the name of the entity, and two periods, and returns the difference in values between the two periods for the specified entity.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the values of entities over different periods.\n    entity_col (str): The column name for the entities.\n    period1_col (str): The column name for the first period.\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Talkface_IELTS_Prep",
+      "description": "Use the latest IELTS Speaking exam questions to prep your IELTS speaking with Talkface.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Conversion_Cloud_DownloadFile",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OS_Sports_Perform_Team_logo",
+      "description": "Get team logo by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Animate.deleteAnimation",
+      "description": "Deletes an existing animation.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "data_ml.model_training",
+      "description": "Train machine learning models based on provided datasets and model specifications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v13_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_mode_of_numerical_column(data_frame, num_col)",
+      "description": "def calculate_mode_of_numerical_column(data_frame, num_col):\n    \"\"\"\n    This function takes in a pandas DataFrame and a numerical column name, and returns the mode of the numerical column.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the numerical column.\n    num_col (str): The column name for the numerical values.\n    \n    Returns:\n    int: The mode of the numerical column.\n    \"\"\"\n    # Extract the numerical column from the DataFrame\n    num_values = data_frame[num_col].tolist()\n    \n    # Calculate the frequency of each numerical value\n    counter = Counter(n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Python_3_Code_Compiler_Python_3_Versions",
+      "description": "Python 3 Versions",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMediaLaws",
+      "description": "Retrieve information about media laws",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v5_Autocomplete",
+      "description": "Twitter Seach Query Autocomplete",
+      "params": [
+        "{'name': 'value', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getServiceById",
+      "description": "Retrieves information about a specific public service by its ID.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_philosopher_by_name",
+      "description": "Searches for a philosopher by their name using the specified API key and returns the result.",
+      "params": [
+        "name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Match Lineups",
+      "description": "Retrieve the lineups for a specific American Football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exhibition.schedule",
+      "description": "Provides a schedule of upcoming exhibitions at a specified art gallery.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Earnings Before Interest and Taxes (EBIT)",
+      "description": "Retrieve the Earnings Before Interest and Taxes (EBIT) for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_least_common_multiple",
+      "description": "This method takes two integers as arguments and returns their least common multiple.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "upgrade_downgrade_history",
+      "description": "Fetches the upgrade and downgrade history for a given stock symbol from the Yahoo Finance Complete API.",
+      "params": [
+        "symbol",
+        "is_from"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dictionary_Data_API_GetDefinition",
+      "description": "This is used to retrieve definition, pronunciation and example usages of any word",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCountrySecurity",
+      "description": "Retrieve international security information for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Routing Enhancement API",
+      "description": "Create a routing along a specific cycleway",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rocket_League_Stat",
+      "description": "Check a player's stat:\n`rocket-league1.p.rapidapi.com/stat/:player/:stat`",
+      "params": [
+        "{'name': 'player', 'type': 'string', 'de",
+        "{'name': 'stat', 'type': 'ENUM', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "OpenCV",
+      "description": "a computer vision library, conversion speed is slow, but the conversion quality is high, the operation is complex.",
+      "params": []
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_toolret_neg_0082",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "Recognize Face",
+      "description": "useful when you only want to recognize faces in the picture. like: recognize who appears in the photo. The input to this tool should be a string, representing the image_path.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_time_to_complete",
+      "description": "This method takes two arguments, 'work_rate_1' and 'work_rate_2', and returns the time it takes for both workers to complete the work together.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "sms77io_Get_Webhooks",
+      "description": "Retrieves all existing webhooks.",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DailyCred_Create_a_User_With_Only_an_Email",
+      "description": "{\"category_name\": \"Tools\", \"required_parameters\": [{\"name\": \"email\", \"type\": \"STRING\", \"description\": \"The user's email.\", \"default\": \"\"}, {\"name\": \"client_id\", \"type\": \"STRING\", \"description\": \"Your client id, found on your settings page.\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"DailyCred_Create_a_User_With_Only_an_Email\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'email', 'type': 'STRING', 'des",
+        "{'name': 'client_id', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "optimizeRoomLayout",
+      "description": "Provides an optimized layout plan for furniture and fixtures in a room based on dimensions and user preferences.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_podcast_episodes",
+      "description": "Fetch podcast episodes including audio, image, and description using the username of the podcast.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_getJP2Image",
+      "description": "Download a JP2 image for the specified datasource that is the closest match in time to the `date` requested.\n\n        Either `sourceId` must be specified, or the combination of `observatory`, `instrument`, `detector`, and `measurement`.",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "analyst_ratings_us_equities",
+      "description": "Fetches analyst ratings for US equities using the Twelve Data API.",
+      "params": [
+        "symbol",
+        "exchange",
+        "country",
+        "rating_change",
+        "outputsize"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateOpticalRotation",
+      "description": "Calculate the optical rotation of a given compound",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "downloadMinecraftJar",
+      "description": "Downloads a Minecraft .jar string for a specific version.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Photos",
+      "description": "Retrieve photos of a specific business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_train_ticket_booking_link",
+      "description": "Generate official high-speed train ticket booking link",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Contributions (Suggestions)",
+      "description": "Retrieve user contributions (suggestions) related to song lyrics from Genius.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_fuel_needed",
+      "description": "This method takes two arguments, 'fuel_rate' and 'distance', and returns the amount of fuel needed to fly the given distance.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Mexican_Food_DB_Detailed_Food_Recipe_by_ID",
+      "description": "Mexican Food Recipe by ID",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_device_status",
+      "description": "Fetches the current operational status and metrics of a specified IoT device.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hummingbird_v1_Anime",
+      "description": "{\"category_name\": \"Entertainment\", \"required_parameters\": [{\"name\": \"id\", \"type\": \"STRING\", \"description\": \"Anime ID\", \"default\": \"steins-gate\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Hummingbird_v1_Anime\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "v1_profanityfilter",
+      "description": "Filters profanity from the given text using the API Ninjas Profanity Filter API. Returns the censored version of the text with bad words replaced by asterisks, and indicates whether the text contains profanity.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseQueryExecutor.runProcedure",
+      "description": "Runs a stored procedure on the specified database and returns the result. The database connection, procedure name, and optional parameters must be provided.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Today's Predictions",
+      "description": "Retrieve accurate predictions for events happening on the current day. This feature provides users with valuable insights and helps them make informed decisions about upcoming matches.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_v3_v3_Channels",
+      "description": "Returns a collection of zero or more `channel` resources that match the request criteria.",
+      "params": [
+        "{'name': 'part', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Consulta_CPF_CNPJ_Brasil_Consulta_dados_societ_rios",
+      "description": "**## consulta dados dos s\u00f3cios do cnpj consultado pelo id_socio**",
+      "params": [
+        "{'name': 'ID_SOCIO', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "by_state_city",
+      "description": "Searches for homeless shelters in a specified state and city using the provided API key.",
+      "params": [
+        "state",
+        "city"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_Phone_Specs_Database_Get_Specifications_by_Brand_Name_and_Model_Name",
+      "description": "Get all phone specifications by brand name and model name",
+      "params": [
+        "{'name': 'brandName', 'type': 'string', ",
+        "{'name': 'modelName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrency_balance_Get_Chiliz_Balance_From_Specific_Network",
+      "description": "This endpoint will return back the Chiliz balance of an address in a specific network.",
+      "params": [
+        "{'name': 'address', 'type': 'string', 'd",
+        "{'name': 'network', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dashboard_free_access",
+      "description": "Grants free access to the dashboard for the email_scraper tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "news_v2_list_trending",
+      "description": "Fetches a list of trending news from the Seeking Alpha API.",
+      "params": [
+        "size",
+        "since",
+        "until"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "LangID",
+      "description": "A fast language detection tool with good recognition rates for most mainstream languages, but may not be accurate enough for a few languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CEP Consultation",
+      "description": "Retrieve information about a Brazilian postal code (CEP) using the Consulta CEP API",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "k_to_use",
+      "description": "You can ask user for guidance when you think you need more information to handle the task, but you should use this tool as less as you can.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "recipes/list-similarities",
+      "description": "Retrieve a list of recipes that are similar to a specific recipe, given its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Business Planning API",
+      "description": "Provides business planning resources and tools for starting a small business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "token2go_Read_a_Link_or_Token_by_its_id",
+      "description": "Read a link or token by its id. It is used to see the content (t=link or t=token), but cannot validate the signature.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 't', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fasting Center Information",
+      "description": "Retrieve information about a specific fasting center",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Summarizer",
+      "description": "summarizes the content of the text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPeopleByTopic",
+      "description": "Retrieve a list of artificial intelligence influencers, entrepreneurs, and top researchers filtered by a specific topic.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "testFramework.validateMethodOutput",
+      "description": "Validates the output of a Java method against expected results and provides detailed error logs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_individual_articles",
+      "description": "Retrieves individual articles from a specified newspaper using the RapidAPI service.",
+      "params": [
+        "newspaperid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AugustSmartLock",
+      "description": "Used for controlling and managing the August Smart Lock, specifically installed on the front door of the user's residence. It provides tools to lock and unlock the door, check the lock status, add and delete guests, grant and revoke access for guests, generate and revoke access codes, and view access history.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Starline_Telematics_DevicePosition",
+      "description": "\u0417\u0430\u043f\u0440\u043e\u0441 \u0434\u0430\u043d\u043d\u044b\u0445, \u043e \u0442\u0435\u043a\u0443\u0449\u0435\u043c (\u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u043c \u0437\u0430\u0444\u0438\u043a\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u043c) \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430. \u0412 \u0441\u043b\u0443\u0447\u0430\u0435, \u0435\u0441\u043b\u0438 \u0432 \u0431\u0430\u0437\u0435 \u0434\u0430\u043d\u043d\u044b\u0445 \u043d\u0435\u0442 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438 \u043e \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430, \u0431\u043b\u043e\u043a position \u0431\u0443\u0434\u0435\u0442 \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0435\u043d \u043f\u0443\u0441\u0442\u044b\u043c. \u0414\u0430\u043d\u043d\u044b\u0439 \u043c\u0435\u0442\u043e\u0434 \u0443\u0441\u0442\u0430\u0440\u0435\u043b, \u0436\u0435\u043b\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c /json/v3/device/{device_id}/data. \u041f\u0440\u0438\u043c\u0435\u0440 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f \u0437\u0430\u043f\u0440\u043e\u0441\u0430 \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e curl: <br><br><code>curl \"https://developer.starline.ru/json/v1/device/4568857/position\" --cookie 'slnet=15CFA19BFD3E8884C716FFA4E39AF866'</code>\n",
+      "params": [
+        "{'name': 'device_id', 'type': 'NUMBER', "
+      ]
+    }
+  ]
+}

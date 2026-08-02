@@ -1,0 +1,320 @@
+{
+  "catalog_id": "real_toolret_pos_0130",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "downloadRepository",
+      "description": "Download a specific government code repository as a ZIP file.",
+      "params": [
+        "repositoryId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LiveMatches",
+      "description": "Get live handball matches.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Similar_Web_get_analysis",
+      "description": "Get website traffic, key metrics, including engagement rate, traffic ranking, keyword ranking and traffic source.",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getEmotionalResponse",
+      "description": "Retrieve emotional response information based on environmental factors",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Taxonomies",
+      "description": "Retrieve a list of taxonomies from the South Asian Express tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "universal",
+      "description": "Enables to access web pages, analyze PDFs, generate QR codes, etc.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "pet_rescue_search",
+      "description": "Search for rescue pets available for adoption.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_v2_Test_API",
+      "description": "This API is to test if server is up and running",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_247NaijaBuzz_247NaijaBuzz_Media",
+      "description": "For Flash Music Download",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "LangID",
+      "description": "A fast language detection tool with good recognition rates for most mainstream languages, but may not be accurate enough for a few languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Appibase_getStockLocationAddress",
+      "description": "Get stock location address",
+      "params": [
+        "{'name': 'stock_location_id', 'type': 'N"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_correct_weight",
+      "description": "This method takes two arguments, 'num_students' and 'correct_total_weight', and returns the correct weight of a single student.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getArticleDetails",
+      "description": "Retrieve details for a specific article.",
+      "params": [
+        "articleId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "clickMouse",
+      "description": "Simulate a mouse click at the current position",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "robotics.vision.object_recognition",
+      "description": "Identifies objects within a given image frame using robot vision systems.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeSignatureDetector.detectTimeSignature",
+      "description": "Detects the time signature of a given piece of music based on its rhythmic pattern.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cinema Showtimes",
+      "description": "Retrieve showtimes for a specific cinema, optionally filtered by a specific film.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_sale",
+      "description": "This method takes a list of sales values as integers and returns the total sale.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "spacHero_SPAC_Database_SPAC_Calendar",
+      "description": "Get important SPAC dates such as merger meetings dates, warrant redemption deadlines, definitive agreement dates, unit split (estimate), SPAC deadline (estimate).\n\nAvailable options: merger, split, deadline, redemption",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webtoon_canvas_titles_get_info",
+      "description": "Get comic information\n*To load images, please check the tutorial at https://rapidapi.com/apidojo/api/webtoon/tutorials/how-to-load-images",
+      "params": [
+        "{'name': 'titleNo', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Rewards",
+      "description": "This endpoint is used to retrieve bid rewards for a given slug.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_login_records",
+      "description": "Retrieve login records of a specified account within a certain time range",
+      "params": []
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_playlists",
+      "description": "Get a list of the playlists owned or followed by the current Spotify\nuser.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_range_for_product_of_floor_and_ceil(target_product)",
+      "description": "def find_range_for_product_of_floor_and_ceil(target_product):\n    \"\"\"\n    Find the range of possible values for a variable such that the product of the floor and ceiling of the variable equals a target product.\n\n    Parameters:\n    target_product (int): The target product of the floor and ceiling of the variable.\n\n    Returns:\n    tuple: The range of possible values for the variable in interval notation (inclusive, exclusive).\n    \"\"\"\n    # Start from the square root of the target product and decrease until we find a suitable range\n    start_value = math.sqrt(target_product)\n    while True:\n  ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Data by LinkedIn URL",
+      "description": "Given a company's LinkedIn URL, the API returns valuable data points about the company in JSON format. **1 credit per call.**",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_properties_list_similarities_Deprecated",
+      "description": "List similar properties",
+      "params": [
+        "{'name': 'prop_status', 'type': 'STRING'",
+        "{'name': 'property_id', 'type': 'NUMBER'",
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Dexi.io",
+      "description": "a web data collection tool that supports web crawling, data extraction and export.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "evaluate_logarithm(log_base, exponent)",
+      "description": "def evaluate_logarithm(log_base, exponent):\n    \"\"\"\n    Evaluates the logarithm of a given base and exponent.\n\n    Parameters:\n    log_base (int): The base of the logarithm.\n    exponent (int): The exponent of the base.\n\n    Returns:\n    float: The result of the logarithm.\n    \"\"\"\n    return math.log(log_base**exponent, log_base)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieving_a_collection",
+      "description": "Retrieve detailed information about a specific collection on OpenSea, including real-time statistics such as floor price.",
+      "params": [
+        "collection_slug"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "mazkooleg/0-9up-hubert-base-ls960-ft",
+      "description": "This model is a fine-tuned version of facebook/hubert-base-ls960 on the None dataset. It achieves an accuracy of 0.9973 on the evaluation set.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_stock_v2_get_financials",
+      "description": "Mapped to Financials tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_by_username",
+      "description": "Fetches user data from Instagram using a given username via the Toolbench RapidAPI.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Event",
+      "description": "Retrieves a list of events that can be filtered by various fields and ordered by start time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Districts with Coordinates",
+      "description": "Retrieve a list of all districts along with their coordinates in English and Bangla.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_probability_of_combination(counts_df, category1, category2)",
+      "description": "def calculate_probability_of_combination(counts_df, category1, category2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of counts for combinations of two categories, and returns the probability of a specific combination.\n    \n    Args:\n    counts_df (pd.DataFrame): A pandas DataFrame containing counts for combinations of two categories.\n    category1 (str): The name of the first category in the specific combination.\n    category2 (str): The name of the second category in the specific combination.\n    \n    Returns:\n    float: The probability of the specific combina",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LeagueNextMatches",
+      "description": "Get the next matches of an American Football league for a specific tournament and season, including match timings, teams, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stores",
+      "description": "Get Stores",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MoviesDatabase_titles_id_main_actors",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "create_system",
+      "description": "This method takes two arguments, 'total_coins' and 'total_amount', and returns a tuple representing the system of linear equations that can be used to solve the problem.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currencies_And_Countries_Crypto_Convert",
+      "description": "You can convert crypto currencies.",
+      "params": []
+    }
+  ]
+}

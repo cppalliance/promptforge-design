@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0157",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "choose_answer",
+      "description": "Chooses the correct answer from a list of options based on the calculated selling price.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_Phone_Specs_Database_Get_Specifications_by_Brand_Name_and_Model_Name",
+      "description": "Get all phone specifications by brand name and model name",
+      "params": [
+        "{'name': 'brandName', 'type': 'string', ",
+        "{'name': 'modelName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hashtag_feed_video_posts",
+      "description": "Fetches a feed of video posts associated with a specific hashtag from the TikTok API.",
+      "params": [
+        "fresh",
+        "name",
+        "limit",
+        "max_cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dimondevosint_Phone_number_information",
+      "description": "It gives you some public information about the phone number.",
+      "params": [
+        "{'name': 'phone', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nutrition.get_diet_plan",
+      "description": "Generate a personalized diet plan based on user's health condition and dietary preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Unique_tournament_logo",
+      "description": "Get unique tournament logo by unique tournament id",
+      "params": [
+        "{'name': 'unique_tournament_id', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "markArticleAsRead",
+      "description": "Mark an article as read.",
+      "params": [
+        "authToken",
+        "articleId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLiftRecord",
+      "description": "Retrieve the lift record for a powerlifter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Grammarly",
+      "description": "a tool that focuses on English grammar and style checking, providing instant feedback and writing advice.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Autoruns",
+      "description": "Sets the boot-up autostart of the service.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_podcast_episodes",
+      "description": "Gets a list of episodes for a given podcast show from the Spotify Scraper API.",
+      "params": [
+        "showid",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_specific_ringtone",
+      "description": "Set a specific ringtone for an alarm at a specific time and frequency",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Holiday_Calendar",
+      "description": "This endpoint provides information about the holiday calendar.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "appMonetization.getPurchaseData",
+      "description": "Obtains detailed in-app purchase data for a mobile app, segmented by item and user demographics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webchain_Webchain",
+      "description": "WEBCHAIN: A Blockchain for DApps, Secured via Websites",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getBooks",
+      "description": "Retrieve a list of books with optional filtering and pagination",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Order",
+      "description": "Retrieves a specific order by its unique identifier",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Yummly_feeds_search",
+      "description": "Search for recipes by name and option filters",
+      "params": [
+        "{'name': 'start', 'type': 'NUMBER', 'des",
+        "{'name': 'maxResult', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ski Weather API",
+      "description": "Provides a 7-day weather forecast for ski resorts and mountains worldwide.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tweet-favoriters",
+      "description": "Retrieves a list of tweets that have been favorited by a specific user, given a tweet ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "courtCase.searchByDateRange",
+      "description": "Search and retrieve court cases within a specified date range and jurisdiction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "teammedia",
+      "description": "Fetches media information for a specific baseball team using the given team ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cheapest_tickets",
+      "description": "Brings back the list of prices found by users during the most recent 48 hours according to the filters used.",
+      "params": [
+        "{'name': 'origin', 'schema': {'type': 's",
+        "{'name': 'destination', 'schema': {'type",
+        "{'name': 'period_type', 'schema': {'type",
+        "{'name': 'beginning_of_period', 'schema'",
+        "{'name': 'one_way', 'schema': {'type': '",
+        "{'name': 'sorting', 'schema': {'type': '",
+        "{'name': 'page', 'schema': {'type': 'str",
+        "{'name': 'limit', 'schema': {'type': 'st"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "addVendor",
+      "description": "Add a new telecom vendor",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ScrapTik_Get_Live_Stream_Messages",
+      "description": "Get live stream chat messages.",
+      "params": [
+        "{'name': 'room_id', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVenueTips",
+      "description": "Retrieve tips and recommendations for a specific venue.",
+      "params": [
+        "venueId",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EV_Charging_Stations_Get_Stations_within_10_km",
+      "description": "Return nearest charging stations within 10 km radius.",
+      "params": [
+        "{'name': 'region', 'type': 'ENUM', 'desc",
+        "{'name': 'longitude', 'type': 'NUMBER', ",
+        "{'name': 'latitude', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "colegiosantaana_Evaluaciones_1",
+      "description": "Evaluaciones alumno 1",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_by_keyword",
+      "description": "Searches for products using a specified keyword on the 1688 platform through the Taobao-Tmall Product Detail API.",
+      "params": [
+        "keyword",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Routing Enhancement API",
+      "description": "Create a routing along a specific cycleway",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Rugby League Logo Image",
+      "description": "Retrieve the logo image of a specified rugby league tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHistoricalData",
+      "description": "Retrieve historical data for a specific currency pair.",
+      "params": [
+        "currency_pair",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_word_by_start",
+      "description": "Fetches a random word that begins with the specified starting string from the Random Word API.",
+      "params": [
+        "start"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "VenueTool",
+      "description": "for booking and setting up the venue for the event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Cellular_Terminal_Location",
+      "description": "{\"category_name\": \"Location\", \"required_parameters\": [{\"name\": \"address\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"tel:+12345600001\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"message\": \"str\"}, \"name\": \"US_Cellular_Terminal_Location\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zoopla_property_detail",
+      "description": "property/detail",
+      "params": [
+        "{'name': 'listing_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_actors_get_all_news",
+      "description": "Get all news of actor or actress",
+      "params": [
+        "{'name': 'nconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tennis_Live_Data_Matches_By_Date",
+      "description": "Lists matches in all tours, and tournaments,  for a given date. If no date is supplied, returns matches today.",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pairs",
+      "description": "\nQuery different combinations of the trading pairs.\n\nThe most common query is all trading pairs of a decentralised exchange.\n\n`/pairs?chain_slugs=ethereum&exchange-slugs=uniswap-v2`\n\nThe results are always paginated.\n\n## Parameter seralisation\n\nNote that lists are not JSON serialised, but use [OpenAPI query parameter serialization](https://swagger.io/docs/specification/serialization/). I.e. lists are comma separated, no spaces between items.\n",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_circumference",
+      "description": "To find the circumference of a circle given its radius",
+      "params": []
+    }
+  ]
+}

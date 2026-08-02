@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_pos_0111",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_South_Africa_Songs",
+      "description": "Provide the South Africa Songs chart information",
+      "params": [
+        "{'name': 'date', 'type': 'DATE (YYYY-MM-",
+        "{'name': 'range', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_channel_leaderboards",
+      "description": "Fetches the leaderboards for a specified Twitch channel using the provided RapidAPI key.",
+      "params": [
+        "channel"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_meme",
+      "description": "Generate a meme with a specified image and text",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OPA_test_User_summary",
+      "description": "Returns the user's document status summary",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_attribute_existence(image_patch: ImagePatch, object_name: str, attribute: ",
+      "description": "def check_attribute_existence(image_patch: ImagePatch, object_name: str, attribute: str) -> str:\n    '''Check the existence of a specific attribute for any instances of a certain object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        attribute (str): The attribute to check for existence.\n       \n    Returns:\n        str: \"yes\" if the attribute exists, \"no\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return \"no\"\n   ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "updateDocument",
+      "description": "Updates an existing document in Google Drive.",
+      "params": [
+        "documentId",
+        "content"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon_Web_Scraping_API_Get_Product_Reviews_All_countries",
+      "description": "Get the reviews for specific product using the ASIN code.",
+      "params": [
+        "{'name': 'asin', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMA_Stats_UFC_Fight_Night_Song_vs_Simon_April_28_2023",
+      "description": "**Get details to UFC Fight Night: Song vs. Simon**.                                                          \n Access a range of information about each fighter, including their win-loss record, height, weight, reach, and age. results of a particular fight or a fighter's win-loss record.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "GiftTool",
+      "description": "Provide suggestions for gift selection.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shields_Generate_shield",
+      "description": "Generate shield.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "radical_stroke_number",
+      "description": "Fetches advanced search results from the Kanji Alive API based on the radical stroke number.",
+      "params": [
+        "rs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webull_market_get_ipo_center",
+      "description": "Get IPO center information of specific region",
+      "params": [
+        "{'name': 'regionId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast Money Transfer API",
+      "description": "The Fast Money Transfer API is a service that facilitates secure and fast money transfers between individuals and businesses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top Players of Regular Season",
+      "description": "Retrieve the top players of a specific basketball league's regular season using the tournament and season IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_new_note",
+      "description": "Create a new note",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auto_Profanity_Filter_Remove_Profanity",
+      "description": "Removes Profanity from Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Get_company_Basic_data",
+      "description": "The Get company details endpoint will return all basic company data on B2BHint.",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'internationalNumber', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "autocomplete",
+      "description": "Provides autocomplete suggestions for search queries on Twitter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "top_players_by_royal",
+      "description": "Fetch the top players by their royal rank from the Trackmania API.",
+      "params": [
+        "page",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RapidWeather_Call_5_day_3_hour_forecast_data_By_ZIP_code",
+      "description": "Please note if country is not specified then the search works for USA as a default.",
+      "params": [
+        "{'name': 'zip', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataiku.dataset_audit",
+      "description": "Performs an audit on a dataset to ensure compliance with data governance policies.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_airport_details",
+      "description": "Fetches and returns detailed information about an airport specified by its IATA code.",
+      "params": [
+        "code"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_news_get_market_update_details",
+      "description": "Read market update news in details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch Company Details",
+      "description": "Fetch Company Details by company name",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Server Metadata",
+      "description": "Retrieves the server's version metadata, including the version number, build string, and other relevant information.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Car_API_Engines",
+      "description": "To include additional information about the returned body (such as year, make, model and trim) request with the query parameter as verbose=yes.\n\nFor complex queries you may use the json field to send an array of URL encoded JSON conditions, example:\n\n`[{\"field\": \"horsepower_hp\", \"op\": \">=\", \"val\": 100}, {\"field\": \"horsepower_hp\", \"op\": \"<=\", \"val\": 300}]`\n\nSee /api/vehicle-attributes for a complete list of vehicle attributes.\n\nAllowed operators are: `>`, `<`, `>=`, `<=`, `in`, `not in`, `like`, `not like`, `is null` and `not null`.\n\nAllowed json search fields are: year, make, model, trim, fuel",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getBridgeLoadCapacity",
+      "description": "Retrieve the load capacity of a bridge",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_player_currently_playing",
+      "description": "Get the track currently being played on the user's Spotify account.\n",
+      "params": [
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'additional_type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "classify_cuisine",
+      "description": "Classify the recipe's cuisine.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get News for Title",
+      "description": "Retrieve news articles related to a specific title from IMDb.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NearbyFarmersMarketQuery",
+      "description": "This API is to find a nearby farmers market based on the coordinate position of a grocery store.",
+      "params": [
+        "{'name': 'coordinate_position', 'in': 'q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dictionary_synonyms_temporarily_unavailable",
+      "description": "Fetches synonyms from a dictionary API for a given word in the specified language.",
+      "params": [
+        "language",
+        "q"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok Video Details",
+      "description": "Retrieve detailed information about a TikTok video, including the video content without a watermark, cover, music, and other metadata.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "languagedetection",
+      "description": "Detect the language of a given text using the specified RapidAPI key and return the detected language code.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Measurement Units",
+      "description": "Returns an array of measurement units of a given type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Predictive_Spikes_by_Coin_Ticker",
+      "description": "Retrieve predictive social media spikes in the last 24 hours by Coin Ticker. Results will contain Sentiment, Weighted Sentiment, Mentions and Followers spikes both positive and negative. \n\nThis brings predictive spikes (that went through another machine learning model to predict likelihood of market change within the next 24 hours). These spikes are colored as red and orange.\n\n**Input:**\n\n- Coin Ticker (Required)\n\n**Output:**\n\n- EventId\n- EventType\n- Event Time\n- Related coins\n- Event Color\n- Event text\n\n\n**Definitions:**\n\n- Related coins: Coins mentioned in the post\n- Event type: Determines t",
+      "params": [
+        "{'name': 'coinTicker', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "EnvironmentManager",
+      "description": "Manage environment variables of Windows system.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iata_airport_codes_Get_All_iata_airport_codes",
+      "description": "Get all iata airport codes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Download URL",
+      "description": "Generate a temporary download URL for a string stored in an Amazon S3 bucket.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "shibing624/text2vec-base-chinese",
+      "description": "This is a CoSENT(Cosine Sentence) model: shibing624/text2vec-base-chinese. It maps sentences to a 768 dimensional dense vector space and can be used for tasks like sentence embeddings, text matching or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    }
+  ]
+}

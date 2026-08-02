@@ -1,0 +1,336 @@
+{
+  "catalog_id": "real_toolret_pos_0169",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "World_Time_by_API_Ninjas_v1_worldtime",
+      "description": "API Ninjas World Time API endpoint. Returns the current date and time by city/state/country, location coordinates (latitude/longitude), or timezone.\n\nOne of the following parameter combinations must be set:\nlat + lon,\ncity (state and country optional),\ntimezone",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEO_Keyword_Research_Keyword_Research_API",
+      "description": "Keyword Research API",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd",
+        "{'name': 'country', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seo_api_News",
+      "description": "Perform Google News Search\n\n Parameters\n----------\nquery : the string query to perform search for Google news. A simple query for `president` will be `q=president`. An example of multiple keyword would be `q=news+about+presdient+trump`. News can also be filtered by country and language. For `US` news and in English the query will be `q=trump&ceid=US:en` for news in Great Britian the query will be `q=trump&ceid=GB:en`\n\nReturns\n-------\njson: {\"feed\": { \"title\" : \"trump\" ...} , \"entites\": [ {\"title\" : \"Trump doubles down on divisive messaging in speech to honor Independence Day - CNN\", \"links\": [",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllEquipment",
+      "description": "Returns a list of all available equipment along with their details.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coin Markets",
+      "description": "Retrieve markets on different exchanges that trade a specific coin.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_annonce",
+      "description": "Fetches advertisement details from the FluxImmo API based on a unique identifier.",
+      "params": [
+        "unique_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SurveyMethods_Responses_Summary",
+      "description": "Using this API call you can retrieve information such as custom field labels & values, date on which  a response was started and when was it completed, the survey response method (email/web), the  email address of the respondent in case of an email response, IP address and the response code  for each individual response of your survey.",
+      "params": [
+        "{'name': 'login_id', 'type': 'STRING', '",
+        "{'name': 'api_key', 'type': 'STRING', 'd",
+        "{'name': 'survey_code', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "glpn-nyu-finetuned-diode-221122-030603",
+      "description": "This model is a fine-tuned version of vinvino02/glpn-nyu on the diode-subset dataset.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "convert_from_one_unit_to_another",
+      "description": "Converts a given quantity from one unit to another using the RapidAPI measurement unit converter.",
+      "params": [
+        "to",
+        "is_from",
+        "value",
+        "measure"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "matches_v2_list_by_league",
+      "description": "Fetches and returns a list of matches for a specific league and category from the LiveScore API.",
+      "params": [
+        "category",
+        "ccd",
+        "scd",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "keremberke/yolov8m-csgo-player-detection",
+      "description": "An object detection model trained to detect Counter-Strike: Global Offensive (CS:GO) players. The model is based on the YOLOv8 architecture and can identify 'ct', 'cthead', 't', and 'thead' labels.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Balance",
+      "description": "Retrieve the current balance of the user's SMS credits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MotorsportApi_StageCompetitorStandings",
+      "description": "Get the competitor standings for a specific Motorsport stage.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Verse Media",
+      "description": "Retrieve media related to a specific verse in the Quran.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Uncovered_Treasure_random",
+      "description": "Get random treasure",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Seeking_Alpha_comments_v2_list",
+      "description": "List all comments relating to a post or article or news. This endpoint only returns site map structure of comments relating to a post. You need to use along with .../comments/get-contents endpoint to get the contents.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Specified_Users_Links",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [{\"name\": \"user\", \"type\": \"STRING\", \"description\": \"specified user\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Geeklist_Get_Specified_Users_Links\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'user', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Auditor",
+      "description": "Used to audit the desensitized information to ensure that the desensitization meets the requirements.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "music_info",
+      "description": "Retrieve music information using a given music ID from the TikTok API.",
+      "params": [
+        "music_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cultural_relics.preservation",
+      "description": "Plan and manage the preservation activities for cultural relics including environmental conditions and restoration techniques.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QR_Decoder_QRDecoder",
+      "description": "Returns the QRCode message from an image or PDF file with embeded QR codes.\n\nFiles must be publicly accessible via the web and the src input parm expects a direct link to the file.  Html pages with embeded images or pdfs are not valid and will return empty.",
+      "params": [
+        "{'name': 'src', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NBA_Schedule_v2_Schedule",
+      "description": "Get the stats of past NBA games and schedule for upcoming ones",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "employee",
+      "description": "Retrieve an employee's information by their ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_Inernational_Markets",
+      "description": "Get International Markets",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.sort",
+      "description": "# Sorts worksheet using given sort orders. \nworksheet.sort(*specs, **kwargs)\n\nExamples:\n# Sort sheet A -> Z by column 'B'\nwks.sort((2, 'asc'))\n# Sort range A2:G8 basing on column 'G' A -> Z\n# and column 'B' Z -> A\nwks.sort((7, 'asc'), (2, 'des'), range='A2:G8')\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hearthstone_Cards_by_Race",
+      "description": "Returns all the cards of a certain race. Example values: Mech, Murloc.",
+      "params": [
+        "{'name': 'race', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scout_Basic_Phone_Number_Validation",
+      "description": "**Basic Phone Number Validation**\n\n- determine if a phone number is in a valid format \n\n- determine if a phone number is impossible for a particular region\n\n- properly format the number for various scenarios like international or local dialing\n\n- attempts to determine line type\n\n- determines country and country code",
+      "params": [
+        "{'name': 'dialcode', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Historical Currency Exchange Rates",
+      "description": "Retrieve historical currency exchange rates for a specific string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_side_length",
+      "description": "To find the side length of shaded squares",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "cities",
+      "description": "Retrieve a list of cities that match a given name, with optional pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "autoclave_door_maintenance_schedule",
+      "description": "Generates a maintenance schedule for autoclave doors based on usage patterns and historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CategoryPerformanceTracker.fetchPerformanceMetrics",
+      "description": "Retrieves performance metrics for product categories to aid in strategic visibility adjustments.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QR_Code_Generator_Generate_Basic_Base64",
+      "description": "Generates a QR code as base64 with limited settings.",
+      "params": [
+        "{'name': 'data', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_appbench",
+      "name": "findattractions",
+      "description": "browse attractions in a given city",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Fed Policy Rates",
+      "description": "Retrieve daily interest rates paid by the Federal Reserve System on reserves.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YvI",
+      "description": "Get the list of available competitions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currents_News_Search",
+      "description": "This endpoint allow you to search through ten millions of article over 14,000 large and small news sources and blogs. This includes breaking news, blog articles, forum content. This endpoint is well suited for article discovery and analysis, but can be used to retrieve articles for display, too.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shields_Generate_shield",
+      "description": "Generate shield.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Store_API_DLC_details",
+      "description": "Returns details of the selected DLC.",
+      "params": [
+        "{'name': 'appId', 'type': 'NUMBER', 'des",
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Annual Average Dividend Yield",
+      "description": "Retrieve the annual average dividend yield of a stock.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

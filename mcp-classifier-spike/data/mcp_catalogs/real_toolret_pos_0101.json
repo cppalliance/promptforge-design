@@ -1,0 +1,342 @@
+{
+  "catalog_id": "real_toolret_pos_0101",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "getSpaPrice",
+      "description": "Retrieve the price of a specific spa service",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getArticleDetails",
+      "description": "Retrieve details for a specific article.",
+      "params": [
+        "articleId"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "TF-IDF",
+      "description": "A statistical-based keyword extraction tool that balances high-frequency and redundant keywords, but with low implementation efficiency and relatively complex operation.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Video Synchronization",
+      "description": "Synchronizes the timing of an existing voiceover or audio file with the visuals of a given video.",
+      "params": [
+        "{'name': 'video', 'in': 'query', 'schema",
+        "{'name': 'audio', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Database Status",
+      "description": "Returns information about the freshness of the Trademark Search API database, including the last upstring string and a sample of recent registered trademarks.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "App_Store_Top_paid_ios_apps",
+      "description": "Get list of the top paid ios apps",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Woosmap_addressAutocomplete",
+      "description": "Autocomplete on worldwide suggestions for a for text-based geographic searches. It can match on full words as well as substrings.\n",
+      "params": [
+        "{'name': 'input', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "query_cultural_significance(llm_query: Callable, object_or_concept: str, long_an",
+      "description": "def query_cultural_significance(llm_query: Callable, object_or_concept: str, long_answer: bool = True) -> str:\n    '''Query the cultural significance or role of a certain object or concept.\n    \n    Args:\n        llm_query (Callable): The language model query function.\n        object_or_concept (str): The object or concept to query about.\n        long_answer (bool): Whether to return a long answer. Default is True.\n       \n    Returns:\n        str: The answer to the query.\n    '''\n    query = f\"What roles does {object_or_concept} usually play in celebrations?\"\n    return llm_query(query, long_",
+      "params": []
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "philschmid/pyannote-speaker-diarization-endpoint",
+      "description": "A speaker diarization pipeline that uses pyannote.audio to perform voice activity detection, speaker change detection, and overlapped speech detection. It can handle fully automatic processing with no manual intervention and can be fine-tuned with various hyperparameters.",
+      "params": [
+        "num_speakers",
+        "min_speakers",
+        "max_speakers",
+        "segmentation_onset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "streamingAnalytics.trackViewerEngagement",
+      "description": "Tracks and analyzes viewer engagement metrics during a live Q&A session on a streaming platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog_Day_API_groundhog",
+      "description": "Returns a prognosticating animal and its known predictions.",
+      "params": [
+        "{'name': 'slug', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BBC_Good_Food_API_Search_for_recipes",
+      "description": "Search for recipes by keyword or full phrase",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "novels",
+      "description": "Fetches information about novels from the RapidAPI service.",
+      "params": [
+        "pagesize",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Glue",
+      "description": "Provides data integration and ETL capabilities.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_units_digit_condition(start, end, condition_func)",
+      "description": "def find_units_digit_condition(start, end, condition_func):\n    \"\"\"\n    Find the units digit of a number in a given range that satisfies a certain condition.\n\n    Parameters:\n    start (int): The start of the range of numbers to check.\n    end (int): The end of the range of numbers to check.\n    condition_func (function): A function that takes in two arguments (the product and sum of the digits of a number) and returns a boolean indicating whether the number satisfies the condition.\n\n    Returns:\n    int: The units digit of the number that satisfies the condition, or None if no such number is ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ecoweather_Schneetage",
+      "description": "Beantwortet die Frage, wie viel Schnee und an wie viel Tagen innerhalb eines Zeitraums vorhanden gewesen ist. Wird verwendet zum Beispiel bei der Einsatzplanung im Winterdienst und Hausmeisterservice sowie im Tourismus.",
+      "params": [
+        "{'name': 'from', 'type': 'STRING', 'desc",
+        "{'name': 'lon', 'type': 'NUMBER', 'descr",
+        "{'name': 'lat', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ComparePrices",
+      "description": "This API compares the prices of ingredients in different stores and returns the store with the lowest cost.",
+      "params": [
+        "{'name': 'ingredients', 'in': 'query', '",
+        "{'name': 'stores', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BitcoinAverage_crypto_ticker_and_historical_price_Cryptocurrency_Index_Ticker_pr",
+      "description": "Get the latest Ticker price for thousands of cryptocurrencies.\nOur Ticker data includes the latest price, bid, ask, 24h volume, moving average and price changes.",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'symbol_set', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get District Capital By ID",
+      "description": "This endpoint gets the capital of a district in Ghana by its ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "shibing624/text2vec-base-chinese",
+      "description": "This is a CoSENT(Cosine Sentence) model: shibing624/text2vec-base-chinese. It maps sentences to a 768 dimensional dense vector space and can be used for tasks like sentence embeddings, text matching or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_tweets",
+      "description": "Search for tweets based on keywords or hashtags",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Team Details",
+      "description": "Retrieve detailed information about a specific Motorsport team by providing the team ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Majors Performance",
+      "description": "Retrieve the performance of various majors in the finance industry",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pharma_Industry_Data_Collection_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Cash4Life QuickPick",
+      "description": "Generate a quick pick number for the Cash4Life drawing.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_room_upgrade_availability",
+      "description": "Check the availability of room upgrade",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Year End Top Artists - Male",
+      "description": "Retrieve the year-end top artists for male artists from the Billboard music charts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Invoice Generator",
+      "description": "Can generate invoices.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Bundles",
+      "description": "Retrieve a list of bundles from OpenSea, which are groups of NFTs for sale. You can filter and paginate the results based on various parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTemplates",
+      "description": "Retrieve a list of email templates for the mailslurp_email_testing tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Onboarding_Project_Get_Order",
+      "description": " ",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cmyk-to-hex",
+      "description": "Converts CMYK color code to HEX color code",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_distance_on_given_gallons",
+      "description": "Calculates the distance that a car can travel on given gallons of gas",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Read Root",
+      "description": "Verify the connectivity and functionality of the API by sending a simple request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CurrencyConversion",
+      "description": "The CurrencyConversion API allows developers to convert currencies in real-time. It provides accurate and up-to-string exchange rates, enabling users to make informed financial decisions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Data_playlist_videos",
+      "description": "playlist-videos",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Youtube_Videos_mp4",
+      "description": "Returns a list of MP4 files with different qualities and other details.",
+      "params": [
+        "{'name': 'videoId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NCAA_Final_Four_Third_Place",
+      "description": "Get third place data (only available between 1946 and 1981) for the given year.",
+      "params": [
+        "{'name': 'identifier', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Skyscanner_v2_Get_Config",
+      "description": "This API endpoint is responsible for providing  some of the parameters require for most of the API's.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IMDb_title_v2_get_popular_movies_by_genre",
+      "description": "Get popular movies by genre",
+      "params": [
+        "{'name': 'genre', 'type': 'STRING', 'des"
+      ]
+    }
+  ]
+}

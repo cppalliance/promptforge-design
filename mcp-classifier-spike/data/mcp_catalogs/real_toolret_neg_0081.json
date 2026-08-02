@@ -1,0 +1,371 @@
+{
+  "catalog_id": "real_toolret_neg_0081",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "ProductDevelopment.evaluateProductConcept",
+      "description": "Evaluates the viability of a new product concept based on market research and consumer feedback.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Establishments of a Company",
+      "description": "Retrieve the establishments of a company in New Caledonia.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "emailValidation",
+      "description": "Valistring an email address to ensure its existence and deliverability",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVisitorIP",
+      "description": "Retrieves the IP address of a visitor to your website.",
+      "params": [
+        "zoneID"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMusicReview",
+      "description": "Retrieve a review of a music album or song",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_by_type_and_region",
+      "description": "Fetch records from the API based on the given type, limit, and region.",
+      "params": [
+        "type",
+        "limit",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Define Custom Period",
+      "description": "Define a custom period for a calendar, typically used for vacations or annual closures.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pottery.kiln_firing_schedule",
+      "description": "Creates a firing schedule for pottery items based on material and desired finish.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Social_Media_Data_TT_Music_metadata",
+      "description": "Get music metadata\n\nBasic metadata: number of posts,  direct url to the song(MP3) and etc",
+      "params": [
+        "{'name': 'music', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_CategorySchedules",
+      "description": "Get handball matches by category and date.",
+      "params": [
+        "{'name': 'month', 'type': 'NUMBER', 'des",
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'year', 'type': 'NUMBER', 'desc",
+        "{'name': 'day', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Financial Statements",
+      "description": "Retrieve financial statements for a given stock symbol, including income, balance, and cash statements, for a specified frequency and region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "imagenet_mobilenet_v2_100_224_feature_vector",
+      "description": "A pre-trained image feature extraction model using MobileNetV2 architecture on ImageNet dataset to convert images into feature vectors.",
+      "params": [
+        "input_shape"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "NLPTool",
+      "description": "for training AI models to understand natural language",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Folder Content",
+      "description": "Retrieve the content of a specified folder.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "home_improvement.get_contractor_availability",
+      "description": "Retrieve the availability of contractors for a specific home improvement project.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Historical Data",
+      "description": "Provides access to daily historical company pricing data over a given period of time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "shorten",
+      "description": "Shortens a given long URL and returns a bitly shortened URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTenderDetails",
+      "description": "Get detailed information on individual tenders such as the type of procurement, deadlines, and budget.",
+      "params": [
+        "tenderId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Page Info",
+      "description": "Fetches information about a Facebook page, including followers, likes, and other metrics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryNetwork",
+      "description": "Retrieve the network representation of a library system",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kanji English Meaning API",
+      "description": "Retrieve the English meaning of Japanese Kanji characters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "lllyasviel/control_v11p_sd15_openpose",
+      "description": "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on openpose images.",
+      "params": [
+        "checkpoint",
+        "torch_dtype"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unofficial_Cricbuzz_venues_get_info",
+      "description": "Get venue info",
+      "params": [
+        "{'name': 'venueId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GitHub Username Checker",
+      "description": "Check if a username is available on GitHub",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_car_loan",
+      "description": "Calculate the monthly payment for a car loan",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockPrice",
+      "description": "Retrieve the current stock price of a specified stock symbol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "KFC_locations_GET_all_KFC_locations_by_state",
+      "description": "Get all KFC locations by state",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'state', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finkish",
+      "description": "Finish the task and give your answer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "prime_divisors",
+      "description": "This function takes an integer as input and returns the number of prime positive divisors of the integer.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Daily_Influencer_Posts",
+      "description": "Retrieve news and posts from Top Influencers in social media ordered by date\nThis endpoint contains results from all coins. To search for posts on a specific coins check \"Get Daily Influencer Posts by Coin Name\" or \"Get Daily Influencer Posts by Coin Ticker\"\n\n**Output:**\n\n- EventId \n- EventType\n- Event Time\n- Publisher\n- Source\n- Related coins\n- Event Color\n- Number of followers\n- Event text\n\n**Definitions:** \n\n- Publisher: User name of the publisher of the event in social media\n- Source: Social media where the post was published\n- Related coins: Coins mentioned in the post\n- Event Color: Show",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Face_Compare_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Estimated Earnings Announces API",
+      "description": "Get estimated earnings announces for a given stock symbol.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_AUTH_REQUESTS_2",
+      "description": "READ - AUTH REQUESTS 2",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "image_to_text_ocr",
+      "description": "Extracts text from an image using the Google Lens OCR API and provides detailed detections at the paragraph, sentence, and word levels.",
+      "params": [
+        "url",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Credit Quality",
+      "description": "Retrieves the credit quality of a specified security as displayed in the Portfolio tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Leagues",
+      "description": "Retrieve a list of leagues for a specific sport, with options to filter by language and sport type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_World_Cup_champions",
+      "description": "World cup champions. Titles and success",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_places",
+      "description": "Search places by name to get place IDs and detailed geographical information (country, region, elevation, timezone, etc.) for a given location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNBC_symbols_translate",
+      "description": "Get issueId from specific symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "compareOrganismsAnatomy",
+      "description": "Compare the anatomy of two organisms",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

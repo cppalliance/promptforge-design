@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0070",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v13_User_Profile_Picture",
+      "description": "Get instagram user profile picture by username.",
+      "params": [
+        "{'name': 'username', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Giphy_STICKER_Translate",
+      "description": "Using the same alogirithm as the GIF translate endpoint, the sticker translate endpoint turns words into stickers.",
+      "params": [
+        "{'name': 's', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "points_point_forecast",
+      "description": "Fetches weather forecast data for a specific geographic point using the National Weather Service API.",
+      "params": [
+        "point"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Riddle by ID",
+      "description": "Retrieve a riddle by its unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Information for a Movie",
+      "description": "Retrieve business (Box Office) information for a movie",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_News_detik_search",
+      "description": "search detik.com news",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_annonce",
+      "description": "Fetches advertisement details from the FluxImmo API based on a unique identifier.",
+      "params": [
+        "unique_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Season Wins Leaderboard MW 2",
+      "description": "Retrieve the season wins leaderboard for Modern Warfare 2 (MW2) game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Mail_validate_php_action_validate_id_user_example_com",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [{\"name\": \"useremail\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"abc@123.com\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"message\": \"str\"}, \"name\": \"Check_Mail_validate_php_action_validate_id_user_example_com\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'useremail', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Active_listings",
+      "description": "Returns active rentals",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '",
+        "{'name': 'start_year', 'type': 'NUMBER',",
+        "{'name': 'start_month', 'type': 'NUMBER'",
+        "{'name': 'number_of_months', 'type': 'NU"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "artist_related",
+      "description": "Fetches related artists information from the Spotify API using a given artist ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get IP Geolocation",
+      "description": "This endpoint returns geolocation and other useful points from an IP Address. If an IP address is provided as a query parameter, geolocation is performed on that IP address. If an IP address is left empty, geolocation data of the client IP is returned.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_by_type_and_region",
+      "description": "Fetch records from the API based on the given type, limit, and region.",
+      "params": [
+        "type",
+        "limit",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicSpending",
+      "description": "Retrieves data on public spending in Italy for the specified year",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fresh_LinkedIn_Profile_Data_Get_Company_Ads_Count",
+      "description": "Get number of ads the company posted on LinkedIn. **1 credit per call.**",
+      "params": [
+        "{'name': 'company_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_a",
+      "description": "def determine_object_attribute(image_patch: ImagePatch, object_name: str, possible_attributes: list) -> str:\n    '''Determine the attribute of a specific object in an image from a list of possible attributes.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for attributes.\n        possible_attributes (list): A list of possible attributes.\n       \n    Returns:\n        str: The attribute of the object if it exists, otherwise a message indicating that the object does not exist.\n    '''\n    object_patches = image_",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "butter_to_ingredients",
+      "description": "Given the ratio of butter to sugar, this function calculates the total cups of ingredients used.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+      "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cryptocurrency_metadata",
+      "description": "Retrieve metadata about available cryptocurrency assets",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "pastry/ingredient",
+      "description": "This API endpoint allows users to retrieve a random pastry recipe that contains a specific ingredient. Users can make a GET request to the endpoint with the name of the ingredient as a query parameter, and the API will return a JSON response with the given recipe, including the name, list of ingredients, and instructions.",
+      "params": [
+        "{'name': 'ingredient', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_unique_feature(image_patch: ImagePatch, object_name: str, query: str) -",
+      "description": "def identify_unique_feature(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Identify a unique feature about an object's appearance.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for a unique feature.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The unique feature of the object if it exists, \"Object not found in the image.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if object_patches:\n        object_patch = obje",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_media_downloader_v2_Get",
+      "description": "lol world",
+      "params": [
+        "{'name': 'wtf', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorsport Team Details",
+      "description": "Retrieve detailed information about a specific Motorsport team by providing the team ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.StandUp",
+      "description": "# Stand up. \nAgent.StandUp()\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve Buy/Sell Information by Item ID",
+      "description": "Retrieves the latest Buy/Sell orders placed on the Steam Store for a given item ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAccelerometerData",
+      "description": "Retrieve accelerometer data of the vehicle",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Manufacturing PMI",
+      "description": "Retrieve the monthly manufacturing Purchasing Managers' Index (PMI) from a financial dataset.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pharma_Industry_Data_Collection_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Malaysia Songs Chart API",
+      "description": "Retrieves the Malaysia Songs chart information for a specific string range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crawl",
+      "description": "Perform a Google search and return the HTML source of the results page.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entity_Risk_Indicator_Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "display_recent_transactions",
+      "description": "Display recent transaction details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BingoAPI_us",
+      "description": "US game spec.\nReturns numbers between 1 and 75, randomized in 5 groups.\n\nIf you have a paid plan you can specify the number of cards to generate as a query parameter: `?cards=10`\nThis will return an array of array (the cards).\n\nPlease note that empty spaces are not returned as it is more portable for who don't need them. You are free to loop through the cards and add them at your wish.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Yearn.finance Balance",
+      "description": "This API returns the yearn.finance balance of a specified address in a specific network.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_person_details",
+      "description": "Get details of a person",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseConstraintValidator.checkUniqueConstraint",
+      "description": "Checks if a unique constraint is valid in a database table.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_get_manager_placeholder",
+      "description": "Get the manager placeholder image in PNG format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "fan.installation_schedule",
+      "description": "Retrieve the installation schedule for industrial fans at a specified site.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Apple_App_Store_Scraper_Scrape_AppStore",
+      "description": "Get details of App Store Listing",
+      "params": [
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'appid', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chain49_Get_UTXO_V2",
+      "description": "Returns array of unspent transaction outputs of address or xpub, applicable only for Bitcoin-type coins. By default, the list contains both confirmed and unconfirmed transactions. The query parameter confirmed=true disables return of unconfirmed transactions. The returned utxos are sorted by block height, newest blocks first. For xpubs or output descriptors, the response also contains address and derivation path of the utxo.\n\n\n\nUnconfirmed utxos do not have field height, the field confirmations has value 0 and may contain field lockTime, if not zero.\n\nCoinbase utxos have field coinbase set to ",
+      "params": [
+        "{'name': 'addressOrXpub', 'type': 'STRIN",
+        "{'name': 'blockchain', 'type': 'STRING',"
+      ]
+    }
+  ]
+}

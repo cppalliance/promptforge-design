@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_pos_0020",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "calculate_final_milk_quantity",
+      "description": "This method takes two arguments, 'initial_milk_quantity' and 'water_quantity', and returns the quantity of pure milk in the final solution after the given amount of water is added and removed.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Project Jobs",
+      "description": "Returns a collection of jobs for a project in the Business domain, as requested by the textking_translation tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Available Tags",
+      "description": "Retrieve a list of available tags in the Social domain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most Visited Cryptocurrencies",
+      "description": "Returns the most visited cryptocurrencies today, along with their market data and statistics.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP Geolocation",
+      "description": "Returns the geolocation of the given IP address",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Stock_Market_API_Data_Get_52_Weel_High_by_performance_with_respecto_to_Co",
+      "description": "Get 52 Weel High by performance with respecto to Country",
+      "params": [
+        "{'name': 'countryCode', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_astrological_sign",
+      "description": "Get the astrological sign for a given date",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shields_Generate_shield",
+      "description": "Generate shield.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Vimeo_GetAllCategories",
+      "description": "{\"category_name\": \"Media\", \"required_parameters\": [{\"name\": \"format\", \"type\": \"STRING\", \"description\": \"json or xml or php\", \"default\": \"json\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"generated_in\": \"str\", \"stat\": \"str\", \"err\": {\"code\": \"str\", \"expl\": \"str\", \"msg\": \"str\"}}, \"name\": \"Vimeo_GetAllCategories\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List User Comments",
+      "description": "Retrieve a list of comments made by a specific user on the SoundCloud platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Measurement_Unit_Converter_Measure_units",
+      "description": "GET enum array of all units of the given type.",
+      "params": [
+        "{'name': 'measure', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "yoga_pose_analyzer",
+      "description": "Analyzes yoga poses from images to provide feedback on posture and alignment.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ASE_s_Quiz_API_Get_all_questions",
+      "description": "Get all questions without pagination",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create User Account",
+      "description": "Creates a new user account in the communication platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Undervalued Growth Stocks",
+      "description": "Retrieve a list of undervalued growth stocks from Yahoo Finance, with the option to specify a start index.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVideoRelated",
+      "description": "Retrieves related videos for a specific video on Dailymotion's platform.",
+      "params": [
+        "video_id",
+        "limit",
+        "fields"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "https://genius-song-lyrics1.p.rapidapi.com/annotation/versions/",
+      "description": "Annotation Versions",
+      "params": [
+        "{'name': 'id', 'in': 'query', 'schema': ",
+        "{'name': 'text_format', 'in': 'optional'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pricer_Search_for_a_product",
+      "description": "search by product name",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BingoAPI_us",
+      "description": "US game spec.\nReturns numbers between 1 and 75, randomized in 5 groups.\n\nIf you have a paid plan you can specify the number of cards to generate as a query parameter: `?cards=10`\nThis will return an array of array (the cards).\n\nPlease note that empty spaces are not returned as it is more portable for who don't need them. You are free to loop through the cards and add them at your wish.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Global Trending Hashtags",
+      "description": "Retrieve a list of currently trending hashtags on social media platforms",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get states by census region",
+      "description": "Retrieve all fields for states matching the provided Census Region(s). Multiple census regions can be provided separated by commas.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_zeros",
+      "description": "Counts the number of zeros at the end of a number obtained by multiplying a range of numbers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "QR_Code_by_API_Ninjas_v1_qrcode",
+      "description": "API Ninjas QR Code API endpoint. Returns a QRCode image binary specified by input parameters.",
+      "params": [
+        "{'name': 'data', 'type': 'STRING', 'desc",
+        "{'name': 'format', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: s",
+      "description": "def compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: str, interaction_object_name: str, query: str) -> str:\n    '''Compare the interactions of two objects with a third object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object1_name (str): The name of the first object.\n        object2_name (str): The name of the second object.\n        interaction_object_name (str): The name of the object with which the interactions are being compared.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"The sa",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomName",
+      "description": "Returns a random Spanish name with gender information",
+      "params": [
+        "gender"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_holders",
+      "description": "Get holders related to a symbol. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Pollen_Data_latest_by_lat_lng",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_actors_get_filmography_appearances",
+      "description": "Get filmography appearances of an actor, actress, etc...",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de",
+        "{'name': 'nconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "National_Weather_Service_stations_stationId_observations_recordId",
+      "description": "Data for a specific observation.  NOTE! See note in /stations/{stationId}/observations for important details on observation data.  Example: /stations/KMKC/observations/2017-01-04T18:54:00+00:00",
+      "params": [
+        "{'name': 'stationId', 'type': 'STRING', ",
+        "{'name': 'recordId', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "CancelTimedSwitch",
+      "description": "description = \"API for canceling a timed switch on a device using its 'device ID' and 'switch time' input parameters.\"\ninput_parameters = {\n    'device_id': {'type': 'str', 'description': 'The ID of the device for which the timed switch needs to be cancelled.'},\n    'switch_time': {'type': 'datetime', 'description': 'The time of the scheduled switch. Format: %Y-%m-%d %H:%M:%S'}\n}\noutput_parameters = {\n    'status': {'type': 'str', 'description': 'The status of the API call - success or failed.'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Referential_Cities",
+      "description": "List and search over 75,000 world cities in 20 languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "My_API_12345_getUserByName",
+      "description": "{\"category_name\": \"Business_Software\", \"required_parameters\": [{\"name\": \"username\", \"type\": \"STRING\", \"description\": \"The name that needs to be fetched. Use user1 for testing. \", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"My_API_12345_getUserByName\", \"description\": \"\"}",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "EvernoteManager",
+      "description": "A toolkit for managing and organizing notes, documents, and web clippings using Evernote, including creating, reading, updating, deleting, searching, tagging, and sharing notes and notebooks. It also allows users to control the level of sharing of notes with other users.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_search_recipe_information",
+      "description": "Get information about a recipe.",
+      "params": [
+        "{'name': 'recipe_id', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Team Next Matches",
+      "description": "Retrieves the next matches for a specified American Football team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Clusterer",
+      "description": "Clustering of data.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "crypto_news_v2_YahooFinance",
+      "description": "Get the latest news from Yahoo Finance.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Authenticated_Users_Cards",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [], \"optional_parameters\": [{\"name\": \"featured\", \"type\": \"STRING\", \"description\": \"Returns only featured cards for user (only for cards and not contribs).\", \"default\": \"\"}], \"method\": \"GET\", \"name\": \"Geeklist_Get_Authenticated_Users_Cards\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Future Playlists",
+      "description": "Retrieve future playlists for a specific country and timestamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hashing_Api_SHA_Text_Hash",
+      "description": "Hash text (as query-string-parameter) using SHA1, SHA256, SHA384 or SHA512 algorithm according to selected mode path-parameter [1, 256, 384, 512].",
+      "params": [
+        "{'name': 'dataString', 'type': 'STRING',",
+        "{'name': 'mode', 'type': 'NUMBER', 'desc"
+      ]
+    }
+  ]
+}

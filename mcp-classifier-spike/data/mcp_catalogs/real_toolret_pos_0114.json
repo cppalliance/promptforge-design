@@ -1,0 +1,354 @@
+{
+  "catalog_id": "real_toolret_pos_0114",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get PAN Card OCR Result",
+      "description": "Fetch the result of a PAN card OCR process using the provided request ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "trackHumanitarianAid",
+      "description": "Track the delivery progress of humanitarian aid",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leadership.conflict_resolution_outcomes",
+      "description": "Record and analyze outcomes of conflict resolution attempts led by senior leaders.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonendconstructorstanding",
+      "description": "Fetches the Constructor Standings at the end of the specified Formula 1 season.",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "predict_next_number",
+      "description": "This method takes a list of numbers and returns the next number in the series by adding the last difference to the last number in the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Finish",
+      "description": "Used to end the task.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_movie_movie_id_similar",
+      "description": "Get a list of similar movies. This is **not** the same as the \"Recommendation\" system you see on the website.\n\nThese items are assembled by looking at keywords and genres.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetPageFreeTextAnnotations",
+      "description": "Retrieves free text annotations from a specific page of a PDF document.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "api_v2_facts_today_get",
+      "description": "Get today's useless fact",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseQueryConfigurator.configureQuery",
+      "description": "Configures a database query based on the provided parameters and returns the configured query string.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "retrieveFullText",
+      "description": "Retrieve the full text for a specific research article, subject to certain usage restrictions.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketLiveApi_match",
+      "description": "NA",
+      "params": [
+        "{'name': 'matchid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Order History",
+      "description": "Retrieve a list of orders placed by a customer and account",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getWarehouseInformation",
+      "description": "Retrieve information about a warehouse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "animation.generate_controls",
+      "description": "Creates animation controls for a rigged character model to facilitate animator's tasks.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_top_type",
+      "description": "Get the current user's top artists or tracks based on calculated affinity.\n",
+      "params": [
+        "{'in': 'path', 'name': 'type', 'required",
+        "{'in': 'query', 'name': 'time_range', 'r",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SupplyChainAnalysis.performVendorAnalysis",
+      "description": "Performs an analysis of vendors to identify the most reliable and cost-effective suppliers for retail chains. This tool uses vendor performance data to rank and suggest optimal suppliers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFossilFuelConsumption",
+      "description": "Retrieve the consumption of fossil fuels",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "InfoCarsAPI_Get_Car_Versions",
+      "description": "Get the different versions of a car model",
+      "params": [
+        "{'name': 'model', 'type': 'string', 'des",
+        "{'name': 'maker', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Recetas_en_espa_ol_Get_recipes_details",
+      "description": "Get details of any recipe",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List User Comments",
+      "description": "Retrieve a list of comments made by a specific user on the SoundCloud platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Argaam_Data_APIs_Free_Get_a_List_of_Indicator_against_each_Subgroup",
+      "description": "Get a List of Indicator against each Subgroup",
+      "params": [
+        "{'name': 'groupID', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Demo_Project_v2_Get_User_Orders",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SunProtectionAdvisor.evaluateSkinType",
+      "description": "Evaluates the user's skin type based on provided skin characteristics and suggests the appropriate SPF level for sun protection.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSurfaceArea",
+      "description": "Retrieve the surface area of a material",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_reminder",
+      "description": "Create reminder event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "BarPatterns_Hanging_Man",
+      "description": "List of stocks having Hanging Man signal.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+      "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Song Lyrics",
+      "description": "Retrieve the lyrics of a specified song from a database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hourly",
+      "description": "Fetch hourly weather forecast for a specified location over the next 5 days using AI technology.",
+      "params": [
+        "lon",
+        "lat",
+        "language",
+        "place_id",
+        "units",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getStationCategories",
+      "description": "Retrieve information about station categories.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Horostory_planetaryoverview",
+      "description": "get the Planetary Overview of the day",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Current Block Number",
+      "description": "Retrieves the current block number for a specified blockchain network.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Schedule",
+      "description": "Retrieve a specific schedule for a team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "errorNotifier",
+      "description": "This function sends an email notification when an error occurs. It formats the error details and sends it to the specified email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "festivalPlanner.createEventSchedule",
+      "description": "Generates a detailed event schedule for a festival including dates, times, and event types.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_Latest_Weather_and_Earthquake_Latest_Top_15_Earthquake_felt_by_local",
+      "description": "Latest Top 15 Earthquake (felt by local)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Restaurants by Local Authority",
+      "description": "This API allows users to search for restaurants within a specific local authority.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "conference_room_cancelling",
+      "description": "Conference Room Cancellation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Nail Suggestions",
+      "description": "Returns a list of suggestions related to a specific nail.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

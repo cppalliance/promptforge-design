@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_neg_0004",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "PetVaccinationScheduler.scheduleAppointment",
+      "description": "Schedules a vaccination appointment for a pet, allowing the user to specify the pet details and preferred appointment time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Language Details",
+      "description": "Returns detailed information about a language with the given ISO 639 language code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "basic_daily",
+      "description": "Fetch daily 10-Q and 10-K report zip files from the SEC financial statement dataset.",
+      "params": [
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NOWPayments_7_Getlistofpayments",
+      "description": "Returns the entire list of all transactions, created with certain API key.\nThe list of optional parameters:\n- limit - number of records in one page. (possible values: from 1 to 500)\n- page - the page number you want to get (possible values: from 0 to **page count - 1**)\n- sortBy - sort the received list by a paramenter. Set to **created_at** by default (possible values: payment_id, payment_status, pay_address, price_amount, price_currency, pay_amount, actually_paid, pay_currency, order_id, order_description, purchase_id, outcome_amount, outcome_currency)\n- orderBy - display the list in ascendi",
+      "params": [
+        "{'name': 'dateFrom', 'type': 'STRING', '",
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'sortBy', 'type': 'STRING', 'de",
+        "{'name': 'orderBy', 'type': 'STRING', 'd",
+        "{'name': 'dateTo', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get a Random Word",
+      "description": "Returns a random word from a list of more than 5500+ words. The API allows for filtering and limiting the returned word based on various criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dudu_Command",
+      "description": "Please check http://dudu.com/docs/api/command/list for the proper parameter and method combinations",
+      "params": [
+        "{'name': 'json', 'type': 'STRING', 'desc",
+        "{'name': 'mask', 'type': 'STRING', 'desc",
+        "{'name': 'application_id', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Matrix API",
+      "description": "Computes the duration of the fastest route between all pairs of supplied coordinates. Returns the durations or distances or both between the coordinate pairs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pinnacle_Odds_List_of_sports",
+      "description": "Get a list of sports",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fidelity_Investments_v3_auto_complete",
+      "description": "Auto suggestion by input name or quote",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_v3_Accurate_Language_Detection",
+      "description": "This endpoint will return the Language of the Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VIN_decoder_US_License_Plate_to_VIN",
+      "description": "Get the vin by license plate number.",
+      "params": [
+        "{'name': 'state_code', 'type': 'STRING',",
+        "{'name': 'license_plate', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "World_Clock_JSONP",
+      "description": "Get current timezone (JSONP)",
+      "params": [
+        "{'name': 'time_zone', 'type': 'STRING', ",
+        "{'name': 'callback', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Players_of_team",
+      "description": "Get players of team by team ID",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "transaction_confirmation_query",
+      "description": "Query and obtain confirmation information for a specified transaction",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Business Slogan Generator",
+      "description": "Generate a unique and catchy slogan for a business based on its name",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TokApi_mobile_version_v1_user_user_id_playlist",
+      "description": "User playlists",
+      "params": [
+        "{'name': 'user_id', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetAssetsbyContractInformation",
+      "description": "This API retrieves asset information wrapped with return code and error code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Risk Return Summary",
+      "description": "Retrieves a summary of the risk return for a specified security type and ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spellout_Languages",
+      "description": "List ISO 639 languages",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCustomerAddresses",
+      "description": "Retrieves a list of addresses associated with a customer.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DownloadDocument",
+      "description": "Downloads a document by its ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_individual_articles",
+      "description": "Retrieves individual articles from a specified newspaper using the RapidAPI service.",
+      "params": [
+        "newspaperid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "travel_camera_recommender",
+      "description": "Travel Camera Recommendation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ContentCalendarCreator",
+      "description": "for creating content calendars",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Medium News API",
+      "description": "Retrieve official news from Medium related to finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entity_Risk_Indicator_Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Paid iPad Apps",
+      "description": "Retrieve a list of top paid iPad apps from the App Store, with optional filtering by category, country, and language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_rounds",
+      "description": "This function calculates the number of rounds in a tournament given the number of teams.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "traffic.getTrafficUpdates",
+      "description": "Retrieve real-time traffic updates for specified routes and times.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Case by ID",
+      "description": "Retrieves a case by its unique ID from the MongoDB database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "show_image",
+      "description": "Fetch and return the image data of a flower from the API using the given flower ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last Roulette Spin",
+      "description": "Retrieve information about the last roulette spin, including the outcome and any relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "favoriteFoodApi_Get_All_Favorite_Food",
+      "description": "This endpoint will return all my favorite Cameroonian dishes",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "compileFpgaDesign",
+      "description": "Compile and synthesize FPGA design",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Princier_Couture_Postal",
+      "description": "Postal",
+      "params": [
+        "{'name': 'get', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_che",
+      "description": "def check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_check: str, query: str) -> str:\n    '''Check the activity of an object and compare it with a specific activity.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for activity.\n        activity_to_check (str): The activity to compare with.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"Just {activity_to_check}\" if the object is engaged in the activity_to_check, \"Engaged in {activity}\" otherwise",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Information",
+      "description": "Retrieves information about a single user in the Entertainment domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Items",
+      "description": "Search items in Rakuten's marketplace",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Contributions (Unreviewed Annotations)",
+      "description": "Retrieve user contributions (unreviewed annotations) for a specific song from the Genius lyrics database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "simple_qr_code",
+      "description": "Generates a simple QR code for the given link with optional color customization using the RapidAPI Toolbench service.",
+      "params": [
+        "link",
+        "color"
+      ]
+    }
+  ]
+}

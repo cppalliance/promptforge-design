@@ -1,0 +1,336 @@
+{
+  "catalog_id": "real_toolret_neg_0193",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "News Sentiment Analysis",
+      "description": "Analyze the sentiment of a news article",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "currency_news",
+      "description": "Fetch the latest news related to a specific currency, forex, or cryptocurrency pair.",
+      "params": [
+        "from_symbol",
+        "to_symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_petstore_loginUser",
+      "description": "Logs user into the system",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_downstream_speed",
+      "description": "This method takes two arguments, 'speed_still_water' and 'speed_stream', and returns the speed in downstream.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataClassifier",
+      "description": "Classify the input data, you need to specify the classification rules.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "background_check",
+      "description": "Background Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_by_API_Ninjas_v1_city",
+      "description": "API Ninjas City API endpoint.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Basketball_Data_Seasonal_Statistics_Quarter_Analysis",
+      "description": "Provides the seasonal quater analysis and statistics of the team in the tournament.",
+      "params": [
+        "{'name': 'teamId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDatabaseInfo",
+      "description": "Retrieve information about a database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "parse_ingredients",
+      "description": "Extract an ingredient from plain text.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Word_of_the_day_Word_of_the_day_from_pm",
+      "description": "Get word of the day from pm",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "openai/clip-vit-large-patch14",
+      "description": "The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner.",
+      "params": [
+        "text",
+        "images",
+        "return_tensors",
+        "padding"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Information",
+      "description": "Retrieve business (Box Office) information of a movie title from the online movie database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProductAvailability",
+      "description": "API to check the availability of a product.",
+      "params": [
+        "{'name': 'product_id', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getphonesbybrandid",
+      "description": "Fetches all phone IDs for a specific brand using the given brand ID.",
+      "params": [
+        "brandid"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_wholesale_cost",
+      "description": "This method takes two arguments, 'sale_price' and 'profit_percentage', and returns the wholesale cost per item.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "BrainstormingTool",
+      "description": "for brainstorming and idea generation",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "campaign_optimization",
+      "description": "Optimize a social media campaign involving multiple influencers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchTvShow",
+      "description": "Search for a TV show by its name.",
+      "params": [
+        "showName"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "The_Cancer_Imaging_Archive_getCollectionValues",
+      "description": "Set of all TCIA collection names",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stats.probabilityDensityFunction",
+      "description": "Calculate the probability density function for a given set of data points.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "inviteFriend",
+      "description": "Invite a friend to play a social media game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WhatsMyIP",
+      "description": "Fetches the user's public IP address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_x_for_composite(func1, func2, target_result)",
+      "description": "def find_x_for_composite(func1, func2, target_result):\n    \"\"\"\n    Find the value of 'x' that satisfies the given condition for composite functions: func1(func2(x)) = target_result.\n\n    Parameters:\n    func1 (function): The first function.\n    func2 (function): The second function.\n    target_result (float): The target result for the composite function.\n\n    Returns:\n    float: The value of 'x' that satisfies the given condition.\n    \"\"\"\n    x = symbols('x')\n\n    # Define the composite function\n    composite_function = func1(func2(x))\n\n    # Create an equation to solve for 'x' based on the gi",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CA_Lottery_Super_Lotto_Plus_Recent",
+      "description": "Most recent draw for Super Lotto Plus",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_2Factor_Authentication_India_Sending_SMS_OTP_Auto_Generated_OTP",
+      "description": "This endpoint is used to send Auto Generated SMS OTP to India",
+      "params": [
+        "{'name': 'phone_number', 'type': 'STRING",
+        "{'name': 'api_key', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "health.bone_density_analysis",
+      "description": "Analyzes bone density data to assess risk of osteoporosis and provides personalized recommendations for bone health improvement.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stochrsi",
+      "description": "Fetches the Stochastic Relative Strength Index (STOCHRSI) for a given financial instrument using the Twelve Data API.",
+      "params": [
+        "symbol",
+        "interval",
+        "fast_dma_type",
+        "series_type",
+        "fast_d_period",
+        "outputsize",
+        "fast_k_period",
+        "format"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClearDil_DownloadtheattachedDRIVING_LICENSEfromthedocument",
+      "description": " ",
+      "params": [
+        "{'name': 'customer_a_id', 'type': 'STRIN",
+        "{'name': 'document_a_id', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "all_songs_from_artist",
+      "description": "Retrieves all songs by the specified artist using the Toolbench RapidAPI service.",
+      "params": [
+        "artist"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Watchmode_Title_Streaming_Sources",
+      "description": "Get all of the streaming sources this title is available on and direct links to watch the title (web, iOS deeplinks and Android deeplinks for paid users). Streaming sources are limited to USA only for free plans.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "finance.investment_return_projection",
+      "description": "Projects future value of investments based on initial amount, expected annual return rate, and investment duration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "arrange_activities",
+      "description": "Arrange activity schedule",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "percentage_to_fraction",
+      "description": "Converts a percentage to a fraction",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_factors",
+      "description": "This method takes an integer as input and returns a list of all its factors.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRandomBearImage",
+      "description": "Retrieve a random bear image with optional background color and format.",
+      "params": [
+        "backgroundColor",
+        "format",
+        "withBear"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate_LinkedIn_Leads_Get_Available_Job_Titles",
+      "description": "Get Available Job Titles which could be used in /leads/leads/ endpoint",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Goofs",
+      "description": "Retrieve goofs (errors or mistakes) in a specific movie or TV title.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotient_forex_signal",
+      "description": "Return a trading signal based on market sentiment, reliable indicators, analyst ratings and news. Signal : `1`=**buy**, `0`=**hold** and `-1`=**sell**. Confidence interval : [0%-100%].",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "crypto_news_v2_YahooFinance",
+      "description": "Get the latest news from Yahoo Finance.",
+      "params": []
+    }
+  ]
+}

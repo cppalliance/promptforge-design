@@ -1,0 +1,351 @@
+{
+  "catalog_id": "real_toolret_neg_0001",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Azure_GetFutureEventsByTopic",
+      "description": "Get future Azure events by topic.",
+      "params": [
+        "{'name': 'topic', 'type': 'string', 'des",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fashion.saleAlert",
+      "description": "Alerts users about sales on their favorite brands or items based on their past shopping history and preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flightProducts",
+      "description": "This function returns the flight information between two cities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cancel_alarms_before",
+      "description": "Cancel all alarms before a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Awarded Books of a Year",
+      "description": "Returns the list of awarded books of a given year, along with their details such as name, winning category, cover image, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "batting_average",
+      "description": "Calculates the batting average of a baseball player based on the number of hits and at-bats.",
+      "params": [
+        "num_hits",
+        "num_at_bats",
+        "precision"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrency_balance_Get_Chiliz_Balance_From_Specific_Network",
+      "description": "This endpoint will return back the Chiliz balance of an address in a specific network.",
+      "params": [
+        "{'name': 'address', 'type': 'string', 'd",
+        "{'name': 'network', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Forever21_products_list_Deprecated",
+      "description": "List products by category",
+      "params": [
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'pagesize', 'type': 'STRING', '",
+        "{'name': 'category', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "hotel_info_query",
+      "description": "Query hotel information",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hearthstone_Cards_by_Race",
+      "description": "Returns all the cards of a certain race. Example values: Mech, Murloc.",
+      "params": [
+        "{'name': 'race', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market_get_chart",
+      "description": "Fetches chart data from the specified market endpoint using given parameters.",
+      "params": [
+        "interval",
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hanging Man Stocks",
+      "description": "Retrieve a list of stocks that have a Hanging Man signal, along with relevant financial information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tmail_Get_Messages",
+      "description": "Get all the messages received by email\nUse the token received from email as authorization header.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_verses_by_bookname",
+      "description": "Fetches a range of verses from a specified book and chapter in the Bible using the RapidAPI service.",
+      "params": [
+        "chapterid",
+        "bookname",
+        "versestart",
+        "verseend"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Calendar_Converter_Convert_Date",
+      "description": "# Converts a date to a specified calendar.",
+      "params": [
+        "{'name': 'to', 'type': 'ENUM', 'descript"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_units_digit_sum",
+      "description": "This method takes a list of integers and returns the units digit of their sum.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MMA_Stats_UFC_287_Pereira_vs_Adesanya_2_April_08_2023",
+      "description": "**Get details to UFC 287: Pereira vs. Adesanya 2.**.    \n  .Access a range of information about each fighter, including their win-loss record, height, weight, reach, and age. results of a particular fight or a fighter's win-loss record.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NOWPayments_7_Getlistofpayments",
+      "description": "Returns the entire list of all transactions, created with certain API key.\nThe list of optional parameters:\n- limit - number of records in one page. (possible values: from 1 to 500)\n- page - the page number you want to get (possible values: from 0 to **page count - 1**)\n- sortBy - sort the received list by a paramenter. Set to **created_at** by default (possible values: payment_id, payment_status, pay_address, price_amount, price_currency, pay_amount, actually_paid, pay_currency, order_id, order_description, purchase_id, outcome_amount, outcome_currency)\n- orderBy - display the list in ascendi",
+      "params": [
+        "{'name': 'dateFrom', 'type': 'STRING', '",
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'sortBy', 'type': 'STRING', 'de",
+        "{'name': 'orderBy', 'type': 'STRING', 'd",
+        "{'name': 'dateTo', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_return_flights",
+      "description": "Retrieve all return flights for a given contract/return bundle from FlightDepartures using the getFlightReturns endpoint.",
+      "params": [
+        "sid",
+        "ppn_bundle",
+        "convert_currency"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_News_tirto_detail",
+      "description": "detail tirto news",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "exact_url_non_english",
+      "description": "Retrieves the backlinks of a specific non-English URL using the RapidAPI service.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Movie Search",
+      "description": "Search for movies by title, person, or year of production",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "product_inventory_search",
+      "description": "Product Inventory Search Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real_Time_Quotes_Historical_forex_price",
+      "description": "Returns historical data of a specific time interval and foreign exchange currency pair",
+      "params": [
+        "{'name': 'target', 'type': 'STRING', 'de",
+        "{'name': 'interval', 'type': 'ENUM', 'de",
+        "{'name': 'source', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Most_Exclusive_API_exclusiveness_callerID",
+      "description": "Check Exclusiveness. See if you are already exclusive, not yet or you get the exclusivity now.",
+      "params": [
+        "{'name': 'callerID', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_object_purpose(image: Image, object_name: str, query: str) -> str",
+      "description": "def find_object_purpose(image: Image, object_name: str, query: str) -> str:\n    '''Find the purpose of an object in an image.\n    \n    Args:\n        image (Image): The image to check.\n        object_name (str): The name of the object to find the purpose of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The purpose of the object.\n    '''\n    image_patch = ImagePatch(image)\n    object_patches = image_patch.find(object_name)\n    object_patch = object_patches[0]\n    answer = object_patch.llm_query(query, long_answer=True)\n    return answer",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "PTL_update",
+      "description": "update endpoint",
+      "params": [
+        "{'name': 'info3', 'type': 'STRING', 'des",
+        "{'name': 'info1', 'type': 'STRING', 'des",
+        "{'name': 'info2', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_v4_v1_1_User_Following",
+      "description": "v1.1 / User Following",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "pyannote/brouhaha",
+      "description": "Brouhaha is a joint voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation model. It is based on the PyTorch framework and uses the pyannote.audio library.",
+      "params": [
+        "audio.wav"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_event_reminder",
+      "description": "Set a reminder for a specified event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Database Endpoint",
+      "description": "Retrieves data from the database for analysis or reporting purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stations",
+      "description": "Retrieve the nearest electric vehicle charging stations within a specified distance.",
+      "params": [
+        "distance",
+        "longitude",
+        "latitude"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "top_posts_by_subreddit",
+      "description": "Fetches the top posts from a specific subreddit within a given time frame using the Reddit API.",
+      "params": [
+        "time",
+        "subreddit",
+        "cursor"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weee_grocery_API_sayweee_com_browsing_searching_details_product_details_zipcode_",
+      "description": "provide detailed product information based on the product id and user's zipcode\nproduct_id should come from the product search endpoint\nresponse also contains detailed price and availability information",
+      "params": [
+        "{'name': 'zipcode', 'type': 'STRING', 'd",
+        "{'name': 'product_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CROSSWORD_Solver_CROSS",
+      "description": "**Using this API is easy! An example?**\n\nSearch string:\n- must contain letters (a-z) AND at least one _ (underscore) for unknown letters.\n- must have a minimum length of 3 and a maximum lenght of 65 characters.\n- is a required parameter.\n\nExample request:   `word=u_b_l_e_a_l_`\n\nLanguage:\n- en, es, de (English, Spanish, German)\n- is a optional parameter. If not set /en/ is used. \n\nExample request:   `lang=en`\n\n**This is fun!**",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Near Matches of a Handball Player",
+      "description": "Retrieve near matches of a handball player by ID, including player information and match details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asdfadsf_Get_Products_in_Category",
+      "description": " ",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'skip', 'type': 'NUMBER', 'desc",
+        "{'name': 'category', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realtime_Crypto_Prices_Get_Realtime_Rates",
+      "description": "Returns Realtime price of a coin",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CharacterGenerator.createCharacterProfile",
+      "description": "Generates a detailed character profile for fiction writing, including personality traits, background, and motivations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bus_trolley_locations",
+      "description": "Retrieves the current bus and trolley locations for a specified route.",
+      "params": [
+        "route"
+      ]
+    }
+  ]
+}

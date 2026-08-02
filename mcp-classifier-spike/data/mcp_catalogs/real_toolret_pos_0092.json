@@ -1,0 +1,335 @@
+{
+  "catalog_id": "real_toolret_pos_0092",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "cancel_alarms_before",
+      "description": "Cancel all alarms before a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "communication.broadcast_schedule",
+      "description": "Generates a schedule for broadcasting segments based on priority and duration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_phone_validation_extract_fast",
+      "description": "Find and format/validate Phone/Cell numbers in given text.\n    \nCountry used to identify number format and highly recommended to set value in case you know it (as example your shop works only in US and clients have US cellnumbers).\n    \nUse 'country_auto' param in /extract endpoint case you can't provide Country and service will try to guess the country :)",
+      "params": [
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mrautoparts_Disclaimer",
+      "description": "we do not guarantee  product safety or prices",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Freeplanhardlimitexternal_loginUser",
+      "description": "{\"category_name\": \"Business_Software\", \"required_parameters\": [{\"name\": \"username\", \"type\": \"STRING\", \"description\": \"The user name for login\", \"default\": \"\"}, {\"name\": \"password\", \"type\": \"STRING\", \"description\": \"The password for login in clear text\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"Freep",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Azure_GetNewsByTopic",
+      "description": "Get Azure news by topic.",
+      "params": [
+        "{'name': 'topic', 'type': 'string', 'des",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "yamnet",
+      "description": "YAMNet is a deep net that predicts audio events from the AudioSet ontology.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Product Offers in Turkey",
+      "description": "This API retrieves product offers from Amazon Turkey. It requires a product ID and an API key from ScraperAPI.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Leagues",
+      "description": "Search for leagues in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currencygenie_Get_list_of_Currency_Exchanges_copy_copy",
+      "description": "Performs GET request for getting list of currencies",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "b_b_availability_check",
+      "description": "B&B Availability Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_ZIP_Code_to_Income_ZIP_code",
+      "description": "ZIP code",
+      "params": [
+        "{'name': 'zip', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon Product Reviews API",
+      "description": "Retrieves product reviews from Amazon for a given ASIN.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "diet_plan_generator",
+      "description": "Generates a personalized diet plan based on user's dietary preferences, target calories, and meal timing preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "actors_random",
+      "description": "Fetches a random list of actors from the Movies Database RapidAPI.",
+      "params": [
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SculptureMaterialAdvisor.selectMaterial",
+      "description": "Selects the appropriate materials for sculpture based on artistic requirements and environmental conditions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_Lists_Tweets_Continuation",
+      "description": "This endpoint returns the next list of tweets in a given Twitter list",
+      "params": [
+        "{'name': 'list_id', 'type': 'STRING', 'd",
+        "{'name': 'continuation_token', 'type': '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_split",
+      "description": "This method takes two arguments, 'bill' and 'num_people', and returns the amount each person should pay.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_v2_Get_Followings_by_pk",
+      "description": "Get lists of any public Instagram account followings via pk",
+      "params": [
+        "{'name': 'pk', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "facebook/timesformer-hr-finetuned-k600",
+      "description": "TimeSformer model pre-trained on Kinetics-600. It was introduced in the paper TimeSformer: Is Space-Time Attention All You Need for Video Understanding? by Tong et al. and first released in this repository. The model can be used for video classification into one of the 600 possible Kinetics-600 labels.",
+      "params": [
+        "images",
+        "return_tensors"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vintageCollector.evaluateItem",
+      "description": "Evaluate the authenticity and value of a vintage item based on provided details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "BrandPositioningTool",
+      "description": "for determining brand positioning and brand personality",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Github_API_Scraper_Get_list_of_GitHub_repo_for_Ruby_web_scrapping",
+      "description": "Get list of GitHub repo for Ruby web scrapping",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "All Climate Change News",
+      "description": "With this endpoint you can get all climate change news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "optimizeWebsite",
+      "description": "Optimize a website for better search engine rankings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gaming.inventoryManagement",
+      "description": "Manage a player's inventory in a game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_alerts_alertId_annotations",
+      "description": "Get annotations of an alert by id.",
+      "params": [
+        "{'name': 'alertId', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getHistoricalFigure",
+      "description": "Retrieve information about a historical figure",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMolarMass",
+      "description": "Retrieve the molar mass of a chemical compound",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_get_manager_placeholder",
+      "description": "Get the manager placeholder image in PNG format.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "checkUrlSafety",
+      "description": "Check whether a single URL or domain has been flagged as unsafe",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ingredient_substitutes_by_id",
+      "description": "Search for substitutes for a given ingredient.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_Phones_Get_Devices_Details",
+      "description": "Params\n\n1. device_id",
+      "params": [
+        "{'name': 'device_id', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Indonesia_News_detik_search",
+      "description": "search detik.com news",
+      "params": [
+        "{'name': 'page', 'type': 'NUMBER', 'desc",
+        "{'name': 'limit', 'type': 'NUMBER', 'des",
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "all articles",
+      "description": "Endpoint to gather all articles from all listed publications detailed in API",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_range_for_product_of_floor_and_ceil(target_product)",
+      "description": "def find_range_for_product_of_floor_and_ceil(target_product):\n    \"\"\"\n    Find the range of possible values for a variable such that the product of the floor and ceiling of the variable equals a target product.\n\n    Parameters:\n    target_product (int): The target product of the floor and ceiling of the variable.\n\n    Returns:\n    tuple: The range of possible values for the variable in interval notation (inclusive, exclusive).\n    \"\"\"\n    # Start from the square root of the target product and decrease until we find a suitable range\n    start_value = math.sqrt(target_product)\n    while True:\n  ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_LeagueTotalTeamEvents",
+      "description": "Get last 5 matches of a specific Football league.",
+      "params": [
+        "{'name': 'seasonId', 'type': 'NUMBER', '",
+        "{'name': 'tournamentId', 'type': 'NUMBER"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Watchmode_Title_Cast_Crew",
+      "description": "Return all people associated with the title, the \"cast\" (actors), and \"crew\" (directors, writers, cinematographers, etc). For more details on a person, pass the person-id to the /person/ endpoint.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "food_security.analysis",
+      "description": "Analyzes food security levels within a community by evaluating local food production and consumption patterns.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "items",
+      "description": "Fetches item details from the Codester API using the specified item ID.",
+      "params": [
+        "is_id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "catalog_id": "real_toolret_pos_0126",
+  "tools": [
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_me_playlists",
+      "description": "Get a list of the playlists owned or followed by the current Spotify\nuser.\n",
+      "params": [
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iOS_Store_Get_app_reviews",
+      "description": "This endpoint allows us to fetch app reviews given app Id",
+      "params": [
+        "{'name': 'sort', 'type': 'STRING', 'desc",
+        "{'name': 'country', 'type': 'STRING', 'd",
+        "{'name': 'page', 'type': 'STRING', 'desc",
+        "{'name': 'appId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify Signup Code",
+      "description": "Verify the signup code received by the user and complete the signup process.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_get_albums",
+      "description": "get-albums",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "slope_perpendicular",
+      "description": "Calculates the slope of the perpendicular line to a given line",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_problems",
+      "description": "This method takes two arguments, 'start' and 'end', representing the range of problems to be solved, and returns the number of problems in that range.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Contributions (Suggestions)",
+      "description": "Retrieve user contributions (suggestions) related to song lyrics from Genius.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "add_agenda_reminder",
+      "description": "Add a new reminder in the schedule management tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "StopModReposts_Blocklist_HOSTS_TXT",
+      "description": "Hosts file endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Year End Top Artists - Male",
+      "description": "Retrieve the year-end top artists for male artists from the Billboard music charts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "query_by_fsa_code",
+      "description": "Fetches geographical boundary information for a given Canadian Forward Sortation Area (FSA) code using the VanitySoft API.",
+      "params": [
+        "postal_fsa"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get A Bot Category Group",
+      "description": "Retrieve a specific bot category group by its ID and display its details",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_CategorySchedules",
+      "description": "Get handball matches by category and date.",
+      "params": [
+        "{'name': 'month', 'type': 'NUMBER', 'des",
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'year', 'type': 'NUMBER', 'desc",
+        "{'name': 'day', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "petstore_blitz_getUserByName",
+      "description": " ",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_remaining_work",
+      "description": "Calculates the remaining work to be done by the man",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "airlines/get-logos",
+      "description": "This API retrieves the logos of various airlines.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Tacotron 2",
+      "description": "The Tacotron 2 model generates mel spectrograms from input text using an encoder-decoder architecture, and it is designed for generating natural-sounding speech from raw transcripts without any additional prosody information. This implementation uses Dropout instead of Zoneout to regularize the LSTM layers. The WaveGlow model (also available via torch.hub) is a flow-based model that consumes the mel spectrograms to generate speech.",
+      "params": [
+        "model_math"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "chavinlo/TempoFunk",
+      "description": "A Text-to-Video model using Hugging Face Transformers library. Model is capable of generating video content based on the input text.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_cashew_price",
+      "description": "This method takes a dictionary representing a table, and returns the price of cashews.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listBanks",
+      "description": "Retrieve a list of all supported banks and their unique codes.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "MonitoringTool",
+      "description": "Used to monitor the use of the CRM system and make improvements.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getCityServicesData",
+      "description": "Access data on city services like waste disposal, recreation facilities, and events.",
+      "params": [
+        "serviceType",
+        "startDate",
+        "endDate",
+        "limit",
+        "offset"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MediaComplianceChecker.verifyCompliance",
+      "description": "Checks media content against a set of compliance rules to ensure adherence to ethical standards in media production and distribution.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_TVCountries",
+      "description": "Get a list of countries and their respective TV channels broadcasting a specific Football match.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Articles_Generator_Get_Generated_Article_By_ID",
+      "description": "When using Generate New Article Endpoint, the article is saved, and can be accessed by the provided id",
+      "params": [
+        "{'name': 'article-id', 'type': 'string',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flame",
+      "description": "Calculates the FLAMES relationship compatibility score for two given names using the Flames Love Calculator API.",
+      "params": [
+        "sname",
+        "fname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ScrapTik_List_Comments_Replies",
+      "description": "Get replies of a comment.",
+      "params": [
+        "{'name': 'aweme_id', 'type': 'STRING', '",
+        "{'name': 'comment_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetSponsorships",
+      "description": "Retrieve a list of sponsorships for Diablo 4, including information about the sponsors and their respective roles.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "URLBuilder",
+      "description": "Used to generate the URLs of different pages under a given website",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_getJP2Header",
+      "description": "Get the XML header embedded in a JPEG2000 image. Includes the FITS header as well as a section of Helioviewer-specific metadata.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "change_file_permission",
+      "description": "Change the permission settings of a specified file",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Makes",
+      "description": "Retrieve a list of car makes from the car database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Channel Broadcaster Type",
+      "description": "Retrieve the broadcaster type of a Twitch channel using the channel's username or ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_qr_code",
+      "description": "Generates a QR code for the given URL using the RapidAPI service.",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getForestLoss",
+      "description": "Retrieve forest loss information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameDesignProfile.createGame",
+      "description": "Creates a new game with specified parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Mlem Image",
+      "description": "Retrieve a specific mlem image by its ID in JSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_Prices_10_Year_Historical_Monthly_Prices",
+      "description": "10 Year monthly historically adjusted Open, High, Low, and Close prices.  Monthly Volume, Dividend, and Split information is also included.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DNS_Lookup_Reverse",
+      "description": "Get name servers from an IP",
+      "params": [
+        "{'name': 'ip', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "color_recognition_tool",
+      "description": "Color recognition tool that can identify the main color tone in an image based on the input image and color type",
+      "params": []
+    }
+  ]
+}

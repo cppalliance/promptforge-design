@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_toolret_neg_0128",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "GET Fast Food Restaurants by Chain and State",
+      "description": "Retrieve a list of fast food restaurants by chain and state. The API returns a maximum of 10 results per request. Use the `page` parameter for pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scheduleSocialMediaPost",
+      "description": "Schedule a post on a social media platform",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ideas_get_comments",
+      "description": "Fetches comments related to an idea post from the TradingView API.",
+      "params": [
+        "uuid",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "roomReservation.cancel",
+      "description": "Cancels an existing room reservation in the hospitality system.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_max_subarray_sum",
+      "description": "Finds the maximum sum of a contiguous subarray within a list of integers.",
+      "params": [
+        "nums"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Historical Price Data",
+      "description": "Retrieve historical price data for the past 3 months. The API returns hourly data points.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create File",
+      "description": "Creates a new string for translation. File uploads are limited to 100Mb in size. Each string may be attached to only one resource after creation.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CROSSWORD_Solver_CROSS",
+      "description": "**Using this API is easy! An example?**\n\nSearch string:\n- must contain letters (a-z) AND at least one _ (underscore) for unknown letters.\n- must have a minimum length of 3 and a maximum lenght of 65 characters.\n- is a required parameter.\n\nExample request:   `word=u_b_l_e_a_l_`\n\nLanguage:\n- en, es, de (English, Spanish, German)\n- is a optional parameter. If not set /en/ is used. \n\nExample request:   `lang=en`\n\n**This is fun!**",
+      "params": [
+        "{'name': 'word', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Commodity_Rates_API_Supported_Symbols",
+      "description": "Check all the available symbols for your queries. This endpoint retrieves all the supported commodities and currencies as well.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok User Prostring",
+      "description": "Retrieve a TikTok user's prostring information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_trivia",
+      "description": "Get trivia of title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getPollutantConcentration",
+      "description": "Retrieve the concentration of a pollutant in a given environment",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GameSchedule",
+      "description": "This API provides a schedule for the team's games based on the team information.",
+      "params": [
+        "{'name': 'team_info', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_4D_Results_Get_Past_Results_1_year",
+      "description": "Return all company 4D Results within a specific date range.\n(Up to 1 year data and only available for ULTRA PLAN subscriber)",
+      "params": [
+        "{'name': 'start', 'type': 'DATE (YYYY-MM",
+        "{'name': 'end', 'type': 'DATE (YYYY-MM-D"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_World_Cup_champions",
+      "description": "World cup champions. Titles and success",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_List_of_clubs",
+      "description": "Get a list of clubs",
+      "params": [
+        "{'name': 'competition_id', 'type': 'STRI",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Formula_1_fixed_Listofallcircuitswithinaraceinayear",
+      "description": " ",
+      "params": [
+        "{'name': 'round', 'type': 'STRING', 'des",
+        "{'name': 'year', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "monitorVessel",
+      "description": "Monitor the movements of a vessel in real-time.",
+      "params": [
+        "mmsi"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getVideoData",
+      "description": "Retrieve video data related to weather or astronomy for a specific location and date.",
+      "params": [
+        "location",
+        "date",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock Sentiment Analysis API",
+      "description": "Returns a list of articles related to the input stock and their associated sentiment scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alpha_Vantage_Busca_por_simbolo",
+      "description": "buscar dados pelo simbolo",
+      "params": [
+        "{'name': 'function', 'type': 'STRING', '",
+        "{'name': 'apikey', 'type': 'STRING', 'de",
+        "{'name': 'outputsize', 'type': 'STRING',",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Weather by Geographic Coordinates",
+      "description": "Retrieve weather information by providing geographic coordinates (latitude and longitude).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_box_height",
+      "description": "This method takes two arguments, 'length' and 'width', and returns the height of the box after squares are cut off from each corner.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Server Key Details",
+      "description": "Retrieve key details from a game server",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "hour_hand_position",
+      "description": "This function takes the hour and minute as input and returns the position of the hour hand in degrees.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLearningProgress",
+      "description": "Retrieve learning progress of a student",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TaxOptimizer.calculateDeductions",
+      "description": "Calculates the optimal tax deductions for an individual based on their financial records and applicable tax laws.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "notify_user",
+      "description": "Send notifications through the user's preferred communication method",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "seitreporp_tsil",
+      "description": "Query rooms, price, facilities, policities, etc information from many hotels around the world. This API reproduce PUBLIC data and features of related site/brand in real time and on demand.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "estimateCustomerLifetimeValue",
+      "description": "Estimate the customer lifetime value",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IMDb_title_find",
+      "description": "Find title by whatever you are familiar with, such as : name of title, album, song, etc...",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "skillGapAnalyzer.identifyNeeds",
+      "description": "Analyzes skill gaps for individuals aiming to enter emerging careers, providing tailored training recommendations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_and_Options_Trading_Data_Provider_Straddle",
+      "description": "Straddle Format",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "dqn-CartPole-v1",
+      "description": "This is a trained model of a DQN agent playing CartPole-v1 using the stable-baselines3 library and the RL Zoo. The RL Zoo is a training framework for Stable Baselines3 reinforcement learning agents, with hyperparameter optimization and pre-trained agents included.",
+      "params": [
+        "algo",
+        "env",
+        "logs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dataTransformer001.processData",
+      "description": "This tool is used to process and transform data in Java. It can handle various data types and apply different transformations based on the provided configuration.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_spotify_artist_artistID",
+      "description": "Get specific Spotify artist details. \nAdd \"_info\" or leave blank for general information, \"_songs\" for all songs, \"_albums\" for all albums",
+      "params": [
+        "{'name': 'artistID', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Real Time Commodity Futures Prices API",
+      "description": "Retrieves real-time commodity futures prices from Investing.com",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "simulate_vr_experience",
+      "description": "Simulate a virtual reality (VR) experience based on the provided parameters such as user actions, scene conditions, and time duration.",
+      "params": [
+        "type",
+        "properties"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Business Photos",
+      "description": "Retrieve photos of a specific business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top_NFT_Sales_Top_Collections_this_Month",
+      "description": "Top trending collections this month",
+      "params": []
+    }
+  ]
+}

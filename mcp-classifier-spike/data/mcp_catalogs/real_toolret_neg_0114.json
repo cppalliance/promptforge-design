@@ -1,0 +1,337 @@
+{
+  "catalog_id": "real_toolret_neg_0114",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Fetch Transactions",
+      "description": "Fetch the list of transactions submitted to the blockchain database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scrape_contacts_from_website",
+      "description": "Scrape emails, phone numbers, and social media profiles from the root domain of a given website.",
+      "params": [
+        "query",
+        "match_email_domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "user_info",
+      "description": "Retrieve TikTok user information by username using the Toolbench RapidAPI.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_post",
+      "description": "Fetches the details of a TikTok post using the given `aweme_id` via the RapidAPI service.",
+      "params": [
+        "aweme_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "teamlastmatches",
+      "description": "Fetch the last matches for a specified cricket team using the RapidAPI cricket API.",
+      "params": [
+        "page",
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Climate Change News",
+      "description": "This endpoint will return back all news about Climate Change from all over the world.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Data_artist_appears_on",
+      "description": "artist-appears-on",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IceHockeyApi_MatchStreaks",
+      "description": "Get the streaks for a specific Ice Hockey match using the match id.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "company_details",
+      "description": "Fetch details of a company from Indeed's API.",
+      "params": [
+        "company_id",
+        "locality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stream Information",
+      "description": "Retrieves information about a Twitch stream, including its status, if the stream is currently online.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AmericanFootballApi_LeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER",
+        "{'name': 'seasonId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AI_Weather_by_Meteosource_daily",
+      "description": "**Daily weather** forecast for the next 21 days. **Global** data are based on our **AI technology**, which uses many different models. **Define your location** using GPS coordinates or `place_id` from `Location endpoints`.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "generatePassword",
+      "description": "Generates a random password with the specified length and character set.",
+      "params": [
+        "length",
+        "characterSet"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dudu_Command",
+      "description": "Please check http://dudu.com/docs/api/command/list for the proper parameter and method combinations",
+      "params": [
+        "{'name': 'json', 'type': 'STRING', 'desc",
+        "{'name': 'mask', 'type': 'STRING', 'desc",
+        "{'name': 'application_id', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stays_properties_detail_photos",
+      "description": "Fetch detailed photos of a specific property from the stays/properties/detail/photos endpoint using the Booking.com RapidAPI.",
+      "params": [
+        "language_code",
+        "id_detail"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "daily_schedule_manager",
+      "description": "Schedule Management Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customizeLoginScreen",
+      "description": "Customizes the login screen to match your app's look and feel.",
+      "params": [
+        "backgroundColor",
+        "logoUrl",
+        "buttonColor",
+        "buttonText"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "City_and_State_Search_API_States_Details",
+      "description": "This endpoint allows you to retrieve detailed information about a specific state by ID",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "team_roster",
+      "description": "Fetches and returns the roster for a specified football team using the RapidAPI service.",
+      "params": [
+        "team"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_repayment_schedule",
+      "description": "Calculates the repayment schedule for a loan using specified parameters.",
+      "params": [
+        "installmentcount",
+        "principalamount",
+        "annualinterestrate",
+        "startdate",
+        "repaymentinterval"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Corona_virus_World_and_India_data_India_Timeline_data_starting_from_30th_Jan_202",
+      "description": "India timeline data",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getLocationTrafficFlow",
+      "description": "Obtain information about a location's traffic flow.",
+      "params": [
+        "locationId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get All Physical Quantities",
+      "description": "This endpoint returns a list of physical quantities, including their constants and equations, used in the education domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getTrainingPlan",
+      "description": "Retrieve a personalized training plan for bodybuilding",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BMR_and_TMR_Activity_Values",
+      "description": "Returns a list of possible activity values that are needed to compute TMR",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Hello_World_get_user",
+      "description": "get user by id",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "pyannote/overlapped-speech-detection",
+      "description": "Automatic overlapped speech detection using pyannote.audio framework. The model detects when two or more speakers are active in an audio file.",
+      "params": [
+        "audio.wav"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_consecutive_sum",
+      "description": "This method takes one argument, 'n', and returns the sum of the first 'n' consecutive odd integers.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Financial_Modeling_Prep_Earning_Call_Transcript_API_PREMIUM",
+      "description": "Analyzing Earnings Conference Call With NLP",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getupdates",
+      "description": "Fetch updates about newly received messages from the server, starting from a given message ID and optionally waiting for incoming messages for a specified time.",
+      "params": [
+        "start_id",
+        "time_out"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scoring_Tables_API_marks_men_points",
+      "description": "This retrieves the men's marks for the point value given as a parameter (0-1400).",
+      "params": [
+        "{'name': 'points', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Street-Level Crimes API",
+      "description": "Retrieve street-level crime data from the UK Police for a specific location and string (optional).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "sdfsdf_v2_asdasd",
+      "description": "dasdasd",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "runas",
+      "description": "A tool in the Windows environment for running programs as a specified user.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDataVisualization",
+      "description": "Generate a data visualization based on a specific dataset and visualization type.",
+      "params": [
+        "datasetId",
+        "visualizationType",
+        "fields",
+        "filters",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_return_speed_generic(distance, initial_speed, average_speed)",
+      "description": "def find_return_speed_generic(distance, initial_speed, average_speed):\n    \"\"\"\n    Find the return speed of a vehicle given the distance of the trip, the initial speed, and the average speed of the round trip.\n\n    Parameters:\n    distance (float): The distance from the starting point to the destination.\n    initial_speed (float): The speed of the vehicle from the starting point to the destination.\n    average_speed (float): The average speed of the round trip.\n\n    Returns:\n    float: The speed of the vehicle from the destination back to the starting point.\n    \"\"\"\n    # Calculate the total t",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zipwhip_group_delete",
+      "description": "Delete the group. This is similar to deleting a contact, no message objects will be affected by deleting the group.",
+      "params": [
+        "{'name': 'address', 'type': 'STRING', 'd",
+        "{'name': 'session', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StopModReposts_Blocklist_XML",
+      "description": "Extensible Markup Language endpoint",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "advance",
+      "description": "This function makes a GET request to the cleantalk1.p.rapidapi.com service with specified parameters and returns the response.",
+      "params": [
+        "fill_char",
+        "text",
+        "add"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "cd",
+      "description": "A tool to change the current working directory.",
+      "params": []
+    }
+  ]
+}

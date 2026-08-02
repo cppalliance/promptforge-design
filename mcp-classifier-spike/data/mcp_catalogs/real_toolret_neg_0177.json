@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_toolret_neg_0177",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Location_and_Time_Search_Country_by_Name",
+      "description": "Get details of the country specified by name, fuzzy search is supported. Up to 10 records for countries with similar name may be returned. Information includes country name, capital, area, population, languages, neighbors, phone code, postal code, and more.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TimeTool.get_curr_time",
+      "description": "get current time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "google_fake_autocomplete",
+      "description": "Generate a fake Google autocomplete suggestion using three input texts.",
+      "params": [
+        "text1",
+        "text3",
+        "text2"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Freeplanhardlimitexternal_loginUser",
+      "description": "{\"category_name\": \"Business_Software\", \"required_parameters\": [{\"name\": \"username\", \"type\": \"STRING\", \"description\": \"The user name for login\", \"default\": \"\"}, {\"name\": \"password\", \"type\": \"STRING\", \"description\": \"The password for login in clear text\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"Freep",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ModifyScene",
+      "description": "\"ModifyScene API that takes two parameters - 'scene_name' and 'new_device_list'. The 'scene_name' parameter specifies the name of the scene which needs to be modified and the 'new_device_list' parameter is a list of strings containing the names of the new devices that will replace the old ones in the scene.\"",
+      "params": [
+        "{'name': 'scene_name', 'in': 'query', 's",
+        "{'name': 'new_device_list', 'in': 'query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ikea_API_Search_By_Category_Filters",
+      "description": "Complimentary to the \"Search By Category\" endpoint. Obtain a list of filters available to a specified category.",
+      "params": [
+        "{'name': 'categoryID', 'type': 'STRING',",
+        "{'name': 'countryCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "telecom.network_upgrade_planner",
+      "description": "Plan and schedule upgrades for mobile network infrastructure based on current technology and future needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_tax",
+      "description": "This method takes a string representing a tax value in the format \"$ X\" and returns the corresponding float value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_count_and_increase_by_one",
+      "description": "Sends a GET request to the specified counter API, optionally including parameters for ID, label, and color, ",
+      "params": [
+        "is_id",
+        "clabel",
+        "color"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tomba_LinkedinFinder",
+      "description": "This API endpoint generates or retrieves the most likely email address from a Linkedin URL.",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "revokeLibraryAccess",
+      "description": "Revoke access from a user in a library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YH_Finance_v2_stock_get_annual_avg_div_rate",
+      "description": "return annual average dividend rate",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BILLBOARD GLOBAL 200",
+      "description": "Retrieve the Billboard Global 200 chart information for a specified string and range of songs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "optimizeWebsite",
+      "description": "Optimize a website for better search engine rankings",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Business Search API",
+      "description": "Search for Yelp businesses by query/keyword and location.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Instagram Feed by Username",
+      "description": "Retrieve the Instagram feed of a specified username",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ishan_GetAlerts",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str:\n    '''Describe the appearance of an object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to describe.\n       \n    Returns:\n        str: The description of the object's appearance.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # Assume that there is only one object of the given type in the photo\n    object_patch = object_patches[0]\n    description = object_patch.simple_query(f\"Can you describe the {object_name}'s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoAPI_Get_Country_Details",
+      "description": "Get details of country from its name and prefix.",
+      "params": [
+        "{'name': 'name', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Data",
+      "description": "Retrieve specifications, pictures, and average pricing of a car",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_NBA_Injury_List_History",
+      "description": "This table currently has injury history from the years 2020, 2021, 2022, and 2023 for players who played an NBA game in the 21-22 season and afterwards.  Consider this table as \"beta\" at this point, as we are still collecting previous seasons' data and working through some challenges. \n\nparameters:\n(All dates must be in format YYYYMMDD)\nplayerID - Use this if you only want to pull back injury history from a specific player.\ninjDate - Use this is to pull back injury history for only a specific date.\nThe next two are used to pull back a range of dates.  You can use one or the other. Or none. \nbe",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_left_soldiers",
+      "description": "This method takes two arguments, 'initial_soldiers' and 'remaining_soldiers', and returns the number of soldiers who left.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Amazon Product Reviews API",
+      "description": "Retrieves product reviews from Amazon for a given ASIN.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Postal Information",
+      "description": "Retrieve postal information, such as addresses or shipping rates, for a business.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_expression_value(var1, var2, given_equation, target_expression)",
+      "description": "def find_expression_value(var1, var2, given_equation, target_expression):\n    \"\"\"\n    Find the value of a target expression involving two variables based on a given equation.\n\n    Parameters:\n    var1 (symbol): The first variable in the equation.\n    var2 (symbol): The second variable in the equation.\n    given_equation (Equation): The given equation involving var1 and var2.\n    target_expression (Expression): The target expression involving var1 and var2.\n\n    Returns:\n    Expression: The value of the target expression.\n    \"\"\"\n    # Solve the given equation for one of the variables\n    solut",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CricketLiveApi_match",
+      "description": "NA",
+      "params": [
+        "{'name': 'matchid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPolicyDetails",
+      "description": "Retrieve detailed information on a specific government policy measure related to Covid-19.",
+      "params": [
+        "policyId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "leaguehometeamevents",
+      "description": "Retrieves the last 5 home events for a specific league and season using the Baseball API.",
+      "params": [
+        "seasonid",
+        "tournamentid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.stemWorkshops",
+      "description": "Fetches a list of available STEM workshops for a specified date and grade level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_inside_object_near_object(image_patch: ImagePatch, object_name: str, refer",
+      "description": "def check_inside_object_near_object(image_patch: ImagePatch, object_name: str, reference_object_name: str, relative_position: str, query: str) -> str:\n    '''Find out what is inside an object that is near or far from another object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        reference_object_name (str): The name of the reference object.\n        relative_position (str): The relative position of the checked object to the reference object. Options: [\"near\", \"far\"].\n        query (str)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_holders",
+      "description": "Get holders related to a symbol. In terms of Yahoo Finance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AirplanesDB_Airplanes_ordered_by_descending",
+      "description": "Get all airplanes ordered by name in descending order.",
+      "params": [
+        "{'name': 'ordering', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Highfive Item",
+      "description": "This API is used to highfive an item on the Geeklist platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "restrictAccess",
+      "description": "Restrict access to a specific section in the library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "forex_trend_analysis",
+      "description": "Analyzes and predicts future trends for a specified currency pair using historical data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Snapchat Story",
+      "description": "Retrieve a Snapchat story and its associated data for a given username.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PetStoreAPI2_0_loginUser",
+      "description": "{\"category_name\": \"Business\", \"required_parameters\": [{\"name\": \"password\", \"type\": \"STRING\", \"description\": \"The password for login in clear text\", \"default\": \"\"}, {\"name\": \"username\", \"type\": \"STRING\", \"description\": \"The user name for login\", \"default\": \"\"}], \"optional_parameters\": [], \"method\": \"GET\", \"template_response\": {\"code\": \"int\", \"type\": \"str\", \"message\": \"str\"}, \"name\": \"PetStoreAPI2_0",
+      "params": [
+        "{'name': 'password', 'type': 'STRING', '",
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get US County Data for a Single State",
+      "description": "Retrieves county-level data for a specific US state",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "house_prices_get_points_of_interest",
+      "description": "Fetches the nearest points of interest for a given property using the Zoopla API.",
+      "params": [
+        "property_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_Scraper_List_User_Recently_Played_Artists",
+      "description": "This endpoint lists recently played artists of a user.",
+      "params": [
+        "{'name': 'userId', 'type': 'STRING', 'de"
+      ]
+    }
+  ]
+}

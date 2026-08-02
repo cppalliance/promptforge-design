@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_toolret_pos_0192",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "AR by City/State",
+      "description": "Returns information about the average air quality (AR) in a given city or state.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_news_get_market_update_details",
+      "description": "Read market update news in details",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Predict Feature Forecast 7 Day",
+      "description": "Predicts the weather forecast for the next 7 days, providing a binary predict value, rating, and tips for astronomers based on the forecast.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Polyglot",
+      "description": "Supports multilingual detection, especially optimized for recognition of non-mainstream languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ObjectExists",
+      "description": "Checks if a string or folder exists in a storage.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "problem_resolution_plan",
+      "description": "Create a resolution plan for a specific problem.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auther_Check_Get_person_by_id",
+      "description": "To check if the person_id already exists in the system, just specify the path with person_id. If the person_id exists in response you will get the same person_id and information when a person was created and updated.",
+      "params": [
+        "{'name': 'person_id', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Football_Betting_Odds_provider3_live_upcoming",
+      "description": "get upcoming matches list",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SendSMS",
+      "description": "Send a single SMS message",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_stock",
+      "description": "Search for stock prices",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CoinLore_Cryptocurrency_Get_exchange_pairs",
+      "description": "Returns top 100 pars",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_Sports_Teams_Details",
+      "description": "Get team details by team ID. News tag, country, badge_id (logo), result and fixtures events",
+      "params": [
+        "{'name': 'team_id', 'type': 'NUMBER', 'd",
+        "{'name': 'timezone', 'type': 'NUMBER', '",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "RatingAverage",
+      "description": "This API calculates the average rating of given rating scores.",
+      "params": [
+        "{'name': 'ratingScores', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_airports",
+      "description": "Retrieves data of airports based on various filtering parameters and sorting options from an external API. It returns data from over 28,000 airports in the database.",
+      "params": [
+        "lid",
+        "sortby",
+        "name",
+        "limit",
+        "elevationover",
+        "country",
+        "city",
+        "skip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_activity_by_price",
+      "description": "Find an activity with a specified price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Comments",
+      "description": "Retrieves a list of comments for a given post.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Database Endpoint",
+      "description": "Retrieves data from the database for analysis or reporting purposes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAnimalBloodParameters",
+      "description": "Retrieve the blood parameters of a laboratory animal",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Number_Get_All_Countries",
+      "description": "Get the list of currently available countries",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CurrentTime",
+      "description": "This API provides the current time in a specified city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Playlist/Album Metadata",
+      "description": "Fetches metadata information about a playlist or album on SoundCloud, including track IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_dishwasher_wage",
+      "description": "This method takes one argument, 'manager_wage', and returns the hourly wage of a dishwasher, which is half of the manager's wage.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Exchanges",
+      "description": "This API call return array of stock, ETF or index exchanges available at Twelve Data API. This list is daily updated.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "initializeDraggableComponents",
+      "description": "Initializes draggable components on a user interface, setting up necessary event handlers and styles for drag-and-drop functionality.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LemurBot_Get_A_Bot_Category_Group",
+      "description": "Get a specific bot category group by it's id and view it's details",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Postput_Transform_your_images",
+      "description": "Perform on-the-fly operations on your files",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mobile_Phone_Specs_Database_Get_Specifications_by_Brand_Name_and_Model_Name",
+      "description": "Get all phone specifications by brand name and model name",
+      "params": [
+        "{'name': 'brandName', 'type': 'string', ",
+        "{'name': 'modelName', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BMI Categorization API",
+      "description": "This API categorizes a person's weight based on their BMI, taking into account whether they are Asian or not. The categories include Underweight, Normal weight, Overweight, Obesity Class I, Obesity Class II, and Obesity Class III.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Health News API",
+      "description": "This API retrieves health news from Google News based on the specified language region.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Generate Image From User Input Text",
+      "description": "useful when you want to generate an image from a user input text and save it to a file. like: generate an image of an object or something, or generate an image that includes some objects. The input to this tool should be a string, representing the text used to generate image.",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_units_digit_sum",
+      "description": "This method takes a list of integers and returns the units digit of their sum.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Song Search",
+      "description": "Searches for a song from popular song platforms. The API will search YouTube for the item by default. Prepend *scsearch:* to the search term to specify a search from SoundCloud, *spsearch:* for Spotify, or *bcsearch:* for BandCamp.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Minecraft_UUID_Converter_UUID_to_Name",
+      "description": "Convert your Mineccraft UUID to a Name",
+      "params": [
+        "{'name': 'uuid', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_Profile_GET_Detail_Post",
+      "description": "Detail post information from shortcode",
+      "params": [
+        "{'name': 'shortcode', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top Players of Regular Season",
+      "description": "Retrieve the top players of a specific basketball league's regular season using the tournament and season IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "celestial_event_alert",
+      "description": "Set an alert for a specific celestial event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Metadata_Cloud_ObjectExists",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Classifier",
+      "description": "Classifies news according to the results of sentiment analysis.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "artists",
+      "description": "Returns a list of music artists who contributed to JSR/JSRF.",
+      "params": [
+        "limit",
+        "sortby",
+        "orderby"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wayback Query",
+      "description": "Query the Wayback Machine for archived domain information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

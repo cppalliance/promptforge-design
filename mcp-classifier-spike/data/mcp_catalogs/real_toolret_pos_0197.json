@@ -1,0 +1,345 @@
+{
+  "catalog_id": "real_toolret_pos_0197",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getTigerLineGeodatabases",
+      "description": "Retrieve TIGER/Line File Geodatabases for a specified geographic area and year",
+      "params": [
+        "area",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ca_boundaries_io_Query_for_Hexagon_by_H3Index",
+      "description": "Create a h3 hexagon with any h3Index value in the world.",
+      "params": [
+        "{'name': 'h3Index', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_LiveMatches",
+      "description": "Get live handball matches.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Latest Matches",
+      "description": "Retrieve the latest matches from Admiralbet, a sportsbook platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zillow_v2_Agent_details_by_username",
+      "description": "Get agent's details by username(contact infos, active listings and reviews etc).\nPS : username is the profile link \nExample : \nusername :  Pardee-Properties\nfor https://www.zillow.com/profile/Pardee-Properties/",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "island.habitatSuitability",
+      "description": "Assesses habitat suitability for a species on different islands based on environmental factors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_ticket_cancellation_time",
+      "description": "Get the latest cancellation time for each train ticket option",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "estimateCustomerLifetimeValue",
+      "description": "Estimate the customer lifetime value",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_initial_fee(cost1, nights1, cost2, nights2)",
+      "description": "def find_initial_fee(cost1, nights1, cost2, nights2):\n    \"\"\"\n    Find the initial fee based on the total cost of two different durations.\n\n    Parameters:\n    cost1 (float): The total cost of the first duration.\n    nights1 (int): The number of units of the first duration.\n    cost2 (float): The total cost of the second duration.\n    nights2 (int): The number of units of the second duration.\n\n    Returns:\n    float: The initial fee.\n    \"\"\"\n    # Calculate the cost per unit after the first unit\n    cost_per_unit = (cost2 - cost1) / (nights2 - nights1)\n\n    # Calculate the initial fee\n    init",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "launch_window_predictor",
+      "description": "Predicts optimal launch windows for space missions based on destination, mission duration, and other environmental factors.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_2Factor_Authentication_India_Sending_SMS_OTP_Custom_OTP_Custom_Template",
+      "description": "This endpoint is used to send SMS OTP to India",
+      "params": [
+        "{'name': 'otp', 'type': 'STRING', 'descr",
+        "{'name': 'phone_number', 'type': 'STRING",
+        "{'name': 'template_name', 'type': 'STRIN",
+        "{'name': 'api_key', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "market/get-global-indices",
+      "description": "Retrieve information about global stock market indices",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Feed",
+      "description": "Returns a list of Instagram posts with various metrics for the specified period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "spawnEnemy",
+      "description": "Spawn an enemy in a game",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v5_User_Stories",
+      "description": "Get Instagram user stories by Instagram user id.",
+      "params": [
+        "{'name': 'userid', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MusicData_API_youtube_24h_type",
+      "description": "Youtube most viewed music video by content language type: (English, Spanish, Asian or Other)",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "frrefe_end",
+      "description": "end",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Latest Lotto America Winning Numbers",
+      "description": "Retrieve the latest and last winning Lotto America numbers.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) ->",
+      "description": "def infer_object_purpose(image_patch: ImagePatch, object_name: str, context: str) -> str:\n    '''Infer the purpose of an object in a certain context.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to infer the purpose of.\n        context (str): The context in which the object is placed.\n       \n    Returns:\n        str: The inferred purpose of the object.\n    '''\n    object_patches = image_patch.find(object_name)\n    # Question assumes single patch\n    object_patch = object_patches[0]\n    return object_patch.llm_quer",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "colegiosantaana_Hijos",
+      "description": "Listar hijos",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Songs API",
+      "description": "Provides information about India Songs chart, including the top songs and artists for a given week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fetch_by_type_and_region",
+      "description": "Fetch records from the API based on the given type, limit, and region.",
+      "params": [
+        "type",
+        "limit",
+        "region"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_person_person_id",
+      "description": "Get the primary person details by id.\n\nSupports `append_to_response`. Read more about this [here](#docTextSection:JdZq8ctmcxNqyLQjp).\n\n#### Recent Changes\n\n| **Date** | **Change** |\n| - | - |\n| July 17, 2018 | Added the `known_for_department` field. |\n| April 26, 2018 | Added the [translations](#endpoint:CSaMjCxXAtGpxNGfS) method. |\n| November 9, 2016 | Biographies are now translatable on TMDb. This means you can query person details with a language parameter. |",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CosmicRayAnalyzer.identifyParticle",
+      "description": "Identifies cosmic ray particles based on their energy signatures and trajectory data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TransferMarkt_DB_World_Cup_champions",
+      "description": "World cup champions. Titles and success",
+      "params": [
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "message/list",
+      "description": "Retrieves a list of messages for an account.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CEIL",
+      "description": "The CEIL API provides historical time series data for a given symbol, with the option to specify the interval, series type, and output size. The API uses the mathematical ceil function to transform the input data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_crossing_time",
+      "description": "This method takes three arguments, 'train_length', 'train_speed', and 'man_speed', and returns the time in seconds it takes for the train to cross the man.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dad Jokes Health Check",
+      "description": "Returns the health status of the Dad Jokes API, including the current UTC time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMicroprocessorDetails",
+      "description": "Retrieve details of a specific microprocessor",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseConverterAPI_getAlphabets",
+      "description": "This endpoint is used for getting all the alphabets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate to Old English",
+      "description": "Translate text from modern English to Old English",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPhishingDomainInfo",
+      "description": "Retrieve information on a specific phishing domain including the domain age, IP address, phishing status, and submission status.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AmericanFootballApi_MatchManagers",
+      "description": "Get managers for a specific American Football match by providing its ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Institutional Holders",
+      "description": "Returns the institutional holders of a specified company, including the percentage of shares owned by institutions such as pension funds, insurance companies, investment firms, private foundations, endowments, or other large entities that manage funds on behalf of others.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Predict Depth On Image",
+      "description": "useful when you want to detect depth of the image. like: generate the depth from this image, or detect the depth map on this image, or predict the depth for this image. The input to this tool should be a string, representing the image_path",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bing_Video_Search_Trending",
+      "description": "Get currently trending videos.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Random Skin API",
+      "description": "Retrieve information about a random Counter-Strike skin, including name, price, icon, class, and weapon for the field-tested condition.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getStudentPerformance",
+      "description": "Retrieve a student's performance data in a specific subject",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_integer_squares_difference(difference)",
+      "description": "def find_integer_squares_difference(difference):\n    \"\"\"\n    Find the sum of all integers for which the square of the integer is a certain number greater than the integer itself.\n\n    Parameters:\n    difference (int): The number that the square of an integer is greater than the integer itself.\n\n    Returns:\n    int: The sum of all integers for which this is true.\n    \"\"\"\n    x = symbols('x')\n\n    # Define the equation based on the problem\n    equation = Eq(x**2, x + difference)\n\n    # Solve the equation\n    solutions = solve(equation, x)\n\n    # Sum the solutions\n    sum_solutions = sum(solutio",
+      "params": []
+    }
+  ]
+}

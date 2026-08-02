@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_pos_0000",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Season Wins Leaderboard MW 2",
+      "description": "Retrieve the season wins leaderboard for Modern Warfare 2 (MW2) game.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getdomaintech",
+      "description": "Retrieves technology information for a given domain using the Runs Tech API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "domain_detail",
+      "description": "Fetches the domain detail for a given domain ID using the RapidAPI service.",
+      "params": [
+        "did"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Elevation_From_Latitude_and_Longitude_Get_Elevation",
+      "description": "Get Elevation",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PPT.save_file",
+      "description": "When all steps done, YOU MUST use save_file() to save PPT",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_multiples",
+      "description": "This method takes three arguments, 'start', 'end', and 'multiple', and returns the number of multiples of 'multiple' between 'start' and 'end' (inclusive).",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_category",
+      "description": "Fetches a specific category from the hashtag5 API using the specified category ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "ForgotPassword",
+      "description": "description = \"Forgot Password API that takes two parameters - 'username' and 'email'. The 'username' parameter refers to the username of the account for which the password is forgotten and the 'email' parameter specifies the email address associated with the account.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the account.'},\n    'email': {'type': 'str', 'description': 'The email address associated with the account.'}\n}\noutput_parameters = {\n    'status': {'type': 'str', 'description': 'success or failed'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Amazon Search results",
+      "description": "Get Amazon Search results",
+      "params": [
+        "{'name': 'searchQuery', 'type': 'string'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fitness_Calculator_Body_Fat_Percentage",
+      "description": "Knowing body fat percentage would be helpful to decide on a well-programmed fitness plan. You can use this endpoint with 7 parameters.",
+      "params": [
+        "{'name': 'height', 'type': 'NUMBER', 'de",
+        "{'name': 'waist', 'type': 'NUMBER', 'des",
+        "{'name': 'neck', 'type': 'NUMBER', 'desc",
+        "{'name': 'gender', 'type': 'STRING', 'de",
+        "{'name': 'hip', 'type': 'NUMBER', 'descr",
+        "{'name': 'age', 'type': 'NUMBER', 'descr",
+        "{'name': 'weight', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEPTA_Bus_Trolley_Schedules",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [{\"name\": \"req1\", \"type\": \"NUMBER\", \"description\": \"Stop ID\", \"default\": \"17842\"}], \"optional_parameters\": [{\"name\": \"req2\", \"type\": \"NUMBER\", \"description\": \"Route number\", \"default\": \"17\"}, {\"name\": \"req3\", \"type\": \"STRING\", \"description\": \"i for inbound, o for outbound\", \"default\": \"i\"}, {\"name\": \"req6\", \"type\": \"NUMBER\", \"description\": \"Number",
+      "params": [
+        "{'name': 'req1', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Number2Words_Get",
+      "description": "Get equivalent words of this number",
+      "params": [
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'number', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_transaction_id",
+      "description": "Find transaction ID based on account ID, transaction date, amount, and description",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDailyStatsByProvince",
+      "description": "Retrieve daily Covid statistics per province.",
+      "params": [
+        "province",
+        "date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stcudorPepacsdnal",
+      "description": "This function returns the scenic spot information given a destination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_stock_time_series_intraday",
+      "description": "This API returns current and 20+ years of historical intraday OHLCV time series of the equity specified.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OpenSea_Data_Query_Retrieve_collection_offers_V2",
+      "description": "This endpoint is used to get collection offers for a specified collection.",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicSpending",
+      "description": "Retrieves data on public spending in Italy for the specified year",
+      "params": [
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "webcams_list_continent_continent_continent",
+      "description": "Fetches a list of webcams for a specified continent.",
+      "params": [
+        "continent",
+        "lang",
+        "show"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "READ - AUTH REQUESTS 1",
+      "description": "Retrieve a list of authentication requests or a specific authentication request by ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bus/Trolley Locations",
+      "description": "Retrieves the current locations of buses and trolleys in the SEPTA network.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AI_writer_Translation",
+      "description": "Translate content into any language just enter the language name.",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc",
+        "{'name': 'language', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getUserByName",
+      "description": "Retrieves user information by username from the Advertising domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Epic_Store_Games_Search_Coming_Soon_Games",
+      "description": "Search Coming Soon Games",
+      "params": [
+        "{'name': 'searchWords', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NPS_Net_Promoter_Score_Details_all_organization_surveys",
+      "description": "Get a full list of all customer survey responses for a given organization, by identifying its organization id (oid)",
+      "params": [
+        "{'name': 'oid', 'type': 'string', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Latest Anime",
+      "description": "Retrieves the latest anime data from a database or a third-party API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "COVID_19_Economic_Impact_United_States_Small_Businesses_Revenue",
+      "description": "Get daily United States 7 day moving average percentage change of small businesses revenue seasonally adjusted relative to January 4 - 31, 2020.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "TweetFeed_v1",
+      "description": "Version 1 Endpoint.",
+      "params": [
+        "{'name': 'time', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unit_Measurement_Conversion_Get_a_List_of_All_Units",
+      "description": "This endpoint gets a full list of units available for conversion",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "CARPETCLEANINGGUIDE",
+      "description": "A guide document that instructs you on how to clean carpets.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email.show",
+      "description": "show the emails in the inbox",
+      "params": [
+        "{'name': 'only_unread', 'description': '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_individual_articles",
+      "description": "Retrieves individual articles from a specified newspaper using the RapidAPI service.",
+      "params": [
+        "newspaperid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAllWebhooks",
+      "description": "Retrieve a list of webhooks associated with the mailslurp email testing tool, allowing for pagination, filtering, and sorting.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Air Quality by City",
+      "description": "Retrieve the latest air quality data for a specified city",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "instrument.repair_estimate",
+      "description": "Provides an estimated cost and time for repairing a specific musical instrument.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_hillshading_tile",
+      "description": "Fetches a hillshading raster tile as a PNG.",
+      "params": [
+        "x",
+        "version",
+        "z",
+        "y"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getImageMetadata",
+      "description": "Retrieve metadata associated with a specific cat image.",
+      "params": [
+        "imageId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate Random Username",
+      "description": "Generates a random username for a social media platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Moka_News_Recent_50",
+      "description": "GET the recent 50 news",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tickers_list",
+      "description": "A list response of all stock tickers with their IDs, that are possible to trade",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

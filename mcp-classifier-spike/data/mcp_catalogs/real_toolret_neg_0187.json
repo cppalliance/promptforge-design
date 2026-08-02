@@ -1,0 +1,360 @@
+{
+  "catalog_id": "real_toolret_neg_0187",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Active Weather Alerts by Zone",
+      "description": "Retrieve a list of active weather alerts for a specific zone.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getRailwaySpeedLimit",
+      "description": "Retrieve the speed limit of a railway track",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getMarketCalendar",
+      "description": "Retrieves market calendar data for a given month and year.",
+      "params": [
+        "month",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_squared",
+      "description": "This method takes one argument, 'number', and returns the squared value of that number.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CreditCards",
+      "description": "Retrieves credit card information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "education.stemWorkshops",
+      "description": "Fetches a list of available STEM workshops for a specified date and grade level.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "choose_answer",
+      "description": "Chooses the correct answer from a list of options based on the calculated selling price.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getKeyFinancialData",
+      "description": "Obtain key financial data, such as revenue, net income, and earnings per share, for a given company.",
+      "params": [
+        "symbol",
+        "period"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Annual Average Dividend Yield",
+      "description": "Retrieve the annual average dividend yield of a stock.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "originals_genres_list",
+      "description": "Retrieves a list of genres in the originals category from the Webtoon API.",
+      "params": [
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_Stats_and_Live_Data_getStandingsByType",
+      "description": " ",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "screenshot_endpoint",
+      "description": "Takes a screenshot of a specified webpage URL with given dimensions.",
+      "params": [
+        "height",
+        "url",
+        "width",
+        "fullscreen"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Vehicle Brands",
+      "description": "Retrieves a list of car brands for a given vehicle type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "View All Food Items",
+      "description": "Retrieve a comprehensive list of all available food items. The API allows clients to fetch a list of food items, with an optional parameter to limit the number of items returned.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Halsey_Lyric_Snippets_album_by_id",
+      "description": "returns album information when searched by {id}",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetBookISBN",
+      "description": "This API retrieves the ISBN of a specific book title.",
+      "params": [
+        "{'name': 'book_title', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> st",
+      "description": "def check_best_match_attribute(image_patch: ImagePatch, attributes: List[str]) -> str:\n    '''Determine the best match from a list of possible attributes of an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        attributes (List[str]): The list of possible attributes to check for.\n       \n    Returns:\n        str: The best match attribute from the list.\n    '''\n    return image_patch.best_text_match(attributes)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNPJ Company Data",
+      "description": "Retrieve company data by CNPJ",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Multiple Artists",
+      "description": "Retrieve information about multiple artists in a single request, with a maximum of 5 artists per request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BMR_and_TMR_Activity_Values",
+      "description": "Returns a list of possible activity values that are needed to compute TMR",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Event",
+      "description": "Retrieves a list of events that can be filtered by various fields and ordered by start time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "consumer_phone_search",
+      "description": "Search for people in the Data Axle database based on the provided criteria.",
+      "params": [
+        "limit",
+        "packages",
+        "query"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Calendar of Prices for a Month",
+      "description": "Returns the prices for each day of a month, grouped together by the number of transfers, for a given origin and destination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top_NFT_Sales_Top_Collections_this_Month",
+      "description": "Top trending collections this month",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_book",
+      "description": "Search for books and return whether they are in stock",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET Mobile Legends Player Information",
+      "description": "Retrieve information about a Mobile Legends player, including their username, based on their ID and server.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Project_Gutenberg_API_Extract_Info",
+      "description": "Get all the informations about a book using it's ID\nInformations : \n- title.\n- authors.\n- language.\n- download links.\n- download count.\nand much more ...",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "txt",
+      "description": "Fetches a plain text blocklist of sites for a specified game using the StopModReposts API.",
+      "params": [
+        "game"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Search API",
+      "description": "Search for American Football players, teams, and tournaments.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Booking_com_List_of_Countries",
+      "description": "Returns all the country where booking offers hotels.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Api.points",
+      "description": "Generates lucky points for the gaming platform.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Free_Coupon_Codes_api_vcodes_api_php_siteid_siteid",
+      "description": "Free Coupon Codes",
+      "params": [
+        "{'name': 'siteid', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CheckBaggageAllowance",
+      "description": "This API is to check the baggage allowance of a specific airline.",
+      "params": [
+        "{'name': 'airline', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "asia",
+      "description": "Fetches a list of Asian cities sorted by a specified criterion with pagination support.",
+      "params": [
+        "sort",
+        "sort_by",
+        "size",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "image-frame-interpolation",
+      "description": "This model generates intermediate frames between two input frames using a deep learning approach. It is useful for video frame rate up-conversion and slow motion generation.",
+      "params": [
+        "inputs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Croatia Songs Chart API",
+      "description": "This API provides the Croatia Songs chart data, which is weekly based. If the `week` parameter is not supplied, it will default to the last week. If the week string is not a Saturday, it will default to the Saturday of that week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "playerShotChartDataSeasonPlayoffs",
+      "description": "Return player shot chart data for a specified player and season (both regular season and playoffs).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getLocationHistoricalWeather",
+      "description": "Get Location Historical Weather",
+      "params": [
+        "woeid",
+        "date",
+        "end_date",
+        "granularity"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Player Career",
+      "description": "Retrieve a player's career information from the Sports domain using the unofficial_cricbuzz tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Data Analyst Jobs API",
+      "description": "Retrieve data analyst job listings in the USA",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

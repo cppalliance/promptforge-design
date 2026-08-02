@@ -1,0 +1,353 @@
+{
+  "catalog_id": "real_toolret_neg_0135",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "calculate_sleep_duration",
+      "description": "Calculate the recommended sleep duration based on age",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "eyeContactMetrics.generateReport",
+      "description": "Generates a detailed report on eye contact metrics during a specific event.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bulkgenerateguids",
+      "description": "Generates a bulk of GUIDs (Globally Unique Identifiers) using the GUID Generator API.",
+      "params": [
+        "batch_size"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "McGinley Dynamic",
+      "description": "McGinley Dynamic API retrieves dynamic moving average data for a given instrument, adjusting for market speed.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_tv_tv_id_recommendations",
+      "description": "Get the list of TV show recommendations for this item.",
+      "params": [
+        "{'name': 'page', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "define_a_word_search",
+      "description": "Fetches the definition of a specific word from the Urban Dictionary API.",
+      "params": [
+        "term"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Nearby_Places_Place_Details_Google",
+      "description": "Get contact and opening hours for a place.\n\nRequires a **place id** provided by **/nearby (Google)**.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "microsoft/GODEL-v1_1-base-seq2seq",
+      "description": "GODEL is a large-scale pre-trained model for goal-directed dialogs. It is parameterized with a Transformer-based encoder-decoder model and trained for response generation grounded in external text, which allows more effective fine-tuning on dialog tasks that require conditioning the response on information that is external to the current conversation (e.g., a retrieved document). The pre-trained model can be efficiently fine-tuned and adapted to accomplish a new dialog task with a handful of task-specific dialogs. The v1.1 model is trained on 551M multi-turn dialogs from Reddit discussion thre",
+      "params": [
+        "instruction",
+        "knowledge",
+        "dialog"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Player_Data_search_by_weight",
+      "description": "<br /><br />\n<b>Authentication:</b> not required",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_hillshading_tile",
+      "description": "Fetches a hillshading raster tile as a PNG.",
+      "params": [
+        "x",
+        "version",
+        "z",
+        "y"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getArchTheory",
+      "description": "Retrieve architectural theory information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Total Goals by Tournament",
+      "description": "Retrieve total goals statistics of teams in a tournament, ordered by tournament standings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Flight_Data_Hong_Kong_Scheduled_Flights_Level",
+      "description": "Get weekly Hong Kong scheduled departing flights level.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+      "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+      "params": [
+        "sentences"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fantasy_Cricket_Live_Matches_API",
+      "description": "A list of cricket matches from around the world that are currently Live. Any issues, queries, api integration, custom plan or to **Create your own Fantasy Sports Application**  contact us at support@techflinch.com",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crowdsense_Get_Coin_Historical_Metrics_By_Name",
+      "description": "Retrieve  coin\u00b4s historical social media metrics by Coin Name\nIn the case you want to retrieve real time data check \"Get Coin Metrics by Name\" or \"Get Coin Metrics by Ticker\"\n\n**Input:** \n-  Date (MM/DD/YYYY HH:HH AM/PM) (Required)\n- Security Name: Coin Name (Required)\n- TimeFrame: 1d, 1h, 8h (Optional)\n\n**Output:**\n\n- Sentiment\n- Sentiment change\n- Weighted Sentiment\n- Weighted sentiment change\n- Followers\n- Followers change\n- Mentions\n- Mentions change\n- Security ticker\n- Security Name\n- TimeFrame\n- DataTimeStamp\n\n**Definitions:**\n\n\u2022\tMentions - Number of posts related to the coin in tracked ",
+      "params": [
+        "{'name': 'securityName', 'type': 'STRING",
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "problem_resolution_plan",
+      "description": "Create a resolution plan for a specific problem.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Generate Image Condition On Pose Image",
+      "description": "useful when you want to generate a new real image from both the user description and a human pose image. like: generate a real image of a human from this human pose image, or generate a new real image of a human from this pose. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "China Scheduled Flights Growth API",
+      "description": "Retrieve weekly China scheduled departing flights growth data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_Video_Comments",
+      "description": "Video Comments",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Download URL",
+      "description": "Generate a temporary download URL for a string stored in an Amazon S3 bucket.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_specific_ringtone",
+      "description": "Set a specific ringtone for an alarm at a specific time and frequency",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Disney Anime List API",
+      "description": "Retrieve a list of current Disney animes released today",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getforecastweather",
+      "description": "Fetches weather forecast data for a specified city using the OpenWeatherMap API.",
+      "params": [
+        "q",
+        "cnt",
+        "units",
+        "lang"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "child_health.get_growth_chart",
+      "description": "Retrieve the growth chart for a specific age and gender of a child.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Smile_get_webhook",
+      "description": "Get a webhook endpoint.",
+      "params": [
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Groundhog Day Prediction",
+      "description": "Returns the prediction of whether it will be sunny or cloudy on Groundhog Day based on the weather forecast.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "userinfo",
+      "description": "Fetch user information from Instagram using the RapidAPI service.",
+      "params": [
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PackageBooking",
+      "description": "This API is to book a package including train and hotel for a specific number of people.",
+      "params": [
+        "{'name': 'trainDetails', 'in': 'query', ",
+        "{'name': 'hotelDetails', 'in': 'query', ",
+        "{'name': 'num_of_people', 'in': 'query',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team Metrika and Statistics",
+      "description": "Retrieve team metrika and statistics for a given team ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_expense",
+      "description": "This method takes four arguments, 'transportation_expense', 'nontransportation_expense', 'transportation_increase', and 'nontransportation_increase', and returns the total expense for the coming year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live_Whois_Lookup_Live_Whois_Lookup",
+      "description": "Get Complete Whois Detail With Domain Name",
+      "params": [
+        "{'name': 'domainName', 'type': 'STRING',",
+        "{'name': 'whois', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "spreadsheet.add_worksheet",
+      "description": "# Adds a new worksheet to a spreadsheet. \nspreadsheet.add_worksheet(title, rows, cols, index=None)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Greatest of All Time Top Dance Club Artists",
+      "description": "Retrieve a list of the greatest dance club artists of all time, as ranked by the Billboard chart.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QCkZ",
+      "description": "Automatically complete search querys using google.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GenerateOrderSummary",
+      "description": "This API is to generate a summary of the order using the order_id.",
+      "params": [
+        "{'name': 'order_id', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "quotsy_get_quotes_by_genre",
+      "description": "returns first 10 list of quotes for the genre",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify ICMAI Request",
+      "description": "Verifies the ICMAI request using the provided request ID and returns the result.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_in",
+      "description": "Returns current gas price data for Indiana. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check Balance",
+      "description": "Retrieve the current balance of the user's SMS credits.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

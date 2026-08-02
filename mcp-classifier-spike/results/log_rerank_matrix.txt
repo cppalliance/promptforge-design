@@ -1,0 +1,71 @@
+eval=toolret  examples=408  catalogs=800
+  [bm25:bm25:-] 408 records in 0.3s (1399.8/s)
+loading embed sentence-transformers/all-MiniLM-L6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 13196.08it/s]
+  [embed:sentence-transformers/all-MiniLM-L6-v2:-] 408 records in 13.9s (29.4/s)
+loading embed BAAI/bge-small-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 13662.68it/s]
+  [embed:BAAI/bge-small-en-v1.5:-] 408 records in 21.1s (19.3/s)
+loading embed BAAI/bge-base-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 12485.10it/s]
+  [embed:BAAI/bge-base-en-v1.5:-] 408 records in 26.3s (15.5/s)
+loading rerank cross-encoder/ms-marco-MiniLM-L-6-v2 ...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|##########| 105/105 [00:00<00:00, 12211.68it/s]
+  [rerank:cross-encoder/ms-marco-MiniLM-L-6-v2:-] 408 records in 11.4s (35.8/s)
+loading rerank BAAI/bge-reranker-base ...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 13110.87it/s]
+  [rerank:BAAI/bge-reranker-base:-] 408 records in 49.9s (8.2/s)
+loading rerank BAAI/bge-reranker-v2-m3 ...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|##########| 393/393 [00:00<00:00, 15650.24it/s]
+  [rerank:BAAI/bge-reranker-v2-m3:-] 408 records in 114.9s (3.6/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 50844.05it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best] 408 records in 33.9s (12.0/s)
+loading nli valhalla/distilbart-mnli-12-1 config=best_desc ...
+Loading weights:   0%|          | 0/231 [00:00<?, ?it/s]Loading weights: 100%|##########| 231/231 [00:00<00:00, 67725.73it/s]
+  [nli:valhalla/distilbart-mnli-12-1:best_desc] 408 records in 32.7s (12.5/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 13934.79it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best] 408 records in 14.0s (29.1/s)
+loading nli MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 14111.18it/s]
+  [nli:MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli:best_desc] 408 records in 12.5s (32.6/s)
+loading nli MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c config=best ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 15267.96it/s]
+  [nli:MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c:best] 408 records in 13.5s (30.2/s)
+loading nli MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c config=best_desc ...
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|##########| 202/202 [00:00<00:00, 15377.97it/s]
+  [nli:MoritzLaurer/deberta-v3-base-zeroshot-v2.0-c:best_desc] 408 records in 12.7s (32.2/s)
+loading nli MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c config=best ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 13994.51it/s]
+  [nli:MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c:best] 408 records in 36.3s (11.2/s)
+loading nli MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c config=best_desc ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|##########| 394/394 [00:00<00:00, 14629.18it/s]
+  [nli:MoritzLaurer/deberta-v3-large-zeroshot-v2.0-c:best_desc] 408 records in 33.6s (12.1/s)
+wrote results\matrix_toolret.jsonl
+eval=real  examples=376  catalogs=800
+loading rerank cross-encoder/ms-marco-MiniLM-L-6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|##########| 105/105 [00:00<00:00, 16353.58it/s]
+  [rerank:cross-encoder/ms-marco-MiniLM-L-6-v2:-] 376 records in 10.3s (36.5/s)
+loading rerank BAAI/bge-reranker-base ...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 13048.37it/s]
+  [rerank:BAAI/bge-reranker-base:-] 376 records in 34.7s (10.8/s)
+loading rerank BAAI/bge-reranker-v2-m3 ...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|##########| 393/393 [00:00<00:00, 13511.82it/s]
+  [rerank:BAAI/bge-reranker-v2-m3:-] 376 records in 111.0s (3.4/s)
+wrote results\real_rerank.jsonl
+eval=seed  examples=111  catalogs=800
+loading rerank cross-encoder/ms-marco-MiniLM-L-6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|##########| 105/105 [00:00<00:00, 14969.98it/s]
+  [rerank:cross-encoder/ms-marco-MiniLM-L-6-v2:-] 111 records in 0.9s (118.3/s)
+loading rerank BAAI/bge-reranker-base ...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 13516.35it/s]
+  [rerank:BAAI/bge-reranker-base:-] 111 records in 1.5s (73.8/s)
+loading rerank BAAI/bge-reranker-v2-m3 ...
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|##########| 393/393 [00:00<00:00, 12611.89it/s]
+  [rerank:BAAI/bge-reranker-v2-m3:-] 111 records in 3.4s (32.4/s)
+wrote results\seed_rerank.jsonl
+EXIT=0

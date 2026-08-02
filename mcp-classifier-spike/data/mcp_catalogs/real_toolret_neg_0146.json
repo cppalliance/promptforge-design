@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0146",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "feedbacks_id",
+      "description": "Fetches feedbacks for a given product ID from the AliExpress unofficial API.",
+      "params": [
+        "is_id",
+        "withpictures",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Datamo_specs_v1_getMakes",
+      "description": "This endpoint will return all the vehicle makes available, as an array of strings.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Stock_Prices_5_Year_Historical_Monthly_Prices",
+      "description": "5 Year monthly historically adjusted Open, High, Low, and Close prices.  Monthly Volume, Dividend, and Split information is also included.",
+      "params": [
+        "{'name': 'ticker', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Funding Rate History",
+      "description": "Retrieve the funding rate history for a specific symbol and time range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlanOutdoorActivities",
+      "description": "This API plans outdoor activities based on the weather forecast and local events.",
+      "params": [
+        "{'name': 'weather', 'in': 'query', 'sche",
+        "{'name': 'events', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AddToWatchlist",
+      "description": "This API adds a movie to a user's watchlist.",
+      "params": [
+        "{'name': 'user_ID', 'in': 'query', 'sche",
+        "{'name': 'movie_ID', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "configure_email_reminder",
+      "description": "A tool to configure email reminders to be sent at specific times",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Baseball Search API",
+      "description": "Search for baseball players, teams, and tournaments using a search term.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CNPJ Company Data",
+      "description": "Retrieve company data by CNPJ",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Live Match Table",
+      "description": "Retrieve the live table for a specific match in the Sports domain, called by the Transfermarkt tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "MiDaS",
+      "description": "MiDaS computes relative inverse depth from a single image. The repository provides multiple models that cover different use cases ranging from a small, high-speed model to a very large model that provide the highest accuracy. The models have been trained on 10 distinct datasets using multi-objective optimization to ensure high quality on a wide range of inputs.",
+      "params": [
+        "repo_or_dir",
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_further_contents",
+      "description": "Get detailed results from retrievaled URL.",
+      "params": [
+        "{'name': 'request_url', 'schema': {'type"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "worksheet.sort",
+      "description": "# Sorts worksheet using given sort orders. \nworksheet.sort(*specs, **kwargs)\n\nExamples:\n# Sort sheet A -> Z by column 'B'\nwks.sort((2, 'asc'))\n# Sort range A2:G8 basing on column 'G' A -> Z\n# and column 'B' Z -> A\nwks.sort((7, 'asc'), (2, 'des'), range='A2:G8')\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get_Promo_Codes_Get_Stores",
+      "description": "Get Stores",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mughal Empire API",
+      "description": "Retrieve detailed information about the Mughal Empire in JSON format.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bookCabin",
+      "description": "Book a cabin on the cruise ship",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAllCountries",
+      "description": "Retrieve a list of all countries in the world.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "APIGabin_Base",
+      "description": "uNE BASE",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Local_Rank_Tracker_Calculate_Grid_Coordinate_Points",
+      "description": "Get all grid coordinate points based on a center geocoordinate point and distance arguments.",
+      "params": [
+        "{'name': 'radius', 'type': 'STRING', 'de",
+        "{'name': 'lng', 'type': 'STRING', 'descr",
+        "{'name': 'grid_size', 'type': 'STRING', ",
+        "{'name': 'lat', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "India Songs",
+      "description": "Retrieve the India Songs chart information from the Billboard API.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "DogBreedDB_Paginated",
+      "description": "Get all dog breed results in a set of 10 per page.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryUsage",
+      "description": "Retrieve usage statistics of a library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonal_goal_analysis_scoring_first",
+      "description": "Provides the scoring first goal statistics for a given match within specific minute intervals (0-10, 11-20, 21-30, etc.).",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Makes",
+      "description": "Retrieve a list of car makes from the car database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Create User with Email",
+      "description": "Creates a new user in the dailycred tool with only an email address.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TRIMA",
+      "description": "Retrieve the Triangular Moving Average (TRIMA) of a financial instrument's price data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Numbers",
+      "description": "The numbers API allows you to search, purchase, and manage settings on each tracking number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_binder_clip_cost",
+      "description": "This method takes two arguments, 'price_per_pound' and 'pounds', and returns the cost of the given amount of binder clips.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET_find_places",
+      "description": "Search places by name to get place_id for the Weather Forecast Endpoints and detailed geographical information (country, region, elevation, timezone, etc.) for a given location.",
+      "params": [
+        "{'name': 'text', 'in': 'query', 'schema'",
+        "{'name': 'language', 'in': 'optional', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCountrySecurity",
+      "description": "Retrieve international security information for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "financial-summarization-pegasus",
+      "description": "This model was fine-tuned on a novel financial news dataset, which consists of 2K articles from Bloomberg, on topics such as stock, markets, currencies, rate and cryptocurrencies. It is based on the PEGASUS model and in particular PEGASUS fine-tuned on the Extreme Summarization (XSum) dataset: google/pegasus-xsum model. PEGASUS was originally proposed by Jingqing Zhang, Yao Zhao, Mohammad Saleh and Peter J. Liu in PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization.",
+      "params": [
+        "model_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Webull_market_get_ipo_center",
+      "description": "Get IPO center information of specific region",
+      "params": [
+        "{'name': 'regionId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Team Next Matches",
+      "description": "Retrieves the next matches for a specified American Football team.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Combiner",
+      "description": "Used to combine analysis results from different tools.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Word_of_the_day_Word_of_the_day_from_pm",
+      "description": "Get word of the day from pm",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Helioviewer_v1_getJP2Image",
+      "description": "Download a JP2 image for the specified datasource that is the closest match in time to the `date` requested.\n\n        Either `sourceId` must be specified, or the combination of `observatory`, `instrument`, `detector`, and `measurement`.",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currency_Ex_Currency_List",
+      "description": "List of available currency in JSON format.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_US_mortgage_check_equity_rates",
+      "description": "Check mortgage equity rates",
+      "params": [
+        "{'name': 'creditScore', 'type': 'STRING'",
+        "{'name': 'zip', 'type': 'STRING', 'descr",
+        "{'name': 'loanAmount', 'type': 'NUMBER',",
+        "{'name': 'propertyValue', 'type': 'STRIN",
+        "{'name': 'loanProduct', 'type': 'STRING'",
+        "{'name': 'mortgageBalance', 'type': 'NUM",
+        "{'name': 'state', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "registerEmployeeTraining",
+      "description": "Register an employee for a training course",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getmatchesbycity",
+      "description": "Fetches all the cricket matches held in a specified city using the IPL API.",
+      "params": [
+        "city"
+      ]
+    }
+  ]
+}

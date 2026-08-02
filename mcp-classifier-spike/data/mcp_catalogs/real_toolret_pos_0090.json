@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0090",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Billboard 200 Albums (Greatest of All Time)",
+      "description": "Provides the Greatest of All Time Billboard 200 Albums chart information, including album titles, artists, and relevant data.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_tax",
+      "description": "This method takes a string representing a tax value in the format \"$ X\" and returns the corresponding float value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "states",
+      "description": "Fetches the list of states for a given country using the Referential DB API.",
+      "params": [
+        "countrycode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Company Quarterly Income Statement",
+      "description": "Retrieves the quarterly income statement of a publicly traded company",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Verifications",
+      "description": "Searches for verification results based on the provided status.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weekly Artist 100",
+      "description": "Retrieve the weekly chart of top 100 artists or songs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "fashion.get_trends",
+      "description": "Retrieve the haute couture trends of a specified year.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MLB_Data_Season_Pitching_Stats",
+      "description": "Retrieve a players pitching stats for a given season.",
+      "params": [
+        "{'name': 'season', 'type': 'STRING', 'de",
+        "{'name': 'player_id', 'type': 'STRING', ",
+        "{'name': 'league_list_id', 'type': 'STRI",
+        "{'name': 'game_type', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_challenges_and_coping_mechanisms(activity: str, conditions: str) -> str",
+      "description": "def identify_challenges_and_coping_mechanisms(activity: str, conditions: str) -> str:\n    '''Identify the challenges and coping mechanisms of a certain activity under specific conditions.\n    \n    Args:\n        activity (str): The activity to analyze.\n        conditions (str): The conditions under which the activity is performed.\n       \n    Returns:\n        str: The challenges and coping mechanisms of the activity under the given conditions.\n    '''\n    challenges = llm_query(f\"What challenges do people typically face when {activity} during {conditions}?\")\n    coping_mechanisms = llm_query(f\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fresh_LinkedIn_Profile_Data_Get_Company_Ads_Count",
+      "description": "Get number of ads the company posted on LinkedIn. **1 credit per call.**",
+      "params": [
+        "{'name': 'company_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "book_restaurant",
+      "description": "Restaurant Reservation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Alaska Gas Prices API",
+      "description": "Returns current and historical gas price data for Alaska. Users can query historical data by adding the `string` parameter to this endpoint. The API returns the data in JSON format by default, but users can switch to XML format by adding the `Accept: application/xml` header to their request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "video_post_metadata",
+      "description": "Fetch metadata for a single TikTok video post.",
+      "params": [
+        "video",
+        "fresh"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_side_length",
+      "description": "To find the side length of shaded squares",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Team News",
+      "description": "Retrieve a list of news related to a specific team",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: s",
+      "description": "def compare_interactions(image_patch: ImagePatch, object1_name: str, object2_name: str, interaction_object_name: str, query: str) -> str:\n    '''Compare the interactions of two objects with a third object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object1_name (str): The name of the first object.\n        object2_name (str): The name of the second object.\n        interaction_object_name (str): The name of the object with which the interactions are being compared.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"The sa",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ginger_Translation",
+      "description": "-",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc",
+        "{'name': 'toLanguage', 'type': 'STRING',",
+        "{'name': 'fromLanguage', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Datamo_specs_v1_getMakes",
+      "description": "This endpoint will return all the vehicle makes available, as an array of strings.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "generate_primes",
+      "description": "This method takes one argument, 'n', and returns a list of the first 'n' prime numbers.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "layoutlmv2-base-uncased-finetuned-infovqa",
+      "description": "This model is a fine-tuned version of microsoft/layoutlmv2-base-uncased on an unknown dataset.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live_Metal_Prices_Latest_retrieve_selected_160_Symbols",
+      "description": "Select what you need for a smaller payload! Real-time Gold, Silver, Palladium, and Platinum provided in 160+ currencies including USD, GBP and EUR.",
+      "params": [
+        "{'name': 'requestedSymbols', 'type': 'st"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAutonomousStatus",
+      "description": "Retrieve the current status of the autonomous system in a spacecraft or aircraft",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getInsectLifeCycle",
+      "description": "Retrieve the life cycle information of insect species",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "git-large-r-textcaps",
+      "description": "GIT (short for GenerativeImage2Text) model, large-sized version, fine-tuned on TextCaps. It was introduced in the paper GIT: A Generative Image-to-text Transformer for Vision and Language by Wang et al. and first released in this repository. The model is trained using 'teacher forcing' on a lot of (image, text) pairs. The goal for the model is simply to predict the next text token, giving the image tokens and previous text tokens. This allows the model to be used for tasks like image and video captioning, visual question answering (VQA) on images and videos, and even image classification (by s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Suggest",
+      "description": "This endpoint is used to get autocomplete suggestions or query predictions as a user types a search query. The endpoint requires the **keyword** parameter, which represents the partial text entered by the user. You can send a request with the partial text, and the request will generate a JSON response containing a list of relevant autocomplete suggestions for the search query.",
+      "params": [
+        "{'name': 'keyword', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Top Coins by Market Capitalization",
+      "description": "Retrieve the top cryptocurrencies by market capitalization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Year End Top Artists - Male",
+      "description": "Retrieve the year-end top artists for male artists from the Billboard music charts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ECOINDEX Analysis Task by ID",
+      "description": "This API returns an ECOINDEX analysis task by its unique identifier.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Hibapress",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0647\u0628\u0629 \u0628\u0631\u064a\u0633",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "convert_to_base_10",
+      "description": "This function converts a number from a given base to base 10.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "responses_from_a_question",
+      "description": "Fetch all responses for a given question using the Moodring API.",
+      "params": [
+        "questionid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Instagram Feed by Username",
+      "description": "Retrieve the Instagram feed of a specified username",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Schwab_market_get_futures",
+      "description": "Get future reports about the market\n* There are response images in encoded base 64 string, you need to decode to get the images yourself",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "applyCropInsurance",
+      "description": "Apply for crop insurance coverage",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_News_Net_Get_details_of_a_news_item",
+      "description": "Get the details of each news item, such as the title, an image and the body of the news item, in addition to other properties",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri",
+        "{'name': 'title', 'type': 'string', 'des",
+        "{'name': 'date', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "arrange_letters",
+      "description": "Calculates the number of ways the letters of a word can be arranged",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "vehicle_attributes",
+      "description": "Fetches all available options for a given vehicle attribute using the Toolbench RapidAPI.",
+      "params": [
+        "attribute"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Health_Calculator_API_BodyFat",
+      "description": "This endpoint calculates the body fat percentage based on the provided gender, age, height, and weight parameters.",
+      "params": [
+        "{'name': 'height', 'type': 'NUMBER', 'de",
+        "{'name': 'weight', 'type': 'NUMBER', 'de",
+        "{'name': 'gender', 'type': 'STRING', 'de",
+        "{'name': 'age', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "evaluate_logarithm(log_base, exponent)",
+      "description": "def evaluate_logarithm(log_base, exponent):\n    \"\"\"\n    Evaluates the logarithm of a given base and exponent.\n\n    Parameters:\n    log_base (int): The base of the logarithm.\n    exponent (int): The exponent of the base.\n\n    Returns:\n    float: The result of the logarithm.\n    \"\"\"\n    return math.log(log_base**exponent, log_base)",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Finish",
+      "description": "Used to end the task.",
+      "params": []
+    }
+  ]
+}

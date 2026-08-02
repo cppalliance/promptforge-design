@@ -1,0 +1,346 @@
+{
+  "catalog_id": "real_toolret_neg_0092",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "hotel.find",
+      "description": "Find a hotel in a specified location matching certain criteria.",
+      "params": [
+        "type",
+        "properties",
+        "required",
+        "optional"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok Video Details",
+      "description": "Retrieve detailed information about a TikTok video, including the video content without a watermark, cover, music, and other metadata.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Payment Card by Card Number",
+      "description": "Retrieve a specific payment card by its card number, including card information such as card number, holder name, and more.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StockTwits_streams_home",
+      "description": "Returns the most recent 30 messages posted to the authenticating user's home stream, which is made up of the users and stocks they follow.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "MyPolicyAPI_Get_Policy",
+      "description": "Get Policy",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Sky_news_Arabic",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0627\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0633\u0643\u0627\u064a \u0646\u064a\u0648\u0632 \u0639\u0631\u0628\u064a",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Tags",
+      "description": "Retrieve a list of blogs that have the specified tags.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Kwai_Send_SMS_Code",
+      "description": "Send SMS Code API",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'mobile', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetMealCost",
+      "description": "This API is to get the cost of meals in a specific city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Generate Image Condition On Pose Image",
+      "description": "useful when you want to generate a new real image from both the user description and a human pose image. like: generate a real image of a human from this human pose image, or generate a new real image of a human from this pose. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_stock_v2_key_stats_get_financial_health",
+      "description": "Get key stats financial health in the Valuation tab",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_v6_GetSuggestedUser",
+      "description": "get suggested user by user id",
+      "params": [
+        "{'name': 'user_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "VALUE_SERP_Google_Search",
+      "description": "The Google Search Parameters are applicable when making a request to the Search API to retrieve Google search results for a given search term. The search term is specified in the q parameter. The location your search is run from is determined by the location parameter, which can be populated with a full_name value from the Locations API.",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitter_V2_Tweet_Favoriters",
+      "description": "Get Tweet Favoriters",
+      "params": [
+        "{'name': 'tweet_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_denomination_count",
+      "description": "This method takes one argument, 'total_amount', which is the total amount of money the man has. It returns a dictionary containing the count of each denomination of notes he has.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "ClearDil_DownloadtheattachedDRIVING_LICENSEfromthedocument",
+      "description": " ",
+      "params": [
+        "{'name': 'customer_a_id', 'type': 'STRIN",
+        "{'name': 'document_a_id', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createQuiz",
+      "description": "Creates a new quiz with specified parameters.",
+      "params": [
+        "apiKey",
+        "name",
+        "category",
+        "questions"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ExerciseDB_List_by_equipment",
+      "description": "Fetch exercises by type of equipment",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "KernelDownloader",
+      "description": "Download kernel update packages on Linux systems.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "divide_numbers",
+      "description": "This method takes two arguments, 'numerator' and 'denominator', and returns the result of dividing the numerator by the denominator.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Car Makes",
+      "description": "Retrieve a list of car makes from the car database",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHighScores",
+      "description": "Retrieve high scores for a player.",
+      "params": [
+        "player",
+        "mode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "WeatherCheck",
+      "description": "This API checks the weather of a specific location.",
+      "params": [
+        "{'name': 'location', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Number2Words_Get",
+      "description": "Get equivalent words of this number",
+      "params": [
+        "{'name': 'language', 'type': 'STRING', '",
+        "{'name': 'number', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "landform.map_river_paths",
+      "description": "Maps the paths of rivers within a specified region and analyzes their impact on the local geography.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "student_progress_tracker",
+      "description": "Tracks and reports the progress of students in an e-learning course, including time spent, modules completed, and current scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Referential_Cities",
+      "description": "List and search over 75,000 world cities in 20 languages.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tibia_Items_Get_imbuements_for_Strike_Critical_Damage",
+      "description": "This enpoint will get all imbuement for type Strike\n\nStrike (Critical Damage)\nProtective Charm \nSabretooth \nVexclaw Talon",
+      "params": [
+        "{'name': 'World', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Morning_Star_market_v2_get_quotes_Deprecated",
+      "description": "Query one or multiple quotes at once.\n* This endpoint is deprecated, use .../stock/v2/get-realtime-data endpoint instead",
+      "params": [
+        "{'name': 'performanceIds', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_by_postcode",
+      "description": "Fetch addresses for a given UK postcode using the \"Find By PostCode\" API.",
+      "params": [
+        "postcode"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Image Downloader",
+      "description": "Downloads an image from a given URL.",
+      "params": [
+        "{'name': 'url', 'in': 'query', 'schema':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSongs",
+      "description": "Retrieve a list of songs based on specified criteria",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Bybit_Get_Index_Price_Kline",
+      "description": "Query Index Price Kline",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'category', 'type': 'STRING', '",
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'end', 'type': 'NUMBER', 'descr",
+        "{'name': 'start', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Zigatext_Global_Bulk_SMS_OTP_Fetch_Timezones",
+      "description": "Fetch Timezones",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Climate Change News from Source",
+      "description": "Retrieve news articles about climate change from a specific news source",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_13_getAccountById",
+      "description": "Retrieves an account",
+      "params": [
+        "{'name': 'accountID', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Prostring Search",
+      "description": "Search for Instagram prostrings based on a given username. Can be used for username validation or finding similar usernames. Supports CORS-enabled image URLs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Investing_Cryptocurrency_Markets_coins_get_historical_data",
+      "description": "Get historical data of specific cryptocurrency",
+      "params": [
+        "{'name': 'date_from', 'type': 'STRING', ",
+        "{'name': 'date_to', 'type': 'STRING', 'd",
+        "{'name': 'pair_ID', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "improveLeadershipCommunication",
+      "description": "Provides tips and techniques to enhance leadership communication skills",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetFlightID",
+      "description": "This API returns the flight id considering the weather status.",
+      "params": [
+        "{'name': 'flight_options', 'in': 'query'",
+        "{'name': 'weather_status', 'in': 'query'"
+      ]
+    }
+  ]
+}

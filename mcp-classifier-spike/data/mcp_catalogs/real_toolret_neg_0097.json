@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_neg_0097",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "searchCatImages",
+      "description": "Search for cat images using specific keywords, tags, or categories.",
+      "params": [
+        "keywords",
+        "tags",
+        "categories",
+        "limit",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Convexity_convert_hex",
+      "description": "Endpoint to converts hex color code to other color code like RGB , HSL, CMYK",
+      "params": [
+        "{'name': 'hex', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "addTask",
+      "description": "Add a new task to a construction project",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_type_sustainability_get_esg_risk",
+      "description": "Get ESG risk in the Sustainability tab",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc",
+        "{'name': 'securityId', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "NearbyFarmersMarketQuery",
+      "description": "This API is to find a nearby farmers market based on the coordinate position of a grocery store.",
+      "params": [
+        "{'name': 'coordinate_position', 'in': 'q"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTigerLineShapefiles",
+      "description": "Retrieve TIGER/Line Shapefiles for a specified geographic area and year",
+      "params": [
+        "area",
+        "year"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_daily_schedule",
+      "description": "Generate a daily schedule based on the user's tasks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "is_perfect_square",
+      "description": "Checks if a number is a perfect square.",
+      "params": [
+        "num"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetRoute",
+      "description": "This API provides the optimal driving route between two locations.",
+      "params": [
+        "{'name': 'origin_location', 'in': 'query",
+        "{'name': 'destination_location', 'in': '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "StreamlineWatch_Streaming_Guide_search",
+      "description": "Returns a list of titles that match the query.",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GeoDB_Cities_Country_Region_Details",
+      "description": "Get the details of a specific country region, including number of cities.",
+      "params": [
+        "{'name': 'regioncode', 'type': 'STRING',",
+        "{'name': 'countryid', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_111_fdfdf",
+      "description": "fdfdf",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "impira/layoutlm-invoices",
+      "description": "This is a fine-tuned version of the multi-modal LayoutLM model for the task of question answering on invoices and other documents. It has been fine-tuned on a proprietary dataset of invoices as well as both SQuAD2.0 and DocVQA for general comprehension. Unlike other QA models, which can only extract consecutive tokens (because they predict the start and end of a sequence), this model can predict longer-range, non-consecutive sequences with an additional classifier head.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "RiskAnalyzer.analyzeInvestmentRisk",
+      "description": "Analyzes the risk of a specific investment based on historical data and future projections. The analysis includes a risk score and a detailed risk report.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Anime Quotes with Pagination",
+      "description": "Retrieve a list of popular anime quotes with pagination support. The API returns a list of quotes along with their corresponding anime name, character name, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get User Document Status Summary",
+      "description": "Retrieves a summary of a user's document status within the business software domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cryptocurrency_News_The_Guardian",
+      "description": "Get the top latest news from The Guardian.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LeagueNextMatches",
+      "description": "Get the next matches of an American Football league for a specific tournament and season, including match timings, teams, and other relevant information.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ICC Standings",
+      "description": "Retrieves the ICC standings for a specific match type and season.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "financial-summarization-pegasus",
+      "description": "This model was fine-tuned on a novel financial news dataset, which consists of 2K articles from Bloomberg, on topics such as stock, markets, currencies, rate and cryptocurrencies. It is based on the PEGASUS model and in particular PEGASUS fine-tuned on the Extreme Summarization (XSum) dataset: google/pegasus-xsum model. PEGASUS was originally proposed by Jingqing Zhang, Yao Zhao, Mohammad Saleh and Peter J. Liu in PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization.",
+      "params": [
+        "model_name"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_from_unit_and_quantity(df, quantity_col, total_col, num_items)",
+      "description": "def calculate_total_from_unit_and_quantity(df, quantity_col, total_col, num_items):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of quantities and corresponding totals, and a number representing the number of items. It returns the total for the specified number of items.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the quantities and the corresponding totals.\n    quantity_col (str): The column name for the quantities.\n    total_col (str): The column name for the totals.\n    num_items (int): The number of items.\n    \n    Returns:\n    int: The",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCricketScore",
+      "description": "Retrieve current score information for a cricket match",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "makepayment",
+      "description": "send money to your friends",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ambee_Pollen_Data_latest_by_lat_lng",
+      "description": "Get nearest places readings based around the given latitude and longitude",
+      "params": [
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'lng', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "YouTube_v3_v3_PlaylistItems",
+      "description": "Returns a collection of playlist items that match the API request parameters. You can retrieve all of the playlist items in a specified playlist or retrieve one or more playlist items by their unique IDs.",
+      "params": [
+        "{'name': 'part', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Leagues",
+      "description": "Retrieve a list of leagues for a specific sport, with options to filter by language and sport type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "execute_baskh_cBoVde",
+      "description": "Run commands in a bash shell and return final output. The input should be a command string",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_columns_for_specific_row(data_frame, key_col, value",
+      "description": "def calculate_difference_between_columns_for_specific_row(data_frame, key_col, value_col1, value_col2, key_value):\n    \"\"\"\n    This function takes in a pandas DataFrame, a key column, two value columns, and a key value, and returns the difference between the values of the two value columns for the row with the specified key value.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the data.\n    key_col (str): The column name for the key values.\n    value_col1 (str): The column name for the first value column.\n    value_col2 (str): The column name for the second value c",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Geeklist_Get_Authenticated_Users_Followers",
+      "description": "{\"category_name\": \"Social\", \"required_parameters\": [], \"optional_parameters\": [], \"method\": \"GET\", \"name\": \"Geeklist_Get_Authenticated_Users_Followers\", \"description\": \"\"}",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseQueryExecutor.runProcedure",
+      "description": "Runs a stored procedure on the specified database and returns the result. The database connection, procedure name, and optional parameters must be provided.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "decapoda-research/llama-7b-hf",
+      "description": "LLaMA-7B is an auto-regressive language model based on the transformer architecture. It is designed for research on large language models, including question answering, natural language understanding, and reading comprehension. The model is trained on various sources, including CCNet, C4, GitHub, Wikipedia, Books, ArXiv, and Stack Exchange, with the majority of the dataset being in English.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Hashtag Categories",
+      "description": "Retrieve a list of categories related to a specific hashtag.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BaseballApi_PlayerStatisticsSeasons",
+      "description": "Get the statistics seasons for a specific baseball player using the player ID.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "shorten",
+      "description": "Shortens a given long URL and returns a bitly shortened URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_sum_of_all",
+      "description": "Calculates the total sum of all the quantities",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorcycle Makes",
+      "description": "Retrieve a list of all motorcycle makes from the motorcycle specifications database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aaaa_Get_all_Billing_Plans",
+      "description": "Get all Billing Plans",
+      "params": [
+        "{'name': 'apiId', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_competitions_detail",
+      "description": "Get competition information, recent and up coming matches",
+      "params": [
+        "{'name': 'CompId', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "autocomplete_usa_Autocomplete_Zipcodes_Zip4",
+      "description": "Autocomplete USA Zipcodes-Zip4",
+      "params": [
+        "{'name': 'zipcode', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "estimateTimeSinceDeath",
+      "description": "Estimate the time elapsed since death of a corpse",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

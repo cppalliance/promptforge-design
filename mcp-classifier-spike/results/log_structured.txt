@@ -1,0 +1,166 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 14818.76it/s]
+C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\scripts\structured_eval.py:55: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  vecs = np.zeros((len(strings), model.get_sentence_embedding_dimension()), dtype=np.float32)
+{
+  "eval": "seed",
+  "embed": "BAAI/bge-small-en-v1.5",
+  "k": 5,
+  "n": 102,
+  "n_near_dupe": 6,
+  "weights": [
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.0,
+      "top1": 0.9019607843137255,
+      "near_dupe_top1": 1.0
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.0,
+      "top1": 0.7549019607843137,
+      "near_dupe_top1": 0.8333333333333334
+    },
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.5,
+      "top1": 0.8627450980392157,
+      "near_dupe_top1": 1.0
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.5,
+      "top1": 0.7352941176470589,
+      "near_dupe_top1": 0.8333333333333334
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 0.5,
+      "top1": 0.6666666666666666,
+      "near_dupe_top1": 0.8333333333333334
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 1.0,
+      "top1": 0.7058823529411765,
+      "near_dupe_top1": 0.8333333333333334
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 1.0,
+      "top1": 0.6764705882352942,
+      "near_dupe_top1": 0.8333333333333334
+    }
+  ]
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 14253.18it/s]
+C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\scripts\structured_eval.py:55: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  vecs = np.zeros((len(strings), model.get_sentence_embedding_dimension()), dtype=np.float32)
+{
+  "eval": "real",
+  "embed": "BAAI/bge-small-en-v1.5",
+  "k": 5,
+  "n": 188,
+  "n_near_dupe": 0,
+  "weights": [
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.0,
+      "top1": 0.8404255319148937,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.0,
+      "top1": 0.7553191489361702,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.5,
+      "top1": 0.8297872340425532,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.5,
+      "top1": 0.7925531914893617,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 0.5,
+      "top1": 0.7393617021276596,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 1.0,
+      "top1": 0.7925531914893617,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 1.0,
+      "top1": 0.7712765957446809,
+      "near_dupe_top1": null
+    }
+  ]
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 13305.49it/s]
+C:\Users\Vinnie\src\cursor\promptforge-design\mcp-classifier-spike\scripts\structured_eval.py:55: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  vecs = np.zeros((len(strings), model.get_sentence_embedding_dimension()), dtype=np.float32)
+{
+  "eval": "toolret",
+  "embed": "BAAI/bge-small-en-v1.5",
+  "k": 5,
+  "n": 204,
+  "n_near_dupe": 0,
+  "weights": [
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.0,
+      "top1": 0.803921568627451,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.0,
+      "top1": 0.7058823529411765,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.0,
+      "noun_w": 0.5,
+      "top1": 0.7843137254901961,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 0.5,
+      "top1": 0.7205882352941176,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 0.5,
+      "top1": 0.6470588235294118,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 0.5,
+      "noun_w": 1.0,
+      "top1": 0.7303921568627451,
+      "near_dupe_top1": null
+    },
+    {
+      "verb_w": 1.0,
+      "noun_w": 1.0,
+      "top1": 0.6666666666666666,
+      "near_dupe_top1": null
+    }
+  ]
+}
+EXIT=0

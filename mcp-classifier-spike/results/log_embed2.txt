@@ -1,0 +1,11 @@
+eval=seed  examples=111  catalogs=16
+  [bm25:bm25:-] 111 records in 0.1s (1067.8/s)
+loading embed sentence-transformers/all-MiniLM-L6-v2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 6292.89it/s]
+  [embed:sentence-transformers/all-MiniLM-L6-v2:-] 111 records in 7.8s (14.2/s)
+loading embed BAAI/bge-small-en-v1.5 ...
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 3767.72it/s]
+  [embed:BAAI/bge-small-en-v1.5:-] 111 records in 16.3s (6.8/s)
+wrote results\seed_embed2.jsonl
+EXIT=0

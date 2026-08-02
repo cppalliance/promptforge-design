@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0011",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "items",
+      "description": "Fetches item details from the Codester API using the specified item ID.",
+      "params": [
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Countries By Region",
+      "description": "Searches for countries by their region",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_proximity_between_objects(image_patch: ImagePatch, object_name: str, refer",
+      "description": "def check_proximity_between_objects(image_patch: ImagePatch, object_name: str, reference_object_name: str, proximity_ratio: float, query: str) -> str:\n    '''Check the proximity of one object to another.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for proximity.\n        reference_object_name (str): The name of the reference object.\n        proximity_ratio (float): The ratio of the reference object's height that defines the proximity threshold.\n        query (str): The original query to answer.\n       \n   ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List_Movies_Limit",
+      "description": "The limit of results per page that has been set",
+      "params": [
+        "{'name': 'limit', 'type': 'NUMBER', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Currency Options",
+      "description": "Retrieve the currency options for a specific currency pair",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ESportApi_MatchTvChannelDetails",
+      "description": "Get the details of a specific TV channel broadcasting a specific Football match.",
+      "params": [
+        "{'name': 'channId', 'type': 'NUMBER', 'd",
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Wyoming Gas Prices API",
+      "description": "Returns current gas price data for Wyoming. Historical data starting from 2023-06-01 can be queried by adding the `string` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "customerAnalytics.segmentationAnalysis",
+      "description": "Performs customer segmentation based on demographic and behavioral data to identify distinct customer groups.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getDataVisualization",
+      "description": "Generate a data visualization based on a specific dataset and visualization type.",
+      "params": [
+        "datasetId",
+        "visualizationType",
+        "fields",
+        "filters",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "news_latest_page",
+      "description": "Fetches the latest news stories in chronological order, filtered by the specified page ID.",
+      "params": [
+        "page_id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_periods_for_entity(df, entity_col, period1_col, per",
+      "description": "def calculate_difference_between_periods_for_entity(df, entity_col, period1_col, period2_col, entity_name):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values over different periods, the name of the entity, and two periods, and returns the difference in values between the two periods for the specified entity.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the values of entities over different periods.\n    entity_col (str): The column name for the entities.\n    period1_col (str): The column name for the first period.\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "createDataSource",
+      "description": "Create a new data source",
+      "params": [
+        "sourceName",
+        "connectionString",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Player_Heatmap",
+      "description": "Get a player's heatmap",
+      "params": [
+        "{'name': 'seasons_id', 'type': 'NUMBER',",
+        "{'name': 'unique_tournament_id', 'type':",
+        "{'name': 'player_id', 'type': 'NUMBER', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cm_to_inches",
+      "description": "Converts centimeters to inches",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_profit_share",
+      "description": "This method takes two arguments, 'investment' and 'profit', and returns the share of profit for a given investment. In this case, it will be used to calculate the share of A in the profit.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "matches_v2_list_live",
+      "description": "Fetches a list of available live matches for a given sports category.",
+      "params": [
+        "category",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_by_postcode",
+      "description": "Fetch addresses for a given UK postcode using the \"Find By PostCode\" API.",
+      "params": [
+        "postcode"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Daily Match List",
+      "description": "Retrieve a list of daily matches including scheduled, live, and finished matches. The API returns data for a specified string range within the last 7 days.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "dcument_struce",
+      "description": "Extracts different sections of a given document with markup content.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Email_API_Get_Fake_Email_Address",
+      "description": "Get a fake business email address and job title",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_rounds",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the rounds in 2006 and 2007.",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "RegisterUser",
+      "description": "description = \"API to register a new user with their username, password, and email.\"\ninput_parameters = {\n    'username': {'type': 'str', 'description': 'The username of the new user.'},\n    'password': {'type': 'str', 'description': 'The password of the new user.'},\n    'email': {'type': 'str', 'description': 'The email of the new user.'},\n}\noutput_parameters = {\n    'status': {'type': 'str', 'description': 'success or failed'}\n}",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "mbti",
+      "description": "For administering an MBTI test. You can get a list of questions and calculate your MBTI type.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_constant_for_inverse(func, inverse_func, constant)",
+      "description": "def find_constant_for_inverse(func, inverse_func, constant):\n    \"\"\"\n    Find the constant that makes the inverse function of a given function equal to a specified expression.\n\n    Parameters:\n    func (function): The original function.\n    inverse_func (function): The given expression for the inverse function.\n    constant (symbol): The symbol for the constant in the original function.\n\n    Returns:\n    float: The constant value that makes the inverse function equal to the given expression.\n    \"\"\"\n\n    x, y = symbols('x y')\n\n    # Find the inverse function of the original function by swappin",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Spotify_v3_Top_200_songs_by_country_global",
+      "description": "Information obtained from https://charts.spotify.com/",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Awesome_RSS_v1_feeds",
+      "description": "List your current RSS",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_AUTH_REQUESTS_2",
+      "description": "READ - AUTH REQUESTS 2",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_multiple_of_88",
+      "description": "Check if a number is a multiple of 88",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Ishan_Retrievethelistofapplications",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "CheckInventory",
+      "description": "This API checks the inventory status of a specific product.",
+      "params": [
+        "{'name': 'productID', 'in': 'query', 'sc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fortune_Cookie_My_fortune",
+      "description": "Get your fortune",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_by_tmdb_id",
+      "description": "Fetches movie or TV show information based on a given TMDb ID.",
+      "params": [
+        "tm",
+        "m"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Quotient_indexes_daily",
+      "description": "Return end of day (daily) time series (Date, Open, High, Low, Close, Volume) given the input parameters.",
+      "params": [
+        "{'name': 'from', 'type': 'STRING', 'desc",
+        "{'name': 'to', 'type': 'STRING', 'descri",
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "saveScreenshot",
+      "description": "Save the screenshot to a file.",
+      "params": [
+        "url",
+        "full_page",
+        "viewport_width",
+        "viewport_height",
+        "delay",
+        "user_agent",
+        "format",
+        "quality"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_news",
+      "description": "Fetches the latest news related to a specific stock symbol/ticker.",
+      "params": [
+        "symbol",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_winning_time",
+      "description": "This method takes a dictionary representing a table and a year, and returns the corresponding winning time.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Track List - Playlist",
+      "description": "Retrieves the track list from a Spotify playlist",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Paragraph",
+      "description": "Generates Lorem Ipsum text by defining the number of paragraphs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "student_progress_tracker",
+      "description": "Tracks and reports the progress of students in an e-learning course, including time spent, modules completed, and current scores.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "catalog_id": "real_toolret_pos_0044",
+  "tools": [
+    {
+      "server": "toolret_customized",
+      "name": "getCardById",
+      "description": "Retrieve card information for a specific card by its ID.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "rapidapigethourlyforecastbylocationname",
+      "description": "Fetches the hourly weather forecast for a given location using the RapidAPI service.",
+      "params": [
+        "locationname"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: L",
+      "description": "def find_attribute_of_object_or_alternative(image_patch: ImagePatch, object_names: List[str], attribute_query: str) -> str:\n    '''Find the attribute of an object or its alternative in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_names (List[str]): The names of the objects to check.\n        attribute_query (str): The query to find the attribute of the object.\n       \n    Returns:\n        str: The attribute of the object if found, \"Unknown\" otherwise.\n    '''\n    for object_name in object_names:\n        object_patches = image_patch.find(obj",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_com",
+      "description": "Check a .com domain",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customizeIcon",
+      "description": "Modify an existing animated icon to fit your desired style.",
+      "params": [
+        "iconId",
+        "color",
+        "size",
+        "stroke",
+        "strokeColor"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "PDFExtractor",
+      "description": "PDF files can be extracted from the form.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "google/flan-t5-xl",
+      "description": "FLAN-T5 XL is a large-scale language model fine-tuned on more than 1000 tasks covering multiple languages. It achieves state-of-the-art performance on several benchmarks and is designed for research on zero-shot and few-shot NLP tasks, such as reasoning, question answering, and understanding the limitations of current large language models.",
+      "params": [
+        "input_text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CalculateInfectionRate",
+      "description": "This API is to calculate the infection rate based on the population and the number of active COVID-19 cases.",
+      "params": [
+        "{'name': 'population', 'in': 'query', 's",
+        "{'name': 'activeCases', 'in': 'query', '"
+      ]
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "timemachine",
+      "description": "Enhances AI with real-time awareness, providing current time in various formats and timezones.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unit_Measurement_Conversion_Convert_a_Unit",
+      "description": "GET the Unit and Value you want to convert, and get a object with the result and abbreviation (if available).",
+      "params": [
+        "{'name': 'fromValue', 'type': 'STRING', ",
+        "{'name': 'toUnit', 'type': 'STRING', 'de",
+        "{'name': 'fromUnit', 'type': 'STRING', '",
+        "{'name': 'type', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Trader_Wagon_getTraderPositions",
+      "description": "Get trader positions of a given portfolio id",
+      "params": [
+        "{'name': 'portfolioId', 'type': 'NUMBER'"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "keremberke/yolov8m-hard-hat-detection",
+      "description": "A YOLOv8 model for detecting hard hats in images. The model can distinguish between 'Hardhat' and 'NO-Hardhat' classes. It can be used to ensure safety compliance in construction sites or other industrial environments where hard hats are required.",
+      "params": [
+        "image"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vivanews-search",
+      "description": "Searches for news articles related to Indonesia",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Lead-3",
+      "description": "A simple summarization algorithm that extracts only the first three sentences of the text as a summary, generating fast speed, but the comprehensiveness and quality of the summary is poor.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_entities(data_frame, entity_col, value_col, entity1",
+      "description": "def calculate_difference_between_entities(data_frame, entity_col, value_col, entity1, entity2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values, and two entity names, and returns the difference in values between the two entities.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing entity names and their values.\n    entity_col (str): The column name for the entity names.\n    value_col (str): The column name for the entity values.\n    entity1 (str): The name of the first entity.\n    entity2 (str): The name of the sec",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicGame",
+      "description": "Access a public game played on the platform and pull the game data.",
+      "params": [
+        "gameId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSurveyData",
+      "description": "Retrieve survey data for a given location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Tank01_Fantasy_Stats_Get_NBA_Injury_List_History",
+      "description": "This table currently has injury history from the years 2020, 2021, 2022, and 2023 for players who played an NBA game in the 21-22 season and afterwards.  Consider this table as \"beta\" at this point, as we are still collecting previous seasons' data and working through some challenges. \n\nparameters:\n(All dates must be in format YYYYMMDD)\nplayerID - Use this if you only want to pull back injury history from a specific player.\ninjDate - Use this is to pull back injury history for only a specific date.\nThe next two are used to pull back a range of dates.  You can use one or the other. Or none. \nbe",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FileEnabler",
+      "description": "Enables the specified file.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "removeDisposableAddress",
+      "description": "Removes a disposable email address from the list of disposable addresses managed by the user.",
+      "params": [
+        "address"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Anime_Voice_Waifu_Ai_Api_Get_Voice",
+      "description": "Get Voice",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "timm/eva02_enormous_patch14_plus_clip_224.laion2b_s9b_b144k",
+      "description": "This model is a zero-shot image classification model based on OpenCLIP. It can be used for classifying images into various categories without any additional training.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast Money Transfer API",
+      "description": "The Fast Money Transfer API is a service that facilitates secure and fast money transfers between individuals and businesses.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_absolute_difference_between_two_entities(df, entity_col, value_col, en",
+      "description": "def calculate_absolute_difference_between_two_entities(df, entity_col, value_col, entity1, entity2):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values, and returns the absolute difference in values between two specified entities.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing entities and their values.\n    entity_col (str): The column name for the entities.\n    value_col (str): The column name for the values.\n    entity1 (str): The name of the first entity.\n    entity2 (str): The name of the second entity.\n    \n    Retu",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Kline/Candlestick Data",
+      "description": "Retrieve kline/candlestick data for a given symbol and interval.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "discord_quote_yt__get",
+      "description": "Generate a quote image from a YouTube video",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "NER",
+      "description": "Recognition of named entities in text, such as names of people, places, organizations, etc.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "lookupIP",
+      "description": "Lookup IP address",
+      "params": [
+        "ip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram Media Downloader",
+      "description": "Downloads videos, reels, and stories from an Instagram media URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_time_to_complete",
+      "description": "This method takes two arguments, 'work_rate_1' and 'work_rate_2', and returns the time it takes for both workers to complete the work together.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twitch_API_Get_Viewer_Card_Pleb_info",
+      "description": "Get Viewer Card (Pleb info)",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'channel', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ice Hockey Tournaments",
+      "description": "Retrieve a list of ice hockey tournaments covered by the data provider.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Regular Commodities with Quotes",
+      "description": "Retrieve a list of regular commodities with their current quotes from the Commerce domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BasketballLeagueTotalTeamEvents",
+      "description": "This endpoint retrieves the last 5 matches for a specific league in a given season for both home and away events in the Basketball League.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Movies_Tv_Shows_Database_Get_Trending_Movies",
+      "description": "return movie results with title , year , id",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "api_v2_minimal_exchange_amount",
+      "description": "Fetch the minimal payment amount required to perform a cryptocurrency exchange using the ChangeNow API v2.",
+      "params": [
+        "flow",
+        "tocurrency",
+        "fromcurrency",
+        "fromnetwork",
+        "tonetwork"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getSedimentComposition",
+      "description": "Retrieve the composition of sediments in a specific location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getJudicialRecords",
+      "description": "Retrieve judicial records and public law information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "economy.get_inflation_trends",
+      "description": "Analyzes inflation trends over a specified time period for a given country.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_getOrderById",
+      "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+      "params": [
+        "{'name': 'orderId', 'type': 'NUMBER', 'd"
+      ]
+    }
+  ]
+}

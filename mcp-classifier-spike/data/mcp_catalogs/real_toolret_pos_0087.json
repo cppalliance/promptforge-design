@@ -1,0 +1,355 @@
+{
+  "catalog_id": "real_toolret_pos_0087",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "check_inside_object_near_object(image_patch: ImagePatch, object_name: str, refer",
+      "description": "def check_inside_object_near_object(image_patch: ImagePatch, object_name: str, reference_object_name: str, relative_position: str, query: str) -> str:\n    '''Find out what is inside an object that is near or far from another object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        reference_object_name (str): The name of the reference object.\n        relative_position (str): The relative position of the checked object to the reference object. Options: [\"near\", \"far\"].\n        query (str)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FindPayments",
+      "description": "Retrieves payment information for the Food domain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Walk Score API",
+      "description": "Calculate the walkability of a given location",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "K\u00f6ppen Climate Classification",
+      "description": "Get the K\u00f6ppen climate classification code for a given latitude and longitude.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPublicGame",
+      "description": "Access a public game played on the platform and pull the game data.",
+      "params": [
+        "gameId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMediaLaws",
+      "description": "Retrieve information about media laws",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "sum_of_squares_of_coefficients",
+      "description": "Calculates the sum of the squares of the coefficients of the terms in a given expression",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Random Username Generator API",
+      "description": "Generates a random and unique username every time it is called.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "event_data",
+      "description": "Fetches event data for a given event ID using the Toolbench RapidAPI.",
+      "params": [
+        "event_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Poems by Author",
+      "description": "Retrieve a list of poems by a specific author from the Poetry DB",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getFollowersList",
+      "description": "Access a list of followers.",
+      "params": [
+        "screen_name",
+        "count",
+        "page"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_action_location(image_patch: ImagePatch, action: str) -> str",
+      "description": "def find_action_location(image_patch: ImagePatch, action: str) -> str:\n    '''Find the location of a specific action happening in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        action (str): The action to find the location of.\n       \n    Returns:\n        str: The location of the action if found, \"Not found\" otherwise.\n    '''\n    \n    action_query = image_patch.find(action)\n    if action_query:\n        location = action_query[0].simple_query(\"Where is this happening?\")\n        return location\n    else:\n        return \"Not found\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Token Forwarding Wallets",
+      "description": "Retrieve a list of token forwarding wallets",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Chartbeat_Live_Top_Pages_v3",
+      "description": "Returns a list of pages, ordered by which ones have most visitors right now. This call returns real-time data.",
+      "params": [
+        "{'name': 'host', 'type': 'STRING', 'desc",
+        "{'name': 'jsonp', 'type': 'STRING', 'des",
+        "{'name': 'limit', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SMS_v3_send",
+      "description": "use this to send the sms.",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '",
+        "{'name': 'password', 'type': 'STRING', '",
+        "{'name': 'message', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "spreadsheet.add_worksheet",
+      "description": "# Adds a new worksheet to a spreadsheet. \nspreadsheet.add_worksheet(title, rows, cols, index=None)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "createDraftingElement",
+      "description": "Create a new drafting element in architectural drafting",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "saveScreenshot",
+      "description": "Save the screenshot to a file.",
+      "params": [
+        "url",
+        "full_page",
+        "viewport_width",
+        "viewport_height",
+        "delay",
+        "user_agent",
+        "format",
+        "quality"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_Tuesday_Wednesday",
+      "description": "This method takes a dictionary representing a table, and returns a tuple containing the tickets sold on Tuesday and Wednesday.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getStation",
+      "description": "Retrieves information about a specified airport.",
+      "params": [
+        "station"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str",
+      "description": "def describe_object_appearance(image_patch: ImagePatch, object_name: str) -> str:\n    '''Describe the appearance of an object.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to describe.\n       \n    Returns:\n        str: The description of the object's appearance.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    # Assume that there is only one object of the given type in the photo\n    object_patch = object_patches[0]\n    description = object_patch.simple_query(f\"Can you describe the {object_name}'s",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCountrySecurity",
+      "description": "Retrieve international security information for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Word_Ladder_Builder_Build_Word_Ladders",
+      "description": "Create Word Ladders between two words. By default it uses 2019 edition of Collins Dictionary.",
+      "params": [
+        "{'name': 'EndWord', 'type': 'STRING', 'd",
+        "{'name': 'StartWord', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Numbers",
+      "description": "The numbers API allows you to search, purchase, and manage settings on each tracking number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TED_Talks_API_getSpeakers",
+      "description": "Get all the TED talks speakers",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "food_security.analysis",
+      "description": "Analyzes food security levels within a community by evaluating local food production and consumption patterns.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Accounts_API_GetByAccountNumber",
+      "description": "To get a virtual account by account number.",
+      "params": [
+        "{'name': 'accountNumber', 'type': 'NUMBE"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Online_Movie_Database_title_get_trivia",
+      "description": "Get trivia of title",
+      "params": [
+        "{'name': 'tconst', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "culturalEvents.fetchEvents",
+      "description": "Fetches upcoming cultural events at museums including workshops, lectures, and special tours.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "HandballAPI_CategorySchedules",
+      "description": "Get handball matches by category and date.",
+      "params": [
+        "{'name': 'month', 'type': 'NUMBER', 'des",
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'year', 'type': 'NUMBER', 'desc",
+        "{'name': 'day', 'type': 'NUMBER', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "TikTok_Video_No_Watermark_v2_Comment_list",
+      "description": "Comment list",
+      "params": [
+        "{'name': 'aweme_id', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flight_ticket_changing",
+      "description": "Flight Ticket Booking Modification Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Domain_Emails_And_Contacts_Emails_And_Contacts",
+      "description": "Allows finding email addresses, social links, and phones from domains.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_gorilla-huggingface",
+      "name": "fcakyon/yolov5s-v7.0",
+      "description": "Yolov5s-v7.0 is an object detection model trained on the COCO dataset. It can detect objects in images and return their bounding boxes, scores, and categories.",
+      "params": [
+        "conf",
+        "iou",
+        "agnostic",
+        "multi_label",
+        "max_det",
+        "img",
+        "size",
+        "augment"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Agent.RunTo",
+      "description": "# Run to a room or object. 'object' can only be: ['table', 'laptop', 'water', 'chair', 'cup', 'dining_room', 'toilet', 'sink', 'home_office', 'washing_machine', 'bathroom', 'bedroom']. \nAgent.RunTo(object)\n",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "playerShotChartDataSeasonPlayoffs",
+      "description": "Return player shot chart data for a specified player and season (both regular season and playoffs).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airbnb_v2_Get_Property_Type_Filters",
+      "description": "-",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "frrefe_end",
+      "description": "end",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_text",
+      "description": "Search for verses from the Bible that match the given text using the Toolbench RapidAPI service.",
+      "params": [
+        "text"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "T3MA",
+      "description": "Calculates the Triple Exponential Moving Average (T3MA) for a given financial instrument.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

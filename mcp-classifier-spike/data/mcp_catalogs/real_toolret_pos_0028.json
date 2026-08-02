@@ -1,0 +1,339 @@
+{
+  "catalog_id": "real_toolret_pos_0028",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "calculate_gas_cost(start_odometer, end_odometer, miles_per_gallon, price_per_gal",
+      "description": "def calculate_gas_cost(start_odometer, end_odometer, miles_per_gallon, price_per_gallon):\n    \"\"\"\n    Calculate the cost of gas used for a certain distance driven.\n\n    Parameters:\n    start_odometer (int): The initial reading on the odometer.\n    end_odometer (int): The final reading on the odometer.\n    miles_per_gallon (float): The car's fuel efficiency in miles per gallon.\n    price_per_gallon (float): The price of one gallon of gas.\n\n    Returns:\n    float: The cost of the gas used, rounded to the nearest cent.\n    \"\"\"\n    # Calculate the total distance driven\n    distance = end_odometer ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "query",
+      "description": "Queries information about an IP address using the NetDetective API.",
+      "params": [
+        "ipaddress"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ReserveTicket",
+      "description": "This API is to reserve a ticket for an event.",
+      "params": [
+        "{'name': 'City_ID', 'in': 'query', 'sche",
+        "{'name': 'Event_ID', 'in': 'query', 'sch",
+        "{'name': 'date', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Mocking_Rock_Get_Sample_BusinessProfile",
+      "description": "Use this API to get fake-generated Business Profile sample data.\nBy default, it will generate \"en\"  locale for a single count.\nIf count query is greater than 1 it will randomize the generated profiles \nto a different locale. \nTo set a default locale pass it as the query.List of the locale you can get from locale API.\nIn case of the wrong locale is given it will return the result based on default settings as mentioned above.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "is_divisible_by",
+      "description": "This method takes two arguments, 'number' and 'divisor', and returns True if 'number' is divisible by 'divisor', and False otherwise.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "NHL_Stats_and_Live_Data_getGameDiff",
+      "description": "You can use this to return a small subset of data relating to game.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri",
+        "{'name': 'startTimeCode', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "originals_episodes_get_likes",
+      "description": "Retrieves the number of likes for a specific episode of an original series from Webtoon.",
+      "params": [
+        "titleno",
+        "episodeno",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataClassifier",
+      "description": "Classify the input data, you need to specify the classification rules.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "confirm_transaction",
+      "description": "Confirm a specific transaction record",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_CAPTIVE_PORTALS",
+      "description": "READ CAPTIVE PORTALS",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_original_price",
+      "description": "This method takes two arguments, 'selling_price' and 'percentage_loss', and returns the original price of the article.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Finance_Data_Get_Company_Ratios",
+      "description": "Get Company ratios latest data",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Decimals",
+      "description": "Retrieves the decimal places used by an ERC-20 token.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "clinical_trial_radar",
+      "description": "Discover current info on global clinical trials, organizations, diseases, and biomarkers from public & private studies.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "image-frame-interpolation",
+      "description": "This model generates intermediate frames between two input frames using a deep learning approach. It is useful for video frame rate up-conversion and slow motion generation.",
+      "params": [
+        "inputs"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Driver_StaEndings",
+      "description": "To list the driver standings in F1 races.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "TimedSwitch",
+      "description": "description = \"API for scheduling a timed switch. Sets a switch-time for the specified device-id and executes an on/off command at the specified time.\"\ninput_parameters = {\n    'device_id': {'type': 'str', 'description': 'ID of the device on which to schedule a timed switch'},\n    'switch_time': {'type': 'datetime', 'description': 'Time at which to execute the on/off command. Format: %Y-%m-%d %H:%M:%S'},\n    'on_off_command': {'type': 'str', 'description': 'The command to execute when the switch time is reached. Should be \"on\" or \"off\".'}\n}\noutput_parameters = {\n    'status': {'type': 'str', '",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "walletapi_cloud_List_operations_in_wallet_s_ledger",
+      "description": "Obtain a pageable list of operations that were posted to a wallet within a specified time period.",
+      "params": [
+        "{'name': 'projectId', 'type': 'STRING', ",
+        "{'name': 'pageSize', 'type': 'NUMBER', '",
+        "{'name': 'walletId', 'type': 'STRING', '",
+        "{'name': 'from', 'type': 'NUMBER', 'desc",
+        "{'name': 'to', 'type': 'NUMBER', 'descri",
+        "{'name': 'page', 'type': 'NUMBER', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BodyFat - Imperial",
+      "description": "This endpoint calculates the body fat percentage based on the provided gender, age, height, and weight parameters in imperial units.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_bacteria",
+      "description": "Calculates the number of bacteria at the end of a given day",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get News by Symbol",
+      "description": "Retrieve news articles related to a specific stock symbol",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_smallest_R",
+      "description": "This method takes a list of integers, 'divisors', and an integer, 'start', as arguments. It returns the smallest integer greater than 'start' that leaves a remainder of 1 when divided by all the integers in 'divisors'.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "tes_getOrderById",
+      "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+      "params": [
+        "{'name': 'orderId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_acaivity_byhpricP_raNge",
+      "description": "Find an event with a specified price in an inclusively constrained range.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "QuantumTech.qbitEntanglementCheck",
+      "description": "Evaluates the entanglement status of a set of qubits within a quantum system, optionally with environmental factor considerations.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "scanFile",
+      "description": "Scan a single file for viruses.",
+      "params": [
+        "file"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Search Property By GEO",
+      "description": "Search for properties by geographic coordinates and filters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "matches_v2_list_live",
+      "description": "Fetches a list of available live matches for a given sports category.",
+      "params": [
+        "category",
+        "timezone"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Video without Watermark",
+      "description": "Fetch a video from TikTok without a watermark.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fashion_Industry_News_Data_Collection_search_term",
+      "description": "search term",
+      "params": [
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getColonizationProgress",
+      "description": "Retrieve the current progress of space colonization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "online_appointment_booking",
+      "description": "Online Appointment Booking Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Vampirism Imbuements",
+      "description": "This API retrieves a list of imbuements related to Vampirism (Life steal) in the Tibia Items tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "conference_room_cancelling",
+      "description": "Conference Room Cancellation Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "createJobPosting",
+      "description": "Create a new job posting",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "foreign_currency_sale",
+      "description": "Foreign Exchange Selling Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_an_answer_to_your_question",
+      "description": "Fetches an answer to an Islamic question using the Islam&AI bot from the provided API.",
+      "params": [
+        "question"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SimilarWeb_historical_data_api_getCountries",
+      "description": "Returns country shares by months",
+      "params": [
+        "{'name': 'domain', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aliexpress_item_search",
+      "description": "Searches for items on AliExpress based on various filters and criteria.",
+      "params": [
+        "brandid",
+        "catid",
+        "q",
+        "page",
+        "loc",
+        "locale",
+        "endprice",
+        "sort"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "catalog_id": "real_toolret_pos_0035",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Get Company Quarterly Income Statement",
+      "description": "Retrieves the quarterly income statement of a publicly traded company",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Game Odds - By Category Schedule",
+      "description": "Retrieve the schedule of sportsbook odds for a specific sport and category.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Credit Quality",
+      "description": "Retrieves the credit quality of a specified security as displayed in the Portfolio tab",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "job_salary",
+      "description": "Fetch estimated job salaries based on job title and location using the RapidAPI Job Salary API.",
+      "params": [
+        "job_title",
+        "location",
+        "radius"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get TikTok Notifications",
+      "description": "Retrieve notifications from the 'From TikTok' account on TikTok.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getCountrySecurity",
+      "description": "Retrieve international security information for a specific country",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAeronauticalCharts",
+      "description": "Retrieve aeronautical charts and publications, including sectional charts, terminal procedures, and enroute charts for a specific airport.",
+      "params": [
+        "icao",
+        "chartType"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Recetas_en_espa_ol_Get_recipes_details",
+      "description": "Get details of any recipe",
+      "params": [
+        "{'name': 'slug', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "lllyasviel/control_v11p_sd15_scribble",
+      "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5.",
+      "params": [
+        "checkpoint",
+        "torch_dtype"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Trending Dividend Stocks",
+      "description": "Retrieve a list of trending dividend stocks from the finance domain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Cat Picture",
+      "description": "Fetches a random cat picture from the Reward domain, called by the kitten_placeholder tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Ice Hockey Tournaments",
+      "description": "Retrieve a list of ice hockey tournaments covered by the data provider.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "identify_establishment(image_patch: ImagePatch, sign_name: str) -> str",
+      "description": "def identify_establishment(image_patch: ImagePatch, sign_name: str) -> str:\n    '''Identify the type of establishment represented by a given sign.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        sign_name (str): The name of the sign to identify the establishment.\n       \n    Returns:\n        str: The type of establishment if the sign is detected, \"no {sign_name} sign detected\" otherwise.\n    '''\n    sign_patches = image_patch.find(sign_name)\n    if sign_patches: \n        establishment = sign_patches[0].simple_query(f\"What kind of establishment is this?\")\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Steam_Community_Group_Profile",
+      "description": "An overview of a steamcommunity group.",
+      "params": [
+        "{'name': 'id', 'type': 'string', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Free_NBA_Get_All_Teams",
+      "description": "This endpoint retrieves all teams for the current season.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Movies_Tv_Shows_Database_Get_Movie_by_ID",
+      "description": "A valid Movie ID (e.g. tt1375666)\nreturn Title, Description, Year, Release Date, Rated, Runtime, Genre, Directors, Actors, Languages, Country\n Rating, votes, Popularity, id",
+      "params": [
+        "{'name': 'movieid', 'type': 'STRING', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_news_list",
+      "description": "List latest news",
+      "params": [
+        "{'name': 'performanceId', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Auto_Profanity_Filter_Remove_Profanity",
+      "description": "Removes Profanity from Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "share_agenda",
+      "description": "Share Agenda",
+      "params": []
+    },
+    {
+      "server": "toolret_metatool",
+      "name": "JobTool",
+      "description": "Your Global Career Hub! Find diverse job opportunities, expert interview tips, and resume optimization guidance. Empowering job seekers worldwide on their path to success.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchTVPrograms",
+      "description": "Search for TV programs of interest based on specific keywords.",
+      "params": [
+        "keywords",
+        "startDate",
+        "endDate"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cleanhydrotocarbonfootprint",
+      "description": "Calculate the CO2 equivalent (CO2e) in kilograms from the consumption of clean hydro energy.",
+      "params": [
+        "energy",
+        "consumption"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "event_search",
+      "description": "Find events and filter your search by location, date, availability, and much more.",
+      "params": [
+        "{'name': 'id', 'schema': {'type': 'strin",
+        "{'name': 'sort_by', 'schema': {'type': '",
+        "{'name': 'keyword', 'schema': {'type': '",
+        "{'name': 'attractionId', 'schema': {'typ",
+        "{'name': 'venueId', 'schema': {'type': '",
+        "{'name': 'postalCode', 'schema': {'type'",
+        "{'name': 'radius', 'schema': {'type': 's",
+        "{'name': 'unit', 'schema': {'type': 'str"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Generate a Face",
+      "description": "Generates a face image using artificial intelligence and provides a link to download the generated image.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getAllGames",
+      "description": "Retrieve a list of all available games in the Sports domain, as provided by the betsports tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generateScienceFictionStory",
+      "description": "Generate a science fiction story",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Vessel_Data_Get_Vessel_Info",
+      "description": "Individual on board vessel info based on given ship id.\nVisit our [demo site](https://core-api.net/vessel/map.html)",
+      "params": [
+        "{'name': 'shipid', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "cryptocurrency_metadata",
+      "description": "Retrieve metadata about available cryptocurrency assets",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_items",
+      "description": "Calculates the total number of items purchased based on the number of single bubblegums and bubblegum packs",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "getMediaAndGlobalization",
+      "description": "Retrieve information about media and globalization",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Unlock Cart",
+      "description": "Unlocks a cart that has been locked via the cart_valistring method.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Halsey_Lyric_Snippets_all_songs_from_a_specified_artist_and_specified_album",
+      "description": "This endpoint retrieves all songs from the specified album by the specified artist and returns them in the response.",
+      "params": [
+        "{'name': 'artist', 'type': 'string', 'de",
+        "{'name': 'album', 'type': 'string', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Coin Markets",
+      "description": "Retrieve markets on different exchanges that trade a specific coin.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Crypto Exchange Ticker Price",
+      "description": "Retrieve the current ticker price for a specific cryptocurrency exchange.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "eomonth",
+      "description": "Computes and returns the date of the last day of a given month based on a specified start date and the number of months to adjust.",
+      "params": [
+        "months",
+        "start_date"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Datamo_specs_v1_tier3",
+      "description": "Pull requested vehicle data for specific field parameters. Tier 3 access grants to filter by any of the 100+ fields in the database\n\nAt least one query parameter is required for a successful call.",
+      "params": [
+        "{'name': 'make', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "find_smallest_prime",
+      "description": "This method takes no arguments and returns the smallest prime number.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listEntities",
+      "description": "Retrieve a list of entities, such as regions or income groups, and their codes.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Facebook Video Downloader API",
+      "description": "API to download Facebook videos in MP4 format",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "searchZoonoticDiseases",
+      "description": "Search for zoonotic diseases that can be transmitted between animals and humans",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

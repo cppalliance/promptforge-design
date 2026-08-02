@@ -1,0 +1,334 @@
+{
+  "catalog_id": "real_toolret_pos_0013",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Wayback_Machine_Availability",
+      "description": "This simple API for Wayback is a test to see if a given url is archived and currenlty accessible in the Wayback Machine. This API is useful for providing a 404 or other error handler which checks Wayback to see if it has an archived copy ready to display. The API can be used as follows:",
+      "params": [
+        "{'name': 'url', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "Lykon/DreamShaper",
+      "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Check_Username_com",
+      "description": "Check a .com domain",
+      "params": [
+        "{'name': 'name', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorcycle Specifications",
+      "description": "Retrieves motorcycle specifications based on the provided article and specification type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Live Whois Lookup",
+      "description": "Retrieves detailed Whois information for a given domain name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getPuzzle",
+      "description": "Retrieve a puzzle and its corresponding solution.",
+      "params": [
+        "puzzleId"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Projects",
+      "description": "Returns a collection of projects for the authorized customer, with optional filtering and pagination.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mrautoparts_Disclaimer",
+      "description": "we do not guarantee  product safety or prices",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Entity_Risk_Indicator_Categories",
+      "description": "List the available Sigma indicator categories to filter by.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "time_management",
+      "description": "Manage schedules and time",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "retrieve_price_per_kilogram",
+      "description": "This method takes a string representing the price per kilogram in the format \"$ X/kilogram\" and returns the corresponding float value of X.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "stats.probabilityDensityFunction",
+      "description": "Calculate the probability density function for a given set of data points.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Virtual_Accounts_API_GetByAccountNumber",
+      "description": "To get a virtual account by account number.",
+      "params": [
+        "{'name': 'accountNumber', 'type': 'NUMBE"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_time_to_complete",
+      "description": "This method takes two arguments, 'work_rate_1' and 'work_rate_2', and returns the time it takes for both workers to complete the work together.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Warzone Rollosis PSN Stats API",
+      "description": "Retrieve Warzone stats for Rollosis from PlayStation Network (PSN)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Product Prices",
+      "description": "Retrieve the latest prices, historical highest/lowest prices of a product from Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gogoanime_data_api_GetSinglePageInfo",
+      "description": "GetInfoFrom SingleAnime Pages",
+      "params": [
+        "{'name': 'link', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Random Crypto Asset by ID",
+      "description": "Retrieve a random fake crypto asset by its unique ID.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "nlpconnect/vit-gpt2-image-captioning",
+      "description": "An image captioning model that uses transformers to generate captions for input images. The model is based on the Illustrated Image Captioning using transformers approach.",
+      "params": [
+        "model"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "feeds",
+      "description": "Fetch recent TikTok feeds for a given user.",
+      "params": [
+        "schematype",
+        "username"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "teamlastmatches",
+      "description": "Fetch the last matches for a specified cricket team using the RapidAPI cricket API.",
+      "params": [
+        "page",
+        "is_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Airdna_Overview",
+      "description": "Returns overview stats (ADR, OCC ,Revenue ..) of a location rental data",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_periods_for_entity(df, entity_col, period1_col, per",
+      "description": "def calculate_difference_between_periods_for_entity(df, entity_col, period1_col, period2_col, entity_name):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of entities and their values over different periods, the name of the entity, and two periods, and returns the difference in values between the two periods for the specified entity.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the values of entities over different periods.\n    entity_col (str): The column name for the entities.\n    period1_col (str): The column name for the first period.\n    ",
+      "params": []
+    },
+    {
+      "server": "toolret_apibank",
+      "name": "ModifyRegistration",
+      "description": "description = \"Modify Registration API that takes two parameters - 'registration_number' and 'new_appointment_time'. The 'registration_number' parameter refers to the identification number of the registration to be updated, and the 'new_appointment_time' parameter specifies the new time for the updated registration appointment.\" \n\ninput_parameters = {\n  'registration_number': {'type': 'str', 'description': 'The identification number of the registration to be updated.'},\n  'new_appointment_time': {'type': 'datetime', 'description': 'The new time for the updated registration appointment. Format:",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "division",
+      "description": "This function takes two numbers as input and returns their division.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "DatabaseConstraintValidator.checkUniqueConstraint",
+      "description": "Checks if a unique constraint is valid in a database table.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getDancePhotography",
+      "description": "Retrieve dance photography information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Simulate Geolocation for Mobile Apps",
+      "description": "Simulates geolocation for a given mobile application ID",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_appointments",
+      "description": "Retrieves all appointments for a given date and clinic name from the API.",
+      "params": [
+        "date",
+        "clinicname"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "schedule_email",
+      "description": "Schedule to send an email at a specified time",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get ECOINDEX Analysis Task by ID",
+      "description": "This API returns an ECOINDEX analysis task by its unique identifier.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateRailwayTrackCapacity",
+      "description": "Calculate the maximum capacity of a railway track",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Greatest of All Time Top R&B/Hip-Hop Albums",
+      "description": "Returns a list of the greatest R&B/Hip-Hop albums of all time, as ranked by Billboard.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "etiquette.phone_call_schedule",
+      "description": "Schedule a phone call with a specific person at a specific time.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Match_APi_Get_all_competitions_information",
+      "description": "Retrieve all competitions information",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> ",
+      "description": "def count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Count the number of parts a specific object is divided into.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to count parts of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The number of parts the object is divided into.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = obj",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List All Bot Category Groups",
+      "description": "Retrieve a list of category groups linked to user-owned bots (not locked bots).",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "gameNews.fetchLatestUpdates",
+      "description": "Fetches the latest updates and announcements from major gaming industry events.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "add_remainder",
+      "description": "This function takes two integers as input and returns their sum.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "petstore_blitz_getUserByName",
+      "description": " ",
+      "params": [
+        "{'name': 'username', 'type': 'STRING', '"
+      ]
+    }
+  ]
+}

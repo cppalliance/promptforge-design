@@ -1,0 +1,347 @@
+{
+  "catalog_id": "real_toolret_neg_0038",
+  "tools": [
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_from_frequency_table(data_frame, frequency_col)",
+      "description": "def calculate_total_from_frequency_table(data_frame, frequency_col):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a frequency table and returns the total number of items based on the frequencies.\n    \n    Args:\n    data_frame (pd.DataFrame): A pandas DataFrame containing the frequency table with a column specified by frequency_col.\n    frequency_col (str): The column name for the frequencies.\n    \n    Returns:\n    int: The total number of items.\n    \"\"\"\n    # Sum up the values in the frequency column\n    total_items = data_frame[frequency_col].sum()\n    \n    return total_",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listAvailableSelectors",
+      "description": "List available CSS selectors for a given website URL",
+      "params": [
+        "url"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_b_squared",
+      "description": "Calculates the value of b squared using the given value of b",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_count",
+      "description": "This method takes two arguments, 'count_1' and 'count_2', and returns the total count of results.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Netflix_Data_title_seasons",
+      "description": "title-seasons",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "create_new_note",
+      "description": "Create a new note",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "checkDatabaseAccess",
+      "description": "Check if a database can be accessed by the current user",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast_Food_Restaurants_USA_TOP_50_Chains_GET_all_State_names",
+      "description": "GET all {State} names",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Blake2B Text Hash",
+      "description": "Hash text using the Blake2B algorithm and return the resulting hash.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getTeamRoster",
+      "description": "Retrieve a list of current players on an MLB team.",
+      "params": [
+        "teamId"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getIndexList",
+      "description": "Get a list of available indices",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last Roulette Spin",
+      "description": "Retrieve information about the last roulette spin, including the outcome and any relevant details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "tiktok_download_video_get_music_post_video_list",
+      "description": "get music post video list",
+      "params": [
+        "{'name': 'cursor', 'type': 'STRING', 'de",
+        "{'name': 'count', 'type': 'STRING', 'des",
+        "{'name': 'music_id', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getRealTimePrice",
+      "description": "Retrieve the real-time price of a specified cryptocurrency.",
+      "params": [
+        "cryptoCurrency",
+        "fiatCurrency"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "courtCase.searchByDateRange",
+      "description": "Search and retrieve court cases within a specified date range and jurisdiction.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pair_trade_data",
+      "description": " ",
+      "params": [
+        "{'name': 'pair_id', 'type': 'NUMBER', 'd",
+        "{'name': 'period', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Phone Number Carrier Lookup",
+      "description": "This API provides information about the carrier associated with a given phone number.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "set_advance_notification",
+      "description": "Set advance notification for a specified event",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Translate_v3_Fast_Language_Detection",
+      "description": "This endpoint will return the Language of the Text",
+      "params": [
+        "{'name': 'text', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify_PAN_Aadhaar_link_v2_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootballTournamentMeta",
+      "description": "Retrieve metadata about a specific football tournament.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ItemPrice",
+      "description": "This API provides the price of an item.",
+      "params": [
+        "{'name': 'item_id', 'in': 'query', 'sche"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "seasonal_goal_analysis_scoring_first",
+      "description": "Provides the scoring first goal statistics for a given match within specific minute intervals (0-10, 11-20, 21-30, etc.).",
+      "params": [
+        "matchid"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaScores_Team_shirts",
+      "description": "Get team shirts by event_id",
+      "params": [
+        "{'name': 'team', 'type': 'STRING', 'desc",
+        "{'name': 'event_id', 'type': 'NUMBER', '",
+        "{'name': 'team_player', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aug13_777",
+      "description": "7",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getChatLogs",
+      "description": "Retrieves the chat logs for a specified Twitch channel.",
+      "params": [
+        "channel_id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fitness_Calculator_Body_Fat_Percentage",
+      "description": "Knowing body fat percentage would be helpful to decide on a well-programmed fitness plan. You can use this endpoint with 7 parameters.",
+      "params": [
+        "{'name': 'height', 'type': 'NUMBER', 'de",
+        "{'name': 'waist', 'type': 'NUMBER', 'des",
+        "{'name': 'neck', 'type': 'NUMBER', 'desc",
+        "{'name': 'gender', 'type': 'STRING', 'de",
+        "{'name': 'hip', 'type': 'NUMBER', 'descr",
+        "{'name': 'age', 'type': 'NUMBER', 'descr",
+        "{'name': 'weight', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Retrieve All Business Data",
+      "description": "Fetches all business data from the API to display on the detail screen",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "generate_daily_schedule",
+      "description": "Generate a daily schedule based on the user's tasks",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "AddMovieToFavorites",
+      "description": "This API is to add a movie to a favorite list.",
+      "params": [
+        "{'name': 'favorite_ID', 'in': 'query', '",
+        "{'name': 'movie_ID', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pocket_Cube_Solver_getAllSolutions",
+      "description": "Returns json data consisting of all the solutions of a given cube position.",
+      "params": [
+        "{'name': 'position', 'type': 'string', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "suivi_colis_Latest",
+      "description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+      "params": [
+        "{'name': 'colisId', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "nft_news",
+      "description": "Fetches up-to-date NFT news from the specified API.",
+      "params": [
+        "nftnews"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Book2Author",
+      "description": "This API is used to convert a book title to an author name.",
+      "params": [
+        "{'name': 'book_title', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "IceHockeyApi_MatchStatistics",
+      "description": "This operation returns statistics for a specific ice hockey match, including player statistics and other relevant data.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "deleteEcho",
+      "description": "Sends a DELETE request to the specified endpoint and receives response data.",
+      "params": [
+        "endpoint",
+        "queryParams"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Booking.com Property Description",
+      "description": "Retrieve the meta properties description of a booking.com property",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Unique_tournament_logo",
+      "description": "Get unique tournament logo by unique tournament id",
+      "params": [
+        "{'name': 'unique_tournament_id', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "wedding.attireAdvisor",
+      "description": "Provides personalized wedding attire suggestions based on the wedding theme, season, and guest role.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "UK_Real_Estate_Rightmove_commercial_property_to_sale",
+      "description": "Commercial property for sale",
+      "params": [
+        "{'name': 'location', 'type': 'STRING', '"
+      ]
+    }
+  ]
+}

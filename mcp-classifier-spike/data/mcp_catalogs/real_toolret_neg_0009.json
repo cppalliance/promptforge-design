@@ -1,0 +1,338 @@
+{
+  "catalog_id": "real_toolret_neg_0009",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Daily_Knowledge_sustainable_development_goals_en_json",
+      "description": "The UN global goals for sustainable development.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_index_price_kline",
+      "description": "Fetches the index price kline data for a specified symbol and category within a given time range.",
+      "params": [
+        "symbol",
+        "category",
+        "interval",
+        "end",
+        "start",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Election2020_Smartable_GetFAQs",
+      "description": "Get election 2020 FAQs.",
+      "params": [
+        "{'name': 'page', 'type': 'string', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Generate Image Condition On Pose Image",
+      "description": "useful when you want to generate a new real image from both the user description and a human pose image. like: generate a real image of a human from this human pose image, or generate a new real image of a human from this pose. The input to this tool should be a comma separated string of two, representing the image_path and the user description",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str,",
+      "description": "def check_existence_near_object_and_query(image_patch: ImagePatch, object_name: str, reference_object_name: str, distance_threshold: int, query: str) -> str:\n    '''Check the existence of an object near another object and if so, perform a specific query on one of the objects.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for existence.\n        reference_object_name (str): The name of the reference object.\n        distance_threshold (int): The maximum distance between the two objects for them to be considere",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "American Football Match Incidents",
+      "description": "Get match incidents for a specific American Football match.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "US_Gas_Prices_us_ut",
+      "description": "Returns current gas price data for Utah. Historical data starting from 2023-06-01 can be queried by adding the `date` parameter to this endpoint. In order to return XML instead of the default JSON format, simply add the `Accept: application/xml` header to your request.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "GUID_Generator_Tool_Single_GUID",
+      "description": "Endpoint to retrieve a single GUID, returned as a simple string.\nNo parameters required.\nGET only query.\nReturn content-type is text/plain.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Arabic_news_API_Hibapress",
+      "description": "\u0645\u0633\u0627\u0631 \u064a\u0633\u062a\u0631\u062c\u0639 \u0627\u062e\u0631 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0645\u0646 \u0645\u0648\u0642\u0639 \u0647\u0628\u0629 \u0628\u0631\u064a\u0633",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_arithmetic_sequence",
+      "description": "This method takes three arguments, 'first_term', 'common_difference', and 'n', and returns the nth term of the arithmetic sequence.",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "sum_of_squares_of_coefficients",
+      "description": "Calculates the sum of the squares of the coefficients of the terms in a given expression",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SpecReviewer",
+      "description": "review and validation of product specification sheets",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get states by census region",
+      "description": "Retrieve all fields for states matching the provided Census Region(s). Multiple census regions can be provided separated by commas.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Taxonomies",
+      "description": "Retrieve a list of taxonomies from the South Asian Express tool.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "directory",
+      "description": "Retrieves all the Local Area Codes from a given country.",
+      "params": [
+        "country"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Product2ID",
+      "description": "This API generates the ID of a specific product through its product name.",
+      "params": [
+        "{'name': 'product_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Games by Platform",
+      "description": "Retrieve a list of games by platform. Specify the platform using the 'platform' parameter.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Rainforest_Autcomplete",
+      "description": "When making a request with the type parameter set to type=autocomplete Rainforest API will return autocomplete suggestions for the search term specified in the search_term parameter, on the Amazon domain specified in the amazon_domain parameter.\nYou may scope your autocomplete request to an Amazon autocomplete alias (synonymous with a product area or top-level category) by specifying the alias using the autocomplete_alias parameter. The available autocomplete_alias values vary depending on the amazon_domain used. You can find a full list of all autocomplete aliaes, per Amazon-domain, in the au",
+      "params": [
+        "{'name': 'search_term', 'type': 'STRING'",
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'amazon_domain', 'type': 'STRIN"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "videoLocation.findScenicSpots",
+      "description": "Identifies scenic spots suitable for music video shoots based on environmental and temporal parameters.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "b_b_availability_check",
+      "description": "B&B Availability Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Flight_Fare_Search_Airport_Arrivals",
+      "description": "An Endpoint to fetch Arrivals on a given date",
+      "params": [
+        "{'name': 'airportCode', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Gainers",
+      "description": "Get the top gainers in cryptocurrency markets today, including their current prices and percentage changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "B2BHint_Get_company_Basic_data",
+      "description": "The Get company details endpoint will return all basic company data on B2BHint.",
+      "params": [
+        "{'name': 'countryCode', 'type': 'STRING'",
+        "{'name': 'internationalNumber', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Webhooks",
+      "description": "Retrieves a list of all existing webhooks for the SMS service provided by sms77io.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "iot_network_traffic_monitor",
+      "description": "Monitor the network traffic of IoT devices to detect potential security threats.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ProteinIsoformDetector.detectIsoforms",
+      "description": "Identifies potential isoforms in a protein sample using mass spectrometry data and a reference database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "FontTool",
+      "description": "for selecting fonts",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "spacHero_SPAC_Database_SPAC_Summary",
+      "description": "Retrieve SPAC summary including important dates, status and target names.",
+      "params": [
+        "{'name': 'symbol', 'type': 'string', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MentorshipProgram.createProgram",
+      "description": "Creates a mentorship program based on the provided program details and mentor-mentee pairs. The input parameters must be valid JSON strings.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> ",
+      "description": "def count_parts_of_object(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Count the number of parts a specific object is divided into.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to count parts of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The number of parts the object is divided into.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return image_patch.simple_query(query)\n    object_patch = obj",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Earnings Per Share (EPS) Trend",
+      "description": "This API endpoint returns a breakdown of the estimated historical EPS changes at a given period, including the trend and analysis of the EPS changes.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Scout_Basic_Phone_Number_Validation",
+      "description": "**Basic Phone Number Validation**\n\n- determine if a phone number is in a valid format \n\n- determine if a phone number is impossible for a particular region\n\n- properly format the number for various scenarios like international or local dialing\n\n- attempts to determine line type\n\n- determines country and country code",
+      "params": [
+        "{'name': 'dialcode', 'type': 'STRING', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Instagram_API_v2_Get_Followings_by_pk",
+      "description": "Get lists of any public Instagram account followings via pk",
+      "params": [
+        "{'name': 'pk', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "data_ml.model_training",
+      "description": "Train machine learning models based on provided datasets and model specifications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Conversion_Cloud_GetFileVersions",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "stock_get_press_releases",
+      "description": "Retrieves press releases for a given stock ticker.",
+      "params": [
+        "tickerid",
+        "lastannouncementid",
+        "limit"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "CommerceDigital.offerRecommendation",
+      "description": "Generates personalized product recommendations for users based on their shopping history and preferences.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Holistic_Finance_Stock_Data_Balance",
+      "description": "Provides either annual or quarterly balance sheet statements of an single stock company.",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de",
+        "{'name': 'period', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "investing_financial_stocks_income_statement",
+      "description": "get income statement  by pair id for some stocks \nnot all",
+      "params": [
+        "{'name': 'pair_id', 'type': 'string', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "View All Food Items",
+      "description": "The request allows clients to retrieve a comprehensive list of all available food items.\n\nAPI request sent to [https://indnutrientsapi.tech/food](https://indnutrientsapi.tech/food)",
+      "params": []
+    }
+  ]
+}

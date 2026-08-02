@@ -1,0 +1,350 @@
+{
+  "catalog_id": "real_toolret_pos_0109",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "registerEmployeeTraining",
+      "description": "Register an employee for a training course",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Pricelist API",
+      "description": "The Pricelist API is used to retrieve the list of available Pulsa and Data products along with their details such as code, name, nominal, and price.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Verify_PAN_Aadhaar_link_v2_GET_Call",
+      "description": "Used to fetch api result using the request id received in responses.",
+      "params": [
+        "{'name': 'request_id', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FlightAggregator",
+      "description": "Provides aggregated flight information for travel agents, tour operators, and travel companies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Travel_Hacking_Tool_Get_Airport_List",
+      "description": "Returns an up to date list of all IATA Airports in our database.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Date and Time by City",
+      "description": "Retrieve the current string and time for a specified city, supporting fuzzy search. Note that if multiple cities have the same name, the most common one will be used. For more accurate results, consider using the `/string/bylocation` endpoint with a geocoding service.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Valorant_Esports_v2_Get_all_players",
+      "description": "Get id, name and country of all players.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "all articles",
+      "description": "Endpoint to gather all articles from all listed publications detailed in API",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/bart-large-mnli",
+      "description": "This is the checkpoint for bart-large after being trained on the MultiNLI (MNLI) dataset. The model can be used for zero-shot text classification by posing the sequence to be classified as the NLI premise and constructing a hypothesis from each candidate label. The probabilities for entailment and contradiction are then converted to label probabilities.",
+      "params": [
+        "sequence_to_classify",
+        "candidate_labels"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Latest Financial News Articles",
+      "description": "Retrieve the latest financial news articles published on Investing.com, covering various aspects of financial markets worldwide.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Case by ID",
+      "description": "Retrieves a case by its unique ID from the MongoDB database.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Social Change Posts",
+      "description": "Retrieve the top 50 tickers trending on social media with the greatest change in posts.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "insert_info_to_document",
+      "description": "Insert information into a specified document",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fast_Food_Restaurants_USA_TOP_50_Chains_GET_all_State_names",
+      "description": "GET all {State} names",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "songs_v2_get_details",
+      "description": "Gets detailed information about a specific song using the given song ID.",
+      "params": [
+        "is_id",
+        "l"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetCityPopulation",
+      "description": "This API is to get the population of a specific city.",
+      "params": [
+        "{'name': 'city', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Keto_Diet_Keto_Recipes_by_Difficulty",
+      "description": "Gives all keto recipes by its difficulty (Easy, Medium or Difficult).",
+      "params": [
+        "{'name': 'difficulty', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "display_bill_details",
+      "description": "Display the bill details for a specified date",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IronWifi_READ_CAPT_PORTAL",
+      "description": "READ - CAPT PORTAL",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "customShortLink",
+      "description": "Generates a custom short link based on specific user preferences, such as domain type, length, and more.",
+      "params": [
+        "url",
+        "domain",
+        "slug",
+        "title"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_che",
+      "description": "def check_object_activity(image_patch: ImagePatch, object_name: str, activity_to_check: str, query: str) -> str:\n    '''Check the activity of an object and compare it with a specific activity.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check for activity.\n        activity_to_check (str): The activity to compare with.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: \"Just {activity_to_check}\" if the object is engaged in the activity_to_check, \"Engaged in {activity}\" otherwise",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "List Conversions",
+      "description": "Retrieve a list of conversions from Clickmeter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Haber API",
+      "description": "Retrieves the latest news headlines from ntv.com.tr",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Shopee_v2_get_product_details_product_get",
+      "description": "Gets product details using item_id, shop_id and region",
+      "params": [
+        "{'name': 'shop_id', 'type': 'NUMBER', 'd",
+        "{'name': 'item_id', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "MS_Finance_type_sustainability_get_esg_risk",
+      "description": "Get ESG risk in the Sustainability tab",
+      "params": [
+        "{'name': 'type', 'type': 'string', 'desc",
+        "{'name': 'securityId', 'type': 'STRING',"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aspose_Imaging_Cloud_FindImageDuplicates",
+      "description": " ",
+      "params": [
+        "{'name': 'searchContextId', 'type': 'STR",
+        "{'name': 'similarityThreshold', 'type': "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "listSubdomains",
+      "description": "Retrieve a list of subdomains for a specified domain.",
+      "params": [
+        "domain",
+        "page",
+        "perPage"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "financial_balance_sheet",
+      "description": "Fetches the balance sheet data of a company identified by the given ticker symbol.",
+      "params": [
+        "symbol",
+        "formstyle",
+        "freq"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fake_Data_Generator_random_profile_by_id",
+      "description": "Retrieve fake profiles by id.",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_news_for_topic",
+      "description": "Get the news for a specific topic",
+      "params": [
+        "{'name': 'topic', 'in': 'query', 'schema"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculate_salary",
+      "description": "Calculate monthly salary",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "list_of_memes",
+      "description": "Fetches a list of memes based on the specified genre and type from the RapidAPI service.",
+      "params": [
+        "genre",
+        "type"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLibraryUsage",
+      "description": "Retrieve usage statistics of a library",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_restgpt-spotify",
+      "name": "GET_search",
+      "description": "Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks\nthat match a keyword string.<br />\n**Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.**\n",
+      "params": [
+        "{'in': 'query', 'name': 'q', 'required':",
+        "{'explode': 'false', 'in': 'query', 'nam",
+        "{'in': 'query', 'name': 'market', 'requi",
+        "{'in': 'query', 'name': 'limit', 'requir",
+        "{'in': 'query', 'name': 'offset', 'requi",
+        "{'in': 'query', 'name': 'include_externa"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "cubic_feet_to_gallons",
+      "description": "This function converts a given volume in cubic feet to gallons.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "FootApi_LeagueAwayStandings",
+      "description": "Get the league's away standings for the given tournament and season ID.",
+      "params": [
+        "{'name': 'tournamentId', 'type': 'NUMBER",
+        "{'name': 'seasonId', 'type': 'NUMBER', '"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SubjectName2ID",
+      "description": "This API is to convert subject name to subject ID.",
+      "params": [
+        "{'name': 'subject_name', 'in': 'query', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "researcher.query_citations",
+      "description": "Query citation metrics for a researcher's publications.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Currency_Quake_Pair_Strength",
+      "description": "Exposes the underlying calculations that are performed on each pair to get a currency\u2019s combined strength.",
+      "params": [
+        "{'name': 'timeframe', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getQuestInfo",
+      "description": "Retrieve information on a specific quest.",
+      "params": [
+        "quest"
+      ]
+    }
+  ]
+}

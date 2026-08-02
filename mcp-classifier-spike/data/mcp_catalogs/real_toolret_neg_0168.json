@@ -1,0 +1,348 @@
+{
+  "catalog_id": "real_toolret_neg_0168",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Earthquake Data for the Past Day",
+      "description": "Retrieve a list of earthquakes that have occurred in the past day, along with their details.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SofaSport_Newly_added_events",
+      "description": "Newly added events",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "record_account_balance",
+      "description": "A tool for obtaining and recording account balance",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard U.S. Afrobeats Songs",
+      "description": "Retrieve the Billboard U.S. Afrobeats Songs chart for a given week.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Realty_in_AU_properties_detail",
+      "description": "Get detailed information of a property",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Nomad_List_Cities_Middle_East",
+      "description": "Get Middle East cities sorted by overall score by default.\n\nPagination: size & page \nsort_by: you can sort by any numeric value like fore example internet_speed, temperatureC, cost_for_family_in_usd and so on.\nsort: asc | desc",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "query_by_fsa_code",
+      "description": "Fetches geographical boundary information for a given Canadian Forward Sortation Area (FSA) code using the VanitySoft API.",
+      "params": [
+        "postal_fsa"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Soccer_Data_Missing_Player_List",
+      "description": "List of injured and suspended players for the matches in a specific date.\n\n**The data will return for only -+7 days period, so endpoint can be tested with date range of today +- 7 days.**",
+      "params": [
+        "{'name': 'date', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getLatestEmail",
+      "description": "Retrieve the latest email(s) from a set of inboxes, either all inboxes or a specific set of inbox IDs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "currencyExchangeRate.query",
+      "description": "Fetches real-time exchange rates between two specified currencies.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "b_b_availability_check",
+      "description": "B&B Availability Check Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "trailSnack.generateSnackList",
+      "description": "Generates a list of snack ideas based on the hiking duration and preferred snack types.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "calculateROI",
+      "description": "Calculate the return on investment (ROI) for marketing campaigns",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Available Tags",
+      "description": "Retrieve a list of available tags in the Social domain",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GetRelatedPeople",
+      "description": "Retrieve a list of related people for a given category in Vimeo.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "OneLike_Social_Media_News_in_Greek",
+      "description": "Get social media news in Greek",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getHolidaysByCountry",
+      "description": "Retrieve a list of holidays for a specific country with dates, descriptions, and types.",
+      "params": [
+        "country",
+        "year",
+        "month",
+        "day",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "BB_Finance_market_get_price_chart",
+      "description": "Get related data to draw price chart",
+      "params": [
+        "{'name': 'interval', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "retrieveFullText",
+      "description": "Retrieve the full text for a specific research article, subject to certain usage restrictions.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getupdates",
+      "description": "Fetch updates about newly received messages from the server, starting from a given message ID and optionally waiting for incoming messages for a specified time.",
+      "params": [
+        "start_id",
+        "time_out"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "EleutherAI/gpt-neo-2.7B",
+      "description": "GPT-Neo 2.7B is a transformer model designed using EleutherAI's replication of the GPT-3 architecture. It was trained on the Pile, a large scale curated dataset created by EleutherAI for the purpose of training this model. This model is best suited for generating texts from a prompt and can be used directly with a pipeline for text generation.",
+      "params": [
+        "text",
+        "do_sample",
+        "min_length"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Billboard_API_v2_Year_End_Hot_100_Songs",
+      "description": "Year end Hot 100 Songs chart \nis yearly based. \n\nIf `year` is not supplied, will default to last year.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "SolarPanelEfficiencyAnalyzer.analyzePerformance",
+      "description": "Analyzes the efficiency of solar panels over a specified time period.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "aircraft.update_service_records",
+      "description": "Updates the service records of an aircraft after maintenance.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "facebook/dragon-plus-context-encoder",
+      "description": "DRAGON+ is a BERT-base sized dense retriever initialized from RetroMAE and further trained on the data augmented from MS MARCO corpus, following the approach described in How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval. The associated GitHub repository is available here https://github.com/facebookresearch/dpr-scale/tree/main/dragon. We use asymmetric dual encoder, with two distinctly parameterized encoders.",
+      "params": [
+        "pretrained"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Netflix_Data_title_seasons",
+      "description": "title-seasons",
+      "params": [
+        "{'name': 'ids', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Livescan_a_Domain_Domain_Information",
+      "description": "Get data points of a given domain : A record, MX record, TXT/SPF record, SOA record, CMS Type (Generator), Certificate Issuer, Certificate Subject, Certificate Start Date, Certificate End Date, Domain creation date, Domain name (or partial), Domain expire date, Domain updated date, Javascript Libraries, Hostname (or partial), HTML Header Tags,  IP Address, Page title from domain homepage, Page meta tags (including og), Organization, Registrar, TLD, Server software (Apache, PHP, nginx etc), Server geolocation",
+      "params": [
+        "{'name': 'type', 'type': 'STRING', 'desc",
+        "{'name': 'q', 'type': 'STRING', 'descrip"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "bet365_prematch_odds",
+      "description": "Fetches prematch odds from the Bet365 API using the provided fixture ID.",
+      "params": [
+        "fi"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SEPTA_Get_Alerts",
+      "description": "{\"category_name\": \"Travel\", \"required_parameters\": [], \"optional_parameters\": [{\"name\": \"req1\", \"type\": \"STRING\", \"description\": \"\", \"default\": \"all\"}], \"method\": \"GET\", \"template_response\": {\"route_id\": \"str\", \"route_name\": \"str\", \"current_message\": \"NoneType\", \"advisory_id\": \"NoneType\", \"advisory_message\": \"NoneType\", \"detour_message\": \"NoneType\", \"detour_id\": \"NoneType\", \"detour_start_location\"",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Aircraft Database Stats",
+      "description": "Retrieve statistics about the aircraft database, including the total number of known aircraft.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SIGNL4_Critical_Mobile_Alerting_teams",
+      "description": " ",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "estimate_ownership_cost",
+      "description": "Estimates the ownership cost for a vehicle over the next 5 years based on the vehicle's VIN, annual mileage, and starting mileage.",
+      "params": [
+        "vin",
+        "mileage_year",
+        "mileage_start"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Last Matches of a Manager",
+      "description": "Retrieve the last matches managed by a specified manager",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Random Username Generate",
+      "description": "Generate a random username based on the provided parameters",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mobile_phone_locator",
+      "description": "Mobile Phone Number Locator Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Also Bought",
+      "description": "Retrieves also bought details for a single product on Amazon",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Motorcycle Specifications",
+      "description": "Retrieves motorcycle specifications based on the provided article and specification type.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PlayerDetails",
+      "description": "Retrieves detailed information about a specific player in the Sports domain.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PetStoreAPI2_0_getOrderById",
+      "description": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
+      "params": [
+        "{'name': 'orderId', 'type': 'NUMBER', 'd"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "send_notifications",
+      "description": "Send notifications to users",
+      "params": []
+    }
+  ]
+}

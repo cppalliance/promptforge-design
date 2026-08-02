@@ -1,0 +1,356 @@
+{
+  "catalog_id": "real_toolret_neg_0098",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "Regionalkonzept_Strom_Herkunft_Strommix",
+      "description": "Resultierender Strommix nach Anwendung der regionalen \u00d6kostromerzeugung im Gebiet einer Postleitzahl.",
+      "params": [
+        "{'name': 'postleitzahl', 'type': 'STRING"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getdomaintech",
+      "description": "Retrieves technology information for a given domain using the Runs Tech API.",
+      "params": [
+        "domain"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Continents",
+      "description": "Retrieve a list of continents in the world, along with their corresponding codes and descriptions.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fitness_Calculator_Body_Fat_Percentage",
+      "description": "Knowing body fat percentage would be helpful to decide on a well-programmed fitness plan. You can use this endpoint with 7 parameters.",
+      "params": [
+        "{'name': 'height', 'type': 'NUMBER', 'de",
+        "{'name': 'waist', 'type': 'NUMBER', 'des",
+        "{'name': 'neck', 'type': 'NUMBER', 'desc",
+        "{'name': 'gender', 'type': 'STRING', 'de",
+        "{'name': 'hip', 'type': 'NUMBER', 'descr",
+        "{'name': 'age', 'type': 'NUMBER', 'descr",
+        "{'name': 'weight', 'type': 'NUMBER', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getServiceById",
+      "description": "Retrieves information about a specific public service by its ID.",
+      "params": [
+        "id"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Global_Market_Indices_Data_price",
+      "description": "Get price of index over a period",
+      "params": [
+        "{'name': 'index', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Drillster_2_0_Retrieve_test_result",
+      "description": "Retrieves an individual test result for a specific test instance.",
+      "params": [
+        "{'name': 'test_id', 'type': 'STRING', 'd",
+        "{'name': 'user_id_or_ticket', 'type': 'S"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "SpamDetector",
+      "description": "detects spam in text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "German_Cities_city_name",
+      "description": "Gibt Informationen zu der angegebenen Stadt zur\u00fcck. Bei Mehrdeutigkeit werden maximal drei Ergebnisse zur\u00fcckgegeben. Zur\u00fcckgegebene Werte sind: Einwohnerzahl, Durchschnittsalter, umliegende Orte.",
+      "params": [
+        "{'name': 'city-name', 'type': 'string', "
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_total_from_unit_and_quantity(df, quantity_col, total_col, num_items)",
+      "description": "def calculate_total_from_unit_and_quantity(df, quantity_col, total_col, num_items):\n    \"\"\"\n    This function takes in a pandas DataFrame representing a table of quantities and corresponding totals, and a number representing the number of items. It returns the total for the specified number of items.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing the quantities and the corresponding totals.\n    quantity_col (str): The column name for the quantities.\n    total_col (str): The column name for the totals.\n    num_items (int): The number of items.\n    \n    Returns:\n    int: The",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "financial-summarization-pegasus",
+      "description": "This model was fine-tuned on a novel financial news dataset, which consists of 2K articles from Bloomberg, on topics such as stock, markets, currencies, rate and cryptocurrencies. It is based on the PEGASUS model and in particular PEGASUS fine-tuned on the Extreme Summarization (XSum) dataset: google/pegasus-xsum model. PEGASUS was originally proposed by Jingqing Zhang, Yao Zhao, Mohammad Saleh and Peter J. Liu in PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization.",
+      "params": [
+        "model_name"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "All Desserts Data",
+      "description": "This will return s all the desserts data",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "IP Netblock v2",
+      "description": "Get exhaustive information on IP Range (v2)",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "get_nurthDrJcontents",
+      "description": "Get detailed results from retrievaled URL.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GroupDocs_Metadata_Cloud_ObjectExists",
+      "description": " ",
+      "params": [
+        "{'name': 'path', 'type': 'STRING', 'desc"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FoodMenuQuery",
+      "description": "This API is used to find out the food menu of a specific restaurant.",
+      "params": [
+        "{'name': 'restaurant', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchPublicFacilitiesData",
+      "description": "Search for public facilities data based on a keyword or location.",
+      "params": [
+        "keyword",
+        "location"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Stream Tags",
+      "description": "Retrieves the stream tags for a specified Twitch channel.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GET /categories/{categoryId}/v1",
+      "description": "Retrieve information about a specific category of 3D printing products on Shapeways.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Cell Coverage by Zip Code",
+      "description": "Retrieve cell coverage information for AT&T, T-Mobile, U.S. Cellular, and Verizon by zip code.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Book2Author",
+      "description": "This API is used to convert a book title to an author name.",
+      "params": [
+        "{'name': 'book_title', 'in': 'query', 's"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "SongMeanings_comments_get",
+      "description": "Get comments from our database for a specific song.",
+      "params": [
+        "{'name': 'artist_name', 'type': 'STRING'",
+        "{'name': 'lyric_title', 'type': 'STRING'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "vehicle_attributes",
+      "description": "Fetches all available options for a given vehicle attribute using the Toolbench RapidAPI.",
+      "params": [
+        "attribute"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "UserIdToName",
+      "description": "This API is to convert user ID to user name.",
+      "params": [
+        "{'name': 'userId', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "mymappi_Reverse_Geocoding",
+      "description": "Translates a coordinate as input into its postal address.",
+      "params": [
+        "{'name': 'lon', 'type': 'NUMBER', 'descr",
+        "{'name': 'lat', 'type': 'NUMBER', 'descr",
+        "{'name': 'apikey', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "uploadVideo",
+      "description": "Uploads a video to Dailymotion's platform.",
+      "params": [
+        "file",
+        "title",
+        "description",
+        "tags",
+        "channel",
+        "published"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "PurchaseProduct",
+      "description": "This API executes a product purchase for a particular customer with a specific quantity.",
+      "params": [
+        "{'name': 'customer_ID', 'in': 'query', '",
+        "{'name': 'product_ID', 'in': 'query', 's",
+        "{'name': 'quantity', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "GenerateOrderSummary",
+      "description": "This API is to generate a summary of the order using the order_id.",
+      "params": [
+        "{'name': 'order_id', 'in': 'query', 'sch"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get 52 Week High by Fundamental for Country",
+      "description": "Retrieve the 52-week high stock prices for a specific country, filtered by fundamental data",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "getAPIUpdates",
+      "description": "This function returns a list of all the updates that have been made to a specific API since a specified date.",
+      "params": [
+        "name",
+        "since"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "reputation.get_influencers",
+      "description": "Retrieve the influencers who have significant impact on the online reputation of a specified company.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Convert CMYK to Other Color Codes",
+      "description": "Endpoint to convert CMYK color code to other color codes like RGB, HSL, and Hex",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "population_info_search",
+      "description": "Population Information Query Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "predict_next_number",
+      "description": "This method takes a list of numbers and returns the next number in the series by adding the last difference to the last number in the list.",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "searchForField",
+      "description": "Search for a specific field or value within the structured data returned by the scrapeStructuredData function",
+      "params": [
+        "data",
+        "field"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "getFarmLoan",
+      "description": "Retrieve farm loan information",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "search_news",
+      "description": "Search for news articles using a specified keyword and language.",
+      "params": [
+        "keyword",
+        "language"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Learn_to_read_and_write_Japanese_kanji_All_Kanji_Details",
+      "description": "Language attributes and media files for all supported kanji (~ 6.5MB)",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "countries",
+      "description": "Retrieve a list of countries, filtering by name.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "entertainment",
+      "description": "Fetches entertainment news from Google News using the provided language region.",
+      "params": [
+        "lr"
+      ]
+    }
+  ]
+}

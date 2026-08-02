@@ -1,0 +1,332 @@
+{
+  "catalog_id": "real_toolret_pos_0181",
+  "tools": [
+    {
+      "server": "toolret_web",
+      "name": "BasketAPI_LiveMatches",
+      "description": "Get a list of all live basketball matches.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "LiveScore_v2_matches_get_table_Deprecated",
+      "description": "Get table of related match",
+      "params": [
+        "{'name': 'p', 'type': 'STRING', 'descrip",
+        "{'name': 'category', 'type': 'STRING', '",
+        "{'name': 'id', 'type': 'STRING', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Twelve_Data_Splits",
+      "description": "Returns the date and the split factor of shares of the company for the last 10+ years.\n\nAvailability: Pro plan\nData weighting: 20 API credits per symbol",
+      "params": [
+        "{'name': 'symbol', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Weather.get_weather_today",
+      "description": "get today's weather",
+      "params": [
+        "{'name': 'location', 'description': 'the"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Dudu_Command",
+      "description": "Please check http://dudu.com/docs/api/command/list for the proper parameter and method combinations",
+      "params": [
+        "{'name': 'json', 'type': 'STRING', 'desc",
+        "{'name': 'mask', 'type': 'STRING', 'desc",
+        "{'name': 'application_id', 'type': 'STRI"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Open_DeFi_web_pair_trade_data",
+      "description": " ",
+      "params": [
+        "{'name': 'pair_id', 'type': 'NUMBER', 'd",
+        "{'name': 'period', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Priceline_com_Provider_Download_airports",
+      "description": "Downloads a list of airports with IATA codes for Flight search",
+      "params": []
+    },
+    {
+      "server": "toolret_code",
+      "name": "check_object_condition(image_patch: ImagePatch, object_name: str, query: str) ->",
+      "description": "def check_object_condition(image_patch: ImagePatch, object_name: str, query: str) -> str:\n    '''Check the condition of a specific object in an image.\n    \n    Args:\n        image_patch (ImagePatch): The image patch to check.\n        object_name (str): The name of the object to check the condition of.\n        query (str): The original query to answer.\n       \n    Returns:\n        str: The condition of the object if it exists, \"No {object_name} found.\" otherwise.\n    '''\n    \n    object_patches = image_patch.find(object_name)\n    if len(object_patches) == 0:\n        return f\"No {object_name} fo",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Top Free Apps",
+      "description": "Retrieves a list of top free apps for a specific region and language.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flights/list-most-tracked",
+      "description": "Return the most tracked flights around the world, including their flight numbers, departure and arrival airports, and tracking status.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Google_Search_2_Autocomplete_Results",
+      "description": "Use this API to get suggestions based on the entered keyword.",
+      "params": [
+        "{'name': 'query', 'type': 'STRING', 'des"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "retrieve_user",
+      "description": "Retrieves details of a user based on the provided user ID from the rapidapi service.",
+      "params": [
+        "user_id"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2)",
+      "description": "def calculate_difference_between_columns_for_row(df, id_col, row_id, col1, col2):\n    \"\"\"\n    This function takes in a pandas DataFrame, a row identifier, and two column names, and returns the difference in values between the two columns for the specified row.\n    \n    Args:\n    df (pd.DataFrame): A pandas DataFrame containing various data.\n    id_col (str): The column name for the row identifiers.\n    row_id (str): The identifier for the row.\n    col1 (str): The name of the first column.\n    col2 (str): The name of the second column.\n    \n    Returns:\n    int: The difference in values between",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Fetch No-CORS Image URLs",
+      "description": "Fetch no-CORS image URLs for Instagram posts, stories, and reels.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Taobao_Tmall_Product_Detail_Get_description",
+      "description": "Get description",
+      "params": [
+        "{'name': 'id', 'type': 'NUMBER', 'descri"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Sentiment_analysis_v13_an",
+      "description": "an",
+      "params": []
+    },
+    {
+      "server": "toolret_gpt4tools",
+      "name": "Segment the given object",
+      "description": "useful when you only want to segment the certain objects in the pictureaccording to the given textlike: segment the cat,or can you segment an obeject for meThe input to this tool should be a comma separated string of two, representing the image_path, the text description of the object to be found",
+      "params": [
+        "{'in': 'query', 'name': 'image', 'type':"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "find_ticket_by_train_number",
+      "description": "Find the train ticket ID by train number and ID number",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "File_Extension_details",
+      "description": "Get data based on file extension. Currently only has one endpoint to get icon and full name of the file extension",
+      "params": [
+        "{'name': 'extension', 'type': 'STRING', "
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Car_Utils_Estimate_Market_Value",
+      "description": "Estimate market value of the car with specified VIN.",
+      "params": [
+        "{'name': 'vin', 'type': 'STRING', 'descr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "entertainment",
+      "description": "Fetches entertainment news from Google News using the provided language region.",
+      "params": [
+        "lr"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get A Bot Category Group",
+      "description": "Retrieve a specific bot category group by its ID and display its details",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Cash4Life_All_Drawings",
+      "description": "All Cash4Life drawings",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "DataReorganizer",
+      "description": "used to reorganize visualization results",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Shopee Category Tree",
+      "description": "Retrieve the category tree structure from Shopee",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get Post Quotes",
+      "description": "Retrieve quotes related to a specific post on Twitter",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "ComparePrices",
+      "description": "This API compares the prices of ingredients in different stores and returns the store with the lowest cost.",
+      "params": [
+        "{'name': 'ingredients', 'in': 'query', '",
+        "{'name': 'stores', 'in': 'query', 'schem"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "legal.caseSummary",
+      "description": "Retrieve a summary of a legal case including basic information and involved parties.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scrape_contacts_from_website",
+      "description": "Scrape emails, phone numbers, and social media profiles from the root domain of a given website.",
+      "params": [
+        "query",
+        "match_email_domain"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "ImageOCR",
+      "description": "Convert text in images to editable text.",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "Get YouTube Video MP4 Files",
+      "description": "Returns a list of MP4 strings with different qualities and other details for a specified YouTube video.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_code",
+      "name": "calculate_future_value",
+      "description": "Calculates the future value of an investment given the initial amount, interest rate and number of years",
+      "params": []
+    },
+    {
+      "server": "toolret_customized",
+      "name": "importData",
+      "description": "Import data into a document",
+      "params": [
+        "document_id",
+        "data"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "scale.maintenance_schedule",
+      "description": "Retrieves the maintenance schedule for industrial scales, allowing for updates based on operational needs.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "flight_ticket_changing",
+      "description": "Flight Ticket Booking Modification Tool",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "rdVAmYVoe",
+      "description": "This function returns the flight information between two cities.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "FlashLive_Sports_Event_Throw_throw_darts",
+      "description": "Get throw by throw (darts) by event ID",
+      "params": [
+        "{'name': 'event_id', 'type': 'STRING', '",
+        "{'name': 'locale', 'type': 'STRING', 'de"
+      ]
+    },
+    {
+      "server": "toolret_customized",
+      "name": "Keyword Extractor",
+      "description": "Extracts the most important keywords and phrases from a given text.",
+      "params": [
+        "{'name': 'text', 'in': 'query', 'schema'"
+      ]
+    },
+    {
+      "server": "toolret_web",
+      "name": "check_and_book_room",
+      "description": "Check and book a meeting room",
+      "params": []
+    },
+    {
+      "server": "toolret_web",
+      "name": "voter_registration.get_drive_locations",
+      "description": "Retrieve the locations of voter registration drives.",
+      "params": [
+        "type",
+        "properties",
+        "required"
+      ]
+    }
+  ]
+}

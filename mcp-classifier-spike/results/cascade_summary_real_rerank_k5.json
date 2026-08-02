@@ -1,0 +1,14 @@
+{
+  "eval": "real",
+  "stage1": "BAAI/bge-small-en-v1.5",
+  "stage2": "rerank",
+  "stage2_model": "BAAI/bge-reranker-v2-m3",
+  "k": 5,
+  "n_positives": 188,
+  "n_negatives": 188,
+  "recall_at_k": 0.9521276595744681,
+  "stage1_top1": 0.8404255319148937,
+  "cascade_top1": 0.8776595744680851,
+  "stage2_pick_acc_given_present": 0.9217877094972067,
+  "false_bind_rate": null
+}
