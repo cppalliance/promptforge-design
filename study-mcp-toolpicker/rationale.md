@@ -71,11 +71,11 @@ several of them were counter-intuitive enough that they are worth recording as w
 ## What the hard part actually is
 
 Because author-register matching is easy in the common case, the classifier does not earn its keep
-on the happy path. Reconciled on 4,440 real cases, the numbers depend on how close the need is to
-the tool's doc: for restatement-style needs (the common case) top-1 is 0.98 among unrelated tools
-and 0.75 among the gold's nearest neighbors, with recall@3 0.90 on that hard band; for goal-
-abstracted needs it falls to 0.34 hard top-1. Blended across bands, hard top-1 is 0.53 and hard
-recall@3 0.74. Two facts follow, and they shape the entire design:
+on the happy path. Reconciled on 29,226 real cases over the full 9,922-tool catalog, the
+numbers depend on how close the need is to the tool's doc: for restatement-style needs (the common
+case) top-1 is 0.98 among unrelated tools and 0.76 among the gold's nearest neighbors, with recall@3
+0.91 on that hard band; for goal-abstracted needs it falls to 0.35 hard top-1. Blended across bands,
+hard top-1 is 0.55 and hard recall@3 0.75. Two facts follow, and they shape the entire design:
 
 - The right tool is almost always in the top-3 even among close competitors. So the system should
   not try to win top-1 outright; it should surface a shortlist and let a well-informed decider

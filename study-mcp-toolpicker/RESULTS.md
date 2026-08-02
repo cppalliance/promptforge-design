@@ -1,31 +1,31 @@
 # Results
 
-Cases: 4440 | Catalog: 9922 tools
+Cases: 29226 | Catalog: 9922 tools
 
 ## BAAI/bge-small-en-v1.5
-- random distractors: top-1 0.931, recall@3 0.982
-    - restatement: top-1 0.982, recall@3 0.998 (n=1480)
-    - synonym: top-1 0.938, recall@3 0.986 (n=1480)
-    - goal: top-1 0.873, recall@3 0.963 (n=1480)
-- hard distractors: top-1 0.531, recall@3 0.742
-    - restatement: top-1 0.747, recall@3 0.904 (n=1480)
-    - synonym: top-1 0.507, recall@3 0.742 (n=1480)
-    - goal: top-1 0.339, recall@3 0.580 (n=1480)
+- random distractors: top-1 0.929, recall@3 0.978
+    - restatement: top-1 0.984, recall@3 0.997 (n=9742)
+    - synonym: top-1 0.945, recall@3 0.986 (n=9742)
+    - goal: top-1 0.857, recall@3 0.951 (n=9742)
+- hard distractors: top-1 0.553, recall@3 0.753
+    - restatement: top-1 0.764, recall@3 0.912 (n=9742)
+    - synonym: top-1 0.544, recall@3 0.760 (n=9742)
+    - goal: top-1 0.349, recall@3 0.586 (n=9742)
 - abstention (hard regime), max coverage at false-bind budget:
-    - fb<=0.01: coverage 0.07 at accuracy 0.902 (thr 0.857)
-    - fb<=0.05: coverage 0.17 at accuracy 0.830 (thr 0.823)
-    - fb<=0.10: coverage 0.25 at accuracy 0.805 (thr 0.804)
+    - fb<=0.01: coverage 0.07 at accuracy 0.903 (thr 0.863)
+    - fb<=0.05: coverage 0.18 at accuracy 0.862 (thr 0.825)
+    - fb<=0.10: coverage 0.27 at accuracy 0.822 (thr 0.805)
 
 ## sentence-transformers/all-MiniLM-L6-v2
-- random distractors: top-1 0.919, recall@3 0.975
-    - restatement: top-1 0.972, recall@3 0.995 (n=1480)
-    - synonym: top-1 0.926, recall@3 0.983 (n=1480)
-    - goal: top-1 0.860, recall@3 0.948 (n=1480)
-- hard distractors: top-1 0.543, recall@3 0.746
-    - restatement: top-1 0.722, recall@3 0.878 (n=1480)
-    - synonym: top-1 0.545, recall@3 0.756 (n=1480)
-    - goal: top-1 0.362, recall@3 0.603 (n=1480)
+- random distractors: top-1 0.925, recall@3 0.977
+    - restatement: top-1 0.978, recall@3 0.995 (n=9742)
+    - synonym: top-1 0.939, recall@3 0.986 (n=9742)
+    - goal: top-1 0.857, recall@3 0.952 (n=9742)
+- hard distractors: top-1 0.557, recall@3 0.754
+    - restatement: top-1 0.739, recall@3 0.888 (n=9742)
+    - synonym: top-1 0.554, recall@3 0.770 (n=9742)
+    - goal: top-1 0.376, recall@3 0.605 (n=9742)
 - abstention (hard regime), max coverage at false-bind budget:
-    - fb<=0.01: coverage 0.06 at accuracy 0.902 (thr 0.781)
-    - fb<=0.05: coverage 0.17 at accuracy 0.853 (thr 0.711)
-    - fb<=0.10: coverage 0.25 at accuracy 0.806 (thr 0.671)
+    - fb<=0.01: coverage 0.06 at accuracy 0.912 (thr 0.790)
+    - fb<=0.05: coverage 0.16 at accuracy 0.855 (thr 0.719)
+    - fb<=0.10: coverage 0.25 at accuracy 0.820 (thr 0.678)

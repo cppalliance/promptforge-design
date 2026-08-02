@@ -113,18 +113,19 @@ excising the call, and the main model calls the tool. The retriever result is ca
 - Does not own: MCP transport/JSON-RPC (that is `promptforge-mcp-client`), the model that does dynamic
   selection (that is the author's main-context model).
 
-## Evidence (reconciled from study-mcp-toolpicker/RESULTS.md; 4,440 cases, 9,922-tool catalog, bge-small)
+## Evidence (reconciled from study-mcp-toolpicker/RESULTS.md; 29,226 cases over the full 9,922-tool catalog, bge-small)
 
 Accuracy depends strongly on how close the author's need is to the tool's own doc, so the numbers
-are reported per band, not just blended:
+are reported per band, not just blended (full-corpus figures match the 1,500-tool sample within ~1
+point, so the numbers are stable):
 
-- restatement (author paraphrases the tool's doc - the common case): random top-1 0.982; hard
-  near-neighbor top-1 0.747, recall@3 0.904.
-- synonym: random 0.938; hard 0.507.
-- goal (abstracted to the user goal): random 0.873; hard 0.339, recall@3 0.580.
-- blended across the three bands: random top-1 0.931, hard top-1 0.531, hard recall@3 0.742.
-- bge-small and all-MiniLM-L6-v2 are interchangeable (MiniLM hard 0.543 vs 0.531).
-- Abstention (hard regime, hard negatives): at a 5% false-bind budget, ~0.17 coverage at 0.83
+- restatement (author paraphrases the tool's doc - the common case): random top-1 0.984; hard
+  near-neighbor top-1 0.764, recall@3 0.912.
+- synonym: random 0.945; hard 0.544.
+- goal (abstracted to the user goal): random 0.857; hard 0.349, recall@3 0.586.
+- blended across the three bands: random top-1 0.929, hard top-1 0.553, hard recall@3 0.753.
+- bge-small and all-MiniLM-L6-v2 are interchangeable (MiniLM hard 0.557 vs 0.553).
+- Abstention (hard regime, hard negatives): at a 5% false-bind budget, ~0.18 coverage at 0.86
   accuracy - stringent because positives include the hard goal band and negatives are near-neighbors.
 - Duplicate prevalence (separate scan): ~11% of the broad catalog has a >= 0.98 twin, overwhelmingly
   cross-server republishes.
@@ -137,7 +138,7 @@ authoring guideline (below).
 
 Write `add_need` descriptions and `choose_mcp_tool` needs as restatements of what the tool does
 (the tool-doc register), not as abstract user goals. Restatement needs resolve markedly better
-under real competition (hard top-1 0.75 vs 0.34 for goal-abstracted); the further a need drifts
+under real competition (hard top-1 0.76 vs 0.35 for goal-abstracted); the further a need drifts
 from the tool's own phrasing, the more the resolver must fall back on the shortlist and abstain.
 
 *2026-08-02 - Opus 4.8 (Cursor agent) - numbers reconciled from RESULTS.md*
