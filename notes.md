@@ -27,9 +27,12 @@
 - `run_prompt_file` (read -> gate -> parse -> sandbox -> execute)
 - `HostError`
 
-**promptforge-mcp** (library, *planned*)
-- config loader + prompt registry (installed prompts)
-- two MCP tools: `list_prompts`, `run_prompt`
-- `serve()` (streamable-HTTP daemon)
+**promptforge-mcp-server** (binary)
+- config loader (`prompts.toml`) + prompt catalog, watcher and per-prompt reload
+- a fixed published tool list: `list_prompts`, `run_prompt`, `check_run`, and `need_prompt` under the `picker` feature. No prompt is published as a tool of its own; `run_prompt` is the only invocation path and the caller names the prompt
+- `serve_stdio()` and `serve_http()`
 
-First four are built; the last two are proposed in the MCP plan.
+**promptforge-tool-picker** (library)
+- the resolution engine behind `need_prompt`: a described prompt resolved to a catalog name
+
+`promptforge-host` is the only entry above that is not built; its two functions live in the CLI and the MCP server.

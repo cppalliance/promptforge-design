@@ -116,8 +116,8 @@ Every field is inert data, parseable without running any code.
 
 | Field | Required | What it is |
 |---|---|---|
-| `name` | yes | The prompt's identifier. Becomes the MCP tool name. |
-| `description` | yes | One line. Steers a calling model's tool selection. |
+| `name` | yes | The prompt's identifier. This is the name a caller passes to `run_prompt`. |
+| `description` | yes | One line. Tells a caller reading the catalog what this prompt does, so they can name the right one. |
 | `version` | yes | Bumped when the contract changes. |
 | `keywords` | no | A list, for search and catalog filtering. |
 | `params` | yes | JSON Schema for the arguments the prompt takes. |
