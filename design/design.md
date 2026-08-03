@@ -2,6 +2,12 @@
 
 # PromptForge: a single-binary runtime that executes markdown prompts as an always-on service
 
+## The Governing Principle: do more with less
+
+Every boundary this document draws is subordinate to one rule: a feature earns new infrastructure only after it is shown that nothing already in the system can carry it. The facilities that already exist are substantial - a sandboxed Lua interpreter with an instruction budget, a run-scoped store with a file backend that Lua can already reach, and a catalog that already resolves globs and exceptions - so a proposed frontmatter field, configuration key, or resolution path is competing against real capability rather than against nothing. The threshold is the key rather than the table, because configuration bloats one key at a time and nobody ever notices the table it accumulated into.
+
+The reason is what a reader can hold in their head. A small set of primitives used ten ways is a system one person can still reason about; ten mechanisms each used once is not, no matter how neatly each one is specified. Tidiness is the usual argument for the second shape and it is not sufficient. So when a design here proposes something new, the question that decides it is whether it could have been built with what is already there, and the answer belongs in the design.
+
 ## Open Decisions
 - Whether the Rust side eventually absorbs the Python ingestion pipeline or Python keeps owning it permanently
 - Time budget and deadline, which set how much of the build path is in scope for a first release
