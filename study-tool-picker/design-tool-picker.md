@@ -1,4 +1,4 @@
-# Building the promptforge-mcp-toolpicker crate
+# Building the promptforge-tool-picker crate
 
 Building this crate gives a promptforge prompt two ways to obtain an MCP tool for a capability
 described in plain English: a static, launch-time binding declared in Lua, and a dynamic,
@@ -113,7 +113,7 @@ excising the call, and the main model calls the tool. The retriever result is ca
 - Does not own: MCP transport/JSON-RPC (that is `promptforge-mcp-client`), the model that does dynamic
   selection (that is the author's main-context model).
 
-## Evidence (reconciled from study-mcp-toolpicker/RESULTS.md; 29,226 cases over the full 9,922-tool catalog, bge-small)
+## Evidence (reconciled from RESULTS.md; 29,226 cases over the full 9,922-tool catalog, bge-small)
 
 Accuracy depends strongly on how close the author's need is to the tool's own doc, so the numbers
 are reported per band, not just blended (full-corpus figures match the 1,500-tool sample within ~1

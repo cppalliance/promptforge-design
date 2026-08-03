@@ -12,7 +12,7 @@ import pandas as pd
 
 from common import DATA
 
-SRC = DATA.parent.parent / "mcp-classifier-spike" / "data" / "automatelab_tools.parquet"
+SRC = DATA.parent.parent / "spike-tool-picker" / "data" / "automatelab_tools.parquet"
 
 
 def main():

@@ -1,9 +1,9 @@
 # Why the MCP tool-picker is shaped the way it is
 
-This is the reasoning behind `promptforge-mcp-toolpicker`: the decisions, the alternatives
+This is the reasoning behind `promptforge-tool-picker`: the decisions, the alternatives
 that were tried and rejected, and the evidence that moved each call. It is the companion
-to two other documents - `design-mcp-toolpicker.md` (the specification, the "what") and
-`mcp-classifier-spike/report/FINDINGS.md` (the empirical log, the "numbers"). Read this one
+to two other documents - `design-tool-picker.md` (the specification, the "what") and
+`spike-tool-picker/report/FINDINGS.md` (the empirical log, the "numbers"). Read this one
 for the "why."
 
 ## The problem
@@ -155,7 +155,7 @@ static execution state, so downstream everything is uniform.
 
 ## Why the resolver is its own crate
 
-`promptforge-mcp-toolpicker` depends on a separate, thin `promptforge-mcp-client` for protocol
+`promptforge-tool-picker` depends on a separate, thin `promptforge-mcp-client` for protocol
 (connect, initialize, `tools/list`, `tools/call`, error mapping) and keeps all the semantics
 (embeddings, the four-outcome policy, the Lua verbs, the context rewrite) to itself. Three reasons:
 
