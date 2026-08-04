@@ -1,18 +1,16 @@
-<!-- STATUS: crate doc - promptforge-cli (binary) - part 1 as-built has moved to crates/promptforge-cli/design-cli.md; what remains is designed-and-unbuilt - see design.md for the system -->
+<!-- STATUS: residue - promptforge-cli - forward design, none of it built; the crate's as-built document is crates/promptforge-cli/design-cli.md - see design.md for the system -->
 
-# `promptforge-cli`: the terminal client
+# `promptforge-cli` residue: a terminal client of the MCP server, designed and never built
 
-What the crate at `crates/promptforge-cli` does today is described by that crate's own `design-cli.md`, written from its code. It was Part 1 of this document and has left it, so the content exists once.
+This is forward design. Nothing specified below exists: the client it describes connects to `promptforge-mcp-server` over streamable HTTP, offers `run`, `list`, and `validate`, resolves a URL and a bearer through three configuration layers, coerces `key=value` pairs against a prompt's schema, renders progress on stderr, and exits with one of eleven documented codes, and no part of that is implemented.
 
-The divergence is total rather than partial, which is why the part that left was a page and this is everything else: this document specifies a terminal client of the MCP server, and the crate is an in-process runner that speaks to no server at all.
+What exists today is a binary of the same name that runs one prompt file in its own process: `promptforge run <file.md> [input]`, with no catalog, no configuration file, no MCP connection, an in-memory store, and success or failure as its only exit statuses. That crate's own `design-cli.md`, at `crates/promptforge-cli/design-cli.md`, is written from its code and is the document to read for what the CLI does.
 
-# Part 2: Designed and not built
-
-Everything below is unchanged from before the separation and none of it is built. Read it knowing that its central claims are not merely unimplemented but inverted: the Scope section below forbids in-process execution and any construction of a run configuration, and the crate is exactly that, calling `promptforge_core::execute::run` with a `RunOptions` it builds itself; the dependency table names `promptforge` for data types only, and there is no such crate, only `promptforge-core` used as an engine; and the source walk the Scope section describes as the mechanical form of its own rule does not exist, the crate having no test directory.
+The divergence is total rather than partial, and several central claims here are not merely unimplemented but inverted. The Scope section forbids in-process execution and any construction of a run configuration, and the crate is exactly that, calling `promptforge_core::execute::run` with a `RunOptions` it builds itself. The dependency table names `promptforge` for data types only, and there is no such crate, only `promptforge-core` used as an engine. The source walk that Scope calls the mechanical form of its own rule does not exist, the crate having no test directory. And the environment variable is `PROMPTFORGE_BASE_URL`, pointing at the gateway, where this document says `PROMPTFORGE_URL`, pointing at a service.
 
 ## Scope
 
-This crate is a client of `promptforge-mcp`. It resolves a service URL and a bearer token, connects, finds out which prompts the service has enabled, turns `key=value` arguments into a validated JSON object, invokes the prompt, renders the progress notifications the service sends back, prints the result path, and exits with a documented code. Three commands: `run`, `list`, `validate`.
+This crate is a client of `promptforge-mcp-server`. It resolves a service URL and a bearer token, connects, finds out which prompts the service has enabled, turns `key=value` arguments into a validated JSON object, invokes the prompt, renders the progress notifications the service sends back, prints the result path, and exits with a documented code. Three commands: `run`, `list`, `validate`.
 
 What it does not do, and cannot be made to do without a change to this document:
 
@@ -206,7 +204,7 @@ error: service unreachable at http://forge.local:8787/mcp
   cause: tcp connect: connection refused
   url came from: C:\Users\vinnie\AppData\Roaming\promptforge\config.toml
   also checked: --url (unset), PROMPTFORGE_URL (unset)
-  promptforge run needs promptforge-mcp running; start it, or point --url at a service that is
+  promptforge run needs promptforge-mcp-server running; start it, or point --url at a service that is
 $ echo $?
 5
 ```
