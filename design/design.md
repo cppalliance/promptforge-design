@@ -23,7 +23,7 @@ Then one document per crate, at implementable depth, each authoritative for its 
 
 - [design-core-residue.md](design-core-residue.md) - `promptforge-core`: the unbuilt runtime - the `Executor`, the resolution types, `Extension`, the canonical tool vocabulary, structured run state, declared outputs, explicit exits, `Limits`. The crate that exists parses a prompt, walks its sections in file order, and returns a string, and is documented in its own `design-core.md`
 - [design-gateway-residue.md](design-gateway-residue.md) - `promptforge-gateway`: the unbuilt service - admission, pinning, streaming, the Anthropic shim, model packs, hot reload, the rest of `gateway.toml`. The crate that exists routes chat completions onto one endpoint per model and is documented in its own `design-gateway.md`
-- [design-mcp.md](design-mcp.md) - `promptforge-mcp-server`: the MCP command surface, progress notifications, the Django endpoints, `prompts.toml`
+- [design-mcp-server.md](design-mcp-server.md) - `promptforge-mcp-server`: the MCP command surface, progress notifications, the Django endpoints, `prompts.toml`
 - [design-cli-residue.md](design-cli-residue.md) - `promptforge-cli`: the unbuilt terminal client - `run`, `list`, `validate`, terminal progress, exit codes. The crate that exists runs one prompt file in process and is documented in its own `design-cli.md`
 - `web_fetch` moved to its own crate `promptforge-webfetch`, documented in that crate's `design-webfetch.md`: a guarded URL fetcher with the URL and address SSRF defence. `web_search` remains a core tool proxied through the gateway.
 - [design-paperstore.md](design-paperstore.md) - `promptforge-ext-paperstore`: the storage trait, both backends, the real schema, the transactional reference extension

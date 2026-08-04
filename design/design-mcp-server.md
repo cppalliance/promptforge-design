@@ -1,23 +1,174 @@
-<!-- STATUS: crate doc - promptforge-mcp (service) - see design.md for the system -->
+<!-- STATUS: crate doc - promptforge-mcp-server (service) - separated into what the crate does today and what is designed and not built - see design.md for the system -->
 
-# `promptforge-mcp`: the only MCP server
+# `promptforge-mcp-server`: the only MCP server
 
-## Scope
+This document is in two parts. Part I describes what the crate does today, and every claim in it has been checked against the code in `crates/promptforge-mcp-server`. Part II is everything that was designed and has not been built; it is unchanged design, and it still calls the crate `promptforge-mcp` throughout, which is the name the crate carried until the rename this commit also performs.
+
+Part I is short, and its shortness is the finding rather than an omission. The crate already carries a design document of its own at `crates/promptforge-mcp-server/design-mcp-server.md`, written from the finished work, and almost every claim here that survives the check against the code is a claim that document already makes. Each Part I heading below is therefore tagged with whether the crate's document already carries it, so the merge that follows this commit knows what is a duplicate and what is new.
+
+Nothing has been deleted in the separation and no argument has been rewritten. Where a passage had to be split - a scope list whose boundaries are half kept, a configuration file whose keys are mostly unbuilt, a progress path whose events do not all exist - the built half sits in Part I and the rest sits in Part II under the heading it had before.
+
+Seven things the separation had to settle rather than sort, because the document and the code disagree rather than merely lag:
+
+- **No prompt is published as a tool of its own.** The document's central decision, one MCP tool per prompt, is reversed. `tools.rs` publishes four built-ins and nothing else, a prompt is reached by naming it to `run_prompt`, and `catalog/resolve.rs` refuses a prompt that claims a built-in's name. Part II keeps the argument for the rejected dispatcher intact, because a corpus that deletes the losing case cannot explain why it lost, but the decision it argues for is not what ships.
+- **stdio is offered, and the bind default is loopback.** The document says stdio is not offered at all, that the bind address is a network interface, and that "loopback is not a supported configuration and the code does not special-case it". `serve --stdio` is one of the binary's two shapes, `transport.rs` serves it with no port and no token read, and `config.rs`'s `default_bind` is `127.0.0.1:9310`. That is the deployment shape rather than a detail: the document assumes a workstation across the network and the code's default assumes the same machine.
+- **A reload is judged per prompt, not per candidate.** "At boot, refuse to start; on reload, refuse the change" is the document's rule. `Catalog::resolve` takes an `OnBroken` parameter and the watcher passes `Retain`, so a prompt that fails revalidation stays in the catalog as a broken entry carrying its error while every other prompt reloads; only a candidate that cannot be resolved at all keeps the previous catalog whole. This one is worth naming twice, because the audit summary in the plan lists per-prompt reload among the things this document gets right, and this document does not get it right - the crate's own document does.
+- **Nothing announces `tools/list_changed`.** The capability is built with `enable_tools()` alone, and `Reload` no longer carries a published-changed signal. The published set is the same four entries for the life of the process, so there is nothing a client could be told.
+- **`rmcp` is pinned at `=3.1.0`, not `=2.2.0`.** The workspace pins the 3.x line. The document's argument for the 2.x pin - that 3.0.0-beta.2 was one day old and had 83 downloads - is history rather than a live decision, and the `Open` entry asking whether to follow 3.x has been answered by doing it. The crate's own document names no version at all, so the plan's claim that both documents say `2.2.0` holds only for this one.
+- **The CLI is not a client of this server.** "Every run executes here. The CLI is purely a client of this server and has no in-process path" is refuted by `promptforge-cli`, which is an in-process runner over a markdown file path and never speaks to this server at all.
+- **The search credential is not in `prompts.toml`.** The document keeps every non-LLM secret here and off the gateway. `prompts.toml` has no `[extensions]` table and no key of any kind; `server/bind.rs` binds `web_search` to a client that posts to the gateway on the gateway's own token, and only `web_fetch` runs in this process. Two claims fall together: the secret's location, and the boundary that says a canonical tool is an extension's compiled-in function.
+
+---
+
+# Part I - What the crate does today
+
+## Scope, as the code has it
+
+*New here; the crate's document states the same shape in its executive summary.*
+
+This crate is one process an MCP client talks to. It loads `prompts.toml`, resolves a catalog of prompt files from globs and named exceptions, publishes a fixed set of built-in tools, runs the prompt a caller names through `promptforge-core` against the gateway, and forwards that run's event stream to the caller as progress. It is the only process that reads `prompts.toml`.
+
+The boundaries the original list drew that the code keeps:
+
+- Talk to an LLM backend. Every model turn goes through `promptforge-gateway`, reached with a `GatewayClient` built from `[gateway]` in `server/bind.rs`.
+- Parse a prompt, walk a section, or run Lua. That is `promptforge-core`. This crate hands `execute::run` a parsed `Prompt`, the raw argument string, the tools it bound, and a store.
+- Persist run history. `registry.rs` is a map in memory, so a restart loses every record, in flight or finished, and the recovery is to fire the prompt again.
+- Hold a job table. A run that outlives its call is a detached task and a record, not a queue: `max_concurrent_runs` slots and a refusal past `admission_timeout` is the whole of the queueing story.
+
+The boundaries about extensions, resolved maps, output resolution, and the Django surface describe machinery that does not exist, and they stay with that machinery in Part II. The two the code refutes outright - the CLI as a pure client, and the non-LLM credential - are named above.
+
+## The transport, and the one route outside the bearer
+
+*The crate's document states the two transports and the `/healthz` exemption; the keep-alive and its reason are new here.*
+
+Streamable HTTP is nested at `/mcp` behind a session manager, with a 15-second SSE keep-alive. The reason the document gives for choosing that transport is the reason the code acts on: a progress notification is delivered on the SSE stream the `tools/call` POST opened, so a stateless JSON transport would have no channel to carry it and would reduce every run to one long opaque call. The keep-alive is the same argument extended past the first proxy - a run that thinks for longer than the idle timeout between sections must not look dead.
+
+What has changed is that this is not the only transport. `serve --stdio` binds no port, constructs no auth layer, and reads no token, because a harness that spawned the process already has whatever authority the process has. `[server].token` is therefore optional in the file and required by the transport that checks it, which is why the two statements about it are not in conflict.
+
+`/healthz` is registered *after* the bearer layer, and that ordering is the whole of its exemption: the layer never sees the route, so nothing inside the middleware compares a path and no later route can accidentally inherit or lose the check.
+
+## One shared bearer, checked per HTTP request
+
+*The scheme, the per-request check and what it buys on rotation, and the accepted cost are already in the crate's document; the constant-time comparison and the `WWW-Authenticate: Bearer` header on a refusal are new here, since that document states neither.*
+
+One token from `[server].token`, presented as `Authorization: Bearer`, compared in constant time, with `WWW-Authenticate: Bearer` on a refusal. The check is per HTTP request rather than per MCP session, so rotating the token refuses an established session's very next call rather than waiting for a reconnect. The accepted cost is unchanged and real: nothing in a log line is authenticated, so a leaked token is indistinguishable from legitimate use except by source address.
+
+Two defences the original passage does not have, both in the code. A `[server].token` that is present and blank fails the configuration load, because an empty configured token would compare equal to a caller presenting the empty string. And a request carrying no `Bearer` credential is refused before any comparison happens rather than falling through with an empty presented value. Neither a configuration typo nor a comparison bug can open `/mcp` alone.
+
+## Prompts reach a caller as tools, never as the MCP `prompts` primitive
+
+*Already in the crate's document.*
+
+MCP has a `prompts` primitive and it is the wrong one: `prompts/get` returns messages for the *client's* model to run, which would hand execution to the client and leave the gateway, the Lua sandbox, and the tool pool unused. Execution happens here, so a prompt is reached through a tool. The `prompts` primitive is not implemented at all, so there is no second discovery path to keep in agreement with the first.
+
+What has changed is which tool. Every prompt is reached the same way - `list_prompts` names it and `run_prompt` runs it - so no prompt name can reach `tools/list` by any path, and the surface a client caches cannot go stale.
+
+## A prompt's name is its own, and boot refuses a collision
+
+*The verbatim name, the pattern, the uniqueness requirement, and the reservation of the four built-in names are already in the crate's document; that the reservation holds whether or not a build publishes `need_prompt`, and the ambiguity that justifies it, are new here.*
+
+The frontmatter `name` is used verbatim, validated against `^[a-z][a-z0-9_]{0,47}$`, and required unique across the catalog. Nothing derives or prefixes it, because a transformation could map two legal distinct prompt names onto one published name, and the name is what a calling model types.
+
+The four built-in names are reserved, `need_prompt` included whether or not this build publishes it. The collision is no longer structural now that no prompt is published as a tool, and it is refused anyway: "run `check_run`" is ambiguous to a person and to a model alike, and a boot refusal naming the file is the only version of that a prompt author can act on. A name that is legal in one build and not in another would be worse than one that is never legal.
+
+## Progress reports what a section changed, and never a denominator
+
+*Already in the crate's document, except the queue capacity of 64, which is new here: that document says the queue is bounded and never gives its size.*
+
+`Observer::on_event` is synchronous and sits on the run's own path, while sending a notification is an await on the peer, so the two are joined by a bounded channel: `on_event` turns an event into a frame and hands it over with `try_send`, and a pump task does the awaiting. A frame that finds the queue full is dropped and counted rather than allowed to stall a section boundary, which is legitimate precisely because progress is a report and never a decision. The queue is bounded at 64, which is a backstop against a peer that stopped reading rather than a throttle on a healthy one.
+
+`total` is always absent. The field is in the protocol and this server declines to fill it, because the number of sections a run will visit is not known when it starts. `progress` is latched with a maximum so it never decreases, which the protocol requires. An earlier draft sent a nominal total counting the prompt's top-level sections so a client could draw a bar, and it lost: a denominator a branching run never reaches is not an approximation of remaining work, it is a different quantity wearing its clothes. The cost is unchanged from the original statement of it: no client can draw a filling bar, and the caller's only sense of progression is the caption changing in place.
+
+Progress is opt-in per request. With no `progressToken` in the call's `_meta` there is no queue and no pump, `on_event` does nothing but count the run's turns, and the result is otherwise identical.
+
+## The result carries the prompt's value and no transcript
+
+*Partly in the crate's document, which states the shape and the reporting rules; the enum casing rule is new here.*
+
+`structuredContent` carries a `RunResult` of `run_id`, `prompt`, `version`, `status`, `value`, `turns`, `elapsed_ms`, and `error`. `value` is the prompt's own product forwarded untouched - not truncated, not parsed - and the text block beside it carries that same value on completion, the error on failure, and on a `running` result a line naming the run id to collect with. No section body, no transcript, and no prose the run did not return reaches the caller.
+
+Every enum on the wire is lowercase, enforced by `#[serde(rename_all = "snake_case")]` on the type rather than by a hand-written `Serialize`, so the wire value is `completed` and never `Completed`. Every variant is one word today, so `snake_case` and `lowercase` emit the same strings; `snake_case` is the one that stays readable if a later state needs two words.
+
+Two fields differ from the original specification of this type and are described where they are stated: `version` is a `u32` rather than a `String`, and the terminal statuses are `completed` and `failed` with `running` beside them and no `queued`.
+
+## Admission is a refusal, and the registry is a map in memory
+
+*Already in the crate's document.*
+
+`max_concurrent_runs` permits, default 4, one semaphore for the process. A call waits up to `admission_timeout`, default 30 seconds, and is then refused with a message naming the wait it spent, so the calling model can decide to spend it again. A refusal rather than a queue is deliberate: every waiting call holds a client connection, and a line long enough to outlast the reply deadline would become a crowd of background runs the operator never sized for.
+
+Every run enters the registry, and a finished record stays readable for `retain_completed`, default one hour, before it is evicted. Run state living in the process rather than a database is the same accepted cost the original passage states: a restart loses every in-flight and retained record, and the recovery is a refire.
+
+## One task per run, holding the catalog it started under
+
+*Partly in the crate's document, which states the snapshot rule under reload.*
+
+A run is one Tokio task on the multi-threaded runtime. It owns its prompt, its tools, its store, and its observer, and it holds the `Arc<Catalog>` snapshot the call loaded, so a reload part way through cannot change the definition underneath it. The live catalog sits behind an `ArcSwap` and is replaced whole; snapshots already handed out are unaffected.
+
+## Boot either resolves the whole catalog or refuses to serve
+
+*Already in the crate's document.*
+
+Boot reads `prompts.toml`, resolves the catalog, and binds. A service that starts with nine of ten prompts is a service whose catalog silently differs from its own configuration, and a client discovers that as a missing tool with no explanation, so an incomplete catalog is a refusal to start.
+
+Faults accumulate. The pass runs to completion, every fault prints carrying the prompt name and the file path, and the process exits nonzero, because reporting only the first would turn one bad edit into a dozen restart cycles.
+
+Most of the nine-step pass the original document specifies is work this crate does not have: there is no extension registration, no slot or tool map to resolve, no output root to write-test, and no per-prompt executor construction. What runs is the read, the glob expansion and its named exceptions, and the per-prompt parse and name checks.
+
+## A save re-resolves the catalog, and nothing else
+
+*Already in the crate's document, except that the re-resolution runs on a blocking pool rather than on a runtime worker, which is new here.*
+
+`prompts.toml` and the prompts directory are watched with `notify`, and a burst of filesystem events opens a debounce window of `watch_debounce`, default 500 ms, that restarts on each event. The window earns its place on Windows above all: an editor saves through a temporary file and renames it into place, which arrives as several events for one save, and one settled window costs one re-resolution rather than one per event. The re-resolution reads and parses every prompt file, so it runs on a blocking pool rather than on a runtime worker.
+
+What does not reload is everything the running service already wired into something: all of `[server]`, all of `[gateway]`, and `[paths].prompts`, which is the directory being watched. `[server].watch = false` starts no watcher at all.
+
+Two departures from the original hot-reload rule are settled above rather than sorted here: a candidate is judged per prompt rather than whole, and no `tools/list_changed` notification is sent.
+
+## Where a failure lands is decided by who can fix it
+
+*The dividing line and the JSON-RPC codes are already in the crate's document; the crate's own error types are new here, since that document names no error type at all.*
+
+The dividing line the original error section draws is the one the code draws. A malformed call is a protocol error and a run that started and failed is a result: a model that receives `-32603` learns nothing it can act on, while a result carrying a failed status and an error string can be reasoned about or reported to the user.
+
+The taxonomy underneath it is different. There is no `StartupError` and no `RequestError`; the crate has `ConfigError`, `ServeError`, `WatchError`, and a `CatalogError` accumulating `Fault` values, and the request-side codes are `-32602` for an argument that is not the shape the schema declares, `-32601` for a tool this catalog does not publish, and `-32603` for anything that cannot be assembled. Everything the calling model can correct - an unresolvable prompt name, a refused admission, an unknown or evicted run id, a run that failed - is an `Ok` result with `isError` set and the information needed to correct it.
+
+## `prompts.toml`, and the keys that exist
+
+*Already in the crate's document, which prints the whole surface.*
+
+`[server]` carries `bind`, `token`, `max_concurrent_runs`, `admission_timeout`, `reply_deadline`, `retain_completed`, and two watch settings; `[paths].prompts` names the prompts directory; `[gateway]` carries `url`, `token`, and an optional `model`; `[catalog]` and the `[prompts.NAME]` blocks assemble the catalog. Every table rejects an unknown key, so a misspelled setting fails the load rather than reading as a default.
+
+Two rules from the original file survive it. Durations are strings parsed by `humantime_serde`, because TOML has no duration type and a bare integer of unstated units is the ambiguity this file exists to avoid. And the file holds the deployment's whole configuration, because a run cannot be configured from the process environment: setting an environment variable is `unsafe` under edition 2024 and this workspace forbids unsafe.
+
+Nothing else in the original file is built. `[slots]`, `[classifier_defaults]`, `[tools]`, `[tool_limits]`, `[outputs]`, `[limits]`, `[extensions.*]`, and `[[mcp_clients]]` parse nowhere, the two-layer per-prompt override rule has nothing to override, and `retain_completed_max`, `log_dir`, and the `[gateway]` timeout, retry, and backoff keys do not exist. Enablement is not presence either: the catalog is assembled by glob and corrected by name. All of that stays in Part II with the design it belongs to.
+
+## What this document does not describe at all
+
+*Already in the crate's document, which is where each of these is designed.*
+
+Four things the crate does are absent here rather than wrong here, and they are named so the built half is not silent about most of what the server answers. The four built-in tools and what each takes: `list_prompts`, `run_prompt`, `check_run`, and `need_prompt` behind the `picker` feature. The reply deadline, which answers a call that outlives the client's patience with a `running` result carrying a `run_id` rather than losing the run, and the `check_run` that collects it afterwards. Name resolution for a prompt name a calling model guessed - case and `-`/`_` folded, exact after that, never a near miss, and an unresolvable name answered with the enabled names closest first. And retrieval: an index over each prompt's name and description, rebuilt on the same catalog swap a save performs and only when a content hash moved, behind an optional default-on feature whose model can fail to load without failing the boot.
+
+Each of those is designed in the crate's own document and none needs restating from here. The absence is worth recording because it is the same shape as the divergences above: this document specifies a surface for a deployment that does not exist, and is silent about the surface that does.
+
+---
+
+# Part II - Designed and not built
+
+## The scope as designed
 
 This crate is the process a client talks to. It loads configuration, resolves logical names to concrete ones, links and registers extensions, publishes the enabled prompt catalog on an MCP surface, serves a fire endpoint and a status endpoint for the Django site, constructs a `promptforge::Executor` per run, and forwards the executor's event stream to whichever caller is watching. It is the only MCP server in the system and it is the only process that reads `prompts.toml`.
 
-What it does not do, and cannot be made to do without a change to this document:
+What it does not do, and cannot be made to do without a change to this document. The two boundaries the code keeps outright - no LLM backend, and no persisted run history - are in Part I:
 
-- Talk to an LLM backend. Every model turn goes through `promptforge-gateway`, which holds the endpoint credentials and the concurrency budget.
 - Publish a tool from the canonical vocabulary. `web_search`, `web_fetch`, the `paper_` family, and the `classify_` family are compiled-in Rust functions inside extensions, called directly by the executor. They never appear on the MCP surface, so Cursor is never offered a second web search.
 - Parse a prompt, walk a section, run Lua, or resolve an output name to a path. That is `promptforge`, and this crate hands it the resolved maps.
 - Own a domain. No schema, no table, no paper, no search provider. Every domain-shaped thing arrives as an `Extension` this binary chose to link.
 - Hand execution to `promptforge-cli`. Every run executes here. The CLI is purely a client of this server and has no in-process path.
 - Hold a job table. Django's Celery task is the durable queue; this crate holds run state in memory for the life of the run plus a retention window.
 - Queue LLM work. Admission for model turns belongs to the gateway. This crate caps how many runs execute at once, which is a different limit for a different reason.
-- Persist run history. A restart loses every record, deliberately, because a rerun is cheap and idempotent.
 
-## Process shape
+## The rest of the process shape
 
 One binary, one listener, one port, two surfaces, one token. The MCP transport is streamable HTTP mounted on the same `axum` `Router` that serves Django's endpoints, because there is exactly one thing to authenticate and exactly one thing to install as a service.
 
@@ -37,13 +188,13 @@ let app = Router::new()
     .route("/healthz", get(healthz));
 ```
 
-`stateful_mode: true` and streamable HTTP are load-bearing rather than defaults taken on faith: a progress notification is delivered on the SSE stream that the `tools/call` POST opened, so the stateless JSON transport would have no channel to carry it and would silently reduce every run to one long opaque call. stdio is not offered at all, because the client is a workstation across the network.
+The argument for sessions and streamable HTTP is in Part I, because the code acts on it. What is unbuilt here is the router: four Django routes hang off the same listener, which is what makes one port, one token, and one installed service the whole deployment.
 
-The bind address is a network interface. Loopback is not a supported configuration and the code does not special-case it.
+The deployment this document assumes is a workstation across the network, which is why it says stdio is not offered at all, that the bind address is a network interface, and that loopback is not a supported configuration. The code refutes all three, and Part I says what it does instead.
 
 ### Dependencies and pins
 
-Versions confirmed against crates.io on 2026-07-25.
+Versions confirmed against crates.io on 2026-07-25, and the `rmcp` line has since been overtaken: the workspace pins `=3.1.0`, so the argument below for staying on 2.x is a record of a decision already reversed. The rolling file appender is not built either; the binary logs to stdout, or to stderr on stdio where the protocol owns stdout.
 
 - `rmcp` at exactly `=2.2.0`, with features `server`, `schemars`, and `transport-streamable-http-server`. Exact rather than caret: the `ServerHandler` signatures, the `Tool` field set, and the capability builder have each changed across minor releases, so an upgrade is a diff to read rather than a number to bump. `2.2.0` was published 2026-07-08 and is the current stable line.
 - `axum` at `0.8.9`, already a dependency through the streamable HTTP service. There is no 0.9 line; 0.8.9 is current.
@@ -58,11 +209,11 @@ Versions confirmed against crates.io on 2026-07-25.
 
 ### Prompts are exposed as MCP tools, and that is not a contradiction
 
-MCP has a `prompts` primitive, and it is the wrong one. `prompts/get` returns messages for the *client's* model to run, which would hand execution to Cursor and leave the gateway, the slot map, the tool registry, the Lua sandbox, and the output roots unused. Prompt execution happens here. So each enabled prompt is published as an MCP *tool* whose invocation runs that prompt to completion on this side and returns what it wrote.
+The reason a prompt is carried on the tools primitive rather than the `prompts` one is in Part I, because the code still turns on it. What does not survive is the corollary: the system rule that a connecting client sees prompts and never tools was a rule about vocabulary rather than about which protocol primitive carries it, so every entry on the surface was to be a prompt and no entry a canonical tool name. The four entries the surface publishes today are neither.
 
-The system rule that a connecting client sees prompts and never tools is a rule about vocabulary, not about which protocol primitive carries it: every entry on this surface is a prompt, and no entry is a canonical tool name. The `prompts` primitive is deliberately not implemented, so there is no second discovery path to keep in agreement with the first.
+### Decision, since reversed: one MCP tool per prompt
 
-### Decision: one MCP tool per prompt
+This is the document's central decision and the code no longer implements it. It is kept whole, because the corpus has to be able to say why one tool per prompt lost rather than merely stop asserting it, and because the tail-dispatcher hybrid it argues is reachable without rework is the shape a later plan would revisit from the other direction.
 
 Every enabled prompt in `prompts.toml` becomes its own entry in `tools/list`, named for the prompt, described by its frontmatter, and typed by its own `params` schema. The dispatcher and the hybrid are both rejected.
 
@@ -73,6 +224,8 @@ Per-prompt tools cost nothing to generate. `Frontmatter` already carries `name`,
 Tension: forty prompts are forty entries in the client's context budget on every single request, which makes the enabled catalog a context-budget decision and not merely an enablement one, and a deployment that enables everything degrades the client's selection across its own tools too, not just ours. Tension: a tool name is a client-visible API, so renaming a prompt breaks whatever referred to it, and this crate has no way to deprecate gracefully. The mitigation is that the rejected hybrid remains reachable from here without rework, because adding a dispatcher for a demoted tail is additive to a per-prompt surface while the reverse is not; the threshold at which that becomes worth doing is unmeasured and sits in `Open`.
 
 ### Frontmatter to tool definition
+
+Only the `name` row reaches the code, and Part I states it. Every other row maps a frontmatter field the parser does not carry - there is no `params`, no `keywords`, and no `outputs` - onto a per-prompt tool definition nothing builds.
 
 | `Frontmatter` field | MCP `Tool` field | Transform |
 |---|---|---|
@@ -130,6 +283,8 @@ For the frontmatter in the core doc's worked example, `staker`, the generated de
 ```
 
 ### The server type
+
+Three of this shape's parts are built and are described in Part I: the catalog behind an `ArcSwap` that a run snapshots for its lifetime, the run registry, and the admission semaphore. The rest - the pre-resolved slot map, tool map, output roots, and limits on every catalog entry, and the per-prompt `Tool` the entry carries - is the resolution machinery none of which exists. The `get_info` body below is stale in three ways rather than unbuilt: the capability is advertised without `listChanged`, the server name comes from `CARGO_PKG_NAME`, and the instructions say a caller names what to run and that a prompt's value is a finished artifact, since there is no file to point at.
 
 ```rust
 #[derive(Clone)]
@@ -220,7 +375,7 @@ sequenceDiagram
 
 ### The observer
 
-`Observer::on_event` is synchronous and must not block, so the notification path is a channel and the pump task does the awaiting.
+The split this shape rests on - a synchronous `on_event` handing frames to a bounded channel, a pump task doing the awaiting - is built, and Part I states it along with the drop policy. What is not built is everything the type carries beyond that: a `Frame` has no `section`, an observer holds no registry handle and writes no record inline, and the events matched on below do not all exist.
 
 ```rust
 /// One frame is one rendered progress line. Cheap to clone, cheap to drop.
@@ -291,13 +446,11 @@ async fn pump(peer: Peer<RoleServer>, token: ProgressToken, mut rx: mpsc::Receiv
 
 `Event::SectionStarted`'s `completed` and `label` pass through untouched into `progress` and `message`. Nothing is computed anywhere, which is the reason those fields exist on that event.
 
-`total` is always `None`. The field is in the protocol and this server declines to fill it, because the count of sections a run will visit is not known when it starts: `goto` may skip, revisit, or jump backwards, and `return_result` may end a run from any section. An earlier draft sent a `nominal_total` counting the prompt's H2 sections so the client could draw a bar, and it is dropped - a denominator that a branching run never reaches is not an approximation of remaining work, it is a different quantity wearing its clothes. Tension: no client can draw a filling bar from these notifications, and the caller's only sense of progression is the section name changing.
-
-`progress` still increments and is still required to be monotonic by the protocol, which the core's `completed` guarantee satisfies directly. On a retry or a skip the latched value repeats rather than falling, which is legal and is why the latch exists.
-
-The channel is bounded at 64 with `try_send`. Progress is lossy by nature and a dropped frame is always preferable to a blocked executor: the client renders in place, so a skipped number is invisible, while a blocked `on_event` would stall a section boundary. Drops are counted and logged at run end.
+The absent `total`, the latched monotonic `progress`, and the bounded lossy channel are all built, and Part I states each with its reason. One clause of the reason for `total`'s absence sits here rather than there, because what it rests on is designed and not built: the number of sections a run will visit is unknown at the start because `goto` may skip a section, revisit one, or jump backwards, and `return_result` may end a run from any section. The premise underneath the latch is not built either: the latched value repeats rather than falling on a retry or a skip, and neither a retry nor a skip is something a run can do.
 
 ### Which events notify
+
+Six events exist, and the table names eleven. `RunStarted`, `SectionStarted`, `SectionFinished`, `ModelTurn`, `ToolCalled`, and `RunFinished` are the enum; `Narration`, `SectionRetrying`, `SectionSkipped`, `Jumped`, and `OutputWritten` describe control flow and output resolution the runtime does not have. Two rows are also decided differently for events that do exist: `SectionFinished` is logged rather than notified because its frame would duplicate the one already on the wire, and `RunFinished` sends no frame at all, since the reply follows it within milliseconds and carries more.
 
 | Event | Notification | Reason |
 |---|---|---|
@@ -323,11 +476,11 @@ Cursor ignores it and renders the three standard fields. `promptforge-cli` reads
 
 ### When the client does not support progress
 
-Progress in MCP is opt-in per request: the caller places a `progressToken` in the request's `_meta`. When it is absent, `frames` is `None`, the pump is never spawned, no channel exists, and `on_event` does registry work only. The run is otherwise byte-for-byte identical and the result is unchanged. The caller sees one silent long call, which is exactly what the system doc predicts for a client without the capability, and the frontmatter `progress` labels still reach a human two ways: through the rolling log file, and through `GET /v1/runs/{run_id}`, which serves the same frames for an MCP-fired run as for an HTTP-fired one.
+That progress is opt-in per request, and that a call carrying no `progressToken` is answered identically with no channel and no pump behind it, is built and is in Part I. The consolations for the caller that gets one silent long call are not: there is no rolling log file, and no status endpoint serving the same frames to a browser that an MCP client would have seen.
 
 ## The tool result
 
-The result carries where the work landed, how much of it there was, and a short summary. Never the document body, so a calling model spends no output tokens re-emitting a report it did not write.
+The premise of this section is the one thing in it the code inverts. The result was to carry where the work landed rather than the work, because the run wrote a file and a calling model should not spend output tokens re-emitting a report it did not write. The runtime writes no output files, so there is no path to hand back and the value itself is the whole product; Part I says what the result carries instead. Everything below that depends on an output existing - `outputs`, `OutputRef`, the `Produces:` line, the text block's file reference - is unbuilt with it, as is `summary`, which is the runtime's own account of a run and has no source. `RunStatus` keeps `completed` and `failed`, gains `running` for a run that outlived its call, and never had a use for `queued`.
 
 ```rust
 #[derive(Serialize, JsonSchema)]
@@ -363,9 +516,7 @@ pub enum RunStatus { Queued, Running, Completed, Failed }
 
 `OutputRef` is built from `Outcome::outputs`, mapping `Destination::Path` to `path`. It lost a `kind` discriminant and its `table` and `rows` fields along with `OutputKind::Rows` in the core: an output is a file, and an extension that wrote rows reports them through `Outcome::summary` rather than through a typed field this server would have to understand. Nothing else in the outcome reaches the client.
 
-`value` and `summary` are both strings and are not the same string. `value` is the prompt's own product, passed to `return_result` by the model or a Lua block, and this server forwards it untouched: it is not truncated, not parsed, and not merged into the text block, because a caller that asked for JSON must get exactly what the prompt produced. `summary` is the runtime's account of the run and is truncated, because nothing downstream depends on its exact bytes. A calling model reads the text block; a program reads `value`.
-
-Every enum on both surfaces is lowercase on the wire, enforced by `#[serde(rename_all = "snake_case")]` on the type rather than by a hand-written `Serialize`. The wire value is `completed` and never `Completed`, because a status is a JSON token read by `queued` and `running` at the status endpoint and one casing rule across both surfaces is one fewer string comparison to get wrong. Every variant is a single word today, so `snake_case` and `lowercase` emit the same strings; `snake_case` is the one that stays readable if a later state needs two words.
+`value` and `summary` are both strings and are not the same string. That `value` is forwarded untouched - not truncated, not parsed - is built and is in Part I, and so is the lowercase wire rule the enum above carries. What is unbuilt is the other half of the pair: `summary` is the runtime's account of the run and is truncated because nothing downstream depends on its exact bytes, and the division of labour it buys, where a calling model reads the text block and a program reads `value`, is not the division the code makes - the text block is the value.
 
 ```json
 {
@@ -520,6 +671,8 @@ It reuses the boot pass rather than reimplementing it: the same function, called
 
 ### The run registry
 
+A registry exists, holding every run in memory for a retention window and losing all of them on a restart, and Part I states that much. This shape is the version a status endpoint needs and is not the one built: there is no `label`, no last-observed `Frame`, no `updated` timestamp, no `retain_max` cap, and no sweep on a timer - eviction is taken on each read and each write, and a record that is still running is never evicted because its result has nowhere else to land.
+
 ```rust
 pub struct RunRegistry { inner: RwLock<RunTable>, retain: Duration, retain_max: usize }
 
@@ -555,6 +708,8 @@ impl RunRegistry {
 Every run enters the registry, whether fired over HTTP or invoked over MCP, so status polling and log correlation work identically for both and a Cursor run can be inspected from a browser. `sweep` runs on a one-minute interval and on every `close`. Tension: run state lives in the service rather than the database, so a restart loses every in-flight and retained record, and the recovery is a refire.
 
 ## `prompts.toml`
+
+Part I lists the keys that exist. Everything this file adds beyond them is the resolution machinery: slots, classifier slots, canonical tool bindings and their per-tool permits, output roots, executor limits, extension configuration, and remote MCP clients, each inheritable and overridable per prompt. The file also holds a secret it does not hold in the code, and enables a prompt by presence where the code globs a directory.
 
 ```toml
 # prompts.toml - deployment scope for promptforge-mcp.
@@ -701,11 +856,11 @@ run_deadline = "45m"
 
 Resolution is two layers deep and the rule is the same for slots, tools, output roots, and limits: the per-prompt table overrides the global table key by key, never wholesale. `digest` overrides nothing, `triage` overrides one slot, and `staker` overrides in all four categories, which is the exceptional case rather than the shape to expect at forty prompts. Tension: reading one prompt's effective configuration means reading two places.
 
-Durations are strings parsed by `humantime_serde`, because TOML has no duration type and a bare integer of unstated units is the kind of ambiguity this file exists to avoid.
+The duration rule that goes with this file is built, and Part I states it.
 
 ## Startup validation
 
-Boot either produces a fully resolved `Catalog` or refuses to serve. In order:
+That boot either produces a resolved catalog or refuses to serve, that failures accumulate so an operator fixes a configuration in one pass, and that one bad prompt stops the whole service are all built, and Part I states them with their reasons. The pass below is the resolution the design asks for and mostly does not exist. In order:
 
 1. Read `prompts.toml`. A parse failure, an unknown key, or a missing `[server].token` stops here.
 2. Build the `GatewayClient`. The gateway is not required to be reachable at boot, because it is a separate service with its own lifecycle and requiring it would make startup order load-bearing.
@@ -717,11 +872,7 @@ Boot either produces a fully resolved `Catalog` or refuses to serve. In order:
 8. Create the output directories named in `[outputs]` and write-test each one.
 9. Bind the listener.
 
-Failures accumulate. The pass runs to completion, prints every failure it found with the prompt name and file path on each line, and exits nonzero. Reporting only the first failure would turn one bad deploy into a dozen restart cycles.
-
-One bad prompt entry stops the whole service, deliberately. A service that starts with thirty-nine of forty prompts is a service whose catalog silently differs from its configuration, and a client discovers that as a missing tool with no explanation. Refusing to start is loud, immediate, and attributable to the edit that caused it.
-
-Hot reload inverts only the consequence, never the checks: the identical pass runs against the candidate configuration, and on failure the errors are logged and the previous `Catalog` keeps serving. At boot, refuse to start; on reload, refuse the change.
+"Hot reload inverts only the consequence, never the checks: at boot, refuse to start; on reload, refuse the change" is this document's rule and is not the code's. The checks are indeed identical between the two passes, but the consequence is per prompt rather than per candidate: a prompt that fails revalidation is retained as a broken entry carrying its error while every other prompt reloads, and only a candidate that cannot be resolved at all keeps the previous catalog whole. One typo in one file must not freeze every other prompt in the catalog, which is a different judgement from boot's and is made for a different reason.
 
 ## Extension wiring
 
@@ -802,8 +953,8 @@ Two linked extensions may both provide the same canonical name, and the binding 
 
 ## Concurrency
 
-- `max_concurrent_runs` permits, default 4, one `Semaphore` for the process. An MCP call awaits a permit up to `admission_timeout` and then refuses with a retryable error. An HTTP fire returns its run id first and awaits the permit inside the spawned task, showing `queued`.
-- One Tokio task per run, on the multi-threaded runtime. The task owns its `Executor`, its Lua state, and its observer, and it holds an `Arc<Catalog>` snapshot so a hot reload mid-run cannot change the configuration underneath it.
+The first two rules are built and Part I states them: the run permits with their refusal past `admission_timeout`, and one task per run holding the catalog snapshot it started under. What is unbuilt in the first is the HTTP fire's alternative path, and in the second the executor and Lua state the task was to own rather than borrow from the core.
+
 - Per-run work still bottoms out at the gateway. Every model turn takes a gateway permit, eight per endpoint and sixteen globally, and `fanout` is sequential, so a run has one turn in flight at a time. Raising `max_concurrent_runs` therefore does not raise LLM throughput; it raises the number of runs waiting at the gateway and the number of connections held while they wait. Sixteen is the ceiling above which nothing can possibly overlap, and 4 is the default because a run's non-LLM work - search calls, fetches, classifier calls at a section boundary - is where extra concurrency actually pays, and it pays much sooner than the queue depth costs.
 - A gateway 503 with `Retry-After` is retried `[gateway].retries` times with backoff, and only then surfaced. Every client of the gateway must back off and this crate is a client.
 - An extension doing CPU-bound or GPU-bound work must use `spawn_blocking`. `promptforge-ext-classify` calls into ONNX Runtime synchronously, and a classifier call on the async runtime's worker thread would stall every other run's polling. That contract belongs to the extension; this crate raises `max_blocking_threads` to accommodate it.
@@ -811,7 +962,7 @@ Two linked extensions may both provide the same canonical name, and the binding 
 
 ## Authentication
 
-One shared bearer token, from `[server].token`, presented as `Authorization: Bearer <token>` and checked before a run starts on both surfaces.
+The scheme, the constant-time comparison, the per-request check and what it buys on rotation, and the costs it accepts are all built, and Part I states them. Two things here are not. The middleware covers `/mcp` and a `/v1` surface that does not exist, so there is one guarded route rather than two families of them. And the rotation cost is smaller than stated: there is no Django client and the CLI does not connect, so the coordinated edit is Cursor's configuration alone.
 
 ```rust
 async fn require_bearer(State(auth): State<Arc<Auth>>, req: Request, next: Next) -> Result<Response, StatusCode> {
@@ -827,9 +978,7 @@ async fn require_bearer(State(auth): State<Arc<Auth>>, req: Request, next: Next)
 }
 ```
 
-The middleware sits under both `/mcp` and `/v1`, so the MCP transport and the HTTP endpoints are covered by one implementation and there is no second place for the check to be forgotten. `/healthz` is registered outside the layer. A `401` carries `WWW-Authenticate: Bearer`.
-
-The check is per HTTP request rather than per MCP session, which matters on rotation: an established session's next request fails once the token changes, rather than living on until the client reconnects.
+The middleware sits under both `/mcp` and `/v1`, so the MCP transport and the HTTP endpoints are covered by one implementation and there is no second place for the check to be forgotten.
 
 The honest costs, restated here because this crate is where they land:
 
@@ -840,6 +989,8 @@ The honest costs, restated here because this crate is where they land:
 Per-client tokens are the upgrade when attribution matters: a `[clients]` table mapping a client name to its own token, the name entering every log line and becoming the key for per-caller run quotas, which is the thing a single shared token structurally cannot support. `rmcp` ships OAuth, so full attribution with revocable credentials is configuration and a handler rather than architecture.
 
 ## Service installation and hot reload
+
+None of the installation is built: the binary takes `serve [--stdio] <prompts.toml>` and nothing else, there is no service wrapper and no rolling log file, and the configuration path is a positional argument rather than a `--config` flag. The watch is built, and Part I states its window, its Windows justification, and what a save does and does not reach; the four-step sequence below differs from it in two of the four steps, both settled above.
 
 Installation goes through `daemon-kit`, covering Windows Service Control Manager, launchd, and systemd:
 
@@ -914,11 +1065,11 @@ pub enum RequestError {
 | `Run` | not an HTTP error; surfaces at the status endpoint as `status: "failed"` | `isError: true` with the full `RunResult` in `structuredContent` |
 | `Internal` | 500 | `-32603` |
 
-The dividing line: a malformed call is a protocol error, and a run that started and failed is a result. A model that receives `-32603` learns nothing it can act on, while a result carrying `status: "failed"` and an error string can be reasoned about or reported to the user. `anyhow` appears only in `Internal` and never crosses into a public signature elsewhere.
+The dividing line the table rests on is built and is in Part I: a malformed call is a protocol error and a run that started and failed is a result. Neither enum is, and neither is the HTTP column beside each row. `anyhow` appears only in `Internal` and never crosses into a public signature elsewhere.
 
-## Tests
+## The tests those features would need
 
-The core crate's fake gateway and recording extension are the fixtures, so nothing here needs a live LLM, a live database, or a live search key.
+The core crate's fake gateway and recording extension are the fixtures, so nothing here needs a live LLM, a live database, or a live search key. The crate's own suite covers the built surface in its own shape; the list below is what the design above would have to assert, and most of its subjects do not exist.
 
 - Catalog generation: golden `tools/list` JSON for a three-prompt catalog. Asserts the `Produces:` and `Keywords:` tails, the input schema passed through verbatim, the annotations, and that no canonical tool name appears anywhere in the output.
 - Boot validation: one test per `StartupError` variant, each asserting the message names the prompt and the file. A binding to an unlinked extension asserts the message names the Cargo feature. A catalog with three independent faults asserts all three are reported.
@@ -940,6 +1091,8 @@ The core crate's fake gateway and recording extension are the fixtures, so nothi
 
 ## Confidence
 
+These are the confidences the design held in itself, not the crate's. Two rows have been overtaken by events rather than by doubt: the enumeration shape lost, and `rmcp` moved to the 3.x line.
+
 | Area | Level | Why |
 |---|---|---|
 | Enumeration shape | medium | Argued from how tool selection actually works, but not measured against a forty-prompt catalog in a real client |
@@ -960,7 +1113,7 @@ The core crate's fake gateway and recording extension are the fixtures, so nothi
 
 ## Open
 
-- Whether to follow `rmcp` 3.x once it leaves beta. The pin is `2.2.0`, settled below; 3.0.0-beta.2 was published 2026-07-24, one day before this document, and adopting a one-day-old beta under the only client-facing surface in the system is not a trade worth taking. What is open is the timing, not the direction.
+- Whether to follow `rmcp` 3.x once it leaves beta. Answered by doing it: the workspace pins `=3.1.0`. What follows is the reasoning as it stood. The pin is `2.2.0`, settled below; 3.0.0-beta.2 was published 2026-07-24, one day before this document, and adopting a one-day-old beta under the only client-facing surface in the system is not a trade worth taking. What is open is the timing, not the direction.
 - Whether `ask_user` is eventually carried by MCP elicitation. The core stubs it as `Unimplemented` for now, so nothing here depends on it. `rmcp` ships elicitation and the fit is obvious for a Cursor caller, but an HTTP-fired run has no interactive caller at all, so this surface would need to answer what happens then before the core's one-way observer is given a return path.
 - Elicitation. The system doc calls for mid-run user questions, and the core `Observer` is one-directional with no seam for a question that expects an answer. This crate can carry `elicitation/create` the moment the core offers a channel, and cannot before.
 - The MCP tasks capability. Adopting it would let a run survive a client disconnect and be collected later, which is close to what the HTTP status endpoint already does for Django. Whether to converge the two or keep them separate is unsettled.
@@ -970,4 +1123,4 @@ The core crate's fake gateway and recording extension are the fixtures, so nothi
 - Whether Django should be permitted output-root overrides at all. The mechanism is specified and cheap, and the site may turn out to want the configured root every time, in which case the field should go.
 - Whether a Windows service account running under Service Control Manager can reach the GPU that `promptforge-ext-classify` needs. This is a platform question with a plain answer that nobody has looked up yet, and it only bites the classifier build.
 
-*2026-07-25 - design-mcp*
+*2026-07-25 - design-mcp-server*
