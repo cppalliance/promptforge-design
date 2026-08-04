@@ -1,14 +1,14 @@
-<!-- STATUS: crate doc - promptforge-core (library) - separated into what the crate does today and what is designed and not built - see design.md for the system -->
+<!-- STATUS: crate doc - promptforge-core (library) - part I as-built has moved to crates/promptforge-core/design-core.md; what remains is designed-and-unbuilt - see design.md for the system -->
 
 # `promptforge`: the core library
 
-This document is in two parts. Part I describes what the crate does today, and every claim in it has been checked against the code in `crates/promptforge-core`. Part II is everything that was designed and has not been built; it is unchanged design and is the part a reader consults for where the executor is going, not for what it does.
+What the crate at `crates/promptforge-core` does today is described by that crate's own `design-core.md`, which sits beside the code it describes. It was Part I of this document and has left it, so the content exists once. What remains here is everything that was designed and has not been built.
 
-Nothing has been deleted in the separation, and no argument has been rewritten: the whole prior document survives as Part II, annotated. Part I was written from the crate rather than sorted out of the document, because the document's vocabulary misnames the shipped thing in enough places that no passage was transferable intact - a built half assembled from this document's own prose would carry `Executor`, `store`-as-state and `return_result` into a description of code that has none of them. Every Part I claim is therefore checked against the crate rather than against the diff. The proportion is worth stating up front: the crate is a fall-through MVP and most of this document is Part II.
+The built half was small, because the crate is a fall-through MVP and most of what is specified here has never been written. It was also authored from the crate rather than sorted out of this document, since the vocabulary below misnames the shipped thing in enough places that no passage was transferable intact - a built half assembled from this document's own prose would have carried `Executor`, `store`-as-state and `return_result` into a description of code that has none of them.
 
-Ten things the separation forced, because the document and the code disagree rather than merely lag. Several are the same word meaning two different things, which is why a built half assembled by copying passages that look built would be worse than no document at all.
+Ten things the separation found, repeated here because the text below still carries the mistaken version of each. Several are the same word meaning two different things, which is why a built half assembled by copying passages that look built would have been worse than no document at all.
 
-- **The crate is `promptforge-core`, and there is no `Executor`.** A run is the free function `execute::run(prompt, args, tools, store, opts)`, and its options struct is `RunOptions`, which carries an observer and an optional client and nothing else. `RunConfig`, `Executor::new`, `Outcome`, and `Limits` do not exist. The title above still says `promptforge` and is left alone; the crate's own document gets the right one.
+- **The crate is `promptforge-core`, and there is no `Executor`.** A run is the free function `execute::run(prompt, args, tools, store, opts)`, and its options struct is `RunOptions`, which carries an observer and an optional client and nothing else. `RunConfig`, `Executor::new`, `Outcome`, and `Limits` do not exist. The title above still says `promptforge` and is left alone; the crate's own document has the right one.
 - **`store` names a different subsystem in each.** The document's `store` is structured run state a prompt queries with `count`, `exists`, and `get`. The code's `store` is a run-scoped virtual filesystem with `write`, `append`, `read`, `str_replace`, `delete`, and `glob`. They share a name and nothing else, and none of the document's `store` prose describes anything that exists.
 - **There is no `return_result`.** A section ends the run by its Lua chunk returning a value at top level, which no model can reach. The tool the document puts in every section's schema list is not bound, and no core tool of any kind is exposed to a model.
 - **The field names differ where a reader would not look twice.** `Section.prose` and `Section.lua`, not `body` and `script`. `Frontmatter.version` is a `u32`, not a `String`. The entry point is the first top-level section whatever it is called, not `## Main`, and there is a test asserting exactly that.
@@ -21,140 +21,9 @@ Ten things the separation forced, because the document and the code disagree rat
 
 ---
 
-# Part I - What the crate does today
-
-## Scope
-
-This crate is a library with no binary. It parses one markdown prompt file, walks its top-level sections in file order, runs each section's Lua block, substitutes its prose, takes one model round trip per section with a tool-call loop, and returns a single string.
-
-Types are reached through public modules rather than a flat re-export: `promptforge_core::client`, `execute`, `lua`, `observe`, `parser`, `store`, `subst`, and `tools`. The crate root re-exports only `Error`, `Result`, and `promptforge_version`.
-
-What it does not do today, none of it a boundary the design draws and all of it simply unbuilt: no `Executor` type, no slot or tool resolution maps, no extensions, no declared outputs, no `goto`, `Task`, or `fanout`, no preconditions or postconditions, no per-run limits beyond the tool-loop cap and the Lua instruction budget, no state store in the document's sense, and no persistence of any kind past the end of a run.
-
-What it does do that the boundary as written denies: it reads three environment variables when a caller does not supply a gateway client, and it contains a `web_search` tool. Neither holds a vendor credential - the gateway does - but both are in the crate.
-
-## The engine version gate
-
-A source is a promptforge prompt only when its frontmatter declares a `promptforge:` key. `promptforge_version(source) -> Option<u32>` reports it and is deliberately lenient: no frontmatter, unclosed frontmatter, invalid YAML, or an absent key all read as `None` rather than as an error, so a caller can ask "is this one of mine" of an arbitrary file.
-
-`execute::run` gates on it before doing any work. The supported major is 1. Another major is `Error::UnsupportedVersion`; no version at all is `Error::Parse("not a promptforge prompt: no promptforge version")`. A run refused by the gate emits no observer events, because it never started.
-
-The gate is separate from `Frontmatter::version`, which is the author's own contract number for the prompt's interface.
-
-## Parsing is total and produces no side effects
-
-`Prompt::parse(&str) -> Result<Prompt>` turns bytes into an inert tree. A `Prompt` carries the parsed `Frontmatter`, the first H1's text as `title`, the prose between that H1 and the next heading as `description_text`, and the top-level sections. `Prompt::entry()` returns the first top-level section.
-
-`Frontmatter` has seven fields and does not deny unknown ones, so a key it does not name is read past in silence. Three are required - `name`, `description`, and `version: u32` - and four default: `promptforge: Option<u32>`, `tools: Vec<String>`, `default_return: Option<String>`, and `max_tool_iterations: Option<usize>`. `tools` is parsed and never read by this crate; the CLI and the MCP server are the two callers that consume it to decide which tools to bind for a run.
-
-A `Section` carries its heading text as `name` (the address, without the `##` marker), a numeric `level` from 2 through 6, an optional `lua` block, its `prose`, and its `children`. Nesting is recursive through H6 rather than the two levels the design specifies, and a skipped level is tolerated: an H4 directly under an H2 becomes a child of that H2.
-
-A section's Lua is exactly one code fence, tagged `lua`, appearing first in the section's content. A fence in any other language, a fence that is not first, and an unterminated fence all stay in the prose. Parsing fails on a missing opening `---`, an unclosed frontmatter block, YAML that does not deserialize, and a body with no `##` sections. A leading byte-order mark is stripped.
-
-## The run is fall-through over top-level sections
-
-`execute::run(prompt, args, tools, store, opts)` returns one `String`. `args` is a single raw input string, not an object and not schema-validated. `tools` is the run's whole pool. `store` is the run's virtual-file handle, created once by the caller and threaded through every section. `opts` is `RunOptions { observer, client }`.
-
-Each top-level section, in file order:
-
-1. Its Lua chunk runs. If the chunk returns a value at top level, that value is the run's result and the run ends there - this is the return fence, and it is the only early exit. Otherwise the executor reads back the `var` table and the names the block passed to `tools.add`.
-2. Those names are resolved against the pool. A name with no matching tool is `Error::UnknownScopedTool`, never a silent drop. The resolved subset is the only thing this section shows to the model and the only thing it can dispatch; a section with no Lua block, or one that never calls `tools.add`, advertises nothing.
-3. The prose is substituted. If what remains is not blank, the section takes one tool-call loop against the gateway.
-4. Control falls through to the next top-level section with the context cleared. Nothing crosses the boundary except the store.
-
-Child sections are parsed and are never executed. Running off the last section ends the run, and the result is `default_return` if the frontmatter declares one, else the last model reply the run produced, else the string `"done"`.
-
-## Substitution resolves `args`, `var`, and `sys`
-
-`subst::substitute` runs over a section's prose after its Lua block and before the model sees it. `{{ args }}` is the raw input string. `{{ var.<path> }}` reads the table the block wrote, read back from Lua as JSON. `{{ sys.<path> }}` reads runtime metadata: `when`, fixed at the start of the run, `now`, evaluated per section, and `id`, the 1-based index of the section.
-
-One pass, no recursion, no arithmetic. Scalars render as strings and arrays and objects render as JSON. An unclosed `{{`, an unknown namespace, a missing key, and a null value are each `Error::Substitution` naming the path.
-
-## The Lua block runs in a hand-hardened lua54 VM
-
-One `lua` fence per section, run before the section's model turn, in a VM built fresh for that section. Only `string`, `table`, and `math` are loaded, and `harden` then sets twelve base globals to nil: `load`, `loadstring`, `dofile`, `loadfile`, `collectgarbage`, `require`, `getfenv`, `setfenv`, `rawget`, `rawset`, `rawequal`, and `rawlen`. `io`, `os`, `package`, `coroutine`, and `debug` are never loaded in the first place.
-
-An instruction hook fires every 10,000 instructions and aborts after 1,000 firings, so a block gets roughly ten million instructions. Exceeding it raises `lua instruction budget exceeded`, which reaches the caller as `Error::Lua`. There is no memory ceiling.
-
-Five names are in scope, and every one of them is core:
-
-| Name | Purpose |
-|---|---|
-| `args` | The run's raw input string. |
-| `sys` | Runtime metadata: `when`, `now`, `id`. |
-| `var` | A writable table, read back as JSON for prose substitution. |
-| `tools` | `tools.add(...)` records names for this section. There is no `tools.remove`. |
-| `store` | The run's virtual files. |
-
-`tools.add` takes any number of names, records them in first-seen order, de-duplicates, and validates nothing; the executor resolves them afterwards. `store` is a host capability rather than a scoped tool, so it is present whether or not the block asks for anything.
-
-A chunk's top-level return value ends the run. Only a scalar is accepted - string, integer, number, or boolean - and returning a table is `Error::Lua`.
-
-## `store` is a run-scoped virtual filesystem
-
-`Store` is a cheaply cloneable handle over `Arc<Mutex<Box<dyn FileStore + Send + Sync>>>`, so the same files are reachable from the synchronous Lua VM and from an asynchronous tool. `Store::memory()` builds one over `MemVfs`, the in-memory backend, and `FileStore` is the backend contract a filesystem or network backend would implement.
-
-Six operations: `write`, `append`, `read`, `str_replace`, `delete`, and `glob`. Two of the shapes are deliberate rather than incidental. `read` returns numbered lines - the 1-based number right-aligned to the width of the highest, then `"| "` - which is for navigation and error messages and is not a wire format. `str_replace` is anchored rather than offset-based and requires the anchor to occur exactly once: zero matches is `StoreError::AnchorNotFound` and more than one is `StoreError::AnchorAmbiguous` carrying the count, so an edit never lands on an arbitrary match. `glob` supports `*` within one path segment and `**` across segments.
-
-The caller creates one handle and passes it in, and every section gets that same handle, which is what makes the store the one thing that survives a section boundary. It is exposed to Lua and to nothing else: there are no model-facing file tools.
-
-## Tools are a dyn-dispatched trait, scoped per section
-
-`Tool` has five methods: `name`, `description`, `parameters_schema` returning a JSON Schema value, an async `call(Value) -> Result<String>`, and `untrusted_output`, which defaults to `false`.
-
-The loop for a section runs to a cap - the prompt's `max_tool_iterations` when it declares one, otherwise 24. Each round trip either yields text, which is the section's reply and returns immediately, or a batch of tool calls. For a batch, the assistant turn is echoed back into the history verbatim in the OpenAI wire shape, each call is dispatched, and each result is appended as a `tool` turn before the conversation is re-sent. A call naming a tool that was not provided is `Error::UnknownTool`; the cap reached without a text reply is `Error::ToolLoopExhausted`.
-
-A tool declaring `untrusted_output` has its result wrapped before it enters the history: a sentence saying the enclosed text is data to analyze rather than instructions to follow, then the content between `<untrusted_input_{nonce}>` tags. The nonce is one random `u64` in hex, generated once per section, and it lives in the tag name rather than in an attribute so the closing delimiter is unguessable. Any literal occurrence of either tag inside the content is defanged by replacing its leading `<` with `&lt;`, so fetched content cannot forge the close and break out.
-
-`WebSearch` is the one tool the crate ships. It posts the arguments to the gateway's `POST /v1/tools/web_search` with the shared bearer token and returns the body verbatim, so the search provider's key never reaches this process. It validates that `query` is present before spending a round trip, and it does not declare `untrusted_output`.
-
-## The gateway client speaks non-streaming chat completions
-
-`GatewayClient` holds a base URL, the shared token, and one model name. `complete` sends a message array and, when the caller supplies one, a `tools` array, and returns `CompletionResult::Text` or `CompletionResult::ToolCalls`. Streaming is not supported. `Message`, `ToolSchema`, and `ToolCall` are the wire types; a tool call's `function.arguments` arrives as a JSON-encoded string and is held parsed, falling back to a string value when it is not valid JSON.
-
-`GatewayClient::from_env` reads `PROMPTFORGE_TOKEN`, which is required and whose absence is `Error::MissingEnv`, `PROMPTFORGE_BASE_URL`, defaulting to `http://127.0.0.1:8081/v1`, and `PROMPTFORGE_MODEL`, defaulting to the public constant `DEFAULT_MODEL`. `RunOptions::client` is `None` for a caller that wants that - the CLI - and `Some` for a caller configured from a file, which is what the MCP server passes.
-
-## Observer
-
-```rust
-pub trait Observer: Send + Sync {
-    fn on_event(&self, ev: &Event);
-}
-
-#[non_exhaustive]
-pub enum Event {
-    RunStarted { prompt: String, sections: usize },
-    SectionStarted { completed: u32, name: String },
-    SectionFinished { name: String },
-    ModelTurn { section: String, turn: u32 },
-    ToolCalled { section: String, tool: String, ok: bool },
-    RunFinished { turns: u32, elapsed_ms: u64, ok: bool },
-}
-```
-
-`on_event` is synchronous, sits on the run's own path, and must not block, await, or perform I/O; an implementation that forwards elsewhere queues and returns. An event is a report and never a decision, so dropping every one of them leaves the run's result unchanged, which is what lets `NullObserver` be what a caller wanting silence passes.
-
-`completed` counts sections entered including the current one, so the first is 1, and it never decreases. `RunStarted::sections` is how many top-level sections the prompt declares, documented as a bound rather than a prediction because an early return means fewer.
-
-`Event` derives `Serialize` and serializes externally tagged - one object whose single key is the variant name. It does not derive `Deserialize`. A test holds the exact JSON of all six variants, and a second test's exhaustive match makes a new variant fail to compile until it is added to both.
-
-## Errors are one enum
-
-One `Error` type spans parsing, transport, and execution, `#[non_exhaustive]`, built with `thiserror`, with the transport variant boxing its source so no dependency's error type reaches the public API. The variants are `Parse`, `MissingEnv`, `Http`, `Backend { status, body }`, `MalformedResponse`, `Lua`, `Substitution`, `ToolLoopExhausted`, `UnknownTool`, `UnknownScopedTool`, and `UnsupportedVersion`. `StoreError` in the store module is separate and also `#[non_exhaustive]`.
-
-There is no split between a parse error, a validation error, and a run error, because there is no validation step to own the middle one.
-
-## Tests
-
-Unit tests live beside the code they test and the executor's live in `src/execute/tests.rs`. What is covered today: parsing of every frontmatter field and each malformed case, the Lua fence split and its non-cases, recursive nesting and a skipped level, the first H2 being the entry whatever it is called, and the version gate in all four of its readings; substitution of each namespace, a table rendering as JSON, and each failure; the sandbox's absent globals and the instruction budget aborting a runaway loop; `tools.add` accumulating, de-duplicating, and recording from inside a branch; every store operation, its errors, and a Lua write being visible on the caller's handle; the tool loop against an in-process axum gateway, including the guard block appearing in the re-sent conversation; and the observer's event shapes.
-
-The in-process axum gateway is the crate's test fixture and is what the other crate documents mean when they refer to testing without a live service. There is no recording extension, because there are no extensions.
-
----
-
 # Part II - Designed and not built
 
-Nothing in this part exists in the crate. It is unchanged from the document that preceded the separation, except that a passage whose built half moved to Part I says so where the reader would otherwise expect it.
+Nothing in this part exists in the crate. It is unchanged from the document that preceded the separation, except that a passage whose built half moved to the crate's own document says so where the reader would otherwise expect it.
 
 ## The scope as designed
 
@@ -172,7 +41,7 @@ What it does not do, and cannot be made to do without a change to this document:
 
 The test of the boundary: a project with no relation to WG21 can depend on this crate, write its own extensions, and get a working prompt runtime without deleting a line.
 
-Two of those five are refuted by the code rather than merely unbuilt, and Part I says which.
+Two of those five are refuted by the code rather than merely unbuilt, and the crate's own document says which.
 
 ## Public API
 
@@ -249,7 +118,7 @@ pub enum Level { H2, H3 }
 
 `params` is a JSON Schema object. `tools` lists the canonical names this prompt calls anywhere, which is what startup validation checks against configuration. `state` declares the prompt's own state-filing tools, specified under the prompt file format below. `progress` maps section name to the static text a caller displays while that section runs, and is the fallback when no narrator is present.
 
-The parser that exists is in Part I: same total-and-inert property, a different frontmatter, differently named section fields, deeper nesting, and no `section()`.
+The parser that exists is in the crate's own document: same total-and-inert property, a different frontmatter, differently named section fields, deeper nesting, and no `section()`.
 
 ### Slot and tool resolution
 
@@ -410,7 +279,7 @@ pub struct CallCtx {
 
 `surfaces` is the extension's declaration, not a core policy. The core enforces it: a `LuaOnly` tool is absent from the schema list sent to the model, and a `ToolOnly` tool is absent from the Lua environment.
 
-The `Tool` trait in Part I is what exists in place of all of this: one surface, the model's, and a `String` result rather than a `Value`.
+The `Tool` trait the crate's own document describes is what exists in place of all of this: one surface, the model's, and a `String` result rather than a `Value`.
 
 ### `register_capability` builds a ToolDef from a typed handler
 
@@ -550,7 +419,7 @@ Five checks keep the table honest, following the pattern the schema round-trip e
 
 ### The rest of the observer
 
-The trait, its contract, and six of the variant names, with different fields, are in Part I. The designed `Event` is larger, and its extra variants are the ones that report machinery that does not exist: jumps, tasks, fan-out, narration, section skips and retries, and a written output.
+The trait, its contract, and six of the variant names, with different fields, are in the crate's own document. The designed `Event` is larger, and its extra variants are the ones that report machinery that does not exist: jumps, tasks, fan-out, narration, section skips and retries, and a written output.
 
 ```rust
 pub trait Observer: Send + Sync {
@@ -627,7 +496,7 @@ An earlier draft carried a second output kind, `Rows { table }`, resolving throu
 
 `Format` and `OutputKind` are separate because `format` is a property of a file and `kind` is what sort of thing an output is. The single-variant `OutputKind` therefore reads redundantly today. Tension: a reader may reasonably ask why the wrapper survives; the answer is only that flattening it is a breaking wire change for the two binaries and the wrapper costs nothing.
 
-Of the serde claim above, only `Serialize` on `Event` is built, and only on the six-variant `Event` in Part I.
+Of the serde claim above, only `Serialize` on `Event` is built, and only on the six-variant `Event` the crate's own document describes.
 
 ### Executor
 
@@ -690,11 +559,11 @@ A single `RunConfig` struct rather than eight positional arguments, because the 
 
 The three task limits exist because a runaway fan-out is a documented failure mode rather than a hypothetical one: spawning fifty subagents for a simple query is the case explicit scaling rules were added upstream to prevent.
 
-What exists is five positional arguments and a two-field options struct, returning a `String`; Part I has it. Of `Limits`, only the per-section tool-loop cap is built, and it is a frontmatter field rather than a limits struct. `max_lua_calls_per_section` has a cousin in the instruction budget, which counts VM instructions rather than host calls.
+What exists is five positional arguments and a two-field options struct, returning a `String`; the crate's own document has it. Of `Limits`, only the per-section tool-loop cap is built, and it is a frontmatter field rather than a limits struct. `max_lua_calls_per_section` has a cousin in the instruction budget, which counts VM instructions rather than host calls.
 
 ## Prompt file format
 
-Frontmatter, the H2/H3 heading structure, the single Lua fence per section, and `{{ }}` substitution before the model sees the prose are all built and are described in Part I; the frontmatter fields and the substitution namespaces are not the ones below.
+Frontmatter, the H2/H3 heading structure, the single Lua fence per section, and `{{ }}` substitution before the model sees the prose are all built and are described in the crate's own document; the frontmatter fields and the substitution namespaces are not the ones below.
 
 ```markdown
 ---
@@ -821,7 +690,7 @@ The core host names are `state`, `store`, `tools`, `params`, `context`, `section
 | `Task`, `fanout` | core | Dispatch a section as a subagent, one or many. |
 | everything else | extensions | `classify`, a paperstore name, whatever was linked. |
 
-Of those twelve, one and a half are built and neither means what it says here: `tools` has `add` and no `remove`, and `store` is the virtual filesystem rather than the query interface. Part I has the five names that are actually in scope.
+Of those twelve, one and a half are built and neither means what it says here: `tools` has `add` and no `remove`, and `store` is the virtual filesystem rather than the query interface. The crate's own document has the five names that are actually in scope.
 
 `return_result` is a bare function rather than a member of an object because it is the same name the model calls, spelled identically. It is the only core name on both surfaces, for the reason given under the canonical vocabulary: the family rule would give `return.result`, which is a Lua syntax error.
 
@@ -975,7 +844,7 @@ Blobs are run-scoped rather than section-scoped, and that is the second reason t
 
 The `staker` example above shows the split. `add_statement` files a structured record, which is what makes `store.count("statements")` a meaningful precondition and what the `positions` rows output resolves from, while the statement text is appended to `statements.md`, which is what `## Evaluate` actually reads after `goto` has destroyed the conversation that gathered it. Tension: the gathering section writes each statement twice, once as a record and once as text, which is a real reliability cost paid to keep structure and prose in the places that can use them.
 
-The run-scoped blob store is built and is in Part I under the name the code gives it, `store`. Two things here are not: the four model-facing file tools, so no model can read or write a blob and the sandbox argument above buys nothing yet, and the division of labour, since the other half of it does not exist.
+The run-scoped blob store is built and is in the crate's own document under the name the code gives it, `store`. Two things here are not: the four model-facing file tools, so no model can read or write a blob and the sandbox argument above buys nothing yet, and the division of labour, since the other half of it does not exist.
 
 ### Completion and failure detection
 
@@ -990,7 +859,7 @@ Two failures remain, and both are real rather than ceremonial:
 
 These check semantic validity, did the model do the work, rather than structural validity, is the shape right, which is the argument [design-promptforge.md](design-promptforge.md) makes at length and this document does not restate. Tension: the language document also specifies flagging a required tool that was never called, and nothing in frontmatter declares which tools are required, so that third layer is unimplemented and listed under `## Open`.
 
-The first paragraph is built - a text reply ends the section and there is no `done()` - and Part I says so. Of the two failures, the first is built in a narrower form: one cap over round trips, reached is `Error::ToolLoopExhausted`, which fails the run rather than being handed to a postcondition. The second is not built at all, since there is no `check`, no retry, and no store for an assertion to inspect.
+The first paragraph is built - a text reply ends the section and there is no `done()` - and the crate's own document says so. Of the two failures, the first is built in a narrower form: one cap over round trips, reached is `Error::ToolLoopExhausted`, which fails the run rather than being handed to a postcondition. The second is not built at all, since there is no `check`, no retry, and no store for an assertion to inspect.
 
 ### Sandbox
 
@@ -1006,7 +875,7 @@ Every number here is a first cut chosen to be obviously generous rather than tun
 
 One `Lua` per run, not per section. The core installs the capability families once at run start, from the resolved `ToolMap`. `state` persists across the context clear because it lives on the Rust side, not in Lua.
 
-This is the passage where the difference matters most and Part I has the built version. The engine is `mlua` 0.10 with `lua54` and `vendored`, not 0.11.6 with `luau`, so the allowlist argument above is a decision still to be taken and the shipped sandbox is a hand-maintained blocklist of the kind it was written against. Of the three limits, the instruction budget is built at the same order of magnitude but with a hook every 10,000 instructions rather than an interrupt every 100,000, and it is a constant rather than a configuration value; no `require` is built; the memory ceiling is not. A VM is built per section rather than per run, so nothing persists in Lua across a section boundary in the first place.
+This is the passage where the difference matters most and the crate's own document has the built version. The engine is `mlua` 0.10 with `lua54` and `vendored`, not 0.11.6 with `luau`, so the allowlist argument above is a decision still to be taken and the shipped sandbox is a hand-maintained blocklist of the kind it was written against. Of the three limits, the instruction budget is built at the same order of magnitude but with a hook every 10,000 instructions rather than an interrupt every 100,000, and it is a constant rather than a configuration value; no `require` is built; the memory ceiling is not. A VM is built per section rather than per run, so nothing persists in Lua across a section boundary in the first place.
 
 ## Execution model
 
@@ -1047,7 +916,7 @@ What replaced it costs one line per section and buys an explicit control-flow gr
 
 The cost is honest and worth stating. A four-section linear pipeline now carries four `break_section` lines that say nothing a reader could not have inferred from the order, and an author who forgets one gets a run that stops early rather than an error, because no declared exit is a legal way to end. That last case is the one to watch: the failure is silent and looks like success. The unreachable-section check catches it in the common shape, since a section nobody exits to is exactly what a forgotten `break_section` produces.
 
-The implicit advance this rejects is exactly what the crate does. What ships is the earlier draft with the `goto` override removed as well, so file order is the whole control-flow graph and there is nothing to walk; Part I has it.
+The implicit advance this rejects is exactly what the crate does. What ships is the earlier draft with the `goto` override removed as well, so file order is the whole control-flow graph and there is nothing to walk; the crate's own document has it.
 
 Model context is destroyed on every transition, `break_section` and `goto` alike. The target section is rebuilt from its prose, its injected context, and its scoped tool schemas; the run state store survives and the conversation does not. That clearing also resets the instruction-decay that sets in past roughly fifteen tool calls, because each section starts the counter over. Every turn of a run carries the same endpoint pin per model, which the `GatewayClient` holds, so the section prefix stays in one pod's cache.
 
@@ -1075,7 +944,7 @@ Both are best-effort and this is a real limit rather than a caveat. The walk rea
 
 `thiserror` for these; `anyhow` never appears in this crate's public surface.
 
-Three enums, one per phase, is not what exists: there is one `Error`, in Part I, and no validation phase for a `ValidateError` to belong to. The `thiserror`-and-no-`anyhow` rule is built and holds.
+Three enums, one per phase, is not what exists: there is one `Error`, in the crate's own document, and no validation phase for a `ValidateError` to belong to. The `thiserror`-and-no-`anyhow` rule is built and holds.
 
 ## Tests
 
@@ -1097,7 +966,7 @@ Three enums, one per phase, is not what exists: there is one `Error`, in Part I,
 
 The recording extension and the fake gateway are the crate's test fixtures and are what the other crate docs mean when they refer to testing without a live service.
 
-Part I lists what is covered today. The fake gateway exists, in-process on axum; the recording extension does not, and most of the list above tests machinery that is not built.
+The crate's own document lists what is covered today. The fake gateway exists, in-process on axum; the recording extension does not, and most of the list above tests machinery that is not built.
 
 ## Open
 
