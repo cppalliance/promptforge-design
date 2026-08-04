@@ -27,7 +27,7 @@ It links `promptforge` for data types only - `Prompt`, `Frontmatter`, `Event`, `
 
 `--local` is dropped. `promptforge run` has exactly one implementation: resolve, connect, coerce, invoke, render, print. Three reasons, in order of weight.
 
-The testability that motivated the flag is already delivered by the core crate. `design-core.md` ships a fake gateway and a recording extension as its test fixtures, so an integration test links `promptforge` directly, builds a `RunConfig`, calls `Executor::run`, and asserts on the exact `Event` sequence and on extension lifecycle ordering. Neither of those is observable through a terminal. `--local` was a worse version of a test that the core crate already supports, exposed as product surface.
+The testability that motivated the flag is already delivered by the core crate. `design-core-residue.md` ships a fake gateway and a recording extension as its test fixtures, so an integration test links `promptforge` directly, builds a `RunConfig`, calls `Executor::run`, and asserts on the exact `Event` sequence and on extension lifecycle ordering. Neither of those is observable through a terminal. `--local` was a worse version of a test that the core crate already supports, exposed as product surface.
 
 Development already runs the whole stack on one machine, and `design.md` makes that environment first-class rather than a degraded mode. The service is therefore on the developer's own loopback or LAN address, and `promptforge run` reaches it with a URL and nothing else. `--local` would exist to bypass a process running a few hundred microseconds away.
 

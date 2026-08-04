@@ -1,14 +1,16 @@
-<!-- STATUS: crate doc - promptforge-core (library) - part I as-built has moved to crates/promptforge-core/design-core.md; what remains is designed-and-unbuilt - see design.md for the system -->
+<!-- STATUS: residue - promptforge-core - forward design, almost none of it built; the crate's as-built document is crates/promptforge-core/design-core.md - see design.md for the system -->
 
-# `promptforge`: the core library
+# `promptforge-core` residue: the runtime the core was designed to be, and is not
 
-What the crate at `crates/promptforge-core` does today is described by that crate's own `design-core.md`, which sits beside the code it describes. It was Part I of this document and has left it, so the content exists once. What remains here is everything that was designed and has not been built.
+This is forward design, and it is the largest of the four residues because it is where the designed runtime lives. Almost nothing specified below exists. The `Executor` and its `RunConfig`, the string newtypes and the `SlotMap` and `ToolMap` that resolve them, the `Extension` trait with its lifecycle events and `register_capability`, the closed canonical tool vocabulary and the Lua families derived from it, all six core tools including `return_result` and the four virtual-file operations, structured run state with the filing tools a prompt declares in its own frontmatter, declared outputs and the roots they resolve against, explicit exits through `break_section`, `goto`, `Task` and `fanout`, preconditions and `check()` postconditions with retries, `Limits`, boot validation over the section graph, and nine of the fifteen observer events are all designed and unimplemented. Four things below are partly built: per-section tool scoping, which ships as a filter over a flat slice of tools by string name with no slots and no `ToolMap`; the instruction budget, built at the same order of magnitude but as a constant rather than a configuration value; the per-section round-trip cap, which is a frontmatter field rather than a member of `Limits` and fails the run rather than reaching a postcondition; and context destruction on transition, built for the one transition the crate has.
 
-The built half was small, because the crate is a fall-through MVP and most of what is specified here has never been written. It was also authored from the crate rather than sorted out of this document, since the vocabulary below misnames the shipped thing in enough places that no passage was transferable intact - a built half assembled from this document's own prose would have carried `Executor`, `store`-as-state and `return_result` into a description of code that has none of them.
+What exists today is a fall-through MVP: parse one markdown prompt file, walk its top-level sections in file order, run each section's Lua block, substitute its prose, take one model round trip with a tool-call loop, and return a `String`. The one early exit is a Lua chunk returning at top level, which no model can reach, and the one thing that crosses a section boundary is a run-scoped virtual filesystem the code calls `store`. That crate's own `design-core.md`, at `crates/promptforge-core/design-core.md`, is written from its code and is the document to read for what the core does.
 
-Ten things the separation found, repeated here because the text below still carries the mistaken version of each. Several are the same word meaning two different things, which is why a built half assembled by copying passages that look built would have been worse than no document at all.
+The built half was small enough that it was authored from the crate rather than sorted out of this document, and the reason is the list below: the vocabulary here misnames the shipped thing in enough places that no passage was transferable intact. A built half assembled from this document's own prose would have carried `Executor`, `store`-as-state and `return_result` into a description of code that has none of them.
 
-- **The crate is `promptforge-core`, and there is no `Executor`.** A run is the free function `execute::run(prompt, args, tools, store, opts)`, and its options struct is `RunOptions`, which carries an observer and an optional client and nothing else. `RunConfig`, `Executor::new`, `Outcome`, and `Limits` do not exist. The title above still says `promptforge` and is left alone; the crate's own document has the right one.
+So a reader who came here for what the runtime does needs the ten findings below before reading anything else. Several are the same word meaning two different things, and the text further down still carries the mistaken version of each.
+
+- **The crate is `promptforge-core`, and there is no `Executor`.** A run is the free function `execute::run(prompt, args, tools, store, opts)`, and its options struct is `RunOptions`, which carries an observer and an optional client and nothing else. `RunConfig`, `Executor::new`, `Outcome`, and `Limits` do not exist.
 - **`store` names a different subsystem in each.** The document's `store` is structured run state a prompt queries with `count`, `exists`, and `get`. The code's `store` is a run-scoped virtual filesystem with `write`, `append`, `read`, `str_replace`, `delete`, and `glob`. They share a name and nothing else, and none of the document's `store` prose describes anything that exists.
 - **There is no `return_result`.** A section ends the run by its Lua chunk returning a value at top level, which no model can reach. The tool the document puts in every section's schema list is not bound, and no core tool of any kind is exposed to a model.
 - **The field names differ where a reader would not look twice.** `Section.prose` and `Section.lua`, not `body` and `script`. `Frontmatter.version` is a `u32`, not a `String`. The entry point is the first top-level section whatever it is called, not `## Main`, and there is a test asserting exactly that.
@@ -19,11 +21,7 @@ Ten things the separation found, repeated here because the text below still carr
 - **The observer does emit a denominator.** `Event::RunStarted` carries `sections`, the count of top-level sections the prompt declares. The document argues at length that there is deliberately none. The code's version is documented as a bound rather than a prediction, which is a narrower claim than the document rejects, but it is a number a client can render a fraction from.
 - **`Event` derives `Serialize` only.** The document has the wire types deriving both directions so the two binaries share one definition. Nothing in the crate deserializes an event.
 
----
-
-# Part II - Designed and not built
-
-Nothing in this part exists in the crate. It is unchanged from the document that preceded the separation, except that a passage whose built half moved to the crate's own document says so where the reader would otherwise expect it.
+Everything from here down is unchanged from the specification that preceded the separation, except that a passage whose built half moved to the crate's own document says so where the reader would otherwise expect it.
 
 ## The scope as designed
 
@@ -848,7 +846,7 @@ The run-scoped blob store is built and is in the crate's own document under the 
 
 ### Completion and failure detection
 
-A section ends when the model returns a turn carrying no tool calls. That is the ordinary termination of any tool-call loop and needs no signal from the prompt: the model has nothing left to do, so it says so in prose and the executor moves on. `check` then runs, and on success the executor advances.
+A section ends when the model returns a turn carrying no tool calls, which is built and is described in the crate's own document. That is the ordinary termination of any tool-call loop and needs no signal from the prompt: the model has nothing left to do, so it says so in prose and the executor moves on. What was designed on top of it is `check`, which runs at that point and lets the executor advance only on success.
 
 An earlier draft required the model to call a `done()` tool to end a section, and it is removed. It signalled nothing the empty turn does not already signal, it spent a tool slot and its schema tokens in every section of every prompt, and it introduced a failure mode of its own: a model that finished its work correctly but omitted the ceremonial call was scored as a failed run. The remaining signals are stronger than it was and cost nothing.
 
@@ -859,7 +857,7 @@ Two failures remain, and both are real rather than ceremonial:
 
 These check semantic validity, did the model do the work, rather than structural validity, is the shape right, which is the argument [design-promptforge.md](design-promptforge.md) makes at length and this document does not restate. Tension: the language document also specifies flagging a required tool that was never called, and nothing in frontmatter declares which tools are required, so that third layer is unimplemented and listed under `## Open`.
 
-The first paragraph is built - a text reply ends the section and there is no `done()` - and the crate's own document says so. Of the two failures, the first is built in a narrower form: one cap over round trips, reached is `Error::ToolLoopExhausted`, which fails the run rather than being handed to a postcondition. The second is not built at all, since there is no `check`, no retry, and no store for an assertion to inspect.
+Of the two failures, the first is built in a narrower form: one cap over round trips, reached is `Error::ToolLoopExhausted`, which fails the run rather than being handed to a postcondition. The second is not built at all, since there is no `check`, no retry, and no store for an assertion to inspect.
 
 ### Sandbox
 

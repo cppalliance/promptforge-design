@@ -465,7 +465,7 @@ A pack is where it becomes checkable, because the prefix is then a string this c
 
 ### Why the gateway, and not the core
 
-Because the core has no edge to a backend. [design-core.md](design-core.md) holds a `GatewayClient` its caller constructed and states that talking to an LLM backend is not something it does. Every piece of knowledge about a backend's dialect already lives in this crate, and the `Upstream` trait is already the place that knowledge goes.
+Because the core has no edge to a backend. [design-core-residue.md](design-core-residue.md) holds a `GatewayClient` its caller constructed and states that talking to an LLM backend is not something it does. Every piece of knowledge about a backend's dialect already lives in this crate, and the `Upstream` trait is already the place that knowledge goes.
 
 A pack is a third `Upstream` implementation, and the only one translating below the chat-completions layer rather than across to a second chat API. Anthropic translates one chat protocol into another; a pack translates a chat protocol into raw text. The trait carries both without a new concept.
 
