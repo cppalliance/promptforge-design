@@ -236,9 +236,9 @@ flowchart TD
 
 ### Catalog resolution
 
-How prompts enumerate on the MCP surface is settled: `design.md` gives each enabled prompt its own MCP tool, on the tools primitive, and `design-mcp.md` rejects both the dispatcher and the hybrid. `PerPrompt` is therefore the shape every deployment serves today.
+How prompts enumerate on the MCP surface is settled, and settled the other way since this was written: `design-mcp-server-residue.md` gives each enabled prompt its own MCP tool and rejects both the dispatcher and the hybrid, and that decision has been reversed. The server publishes four fixed built-ins and runs the prompt a caller names to `run_prompt`, so `Dispatcher` is the shape every deployment serves today and `PerPrompt` is the shape none does.
 
-One type still absorbs the shape and one function still chooses it, and nothing else in the crate branches on the answer. The justification is no longer that the decision is open, because it is not. It is that `design-mcp.md` records the rejected hybrid as reachable without rework - adding a dispatcher for a demoted tail is additive to a per-prompt surface while the reverse is not - and leaves the catalog size at which that becomes worth doing as an open threshold question. Absorbing both shapes costs one enum, one `invocation` call, and one extra row in the fake-server test matrix, which is a smaller bill than teaching `run` and `list` a second calling convention after forty prompts have already degraded a client's selection. Tension: the crate carries a variant nothing serves, so the second arm of every match on `Catalog` is untested against a real service and is only as correct as the fake server that stands in for one.
+One type still absorbs the shape and one function still chooses it, and nothing else in the crate branches on the answer. The justification is no longer that the decision is open, because it is not. It is that `design-mcp-server-residue.md` records the rejected hybrid as reachable without rework - adding a dispatcher for a demoted tail is additive to a per-prompt surface while the reverse is not - and leaves the catalog size at which that becomes worth doing as an open threshold question. Absorbing both shapes costs one enum, one `invocation` call, and one extra row in the fake-server test matrix, which is a smaller bill than teaching `run` and `list` a second calling convention after forty prompts have already degraded a client's selection. Tension: the crate carries a variant nothing serves, so the second arm of every match on `Catalog` is untested against a real service and is only as correct as the fake server that stands in for one.
 
 ```rust
 pub enum Catalog {
@@ -276,7 +276,7 @@ $ echo $?
 4
 ```
 
-Tension: `Entry.extra` carries frontmatter the standard catalog fields have no room for. `design-mcp.md`'s `GET /v1/prompts` publishes the full frontmatter, so the field set is settled, and the CLI still degrades rather than fails when a field is absent, printing fewer columns and omitting keys instead of inventing them.
+Tension: `Entry.extra` carries frontmatter the standard catalog fields have no room for. `design-mcp-server-residue.md`'s `GET /v1/prompts` publishes the full frontmatter, so the field set is settled, and the CLI still degrades rather than fails when a field is absent, printing fewer columns and omitting keys instead of inventing them.
 
 ### Parameters: `key=value` against the schema
 
@@ -374,7 +374,7 @@ pub trait ProgressSink: Send + Sync {
 
 `ProgressSink` is the wire-side counterpart of the core's `Observer`, and the projection between them is lossy on purpose. `ToolCalled`, `ModelTurn`, and `Jumped` do not fit two fields, so the terminal does not see them unless the service publishes the serialized `Event` alongside the standard fields; the verbose path consumes that when present and falls back to one line per notification when it is not.
 
-`Tick` carries no `total` because the service never sends one: a run's section count is not known in advance, for the reasons `design-mcp.md` gives. There is therefore no fraction and no filling bar anywhere in this renderer, and `index` is used only to detect that something advanced.
+`Tick` carries no `total` because the service never sends one: a run's section count is not known in advance, for the reasons `crates/promptforge-mcp-server/design-mcp-server.md` gives. There is therefore no fraction and no filling bar anywhere in this renderer, and `index` is used only to detect that something advanced.
 
 MCP requires `progress` to increase, so a retry arrives as text in `message` rather than as a falling number. The renderer clamps a decreasing index to the previous value, since a conforming server never sends one. Tension: a retried section is visible as words and not as motion, so a long retry loop looks like a stalled section.
 
