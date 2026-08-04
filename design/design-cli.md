@@ -1,33 +1,10 @@
-<!-- STATUS: crate doc - promptforge-cli (binary) - split into part 1 as-built and part 2 designed-and-unbuilt - see design.md for the system -->
+<!-- STATUS: crate doc - promptforge-cli (binary) - part 1 as-built has moved to crates/promptforge-cli/design-cli.md; what remains is designed-and-unbuilt - see design.md for the system -->
 
 # `promptforge-cli`: the terminal client
 
-This document is separated into two parts. Part 1 is what the crate at `crates/promptforge-cli` does today, and every claim in it was checked against that crate's code, which is cited. Part 2 is the rest of the document, unchanged, which is design that was never built.
+What the crate at `crates/promptforge-cli` does today is described by that crate's own `design-cli.md`, written from its code. It was Part 1 of this document and has left it, so the content exists once.
 
-The divergence is total rather than partial, so the parts are wildly uneven: Part 1 is a page and Part 2 is everything else. The document specifies a terminal client of the MCP server, and the crate is an in-process runner that speaks to no server at all.
-
-# Part 1: What the crate does today
-
-Every claim below is one this document makes and the crate satisfies, with what the code does differently in the same breath. Nothing else in this document is built.
-
-- **The binary is `promptforge`.** `Cargo.toml` sets `[[bin]] name = "promptforge"`. The document reaches that name through clap's `#[command(name = "promptforge")]`; the crate has no clap dependency and no `Cli` type, so the name is all that survives.
-- **There is a `run` subcommand, and it is the only one.** `src/main.rs` matches `Some("run")` and answers anything else with a usage line on stderr. `list` and `validate` do not exist. `run`'s argument is a path to a prompt file rather than a name from a service catalog, so the word is shared and the meaning is not.
-- **`main` returns `ExitCode` rather than `Result`,** for the reason the document gives: `Result` in `main` prints the `Debug` form, which is the wrong text for a user. `src/main.rs` line 21.
-- **tokio provides the runtime.** `Cargo.toml` lists it and `#[tokio::main]` uses it. The document's other use for tokio, `tokio::signal` for Ctrl-C and SIGTERM, is absent.
-- **Errors go to stderr and the run's result goes to stdout.** Every failure path in `src/main.rs` is an `eprintln!`, and `src/tools.rs` returns `anyhow` errors (lines 33 and 39) that `src/main.rs` line 79 prints to stderr; the one success path is `println!("{result}")`. That split is as far as the document's output discipline reaches: `result` is the `String` that `execute::run` returns (`crates/promptforge-core/src/execute.rs` line 163), not one absolute path per file output, there are no file outputs, and no ANSI byte reaches either stream because nothing colours anything.
-- **Exit 0 means success.** `ExitCode::SUCCESS` on that one path. Every other path is `ExitCode::FAILURE`, which is 1, where the document's 1 means an internal error specifically; its codes 2 through 9, 130, and 143 have no counterpart in the crate.
-- **`PROMPTFORGE_TOKEN` is read from the environment** (`src/main.rs` line 71), the one variable name shared with the document. It carries a bearer for the gateway so that `web_search` can proxy, not a bearer for a promptforge service. The document's `PROMPTFORGE_URL` does not exist: the crate reads `PROMPTFORGE_BASE_URL` (`src/main.rs` line 70), and that too points at the gateway.
-- **`Prompt::parse` is the core's own parser and the crate calls it rather than copying it** (`src/main.rs` line 62). The document says that of `validate`, about files named on the command line; the crate does it in `run`, about the file being run.
-
-### Crate behaviour this document never described
-
-Recorded here because Part 1 would otherwise read as the whole of what the crate does. These are facts about the code, not design, and none of them appears anywhere in Part 2.
-
-- A file whose frontmatter declares no `promptforge:` version is refused before it is parsed (`src/main.rs` line 55).
-- `run` takes at most one input after the path and hands it to the executor as the single raw `args` string (`src/main.rs` line 30). There are no `key=value` pairs and no parameter schema.
-- The run-scoped store is the in-memory sandbox backend, created once and shared by every section (`src/main.rs` line 87).
-- Progress is discarded through `NullObserver` (`src/main.rs` line 93).
-- Tool names resolve in-process (`src/tools.rs`): `web_fetch` binds to a local implementation and is always available, `web_search` binds to a gateway-backed one and requires the base URL and token, and any other name is an error.
+The divergence is total rather than partial, which is why the part that left was a page and this is everything else: this document specifies a terminal client of the MCP server, and the crate is an in-process runner that speaks to no server at all.
 
 # Part 2: Designed and not built
 
