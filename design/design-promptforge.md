@@ -1,6 +1,6 @@
 <!-- STATUS: prompt language design document - authoritative for language semantics -->
 <!-- Predates the Rust decision. Where this names Python, lupa, or a Python harness line count, design.md supersedes it; the semantics here stand. -->
-<!-- System design: design.md. Crate docs: design-core.md, design-gateway.md, design-mcp.md, design-cli-residue.md, design-paperstore.md, design-classify.md -->
+<!-- System design: design.md. Crate docs: design-core.md, design-gateway-residue.md, design-mcp.md, design-cli-residue.md, design-paperstore.md, design-classify.md -->
 
 # PromptForge: A Markdown-Driven Pipeline Runtime
 

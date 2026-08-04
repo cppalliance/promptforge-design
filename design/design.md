@@ -22,7 +22,7 @@ Two documents sit above the crates and answer different questions.
 Then one document per crate, at implementable depth, each authoritative for its own internals.
 
 - [design-core.md](design-core.md) - `promptforge`, the library: `Executor`, `Extension`, `Prompt`, the resolution types, the observer, the Lua sandbox
-- [design-gateway.md](design-gateway.md) - `promptforge-gateway`: the chat completions surface, routing, admission, pinning, `gateway.toml`
+- [design-gateway-residue.md](design-gateway-residue.md) - `promptforge-gateway`: the unbuilt service - admission, pinning, streaming, the Anthropic shim, model packs, hot reload, the rest of `gateway.toml`. The crate that exists routes chat completions onto one endpoint per model and is documented in its own `design-gateway.md`
 - [design-mcp.md](design-mcp.md) - `promptforge-mcp-server`: the MCP command surface, progress notifications, the Django endpoints, `prompts.toml`
 - [design-cli-residue.md](design-cli-residue.md) - `promptforge-cli`: the unbuilt terminal client - `run`, `list`, `validate`, terminal progress, exit codes. The crate that exists runs one prompt file in process and is documented in its own `design-cli.md`
 - `web_fetch` moved to its own crate `promptforge-webfetch`, documented in that crate's `design-webfetch.md`: a guarded URL fetcher with the URL and address SSRF defence. `web_search` remains a core tool proxied through the gateway.

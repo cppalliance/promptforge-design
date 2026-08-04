@@ -1,24 +1,18 @@
-<!-- STATUS: crate doc - promptforge-gateway (service) - part I as-built has moved to crates/promptforge-gateway/design-gateway.md; what remains is designed-and-unbuilt - see design.md for the system -->
+<!-- STATUS: residue - promptforge-gateway - forward design, none of it fully built; the crate's as-built document is crates/promptforge-gateway/design-gateway.md - see design.md for the system -->
 
-# `promptforge-gateway`: the service that talks to LLM backends
+# `promptforge-gateway` residue: the service the gateway was designed to grow into, and has not
 
-What the crate at `crates/promptforge-gateway` does today is described by that crate's own `design-gateway.md`, which sits beside the code it describes. It was Part I of this document and has left it, so the content exists once. What remains here is everything that was designed and has not been built.
+This is forward design. Nothing specified below is fully built, and most of it does not exist at all: admission control and the whole budget model, endpoint pinning through `X-PromptForge-Run`, streaming, the Anthropic shim, model packs, hot reload and drain, service installation, three of the five designed routes, most of `gateway.toml`, nine of the fifteen error variants, and the entire observability section are all designed and unimplemented. Three things below are partly built: the typed request and response bodies, which ship reduced to `model`, `messages`, and `choices` with everything else kept as opaque JSON; `default_max_tokens`, which parses and is never read; and a model's `endpoints` list, which parses and serves only its first entry.
+
+What exists today is a service that accepts OpenAI-shaped chat completions on one route, resolves the request's model by exact string match to one endpoint fixed at load, holds every backend credential, forwards the request with only `model` substituted, and answers a built-in `web_search` route and an unauthenticated `GET /health`. That crate's own `design-gateway.md`, at `crates/promptforge-gateway/design-gateway.md`, is written from its code and is the document to read for what the gateway does.
 
 The built half was substantial, so what is left is a shorter document rather than a differently shaped one, and where a passage was split - a configuration struct whose fields are half built, a route table with three of five routes serving, an error enum with six of fifteen variants - the part that stayed sits under the heading it had before.
 
-Five things the separation found, repeated here because the text below still carries the mistaken version of each:
+Three claims below are not merely unimplemented but wrong against the code, and they are named here because the text still carries each:
 
-- **The gateway does hold a non-LLM credential.** The `Scope` boundary said it holds none and that the search key lives in `prompts.toml`. The shipped `gateway.toml` carries `[tools.web_search]` with a Brave key, `config.rs` parses it into a `Secret`, and `tools.rs` sends it to Brave. That boundary is not a deferred feature but a claim the code refutes.
-- **`POST /v1/tools/web_search` is absent from this document entirely**, along with its configuration table, its request and response shapes, and the `ToolNotConfigured` error. The crate's own document carries all of it, written from the code.
 - **An endpoint's key is `id`, not `name`.** `EndpointConfig::id` is the handle a `[[model]]` references. This document calls it `name` throughout, including in both profile examples, which therefore do not load.
 - **`default_max_tokens` parses and is never read.** It is a field on `ModelConfig` and nothing in the crate consults it. It is partly built: a configuration carrying it loads, and it changes no request.
 - **A model's `endpoints` list parses and only its first entry is used.** `Routing::from_config` takes `endpoints.first()`. There is no selection among healthy endpoints, so a multi-endpoint model silently serves from one.
-
----
-
-# Part II - Designed and not built
-
-Nothing in this part exists in the crate. It is unchanged from the document that preceded the separation, except that a passage whose built half moved to the crate's document says so where the reader would otherwise expect it.
 
 ## The rest of the HTTP surface
 
@@ -147,7 +141,7 @@ The value is opaque. The gateway does not parse it as a UUID, does not validate 
 
 The `X-` prefix is chosen against RFC 6648's advice, for recognisability and because an unprefixed vendor name risks colliding with a future standard header.
 
-This is the boundary bullet in `Scope` that says the gateway does not know what a run is: the header is the whole of the run concept it was ever meant to hold, and it is not read today.
+This is the boundary bullet in the crate's document that says the gateway does not know what a run is: the header is the whole of the run concept it was ever meant to hold, and it is not read today.
 
 ### `GET /health` beyond liveness, and `GET /status`
 
@@ -289,7 +283,7 @@ flowchart LR
     Company -->|"pods only reachable here"| Pods["RunPod vLLM pods"]
 ```
 
-The reason for the chain rather than a direct home-to-pod hop is the rule from `Scope`: the concurrency budget only holds if exactly one process reaches a given backend, because vLLM's own queue is unbounded. The company gateway is that one process for the pods. A second gateway that reached the pods directly would give each its own budget, and the global cap would be a fiction. So the home gateway does not hold the RunPod credential or an endpoint to the pods at all; it holds an endpoint to the company gateway, and every self-hosted request is admitted, queued, and pinned by the company gateway exactly as a direct request would be. The home gateway's local card, which only it can reach, is its own disjoint backend and needs no coordination.
+The reason for the chain rather than a direct home-to-pod hop is the rule the crate's document draws its boundary on: the concurrency budget only holds if exactly one process reaches a given backend, because vLLM's own queue is unbounded. The company gateway is that one process for the pods. A second gateway that reached the pods directly would give each its own budget, and the global cap would be a fiction. So the home gateway does not hold the RunPod credential or an endpoint to the pods at all; it holds an endpoint to the company gateway, and every self-hosted request is admitted, queued, and pinned by the company gateway exactly as a direct request would be. The home gateway's local card, which only it can reach, is its own disjoint backend and needs no coordination.
 
 `upstream` at each hop is the name the next hop knows the model by, not the name the final pod knows. In the chain above, the home gateway's `reasoning-large` entry sets `upstream = "reasoning-large"`, because the company gateway routes by that name; the company gateway's `reasoning-large` entry sets `upstream = "Qwen/Qwen3-235B-A22B-Instruct-FP8"`, the string the pod knows. Each gateway rewrites `model` for its own next hop and no further. A home entry that put the pod's string in `upstream` would miss the company gateway's routing table and 404. Tension: a model's identity is now spelled in as many places as there are hops, and a rename propagates along the chain rather than in one file.
 
@@ -477,7 +471,7 @@ A pack is a third `Upstream` implementation, and the only one translating below 
 
 Placing it here also means Talktron gets it by changing nothing. Talktron reaches this service through the Python `openai` client and learns only a base URL, so a pack under the gateway benefits every consumer at once, which a pack inside the core library would not.
 
-The `Scope` section is amended by this and the amendment is stated rather than implied: the gateway rewrites the `model` field, for one protocol the envelope shape, and for a model with a pack the whole prompt serialization. It still does not inspect message content for its own purposes, cache it, or log it, and the redaction rule in `Observability` is unchanged.
+The boundary in the crate's document is amended by this and the amendment is stated rather than implied: the gateway rewrites the `model` field, for one protocol the envelope shape, and for a model with a pack the whole prompt serialization. It still does not inspect message content for its own purposes, cache it, or log it, and the redaction rule in `Observability` is unchanged.
 
 ### The trait
 
