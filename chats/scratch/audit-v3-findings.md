@@ -1,0 +1,1 @@
+Check 2 (Purpose) FAILED - Principle 41 (design-principles.md, line 157): the rationale "There is only one version of the binary, and if size becomes a problem the crate gets split later" only restates the mechanism; fix by stating the motivation from the packet's Section VIII stanza facts - without the rule you get a feature-flag build matrix and multiple versions of the binary.
