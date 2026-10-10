@@ -45,11 +45,11 @@ Constructs described below are labeled active (changed by this plan), existing (
 - H: heading references
 - I: `include`, incarnation, inherited Lua, `input`
 - J: `jump(heading)`
-- L: lifecycle, list sections, `list_from_section(heading)`, `local_include`, `log(message)`, `lua`, `lua inherit`
+- L: lifecycle, list sections, `local_include`, `log(message)`, `lua`, `lua inherit`
 - M: deferred `markdown` namespace, `max_tool_iterations`, messages, `messages.new()`, `models.loop`, `models.bind`, `models.default`, `models.get`, `models.infer`, `models.use`
 - N: `name`
 - O: `output`
-- P: deferred `pfanout`, `promptforge: 0`, `prose`, provider projection
+- P: deferred `pfanout`, `prompt.list(heading)`, `prompt.section(heading)`, `promptforge: 0`, `prose`, provider projection
 - R: `require(path)`, `return`
 - S: sections, snapshots, `store.append`, `store.delete`, `store.exists`, `store.glob`, `store.read`, `store.read_numbered`, `store.str_replace`, `store.write`, substitution, `sys`
 - T: task handles, `tasks.await_all`, thematic break, `tools.add`, `tools["add_local"]`, `tools.always`, `tools.bind`, `tools.call`, `tools.calls`
@@ -89,7 +89,7 @@ Optional `input` and `output` declarations contain `path` and `description`. Opt
 
 **Sections.** Exactly one non-empty H1 follows the frontmatter. Text before it is inert preface. H2 through H6 headings form the section tree, levels cannot be skipped, and sibling names must be unique.
 
-Fall-through follows source order. The H1 preamble resolves model and tool bindings and may return a scalar to finish the run. `call`, `call_async`, deferred `execute`, deferred `execute_async`, `jump`, and `list_from_section` are unavailable there.
+Fall-through follows source order. The H1 preamble resolves model and tool bindings and may return a scalar to finish the run. `call_async`, deferred `execute`, and deferred `execute_async` are unavailable there, while `call`, `jump`, and both `prompt` reads work there over the whole top-level slice.
 
 **Pending prose and thematic breaks.** Each section heading starts an empty pending Markdown buffer. Markdown appends to that buffer.
 
@@ -122,7 +122,7 @@ second = prose
 
 Missing, null, malformed, unavailable, or non-JSON values fail at the first read site and may be caught with `pcall`. Bare `{{ var }}`, bare `{{ sys }}`, and recursive `{{ prose }}` are invalid. Assignment to `prose` always fails. Empty output memoizes as the empty string.
 
-**Deferred `markdown` namespace.** A future `markdown` table will give Lua direct access to the Markdown parser (for example `markdown.parse(text)`), following the same namespace convention as `models` and `tools`: namespace functions over plain values, no methods. It is a documented deferred target contract - no parser exposure, tests, or migration in this plan. `list_from_section` remains a control-flow global because it resolves a heading over the document's visible set rather than parsing text.
+**Deferred `markdown` namespace.** A future `markdown` table will give Lua direct access to the Markdown parser (for example `markdown.parse(text)`), following the same namespace convention as `models` and `tools`: namespace functions over plain values, no methods. It is a documented deferred target contract - no parser exposure, tests, or migration in this plan. Heading-resolved reads live in the `prompt` table (`prompt.section` and `prompt.list`), because they resolve a heading over the caller's visible set; `markdown` stays for parsing arbitrary text.
 
 ## Modules and prompt execution
 
@@ -359,11 +359,17 @@ A compactor may call tool-free `models.infer` with or without an explicit handle
 
 Fall-through visits siblings in source order and carries `var`, but no implicit text result. Thematic breaks only clear pending prose and never affect control flow. A heading reference is one or more `#` characters, required whitespace, and exact heading text. The visible set is the current section's siblings except itself plus its direct children. Resolution never searches farther.
 
-### `list_from_section(heading)`
+### `prompt.section(heading)`
 
-**Implementation status:** Existing behavior, unchanged by this plan.
+**Implementation status:** Active: new in this plan.
 
-**Effect:** Reads a visible list section and strips item markers. **Return:** An ordered array of strings. **Failure:** Malformed reference, invisible target, non-list target, or malformed list raises a parse or Lua error. **Example:** `local topics = list_from_section("### Topics")`
+**Effect:** Reads a visible section's own raw Markdown: the text after its heading line up to the next heading of any level, leading blank lines and trailing whitespace trimmed, never run or substituted. **Return:** A string, empty for an empty section, or nil when no visible section has that heading. **Failure:** A non-string target, malformed reference, or ambiguous reference raises a Lua error. **Example:** `local rules = prompt.section("## Rules")`
+
+### `prompt.list(heading)`
+
+**Implementation status:** Active: the list-section read, now `nil` on a miss.
+
+**Effect:** Reads a visible list section and strips item markers. **Return:** An ordered array of strings, or nil when no visible section has that heading. **Failure:** A non-string target, malformed or ambiguous reference, non-list target, or malformed list raises a parse or Lua error. **Example:** `local topics = prompt.list("### Topics")`
 
 ### `call(heading, input?)`
 
