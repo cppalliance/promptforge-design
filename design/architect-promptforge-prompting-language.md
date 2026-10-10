@@ -361,13 +361,13 @@ Fall-through visits siblings in source order and carries `var`, but no implicit 
 
 ### `prompt.section(heading)`
 
-**Implementation status:** Active: new in this plan.
+**Implementation status:** Active.
 
 **Effect:** Reads a visible section's own raw Markdown: the text after its heading line up to the next heading of any level, leading blank lines and trailing whitespace trimmed, never run or substituted. **Return:** A string, empty for an empty section, or nil when no visible section has that heading. **Failure:** A non-string target, malformed reference, or ambiguous reference raises a Lua error. **Example:** `local rules = prompt.section("## Rules")`
 
 ### `prompt.list(heading)`
 
-**Implementation status:** Active: the list-section read, now `nil` on a miss.
+**Implementation status:** Active.
 
 **Effect:** Reads a visible list section and strips item markers. **Return:** An ordered array of strings, or nil when no visible section has that heading. **Failure:** A non-string target, malformed or ambiguous reference, non-list target, or malformed list raises a parse or Lua error. **Example:** `local topics = prompt.list("### Topics")`
 
