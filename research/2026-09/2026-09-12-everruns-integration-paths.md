@@ -1,4 +1,4 @@
-<!-- source: promptforge-design/research/feature-survey-everruns.md (2026-09-12), analyzed against promptforge executor seams -->
+<!-- source: promptforge-design/research/2026-09-12-everruns-feature-survey.md (2026-09-12), analyzed against promptforge executor seams -->
 
 # Everruns Capabilities: Promptforge Integration Paths
 

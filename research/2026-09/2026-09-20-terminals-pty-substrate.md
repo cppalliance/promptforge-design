@@ -86,7 +86,7 @@ This is the one shared-code change with design weight. `ui/layout/keybinding-dis
 
 ### 3.5 The runtime already names the two shell realities
 
-`crates/promptforge-api-types/src/capabilities.rs` lines 295 to 300 document `Capability::conflicts` with one example: "bashkit and a terminal are two filesystem realities, and a context gets one or the other, never both." `crates/promptforge-api-runtime/tests/suite/prepare.rs` lines 599 to 608 exercise a prompt declaring `promptforge/bashkit` and `promptforge/terminal` and assert that preparation names both. `RunServices` holds `vfs: VfsRef` and `cancel: CancelHandle`, and `Contribution` holds `tools`, which is what a Bashkit capability needs. The 2026-09-11 VFS foundation plan (`promptforge/vibe/2026-09-11-3-vfs-foundation.md`) lists a `bashkit-adapter` spike whose deliverable is "evidence, not integration" and records that the workspace toolchain (stable 1.98) is compatible with Bashkit's 1.95 pin. `shared-vfs/src/host.rs` line 11 defers "Stage 2 hardening (the Bashkit RealFs resolver trio, symlink policies, Windows long paths and device names)." No adapter code exists in the tree; `integration-path-everruns-capabilities.md` line 56 calls the spike "completed," which this report could not confirm and treats as unverified.
+`crates/promptforge-api-types/src/capabilities.rs` lines 295 to 300 document `Capability::conflicts` with one example: "bashkit and a terminal are two filesystem realities, and a context gets one or the other, never both." `crates/promptforge-api-runtime/tests/suite/prepare.rs` lines 599 to 608 exercise a prompt declaring `promptforge/bashkit` and `promptforge/terminal` and assert that preparation names both. `RunServices` holds `vfs: VfsRef` and `cancel: CancelHandle`, and `Contribution` holds `tools`, which is what a Bashkit capability needs. The 2026-09-11 VFS foundation plan (`promptforge/vibe/2026-09-11-3-vfs-foundation.md`) lists a `bashkit-adapter` spike whose deliverable is "evidence, not integration" and records that the workspace toolchain (stable 1.98) is compatible with Bashkit's 1.95 pin. `shared-vfs/src/host.rs` line 11 defers "Stage 2 hardening (the Bashkit RealFs resolver trio, symlink policies, Windows long paths and device names)." No adapter code exists in the tree; `2026-09-12-everruns-integration-paths.md` line 56 calls the spike "completed," which this report could not confirm and treats as unverified.
 
 ## 4. What fourteen existing implementations agree on
 
@@ -292,7 +292,7 @@ Bashkit's `realfs` feature for the agent was rejected in favor of `shared-vfs`'s
 
 ### 8.4 Limitations of this assessment
 
-No code was compiled and no prototype was run. Web-sourced facts (star counts, version dates, issue numbers, bundle sizes) were verified by the surveying agents on 2026-09-19 and not re-verified for this report. The effort figures are order-of-magnitude judgments, not estimates from comparable Workshop work. The claim in `integration-path-everruns-capabilities.md` that the Bashkit adapter spike is complete could not be confirmed against the tree and is treated as unverified.
+No code was compiled and no prototype was run. Web-sourced facts (star counts, version dates, issue numbers, bundle sizes) were verified by the surveying agents on 2026-09-19 and not re-verified for this report. The effort figures are order-of-magnitude judgments, not estimates from comparable Workshop work. The claim in `2026-09-12-everruns-integration-paths.md` that the Bashkit adapter spike is complete could not be confirmed against the tree and is treated as unverified.
 
 ## 9. Owner and next steps
 
@@ -313,7 +313,7 @@ Codebase reads, 2026-09-19, all under `c:\Users\Vinnie\cursor\`:
 - `promptforge/crates/workshop/sessions/src/lib.rs` and `src/session.rs`; `crates/workshop/registry/src/traits.rs`; `crates/workshop/user-state/src/store.rs`; `crates/workshop/server/src/app.rs` and `src/routes/realtime.rs`; `crates/workshop/shell/src/gateway/boot.rs`; `crates/build-xtask/src/tidy.rs`.
 - `promptforge/crates/promptforge-api-types/src/capabilities.rs`; `crates/promptforge-api-runtime/tests/suite/prepare.rs`; `crates/shared-vfs/src/router.rs` and `src/host.rs`; `promptforge/vibe/2026-09-11-3-vfs-foundation.md`.
 - `bashkit/README.md`, `bashkit/crates/bashkit/Cargo.toml`, `bashkit/crates/bashkit/src/builtins/git/client.rs`, `bashkit/docs/git.md`, `bashkit/knowledge/integrations/git-support.md`; `everruns/integrations/bashkit/README.md`.
-- `promptforge-design/research/integration-path-everruns-capabilities.md`; `cabinet/_research/2026-09-19-survey-capabilities-promptforge-bashkit.md`.
+- `promptforge-design/research/2026-09-12-everruns-integration-paths.md`; `promptforge-design/research/2026-09-19-capabilities-promptforge-bashkit.md`.
 
 Web sources, verified by the surveying agents on 2026-09-19 (quality: primary repositories and vendor documentation unless noted):
 
